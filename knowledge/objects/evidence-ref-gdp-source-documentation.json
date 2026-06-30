@@ -1,0 +1,54 @@
+{
+  "stable_id": "evidence-ref-gdp-source-documentation",
+  "object_kind": "evidence_reference",
+  "content_summary": "Reference to source documentation describing GDP as a measure of economic output.",
+  "provenance": {
+    "source": "KnowledgeForge Vertical Slice 0 implementation task",
+    "rationale": "Created to validate the approved minimal KnowledgeForge object ecosystem.",
+    "derived_from": [
+      "docs/vertical_slice_0_implementation_design.md"
+    ]
+  },
+  "applicability": {
+    "scope": "Vertical Slice 0 illustrative economics example",
+    "limitations": [
+      "Not a comprehensive GDP ontology or statistical model."
+    ]
+  },
+  "evidence_state": {
+    "state": "reference only",
+    "note": "Stores a source-documentation handle, not observational data."
+  },
+  "lifecycle_state": "candidate",
+  "governance_state": "vertical-slice fixture",
+  "revision_history": [
+    {
+      "revision_id": "rev-001",
+      "stable_id": "evidence-ref-gdp-source-documentation",
+      "summary": "Initial Vertical Slice 0 fixture creation.",
+      "rationale": "Validate stable identity and common durable-object kernel."
+    }
+  ],
+  "dependency_posture": {
+    "state": "none known",
+    "dependencies": []
+  },
+  "representation_neutrality": {
+    "authoritative_representation": "architectural knowledge object",
+    "storage_representation": "json fixture for Vertical Slice 0 only",
+    "not_authoritative_as": [
+      "graph node",
+      "graph edge",
+      "database row",
+      "API resource"
+    ]
+  },
+  "evidence_reference": {
+    "reference_kind": "source documentation",
+    "title": "GDP source documentation reference for Vertical Slice 0",
+    "locator": "external-source-documentation-handle:gdp-measure-economic-output",
+    "owns_observational_data": false,
+    "observational_data_copied": false,
+    "boundary_note": "If empirical evidence is later required, KnowledgeForge should reference MacroForge evidence handles rather than duplicate observational datasets."
+  }
+}

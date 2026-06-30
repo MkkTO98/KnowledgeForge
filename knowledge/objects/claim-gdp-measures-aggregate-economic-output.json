@@ -1,0 +1,103 @@
+{
+  "stable_id": "claim-gdp-measures-aggregate-economic-output",
+  "object_kind": "claim",
+  "content_summary": "GDP measures aggregate economic output.",
+  "provenance": {
+    "source": "KnowledgeForge Vertical Slice 0 implementation task",
+    "rationale": "Created to validate the approved minimal KnowledgeForge object ecosystem.",
+    "derived_from": [
+      "docs/vertical_slice_0_implementation_design.md"
+    ]
+  },
+  "applicability": {
+    "scope": "Vertical Slice 0 illustrative economics example",
+    "limitations": [
+      "Not a comprehensive GDP ontology or statistical model."
+    ]
+  },
+  "evidence_state": {
+    "state": "supported by reference",
+    "evidence_references": [
+      "evidence-ref-gdp-source-documentation"
+    ],
+    "note": "Definition-style claim supported by source documentation reference; no observational data is copied."
+  },
+  "lifecycle_state": "candidate",
+  "governance_state": "vertical-slice fixture",
+  "revision_history": [
+    {
+      "revision_id": "rev-001",
+      "stable_id": "claim-gdp-measures-aggregate-economic-output",
+      "summary": "Initial claim fixture created with concepts and evidence reference.",
+      "rationale": "Validate claim-first object identity and references to durable concepts."
+    },
+    {
+      "revision_id": "rev-002",
+      "stable_id": "claim-gdp-measures-aggregate-economic-output",
+      "summary": "Dependency posture embedded in the claim kernel.",
+      "rationale": "Validate that dependency entries are versioned with the owning claim rather than as a separate durable object."
+    }
+  ],
+  "dependency_posture": {
+    "state": "dependencies listed",
+    "dependencies": [
+      {
+        "object_id": "concept-gdp",
+        "object_kind": "concept",
+        "dependency_type": "identity/definitional",
+        "necessity": "required",
+        "strength": "direct",
+        "direction": "dependent object -> dependency object",
+        "scope": "Vertical Slice 0 claim semantics",
+        "review_propagation_meaning": "Review the claim if the GDP concept identity changes."
+      },
+      {
+        "object_id": "concept-aggregate-economic-output",
+        "object_kind": "concept",
+        "dependency_type": "identity/definitional",
+        "necessity": "required",
+        "strength": "direct",
+        "direction": "dependent object -> dependency object",
+        "scope": "Vertical Slice 0 claim semantics",
+        "review_propagation_meaning": "Review the claim if the aggregate economic output concept identity changes."
+      },
+      {
+        "object_id": "evidence-ref-gdp-source-documentation",
+        "object_kind": "evidence_reference",
+        "dependency_type": "evidence",
+        "necessity": "required",
+        "strength": "supporting",
+        "direction": "dependent object -> dependency object",
+        "scope": "Vertical Slice 0 evidence support",
+        "review_propagation_meaning": "Review the claim if the evidence reference changes or is deprecated."
+      }
+    ]
+  },
+  "representation_neutrality": {
+    "authoritative_representation": "architectural knowledge object",
+    "storage_representation": "json fixture for Vertical Slice 0 only",
+    "not_authoritative_as": [
+      "graph node",
+      "graph edge",
+      "database row",
+      "API resource"
+    ]
+  },
+  "claim": {
+    "statement": "GDP measures aggregate economic output.",
+    "referenced_concepts": [
+      "concept-gdp",
+      "concept-aggregate-economic-output"
+    ],
+    "supported_by": [
+      "evidence-ref-gdp-source-documentation"
+    ],
+    "facets": {
+      "assertion_function": "definitional",
+      "epistemic_nature": "definition",
+      "polarity": "positive assertion",
+      "domain_role": "concept",
+      "representation_form": "textual assertion"
+    }
+  }
+}
