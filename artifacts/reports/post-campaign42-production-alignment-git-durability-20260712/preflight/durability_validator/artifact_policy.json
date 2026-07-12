@@ -1,0 +1,40 @@
+{
+  "deterministically_rebuildable": [
+    "PostgreSQL projection contents when canonical packages and projection code are durable",
+    "derived indexes and exports generated from canonical packages and query contracts",
+    "generated context bundles"
+  ],
+  "git_lfs": [
+    "large binary artifacts only when a future measured artifact exceeds ordinary Git reviewability"
+  ],
+  "immutable_external_artifact_storage": [
+    "genuinely large raw provider responses",
+    "genuinely large release exports and full histories",
+    "large historical report bundles and verification logs",
+    "database dumps when retained for evidence rather than operational recovery"
+  ],
+  "operational_backup_checkpoint": [
+    "seen-release registries",
+    "current-state registries",
+    "outbox transport state",
+    "accepted source copies that are mutable operational state",
+    "PostgreSQL backups for operational recovery only"
+  ],
+  "ordinary_git": [
+    "canonical KnowledgeObjectPackage JSON",
+    "repository manifest/indexes/fingerprints/evolution records",
+    "method and calculation contracts",
+    "correlation/batch specifications",
+    "source code and tests",
+    "small deterministic evidence fixtures",
+    "task/decision/doctrine/roadmap/architecture/state/handoff records",
+    "small reports needed to understand accepted production decisions"
+  ],
+  "sensitive_local_excluded": [
+    "workspace_config.yaml",
+    ".env",
+    "credentials",
+    "private keys",
+    "local connection files"
+  ]
+}

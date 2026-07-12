@@ -1,0 +1,254 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+    "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "first-difference stationarity not proven",
+      "noise amplification",
+      "window and revision dependence"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "campaign42_first_difference_companion_production",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:e67563f89beba40a333293f90def6461142d127f6bbf30e84f0730dd78646a62"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+      "evidence_ref_id": "ev-campaign42-fd-pearson-companion-05",
+      "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+      "snapshot_fingerprint": "sha256:e67563f89beba40a333293f90def6461142d127f6bbf30e84f0730dd78646a62",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "Retained raw evidence for SP.DYN.LE00.IN and SH.DYN.MORT NOR transformed by Campaign 42 first-difference contract",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "retained_fixture"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 42 first-difference Pearson companion production",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:e9ed1b1c67aade59e719bbef899f5d77a0fd1506898d9b99ae0210e28a3037d1",
+    "evidence_references": "sha256:306054166bbc3841b092b2a0312bbb76538fe8491986e7a9bf3841e54cb97b22",
+    "generated_statements": "sha256:b170c663e14705c1b60878464d8a3d425ed0c4617e6e1c09e639d8b101fbfa15",
+    "input_set": "sha256:bb4a77847fed9ccafc7ac0e4feacd4b86a5fb32281283eb952d8ac718471309d",
+    "package_manifest": "sha256:de392b810557a68a948a37b61b81ca6a155a5ce0af9e94c32f4b3aef78be83d8",
+    "query_definitions": "sha256:efe4cdcb782b0d729ef7e975a6e93150f4ec472ac48d3928b1d5d64425de3ca6"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "NOR",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1991
+      },
+      "dependencies": [
+        "calc-campaign42-fd-pearson-companion-05",
+        "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-05"
+      ],
+      "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+      "statement_id": "stmt-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_observation_fingerprint": "sha256:e67563f89beba40a333293f90def6461142d127f6bbf30e84f0730dd78646a62",
+        "aligned_transformed_count": 34,
+        "answers_change_co_movement_not_level_co_movement": true,
+        "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+        "does_not_supersede_raw_package": true,
+        "entity_id": "NOR",
+        "family": "Health",
+        "first_difference_pearson_coefficient": {
+          "canonical": "-0.207863151096",
+          "unit": "dimensionless"
+        },
+        "frequency": "annual",
+        "independent_recompute_coefficient": "-0.207863151096",
+        "limitations": [
+          "First differencing does not prove stationarity.",
+          "Correlation does not imply causation.",
+          "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+          "Differencing may amplify noise.",
+          "Results remain window- and revision-dependent.",
+          "This companion does not supersede or correct the raw Pearson package."
+        ],
+        "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+        "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+        "method_version": "1.0",
+        "missing_and_excluded_periods": {
+          "series_a_missing_or_excluded": [],
+          "series_b_missing_or_excluded": []
+        },
+        "package_fingerprint": "sha256:f673b2bfdf38037c51f32b34647ff97bb12209c470c433a7d65fe30f3cfb8703",
+        "pearson_coefficient": {
+          "canonical": "-0.207863151096",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1991
+        },
+        "prior_embedded_diagnostic_reconciliation": {
+          "aligned_count_matches": true,
+          "coefficient_matches": true,
+          "new_companion_coefficient": "-0.207863151096",
+          "prior_embedded_diagnostic_present": true,
+          "prior_embedded_first_difference_coefficient": "-0.207863151096",
+          "transformation_semantics_matches": true
+        },
+        "raw_evidence_fixtures": {
+          "series_a": {
+            "identity": "SP.DYN.LE00.IN__NOR__1990-2024",
+            "normalized_fingerprint": "sha256:83d74ce0f508ec88a4a841fdea817725e1c022ee71ac42a6a5895d3b775e2f27",
+            "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.LE00.IN__NOR__1990-2024/normalized_observations.json",
+            "selection_fingerprint": "sha256:ccbb93d4907b53984176ee3907121f9f658194cdc4690e106ac5ba9b9d1a776d",
+            "source_raw_fixture_fingerprint": "sha256:4f455ba00f23e471bd1daa89703d4c5463f5f131a9783b2bf0c39bd38e314b9c"
+          },
+          "series_b": {
+            "identity": "SH.DYN.MORT__NOR__1990-2024",
+            "normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SH.DYN.MORT__NOR__1990-2024/normalized_observations.json",
+            "selection_fingerprint": "sha256:79cbf4666a6cc0d0d8c93a8334c9cb4c1a95ac10f68ddb4f5e62f9bb4c209c54",
+            "source_raw_fixture_fingerprint": "sha256:080e0fb17a989b2df3b143ea1f9ab774d603035af0c935a3cc3f84f56be5514f"
+          }
+        },
+        "raw_observation_count": {
+          "series_a": 35,
+          "series_b": 35
+        },
+        "raw_package_reference": {
+          "package_fingerprint": "sha256:6b1699ab64cf79cd89d0e0436c1b015e63629565a9cf7dee67b172b67c0c6feb",
+          "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+          "source_campaign": "Campaign 40"
+        },
+        "raw_period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "raw_units": {
+          "series_a": "years",
+          "series_b": "per 1,000 live births"
+        },
+        "series_a": {
+          "code": "SP.DYN.LE00.IN",
+          "name": "Life expectancy at birth, total (years)",
+          "transformation": "raw",
+          "transformed_unit": "absolute year-to-year change in years",
+          "unit": "years"
+        },
+        "series_b": {
+          "code": "SH.DYN.MORT",
+          "name": "Mortality rate, under-5 (per 1,000 live births)",
+          "transformation": "raw",
+          "transformed_unit": "absolute year-to-year change in per 1,000 live births",
+          "unit": "per 1,000 live births"
+        },
+        "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+        "transformation_id": "wdi_annual_scalar_first_difference_v1",
+        "transformation_state": "first_difference",
+        "transformation_version": "1.0",
+        "transformed_coverage": "1.000000000000",
+        "transformed_observation_count": {
+          "series_a": 34,
+          "series_b": 34
+        },
+        "transformed_series_fingerprints": {
+          "series_a": "sha256:e8009f53758002d4ff5cc23a38c971b735613b3fdac5dd94c6942392c7bca958",
+          "series_b": "sha256:233c38d8f280c242a2e156ffee5085ebf26aa06588bdc5dfc9e6d47a186e59ec"
+        },
+        "transformed_unit_semantics": {
+          "series_a": "absolute year-to-year change in years",
+          "series_b": "absolute year-to-year change in per 1,000 live births"
+        },
+        "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+        "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+      },
+      "text": "Across aligned annual first differences for NOR from 1991 through 2024, the Pearson correlation between annual changes in Life expectancy at birth, total (years) and annual changes in Mortality rate, under-5 (per 1,000 live births) is -0.207863151096, using 34 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1 and does not supersede it."
+    }
+  ],
+  "input_references": [
+    "campaign42_first_difference_pearson_companion_production",
+    "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+    "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+    "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+    "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+    "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 40",
+    "source_campaign": "Campaign 42",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:e67563f89beba40a333293f90def6461142d127f6bbf30e84f0730dd78646a62"
+    ],
+    "evidence_refs": [
+      "ev-campaign42-fd-pearson-companion-05"
+    ],
+    "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1 from Campaign 40 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "NOR"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+    "period_scope": {
+      "end": 2024,
+      "start": 1991
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

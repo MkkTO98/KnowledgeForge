@@ -1,42 +1,17 @@
-# Latest Handoff
+# Latest Handoff — Campaign 42 complete
 
 Date: 2026-07-12
 
-## Completed
+Campaign 42 — First-Difference Pearson Companion Production finished with outcome A: successful end-to-end companion production.
 
-KnowledgeForge Operational State Backup, Restore, and Durability Gate.
+Context used: constitution, current state/architecture/handoff, Campaign 42 registry/spec, canonical repository objects, retained evidence fixtures, and production/export/PostgreSQL artifacts.
 
-Decision: D — local operational-state checkpoint/restore is implemented and verified, but it is same-host only and not machine-loss durable. Do not stage, unstage, commit, or push.
+Files changed: Campaign 42 production helper/test; 8 new companion packages; refreshed manifest/index/evolution records; Campaign 42 report/task/decision; production roadmap/evolution log; state/handoff/summaries.
 
-## Key facts
+Repository result: 546 -> 554 packages; fingerprint `sha256:c89c25ede69ec88a12f4791dba94b6199f2927721d0028420a65a74dd6ee735c` -> `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`; raw Pearson 21; first-difference companions 8; statistical summaries 4.
 
-- Pre-task equivalent tooling was absent.
-- Current checkpoint: `artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/`.
-- Contracts: `knowledgeforge.operational_state_checkpoint.v1` and `knowledgeforge.protected_state.v1`.
-- Checkpoint/restore: 79 files, 4,918,310 bytes, isolated restore succeeded.
-- Required flags: `tested_local_only = true`, `machine_loss_durable = false`, `external_destination_configured = false`.
-- PostgreSQL recovery is recorded as reconstruction evidence only; no production DB write/dump.
-- Validator now distinguishes local checkpoint coverage from machine-loss durability.
+Tests/checks: pre-execution gate passed; targeted Campaign 42 tests passed; full suite passed (`316 passed, 17 subtests passed`); compileall passed; PostgreSQL projection/retrieval passed; Relationship Export Contract and independent consumer simulation passed; coherence/context health no blocks; architecture audit 0 blocks/0 warnings; `git diff --check` passed. Logs: `artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/final_verification/`.
 
-## Main artifacts
+Remaining risk: durability validator returned decision D because recovery-critical changes are not yet durable and operational checkpoint state is not machine-loss durable. No secret blockers or unsafe absolute-path dependencies were detected. No commit or push was performed.
 
-- `config/protected_state_v1.json`
-- `tools/operational_state_checkpoint.py`
-- `tests/test_operational_state_checkpoint.py`
-- `artifacts/reports/operational-state-backup-restore-durability-gate-20260712/operational_state_backup_restore_report.md`
-- `artifacts/tasks/T-20260712-operational-state-backup-restore-durability-gate.md`
-- `artifacts/decisions/D-20260712-operational-state-backup-restore-durability-gate.md`
-
-## Verification
-
-- Py compile for changed Python/test files: passed.
-- Targeted tests: 17 passed.
-- Checkpoint validate: valid true.
-- Final validator: valid false with blocks `untracked_canonical_state_not_durable`, `untracked_recovery_critical_implementation_not_durable`, `operational_state_checkpoint_not_machine_loss_durable`; actual secret blockers 0; unsafe absolute-path dependencies 0.
-- Coherence/context health: no blocks; stale active_context warning only after this concise handoff.
-- `git diff --check`: passed.
-- cached/staged diff: empty.
-
-## Resume
-
-Next bounded task: configure and verify an outside-host-failure-domain destination for operational checkpoints, or separately authorize ordinary-Git staging groups after reviewing remaining durability blocks. Do not claim machine-loss durability until a verified external/off-host destination makes `machine_loss_durable = true`.
+Next: run a bounded post-Campaign-42 readiness/durability gate before Campaign 43 or additional production. Start from `artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/final_report.md`.

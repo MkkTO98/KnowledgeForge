@@ -838,3 +838,42 @@ Implemented KnowledgeForge-side manual release inbox, seen-release registry, ret
 The MacroForge real neutral evidence release compatibility pilot validated that a producer-owned external evidence contract can be transferred, independently fingerprint-validated, adapted by KnowledgeForge-owned code, processed through the inbox, and used for no-promote recomputation without shared runtime code, MacroForge PostgreSQL access, canonical promotion, or PostgreSQL mutation.
 
 Classification: KnowledgeForge-wide operational integration evidence, not Production Doctrine change. The observation supports preserving the producer/consumer sovereignty boundary and sequencing the next task toward producer-side closeout-triggered export generation before scheduling or canonical supersession automation.
+
+## 2026-07-12 — Campaign 41 production assimilation and Pearson path-to-100 utility review
+
+Accepted Campaign 41 as technically successful: 8 accepted Pearson packages, repository count 546, Pearson count 21, repository fingerprint `sha256:c89c25ede69ec88a12f4791dba94b6199f2927721d0028420a65a74dd6ee735c`, PostgreSQL/export retrieval passed. A complete 21-object Pearson utility inventory showed that numeric time-index diagnostics exist for 14 objects, all 14 are high time-risk under the review-only rubric, and 5 objects show strong raw/weak first-difference behavior. Decision E: replace raw Pearson path-to-100 as the primary target with a mixed roadmap: limited raw baseline, bounded candidate-policy refinement, transformation-aware relationships, and richer deterministic diagnostics. Classification: roadmap sequencing review only; no doctrine/schema/method/package change.
+
+## 2026-07-12 — Pearson candidate policy v2 mixed-roadmap refinement
+
+Accepted `pearson_candidate_policy_v2_mixed_roadmap@1.0` as the prospective coefficient-free candidate-construction policy. The existing generic helper now supports a dry-run successor-policy path while preserving Campaign 41 v1 outputs and frozen fingerprints. Dry-run over the retained 16-series Campaign 40 pool produced 7 non-frozen defensible candidates with semantic distribution 3 close, 2 moderate, 2 remote and all high time-risk under permitted prior per-series diagnostics. Later consistency correction reclassified this output as historical comparison only, not future-production evidence. Classification: roadmap/policy refinement only; no Campaign 42, coefficient calculation, package publication, PostgreSQL mutation, schema change, Doctrine amendment, or KnowledgeObjectPackage redesign.
+
+## 2026-07-12 — Pearson candidate policy v2 consistency correction
+
+Corrected v2 dry-run interpretation and helper behavior. Root causes: static Campaign 36-40 prior-exclusion inventory missed already canonical Campaign 41 relationships, and remote-share validation used nominal 8-candidate capacity rather than actual selected size. Corrected future-production mode derives current canonical Pearson identities from `knowledge_repository/objects/`, separates historical comparison from future-production eligibility, and applies `floor(n * 0.25)` remote-cap arithmetic. Corrected future-production dry-run leaves 4 candidates, all high time-risk; decision B selects first-difference Pearson method-contract validation before further raw production. Classification: corrective roadmap/policy decision only; no Campaign 42, coefficient calculation, package publication, PostgreSQL mutation, schema change, Doctrine amendment, or KnowledgeObjectPackage redesign.
+
+
+## Method-validation observation — 2026-07-12
+
+First-difference Pearson method-contract validation supports a narrow deterministic companion-method path inside the existing architecture. The validation compared 14 existing non-promoted diagnostics with 0 mismatches, proved unit/gap/fingerprint/determinism behavior, and showed package/PostgreSQL/export representation sufficiency without schema changes. Classification: Architectural; status: implement only as the completed bounded method-validation slice, not as authorization for broad transformation infrastructure or canonical production.
+
+
+## Observation after Campaign 42 coefficient-free registry freeze — 2026-07-12
+
+Campaign 42 registry freeze provides additional evidence that deterministic, coefficient-independent batch selection can be performed using existing repository objects, retained evidence fixtures, package fingerprints, and method contracts without architecture change.
+
+Architectural implications:
+
+- companion identity can be represented without changing package architecture;
+- raw-to-companion links can be specified declaratively before production;
+- prior embedded diagnostic values require honesty auditing but need not influence deterministic selection;
+- retained evidence-fixture availability remains the binding eligibility constraint for older raw Pearson packages.
+
+Status: monitor. No Doctrine amendment, schema expansion, local AI, or general transformation framework is justified by this registry-freeze task alone.
+
+## Campaign 42 first-difference Pearson companion production — 2026-07-12
+
+Campaign 42 successfully produced exactly eight frozen first-difference Pearson companion packages from the authorized coefficient-free registry/specification. Repository count increased from 546 to 554; repository fingerprint changed from `sha256:c89c25ede69ec88a12f4791dba94b6199f2927721d0028420a65a74dd6ee735c` to `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`. Raw Pearson objects remain 21 and first-difference Pearson companions are separately classified as 8.
+
+The task validated append-only canonical publication, raw package non-supersession, independent recomputation, prior embedded diagnostic reconciliation, PostgreSQL projection/retrieval, raw-vs-first-difference query separation, and Relationship Export Contract v1 independent consumer simulation without schema expansion.
+
+Classification: production success using existing architecture. No Doctrine amendment, KnowledgeObjectPackage redesign, PostgreSQL schema expansion, broad transformation framework, local-AI infrastructure, Campaign 43, or inferential/forecast/causal/investment claim is authorized by this result.

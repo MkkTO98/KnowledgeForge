@@ -1,0 +1,49 @@
+ ...ifference-pearson-method-contract-validation.md |  41 ++
+ .../determinism_and_fingerprint_sensitivity.json   |  14 +
+ .../diagnostic_reconciliation.json                 | 668 +++++++++++++++++++++
+ .../architecture_reality_audit.json                |  28 +
+ .../architecture_reality_audit.stderr              |   0
+ .../final-verification/check_coherence.json        |   7 +
+ .../final-verification/check_coherence.stderr      |   0
+ .../check_coherence_after_final_report.json        |   7 +
+ .../check_coherence_after_final_report.stderr      |   0
+ .../final-verification/context_health.json         |  59 ++
+ .../final-verification/context_health.stderr       |   0
+ .../context_health_after_final_report.json         |  59 ++
+ .../context_health_after_final_report.stderr       |   0
+ .../final-verification/full_test_suite.stderr      |   0
+ .../final-verification/full_test_suite.stdout      |   6 +
+ .../final-verification/git_diff_check.stderr       |   0
+ .../final-verification/git_diff_check.stdout       |   0
+ .../git_diff_check_after_final_report.stderr       |   0
+ .../git_diff_check_after_final_report.stdout       |   0
+ .../final-verification/git_status_short.txt        | 220 +++++++
+ .../method_validation_assertions.json              |   4 +
+ .../final-verification/python_compileall.stderr    |   0
+ .../final-verification/python_compileall.stdout    |   0
+ .../final-verification/recompute_artifacts.stderr  |   0
+ .../final-verification/recompute_artifacts.stdout  |   8 +
+ .../sensitive_material_scan.json                   |   5 +
+ .../targeted_first_difference_tests.stderr         |   0
+ .../targeted_first_difference_tests.stdout         |   2 +
+ .../final_report.md                                | 223 +++++++
+ .../method_contract.json                           |  43 ++
+ .../negative_case_evidence.json                    |  55 ++
+ .../diagnostic_reconciliation.json                 | 668 +++++++++++++++++++++
+ .../recomputed-verification/method_contract.json   |  43 ++
+ .../representation_compatibility_proof.json        |  78 +++
+ .../transformation_contract.json                   |  14 +
+ .../validation_registry.json                       |  72 +++
+ .../validation_results.json                        | 260 ++++++++
+ .../representation_compatibility_proof.json        |  78 +++
+ .../transformation_contract.json                   |  14 +
+ .../validation_registry.json                       |  72 +++
+ .../validation_results.json                        | 260 ++++++++
+ ...ifference-pearson-method-contract-validation.md |  53 ++
+ ...ifference_pearson_method_contract_20260712.json |  43 ++
+ ...e_pearson_transformation_contract_20260712.json |  14 +
+ ...rence_pearson_validation_registry_20260712.json |  72 +++
+ ..._first_difference_pearson_v1_method_contract.md |  22 +
+ tests/test_first_difference_pearson_method.py      | 151 +++++
+ tools/first_difference_pearson_method_v1.py        | 534 ++++++++++++++++
+ 48 files changed, 3897 insertions(+)

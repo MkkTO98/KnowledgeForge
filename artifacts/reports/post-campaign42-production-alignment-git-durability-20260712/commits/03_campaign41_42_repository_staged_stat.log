@@ -1,0 +1,341 @@
+ ...60712-campaign41-pearson-production-accepted.md |    33 +
+ ...-first-difference-pearson-companion-registry.md |    40 +
+ ...irst-difference-pearson-companion-production.md |    24 +
+ .../architecture_reality_audit.stderr              |     0
+ .../architecture_reality_audit.stdout              |     2 +
+ .../final-verification/campaign_literal_scan.json  |   348 +
+ .../final-verification/check_coherence.json        |     7 +
+ .../check_coherence_after_closeout.json            |     8 +
+ .../final-verification/context_health.json         |    59 +
+ .../context_health_after_closeout.json             |    60 +
+ .../final-verification/context_health_final.json   |    60 +
+ .../final_verification_summary.json                |   215 +
+ .../final-verification/full_tests.stderr           |     0
+ .../final-verification/full_tests.stdout           |     6 +
+ .../git_diff_cached_check.stderr                   |     0
+ .../git_diff_cached_check.stdout                   |     0
+ .../final-verification/git_diff_check.stderr       |     0
+ .../final-verification/git_diff_check.stdout       |     0
+ .../git_diff_check_after_closeout.stderr           |     0
+ .../git_diff_check_after_closeout.stdout           |     0
+ .../final-verification/git_diff_check_final.stderr |     0
+ .../final-verification/git_diff_check_final.stdout |     0
+ .../final-verification/python_compile.stderr       |     0
+ .../final-verification/python_compile.stdout       |     0
+ .../repository_wide_durability_validator.stderr    |     0
+ .../repository_wide_durability_validator.stdout    |   128 +
+ .../artifact_class_policy.json                     |    19 +
+ .../artifact_policy.json                           |    40 +
+ .../commit_plan.json                               |  2870 +
+ .../consolidated_machine_readable_summary.json     |   128 +
+ .../inventory.json                                 | 84434 +++++++++++++++++
+ .../machine_loss_recovery.json                     |   517 +
+ .../package_counts.json                            |    43 +
+ .../repository_wide_validator.json                 |   119 +
+ .../sensitive_scan.json                            |  2951 +
+ .../size_storage_assessment.json                   |    44 +
+ .../temporary_db_cleanup_assessment.json           |    13 +
+ .../final-verification/targeted_tests.stderr       |     0
+ .../final-verification/targeted_tests.stdout       |     2 +
+ .../final_report.md                                |   147 +
+ .../frozen_input_identity_validation.json          |   621 +
+ ...al-land-broad-money-pearson-correlation-v1.json |   198 +
+ ...land-private-credit-pearson-correlation-v1.json |   198 +
+ ...st-area-broad-money-pearson-correlation-v1.json |   198 +
+ ...-fossil-electricity-pearson-correlation-v1.json |   198 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |   198 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |   200 +
+ ...edit-internet-users-pearson-correlation-v1.json |   196 +
+ ...dit-mobile-cellular-pearson-correlation-v1.json |   196 +
+ .../production/candidate_judgments.json            |   160 +
+ .../consolidated_machine_readable_report.json      |  1337 +
+ ..._agricultural_land_broad_money_calculation.json |   207 +
+ ...ricultural_land_private_credit_calculation.json |   207 +
+ .../dnk_forest_area_broad_money_calculation.json   |   207 +
+ ..._birth_rate_fossil_electricity_calculation.json |   207 +
+ ...l_electricity_under5_mortality_calculation.json |   207 +
+ ...e_electricity_under5_mortality_calculation.json |   205 +
+ .../production/publication_plan.json               |    15 +
+ .../production/stdout.json                         |  1337 +
+ ..._private_credit_internet_users_calculation.json |   207 +
+ ...private_credit_mobile_cellular_calculation.json |   207 +
+ .../all_campaign41_consumer.json                   |   101 +
+ .../all_campaign41_consumer.stderr                 |     0
+ .../all_campaign41_consumer.stdout                 |   101 +
+ .../relationship_export/all_campaign41_export.json |  2166 +
+ .../all_campaign41_export.stderr                   |     0
+ .../all_campaign41_export.stdout                   |  2166 +
+ .../relationship_export/all_campaign41_query.json  |    23 +
+ .../all_campaign41_verify.stderr                   |     0
+ .../all_campaign41_verify.stdout                   |     7 +
+ ...or_private_credit_campaign41_only_consumer.json |    62 +
+ ..._private_credit_campaign41_only_consumer.stderr |     0
+ ..._private_credit_campaign41_only_consumer.stdout |    62 +
+ ...ator_private_credit_campaign41_only_export.json |   850 +
+ ...or_private_credit_campaign41_only_export.stderr |     0
+ ...or_private_credit_campaign41_only_export.stdout |   850 +
+ ...cator_private_credit_campaign41_only_query.json |    24 +
+ ...or_private_credit_campaign41_only_verify.stderr |     0
+ ...or_private_credit_campaign41_only_verify.stdout |     7 +
+ .../either_indicator_private_credit_consumer.json  |    69 +
+ ...either_indicator_private_credit_consumer.stderr |     0
+ ...either_indicator_private_credit_consumer.stdout |    69 +
+ .../either_indicator_private_credit_export.json    |  1099 +
+ .../either_indicator_private_credit_export.stderr  |     0
+ .../either_indicator_private_credit_export.stdout  |  1099 +
+ .../either_indicator_private_credit_query.json     |    14 +
+ .../either_indicator_private_credit_verify.stderr  |     0
+ .../either_indicator_private_credit_verify.stdout  |     7 +
+ .../entity_nor_campaign41_only_consumer.json       |    57 +
+ .../entity_nor_campaign41_only_consumer.stderr     |     0
+ .../entity_nor_campaign41_only_consumer.stdout     |    57 +
+ .../entity_nor_campaign41_only_export.json         |   856 +
+ .../entity_nor_campaign41_only_export.stderr       |     0
+ .../entity_nor_campaign41_only_export.stdout       |   856 +
+ .../entity_nor_campaign41_only_query.json          |    24 +
+ .../entity_nor_campaign41_only_verify.stderr       |     0
+ .../entity_nor_campaign41_only_verify.stdout       |     7 +
+ .../relationship_export/entity_nor_consumer.json   |   104 +
+ .../relationship_export/entity_nor_consumer.stderr |     0
+ .../relationship_export/entity_nor_consumer.stdout |   104 +
+ .../relationship_export/entity_nor_export.json     |  2609 +
+ .../relationship_export/entity_nor_export.stderr   |     0
+ .../relationship_export/entity_nor_export.stdout   |  2609 +
+ .../relationship_export/entity_nor_query.json      |    14 +
+ .../relationship_export/entity_nor_verify.stderr   |     0
+ .../relationship_export/entity_nor_verify.stdout   |     7 +
+ .../individual_first_consumer.json                 |    43 +
+ .../individual_first_consumer.stderr               |     0
+ .../individual_first_consumer.stdout               |    43 +
+ .../individual_first_export.json                   |   318 +
+ .../individual_first_export.stderr                 |     0
+ .../individual_first_export.stdout                 |   318 +
+ .../individual_first_query.json                    |    14 +
+ .../individual_first_verify.stderr                 |     0
+ .../individual_first_verify.stdout                 |     7 +
+ .../method_pearson_v1_consumer.json                |   101 +
+ .../method_pearson_v1_consumer.stderr              |     0
+ .../method_pearson_v1_consumer.stdout              |   101 +
+ .../method_pearson_v1_export.json                  |  2167 +
+ .../method_pearson_v1_export.stderr                |     0
+ .../method_pearson_v1_export.stdout                |  2167 +
+ .../method_pearson_v1_query.json                   |    24 +
+ .../method_pearson_v1_verify.stderr                |     0
+ .../method_pearson_v1_verify.stdout                |     7 +
+ .../raw_transformation_consumer.json               |   101 +
+ .../raw_transformation_consumer.stderr             |     0
+ .../raw_transformation_consumer.stdout             |   101 +
+ .../raw_transformation_export.json                 |  2167 +
+ .../raw_transformation_export.stderr               |     0
+ .../raw_transformation_export.stdout               |  2167 +
+ .../raw_transformation_query.json                  |    24 +
+ .../raw_transformation_verify.stderr               |     0
+ .../raw_transformation_verify.stdout               |     7 +
+ .../relationship_export_and_consumer_summary.json  |   378 +
+ .../relationship_export/zero_result_consumer.json  |    24 +
+ .../zero_result_consumer.stderr                    |     0
+ .../zero_result_consumer.stdout                    |    24 +
+ .../relationship_export/zero_result_export.json    |    53 +
+ .../relationship_export/zero_result_export.stderr  |     0
+ .../relationship_export/zero_result_export.stdout  |    53 +
+ .../relationship_export/zero_result_query.json     |    14 +
+ .../relationship_export/zero_result_verify.stderr  |     0
+ .../relationship_export/zero_result_verify.stdout  |     7 +
+ .../idempotent_no_publish_rerun.stderr             |     0
+ .../idempotent_no_publish_rerun.stdout             |  1329 +
+ ...al-land-broad-money-pearson-correlation-v1.json |   198 +
+ ...land-private-credit-pearson-correlation-v1.json |   198 +
+ ...st-area-broad-money-pearson-correlation-v1.json |   198 +
+ ...-fossil-electricity-pearson-correlation-v1.json |   198 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |   198 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |   200 +
+ ...edit-internet-users-pearson-correlation-v1.json |   196 +
+ ...dit-mobile-cellular-pearson-correlation-v1.json |   196 +
+ .../candidate_judgments.json                       |   160 +
+ .../consolidated_machine_readable_report.json      |  1329 +
+ ..._agricultural_land_broad_money_calculation.json |   207 +
+ ...ricultural_land_private_credit_calculation.json |   207 +
+ .../dnk_forest_area_broad_money_calculation.json   |   207 +
+ ..._birth_rate_fossil_electricity_calculation.json |   207 +
+ ...l_electricity_under5_mortality_calculation.json |   207 +
+ ...e_electricity_under5_mortality_calculation.json |   205 +
+ ..._private_credit_internet_users_calculation.json |   207 +
+ ...private_credit_mobile_cellular_calculation.json |   207 +
+ .../postgresql_idempotent_rebuild.stderr           |     0
+ .../postgresql_idempotent_rebuild.stdout           |    12 +
+ .../verification/postgresql_verify.stderr          |     0
+ .../verification/postgresql_verify.stdout          |    15 +
+ ...stgresql_verify_after_idempotent_rebuild.stderr |     0
+ ...stgresql_verify_after_idempotent_rebuild.stdout |    15 +
+ .../verification/production_verification.json      |  1234 +
+ .../safe_publish_collision_rerun.stderr            |    14 +
+ .../safe_publish_collision_rerun.stdout            |     0
+ ...al-land-broad-money-pearson-correlation-v1.json |   198 +
+ ...land-private-credit-pearson-correlation-v1.json |   198 +
+ ...st-area-broad-money-pearson-correlation-v1.json |   198 +
+ ...-fossil-electricity-pearson-correlation-v1.json |   198 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |   198 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |   200 +
+ ...edit-internet-users-pearson-correlation-v1.json |   196 +
+ ...dit-mobile-cellular-pearson-correlation-v1.json |   196 +
+ ..._agricultural_land_broad_money_calculation.json |   207 +
+ ...ricultural_land_private_credit_calculation.json |   207 +
+ .../dnk_forest_area_broad_money_calculation.json   |   207 +
+ ..._birth_rate_fossil_electricity_calculation.json |   207 +
+ ...l_electricity_under5_mortality_calculation.json |   207 +
+ ...e_electricity_under5_mortality_calculation.json |   205 +
+ .../publication_plan.json                          |    15 +
+ ..._private_credit_internet_users_calculation.json |   207 +
+ ...private_credit_mobile_cellular_calculation.json |   207 +
+ ...aign42_coefficient_free_companion_registry.json |   895 +
+ ...arative_companion_production_specification.json |    75 +
+ .../coefficient_independence_proof.json            |     5 +
+ .../complete_21_package_eligibility_inventory.json |  1129 +
+ .../deterministic_regeneration_proof.json          |     7 +
+ .../evidence_method_compatibility_report.json      |   169 +
+ .../expected_package_id_manifest.json              |    10 +
+ .../architecture_reality_audit.json                |    28 +
+ .../campaign42_validation_assertions.json          |     4 +
+ .../final-verification/check_coherence.json        |     7 +
+ .../check_coherence_after_final_report.json        |     7 +
+ .../final-verification/context_health.json         |    59 +
+ .../context_health_after_final_report.json         |    59 +
+ .../final-verification/full_test_suite.stdout      |     6 +
+ .../final-verification/git_diff_check.stderr       |     0
+ .../final-verification/git_diff_check.stdout       |     0
+ .../git_diff_check_after_final_report.stderr       |     0
+ .../git_diff_check_after_final_report.stdout       |     0
+ .../final-verification/git_status_short.txt        |   227 +
+ .../final-verification/python_compileall.stderr    |     0
+ .../final-verification/python_compileall.stdout    |     0
+ .../final-verification/regeneration_stdout.json    |    13 +
+ .../sensitive_material_scan.json                   |     5 +
+ .../targeted_campaign42_registry_tests.stdout      |     2 +
+ .../final_report.md                                |   250 +
+ .../post_freeze_diagnostic_honesty_audit.json      |    30 +
+ .../raw_to_companion_link_manifest.json            |    34 +
+ .../accepted_packages.json                         |  2034 +
+ ...-dnk-first-difference-pearson-companion-v1.json |   254 +
+ ...-nor-first-difference-pearson-companion-v1.json |   254 +
+ ...-nor-first-difference-pearson-companion-v1.json |   254 +
+ ...-dnk-first-difference-pearson-companion-v1.json |   254 +
+ ...-nor-first-difference-pearson-companion-v1.json |   254 +
+ ...-swe-first-difference-pearson-companion-v1.json |   254 +
+ ...sers-first-difference-pearson-companion-v1.json |   254 +
+ ...ular-first-difference-pearson-companion-v1.json |   254 +
+ .../campaign42_production_summary.json             |  2166 +
+ .../candidate_results.json                         |   614 +
+ .../all_campaign42_companions.json                 |   102 +
+ .../consumer_simulation/entity_swe.json            |    55 +
+ .../first_difference_transformation.json           |   102 +
+ .../indicator_private_credit.json                  |    59 +
+ .../method_first_difference.json                   |   102 +
+ .../consumer_simulation/one_exact_companion.json   |    43 +
+ .../consumer_simulation/raw_only_method.json       |   187 +
+ .../consumer_simulation/zero_result.json           |    24 +
+ .../final_report.md                                |   135 +
+ .../architecture_reality_audit.log                 |     2 +
+ .../final_verification/check_coherence.log         |     8 +
+ .../check_coherence_after_closeout.log             |     7 +
+ .../final_verification/context_health.log          |    60 +
+ .../context_health_after_closeout.log              |    59 +
+ .../final_verification/context_health_final.log    |    59 +
+ .../final_verification/full_pytest.log             |     6 +
+ .../final_verification/git_diff_check.log          |     0
+ .../git_diff_check_after_closeout.log              |     0
+ .../final_verification/git_diff_check_final.log    |     0
+ .../final_verification/git_status_short.log        |   257 +
+ .../git_status_short_after_closeout.log            |   257 +
+ .../final_verification/python_compileall.log       |     1 +
+ .../repository_wide_durability_validator.log       |   142 +
+ .../artifact_class_policy.json                     |    19 +
+ .../artifact_policy.json                           |    40 +
+ .../commit_plan.json                               |  2869 +
+ .../consolidated_machine_readable_summary.json     |   142 +
+ .../inventory.json                                 | 89698 +++++++++++++++++++
+ .../machine_loss_recovery.json                     |   661 +
+ .../package_counts.json                            |    57 +
+ .../repository_wide_validator.json                 |   158 +
+ .../sensitive_scan.json                            |  2993 +
+ .../size_storage_assessment.json                   |    44 +
+ .../temporary_db_cleanup_assessment.json           |    13 +
+ .../summary_refresh_after_closeout.log             |     1 +
+ .../targeted_campaign42_tests.log                  |     2 +
+ .../postgresql_projection_validation.json          |   749 +
+ .../postgresql_rebuild.json                        |    12 +
+ .../postgresql_rebuild_reverse.json                |    12 +
+ .../postgresql_rebuild_sorted_after_reverse.json   |    12 +
+ .../pre_execution_gate.json                        |   334 +
+ .../production_stdout.json                         |  2166 +
+ ...elationship_export_and_consumer_validation.json |   350 +
+ .../all_campaign42_companions.json                 |    15 +
+ .../relationship_export_queries/entity_swe.json    |    15 +
+ .../first_difference_transformation.json           |    14 +
+ .../indicator_private_credit.json                  |    15 +
+ .../method_first_difference.json                   |    14 +
+ .../one_exact_companion.json                       |    14 +
+ .../raw_only_method.json                           |    14 +
+ .../relationship_export_queries/zero_result.json   |    15 +
+ .../all_campaign42_companions.json                 |  2608 +
+ .../relationship_exports/entity_swe.json           |  1013 +
+ .../first_difference_transformation.json           |  2607 +
+ .../indicator_private_credit.json                  |  1013 +
+ .../method_first_difference.json                   |  2607 +
+ .../relationship_exports/one_exact_companion.json  |   374 +
+ .../relationship_exports/raw_only_method.json      |  5860 ++
+ .../relationship_exports/zero_result.json          |    54 +
+ ...2-campaign41-frozen-pearson-batch-production.md |    57 +
+ ...-first-difference-pearson-companion-registry.md |    38 +
+ ...irst-difference-pearson-companion-production.md |    38 +
+ ...-dnk-first-difference-pearson-companion-v1.json |    53 +
+ ...ral-forest-land-dnk-pearson-correlation-v1.json |     4 +-
+ ...-nor-first-difference-pearson-companion-v1.json |    53 +
+ ...rth-death-rates-nor-pearson-correlation-v1.json |     4 +-
+ ...-nor-first-difference-pearson-companion-v1.json |    53 +
+ ...ydro-renewables-nor-pearson-correlation-v1.json |     4 +-
+ ...-dnk-first-difference-pearson-companion-v1.json |    53 +
+ ...dit-broad-money-dnk-pearson-correlation-v1.json |     4 +-
+ ...-nor-first-difference-pearson-companion-v1.json |    53 +
+ ...nder5-mortality-nor-pearson-correlation-v1.json |     4 +-
+ ...-swe-first-difference-pearson-companion-v1.json |    53 +
+ ...internet-mobile-swe-pearson-correlation-v1.json |     4 +-
+ ...al-land-broad-money-pearson-correlation-v1.json |    48 +
+ ...land-private-credit-pearson-correlation-v1.json |    48 +
+ ...st-area-broad-money-pearson-correlation-v1.json |    48 +
+ ...-fossil-electricity-pearson-correlation-v1.json |    48 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |    48 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |    48 +
+ ...sers-first-difference-pearson-companion-v1.json |    53 +
+ ...edit-internet-users-pearson-correlation-v1.json |    48 +
+ ...ular-first-difference-pearson-companion-v1.json |    53 +
+ ...dit-mobile-cellular-pearson-correlation-v1.json |    48 +
+ .../indexes/by_evidence_family.json                |    26 +
+ .../indexes/by_knowledge_identity.json             |    48 +
+ .../indexes/by_lifecycle_state.json                |    18 +-
+ knowledge_repository/indexes/by_package_id.json    |    18 +-
+ .../indexes/by_package_manifest_fingerprint.json   |    48 +
+ .../indexes/by_statement_type.json                 |    18 +-
+ knowledge_repository/manifest.json                 |    22 +-
+ ...-dnk-first-difference-pearson-companion-v1.json |   254 +
+ ...-nor-first-difference-pearson-companion-v1.json |   254 +
+ ...-nor-first-difference-pearson-companion-v1.json |   254 +
+ ...-dnk-first-difference-pearson-companion-v1.json |   254 +
+ ...-nor-first-difference-pearson-companion-v1.json |   254 +
+ ...-swe-first-difference-pearson-companion-v1.json |   254 +
+ ...al-land-broad-money-pearson-correlation-v1.json |   198 +
+ ...land-private-credit-pearson-correlation-v1.json |   198 +
+ ...st-area-broad-money-pearson-correlation-v1.json |   198 +
+ ...-fossil-electricity-pearson-correlation-v1.json |   198 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |   198 +
+ ...ty-under5-mortality-pearson-correlation-v1.json |   200 +
+ ...sers-first-difference-pearson-companion-v1.json |   254 +
+ ...edit-internet-users-pearson-correlation-v1.json |   196 +
+ ...ular-first-difference-pearson-companion-v1.json |   254 +
+ ...dit-mobile-cellular-pearson-correlation-v1.json |   196 +
+ ...irst_difference_pearson_companion_registry.json |   895 +
+ ...pearson_companion_production_specification.json |    75 +
+ ...aign42_first_difference_companion_production.py |    92 +
+ ...mpaign42_first_difference_companion_registry.py |    92 +
+ ...aign42_first_difference_companion_production.py |   570 +
+ ...mpaign42_first_difference_companion_registry.py |   492 +
+ 340 files changed, 271221 insertions(+), 18 deletions(-)

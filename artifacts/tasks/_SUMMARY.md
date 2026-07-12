@@ -82,7 +82,18 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260711-provider-neutral-release-inbox-real-evidence-impact-pilot-v1.md`
 - `T-20260711-relationship-export-contract-v1.md`
 - `T-20260711-repository-wide-durability-inventory-production-supersession-code-correction.md`
+- `T-20260712-campaign41-assimilation-pearson-path-to-100-production-utility-review.md`
+- `T-20260712-campaign41-coefficient-free-pearson-candidate-registry.md`
+- `T-20260712-campaign41-doctrine-preserving-deterministic-knowledge-expansion.md`
+- `T-20260712-campaign41-frozen-pearson-batch-production.md`
+- `T-20260712-campaign41-generic-correlation-engine-provenance-parameterization.md`
+- `T-20260712-campaign42-coefficient-free-first-difference-pearson-companion-registry.md`
+- `T-20260712-campaign42-first-difference-pearson-companion-production.md`
 - `T-20260712-durability-destination-decision-pre-staging-remediation.md`
+- `T-20260712-first-difference-pearson-method-contract-validation.md`
+- `T-20260712-operational-state-backup-restore-durability-gate.md`
+- `T-20260712-pearson-candidate-policy-refinement-mixed-roadmap.md`
+- `T-20260712-pearson-candidate-policy-v2-consistency-correction.md`
 - `backlog.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
@@ -91,3 +102,11 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 
 ## Needs Attention
 - No folder-specific issues recorded.
+- `T-20260712-campaign41-coefficient-free-pearson-candidate-registry.md` — completed; froze 8 coefficient-free Campaign 41 Pearson candidates and spec; outcome B required bounded engine extension before calculation.
+- `T-20260712-campaign41-generic-correlation-engine-provenance-parameterization.md` — completed; outcome A; generic correlation engine ready for separately authorized Campaign 41 execution.
+- `T-20260712-campaign41-frozen-pearson-batch-production.md` — completed; outcome A; 8 Campaign 41 Pearson packages published append-only and PostgreSQL/export retrieval verified.
+- `T-20260712-campaign41-assimilation-pearson-path-to-100-production-utility-review.md` — completed; disposition E; Campaign 41 assimilation required no new index/schema work and Pearson sequencing now favors a mixed roadmap before any Campaign 42/raw path expansion.
+- `T-20260712-pearson-candidate-policy-refinement-mixed-roadmap.md` — completed; original disposition A corrected by v2 consistency task; its 7-candidate output is historical comparison, not future-production evidence.
+- `T-20260712-pearson-candidate-policy-v2-consistency-correction.md` — completed; disposition B; corrected canonical exclusion and remote-cap arithmetic, found only 4 future-production candidates, and selected first-difference method validation before further raw production.
+- `T-20260712-first-difference-pearson-method-contract-validation.md` — completed; decision A; validated `wdi_annual_scalar_first_difference_pearson_v1@1.0` as bounded companion method, with next task a coefficient-free companion-production registry before any coefficient calculation/publication.
+- `T-20260712-campaign42-coefficient-free-first-difference-pearson-companion-registry.md` — completed; decision A; froze 8 coefficient-free first-difference Pearson companion candidates with registry fingerprint `sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15` and spec fingerprint `sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00`; no coefficients/packages were produced.

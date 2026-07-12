@@ -9,8 +9,11 @@ ProjectForge helper tools plus KnowledgeForge deterministic validators.
 - `analyze_metrics.py`
 - `architecture_reality_audit.py`
 - `build_context.py`
+- `campaign42_first_difference_companion_production.py`
+- `campaign42_first_difference_companion_registry.py`
 - `canonical_supersession_immutability_validator.py`
 - `check_coherence.py`
+- `coefficient_free_pearson_candidate_registry.py`
 - `construct_knowledge_package_v1.py`
 - `context_health.py`
 - `correlation_batch_engine.py`
@@ -21,11 +24,13 @@ ProjectForge helper tools plus KnowledgeForge deterministic validators.
 - `dry_run.py`
 - `escalate.py`
 - `external_outbox_poller_v1.py`
+- `first_difference_pearson_method_v1.py`
 - `git_autopush.py`
 - `install.sh`
 - `knowledge_repository.py`
 - `log_run.py`
 - `macroforge_neutral_release_adapter_v1.py`
+- `operational_state_checkpoint.py`
 - `postgresql_operational_projection.py`
 - `postgresql_realization_decision.py`
 - `production_support.py`

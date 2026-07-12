@@ -1,0 +1,2034 @@
+[
+  {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+      "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+      "lifecycle_state": "accepted",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+      "uncertainty_dimensions": [
+        "non-causality",
+        "non-prediction",
+        "absence of significance testing",
+        "first-difference stationarity not proven",
+        "noise amplification",
+        "window and revision dependence"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1"
+      }
+    ],
+    "created_at": "2026-07-12",
+    "created_by": "campaign42_first_difference_companion_production",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-12",
+        "evaluation_status": "evaluated",
+        "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+        "evidence_ref_id": "ev-campaign42-fd-pearson-companion-01",
+        "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+        "snapshot_fingerprint": "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "Retained raw evidence for AG.LND.AGRI.ZS and AG.LND.FRST.ZS DNK transformed by Campaign 42 first-difference contract",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "retained_fixture"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "Campaign 42 first-difference Pearson companion production",
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null,
+      "version_lineage": []
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:d7cd14dd280300c3d7571c23a9706ca57e2a2760581f0f674f15580156eae8ec",
+      "evidence_references": "sha256:c3995c1ea85b39e89f2c0822a72848c7a6e04e150737ebbf9f8552f717a1070f",
+      "generated_statements": "sha256:acd3c79fed9ad7735b5b102cc6b0e7bbcd87692e9eb082af8ad58e39cb7af38c",
+      "input_set": "sha256:dc00ee5c9a4ee4122ef40f999ad55c85a41fff413f874581731fa1fa3e4617ad",
+      "package_manifest": "sha256:4aeb7776f59f69fb3eec2efca2bf7c1497be75fe83327bf1214e70fe00d20c55",
+      "query_definitions": "sha256:ea8bc6ef9350b3ffda9affb1d4a71d090f44cb3ccc2403445cabf4feddb0958f"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "DNK",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_end": 2023,
+          "period_start": 1991
+        },
+        "dependencies": [
+          "calc-campaign42-fd-pearson-companion-01",
+          "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1"
+        ],
+        "evidence_refs": [
+          "ev-campaign42-fd-pearson-companion-01"
+        ],
+        "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+        "statement_id": "stmt-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_observation_fingerprint": "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf",
+          "aligned_transformed_count": 33,
+          "answers_change_co_movement_not_level_co_movement": true,
+          "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+          "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+          "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+          "does_not_supersede_raw_package": true,
+          "entity_id": "DNK",
+          "family": "Agriculture & Rural Development",
+          "first_difference_pearson_coefficient": {
+            "canonical": "-0.017407835395",
+            "unit": "dimensionless"
+          },
+          "frequency": "annual",
+          "independent_recompute_coefficient": "-0.017407835395",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "missing_and_excluded_periods": {
+            "series_a_missing_or_excluded": [],
+            "series_b_missing_or_excluded": []
+          },
+          "package_fingerprint": "sha256:295bc27d25c3ae1a077d0e5983b160970c18a7cabe615d3a0635e7fd080e5d14",
+          "pearson_coefficient": {
+            "canonical": "-0.017407835395",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2023,
+            "start": 1991
+          },
+          "prior_embedded_diagnostic_reconciliation": {
+            "aligned_count_matches": true,
+            "coefficient_matches": true,
+            "new_companion_coefficient": "-0.017407835395",
+            "prior_embedded_diagnostic_present": true,
+            "prior_embedded_first_difference_coefficient": "-0.017407835395",
+            "transformation_semantics_matches": true
+          },
+          "raw_evidence_fixtures": {
+            "series_a": {
+              "identity": "AG.LND.AGRI.ZS__DNK__1990-2024",
+              "normalized_fingerprint": "sha256:bd5f8ecbdcddeabfd572d3575f5b8d5f816f3526a9bbbce29675291fa32b6b0a",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/AG.LND.AGRI.ZS__DNK__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:8764b9f8a237f6b2f26ee743c57388e4c3f1b3b501ac46315a59965ca390966c",
+              "source_raw_fixture_fingerprint": "sha256:096ca90ca993a707617a7218a87fb1ff597a10951366e11edd9ad623eb93e8e9"
+            },
+            "series_b": {
+              "identity": "AG.LND.FRST.ZS__DNK__1990-2024",
+              "normalized_fingerprint": "sha256:6ca9fabae5d3d89339f82e86df39947f0997276c44044464f0b2b5d09538379c",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/AG.LND.FRST.ZS__DNK__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:3fead4f2c1a04e34b79f133342da0edf8294a58eb2f6fe5c8fe4ca7ca2f66cdb",
+              "source_raw_fixture_fingerprint": "sha256:1a42ca934e6c44e3be4f31097191b4011207ea26ac068a0f44da7274f44ceaf3"
+            }
+          },
+          "raw_observation_count": {
+            "series_a": 34,
+            "series_b": 34
+          },
+          "raw_package_reference": {
+            "package_fingerprint": "sha256:d1b56d4b5b64fa68390052e122b16cf88198044fd0fead7f7d176d83e943eb69",
+            "package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+            "source_campaign": "Campaign 40"
+          },
+          "raw_period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "raw_units": {
+            "series_a": "% of land area",
+            "series_b": "% of land area"
+          },
+          "series_a": {
+            "code": "AG.LND.AGRI.ZS",
+            "name": "Agricultural land (% of land area)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year percentage-point change in % of land area",
+            "unit": "% of land area"
+          },
+          "series_b": {
+            "code": "AG.LND.FRST.ZS",
+            "name": "Forest area (% of land area)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year percentage-point change in % of land area",
+            "unit": "% of land area"
+          },
+          "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "transformation_id": "wdi_annual_scalar_first_difference_v1",
+          "transformation_state": "first_difference",
+          "transformation_version": "1.0",
+          "transformed_coverage": "1.000000000000",
+          "transformed_observation_count": {
+            "series_a": 33,
+            "series_b": 33
+          },
+          "transformed_series_fingerprints": {
+            "series_a": "sha256:b2727c9cedca3b6f3e1bc70c840734f3125e8c5189385a3dc4e24d76bdead432",
+            "series_b": "sha256:7d604dd1896d6a6cc11536125d2f31f68678fe431628fbed8d9c3b4963704a05"
+          },
+          "transformed_unit_semantics": {
+            "series_a": "year-to-year percentage-point change in % of land area",
+            "series_b": "year-to-year percentage-point change in % of land area"
+          },
+          "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+        },
+        "text": "Across aligned annual first differences for DNK from 1991 through 2023, the Pearson correlation between annual changes in Agricultural land (% of land area) and annual changes in Forest area (% of land area) is -0.017407835395, using 33 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1 and does not supersede it."
+      }
+    ],
+    "input_references": [
+      "campaign42_first_difference_pearson_companion_production",
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+      "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+      "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1"
+    ],
+    "lineage": {
+      "previous_package_id": null,
+      "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+      "referenced_raw_source_campaign": "Campaign 40",
+      "source_campaign": "Campaign 42",
+      "version_lineage": []
+    },
+    "package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-01"
+      ],
+      "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1 from Campaign 40 without supersession",
+      "method_refs": [
+        "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+        "wdi_annual_scalar_first_difference_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "DNK"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+      "period_scope": {
+        "end": 2023,
+        "start": 1991
+      }
+    },
+    "status": "accepted",
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "first_difference_does_not_prove_stationarity",
+        "correlation_not_causation",
+        "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+        "does_not_supersede_raw_package"
+      ]
+    }
+  },
+  {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+      "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+      "lifecycle_state": "accepted",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+      "uncertainty_dimensions": [
+        "non-causality",
+        "non-prediction",
+        "absence of significance testing",
+        "first-difference stationarity not proven",
+        "noise amplification",
+        "window and revision dependence"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign40-finance-credit-broad-money-dnk-first-difference-pearson-companion-v1"
+      }
+    ],
+    "created_at": "2026-07-12",
+    "created_by": "campaign42_first_difference_companion_production",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:9f73c09343f684795343cd0c3a17a2e67bfe55bf932c8bd84be521069608e44e"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-12",
+        "evaluation_status": "evaluated",
+        "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+        "evidence_ref_id": "ev-campaign42-fd-pearson-companion-02",
+        "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+        "snapshot_fingerprint": "sha256:9f73c09343f684795343cd0c3a17a2e67bfe55bf932c8bd84be521069608e44e",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "Retained raw evidence for FS.AST.PRVT.GD.ZS and FM.LBL.BMNY.GD.ZS DNK transformed by Campaign 42 first-difference contract",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "retained_fixture"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "Campaign 42 first-difference Pearson companion production",
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null,
+      "version_lineage": []
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9b0b8089ede7bd93abf3f2f4ad1f56bd9e416a1880f84338da13b021509293e0",
+      "evidence_references": "sha256:edd77c816db0bc71c8b12eed987b01e62c5e2399575c2f7643b0041708fbf759",
+      "generated_statements": "sha256:85bfbfcfa407b1ecda403349a19ae40add7edebf7cc5f34dbbacaad97bdc0642",
+      "input_set": "sha256:b433f68f89e10af5c2e804eb5acabe65966574cc885fa3900b4eeedc8b5a156d",
+      "package_manifest": "sha256:c3a6b619dfdea2f06cf59201bb2e0e5a50e6a2365b922f0f93b3a23c91e3dce9",
+      "query_definitions": "sha256:fb4dba34683f18085fe5a6a718e1376e3ed99b9c8bbfd215541ebdd3a5ab2bce"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "DNK",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_end": 2024,
+          "period_start": 1991
+        },
+        "dependencies": [
+          "calc-campaign42-fd-pearson-companion-02",
+          "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1"
+        ],
+        "evidence_refs": [
+          "ev-campaign42-fd-pearson-companion-02"
+        ],
+        "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+        "statement_id": "stmt-srcpkg-campaign40-finance-credit-broad-money-dnk-first-difference-pearson-companion-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_observation_fingerprint": "sha256:9f73c09343f684795343cd0c3a17a2e67bfe55bf932c8bd84be521069608e44e",
+          "aligned_transformed_count": 34,
+          "answers_change_co_movement_not_level_co_movement": true,
+          "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+          "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+          "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+          "does_not_supersede_raw_package": true,
+          "entity_id": "DNK",
+          "family": "Financial Sector",
+          "first_difference_pearson_coefficient": {
+            "canonical": "-0.083567273412",
+            "unit": "dimensionless"
+          },
+          "frequency": "annual",
+          "independent_recompute_coefficient": "-0.083567273412",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "missing_and_excluded_periods": {
+            "series_a_missing_or_excluded": [],
+            "series_b_missing_or_excluded": []
+          },
+          "package_fingerprint": "sha256:5fc6fb92b862e08156a95fe4e59fb7ec85f241cd18287a5243fac52e763a8def",
+          "pearson_coefficient": {
+            "canonical": "-0.083567273412",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2024,
+            "start": 1991
+          },
+          "prior_embedded_diagnostic_reconciliation": {
+            "aligned_count_matches": true,
+            "coefficient_matches": true,
+            "new_companion_coefficient": "-0.083567273412",
+            "prior_embedded_diagnostic_present": true,
+            "prior_embedded_first_difference_coefficient": "-0.083567273412",
+            "transformation_semantics_matches": true
+          },
+          "raw_evidence_fixtures": {
+            "series_a": {
+              "identity": "FS.AST.PRVT.GD.ZS__DNK__1990-2024",
+              "normalized_fingerprint": "sha256:d1e17d7b87ee4042742579769120b9ff34da0ef6ff80456d95dcee82ebe6dc45",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/FS.AST.PRVT.GD.ZS__DNK__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:bbc71a8fc5a20957498db1f908ef615276879dc9fdd0126fdf0c9c93b1601c0b",
+              "source_raw_fixture_fingerprint": "sha256:deff53d8f43918b16ae46cd234253987df631662c5b06791a90f0ab32c74c2d7"
+            },
+            "series_b": {
+              "identity": "FM.LBL.BMNY.GD.ZS__DNK__1990-2024",
+              "normalized_fingerprint": "sha256:8833f55ad34c299ffd0ed1d7d93fc7d443701a3eb88c8e24a8162af6be0858e6",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/FM.LBL.BMNY.GD.ZS__DNK__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:221aaf413fe39f11ac579e9c55bfb2613fcea1d976ea559e212bff6e05df5455",
+              "source_raw_fixture_fingerprint": "sha256:f02cd349b66f6f2f9401dcd8305a9ae2840dea48df3abd3777848f2a0522d01f"
+            }
+          },
+          "raw_observation_count": {
+            "series_a": 35,
+            "series_b": 35
+          },
+          "raw_package_reference": {
+            "package_fingerprint": "sha256:d3dec5a7240ac208361d309817b7414a1803294ffbb9bf3309cc7b12ca5625fe",
+            "package_id": "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+            "source_campaign": "Campaign 40"
+          },
+          "raw_period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "raw_units": {
+            "series_a": "percent of GDP",
+            "series_b": "percent of GDP"
+          },
+          "series_a": {
+            "code": "FS.AST.PRVT.GD.ZS",
+            "name": "Domestic credit to private sector (% of GDP)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year change in percentage points of GDP",
+            "unit": "percent of GDP"
+          },
+          "series_b": {
+            "code": "FM.LBL.BMNY.GD.ZS",
+            "name": "Broad money (% of GDP)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year change in percentage points of GDP",
+            "unit": "percent of GDP"
+          },
+          "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "transformation_id": "wdi_annual_scalar_first_difference_v1",
+          "transformation_state": "first_difference",
+          "transformation_version": "1.0",
+          "transformed_coverage": "1.000000000000",
+          "transformed_observation_count": {
+            "series_a": 34,
+            "series_b": 34
+          },
+          "transformed_series_fingerprints": {
+            "series_a": "sha256:458045f83bfac6999fb0d833c6539d207b7a82cfe97b6280bfca5b0775d5cbce",
+            "series_b": "sha256:2c1c99ba7c519690ec7851c738930a11f9ed92fd146c6296c9d1cbcf8f318c7b"
+          },
+          "transformed_unit_semantics": {
+            "series_a": "year-to-year change in percentage points of GDP",
+            "series_b": "year-to-year change in percentage points of GDP"
+          },
+          "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+        },
+        "text": "Across aligned annual first differences for DNK from 1991 through 2024, the Pearson correlation between annual changes in Domestic credit to private sector (% of GDP) and annual changes in Broad money (% of GDP) is -0.083567273412, using 34 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1 and does not supersede it."
+      }
+    ],
+    "input_references": [
+      "campaign42_first_difference_pearson_companion_production",
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+      "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+      "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1"
+    ],
+    "lineage": {
+      "previous_package_id": null,
+      "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+      "referenced_raw_source_campaign": "Campaign 40",
+      "source_campaign": "Campaign 42",
+      "version_lineage": []
+    },
+    "package_id": "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-first-difference-pearson-companion-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "sha256:9f73c09343f684795343cd0c3a17a2e67bfe55bf932c8bd84be521069608e44e"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-02"
+      ],
+      "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1 from Campaign 40 without supersession",
+      "method_refs": [
+        "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+        "wdi_annual_scalar_first_difference_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "DNK"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+      "period_scope": {
+        "end": 2024,
+        "start": 1991
+      }
+    },
+    "status": "accepted",
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "first_difference_does_not_prove_stationarity",
+        "correlation_not_causation",
+        "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+        "does_not_supersede_raw_package"
+      ]
+    }
+  },
+  {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+      "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+      "lifecycle_state": "accepted",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+      "uncertainty_dimensions": [
+        "non-causality",
+        "non-prediction",
+        "absence of significance testing",
+        "first-difference stationarity not proven",
+        "noise amplification",
+        "window and revision dependence"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1"
+      }
+    ],
+    "created_at": "2026-07-12",
+    "created_by": "campaign42_first_difference_companion_production",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:f49d0809e4eba7036050fa78b0ddca35e1a0f8465d78755db456ab7f08e5cb32"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-12",
+        "evaluation_status": "evaluated",
+        "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+        "evidence_ref_id": "ev-campaign42-fd-pearson-companion-03",
+        "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+        "snapshot_fingerprint": "sha256:f49d0809e4eba7036050fa78b0ddca35e1a0f8465d78755db456ab7f08e5cb32",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "Retained raw evidence for SP.DYN.CBRT.IN and SP.DYN.CDRT.IN NOR transformed by Campaign 42 first-difference contract",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "retained_fixture"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "Campaign 42 first-difference Pearson companion production",
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null,
+      "version_lineage": []
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:8245a4ef44fc9b6f77c0204e17137243764fcb1547590ffabf7c8deefbc327d1",
+      "evidence_references": "sha256:14cae3b7ada0ea9c32d3773964890fbd5bc3eb5f5aba5aa1b46a6d89032454b8",
+      "generated_statements": "sha256:56e2be0c9ae7b00facb8e4ea0208fb124393139800ac0c0084af1660d66bb9e7",
+      "input_set": "sha256:38731782e81ab79888d6402bf593e8406d84a116bd1bc8fa7a9d49f9f5d5a70e",
+      "package_manifest": "sha256:cbfda58034bcd6adfaba9449329f456db50ff2bcca69c50777e9832e690bd363",
+      "query_definitions": "sha256:efe4cdcb782b0d729ef7e975a6e93150f4ec472ac48d3928b1d5d64425de3ca6"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "NOR",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_end": 2024,
+          "period_start": 1991
+        },
+        "dependencies": [
+          "calc-campaign42-fd-pearson-companion-03",
+          "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1"
+        ],
+        "evidence_refs": [
+          "ev-campaign42-fd-pearson-companion-03"
+        ],
+        "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+        "statement_id": "stmt-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_observation_fingerprint": "sha256:f49d0809e4eba7036050fa78b0ddca35e1a0f8465d78755db456ab7f08e5cb32",
+          "aligned_transformed_count": 34,
+          "answers_change_co_movement_not_level_co_movement": true,
+          "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+          "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+          "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+          "does_not_supersede_raw_package": true,
+          "entity_id": "NOR",
+          "family": "Demographic",
+          "first_difference_pearson_coefficient": {
+            "canonical": "-0.289912537517",
+            "unit": "dimensionless"
+          },
+          "frequency": "annual",
+          "independent_recompute_coefficient": "-0.289912537517",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "missing_and_excluded_periods": {
+            "series_a_missing_or_excluded": [],
+            "series_b_missing_or_excluded": []
+          },
+          "package_fingerprint": "sha256:d9f8000fad2d29c130827a9316580d32b73d231459b064fd21296fd0af9d019d",
+          "pearson_coefficient": {
+            "canonical": "-0.289912537517",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2024,
+            "start": 1991
+          },
+          "prior_embedded_diagnostic_reconciliation": {
+            "aligned_count_matches": true,
+            "coefficient_matches": true,
+            "new_companion_coefficient": "-0.289912537517",
+            "prior_embedded_diagnostic_present": true,
+            "prior_embedded_first_difference_coefficient": "-0.289912537517",
+            "transformation_semantics_matches": true
+          },
+          "raw_evidence_fixtures": {
+            "series_a": {
+              "identity": "SP.DYN.CBRT.IN__NOR__1990-2024",
+              "normalized_fingerprint": "sha256:c88ad96127bffbabb9520129631fd769d16686edc64d92835c33e20734fc9c86",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.CBRT.IN__NOR__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:9eacb153f48a31c4e20287c12ad7213e8b2ea1af303dc0bf7e386c4baf3f4624",
+              "source_raw_fixture_fingerprint": "sha256:df2c4ae734b1219e90566b2f95b57541698ccad7a143b3ee2ffcf2ba7038e7f5"
+            },
+            "series_b": {
+              "identity": "SP.DYN.CDRT.IN__NOR__1990-2024",
+              "normalized_fingerprint": "sha256:a6425c8b37eaccea0e52d85bc464cdd6be9877c80ed3e72d14353d60c39005d4",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.CDRT.IN__NOR__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:e329f552411fd7783a8077634ca85be601ce2d2e983f3f0890329e3f8f60241c",
+              "source_raw_fixture_fingerprint": "sha256:985a1b249028c873eef1730209ffb1243d8079e91774d6e59e22518bf3d9d0d3"
+            }
+          },
+          "raw_observation_count": {
+            "series_a": 35,
+            "series_b": 35
+          },
+          "raw_package_reference": {
+            "package_fingerprint": "sha256:ea6c12defa33aed2395b035889350e993e66bdcc86f3429374a03bd59be0a896",
+            "package_id": "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+            "source_campaign": "Campaign 40"
+          },
+          "raw_period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "raw_units": {
+            "series_a": "per 1,000 people",
+            "series_b": "per 1,000 people"
+          },
+          "series_a": {
+            "code": "SP.DYN.CBRT.IN",
+            "name": "Birth rate, crude (per 1,000 people)",
+            "transformation": "raw",
+            "transformed_unit": "absolute year-to-year change in per 1,000 people",
+            "unit": "per 1,000 people"
+          },
+          "series_b": {
+            "code": "SP.DYN.CDRT.IN",
+            "name": "Death rate, crude (per 1,000 people)",
+            "transformation": "raw",
+            "transformed_unit": "absolute year-to-year change in per 1,000 people",
+            "unit": "per 1,000 people"
+          },
+          "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "transformation_id": "wdi_annual_scalar_first_difference_v1",
+          "transformation_state": "first_difference",
+          "transformation_version": "1.0",
+          "transformed_coverage": "1.000000000000",
+          "transformed_observation_count": {
+            "series_a": 34,
+            "series_b": 34
+          },
+          "transformed_series_fingerprints": {
+            "series_a": "sha256:44c3674c7c77167888afacae0a77b31d499bd474e28f92ca4038036db230902d",
+            "series_b": "sha256:7fcdbb4cc8acf1f7a0d4caa1fa0e54e60bf657a5197226ecae6e0cef9204b635"
+          },
+          "transformed_unit_semantics": {
+            "series_a": "absolute year-to-year change in per 1,000 people",
+            "series_b": "absolute year-to-year change in per 1,000 people"
+          },
+          "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+        },
+        "text": "Across aligned annual first differences for NOR from 1991 through 2024, the Pearson correlation between annual changes in Birth rate, crude (per 1,000 people) and annual changes in Death rate, crude (per 1,000 people) is -0.289912537517, using 34 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1 and does not supersede it."
+      }
+    ],
+    "input_references": [
+      "campaign42_first_difference_pearson_companion_production",
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+      "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+      "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1"
+    ],
+    "lineage": {
+      "previous_package_id": null,
+      "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+      "referenced_raw_source_campaign": "Campaign 40",
+      "source_campaign": "Campaign 42",
+      "version_lineage": []
+    },
+    "package_id": "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "sha256:f49d0809e4eba7036050fa78b0ddca35e1a0f8465d78755db456ab7f08e5cb32"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-03"
+      ],
+      "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1 from Campaign 40 without supersession",
+      "method_refs": [
+        "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+        "wdi_annual_scalar_first_difference_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "NOR"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+      "period_scope": {
+        "end": 2024,
+        "start": 1991
+      }
+    },
+    "status": "accepted",
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "first_difference_does_not_prove_stationarity",
+        "correlation_not_causation",
+        "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+        "does_not_supersede_raw_package"
+      ]
+    }
+  },
+  {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+      "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+      "lifecycle_state": "accepted",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+      "uncertainty_dimensions": [
+        "non-causality",
+        "non-prediction",
+        "absence of significance testing",
+        "first-difference stationarity not proven",
+        "noise amplification",
+        "window and revision dependence"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-first-difference-pearson-companion-v1"
+      }
+    ],
+    "created_at": "2026-07-12",
+    "created_by": "campaign42_first_difference_companion_production",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:4106e2bbdae4ad49d1d45ffd9706a7ccf8befd63ddc0a3e6ad9fd13db366066b"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-12",
+        "evaluation_status": "evaluated",
+        "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+        "evidence_ref_id": "ev-campaign42-fd-pearson-companion-04",
+        "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+        "snapshot_fingerprint": "sha256:4106e2bbdae4ad49d1d45ffd9706a7ccf8befd63ddc0a3e6ad9fd13db366066b",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "Retained raw evidence for EG.ELC.FOSL.ZS and EG.ELC.RNWX.ZS NOR transformed by Campaign 42 first-difference contract",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "retained_fixture"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "Campaign 42 first-difference Pearson companion production",
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null,
+      "version_lineage": []
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:e29bc0c345cbb7f0518454ffab2d601c693b5e24f06c475951ef4fb2992b8e76",
+      "evidence_references": "sha256:fdea8927e03e78776a556b30d99bc7016d376de58103a231689e34ac885d8f84",
+      "generated_statements": "sha256:0975753b69e6ccbae8157220d351933ce1ed422c5abc1689313e898c3284444e",
+      "input_set": "sha256:7b04237c3a9f630ad09a87509a0598df00043c204515fb29c86a5e2170ac25be",
+      "package_manifest": "sha256:6ae0f4a51759ff352d9823f336f17ad769652e78ddff9b91d81ce48110fa62d1",
+      "query_definitions": "sha256:0c0646ee6a743c1f426810702fd01c4568353c2d32f2babd616fbe037e1e85c3"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "NOR",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_end": 2021,
+          "period_start": 1991
+        },
+        "dependencies": [
+          "calc-campaign42-fd-pearson-companion-04",
+          "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1"
+        ],
+        "evidence_refs": [
+          "ev-campaign42-fd-pearson-companion-04"
+        ],
+        "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+        "statement_id": "stmt-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-first-difference-pearson-companion-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_observation_fingerprint": "sha256:4106e2bbdae4ad49d1d45ffd9706a7ccf8befd63ddc0a3e6ad9fd13db366066b",
+          "aligned_transformed_count": 31,
+          "answers_change_co_movement_not_level_co_movement": true,
+          "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+          "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+          "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+          "does_not_supersede_raw_package": true,
+          "entity_id": "NOR",
+          "family": "Energy & Mining",
+          "first_difference_pearson_coefficient": {
+            "canonical": "-0.204185174675",
+            "unit": "dimensionless"
+          },
+          "frequency": "annual",
+          "independent_recompute_coefficient": "-0.204185174675",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "missing_and_excluded_periods": {
+            "series_a_missing_or_excluded": [],
+            "series_b_missing_or_excluded": []
+          },
+          "package_fingerprint": "sha256:d2d39e2355985f66c9ba40618d5da3921e16f3fca28abd02ff6536a7db930fae",
+          "pearson_coefficient": {
+            "canonical": "-0.204185174675",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2021,
+            "start": 1991
+          },
+          "prior_embedded_diagnostic_reconciliation": {
+            "aligned_count_matches": true,
+            "coefficient_matches": true,
+            "new_companion_coefficient": "-0.204185174675",
+            "prior_embedded_diagnostic_present": true,
+            "prior_embedded_first_difference_coefficient": "-0.204185174675",
+            "transformation_semantics_matches": true
+          },
+          "raw_evidence_fixtures": {
+            "series_a": {
+              "identity": "EG.ELC.FOSL.ZS__NOR__1990-2024",
+              "normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.FOSL.ZS__NOR__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:e37b6e248050cd96e57a0815fbd05db7dfd536924b2f53d8630ae39d5e6443e6",
+              "source_raw_fixture_fingerprint": "sha256:0a3cc4fdc9bd8fb2b0da1be7b4b460094a93f2bfd13e79a49911556715c32bda"
+            },
+            "series_b": {
+              "identity": "EG.ELC.RNWX.ZS__NOR__1990-2024",
+              "normalized_fingerprint": "sha256:435e2b74e25ae91423e017a076cafdf052075f83700ba96196751b940fcd5ac3",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.RNWX.ZS__NOR__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:e2e035fa3b227cc5dc0d3ebfc548dd61e1e6f43bb3da993c9a3217d428d17cec",
+              "source_raw_fixture_fingerprint": "sha256:0cf6d320c63fed94769605b496070cf77e2120defdc711c427830bd48ee80045"
+            }
+          },
+          "raw_observation_count": {
+            "series_a": 34,
+            "series_b": 32
+          },
+          "raw_package_reference": {
+            "package_fingerprint": "sha256:7d699fd1d900df05167f0395922234824123066a0a2a937182b035c9b18c102e",
+            "package_id": "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+            "source_campaign": "Campaign 40"
+          },
+          "raw_period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "raw_units": {
+            "series_a": "% of total",
+            "series_b": "% of total"
+          },
+          "series_a": {
+            "code": "EG.ELC.FOSL.ZS",
+            "name": "Electricity production from oil, gas and coal sources (% of total)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year percentage-point change in % of total",
+            "unit": "% of total"
+          },
+          "series_b": {
+            "code": "EG.ELC.RNWX.ZS",
+            "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year percentage-point change in % of total",
+            "unit": "% of total"
+          },
+          "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "transformation_id": "wdi_annual_scalar_first_difference_v1",
+          "transformation_state": "first_difference",
+          "transformation_version": "1.0",
+          "transformed_coverage": "1.000000000000",
+          "transformed_observation_count": {
+            "series_a": 33,
+            "series_b": 31
+          },
+          "transformed_series_fingerprints": {
+            "series_a": "sha256:993e6aab983d79fd54af82b678485eedabc3af2ad013fe38c75b50928ef4477c",
+            "series_b": "sha256:fe60096c32b0e8907377430e587ecf65dcc1b9f0e6ef98a268a0540da11c4361"
+          },
+          "transformed_unit_semantics": {
+            "series_a": "year-to-year percentage-point change in % of total",
+            "series_b": "year-to-year percentage-point change in % of total"
+          },
+          "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+        },
+        "text": "Across aligned annual first differences for NOR from 1991 through 2021, the Pearson correlation between annual changes in Electricity production from oil, gas and coal sources (% of total) and annual changes in Electricity production from renewable sources, excluding hydroelectric (% of total) is -0.204185174675, using 31 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1 and does not supersede it."
+      }
+    ],
+    "input_references": [
+      "campaign42_first_difference_pearson_companion_production",
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+      "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+      "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1"
+    ],
+    "lineage": {
+      "previous_package_id": null,
+      "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+      "referenced_raw_source_campaign": "Campaign 40",
+      "source_campaign": "Campaign 42",
+      "version_lineage": []
+    },
+    "package_id": "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-first-difference-pearson-companion-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "sha256:4106e2bbdae4ad49d1d45ffd9706a7ccf8befd63ddc0a3e6ad9fd13db366066b"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-04"
+      ],
+      "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1 from Campaign 40 without supersession",
+      "method_refs": [
+        "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+        "wdi_annual_scalar_first_difference_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "NOR"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+      "period_scope": {
+        "end": 2021,
+        "start": 1991
+      }
+    },
+    "status": "accepted",
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "first_difference_does_not_prove_stationarity",
+        "correlation_not_causation",
+        "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+        "does_not_supersede_raw_package"
+      ]
+    }
+  },
+  {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+      "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+      "lifecycle_state": "accepted",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+      "uncertainty_dimensions": [
+        "non-causality",
+        "non-prediction",
+        "absence of significance testing",
+        "first-difference stationarity not proven",
+        "noise amplification",
+        "window and revision dependence"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1"
+      }
+    ],
+    "created_at": "2026-07-12",
+    "created_by": "campaign42_first_difference_companion_production",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e67563f89beba40a333293f90def6461142d127f6bbf30e84f0730dd78646a62"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-12",
+        "evaluation_status": "evaluated",
+        "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+        "evidence_ref_id": "ev-campaign42-fd-pearson-companion-05",
+        "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+        "snapshot_fingerprint": "sha256:e67563f89beba40a333293f90def6461142d127f6bbf30e84f0730dd78646a62",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "Retained raw evidence for SP.DYN.LE00.IN and SH.DYN.MORT NOR transformed by Campaign 42 first-difference contract",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "retained_fixture"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "Campaign 42 first-difference Pearson companion production",
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null,
+      "version_lineage": []
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:e9ed1b1c67aade59e719bbef899f5d77a0fd1506898d9b99ae0210e28a3037d1",
+      "evidence_references": "sha256:306054166bbc3841b092b2a0312bbb76538fe8491986e7a9bf3841e54cb97b22",
+      "generated_statements": "sha256:b170c663e14705c1b60878464d8a3d425ed0c4617e6e1c09e639d8b101fbfa15",
+      "input_set": "sha256:bb4a77847fed9ccafc7ac0e4feacd4b86a5fb32281283eb952d8ac718471309d",
+      "package_manifest": "sha256:de392b810557a68a948a37b61b81ca6a155a5ce0af9e94c32f4b3aef78be83d8",
+      "query_definitions": "sha256:efe4cdcb782b0d729ef7e975a6e93150f4ec472ac48d3928b1d5d64425de3ca6"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "NOR",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_end": 2024,
+          "period_start": 1991
+        },
+        "dependencies": [
+          "calc-campaign42-fd-pearson-companion-05",
+          "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+        ],
+        "evidence_refs": [
+          "ev-campaign42-fd-pearson-companion-05"
+        ],
+        "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+        "statement_id": "stmt-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_observation_fingerprint": "sha256:e67563f89beba40a333293f90def6461142d127f6bbf30e84f0730dd78646a62",
+          "aligned_transformed_count": 34,
+          "answers_change_co_movement_not_level_co_movement": true,
+          "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+          "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+          "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+          "does_not_supersede_raw_package": true,
+          "entity_id": "NOR",
+          "family": "Health",
+          "first_difference_pearson_coefficient": {
+            "canonical": "-0.207863151096",
+            "unit": "dimensionless"
+          },
+          "frequency": "annual",
+          "independent_recompute_coefficient": "-0.207863151096",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "missing_and_excluded_periods": {
+            "series_a_missing_or_excluded": [],
+            "series_b_missing_or_excluded": []
+          },
+          "package_fingerprint": "sha256:f673b2bfdf38037c51f32b34647ff97bb12209c470c433a7d65fe30f3cfb8703",
+          "pearson_coefficient": {
+            "canonical": "-0.207863151096",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2024,
+            "start": 1991
+          },
+          "prior_embedded_diagnostic_reconciliation": {
+            "aligned_count_matches": true,
+            "coefficient_matches": true,
+            "new_companion_coefficient": "-0.207863151096",
+            "prior_embedded_diagnostic_present": true,
+            "prior_embedded_first_difference_coefficient": "-0.207863151096",
+            "transformation_semantics_matches": true
+          },
+          "raw_evidence_fixtures": {
+            "series_a": {
+              "identity": "SP.DYN.LE00.IN__NOR__1990-2024",
+              "normalized_fingerprint": "sha256:83d74ce0f508ec88a4a841fdea817725e1c022ee71ac42a6a5895d3b775e2f27",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.LE00.IN__NOR__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:ccbb93d4907b53984176ee3907121f9f658194cdc4690e106ac5ba9b9d1a776d",
+              "source_raw_fixture_fingerprint": "sha256:4f455ba00f23e471bd1daa89703d4c5463f5f131a9783b2bf0c39bd38e314b9c"
+            },
+            "series_b": {
+              "identity": "SH.DYN.MORT__NOR__1990-2024",
+              "normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SH.DYN.MORT__NOR__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:79cbf4666a6cc0d0d8c93a8334c9cb4c1a95ac10f68ddb4f5e62f9bb4c209c54",
+              "source_raw_fixture_fingerprint": "sha256:080e0fb17a989b2df3b143ea1f9ab774d603035af0c935a3cc3f84f56be5514f"
+            }
+          },
+          "raw_observation_count": {
+            "series_a": 35,
+            "series_b": 35
+          },
+          "raw_package_reference": {
+            "package_fingerprint": "sha256:6b1699ab64cf79cd89d0e0436c1b015e63629565a9cf7dee67b172b67c0c6feb",
+            "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+            "source_campaign": "Campaign 40"
+          },
+          "raw_period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "raw_units": {
+            "series_a": "years",
+            "series_b": "per 1,000 live births"
+          },
+          "series_a": {
+            "code": "SP.DYN.LE00.IN",
+            "name": "Life expectancy at birth, total (years)",
+            "transformation": "raw",
+            "transformed_unit": "absolute year-to-year change in years",
+            "unit": "years"
+          },
+          "series_b": {
+            "code": "SH.DYN.MORT",
+            "name": "Mortality rate, under-5 (per 1,000 live births)",
+            "transformation": "raw",
+            "transformed_unit": "absolute year-to-year change in per 1,000 live births",
+            "unit": "per 1,000 live births"
+          },
+          "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "transformation_id": "wdi_annual_scalar_first_difference_v1",
+          "transformation_state": "first_difference",
+          "transformation_version": "1.0",
+          "transformed_coverage": "1.000000000000",
+          "transformed_observation_count": {
+            "series_a": 34,
+            "series_b": 34
+          },
+          "transformed_series_fingerprints": {
+            "series_a": "sha256:e8009f53758002d4ff5cc23a38c971b735613b3fdac5dd94c6942392c7bca958",
+            "series_b": "sha256:233c38d8f280c242a2e156ffee5085ebf26aa06588bdc5dfc9e6d47a186e59ec"
+          },
+          "transformed_unit_semantics": {
+            "series_a": "absolute year-to-year change in years",
+            "series_b": "absolute year-to-year change in per 1,000 live births"
+          },
+          "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+        },
+        "text": "Across aligned annual first differences for NOR from 1991 through 2024, the Pearson correlation between annual changes in Life expectancy at birth, total (years) and annual changes in Mortality rate, under-5 (per 1,000 live births) is -0.207863151096, using 34 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1 and does not supersede it."
+      }
+    ],
+    "input_references": [
+      "campaign42_first_difference_pearson_companion_production",
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+      "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+      "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+    ],
+    "lineage": {
+      "previous_package_id": null,
+      "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+      "referenced_raw_source_campaign": "Campaign 40",
+      "source_campaign": "Campaign 42",
+      "version_lineage": []
+    },
+    "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "sha256:e67563f89beba40a333293f90def6461142d127f6bbf30e84f0730dd78646a62"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-05"
+      ],
+      "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1 from Campaign 40 without supersession",
+      "method_refs": [
+        "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+        "wdi_annual_scalar_first_difference_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "NOR"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+      "period_scope": {
+        "end": 2024,
+        "start": 1991
+      }
+    },
+    "status": "accepted",
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "first_difference_does_not_prove_stationarity",
+        "correlation_not_causation",
+        "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+        "does_not_supersede_raw_package"
+      ]
+    }
+  },
+  {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+      "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+      "lifecycle_state": "accepted",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+      "uncertainty_dimensions": [
+        "non-causality",
+        "non-prediction",
+        "absence of significance testing",
+        "first-difference stationarity not proven",
+        "noise amplification",
+        "window and revision dependence"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign40-infrastructure-internet-mobile-swe-first-difference-pearson-companion-v1"
+      }
+    ],
+    "created_at": "2026-07-12",
+    "created_by": "campaign42_first_difference_companion_production",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:5208de18a28b83fc45fb5a2e1d90e08b4b36d27437d8f46af75effb120d7cfdc"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-12",
+        "evaluation_status": "evaluated",
+        "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+        "evidence_ref_id": "ev-campaign42-fd-pearson-companion-06",
+        "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+        "snapshot_fingerprint": "sha256:5208de18a28b83fc45fb5a2e1d90e08b4b36d27437d8f46af75effb120d7cfdc",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "Retained raw evidence for IT.NET.USER.ZS and IT.CEL.SETS.P2 SWE transformed by Campaign 42 first-difference contract",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "retained_fixture"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "Campaign 42 first-difference Pearson companion production",
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null,
+      "version_lineage": []
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:f0800b4e359c17bd51ab586f3a5a236b13b56197a18a0348ab12d0a188195d5b",
+      "evidence_references": "sha256:c846f4f2c3386c18661378c11340e6ac353f95d9a570ca0c36201e4a1c47cb02",
+      "generated_statements": "sha256:7eff838030ababfd607cf425b6ce258b7f85ceaa365eeae8a4a1109a00443de8",
+      "input_set": "sha256:176edab36c3e8d5e244382be87eef1c6325182653092029dbc967de0e37af117",
+      "package_manifest": "sha256:0b09ca3e2c290c98be2096bd9b6420ecf78a67c92538bfe1e30bc696909ff16d",
+      "query_definitions": "sha256:90e0d5d5a3e932384a261df456d5bbf678b99aa650b3f6d9a1804da3ec940a0e"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "SWE",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_end": 2024,
+          "period_start": 1991
+        },
+        "dependencies": [
+          "calc-campaign42-fd-pearson-companion-06",
+          "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1"
+        ],
+        "evidence_refs": [
+          "ev-campaign42-fd-pearson-companion-06"
+        ],
+        "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+        "statement_id": "stmt-srcpkg-campaign40-infrastructure-internet-mobile-swe-first-difference-pearson-companion-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_observation_fingerprint": "sha256:5208de18a28b83fc45fb5a2e1d90e08b4b36d27437d8f46af75effb120d7cfdc",
+          "aligned_transformed_count": 34,
+          "answers_change_co_movement_not_level_co_movement": true,
+          "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+          "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+          "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+          "does_not_supersede_raw_package": true,
+          "entity_id": "SWE",
+          "family": "Infrastructure",
+          "first_difference_pearson_coefficient": {
+            "canonical": "0.402109713928",
+            "unit": "dimensionless"
+          },
+          "frequency": "annual",
+          "independent_recompute_coefficient": "0.402109713928",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "missing_and_excluded_periods": {
+            "series_a_missing_or_excluded": [],
+            "series_b_missing_or_excluded": []
+          },
+          "package_fingerprint": "sha256:cb03629f0ba4819f0ede8c3c5b8ac327b5ab5351b63b31af72b97a0c9904bf8d",
+          "pearson_coefficient": {
+            "canonical": "0.402109713928",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2024,
+            "start": 1991
+          },
+          "prior_embedded_diagnostic_reconciliation": {
+            "aligned_count_matches": true,
+            "coefficient_matches": true,
+            "new_companion_coefficient": "0.402109713928",
+            "prior_embedded_diagnostic_present": true,
+            "prior_embedded_first_difference_coefficient": "0.402109713928",
+            "transformation_semantics_matches": true
+          },
+          "raw_evidence_fixtures": {
+            "series_a": {
+              "identity": "IT.NET.USER.ZS__SWE__1990-2024",
+              "normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.NET.USER.ZS__SWE__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:d18c54564d09d46a10724cf347d3d0ec2cb79ce9897699a002ae0ecdb86c244e",
+              "source_raw_fixture_fingerprint": "sha256:9d749f6bb5e305128a31d62f812f4dccc485898bbd877b115e7d955268981566"
+            },
+            "series_b": {
+              "identity": "IT.CEL.SETS.P2__SWE__1990-2024",
+              "normalized_fingerprint": "sha256:7689361a24f2545a177de984e566594b9cf1284c7bebf19ea1100c37548bf2bd",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.CEL.SETS.P2__SWE__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:366793cab68ed9c694dc427389b7dd74647206700903413b2e5543b1c9794772",
+              "source_raw_fixture_fingerprint": "sha256:6bb198696b6e6c5162ef232acca2c2d5f2c6f472bacabe78fbb19fb5fe408f74"
+            }
+          },
+          "raw_observation_count": {
+            "series_a": 35,
+            "series_b": 35
+          },
+          "raw_package_reference": {
+            "package_fingerprint": "sha256:a73c0bda3e804134376044a1c0deeecc95607a719a9017a55a15067a0143fd0a",
+            "package_id": "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1",
+            "source_campaign": "Campaign 40"
+          },
+          "raw_period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "raw_units": {
+            "series_a": "% of population",
+            "series_b": "per 100 people"
+          },
+          "series_a": {
+            "code": "IT.NET.USER.ZS",
+            "name": "Individuals using the Internet (% of population)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year percentage-point change in % of population",
+            "unit": "% of population"
+          },
+          "series_b": {
+            "code": "IT.CEL.SETS.P2",
+            "name": "Mobile cellular subscriptions (per 100 people)",
+            "transformation": "raw",
+            "transformed_unit": "absolute year-to-year change in per 100 people",
+            "unit": "per 100 people"
+          },
+          "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "transformation_id": "wdi_annual_scalar_first_difference_v1",
+          "transformation_state": "first_difference",
+          "transformation_version": "1.0",
+          "transformed_coverage": "1.000000000000",
+          "transformed_observation_count": {
+            "series_a": 34,
+            "series_b": 34
+          },
+          "transformed_series_fingerprints": {
+            "series_a": "sha256:6f158a95449d3eac1eccec3ee47399eca611bd95d2b7f50b7c36e883c1bad379",
+            "series_b": "sha256:49b70ba21995f53ef35f852750e2477979f006891a8fa7dbe25e6f39300b019a"
+          },
+          "transformed_unit_semantics": {
+            "series_a": "year-to-year percentage-point change in % of population",
+            "series_b": "absolute year-to-year change in per 100 people"
+          },
+          "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+        },
+        "text": "Across aligned annual first differences for SWE from 1991 through 2024, the Pearson correlation between annual changes in Individuals using the Internet (% of population) and annual changes in Mobile cellular subscriptions (per 100 people) is 0.402109713928, using 34 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1 and does not supersede it."
+      }
+    ],
+    "input_references": [
+      "campaign42_first_difference_pearson_companion_production",
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+      "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+      "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1"
+    ],
+    "lineage": {
+      "previous_package_id": null,
+      "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1",
+      "referenced_raw_source_campaign": "Campaign 40",
+      "source_campaign": "Campaign 42",
+      "version_lineage": []
+    },
+    "package_id": "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-first-difference-pearson-companion-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "sha256:5208de18a28b83fc45fb5a2e1d90e08b4b36d27437d8f46af75effb120d7cfdc"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-06"
+      ],
+      "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1 from Campaign 40 without supersession",
+      "method_refs": [
+        "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+        "wdi_annual_scalar_first_difference_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "SWE"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+      "period_scope": {
+        "end": 2024,
+        "start": 1991
+      }
+    },
+    "status": "accepted",
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "first_difference_does_not_prove_stationarity",
+        "correlation_not_causation",
+        "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+        "does_not_supersede_raw_package"
+      ]
+    }
+  },
+  {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+      "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+      "lifecycle_state": "accepted",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+      "uncertainty_dimensions": [
+        "non-causality",
+        "non-prediction",
+        "absence of significance testing",
+        "first-difference stationarity not proven",
+        "noise amplification",
+        "window and revision dependence"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign41-swe-private-credit-internet-users-first-difference-pearson-companion-v1"
+      }
+    ],
+    "created_at": "2026-07-12",
+    "created_by": "campaign42_first_difference_companion_production",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:4424de0bfb8e90c50e428e116eb1a88d0b140cff0176e70c1700ab522c5a32cd"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-12",
+        "evaluation_status": "evaluated",
+        "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+        "evidence_ref_id": "ev-campaign42-fd-pearson-companion-07",
+        "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+        "snapshot_fingerprint": "sha256:4424de0bfb8e90c50e428e116eb1a88d0b140cff0176e70c1700ab522c5a32cd",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "Retained raw evidence for FS.AST.PRVT.GD.ZS and IT.NET.USER.ZS SWE transformed by Campaign 42 first-difference contract",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "retained_fixture"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "Campaign 42 first-difference Pearson companion production",
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null,
+      "version_lineage": []
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b69477d13dcb0cc313f1fe1b0d680bd82f4819a0e80bd5d557a789334e057726",
+      "evidence_references": "sha256:4b8ff94de5b27eaf7746f8bcf8788e983f6e6b72199fd7a93e2c7a70984b74d6",
+      "generated_statements": "sha256:7aaaedf02e1cb47e36d13f713dbdc65a319bd854afea8d02336eabc8191b71fd",
+      "input_set": "sha256:9fba2aa28484da4712e0450c9246255d8872222ee1060e308dd83d24a6306e5b",
+      "package_manifest": "sha256:d271bbc1e59088992a648d8551c49be46ca336d86e959f918d0366683121dd9d",
+      "query_definitions": "sha256:90e0d5d5a3e932384a261df456d5bbf678b99aa650b3f6d9a1804da3ec940a0e"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "SWE",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_end": 2024,
+          "period_start": 1991
+        },
+        "dependencies": [
+          "calc-campaign42-fd-pearson-companion-07",
+          "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1"
+        ],
+        "evidence_refs": [
+          "ev-campaign42-fd-pearson-companion-07"
+        ],
+        "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+        "statement_id": "stmt-srcpkg-campaign41-swe-private-credit-internet-users-first-difference-pearson-companion-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_observation_fingerprint": "sha256:4424de0bfb8e90c50e428e116eb1a88d0b140cff0176e70c1700ab522c5a32cd",
+          "aligned_transformed_count": 34,
+          "answers_change_co_movement_not_level_co_movement": true,
+          "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+          "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+          "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+          "does_not_supersede_raw_package": true,
+          "entity_id": "SWE",
+          "family": "Financial Sector x Infrastructure",
+          "first_difference_pearson_coefficient": {
+            "canonical": "0.141137912446",
+            "unit": "dimensionless"
+          },
+          "frequency": "annual",
+          "independent_recompute_coefficient": "0.141137912446",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "missing_and_excluded_periods": {
+            "series_a_missing_or_excluded": [],
+            "series_b_missing_or_excluded": []
+          },
+          "package_fingerprint": "sha256:c869724956d6e7af1b8b2e3c55b416923872a2a5b15714aaebb4fc78da2a7166",
+          "pearson_coefficient": {
+            "canonical": "0.141137912446",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2024,
+            "start": 1991
+          },
+          "prior_embedded_diagnostic_reconciliation": {
+            "aligned_count_matches": true,
+            "coefficient_matches": true,
+            "new_companion_coefficient": "0.141137912446",
+            "prior_embedded_diagnostic_present": true,
+            "prior_embedded_first_difference_coefficient": "0.141137912446",
+            "transformation_semantics_matches": true
+          },
+          "raw_evidence_fixtures": {
+            "series_a": {
+              "identity": "FS.AST.PRVT.GD.ZS__SWE__1990-2024",
+              "normalized_fingerprint": "sha256:3537de80559a2063e20bf1d6096f06782b900efc1dd8b9d6c3f0b28d71bae9ec",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/FS.AST.PRVT.GD.ZS__SWE__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:ef4af114fcdd78c4ca9d2f52108d61f0a206a259e4193910aa69d73d5a207080",
+              "source_raw_fixture_fingerprint": "sha256:d1dcc37b09df9395b5d484ee15eb704b76cfff029b8e0e2be865b23dc92705f6"
+            },
+            "series_b": {
+              "identity": "IT.NET.USER.ZS__SWE__1990-2024",
+              "normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.NET.USER.ZS__SWE__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:d18c54564d09d46a10724cf347d3d0ec2cb79ce9897699a002ae0ecdb86c244e",
+              "source_raw_fixture_fingerprint": "sha256:9d749f6bb5e305128a31d62f812f4dccc485898bbd877b115e7d955268981566"
+            }
+          },
+          "raw_observation_count": {
+            "series_a": 35,
+            "series_b": 35
+          },
+          "raw_package_reference": {
+            "package_fingerprint": "sha256:859d99406235a784afad50ec2275aede1a67665b114044af4f5d6d71eb9582e3",
+            "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+            "source_campaign": "Campaign 41"
+          },
+          "raw_period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "raw_units": {
+            "series_a": "percent of GDP",
+            "series_b": "% of population"
+          },
+          "series_a": {
+            "code": "FS.AST.PRVT.GD.ZS",
+            "name": "Domestic credit to private sector (% of GDP)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year change in percentage points of GDP",
+            "unit": "percent of GDP"
+          },
+          "series_b": {
+            "code": "IT.NET.USER.ZS",
+            "name": "Individuals using the Internet (% of population)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year percentage-point change in % of population",
+            "unit": "% of population"
+          },
+          "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "transformation_id": "wdi_annual_scalar_first_difference_v1",
+          "transformation_state": "first_difference",
+          "transformation_version": "1.0",
+          "transformed_coverage": "1.000000000000",
+          "transformed_observation_count": {
+            "series_a": 34,
+            "series_b": 34
+          },
+          "transformed_series_fingerprints": {
+            "series_a": "sha256:8bed333afd1762c84447888589dc84c29bf27eb2854a2062fc419dee09a3fd13",
+            "series_b": "sha256:6f158a95449d3eac1eccec3ee47399eca611bd95d2b7f50b7c36e883c1bad379"
+          },
+          "transformed_unit_semantics": {
+            "series_a": "year-to-year change in percentage points of GDP",
+            "series_b": "year-to-year percentage-point change in % of population"
+          },
+          "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+        },
+        "text": "Across aligned annual first differences for SWE from 1991 through 2024, the Pearson correlation between annual changes in Domestic credit to private sector (% of GDP) and annual changes in Individuals using the Internet (% of population) is 0.141137912446, using 34 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1 and does not supersede it."
+      }
+    ],
+    "input_references": [
+      "campaign42_first_difference_pearson_companion_production",
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+      "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1"
+    ],
+    "lineage": {
+      "previous_package_id": null,
+      "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+      "referenced_raw_source_campaign": "Campaign 41",
+      "source_campaign": "Campaign 42",
+      "version_lineage": []
+    },
+    "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-first-difference-pearson-companion-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "sha256:4424de0bfb8e90c50e428e116eb1a88d0b140cff0176e70c1700ab522c5a32cd"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-07"
+      ],
+      "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1 from Campaign 41 without supersession",
+      "method_refs": [
+        "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+        "wdi_annual_scalar_first_difference_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "SWE"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+      "period_scope": {
+        "end": 2024,
+        "start": 1991
+      }
+    },
+    "status": "accepted",
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "first_difference_does_not_prove_stationarity",
+        "correlation_not_causation",
+        "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+        "does_not_supersede_raw_package"
+      ]
+    }
+  },
+  {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+      "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+      "lifecycle_state": "accepted",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+      "uncertainty_dimensions": [
+        "non-causality",
+        "non-prediction",
+        "absence of significance testing",
+        "first-difference stationarity not proven",
+        "noise amplification",
+        "window and revision dependence"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1"
+      }
+    ],
+    "created_at": "2026-07-12",
+    "created_by": "campaign42_first_difference_companion_production",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:032782cfd304ceb475e3863aa26257f1941fd2ad2e77bc6a1e35d6fe823b8668"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-12",
+        "evaluation_status": "evaluated",
+        "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+        "evidence_ref_id": "ev-campaign42-fd-pearson-companion-08",
+        "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+        "snapshot_fingerprint": "sha256:032782cfd304ceb475e3863aa26257f1941fd2ad2e77bc6a1e35d6fe823b8668",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "Retained raw evidence for FS.AST.PRVT.GD.ZS and IT.CEL.SETS.P2 SWE transformed by Campaign 42 first-difference contract",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "retained_fixture"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "Campaign 42 first-difference Pearson companion production",
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null,
+      "version_lineage": []
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:aa71c86b29f843a15361d8cfa149a7499b5eaf58966421a2071090759d6c3f45",
+      "evidence_references": "sha256:86d9bd20854a560374ae421bd99abdb128a88e36f2ebafbf048376eb05074788",
+      "generated_statements": "sha256:6f4ad68858a915a9185af5b0e543fb2f4775c5d443f588124f9969ac59affdf1",
+      "input_set": "sha256:142b7651f1dbdac33aaabbd15911c890785c7078515ff51b1c6302371241cfbb",
+      "package_manifest": "sha256:210f01be2a171e40108602a51f76f6aec758e3ae3eb2cfbf9721ed5938c610b9",
+      "query_definitions": "sha256:90e0d5d5a3e932384a261df456d5bbf678b99aa650b3f6d9a1804da3ec940a0e"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "SWE",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_end": 2024,
+          "period_start": 1991
+        },
+        "dependencies": [
+          "calc-campaign42-fd-pearson-companion-08",
+          "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1"
+        ],
+        "evidence_refs": [
+          "ev-campaign42-fd-pearson-companion-08"
+        ],
+        "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+        "statement_id": "stmt-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_observation_fingerprint": "sha256:032782cfd304ceb475e3863aa26257f1941fd2ad2e77bc6a1e35d6fe823b8668",
+          "aligned_transformed_count": 34,
+          "answers_change_co_movement_not_level_co_movement": true,
+          "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+          "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+          "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+          "does_not_supersede_raw_package": true,
+          "entity_id": "SWE",
+          "family": "Financial Sector x Infrastructure",
+          "first_difference_pearson_coefficient": {
+            "canonical": "0.161115218727",
+            "unit": "dimensionless"
+          },
+          "frequency": "annual",
+          "independent_recompute_coefficient": "0.161115218727",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "missing_and_excluded_periods": {
+            "series_a_missing_or_excluded": [],
+            "series_b_missing_or_excluded": []
+          },
+          "package_fingerprint": "sha256:70062acec522711090f76030d331d9eb50b6323cdc4ce80aa08e4b8052a840ca",
+          "pearson_coefficient": {
+            "canonical": "0.161115218727",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2024,
+            "start": 1991
+          },
+          "prior_embedded_diagnostic_reconciliation": {
+            "aligned_count_matches": true,
+            "coefficient_matches": true,
+            "new_companion_coefficient": "0.161115218727",
+            "prior_embedded_diagnostic_present": true,
+            "prior_embedded_first_difference_coefficient": "0.161115218727",
+            "transformation_semantics_matches": true
+          },
+          "raw_evidence_fixtures": {
+            "series_a": {
+              "identity": "FS.AST.PRVT.GD.ZS__SWE__1990-2024",
+              "normalized_fingerprint": "sha256:3537de80559a2063e20bf1d6096f06782b900efc1dd8b9d6c3f0b28d71bae9ec",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/FS.AST.PRVT.GD.ZS__SWE__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:ef4af114fcdd78c4ca9d2f52108d61f0a206a259e4193910aa69d73d5a207080",
+              "source_raw_fixture_fingerprint": "sha256:d1dcc37b09df9395b5d484ee15eb704b76cfff029b8e0e2be865b23dc92705f6"
+            },
+            "series_b": {
+              "identity": "IT.CEL.SETS.P2__SWE__1990-2024",
+              "normalized_fingerprint": "sha256:7689361a24f2545a177de984e566594b9cf1284c7bebf19ea1100c37548bf2bd",
+              "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.CEL.SETS.P2__SWE__1990-2024/normalized_observations.json",
+              "selection_fingerprint": "sha256:366793cab68ed9c694dc427389b7dd74647206700903413b2e5543b1c9794772",
+              "source_raw_fixture_fingerprint": "sha256:6bb198696b6e6c5162ef232acca2c2d5f2c6f472bacabe78fbb19fb5fe408f74"
+            }
+          },
+          "raw_observation_count": {
+            "series_a": 35,
+            "series_b": 35
+          },
+          "raw_package_reference": {
+            "package_fingerprint": "sha256:148edc14151f053c79283af86b5a3385a566dd8426f9d3dd2ce6b7bdcde35922",
+            "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+            "source_campaign": "Campaign 41"
+          },
+          "raw_period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "raw_units": {
+            "series_a": "percent of GDP",
+            "series_b": "per 100 people"
+          },
+          "series_a": {
+            "code": "FS.AST.PRVT.GD.ZS",
+            "name": "Domestic credit to private sector (% of GDP)",
+            "transformation": "raw",
+            "transformed_unit": "year-to-year change in percentage points of GDP",
+            "unit": "percent of GDP"
+          },
+          "series_b": {
+            "code": "IT.CEL.SETS.P2",
+            "name": "Mobile cellular subscriptions (per 100 people)",
+            "transformation": "raw",
+            "transformed_unit": "absolute year-to-year change in per 100 people",
+            "unit": "per 100 people"
+          },
+          "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "transformation_id": "wdi_annual_scalar_first_difference_v1",
+          "transformation_state": "first_difference",
+          "transformation_version": "1.0",
+          "transformed_coverage": "1.000000000000",
+          "transformed_observation_count": {
+            "series_a": 34,
+            "series_b": 34
+          },
+          "transformed_series_fingerprints": {
+            "series_a": "sha256:8bed333afd1762c84447888589dc84c29bf27eb2854a2062fc419dee09a3fd13",
+            "series_b": "sha256:49b70ba21995f53ef35f852750e2477979f006891a8fa7dbe25e6f39300b019a"
+          },
+          "transformed_unit_semantics": {
+            "series_a": "year-to-year change in percentage points of GDP",
+            "series_b": "absolute year-to-year change in per 100 people"
+          },
+          "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+        },
+        "text": "Across aligned annual first differences for SWE from 1991 through 2024, the Pearson correlation between annual changes in Domestic credit to private sector (% of GDP) and annual changes in Mobile cellular subscriptions (per 100 people) is 0.161115218727, using 34 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1 and does not supersede it."
+      }
+    ],
+    "input_references": [
+      "campaign42_first_difference_pearson_companion_production",
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+      "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1"
+    ],
+    "lineage": {
+      "previous_package_id": null,
+      "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+      "referenced_raw_source_campaign": "Campaign 41",
+      "source_campaign": "Campaign 42",
+      "version_lineage": []
+    },
+    "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "sha256:032782cfd304ceb475e3863aa26257f1941fd2ad2e77bc6a1e35d6fe823b8668"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-08"
+      ],
+      "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1 from Campaign 41 without supersession",
+      "method_refs": [
+        "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+        "wdi_annual_scalar_first_difference_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "SWE"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+      "period_scope": {
+        "end": 2024,
+        "start": 1991
+      }
+    },
+    "status": "accepted",
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "first_difference_does_not_prove_stationarity",
+        "correlation_not_causation",
+        "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+        "does_not_supersede_raw_package"
+      ]
+    }
+  }
+]

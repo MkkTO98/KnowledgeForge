@@ -12,6 +12,7 @@ This folder is part of the ProjectForge file-backed operating system for `templa
 - `external-release-handoffs/`
 - `handoffs/`
 - `methods/`
+- `operational-state-checkpoints/`
 - `production/`
 - `release-inbox-macroforge-real-handoff-v1/`
 - `release-inbox-unified-v1/`

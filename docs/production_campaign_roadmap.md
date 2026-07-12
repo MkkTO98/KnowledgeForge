@@ -859,3 +859,64 @@ Read-only relationship export contract v1 is validated. Resume operational Pears
 ## 2026-07-11 Automation Alignment Gate
 
 Before additional release-driven automation, implement the smallest next slice: a file-backed seen-release registry plus release-diff CLI over one real provider-neutral fixture. Continue Pearson production separately only after this automation boundary is not active.
+
+## 2026-07-12 Campaign 41 Production Sequencing Gate
+
+Status: stopped before execution.
+
+Decision: Campaign 41 has an accepted substantive direction — resume operational Pearson production toward 100 relationship objects using existing generic specification-driven Pearson infrastructure — but no frozen Campaign 41 candidate registry or sufficiently specific batch specification exists. The next bounded task is to create a coefficient-free Campaign 41 Pearson candidate registry and batch specification decision for 6-8 candidates before any coefficient calculation or package publication.
+
+## 2026-07-12 Campaign 41 Candidate Registry Freeze
+
+Decision B: a coefficient-free Campaign 41 Pearson registry and batch specification are frozen with 8 valid candidates. Registry fingerprint `sha256:e5ff891bdcf3d02eaa028f58538e4c9c00968f8ec74e8871e65bd4160ddc34dc`; batch spec fingerprint `sha256:a94d020dfedeb2f069366756e2b28fc20906fef5609df823eccae11ad59cdfa2`. Before calculation, perform the smallest bounded reusable engine extension to remove Campaign 40 package-internal hardcoding from `tools/correlation_batch_engine.py`; then execute exactly `specs/correlation_batches/campaign41_coefficient_free_pearson_batch_spec.json` unless superseded by a new decision.
+
+## Campaign 41 readiness update — 2026-07-12
+
+The generic correlation engine provenance-parameterization gate is complete. `tools/correlation_batch_engine.py` now derives package-internal statement/calculation/evidence identifiers, validation judgment, statement origin, and lineage basis from validated spec-level metadata. Campaign 40 compatibility is exact; Campaign 41 readiness successor spec `sha256:c292ac73bdb92dd9b89e8c9dcad7a64675ad7d814e4149cea828b408bbeea0c6` is ready for separately authorized execution. No Campaign 41 coefficient or package has been produced.
+
+## Campaign 41 production and Pearson path-to-100 utility review — 2026-07-12
+
+Campaign 41 production completed successfully: 8 accepted packages, 0 rejected, repository count 546, Pearson count 21, repository fingerprint `sha256:c89c25ede69ec88a12f4791dba94b6199f2927721d0028420a65a74dd6ee735c`, PostgreSQL/export verification passed.
+
+Assimilation review found no additional index/schema/package work necessary for Campaign 41 discovery: raw coefficients, time-risk warnings, first-difference diagnostics, limitations, method provenance, and evidence provenance are retrievable through existing canonical payloads, PostgreSQL projection, and Relationship Export Contract v1.
+
+Decision: adopt a mixed Pearson roadmap. Raw Pearson path-to-100 object count is no longer the primary operational success target. Preserve raw Pearson as a limited baseline/cautionary descriptor; before further large raw expansion, add bounded semantic-proximity and time-risk stratification to coefficient-free candidate construction and prioritize transformation-aware relationships and richer deterministic diagnostics. Do not start Campaign 42 from this review.
+
+## Pearson candidate policy v2 — 2026-07-12
+
+Decision A: `pearson_candidate_policy_v2_mixed_roadmap@1.0` is accepted as the successor coefficient-free candidate-construction policy for future ordinary raw Pearson registry work. It preserves Campaign 41's sufficient coefficient-free/evidence/overlap/duplicate/prior-exclusion rules, makes semantic proximity primary, retains diversity only as a secondary constraint, caps ordinary remote candidates at 25% of an 8-candidate batch by default, records visible time-risk metadata from permitted pre-existing inputs, and adds transformation-companion eligibility plus candidate utility statements. Dry-run over the retained 16-series Campaign 40 pool produced 7 non-frozen candidates: 3 close, 2 moderate, 2 remote. Campaign 41 frozen fingerprints remained unchanged. This entry was later corrected: the 7-candidate output is historical comparison, not future-production evidence.
+
+## Pearson candidate policy v2 consistency correction — 2026-07-12
+
+Decision B: first-difference Pearson method validation should precede further raw Pearson production. Corrected future-production eligibility now excludes all current canonical Pearson relationships from `knowledge_repository/objects/`, including Campaign 41 outputs; the retained 16-series pool leaves only 4 candidates, all high time-risk. Remote-cap arithmetic is percentage-based on actual selected size (`floor(n * 0.25)`), not nominal capacity. Do not freeze Campaign 42 from this evidence. Next bounded task is first-difference Pearson method-contract validation, stopping before package publication or PostgreSQL mutation.
+
+
+## First-difference Pearson method contract validation — 2026-07-12
+
+Decision A: `wdi_annual_scalar_first_difference_pearson_v1@1.0` is validated as a deterministic companion relationship method for bounded WDI annual-scalar production preparation. Transformation contract fingerprint `sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f`; method contract fingerprint `sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade`; validation registry fingerprint `sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657`.
+
+The method is distinct from raw Pearson and from non-promoted first-difference diagnostics embedded in raw packages. Existing KnowledgeObjectPackage, PostgreSQL projection, Relationship Export Contract, provenance, and repository architecture are sufficient. No Doctrine amendment, package redesign, schema expansion, or broad transformation framework is authorized.
+
+Next bounded task: create a coefficient-free bounded first-difference Pearson companion-production registry for selected existing raw Pearson packages, stopping before coefficient calculation or canonical package publication.
+
+
+## Campaign 42 coefficient-free companion registry freeze — 2026-07-12
+
+Decision A: Campaign 42 coefficient-free first-difference Pearson companion registry is frozen for 8 selected existing raw Pearson packages.
+
+Frozen fingerprints:
+
+- registry: `sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15`
+- specification: `sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00`
+
+Boundary: no Campaign 42 coefficients, no production transformations, no canonical companion packages, no repository mutation, no PostgreSQL write/rebuild, and no relationship export execution occurred.
+
+Next roadmap step: separately authorize Campaign 42 companion production from the frozen registry/specification.
+
+## Campaign 42 companion production complete — 2026-07-12
+
+Decision A: Campaign 42 first-difference Pearson companion production completed successfully. Exactly eight frozen candidates were accepted and published append-only as independently reproducible first-difference companions. Repository count is now 554 with fingerprint `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`.
+
+Raw Pearson objects remain 21 and first-difference Pearson companions are separately classified as 8. PostgreSQL projection and Relationship Export Contract v1 independent consumer simulation passed without schema expansion.
+
+Next roadmap step: run a bounded post-Campaign-42 readiness gate before any Campaign 43 or additional production. The gate should decide whether to expand first-difference companions or return to raw Pearson candidate production.

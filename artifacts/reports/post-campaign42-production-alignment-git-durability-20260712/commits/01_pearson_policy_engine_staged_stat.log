@@ -1,0 +1,285 @@
+ ...0260712-campaign41-candidate-registry-freeze.md |    35 +
+ ...-campaign41-generic-correlation-engine-ready.md |    23 +
+ .../D-20260712-campaign41-production-sequencing.md |    16 +
+ ...n-candidate-policy-v2-consistency-correction.md |    27 +
+ ...12-pearson-candidate-policy-v2-mixed-roadmap.md |    46 +
+ ...D-20260712-pearson-path-to-100-mixed-roadmap.md |    40 +
+ .../all_pearson_relationship_export.json           |  5861 ++
+ .../all_pearson_relationship_export_verify.json    |     7 +
+ .../campaign41_assimilation_closeout.md            |    29 +
+ .../candidate_construction_policy_assessment.md    |    22 +
+ .../architecture_reality_audit.json                |    29 +
+ .../architecture_reality_audit.stderr              |     0
+ .../canonical_repository_validation.json           |    25 +
+ .../final-verification/check_coherence.json        |     8 +
+ .../final-verification/check_coherence.stderr      |     0
+ .../final-verification/check_coherence_final.json  |     7 +
+ .../check_coherence_final.stderr                   |     0
+ .../final-verification/context_health.json         |    60 +
+ .../final-verification/context_health.stderr       |     0
+ .../final-verification/context_health_final.json   |    59 +
+ .../final-verification/context_health_final.stderr |     0
+ .../final_verification_summary.json                |    40 +
+ .../final-verification/full_test_suite.stderr      |     0
+ .../final-verification/full_test_suite.stdout      |     6 +
+ .../final-verification/git_diff_check.stderr       |     0
+ .../final-verification/git_diff_check.stdout       |     0
+ .../git_diff_check_after_final_report.stderr       |     0
+ .../git_diff_check_after_final_report.stdout       |     0
+ .../final-verification/git_diff_check_final.stderr |     0
+ .../final-verification/git_diff_check_final.stdout |     0
+ .../final-verification/python_compile.stderr       |     0
+ .../final-verification/python_compile.stdout       |     0
+ .../repository_wide_durability_validator.stderr    |     0
+ .../repository_wide_durability_validator.stdout    |   128 +
+ .../artifact_class_policy.json                     |    19 +
+ .../artifact_policy.json                           |    40 +
+ .../commit_plan.json                               |  2877 +
+ .../consolidated_machine_readable_summary.json     |   128 +
+ .../inventory.json                                 | 85298 ++++++++++++++++++
+ .../machine_loss_recovery.json                     |   535 +
+ .../package_counts.json                            |    43 +
+ .../repository_wide_validator.json                 |   123 +
+ .../sensitive_scan.json                            |  2951 +
+ .../size_storage_assessment.json                   |    44 +
+ .../temporary_db_cleanup_assessment.json           |    13 +
+ .../final_report.md                                |   106 +
+ .../pearson_production_utility_review.md           |    65 +
+ .../pearson_utility_inventory.csv                  |    22 +
+ .../pearson_utility_inventory.json                 |   783 +
+ .../postgresql_read_only_retrieval_review.json     |    21 +
+ .../preflight/git_status_short.txt                 |   199 +
+ .../preflight/postgresql_object_count.txt          |     1 +
+ .../preflight/postgresql_projected_count.txt       |     3 +
+ .../preflight/repository_baseline.json             |     6 +
+ .../query_all_pearson.json                         |    15 +
+ .../roadmap_sequencing_decision_report.md          |    35 +
+ .../existing_design_review.json                    |    23 +
+ .../architecture_reality_audit.stderr              |     0
+ .../architecture_reality_audit.stdout              |     2 +
+ .../artifact_validation_summary.json               |   359 +
+ .../final-verification/check_coherence.json        |     7 +
+ .../final-verification/context_health.json         |    59 +
+ .../final_verification_summary.json                |    63 +
+ .../artifact_class_policy.json                     |    19 +
+ .../artifact_policy.json                           |    40 +
+ .../commit_plan.json                               |  2269 +
+ .../consolidated_machine_readable_summary.json     |   119 +
+ .../inventory.json                                 | 80626 +++++++++++++++++
+ .../machine_loss_recovery.json                     |   366 +
+ .../package_counts.json                            |    35 +
+ .../repository_wide_validator.json                 |    81 +
+ .../sensitive_scan.json                            |  2853 +
+ .../size_storage_assessment.json                   |    44 +
+ .../temporary_db_cleanup_assessment.json           |    13 +
+ .../final_report.md                                |   224 +
+ .../helper_write_summary.json                      |    68 +
+ .../preflight/architectureharvest_status.txt       |     6 +
+ .../preflight/cached_diff_name_status.txt          |     0
+ .../preflight/git_fetch.stderr                     |     0
+ .../preflight/git_fetch.stdout                     |     0
+ .../preflight/git_state.txt                        |   167 +
+ .../preflight/git_status_ignored_short.txt         |   170 +
+ .../selection/candidate_compatibility_report.json  |   456 +
+ .../selection/candidate_registry.json              |  1338 +
+ .../coefficient_free_validation_result.json        |    15 +
+ .../deterministic_regeneration_result.json         |    11 +
+ .../selection/expected_package_id_manifest.json    |    15 +
+ .../architecture_reality_audit.status.json         |    10 +
+ .../architecture_reality_audit.stderr              |     0
+ .../architecture_reality_audit.stdout              |     1 +
+ .../cached_diff_check.status.json                  |    10 +
+ .../final-verification/cached_diff_check.stderr    |     0
+ .../final-verification/cached_diff_check.stdout    |     0
+ .../campaign41_absence.status.json                 |     8 +
+ .../final-verification/campaign41_absence.stderr   |     0
+ .../final-verification/campaign41_absence.stdout   |    43 +
+ .../campaign41_production_absence.status.json      |     8 +
+ .../campaign41_production_absence.stderr           |     0
+ .../campaign41_production_absence.stdout           |     9 +
+ .../canonical_repository_validation.status.json    |     8 +
+ .../canonical_repository_validation.stderr         |     0
+ .../canonical_repository_validation.stdout         |     7 +
+ .../final-verification/coherence.status.json       |    11 +
+ .../final-verification/coherence.stderr            |     0
+ .../final-verification/coherence.stdout            |     7 +
+ .../final-verification/context_health.status.json  |    11 +
+ .../final-verification/context_health.stderr       |     0
+ .../final-verification/context_health.stdout       |    59 +
+ .../existing_package_immutability.status.json      |    11 +
+ .../existing_package_immutability.stderr           |     0
+ .../existing_package_immutability.stdout           |     0
+ .../final_git_status.status.json                   |     9 +
+ .../final-verification/final_git_status.stderr     |     0
+ .../final-verification/final_git_status.stdout     |   158 +
+ .../final-verification/full_test_suite.status.json |    12 +
+ .../final-verification/full_test_suite.stderr      |     0
+ .../final-verification/full_test_suite.stdout      |     5 +
+ .../final-verification/git_diff_check.status.json  |     9 +
+ .../final-verification/git_diff_check.stderr       |     0
+ .../final-verification/git_diff_check.stdout       |     0
+ .../final-verification/python_compile.status.json  |    12 +
+ .../final-verification/python_compile.stderr       |     0
+ .../final-verification/python_compile.stdout       |     0
+ .../artifact_class_policy.json                     |    19 +
+ .../sensitive-and-durability/artifact_policy.json  |    40 +
+ .../sensitive-and-durability/commit_plan.json      |  2029 +
+ .../consolidated_machine_readable_summary.json     |   119 +
+ .../sensitive-and-durability/inventory.json        | 79746 +++++++++++++++++
+ .../machine_loss_recovery.json                     |   351 +
+ .../sensitive-and-durability/package_counts.json   |    35 +
+ .../repository_wide_validator.json                 |    76 +
+ .../sensitive-and-durability/sensitive_scan.json   |  2853 +
+ .../size_storage_assessment.json                   |    44 +
+ .../temporary_db_cleanup_assessment.json           |    13 +
+ .../sensitive_material_scan.status.json            |    10 +
+ .../sensitive_material_scan.stderr                 |     0
+ .../sensitive_material_scan.stdout                 |   119 +
+ .../final-verification/summary.json                |   126 +
+ .../preflight/architectureharvest_status.txt       |     6 +
+ .../preflight/cached_diff_name_status.txt          |     0
+ .../preflight/git_fetch.stderr                     |     0
+ .../preflight/git_fetch.stdout                     |     0
+ .../preflight/git_state.txt                        |   162 +
+ .../preflight/git_status_ignored_short.txt         |   162 +
+ .../production_sequencing_decision.json            |    26 +
+ .../production_sequencing_decision.md              |    89 +
+ ...ral-forest-land-dnk-pearson-correlation-v1.json |   200 +
+ ...rth-death-rates-nor-pearson-correlation-v1.json |   195 +
+ ...ydro-renewables-nor-pearson-correlation-v1.json |   202 +
+ ...dit-broad-money-dnk-pearson-correlation-v1.json |   196 +
+ ...nder5-mortality-nor-pearson-correlation-v1.json |   194 +
+ ...internet-mobile-swe-pearson-correlation-v1.json |   195 +
+ ...e_agricultural_forest_land_dnk_calculation.json |   209 +
+ .../candidate_judgments.json                       |   164 +
+ .../consolidated_machine_readable_report.json      |  1317 +
+ ...ographic_birth_death_rates_nor_calculation.json |   207 +
+ ...fossil_nonhydro_renewables_nor_calculation.json |   207 +
+ ...finance_credit_broad_money_dnk_calculation.json |   207 +
+ ...xpectancy_under5_mortality_nor_calculation.json |   207 +
+ ...astructure_internet_mobile_swe_calculation.json |   207 +
+ .../campaign41_original_frozen_spec_preserved.json |  2190 +
+ .../architecture_reality_audit.stderr              |     0
+ .../architecture_reality_audit.stdout              |     2 +
+ .../campaign40_exact_compatibility.json            |  1234 +
+ .../campaign41_readiness_and_immutability.json     |   150 +
+ .../final-verification/check_coherence.json        |     7 +
+ .../check_coherence_after_closeout.json            |     7 +
+ .../final-verification/context_health.json         |    59 +
+ .../context_health_after_closeout.json             |    59 +
+ .../final_verification_summary.json                |   145 +
+ .../artifact_class_policy.json                     |    19 +
+ .../artifact_policy.json                           |    40 +
+ .../commit_plan.json                               |  2497 +
+ .../consolidated_machine_readable_summary.json     |   119 +
+ .../inventory.json                                 | 81330 +++++++++++++++++
+ .../machine_loss_recovery.json                     |   388 +
+ .../package_counts.json                            |    35 +
+ .../repository_wide_validator.json                 |    83 +
+ .../sensitive_scan.json                            |  2923 +
+ .../size_storage_assessment.json                   |    44 +
+ .../temporary_db_cleanup_assessment.json           |    13 +
+ .../time_index_and_runtime_literal_scan.json       |    63 +
+ .../final_report.md                                |   123 +
+ .../preflight/cached_diff_name_status.txt          |     0
+ .../preflight/diff_name_status.txt                 |    11 +
+ .../preflight/git_fetch.stderr                     |     0
+ .../preflight/git_fetch.stdout                     |     0
+ .../preflight/git_state.txt                        |   169 +
+ .../campaign41_vs_successor_policy_comparison.json |    47 +
+ .../dry-run/policy_validation_summary.json         |     9 +
+ .../dry-run/successor_policy_dry_run.json          |  4679 +
+ .../architecture_reality_audit.json                |    29 +
+ .../architecture_reality_audit.stderr              |     0
+ .../final-verification/check_coherence.json        |     8 +
+ .../final-verification/check_coherence.stderr      |     0
+ .../final-verification/check_coherence_final.json  |     7 +
+ .../check_coherence_final.stderr                   |     0
+ .../final-verification/context_health.json         |    60 +
+ .../final-verification/context_health.stderr       |     0
+ .../final-verification/context_health_final.json   |    59 +
+ .../final-verification/context_health_final.stderr |     0
+ .../final_verification_summary.json                |   130 +
+ .../final-verification/full_test_suite.stderr      |     0
+ .../final-verification/full_test_suite.stdout      |     6 +
+ .../final-verification/git_diff_check.stderr       |     0
+ .../final-verification/git_diff_check.stdout       |     0
+ .../git_diff_check_after_final_report.stderr       |     0
+ .../git_diff_check_after_final_report.stdout       |     0
+ .../final-verification/git_diff_check_final.stderr |     0
+ .../final-verification/git_diff_check_final.stdout |     0
+ .../final-verification/git_status_short.txt        |   208 +
+ .../final-verification/policy_validation.json      |    28 +
+ .../final-verification/python_compile.stderr       |     0
+ .../final-verification/python_compile.stdout       |     0
+ .../repository_wide_durability_validator.stderr    |     0
+ .../repository_wide_durability_validator.stdout    |   128 +
+ .../artifact_class_policy.json                     |    19 +
+ .../artifact_policy.json                           |    40 +
+ .../commit_plan.json                               |  2877 +
+ .../consolidated_machine_readable_summary.json     |   128 +
+ .../inventory.json                                 | 86002 ++++++++++++++++++
+ .../machine_loss_recovery.json                     |   543 +
+ .../package_counts.json                            |    43 +
+ .../repository_wide_validator.json                 |   126 +
+ .../sensitive_scan.json                            |  2965 +
+ .../size_storage_assessment.json                   |    44 +
+ .../temporary_db_cleanup_assessment.json           |    13 +
+ .../targeted_policy_tests.stderr                   |     0
+ .../targeted_policy_tests.stdout                   |     2 +
+ .../final_report.md                                |   122 +
+ .../batch_composition_arithmetic_proof.json        |    30 +
+ ...production_eligibility_excluding_canonical.json |  2770 +
+ .../historical_comparison_not_candidate_batch.json |  4691 +
+ .../architecture_reality_audit.json                |    29 +
+ .../architecture_reality_audit.stderr              |     0
+ .../final-verification/check_coherence.json        |     7 +
+ .../final-verification/check_coherence.stderr      |     0
+ .../check_coherence_after_final_report.json        |     7 +
+ .../check_coherence_after_final_report.stderr      |     0
+ .../final-verification/context_health.json         |    59 +
+ .../final-verification/context_health.stderr       |     0
+ .../context_health_after_final_report.json         |    59 +
+ .../context_health_after_final_report.stderr       |     0
+ .../final-verification/full_test_suite.stderr      |     0
+ .../final-verification/full_test_suite.stdout      |     6 +
+ .../final-verification/git_diff_check.stderr       |     0
+ .../final-verification/git_diff_check.stdout       |     0
+ .../git_diff_check_after_final_report.stderr       |     0
+ .../git_diff_check_after_final_report.stdout       |     0
+ .../final-verification/git_status_short.txt        |   211 +
+ .../policy_consistency_validation.json             |    39 +
+ .../final-verification/python_compile.stderr       |     0
+ .../final-verification/python_compile.stdout       |     0
+ .../repository_wide_durability_validator.stderr    |     0
+ .../repository_wide_durability_validator.stdout    |   128 +
+ .../artifact_class_policy.json                     |    19 +
+ .../artifact_policy.json                           |    40 +
+ .../commit_plan.json                               |  2869 +
+ .../consolidated_machine_readable_summary.json     |   128 +
+ .../inventory.json                                 | 86722 +++++++++++++++++++
+ .../machine_loss_recovery.json                     |   550 +
+ .../package_counts.json                            |    43 +
+ .../repository_wide_validator.json                 |   128 +
+ .../sensitive_scan.json                            |  2965 +
+ .../size_storage_assessment.json                   |    44 +
+ .../temporary_db_cleanup_assessment.json           |    13 +
+ .../targeted_policy_tests.stderr                   |     0
+ .../targeted_policy_tests.stdout                   |     2 +
+ .../final_report.md                                |   337 +
+ .../inconsistency_trace.json                       |   230 +
+ ...earson-path-to-100-production-utility-review.md |    46 +
+ ...-coefficient-free-pearson-candidate-registry.md |    22 +
+ ...preserving-deterministic-knowledge-expansion.md |    13 +
+ ...rrelation-engine-provenance-parameterization.md |    27 +
+ ...on-candidate-policy-refinement-mixed-roadmap.md |    47 +
+ ...n-candidate-policy-v2-consistency-correction.md |    46 +
+ ...aign41_coefficient_free_pearson_batch_spec.json |  2190 +
+ .../campaign41_ready_pearson_batch_spec.json       |  2207 +
+ .../pearson_candidate_policy_v2_mixed_roadmap.md   |   187 +
+ ..._coefficient_free_pearson_candidate_registry.py |   193 +
+ tests/test_correlation_batch_engine.py             |     5 +-
+ ...rrelation_engine_provenance_parameterization.py |   120 +
+ .../coefficient_free_pearson_candidate_registry.py |  1106 +
+ tools/correlation_batch_engine.py                  |   159 +-
+ 284 files changed, 578101 insertions(+), 8 deletions(-)

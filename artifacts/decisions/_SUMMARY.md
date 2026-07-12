@@ -58,7 +58,18 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `D-20260711-provider-neutral-release-inbox-real-evidence-impact-pilot-v1.md`
 - `D-20260711-relationship-export-contract-v1.md`
 - `D-20260711-repository-wide-durability-and-supersession-code-correction.md`
+- `D-20260712-campaign41-candidate-registry-freeze.md`
+- `D-20260712-campaign41-generic-correlation-engine-ready.md`
+- `D-20260712-campaign41-pearson-production-accepted.md`
+- `D-20260712-campaign41-production-sequencing.md`
+- `D-20260712-campaign42-coefficient-free-first-difference-pearson-companion-registry.md`
+- `D-20260712-campaign42-first-difference-pearson-companion-production.md`
 - `D-20260712-durability-destination-policy-and-pre-staging-remediation.md`
+- `D-20260712-first-difference-pearson-method-contract-validation.md`
+- `D-20260712-operational-state-backup-restore-durability-gate.md`
+- `D-20260712-pearson-candidate-policy-v2-consistency-correction.md`
+- `D-20260712-pearson-candidate-policy-v2-mixed-roadmap.md`
+- `D-20260712-pearson-path-to-100-mixed-roadmap.md`
 - `D-SETUP-project-initialization.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 

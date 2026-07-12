@@ -1,0 +1,2884 @@
+{
+  "groups": [
+    {
+      "approx_bytes": 123713,
+      "canonical_data_included": false,
+      "depends_on": [],
+      "file_count": 5,
+      "group": "01-foundational-doctrine-state-architecture",
+      "pathspecs": [
+        "AGENTS.md",
+        "CONSTITUTION.md",
+        "README.md",
+        "_SUMMARY.md",
+        "architecture/",
+        "docs/",
+        "state/",
+        "context/",
+        "instructions/"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [
+        {
+          "classification": "reviewed_false_positive_domain_keyword",
+          "count": 1,
+          "disposition": "domain text, schema field, or evidence variable name; no secret value reported",
+          "finding_type": "credential_keyword",
+          "path": "context/latest_handoff.md"
+        }
+      ],
+      "sequence": 1,
+      "suggested_commit_message": "KnowledgeForge: 01 foundational doctrine state architecture",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 5,
+      "untracked": 0
+    },
+    {
+      "approx_bytes": 628140,
+      "canonical_data_included": true,
+      "depends_on": [
+        "01-foundational-doctrine-state-architecture"
+      ],
+      "file_count": 45,
+      "group": "02-canonical-knowledge-repository",
+      "pathspecs": [
+        "knowledge_repository/"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 2,
+      "suggested_commit_message": "KnowledgeForge: 02 canonical knowledge repository",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 13,
+      "untracked": 32
+    },
+    {
+      "approx_bytes": 0,
+      "canonical_data_included": false,
+      "depends_on": [
+        "02-canonical-knowledge-repository"
+      ],
+      "file_count": 0,
+      "group": "03-mature-wdi-production-evidence",
+      "pathspecs": [
+        "artifacts/evidence-fixtures/",
+        "artifacts/production/",
+        "artifacts/methods/"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 3,
+      "suggested_commit_message": "KnowledgeForge: 03 mature wdi production evidence",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 0
+    },
+    {
+      "approx_bytes": 0,
+      "canonical_data_included": false,
+      "depends_on": [
+        "03-mature-wdi-production-evidence"
+      ],
+      "file_count": 0,
+      "group": "04-postgresql-projection",
+      "pathspecs": [
+        "tools/postgresql_operational_projection.py",
+        "tools/postgresql_realization_decision.py",
+        "tests/test_postgresql",
+        "docs/postgresql"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 4,
+      "suggested_commit_message": "KnowledgeForge: 04 postgresql projection",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 0
+    },
+    {
+      "approx_bytes": 134348,
+      "canonical_data_included": false,
+      "depends_on": [
+        "04-postgresql-projection"
+      ],
+      "file_count": 18,
+      "group": "05-statistical-summary-methods-objects",
+      "pathspecs": [
+        "tools/deterministic_statistical_summary_v2.py",
+        "tests/test_statistical_summary",
+        "docs/statistical_summary",
+        "artifacts/reports/campaign34",
+        "artifacts/reports/campaign35"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 5,
+      "suggested_commit_message": "KnowledgeForge: 05 statistical summary methods objects",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 18
+    },
+    {
+      "approx_bytes": 212713,
+      "canonical_data_included": false,
+      "depends_on": [
+        "05-statistical-summary-methods-objects"
+      ],
+      "file_count": 36,
+      "group": "06-pearson-correlation-method-objects",
+      "pathspecs": [
+        "tools/deterministic_pearson_correlation_v1.py",
+        "tools/run_campaign36",
+        "tools/run_campaign37",
+        "tools/run_campaign38",
+        "tools/run_campaign39",
+        "tests/test_campaign36",
+        "tests/test_campaign37",
+        "tests/test_campaign38",
+        "tests/test_campaign39",
+        "docs/pearson",
+        "docs/correlation",
+        "artifacts/reports/campaign36",
+        "artifacts/reports/campaign37",
+        "artifacts/reports/campaign38",
+        "artifacts/reports/campaign39"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 6,
+      "suggested_commit_message": "KnowledgeForge: 06 pearson correlation method objects",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 36
+    },
+    {
+      "approx_bytes": 492556,
+      "canonical_data_included": false,
+      "depends_on": [
+        "06-pearson-correlation-method-objects"
+      ],
+      "file_count": 18,
+      "group": "07-specification-driven-batch-engine-campaign40",
+      "pathspecs": [
+        "tools/correlation_batch_engine.py",
+        "tests/test_correlation_batch_engine.py",
+        "artifacts/reports/campaign40",
+        "specs/"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [
+        {
+          "classification": "reviewed_false_positive_scanner_literal_or_schema_field",
+          "count": 2,
+          "disposition": "scanner/test literal or forbidden-term guard; no secret value reported",
+          "finding_type": "credential_keyword",
+          "path": "tools/correlation_batch_engine.py"
+        }
+      ],
+      "sequence": 7,
+      "suggested_commit_message": "KnowledgeForge: 07 specification driven batch engine campaign40",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 4,
+      "untracked": 14
+    },
+    {
+      "approx_bytes": 54387,
+      "canonical_data_included": false,
+      "depends_on": [
+        "07-specification-driven-batch-engine-campaign40"
+      ],
+      "file_count": 5,
+      "group": "08-relationship-export-contract",
+      "pathspecs": [
+        "tools/relationship_export",
+        "tests/test_relationship_export",
+        "artifacts/reports/relationship-export",
+        "docs/interfaces.md"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 8,
+      "suggested_commit_message": "KnowledgeForge: 08 relationship export contract",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 5
+    },
+    {
+      "approx_bytes": 0,
+      "canonical_data_included": false,
+      "depends_on": [
+        "08-relationship-export-contract"
+      ],
+      "file_count": 0,
+      "group": "09-release-automation-inbox-registries",
+      "pathspecs": [
+        "tools/release_inbox_v1.py",
+        "tools/release_automation_alignment_v1.py",
+        "tests/test_release",
+        "artifacts/release-inbox"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 9,
+      "suggested_commit_message": "KnowledgeForge: 09 release automation inbox registries",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 0
+    },
+    {
+      "approx_bytes": 282385,
+      "canonical_data_included": false,
+      "depends_on": [
+        "09-release-automation-inbox-registries"
+      ],
+      "file_count": 17,
+      "group": "10-macroforge-adapter-real-handoff-evidence",
+      "pathspecs": [
+        "tools/macroforge_neutral_release_adapter_v1.py",
+        "tests/test_macroforge",
+        "artifacts/external-release-handoffs/",
+        "artifacts/release-inbox-macroforge-real-handoff-v1/",
+        "artifacts/reports/macroforge"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 10,
+      "suggested_commit_message": "KnowledgeForge: 10 macroforge adapter real handoff evidence",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 17
+    },
+    {
+      "approx_bytes": 99231,
+      "canonical_data_included": false,
+      "depends_on": [
+        "10-macroforge-adapter-real-handoff-evidence"
+      ],
+      "file_count": 8,
+      "group": "11-outbox-polling",
+      "pathspecs": [
+        "tools/external_outbox_poller_v1.py",
+        "tests/test_external_outbox",
+        "config/external_outbox_sources.json",
+        "artifacts/external-outbox",
+        "artifacts/release-inbox-unified-v1",
+        "artifacts/reports/provider-neutral-outbox"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 11,
+      "suggested_commit_message": "KnowledgeForge: 11 outbox polling",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 8
+    },
+    {
+      "approx_bytes": 100244,
+      "canonical_data_included": false,
+      "depends_on": [
+        "11-outbox-polling"
+      ],
+      "file_count": 9,
+      "group": "12-corrected-supersession-model",
+      "pathspecs": [
+        "tools/canonical_supersession_immutability_validator.py",
+        "tests/test_canonical_supersession",
+        "artifacts/reports/canonical-supersession",
+        "artifacts/decisions/D-20260711-canonical-supersession"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 12,
+      "suggested_commit_message": "KnowledgeForge: 12 corrected supersession model",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 9
+    },
+    {
+      "approx_bytes": 204438,
+      "canonical_data_included": false,
+      "depends_on": [
+        "12-corrected-supersession-model"
+      ],
+      "file_count": 26,
+      "group": "13-documentation-final-handoff-and-durability",
+      "pathspecs": [
+        "artifacts/tasks/",
+        "artifacts/decisions/",
+        "artifacts/reports/repository-wide-durability",
+        "tools/repository_wide_durability_validator.py"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [
+        {
+          "classification": "reviewed_false_positive_domain_keyword",
+          "count": 1,
+          "disposition": "domain text, schema field, or evidence variable name; no secret value reported",
+          "finding_type": "credential_keyword",
+          "path": "artifacts/decisions/D-20260712-campaign41-candidate-registry-freeze.md"
+        },
+        {
+          "classification": "reviewed_false_positive_domain_keyword",
+          "count": 1,
+          "disposition": "domain text, schema field, or evidence variable name; no secret value reported",
+          "finding_type": "credential_keyword",
+          "path": "artifacts/decisions/_SUMMARY.md"
+        },
+        {
+          "classification": "reviewed_false_positive_domain_keyword",
+          "count": 1,
+          "disposition": "domain text, schema field, or evidence variable name; no secret value reported",
+          "finding_type": "credential_keyword",
+          "path": "artifacts/tasks/T-20260712-campaign42-first-difference-pearson-companion-production.md"
+        }
+      ],
+      "sequence": 13,
+      "suggested_commit_message": "KnowledgeForge: 13 documentation final handoff and durability",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 2,
+      "untracked": 24
+    }
+  ],
+  "unassigned_changed_or_untracked": [
+    {
+      "bytes": 863,
+      "category": "derived_rebuildable",
+      "path": "artifacts/_SUMMARY.md"
+    },
+    {
+      "bytes": 546,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 487,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 497,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json"
+    },
+    {
+      "bytes": 487,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 3664,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json"
+    },
+    {
+      "bytes": 478,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 3318,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 6338,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/transport-registry.jsonl"
+    },
+    {
+      "bytes": 545,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 473,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 459,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbound/_SUMMARY.md"
+    },
+    {
+      "bytes": 207509,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbound/macroforge-neutral-evidence-release-outbox-local-v1/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.neutral-release.json"
+    },
+    {
+      "bytes": 1331,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbound/macroforge-neutral-evidence-release-outbox-local-v1/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/manifest.json"
+    },
+    {
+      "bytes": 483,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json"
+    },
+    {
+      "bytes": 473,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 3657,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json"
+    },
+    {
+      "bytes": 464,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 3318,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 3978,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/transport-registry.jsonl"
+    },
+    {
+      "bytes": 396,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/_SUMMARY.md"
+    },
+    {
+      "bytes": 454,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/macroforge/_SUMMARY.md"
+    },
+    {
+      "bytes": 207509,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/macroforge-wdi-trade-share-dnk-swe-nor-1990-2024.neutral-release.json"
+    },
+    {
+      "bytes": 862,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/manifest.json"
+    },
+    {
+      "bytes": 2771,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/transfer_integrity_record.json"
+    },
+    {
+      "bytes": 527,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 497,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 507,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json"
+    },
+    {
+      "bytes": 497,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 3669,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json"
+    },
+    {
+      "bytes": 4649,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/downstream_delta.json"
+    },
+    {
+      "bytes": 18818,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/processing_result.json"
+    },
+    {
+      "bytes": 488,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 2272,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 495,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 465,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 426,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 454,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 456,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 2272,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 479,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 508,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 245367,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/accepted-releases/wdi-trade-exports-imports-controlled-test-v2.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/accepted-releases/wdi-trade-exports-imports-retained-evidence-v1.json"
+    },
+    {
+      "bytes": 460,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 245367,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/inbox/controlled_successor_release_v2.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/inbox/real_wdi_exports_imports_release_v1.json"
+    },
+    {
+      "bytes": 504,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 2597,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/downstream_delta.json"
+    },
+    {
+      "bytes": 16671,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/processing_result.json"
+    },
+    {
+      "bytes": 4659,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/downstream_delta.json"
+    },
+    {
+      "bytes": 18844,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/processing_result.json"
+    },
+    {
+      "bytes": 622,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 242919,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/conflicting_reuse_v1.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/fingerprint_mismatch_release.json"
+    },
+    {
+      "bytes": 9,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/malformed-410aed2fbd870bd0.json"
+    },
+    {
+      "bytes": 245314,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/missing_predecessor_release.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/real_wdi_exports_imports_release_v1.json"
+    },
+    {
+      "bytes": 242926,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/wrong_contract_release.json"
+    },
+    {
+      "bytes": 10707,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 527,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/_SUMMARY.md"
+    },
+    {
+      "bytes": 556,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 245367,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/wdi-trade-exports-imports-controlled-test-v2.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/wdi-trade-exports-imports-retained-evidence-v1.json"
+    },
+    {
+      "bytes": 458,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 552,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 2597,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/downstream_delta.json"
+    },
+    {
+      "bytes": 1340,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/failure.json"
+    },
+    {
+      "bytes": 16695,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/processing_result.json"
+    },
+    {
+      "bytes": 4659,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/downstream_delta.json"
+    },
+    {
+      "bytes": 18868,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/processing_result.json"
+    },
+    {
+      "bytes": 488,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 3771,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 1342,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/R-20260712-architecture-reality-audit.md"
+    },
+    {
+      "bytes": 325256,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/all_pearson_relationship_export.json"
+    },
+    {
+      "bytes": 302,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/all_pearson_relationship_export_verify.json"
+    },
+    {
+      "bytes": 1365,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/campaign41_assimilation_closeout.md"
+    },
+    {
+      "bytes": 1522,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/candidate_construction_policy_assessment.md"
+    },
+    {
+      "bytes": 949,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/architecture_reality_audit.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/architecture_reality_audit.stderr"
+    },
+    {
+      "bytes": 891,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/canonical_repository_validation.json"
+    },
+    {
+      "bytes": 343,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/check_coherence.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/check_coherence.stderr"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/check_coherence_final.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/check_coherence_final.stderr"
+    },
+    {
+      "bytes": 1589,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/context_health.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/context_health.stderr"
+    },
+    {
+      "bytes": 1467,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/context_health_final.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/context_health_final.stderr"
+    },
+    {
+      "bytes": 1515,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/final_verification_summary.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/full_test_suite.stderr"
+    },
+    {
+      "bytes": 421,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/full_test_suite.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/git_diff_check.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/git_diff_check.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/git_diff_check_after_final_report.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/git_diff_check_after_final_report.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/git_diff_check_final.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/git_diff_check_final.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/python_compile.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/python_compile.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator.stderr"
+    },
+    {
+      "bytes": 5247,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator.stdout"
+    },
+    {
+      "bytes": 1514,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/artifact_class_policy.json"
+    },
+    {
+      "bytes": 1510,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/artifact_policy.json"
+    },
+    {
+      "bytes": 143365,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/commit_plan.json"
+    },
+    {
+      "bytes": 5247,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/consolidated_machine_readable_summary.json"
+    },
+    {
+      "bytes": 3052953,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/inventory.json"
+    },
+    {
+      "bytes": 70645,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/machine_loss_recovery.json"
+    },
+    {
+      "bytes": 3047,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/package_counts.json"
+    },
+    {
+      "bytes": 8367,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/repository_wide_validator.json"
+    },
+    {
+      "bytes": 154498,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/sensitive_scan.json"
+    },
+    {
+      "bytes": 1521,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/size_storage_assessment.json"
+    },
+    {
+      "bytes": 365,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final-verification/repository_wide_durability_validator_report.json/temporary_db_cleanup_assessment.json"
+    },
+    {
+      "bytes": 11170,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/final_report.md"
+    },
+    {
+      "bytes": 8324,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/pearson_production_utility_review.md"
+    },
+    {
+      "bytes": 6449,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/pearson_utility_inventory.csv"
+    },
+    {
+      "bytes": 37087,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/pearson_utility_inventory.json"
+    },
+    {
+      "bytes": 1142,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/postgresql_read_only_retrieval_review.json"
+    },
+    {
+      "bytes": 21929,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/preflight/git_status_short.txt"
+    },
+    {
+      "bytes": 4,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/preflight/postgresql_object_count.txt"
+    },
+    {
+      "bytes": 17,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/preflight/postgresql_projected_count.txt"
+    },
+    {
+      "bytes": 198,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/preflight/repository_baseline.json"
+    },
+    {
+      "bytes": 411,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/query_all_pearson.json"
+    },
+    {
+      "bytes": 2264,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-assimilation-pearson-path-to-100-review-20260712/roadmap_sequencing_decision_report.md"
+    },
+    {
+      "bytes": 1518,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/existing_design_review.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/architecture_reality_audit.stderr"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/architecture_reality_audit.stdout"
+    },
+    {
+      "bytes": 21711,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/artifact_validation_summary.json"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/check_coherence.json"
+    },
+    {
+      "bytes": 1466,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/context_health.json"
+    },
+    {
+      "bytes": 2986,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/final_verification_summary.json"
+    },
+    {
+      "bytes": 1514,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/artifact_class_policy.json"
+    },
+    {
+      "bytes": 1510,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/artifact_policy.json"
+    },
+    {
+      "bytes": 110429,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/commit_plan.json"
+    },
+    {
+      "bytes": 4395,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/consolidated_machine_readable_summary.json"
+    },
+    {
+      "bytes": 2874569,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/inventory.json"
+    },
+    {
+      "bytes": 48025,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/machine_loss_recovery.json"
+    },
+    {
+      "bytes": 2275,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/package_counts.json"
+    },
+    {
+      "bytes": 3438,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/repository_wide_validator.json"
+    },
+    {
+      "bytes": 149678,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/sensitive_scan.json"
+    },
+    {
+      "bytes": 1521,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/size_storage_assessment.json"
+    },
+    {
+      "bytes": 365,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final-verification/repository_wide_durability_validator.json/temporary_db_cleanup_assessment.json"
+    },
+    {
+      "bytes": 25616,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/final_report.md"
+    },
+    {
+      "bytes": 4535,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/helper_write_summary.json"
+    },
+    {
+      "bytes": 342,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/preflight/architectureharvest_status.txt"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/preflight/cached_diff_name_status.txt"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/preflight/git_fetch.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/preflight/git_fetch.stdout"
+    },
+    {
+      "bytes": 18471,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/preflight/git_state.txt"
+    },
+    {
+      "bytes": 18549,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/preflight/git_status_ignored_short.txt"
+    },
+    {
+      "bytes": 28488,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/selection/candidate_compatibility_report.json"
+    },
+    {
+      "bytes": 83367,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/selection/candidate_registry.json"
+    },
+    {
+      "bytes": 864,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/selection/coefficient_free_validation_result.json"
+    },
+    {
+      "bytes": 632,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/selection/deterministic_regeneration_result.json"
+    },
+    {
+      "bytes": 935,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/selection/expected_package_id_manifest.json"
+    },
+    {
+      "bytes": 165,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/architecture_reality_audit.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/architecture_reality_audit.stderr"
+    },
+    {
+      "bytes": 53,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/architecture_reality_audit.stdout"
+    },
+    {
+      "bytes": 126,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/cached_diff_check.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/cached_diff_check.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/cached_diff_check.stdout"
+    },
+    {
+      "bytes": 97,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/campaign41_absence.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/campaign41_absence.stderr"
+    },
+    {
+      "bytes": 5160,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/campaign41_absence.stdout"
+    },
+    {
+      "bytes": 108,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/campaign41_production_absence.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/campaign41_production_absence.stderr"
+    },
+    {
+      "bytes": 179,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/campaign41_production_absence.stdout"
+    },
+    {
+      "bytes": 110,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/canonical_repository_validation.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/canonical_repository_validation.stderr"
+    },
+    {
+      "bytes": 278,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/canonical_repository_validation.stdout"
+    },
+    {
+      "bytes": 151,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/coherence.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/coherence.stderr"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/coherence.stdout"
+    },
+    {
+      "bytes": 155,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/context_health.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/context_health.stderr"
+    },
+    {
+      "bytes": 1466,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/context_health.stdout"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/existing_package_immutability.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/existing_package_immutability.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/existing_package_immutability.stdout"
+    },
+    {
+      "bytes": 111,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/final_git_status.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/final_git_status.stderr"
+    },
+    {
+      "bytes": 18153,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/final_git_status.stdout"
+    },
+    {
+      "bytes": 146,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/full_test_suite.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/full_test_suite.stderr"
+    },
+    {
+      "bytes": 341,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/full_test_suite.stdout"
+    },
+    {
+      "bytes": 107,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/git_diff_check.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/git_diff_check.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/git_diff_check.stdout"
+    },
+    {
+      "bytes": 148,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/python_compile.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/python_compile.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/python_compile.stdout"
+    },
+    {
+      "bytes": 1514,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/artifact_class_policy.json"
+    },
+    {
+      "bytes": 1510,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/artifact_policy.json"
+    },
+    {
+      "bytes": 98804,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/commit_plan.json"
+    },
+    {
+      "bytes": 4395,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/consolidated_machine_readable_summary.json"
+    },
+    {
+      "bytes": 2841799,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/inventory.json"
+    },
+    {
+      "bytes": 46405,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/machine_loss_recovery.json"
+    },
+    {
+      "bytes": 2275,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/package_counts.json"
+    },
+    {
+      "bytes": 3058,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/repository_wide_validator.json"
+    },
+    {
+      "bytes": 149678,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/sensitive_scan.json"
+    },
+    {
+      "bytes": 1521,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/size_storage_assessment.json"
+    },
+    {
+      "bytes": 365,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability/temporary_db_cleanup_assessment.json"
+    },
+    {
+      "bytes": 305,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive_material_scan.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive_material_scan.stderr"
+    },
+    {
+      "bytes": 4395,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive_material_scan.stdout"
+    },
+    {
+      "bytes": 2613,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/summary.json"
+    },
+    {
+      "bytes": 342,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/preflight/architectureharvest_status.txt"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/preflight/cached_diff_name_status.txt"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/preflight/git_fetch.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/preflight/git_fetch.stdout"
+    },
+    {
+      "bytes": 18190,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/preflight/git_state.txt"
+    },
+    {
+      "bytes": 18146,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/preflight/git_status_ignored_short.txt"
+    },
+    {
+      "bytes": 1569,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/production_sequencing_decision.json"
+    },
+    {
+      "bytes": 5118,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/production_sequencing_decision.md"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/architecture_reality_audit.stderr"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/architecture_reality_audit.stdout"
+    },
+    {
+      "bytes": 16162,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/campaign_literal_scan.json"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/check_coherence.json"
+    },
+    {
+      "bytes": 343,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/check_coherence_after_closeout.json"
+    },
+    {
+      "bytes": 1466,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/context_health.json"
+    },
+    {
+      "bytes": 1589,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/context_health_after_closeout.json"
+    },
+    {
+      "bytes": 1589,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/context_health_final.json"
+    },
+    {
+      "bytes": 12273,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/final_verification_summary.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/full_tests.stderr"
+    },
+    {
+      "bytes": 421,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/full_tests.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/git_diff_cached_check.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/git_diff_cached_check.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/git_diff_check.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/git_diff_check.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/git_diff_check_after_closeout.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/git_diff_check_after_closeout.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/git_diff_check_final.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/git_diff_check_final.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/python_compile.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/python_compile.stdout"
+    },
+    {
+      "bytes": 1514,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/artifact_class_policy.json"
+    },
+    {
+      "bytes": 1510,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/artifact_policy.json"
+    },
+    {
+      "bytes": 143691,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/commit_plan.json"
+    },
+    {
+      "bytes": 5247,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/consolidated_machine_readable_summary.json"
+    },
+    {
+      "bytes": 3020959,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/inventory.json"
+    },
+    {
+      "bytes": 68797,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/machine_loss_recovery.json"
+    },
+    {
+      "bytes": 3047,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/package_counts.json"
+    },
+    {
+      "bytes": 8025,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/repository_wide_validator.json"
+    },
+    {
+      "bytes": 154498,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/sensitive_scan.json"
+    },
+    {
+      "bytes": 1521,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/size_storage_assessment.json"
+    },
+    {
+      "bytes": 365,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator/temporary_db_cleanup_assessment.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator.stderr"
+    },
+    {
+      "bytes": 5247,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/repository_wide_durability_validator.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/targeted_tests.stderr"
+    },
+    {
+      "bytes": 100,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final-verification/targeted_tests.stdout"
+    },
+    {
+      "bytes": 13146,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/final_report.md"
+    },
+    {
+      "bytes": 29878,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/preflight/frozen_input_identity_validation.json"
+    },
+    {
+      "bytes": 9635,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/accepted_packages/pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 10202,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/accepted_packages/pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9067,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/accepted_packages/pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9228,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/accepted_packages/pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9119,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/accepted_packages/pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 8972,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/accepted_packages/pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9511,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/accepted_packages/pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9905,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/accepted_packages/pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 5033,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/candidate_judgments.json"
+    },
+    {
+      "bytes": 87251,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/consolidated_machine_readable_report.json"
+    },
+    {
+      "bytes": 4680,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/dnk_agricultural_land_broad_money_calculation.json"
+    },
+    {
+      "bytes": 4728,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/dnk_agricultural_land_private_credit_calculation.json"
+    },
+    {
+      "bytes": 4666,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/dnk_forest_area_broad_money_calculation.json"
+    },
+    {
+      "bytes": 4751,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/nor_crude_birth_rate_fossil_electricity_calculation.json"
+    },
+    {
+      "bytes": 4785,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/nor_fossil_electricity_under5_mortality_calculation.json"
+    },
+    {
+      "bytes": 4799,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/nor_nonhydro_renewable_electricity_under5_mortality_calculation.json"
+    },
+    {
+      "bytes": 961,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/publication_plan.json"
+    },
+    {
+      "bytes": 87251,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/stdout.json"
+    },
+    {
+      "bytes": 4719,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/swe_private_credit_internet_users_calculation.json"
+    },
+    {
+      "bytes": 4713,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/production/swe_private_credit_mobile_cellular_calculation.json"
+    },
+    {
+      "bytes": 5550,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/all_campaign41_consumer.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/all_campaign41_consumer.stderr"
+    },
+    {
+      "bytes": 5550,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/all_campaign41_consumer.stdout"
+    },
+    {
+      "bytes": 123059,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/all_campaign41_export.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/all_campaign41_export.stderr"
+    },
+    {
+      "bytes": 123059,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/all_campaign41_export.stdout"
+    },
+    {
+      "bytes": 1110,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/all_campaign41_query.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/all_campaign41_verify.stderr"
+    },
+    {
+      "bytes": 301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/all_campaign41_verify.stdout"
+    },
+    {
+      "bytes": 2798,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_campaign41_only_consumer.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_campaign41_only_consumer.stderr"
+    },
+    {
+      "bytes": 2798,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_campaign41_only_consumer.stdout"
+    },
+    {
+      "bytes": 50543,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_campaign41_only_export.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_campaign41_only_export.stderr"
+    },
+    {
+      "bytes": 50543,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_campaign41_only_export.stdout"
+    },
+    {
+      "bytes": 1162,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_campaign41_only_query.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_campaign41_only_verify.stderr"
+    },
+    {
+      "bytes": 301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_campaign41_only_verify.stdout"
+    },
+    {
+      "bytes": 3301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_consumer.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_consumer.stderr"
+    },
+    {
+      "bytes": 3301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_consumer.stdout"
+    },
+    {
+      "bytes": 65180,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_export.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_export.stderr"
+    },
+    {
+      "bytes": 65180,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_export.stdout"
+    },
+    {
+      "bytes": 348,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_query.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_verify.stderr"
+    },
+    {
+      "bytes": 301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/either_indicator_private_credit_verify.stdout"
+    },
+    {
+      "bytes": 2698,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_campaign41_only_consumer.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_campaign41_only_consumer.stderr"
+    },
+    {
+      "bytes": 2698,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_campaign41_only_consumer.stdout"
+    },
+    {
+      "bytes": 45707,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_campaign41_only_export.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_campaign41_only_export.stderr"
+    },
+    {
+      "bytes": 45707,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_campaign41_only_export.stdout"
+    },
+    {
+      "bytes": 1131,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_campaign41_only_query.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_campaign41_only_verify.stderr"
+    },
+    {
+      "bytes": 301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_campaign41_only_verify.stdout"
+    },
+    {
+      "bytes": 5979,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_consumer.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_consumer.stderr"
+    },
+    {
+      "bytes": 5979,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_consumer.stdout"
+    },
+    {
+      "bytes": 140581,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_export.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_export.stderr"
+    },
+    {
+      "bytes": 140581,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_export.stdout"
+    },
+    {
+      "bytes": 317,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_query.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_verify.stderr"
+    },
+    {
+      "bytes": 301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/entity_nor_verify.stdout"
+    },
+    {
+      "bytes": 1524,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/individual_first_consumer.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/individual_first_consumer.stderr"
+    },
+    {
+      "bytes": 1524,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/individual_first_consumer.stdout"
+    },
+    {
+      "bytes": 17508,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/individual_first_export.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/individual_first_export.stderr"
+    },
+    {
+      "bytes": 17508,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/individual_first_export.stdout"
+    },
+    {
+      "bytes": 403,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/individual_first_query.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/individual_first_verify.stderr"
+    },
+    {
+      "bytes": 301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/individual_first_verify.stdout"
+    },
+    {
+      "bytes": 5550,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/method_pearson_v1_consumer.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/method_pearson_v1_consumer.stderr"
+    },
+    {
+      "bytes": 5550,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/method_pearson_v1_consumer.stdout"
+    },
+    {
+      "bytes": 123134,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/method_pearson_v1_export.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/method_pearson_v1_export.stderr"
+    },
+    {
+      "bytes": 123134,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/method_pearson_v1_export.stdout"
+    },
+    {
+      "bytes": 1179,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/method_pearson_v1_query.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/method_pearson_v1_verify.stderr"
+    },
+    {
+      "bytes": 301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/method_pearson_v1_verify.stdout"
+    },
+    {
+      "bytes": 5550,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/raw_transformation_consumer.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/raw_transformation_consumer.stderr"
+    },
+    {
+      "bytes": 5550,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/raw_transformation_consumer.stdout"
+    },
+    {
+      "bytes": 123100,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/raw_transformation_export.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/raw_transformation_export.stderr"
+    },
+    {
+      "bytes": 123100,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/raw_transformation_export.stdout"
+    },
+    {
+      "bytes": 1145,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/raw_transformation_query.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/raw_transformation_verify.stderr"
+    },
+    {
+      "bytes": 301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/raw_transformation_verify.stdout"
+    },
+    {
+      "bytes": 16229,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/relationship_export_and_consumer_summary.json"
+    },
+    {
+      "bytes": 809,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/zero_result_consumer.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/zero_result_consumer.stderr"
+    },
+    {
+      "bytes": 809,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/zero_result_consumer.stdout"
+    },
+    {
+      "bytes": 1993,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/zero_result_export.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/zero_result_export.stderr"
+    },
+    {
+      "bytes": 1993,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/zero_result_export.stdout"
+    },
+    {
+      "bytes": 317,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/zero_result_query.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/zero_result_verify.stderr"
+    },
+    {
+      "bytes": 301,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/relationship_export/zero_result_verify.stdout"
+    },
+    {
+      "bytes": 9635,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/accepted_packages/pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 10202,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/accepted_packages/pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9067,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/accepted_packages/pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9228,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/accepted_packages/pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9119,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/accepted_packages/pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 8972,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/accepted_packages/pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9511,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/accepted_packages/pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9905,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/accepted_packages/pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 5033,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/candidate_judgments.json"
+    },
+    {
+      "bytes": 86324,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/consolidated_machine_readable_report.json"
+    },
+    {
+      "bytes": 4680,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/dnk_agricultural_land_broad_money_calculation.json"
+    },
+    {
+      "bytes": 4728,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/dnk_agricultural_land_private_credit_calculation.json"
+    },
+    {
+      "bytes": 4666,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/dnk_forest_area_broad_money_calculation.json"
+    },
+    {
+      "bytes": 4751,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/nor_crude_birth_rate_fossil_electricity_calculation.json"
+    },
+    {
+      "bytes": 4785,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/nor_fossil_electricity_under5_mortality_calculation.json"
+    },
+    {
+      "bytes": 4799,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/nor_nonhydro_renewable_electricity_under5_mortality_calculation.json"
+    },
+    {
+      "bytes": 4719,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/swe_private_credit_internet_users_calculation.json"
+    },
+    {
+      "bytes": 4713,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun/swe_private_credit_mobile_cellular_calculation.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun.stderr"
+    },
+    {
+      "bytes": 86324,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/idempotent_no_publish_rerun.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/postgresql_idempotent_rebuild.stderr"
+    },
+    {
+      "bytes": 547,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/postgresql_idempotent_rebuild.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/postgresql_verify.stderr"
+    },
+    {
+      "bytes": 709,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/postgresql_verify.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/postgresql_verify_after_idempotent_rebuild.stderr"
+    },
+    {
+      "bytes": 709,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/postgresql_verify_after_idempotent_rebuild.stdout"
+    },
+    {
+      "bytes": 43577,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/production_verification.json"
+    },
+    {
+      "bytes": 9635,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/accepted_packages/pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 10202,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/accepted_packages/pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9067,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/accepted_packages/pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9228,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/accepted_packages/pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9119,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/accepted_packages/pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 8972,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/accepted_packages/pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9511,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/accepted_packages/pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9905,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/accepted_packages/pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 4680,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/dnk_agricultural_land_broad_money_calculation.json"
+    },
+    {
+      "bytes": 4728,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/dnk_agricultural_land_private_credit_calculation.json"
+    },
+    {
+      "bytes": 4666,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/dnk_forest_area_broad_money_calculation.json"
+    },
+    {
+      "bytes": 4751,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/nor_crude_birth_rate_fossil_electricity_calculation.json"
+    },
+    {
+      "bytes": 4785,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/nor_fossil_electricity_under5_mortality_calculation.json"
+    },
+    {
+      "bytes": 4799,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/nor_nonhydro_renewable_electricity_under5_mortality_calculation.json"
+    },
+    {
+      "bytes": 961,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/publication_plan.json"
+    },
+    {
+      "bytes": 4719,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/swe_private_credit_internet_users_calculation.json"
+    },
+    {
+      "bytes": 4713,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun/swe_private_credit_mobile_cellular_calculation.json"
+    },
+    {
+      "bytes": 2123,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-frozen-pearson-batch-production-20260712/verification/safe_publish_collision_rerun.stdout"
+    },
+    {
+      "bytes": 9546,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/accepted_packages/pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 8803,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/accepted_packages/pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9282,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/accepted_packages/pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9691,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/accepted_packages/pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 8616,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/accepted_packages/pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 9081,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/accepted_packages/pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1.json"
+    },
+    {
+      "bytes": 4720,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/agriculture_agricultural_forest_land_dnk_calculation.json"
+    },
+    {
+      "bytes": 5362,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/candidate_judgments.json"
+    },
+    {
+      "bytes": 85072,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/consolidated_machine_readable_report.json"
+    },
+    {
+      "bytes": 4678,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/demographic_birth_death_rates_nor_calculation.json"
+    },
+    {
+      "bytes": 4861,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/energy_fossil_nonhydro_renewables_nor_calculation.json"
+    },
+    {
+      "bytes": 4686,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/finance_credit_broad_money_dnk_calculation.json"
+    },
+    {
+      "bytes": 4684,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/health_life_expectancy_under5_mortality_nor_calculation.json"
+    },
+    {
+      "bytes": 4724,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign40_compatibility_no_publish/infrastructure_internet_mobile_swe_calculation.json"
+    },
+    {
+      "bytes": 130717,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/campaign41_original_frozen_spec_preserved.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/architecture_reality_audit.stderr"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/architecture_reality_audit.stdout"
+    },
+    {
+      "bytes": 87482,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/campaign40_exact_compatibility.json"
+    },
+    {
+      "bytes": 9335,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/campaign41_readiness_and_immutability.json"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/check_coherence.json"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/check_coherence_after_closeout.json"
+    },
+    {
+      "bytes": 1466,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/context_health.json"
+    },
+    {
+      "bytes": 1466,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/context_health_after_closeout.json"
+    },
+    {
+      "bytes": 11448,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/final_verification_summary.json"
+    },
+    {
+      "bytes": 1514,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/artifact_class_policy.json"
+    },
+    {
+      "bytes": 1510,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/artifact_policy.json"
+    },
+    {
+      "bytes": 122637,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/commit_plan.json"
+    },
+    {
+      "bytes": 4396,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/consolidated_machine_readable_summary.json"
+    },
+    {
+      "bytes": 2902238,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/inventory.json"
+    },
+    {
+      "bytes": 51736,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/machine_loss_recovery.json"
+    },
+    {
+      "bytes": 2275,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/package_counts.json"
+    },
+    {
+      "bytes": 3580,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/repository_wide_validator.json"
+    },
+    {
+      "bytes": 152868,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/sensitive_scan.json"
+    },
+    {
+      "bytes": 1521,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/size_storage_assessment.json"
+    },
+    {
+      "bytes": 365,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/repository_wide_durability_validator.json/temporary_db_cleanup_assessment.json"
+    },
+    {
+      "bytes": 1754,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final-verification/time_index_and_runtime_literal_scan.json"
+    },
+    {
+      "bytes": 10407,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/final_report.md"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/preflight/cached_diff_name_status.txt"
+    },
+    {
+      "bytes": 480,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/preflight/diff_name_status.txt"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/preflight/git_fetch.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/preflight/git_fetch.stdout"
+    },
+    {
+      "bytes": 18869,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign41-generic-correlation-engine-provenance-parameterization-20260712/preflight/git_state.txt"
+    },
+    {
+      "bytes": 43120,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/campaign42_coefficient_free_companion_registry.json"
+    },
+    {
+      "bytes": 4758,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/campaign42_declarative_companion_production_specification.json"
+    },
+    {
+      "bytes": 167,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/coefficient_independence_proof.json"
+    },
+    {
+      "bytes": 55241,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/complete_21_package_eligibility_inventory.json"
+    },
+    {
+      "bytes": 467,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/deterministic_regeneration_proof.json"
+    },
+    {
+      "bytes": 6242,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/evidence_method_compatibility_report.json"
+    },
+    {
+      "bytes": 1254,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/expected_package_id_manifest.json"
+    },
+    {
+      "bytes": 826,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/architecture_reality_audit.json"
+    },
+    {
+      "bytes": 40,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/campaign42_validation_assertions.json"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/check_coherence.json"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/check_coherence_after_final_report.json"
+    },
+    {
+      "bytes": 1466,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/context_health.json"
+    },
+    {
+      "bytes": 1466,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/context_health_after_final_report.json"
+    },
+    {
+      "bytes": 424,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/full_test_suite.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/git_diff_check.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/git_diff_check.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/git_diff_check_after_final_report.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/git_diff_check_after_final_report.stdout"
+    },
+    {
+      "bytes": 24148,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/git_status_short.txt"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/python_compileall.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/python_compileall.stdout"
+    },
+    {
+      "bytes": 1218,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/regeneration_stdout.json"
+    },
+    {
+      "bytes": 60,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/sensitive_material_scan.json"
+    },
+    {
+      "bytes": 98,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final-verification/targeted_campaign42_registry_tests.stdout"
+    },
+    {
+      "bytes": 21046,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/final_report.md"
+    },
+    {
+      "bytes": 1474,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/post_freeze_diagnostic_honesty_audit.json"
+    },
+    {
+      "bytes": 2122,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/raw_to_companion_link_manifest.json"
+    },
+    {
+      "bytes": 12728,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/accepted_packages/pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1.json"
+    },
+    {
+      "bytes": 12649,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/accepted_packages/pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1.json"
+    },
+    {
+      "bytes": 12827,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/accepted_packages/pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-first-difference-pearson-companion-v1.json"
+    },
+    {
+      "bytes": 12627,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/accepted_packages/pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-first-difference-pearson-companion-v1.json"
+    },
+    {
+      "bytes": 12726,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/accepted_packages/pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1.json"
+    },
+    {
+      "bytes": 12703,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/accepted_packages/pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-first-difference-pearson-companion-v1.json"
+    },
+    {
+      "bytes": 12723,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/accepted_packages/pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-first-difference-pearson-companion-v1.json"
+    },
+    {
+      "bytes": 12708,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/accepted_packages/pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1.json"
+    },
+    {
+      "bytes": 105766,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/accepted_packages.json"
+    },
+    {
+      "bytes": 119706,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/campaign42_production_summary.json"
+    },
+    {
+      "bytes": 17335,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/candidate_results.json"
+    },
+    {
+      "bytes": 5987,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/consumer_simulation/all_campaign42_companions.json"
+    },
+    {
+      "bytes": 2765,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/consumer_simulation/entity_swe.json"
+    },
+    {
+      "bytes": 5987,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/consumer_simulation/first_difference_transformation.json"
+    },
+    {
+      "bytes": 2805,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/consumer_simulation/indicator_private_credit.json"
+    },
+    {
+      "bytes": 5987,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/consumer_simulation/method_first_difference.json"
+    },
+    {
+      "bytes": 1641,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/consumer_simulation/one_exact_companion.json"
+    },
+    {
+      "bytes": 12513,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/consumer_simulation/raw_only_method.json"
+    },
+    {
+      "bytes": 809,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/consumer_simulation/zero_result.json"
+    },
+    {
+      "bytes": 13921,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/final_report.md"
+    },
+    {
+      "bytes": 163,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/final_verification/architecture_reality_audit.log"
+    },
+    {
+      "bytes": 342,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/final_verification/check_coherence.log"
+    },
+    {
+      "bytes": 204,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/final_verification/check_coherence_after_closeout.log"
+    },
+    {
+      "bytes": 1587,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/campaign42-first-difference-pearson-companion-production-20260712/final_verification/context_health.log"
+    }
+  ],
+  "unassigned_count": 917
+}
