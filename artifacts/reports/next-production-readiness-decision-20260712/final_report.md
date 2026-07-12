@@ -182,3 +182,14 @@ Results:
 - Canonical invariants: 554 packages, fingerprint `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`, no canonical package mutations, no new package files.
 
 The full-suite pytest dependency gap is recorded as an environment/tooling issue. It does not alter the selected readiness path because targeted gate checks and canonical immutability checks passed.
+
+## GitHub publication
+
+Committed and pushed to `origin/main`.
+
+- readiness-decision commit: `97179bce664e1f257776304cfc5bdcda66e03917`
+- post-push verification recorded in `final_verification/closeout/post_push_verification.json`
+- local `HEAD` and `origin/main` matched after fetch: `97179bce664e1f257776304cfc5bdcda66e03917`
+- ahead/behind after push: `0 0`
+- clean remote clone confirmed decision/report presence and canonical manifest count/fingerprint: 554 / `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`
+- protected `architecture/architectureharvest/` deletions remained unstaged local residue.
