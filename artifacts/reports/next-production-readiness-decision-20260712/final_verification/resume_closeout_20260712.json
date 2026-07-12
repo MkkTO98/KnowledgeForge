@@ -1,0 +1,97 @@
+{
+  "status": "completed",
+  "resume_context": "Interrupted next-production-readiness closeout resumed without repeating the previously blocked environment lookup workflow.",
+  "repository_state": {
+    "branch": "main",
+    "head": "78b29b5b7ffb92a7a065e36d520ab4d51ff93a5e",
+    "origin_main": "78b29b5b7ffb92a7a065e36d520ab4d51ff93a5e",
+    "ahead_behind_after_fetch": "0 0",
+    "expected_prior_baseline": "4ccf2710f4046135fd3908e80728671a1f5f1e69",
+    "prior_baseline_is_ancestor": true,
+    "staged_changes": "none",
+    "protected_tracked_deletions_present_unstaged": [
+      "architecture/architectureharvest/_SUMMARY.md",
+      "architecture/architectureharvest/adoption_candidates.md",
+      "architecture/architectureharvest/adoption_outcome.template.yaml",
+      "architecture/architectureharvest/rejected_candidates.md",
+      "architecture/architectureharvest/relevance_map.yaml",
+      "architecture/architectureharvest/review_history.md"
+    ]
+  },
+  "test_environment_diagnosis": {
+    "documented_dependency_files_found": [],
+    "established_runner": "python3 -m unittest / unittest discover using the system python3 interpreter",
+    "python3": "/usr/bin/python3",
+    "uv": "/home/mkkto/.local/bin/uv",
+    "pytest_console_script": "not found on PATH",
+    "python3_import_pytest": "ModuleNotFoundError: No module named 'pytest'",
+    "python3_m_pytest_cause": "pytest is not installed for /usr/bin/python3 and the repository has no pyproject.toml, uv.lock, requirements file, Makefile, tox.ini, pytest.ini, or setup.cfg declaring pytest as a supported test dependency.",
+    "uv_run_pytest_cause": "no repository uv project/lock/dependency declaration exists from which uv can provide pytest; the supported no-install path is unittest, not uv-run pytest.",
+    "environment_mutation": "none"
+  },
+  "verification": [
+    {
+      "command": "python3 -m unittest tests.test_relationship_export_v1 tests.test_postgresql_operational_projection tests.test_first_difference_pearson_method tests.test_campaign42_first_difference_companion_registry",
+      "result": "exit 0; Ran 24 tests in 12.053s; OK"
+    },
+    {
+      "command": "git diff --check",
+      "result": "exit 0"
+    },
+    {
+      "command": "git diff --cached --check",
+      "result": "exit 0; no staged diff"
+    },
+    {
+      "command": "canonical package validation/count/fingerprint script using tools/knowledge_repository.py",
+      "result": "exit 0; 554 object files; 554 valid packages; repository fingerprint sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b; zero validation errors"
+    },
+    {
+      "command": "git diff --name-status 4ccf2710f4046135fd3908e80728671a1f5f1e69..HEAD -- knowledge_repository/objects specs/correlation_batches artifacts/reports/campaign40* artifacts/reports/campaign41* artifacts/reports/campaign42*",
+      "result": "exit 0; no knowledge_repository/objects changes; only specs/correlation_batches/_SUMMARY.md changed in this path set"
+    },
+    {
+      "command": "git diff --name-status --diff-filter=A 4ccf2710f4046135fd3908e80728671a1f5f1e69..HEAD -- knowledge_repository/objects",
+      "result": "exit 0; no new package files"
+    },
+    {
+      "command": "python3 tools/postgresql_operational_projection.py verify",
+      "result": "exit 0; valid true; canonical_object_count 554; projected_object_count 554; zero missing/extra/fidelity/fingerprint failures; repository fingerprint matched"
+    },
+    {
+      "command": "python3 tools/check_coherence.py --project .",
+      "result": "exit 0; 0 blocks; 1 non-blocking stale generated context/active_context.md warning"
+    },
+    {
+      "command": "python3 tools/context_health.py --project . --json",
+      "result": "exit 0; 0 blocks; 1 non-blocking stale generated context/active_context.md warning"
+    },
+    {
+      "command": "python3 tools/architecture_reality_audit.py --project . --write-report",
+      "result": "exit 0; 0 blocks; 0 warnings; report refreshed"
+    },
+    {
+      "command": "python3 tools/repository_wide_durability_validator.py --report /tmp/kf-readiness-closeout-verify/repository_wide_durability_validator",
+      "result": "exit 0; actual_secret_blockers 0; unsafe_absolute_path_dependencies 0; sensitive_passes true; validator_valid false only because operational checkpoint is not machine-loss durable"
+    },
+    {
+      "command": "EOF check for docs/production_campaign_roadmap.md",
+      "result": "exit 0; file ends with exactly one newline; no malformed or truncated EOF observed"
+    }
+  ],
+  "decision_integrity": {
+    "path_a_remains_supported": true,
+    "raw_and_first_difference_separable": true,
+    "independent_consumer_without_campaign_numbers_or_package_ids": true,
+    "four_remaining_corrected_policy_raw_candidates_high_time_risk": true,
+    "six_campaign41_relationships_have_defensible_shared_time_trend_basis": true,
+    "campaign43_next_task_coefficient_free": true
+  },
+  "canonical_state": {
+    "canonical_package_count": 554,
+    "repository_fingerprint": "sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b",
+    "new_knowledge_object_packages": 0,
+    "campaign40_42_package_mutations": 0,
+    "production_postgresql_mutation": "none performed; projection verify only"
+  }
+}

@@ -14,9 +14,8 @@ Context and handoff material for future KnowledgeForge sessions.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `latest_handoff.md` records completion of Campaigns 17-18 and the next autonomous production step: Campaign 19 WDI Agriculture & Rural Development evidence-quality/source-evidence transfer.
+- No active work remains after the post-Campaign-42 next-production readiness decision closeout; awaiting authorization for the Campaign 43 coefficient-free first-difference companion registry freeze.
 
 ## Needs Attention
 - Rebuild generated context bundles for future tasks instead of trusting stale `active_context.md` or `compressed_context.md`.
-
-- `latest_handoff.md` — updated after correlation production operationalization completion.
+- `latest_handoff.md` records the completed readiness decision, path A acceptance, verification outcome, and exact next authorized-task boundary.

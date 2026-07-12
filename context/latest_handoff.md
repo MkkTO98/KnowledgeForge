@@ -37,12 +37,6 @@ Campaign 43 coefficient-free first-difference companion registry freeze for the 
 
 ## Closeout verification
 
-- Targeted decision-gate tests passed: 24 tests OK.
-- Full unittest discover hit one environment dependency issue: `tests/test_operational_state_checkpoint.py` imports missing `pytest`; 311 tests otherwise ran before the import error.
-- Compileall passed.
-- PostgreSQL projection verify passed with 554 projected/canonical objects and repository fingerprint match.
-- Repository-wide durability validator exited 0; sensitive scan passed; durability decision remains D for pre-existing untracked recovery-critical/local operational-state exposure.
-- Coherence/context-health: 0 blocks, stale generated `context/active_context.md` warning only.
-- Architecture-to-reality audit: 0 blocks, 0 warnings.
-- `git diff --check`: passed.
-- Canonical count/fingerprint unchanged; no production packages changed.
+Resume closeout verification completed under `HEAD` / `origin/main` `78b29b5b7ffb92a7a065e36d520ab4d51ff93a5e`. Details: `artifacts/reports/next-production-readiness-decision-20260712/final_verification/resume_closeout_20260712.json`.
+
+Results: supported `python3 -m unittest` targeted tests passed (24 OK); pytest remains an undeclared/uninstalled environment dependency for full discovery; PostgreSQL projection verify passed at 554 objects; canonical count/fingerprint unchanged (`sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`); no package/new-package/PostgreSQL production mutation; coherence/context-health/audit had 0 blocks; `git diff --check` passed; EOF fix is clean.

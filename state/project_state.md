@@ -17,5 +17,6 @@ Latest decision gate:
 - selected path A: expand first-difference Pearson companions.
 - rejected B for the immediate next task because corrected raw production has only four high-time-risk candidates and robustness companions for existing high-risk raw relationships have higher immediate value.
 - rejected C because adversarial Relationship Export Contract and independent-consumer checks passed.
+- resume closeout verification under current `HEAD` / `origin/main` `78b29b5b7ffb92a7a065e36d520ab4d51ff93a5e` preserved canonical count/fingerprint and confirmed path A remains accepted.
 
 No production package, PostgreSQL schema, package contract, or doctrine change was made by the readiness gate.

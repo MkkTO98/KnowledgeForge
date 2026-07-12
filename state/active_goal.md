@@ -2,7 +2,7 @@
 
 Status: awaiting next authorization
 
-Current completed gate: Post-Campaign-42 next-production readiness decision.
+Current completed gate: Post-Campaign-42 next-production readiness decision. Interrupted closeout was resumed and re-verified under current `HEAD` / `origin/main` `78b29b5b7ffb92a7a065e36d520ab4d51ff93a5e`; path A remains accepted.
 
 Decision: A — expand first-difference Pearson companions next.
 

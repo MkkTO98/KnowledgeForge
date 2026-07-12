@@ -39,3 +39,5 @@ Campaign 43 coefficient-free first-difference companion registry freeze for the 
 ## Closeout verification result
 
 Completed with targeted verification passing and canonical invariants preserved. Full unittest discovery is not clean because `tests/test_operational_state_checkpoint.py` imports missing `pytest`; classify as environment/tooling dependency issue, not repository/package mutation.
+
+Resume closeout addendum: re-verified under current `HEAD` / `origin/main` `78b29b5b7ffb92a7a065e36d520ab4d51ff93a5e` with supported `python3 -m unittest` targeted tests passing, canonical count/fingerprint preserved at 554 / `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`, no package/PostgreSQL production mutation, and path A still supported. Detailed evidence: `artifacts/reports/next-production-readiness-decision-20260712/final_verification/resume_closeout_20260712.json`.

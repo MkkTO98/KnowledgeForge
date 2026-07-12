@@ -193,3 +193,42 @@ Committed and pushed to `origin/main`.
 - ahead/behind after push: `0 0`
 - clean remote clone confirmed decision/report presence and canonical manifest count/fingerprint: 554 / `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`
 - protected `architecture/architectureharvest/` deletions remained unstaged local residue.
+
+## Resume closeout verification addendum
+
+The interrupted closeout was resumed and re-verified without repeating the previously blocked environment lookup workflow. Detailed machine-readable evidence is in `final_verification/resume_closeout_20260712.json`.
+
+Current repository state after safe fetch:
+
+- branch: `main`
+- `HEAD`: `78b29b5b7ffb92a7a065e36d520ab4d51ff93a5e`
+- `origin/main`: `78b29b5b7ffb92a7a065e36d520ab4d51ff93a5e`
+- ahead/behind: `0 0`
+- the expected prior baseline `4ccf2710f4046135fd3908e80728671a1f5f1e69` is an ancestor of the current closeout state
+- staged changes: none before this addendum
+- protected `architecture/architectureharvest/` tracked deletions remained present, unstaged, and untouched
+
+Test-environment diagnosis:
+
+- The repository has no `pyproject.toml`, `uv.lock`, requirements file, Makefile, tox configuration, pytest configuration, or setup configuration declaring pytest.
+- `python3` is `/usr/bin/python3`; importing pytest under it raises `ModuleNotFoundError: No module named 'pytest'`.
+- `pytest` is not on `PATH`.
+- `uv` exists, but there is no repository uv project/lock/dependency declaration from which `uv run pytest` can provide pytest. The supported no-install runner evidenced by repository tests is `python3 -m unittest`.
+- No global install, dependency mutation, or ad hoc environment creation was performed.
+
+Resume verification results:
+
+- `python3 -m unittest tests.test_relationship_export_v1 tests.test_postgresql_operational_projection tests.test_first_difference_pearson_method tests.test_campaign42_first_difference_companion_registry`: passed, 24 tests OK.
+- `git diff --check`: passed.
+- `git diff --cached --check`: passed; no staged diff.
+- Canonical package validation: 554 object files, 554 valid packages, zero validation errors.
+- Canonical count/fingerprint: 554 / `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`.
+- No `knowledge_repository/objects` changes and no new package files since the expected prior baseline.
+- PostgreSQL projection verification: valid; 554 canonical/projected objects; zero missing/extra/fidelity/fingerprint failures; repository fingerprint matched.
+- Coherence: 0 blocks, 1 non-blocking stale generated `context/active_context.md` warning.
+- Context health: 0 blocks, same stale generated-bundle warning.
+- Architecture-to-reality audit: 0 blocks, 0 warnings.
+- Repository-wide durability/sensitive/unsafe-path validation: command exited 0; actual secret blockers 0; unsafe absolute-path dependencies 0; sensitive scan passed; validator remains not machine-loss durable only because the operational checkpoint destination is local-only.
+- EOF fix inspection: `docs/production_campaign_roadmap.md` ends with exactly one newline; no malformed/truncated artifact observed.
+
+Decision integrity re-check: path A remains supported. Relationship Export Contract v1 separates raw and first-difference classes; independent consumer evidence does not require campaign numbers, filenames, pre-known package IDs, private tables, or KnowledgeForge runtime imports; the four remaining corrected-policy raw candidates are high-time-risk; the six Campaign 41 relationships have individually recorded high shared-time-trend grounds; and the next Campaign 43 task remains explicitly coefficient-free and non-publication.
