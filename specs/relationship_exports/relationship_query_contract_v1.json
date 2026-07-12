@@ -1,0 +1,38 @@
+{
+  "controls": [
+    "stable sort order: package_id",
+    "limit/offset bounded pagination",
+    "include_full_package_payload true",
+    "include_provenance true",
+    "only_current_valid_projection true",
+    "max_result_count <= 1000",
+    "fail-closed freshness handling"
+  ],
+  "forbidden_filters": [
+    "interesting",
+    "important",
+    "actionable",
+    "predictive",
+    "economically_significant",
+    "significance",
+    "p_value"
+  ],
+  "query_contract": "knowledgeforge_relationship_query_v1@1.0",
+  "required_filters": [
+    "package_id",
+    "statement_type",
+    "evidence_family",
+    "lifecycle_state",
+    "package_fingerprint",
+    "method_identifier",
+    "method_version",
+    "series_code_involvement",
+    "entity",
+    "frequency",
+    "period_overlap",
+    "transformation_state",
+    "coefficient_min",
+    "coefficient_max",
+    "absolute_coefficient_min"
+  ]
+}

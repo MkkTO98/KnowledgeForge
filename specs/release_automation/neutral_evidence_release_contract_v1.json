@@ -1,0 +1,55 @@
+{
+  "authority_boundary": {
+    "external_provider_or_macroforge_may_supply": [
+      "release metadata",
+      "observations",
+      "provider-native provenance",
+      "source fingerprints"
+    ],
+    "forbidden": [
+      "MacroForge private table dependency",
+      "shared runtime code",
+      "consumer writes",
+      "canonical package mutation",
+      "PostgreSQL schema expansion"
+    ],
+    "knowledgeforge_owns": [
+      "release-contract semantics",
+      "derivation applicability",
+      "impact analysis",
+      "recompute planning",
+      "supersession decisions",
+      "publication plans",
+      "delta export semantics"
+    ]
+  },
+  "contract_id": "knowledgeforge_neutral_evidence_release_contract_v1@1.0",
+  "fingerprints": {
+    "affected_output_fingerprint": "deterministic hash over affected derivations and recomputation plan",
+    "change_set_fingerprint": "deterministic hash over added/removed/changed/unchanged item identities",
+    "item_fingerprint": "deterministic hash over normalized evidence item",
+    "release_content_fingerprint": "deterministic hash over release metadata excluding operational receipt time"
+  },
+  "non_canonical_status": "Release contracts and registries are automation inputs/derived state, not canonical KnowledgeObjectPackages.",
+  "purpose": "Provider-neutral evidence release contract for KnowledgeForge-owned release automation.",
+  "required_item_fields": [
+    "item_id",
+    "series_code",
+    "entity",
+    "period",
+    "frequency",
+    "value",
+    "unit",
+    "as_of_date",
+    "source_observation_fingerprint"
+  ],
+  "required_release_fields": [
+    "release_id",
+    "provider_id",
+    "dataset_id",
+    "release_version",
+    "published_at",
+    "evidence_items",
+    "provenance"
+  ]
+}
