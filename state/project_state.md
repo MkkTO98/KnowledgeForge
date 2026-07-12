@@ -1,59 +1,30 @@
 # Project State
 
-Project: KnowledgeForge
-Template: default_project
-Created by: ProjectForge
-Current phase: Vertical Slice 0 implemented and verified
+Status: operational repository with completed real external-release handoff compatibility pilot.
 
-## Purpose
+Current repository authority remains file-backed `knowledge_repository/`; PostgreSQL remains a rebuildable operational projection only.
 
-KnowledgeForge is the canonical reusable knowledge substrate of the Economic Intelligence Platform. It answers: "What is known?"
+Latest completed integration slice:
+- Task: `artifacts/tasks/T-20260711-macroforge-neutral-release-knowledgeforge-compatibility-pilot.md`
+- Decision: `artifacts/decisions/D-20260711-macroforge-neutral-release-knowledgeforge-adapter-compatibility.md`
+- Report: `artifacts/reports/macroforge-neutral-release-knowledgeforge-compatibility-pilot-20260711/consolidated_report.md`
+- Result: B. KnowledgeForge-owned bounded adapter validated for MacroForge neutral evidence release v1.
+- No canonical Knowledge Objects promoted; no PostgreSQL mutation/schema expansion; no Campaign 41.
 
-## Operating context
+Next recommended task: ask MacroForge to connect exporter execution to successful canonical release closeout.
 
-- Project type: architecture specification / future data-knowledge infrastructure.
-- Primary users: Mikkel and Hermes agents operating the EIP.
-- Future consumers: InsightForge, AtlasForge, PredictionForge, DecisionForge, BriefForge indirectly, and future domain projects.
-- Agent autonomy: conservative; documentation/governance work allowed inside approved task scope; implementation/runtime changes require explicit approval and task artifact.
-- Command policy: layered default with specification-only constraint.
-- Secrets policy: no secrets or credentials in V1.
-- Logging standard: ProjectForge file-backed governance logs only.
-- Testing standard: `python3 -m unittest discover -s tests -v`, targeted validator checks, compile checks for touched Python, and ProjectForge coherence/context checks.
-- Documentation standard: rigorous, boundary-explicit, provenance-aware, future-agent-readable.
+## 2026-07-11 Provider-neutral outbox polling prototype
 
-## Current architecture status
+Completed manual provider-neutral MacroForge outbox polling prototype with unified release-registry authority, duplicate no-promote recognition, metadata sufficiency gate, controlled isolated supersession, isolated PostgreSQL projection evidence, and failure/recovery tests. No production canonical or production PostgreSQL mutation.
 
-Foundational specification created, Phase I architectural review completed, Phase II architectural consolidation applied, ontology-focused knowledge model refinement review completed, and final architectural consolidation for provisional specification freeze completed. The authoritative model now treats durable knowledge objects as component-based objects with a common durable-object kernel. Claims are first-class and classified through governed vocabularies/facets rather than subclasses. Relationships are representations of claims. Stable identity is independent of revisions. Every durable object declares dependency posture. Dependencies, negative knowledge, methodological knowledge, knowledge change, and explicit invariants are part of the architecture. Vertical Slice 0 has been implemented as a minimal file-backed object ecosystem and validator without introducing databases, APIs, graph engines, ontology managers, statistical discovery, lifecycle automation, governance workflow automation, infrastructure, visualization, or generalized frameworks.
+## 2026-07-11 Repository-wide durability inventory and supersession-code correction
 
-Authoritative architecture files:
+Completed repository-wide durability inventory after rejecting the prior narrow staging grouping. Production-risk supersession paths were corrected: the outbox isolated prototype no longer mutates predecessor bytes, and repository persistence refuses non-identical overwrites of existing package ids. Full inventory found 538 local canonical packages, 3,920 untracked files / 48,094,254 bytes, 1,083 canonical files, and 3,597 recovery-critical/historical files / 46,137,234 bytes that would be lost if only the current remote remained. Decision: D — canonical/recovery-critical state remains locally vulnerable; no staging authorization requested. Next step is a durability-destination decision plus sensitive/local-path remediation before staging.
 
-- `docs/architecture.md`
-- `docs/principles.md`
-- `docs/interfaces.md`
-- `docs/roadmap.md`
-- `docs/open_questions.md`
-- `docs/invariants.md`
-- `docs/governed_vocabularies.md`
-- `docs/vertical_slice_0_implementation_design.md`
+## 2026-07-12 Durability-destination decision and pre-staging remediation
 
-Current review/consolidation artifacts:
+Completed artifact-class durability destination policy and pre-staging remediation plan. Decision: B — policy complete and sensitive/local-path review clean; operational backup/checkpoint destination still requires approval. Validator now distinguishes actual secrets, reviewed false positives, unsafe absolute-path dependencies, untracked canonical state, untracked recovery-critical implementation, and operational state lacking backup. Current staged state is empty; prior staged-count reports were caused by treating `??` untracked files as staged. Latest validator remains invalid because canonical/recovery-critical implementation files are untracked/local-only and mutable operational state lacks backup/checkpointing.
 
-- `artifacts/reports/R-20260629-architecture-review-phase-i.md`
-- `artifacts/reports/R-20260629-architecture-consolidation-phase-ii.md`
-- `artifacts/reports/R-20260629-knowledge-model-refinement-review.md`
-- `artifacts/reports/R-20260629-final-architectural-consolidation-spec-freeze.md`
-- `artifacts/reports/R-20260630-final-vertical-slice-0-dependency-refinement.md`
-- `artifacts/reports/R-20260630-vertical-slice-0-implementation-evidence.md`
-- `artifacts/reports/R-20260630-vertical-slice-0-validator-hardening.md`
+## 2026-07-12 Operational state backup, restore, and durability gate
 
-## Boundary summary
-
-KnowledgeForge owns reusable knowledge. MacroForge owns observations. InsightForge owns reasoning/interpretation. AtlasForge owns navigation. BriefForge owns presentation. PredictionForge will own forecasting. DecisionForge may own recommendations/actions.
-
-## Vertical Slice 0 implementation planning
-
-Vertical Slice 0 is implemented, verified, and validator-hardened. It contains exactly four durable object fixtures under `knowledge/objects/`, a deterministic invariant validator at `tools/validate_vertical_slice_0.py`, end-to-end and negative invariant tests at `tests/test_vertical_slice_0.py`, implementation evidence at `artifacts/reports/R-20260630-vertical-slice-0-implementation-evidence.md`, and validator-hardening evidence at `artifacts/reports/R-20260630-vertical-slice-0-validator-hardening.md`. Dependency posture and dependency entries live inside the Claim kernel and are versioned with the Claim.
-
-## Source of truth
-
-Setup answers and foundational decisions are under `artifacts/decisions/`. Future agents must update decision artifacts when durable policy changes.
+Implemented versioned local operational-state checkpoint/restore tooling, declarative protected-state configuration, sensitive-material exclusions, PostgreSQL reconstruction evidence, isolated restore validation, failure-mode tests, and validator semantics that distinguish local checkpoint coverage from machine-loss durability. Decision: D — local checkpoint covers current operational state and restore is verified, but it is same-host only (`tested_local_only = true`, `machine_loss_durable = false`); canonical/recovery-critical implementation files also remain untracked/local-only. No staging/commit/push, canonical mutation, production PostgreSQL write, scheduling, Campaign 41, MacroForge modification, or InsightForge modification.

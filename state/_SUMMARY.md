@@ -1,7 +1,7 @@
 # Folder Summary: state
 
 ## Purpose
-Current-state pointers for KnowledgeForge: active goal, project state, architecture posture, known issues, lessons, and recent changes.
+This folder is part of the ProjectForge file-backed operating system for `state`.
 
 ## Contains
 <!-- PROJECTFORGE:BEGIN-CONTAINS -->
@@ -15,7 +15,7 @@ Current-state pointers for KnowledgeForge: active goal, project state, architect
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Vertical Slice 0 validator hardening updated state; Slice 0 is implemented, verified, and hardened, and future work should not generalize beyond explicit next-slice approval.
+- No folder-specific active work recorded.
 
 ## Needs Attention
-- Keep state concise; move detailed architecture into `docs/`, reviews into `artifacts/reports/`, and decisions into `artifacts/decisions/`.
+- No folder-specific issues recorded.

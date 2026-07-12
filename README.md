@@ -33,7 +33,7 @@ Current phase: specification-only foundation; provisional specification freeze c
 - Runtime implementation: explicitly deferred.
 - Persistent knowledge store: architecturally expected, technology deferred.
 - Graphs, APIs, schemas, and storage: possible future representations/interfaces, not defining architecture; implementation deferred.
-- Canonical observational data: owned by MacroForge, not KnowledgeForge.
+- Canonical observational data: owned by external observational systems, not KnowledgeForge.
 
 ## Authoritative starting points
 
@@ -51,7 +51,7 @@ Current phase: specification-only foundation; provisional specification freeze c
 KnowledgeForge shall not:
 
 - own observational datasets;
-- duplicate MacroForge ingestion, validation, canonicalization, lineage, or reproducibility responsibilities;
+- duplicate external observational ingestion, validation, canonicalization, lineage, or reproducibility responsibilities;
 - generate reports;
 - generate hypotheses;
 - perform reasoning or interpretation;

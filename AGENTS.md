@@ -85,4 +85,4 @@ Consult MetaHarvest during architecture definition, major architecture modificat
 
 Do not consult MetaHarvest for bug fixes, minor documentation edits, test additions, small utilities, or implementation work that does not alter architecture.
 
-Use local project files under `architecture/architectureharvest/` for lightweight relevance maps, adoption candidates, rejected candidates, review history, and adoption outcomes. MetaHarvest recommendations are advisory only; implementation still requires normal project decisions, dry-runs, tests, and coherence gates.
+Use local legacy-compatibility project files under `architecture/metaharvest/` for lightweight relevance maps, adoption candidates, rejected candidates, review history, and adoption outcomes. MetaHarvest recommendations are advisory only; implementation still requires normal project decisions, dry-runs, tests, and coherence gates.

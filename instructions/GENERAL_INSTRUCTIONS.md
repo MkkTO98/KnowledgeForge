@@ -20,4 +20,4 @@ Mandatory discipline:
 MetaHarvest consultation:
 - Required for architecture definition, major architecture modifications, new subsystems, new agent roles, memory/context design, orchestration design, permission design, workflow redesign, scheduled architecture reviews, repeated implementation failures, and user-requested improvement scans.
 - Not required for bug fixes, minor documentation edits, test additions, small utilities, or implementation work that does not alter architecture.
-- Record local relevance and outcomes under `architecture/architectureharvest/`; mirror broadly useful lessons back to the configured external MetaHarvest provider's `adoption_log/` when appropriate.
+- Record local MetaHarvest relevance and outcomes under legacy compatibility path `architecture/metaharvest/`; mirror broadly useful lessons back to the configured external MetaHarvest provider's `adoption_log/` when appropriate.

@@ -1,0 +1,25 @@
+schema_version: 1
+kind: project_adoption_outcome
+outcome:
+  id: REQUIRED
+  date: YYYY-MM-DD
+  status: active|stale|superseded|retired
+source:
+  metaharvest_pattern_id: REQUIRED
+  source_project_id: null
+target:
+  project_id: knowledgeforge
+  project_name: KnowledgeForge
+  target_area: REQUIRED
+implementation:
+  action: adopted|rejected|modified|removed|succeeded|failed
+  implementation_effort: low|medium|high
+  files_or_decisions_touched: []
+result:
+  summary: REQUIRED
+  lessons_learned: []
+  follow_up_recommendations: []
+feedback:
+  should_mirror_to_metaharvest_adoption_log: false
+  mirrored_log_path: null
+confidence: low|medium|high

@@ -1,50 +1,42 @@
 # Latest Handoff
 
-Updated: 2026-06-30
-Agent: Hermes
-Status: Vertical Slice 0 implemented, verified, and validator-hardened
+Date: 2026-07-12
 
-## Current location
+## Completed
 
-- KnowledgeForge: `/home/mkkto/srv/EIP/projects/KnowledgeForge`
+KnowledgeForge Operational State Backup, Restore, and Durability Gate.
 
-## Current status
+Decision: D — local operational-state checkpoint/restore is implemented and verified, but it is same-host only and not machine-loss durable. Do not stage, unstage, commit, or push.
 
-KnowledgeForge has completed the approved Vertical Slice 0 implementation and a post-slice validator hardening step. The implementation still contains exactly four durable object fixtures plus a deterministic standard-library validator and unittest coverage. No dependency declaration objects, relationship representations, mapping objects, empirical/statistical discovery, graph traversal, APIs, databases, ontology managers, lifecycle automation, governance workflows, confidence systems, infrastructure, visualization, external dependencies, or generalized frameworks were introduced.
+## Key facts
 
-Read first:
+- Pre-task equivalent tooling was absent.
+- Current checkpoint: `artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/`.
+- Contracts: `knowledgeforge.operational_state_checkpoint.v1` and `knowledgeforge.protected_state.v1`.
+- Checkpoint/restore: 79 files, 4,918,310 bytes, isolated restore succeeded.
+- Required flags: `tested_local_only = true`, `machine_loss_durable = false`, `external_destination_configured = false`.
+- PostgreSQL recovery is recorded as reconstruction evidence only; no production DB write/dump.
+- Validator now distinguishes local checkpoint coverage from machine-loss durability.
 
-- `artifacts/reports/R-20260630-vertical-slice-0-validator-hardening.md`
-- `artifacts/reports/R-20260630-vertical-slice-0-implementation-evidence.md`
-- `docs/vertical_slice_0_implementation_design.md`
-- `knowledge/objects/claim-gdp-measures-aggregate-economic-output.json`
-- `tools/validate_vertical_slice_0.py`
-- `tests/test_vertical_slice_0.py`
-- `state/project_state.md`
+## Main artifacts
 
-## Implemented Slice 0
+- `config/protected_state_v1.json`
+- `tools/operational_state_checkpoint.py`
+- `tests/test_operational_state_checkpoint.py`
+- `artifacts/reports/operational-state-backup-restore-durability-gate-20260712/operational_state_backup_restore_report.md`
+- `artifacts/tasks/T-20260712-operational-state-backup-restore-durability-gate.md`
+- `artifacts/decisions/D-20260712-operational-state-backup-restore-durability-gate.md`
 
-Durable object fixtures:
+## Verification
 
-1. `knowledge/objects/concept-gdp.json`
-2. `knowledge/objects/concept-aggregate-economic-output.json`
-3. `knowledge/objects/claim-gdp-measures-aggregate-economic-output.json`
-4. `knowledge/objects/evidence-ref-gdp-source-documentation.json`
+- Py compile for changed Python/test files: passed.
+- Targeted tests: 17 passed.
+- Checkpoint validate: valid true.
+- Final validator: valid false with blocks `untracked_canonical_state_not_durable`, `untracked_recovery_critical_implementation_not_durable`, `operational_state_checkpoint_not_machine_loss_durable`; actual secret blockers 0; unsafe absolute-path dependencies 0.
+- Coherence/context health: no blocks; stale active_context warning only after this concise handoff.
+- `git diff --check`: passed.
+- cached/staged diff: empty.
 
-The Claim owns dependency posture and dependency entries for both concepts and the evidence reference. Revision history is embedded in durable objects, not implemented as a separate object.
+## Resume
 
-## Validator hardening
-
-`tools/validate_vertical_slice_0.py` now checks stable identity, object kind, provenance, revision history, dependency posture, governed claim facets, claim evidence references, dependency resolution, evidence/observational-data separation, absence of duplicated observational values, and representation neutrality. Negative unittest cases cover missing kernel fields, unresolved dependencies, observational value duplication, and representation-specific fixture fields.
-
-## Verification commands
-
-- `python3 tools/validate_vertical_slice_0.py .`
-- `python3 -m unittest discover -s tests -v`
-- `python3 -m compileall tools/validate_vertical_slice_0.py tests/test_vertical_slice_0.py`
-- `python3 tools/check_coherence.py --project .`
-- `python3 tools/context_health.py --project .`
-
-## Resume instruction
-
-Do not generalize Slice 0 into infrastructure. The next task should be explicitly scoped to one additional architectural uncertainty, if any. Potential next slices include evidence evaluation, relationship representation linked to a claim, mapping, methodological claim, or MacroForge evidence-handle reference.
+Next bounded task: configure and verify an outside-host-failure-domain destination for operational checkpoints, or separately authorize ordinary-Git staging groups after reviewing remaining durability blocks. Do not claim machine-loss durability until a verified external/off-host destination makes `machine_loss_durable = true`.

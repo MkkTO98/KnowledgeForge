@@ -1,0 +1,85 @@
+# Campaign 35 Exact Specification
+
+```json
+{
+  "acquisition_contract": {
+    "indicator_metadata_url": "https://api.worldbank.org/v2/indicator/NE.EXP.GNFS.ZS?format=json&per_page=1",
+    "observation_url": "https://api.worldbank.org/v2/country/DNK;SWE;NOR/indicator/NE.EXP.GNFS.ZS?format=json&date=1990:2024&per_page=20000",
+    "transport": "HTTPS only; no downgrade"
+  },
+  "authorization_status": "specified_not_authorized_for_execution",
+  "campaign_name": "Campaign 35 \u2014 Bounded WDI Nordic Exports Share Statistical-Summary Replication",
+  "conditional_measures_omitted": [],
+  "conditional_measures_retained": [
+    "arithmetic mean",
+    "median",
+    "population standard deviation"
+  ],
+  "entity_scope": [
+    "DNK",
+    "SWE",
+    "NOR"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_trade_statistical_summary",
+  "expected_canonical_package_count": 3,
+  "expected_evidence_slots": 105,
+  "falsification_questions": [
+    "Does v2 remain deterministic under live fixture values with fractional percentages?",
+    "Does per-entity package generation reduce low-information risk?",
+    "Does multi-entity scope create boilerplate/governance pressure?",
+    "Are mean/median/stddev more reusable for bounded rate/percentage indicators?"
+  ],
+  "indicator_code": "NE.EXP.GNFS.ZS",
+  "indicator_definition": "Exports of goods and services (% of GDP)",
+  "period_scope": {
+    "end_year": 2024,
+    "frequency": "annual",
+    "start_year": 1990
+  },
+  "postgresql_verification_requirements": [
+    "after separate execution authorization only: rebuild v1 projection",
+    "canonical object count increases by exactly three if all entities pass",
+    "payload fidelity failures = 0",
+    "package fingerprint failures = 0",
+    "lookup succeeds for each Campaign 35 package"
+  ],
+  "rationale_for_conditional_measures": "Percentage-of-GDP exports share has clearer bounded-window level and dispersion semantics than raw population levels; still no trend/causal/forecast interpretation.",
+  "rejection_criteria": [
+    "non-HTTPS transport",
+    "unexpected indicator/entity/period",
+    "duplicate observation keys",
+    "coverage below threshold for any entity",
+    "ambiguous numeric strings",
+    "conditional measures become merely mathematical with no reusable descriptive purpose",
+    "any causal/forecast/trend/investment language"
+  ],
+  "source": "World Bank WDI",
+  "statistical_measures_allowed": [
+    "expected slot count",
+    "observed count",
+    "missing count/share",
+    "coverage",
+    "first/last valid observations per entity",
+    "minimum/maximum with periods per entity",
+    "arithmetic mean per entity",
+    "median per entity",
+    "population standard deviation per entity"
+  ],
+  "stop_conditions": [
+    "any entity fails validation",
+    "measure utility review finds conditional measures weak for this indicator",
+    "governance artifacts per substantive object do not fall relative to Campaign 34",
+    "v2 determinism fails under adversarial contexts"
+  ],
+  "validation_criteria": [
+    "indicator and entity/period scope exactly match acquisition contract",
+    "HTTPS requested and final URLs retained",
+    "per-entity observed count >= 30",
+    "per-entity coverage >= 0.85",
+    "no duplicate observation keys",
+    "v2 local Decimal context adversarial check passes",
+    "no prohibited interpretation language",
+    "canonical repository projection unchanged until separate execution authorization"
+  ]
+}
+```

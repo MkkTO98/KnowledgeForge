@@ -2,11 +2,11 @@
 
 ## 1. Knowledge is not observation
 
-MacroForge owns observations: what was measured, where it came from, how it was canonicalized, and how it can be reproduced.
+External observational systems own observations: what was measured, where it came from, how it was canonicalized, and how it can be reproduced.
 
 KnowledgeForge owns reusable knowledge: concepts, definitions, claims, relationship representations, mappings, dependencies, evidence evaluations, uncertainty, provenance, lifecycle, governance state, methodological knowledge, and negative knowledge.
 
-Knowledge objects may reference MacroForge evidence. They must not duplicate MacroForge datasets.
+Knowledge objects may reference external observational evidence. They must not duplicate external observational datasets.
 
 ## 2. KnowledgeForge does not determine truth
 
@@ -78,7 +78,7 @@ Contextual information is usually an applicability component of a claim, relatio
 
 Evidence references identify source material, observations, literature, or reproducibility handles. Evidence evaluations describe how that evidence supports, weakens, contradicts, bounds, or fails to support a knowledge object.
 
-MacroForge may own observational evidence references. KnowledgeForge owns reusable evaluations of how evidence relates to knowledge claims, without duplicating observational datasets.
+External observational systems may own observational evidence references. KnowledgeForge owns reusable evaluations of how evidence relates to knowledge claims, without duplicating observational datasets.
 
 ## 9. Dependencies are explicit
 
@@ -122,7 +122,7 @@ Knowledge should support graph traversal, but KnowledgeForge must not be reduced
 
 ## 17. Downstream consumers do not govern KnowledgeForge
 
-InsightForge, AtlasForge, BriefForge, PredictionForge, DecisionForge, and future projects may consume KnowledgeForge through governed knowledge interfaces. They do not own its durable knowledge structures, lifecycle rules, evidence evaluation rules, or invariants.
+Downstream reasoning, navigation, presentation, forecasting, decision, and future systems may consume KnowledgeForge through governed knowledge exports or references. They do not own its durable knowledge structures, lifecycle rules, evidence evaluation rules, or invariants.
 
 ## 18. KnowledgeForge does not govern downstream interpretation
 

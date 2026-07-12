@@ -6,7 +6,7 @@ Project: KnowledgeForge
 Lightweight placeholder created by ProjectForge. Define the current architecture here when architecture decisions become concrete.
 
 ## MetaHarvest consultation
-Consult `architecture/architectureharvest/relevance_map.yaml` during architecture definition, major architecture changes, new subsystem/agent/context/orchestration/permission/workflow design, scheduled architecture reviews, repeated failures, and user-requested improvement scans.
+Consult `architecture/metaharvest/relevance_map.yaml` during architecture definition, major architecture changes, new subsystem/agent/context/orchestration/permission/workflow design, scheduled architecture reviews, repeated failures, and user-requested improvement scans.
 
 Do not force MetaHarvest into ordinary implementation tasks that do not alter architecture.
 

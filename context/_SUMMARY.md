@@ -14,7 +14,9 @@ Context and handoff material for future KnowledgeForge sessions.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `latest_handoff.md` now points future agents to the implemented, verified, and validator-hardened Vertical Slice 0 artifacts and warns not to generalize beyond explicit next-slice approval.
+- `latest_handoff.md` records completion of Campaigns 17-18 and the next autonomous production step: Campaign 19 WDI Agriculture & Rural Development evidence-quality/source-evidence transfer.
 
 ## Needs Attention
 - Rebuild generated context bundles for future tasks instead of trusting stale `active_context.md` or `compressed_context.md`.
+
+- `latest_handoff.md` — updated after correlation production operationalization completion.

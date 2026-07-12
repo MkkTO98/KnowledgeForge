@@ -1,0 +1,53 @@
+schema_version: 1
+kind: project_metaharvest_relevance_map
+target:
+  project_id: knowledgeforge
+  project_name: KnowledgeForge
+status:
+  state: active
+  created: 2026-06-29
+  last_reviewed: 2026-07-09
+  stale: false
+consult_required_during:
+  - architecture_definition
+  - major_architecture_modification
+  - introduction_of_new_subsystems
+  - creation_of_new_agent_roles
+  - memory_context_system_design
+  - orchestration_design
+  - permission_system_design
+  - workflow_redesign
+  - scheduled_architecture_reviews
+  - repeated_implementation_failures
+  - user_requested_improvement_scans
+consult_not_required_during:
+  - bug_fixes
+  - minor_documentation_changes
+  - test_additions
+  - small_utilities
+  - implementation_work_without_architecture_change
+recommendation_statuses:
+  - active
+  - stale
+  - superseded
+  - retired
+active_recommendations:
+  - id: KF-MH-20260709-001
+    title: Evidence-source/evidence-evaluation architecture
+    source: MetaHarvest evidence-source architecture
+    status: active
+  - id: KF-MH-20260709-002
+    title: Reproducible knowledge package boundary
+    source: MacroForge ObservedIngestionPackage and MetaHarvest portable records
+    status: active
+  - id: KF-MH-20260709-003
+    title: Deterministic validator and scientific-cycle gates
+    source: ProjectForge/MacroForge/MetaHarvest validation and research-cycle discipline
+    status: active
+stale_recommendations: []
+superseded_recommendations: []
+retired_recommendations: []
+notes:
+  - Lightweight placeholder created by ProjectForge and updated by the 2026-07-09 assimilation campaign.
+  - MetaHarvest is advisory only and must not bypass local governance gates.
+  - KnowledgeForge must not become MetaHarvest; external architecture harvesting remains out of scope.

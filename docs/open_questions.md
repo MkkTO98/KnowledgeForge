@@ -6,7 +6,7 @@ This file exists because architectural criticism is preferred over silently reso
 
 ## A1. Boundary between empirical knowledge and analysis
 
-KnowledgeForge should own reusable empirical claims and relationship representations. InsightForge should own interpretation.
+KnowledgeForge should own reusable empirical claims and relationship representations. Downstream reasoning systems should own interpretation.
 
 Ambiguity: when does an empirical claim or statistical relationship representation become an analytical conclusion?
 
@@ -54,7 +54,7 @@ Proposed stance: specify economics-first objects using domain-extensible primiti
 
 Structural relationships may be causal, empirical relationships may be correlational, and contextual relationships may condition validity.
 
-Open question: what evidence and dependency structure is required before an empirical association can support a separate causal or structural claim without KnowledgeForge becoming InsightForge?
+Open question: what evidence and dependency structure is required before an empirical association can support a separate causal or structural claim without KnowledgeForge becoming a downstream reasoning system?
 
 ## A8. Literature-derived knowledge
 
@@ -62,11 +62,11 @@ KnowledgeForge should preserve literature-derived reusable knowledge.
 
 Open question: what counts as acceptable literature evidence, and how should conflicting academic findings be represented?
 
-## A9. MacroForge reference stability
+## A9. Source evidence reference stability
 
-KnowledgeForge should reference MacroForge evidence, not duplicate observations.
+KnowledgeForge should reference external observational evidence, not duplicate observations.
 
-Open question: what reference contract guarantees that old KnowledgeForge evidence pointers remain reproducible after MacroForge schema or storage evolution?
+Open question: what reference contract guarantees that old KnowledgeForge evidence pointers remain reproducible after source schema, storage, or access evolution?
 
 ## A10. Future project pressure
 
@@ -96,7 +96,7 @@ Open question: what standards prevent weak absence-of-evidence claims from being
 
 KnowledgeForge may preserve reusable methodological assumptions, limitations, and applicability.
 
-Open question: how much method detail belongs in KnowledgeForge before it becomes statistical implementation, MacroForge reproducibility metadata, or InsightForge interpretation?
+Open question: how much method detail belongs in KnowledgeForge before it becomes statistical implementation, external observational reproducibility metadata, or downstream interpretation?
 
 ## Specification-freeze triage
 
@@ -110,3 +110,23 @@ The final architectural consolidation accepts the following as architectural com
 - graphs, ontologies, relational schemas, databases, APIs, and interfaces are representations of the knowledge model, not defining abstractions.
 
 The remaining questions above are intentionally deferred until implementation planning unless they threaten ownership boundaries, representation neutrality, the common durable-object kernel, stable identity, or the claim/dependency facet model.
+
+
+## Assimilation consolidation triage — 2026-07-09
+
+The assimilation consolidation specifications resolve or narrow several pre-implementation questions:
+
+- A1 empirical knowledge vs analysis: narrowed. KnowledgeForge may produce method-scoped factual/derived/statistical characterization and evidence evaluation, but must stop before interpretation, insight, forecasting, recommendation, or narrative implication.
+- A3 knowledge store technology: still deferred. File-backed packages and validators remain sufficient until package contracts and validation gates show concrete scaling pressure.
+- A4 confidence representation: still deferred. Use explainable confidence/quality labels and uncertainty dimensions before numeric scoring.
+- A5 lifecycle state transitions: partially specified. Package acceptance requires validation and governance state; detailed lifecycle transition validator remains a next-slice concern.
+- A9 source evidence reference stability: still open but now scoped to evidence handles, query/selection fingerprints, source version/vintage, and package lineage. Audit after validator baseline.
+- A13 negative knowledge admission: narrowed. Negative knowledge requires explicit evidence scope, method, missingness, and contradiction handling.
+- A14 methodological knowledge boundary: narrowed. KnowledgeForge may preserve reusable method assumptions/limitations and computation recipes; external observational systems own observational execution metadata and data lineage.
+
+Current pre-production blockers:
+
+1. package-contract validators are not implemented;
+2. no fixture KnowledgeCandidatePackage exercises the new contracts;
+3. Real external evidence fixtures have not been validated against the package contract;
+4. knowledge evolution/change reports have not been validated on a fixture revision.

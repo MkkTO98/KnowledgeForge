@@ -8,7 +8,7 @@ This folder is part of the ProjectForge file-backed operating system for `templa
 - `architecture_decisions/`
 - `architecture_reviews/`
 - `architecture_state.md`
-- `architectureharvest/`
+- `metaharvest/`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work

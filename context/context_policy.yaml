@@ -180,10 +180,10 @@ context_policy:
       priority over optional cleanup, broad scans, raw-log reads, or narrative
       polish.
 
-  architecture_harvest:
+  metaharvest:
     role: first_class_architectural_advisory_service
     root_location: MetaHarvest
-    generated_project_location: architecture/architectureharvest
+    legacy_generated_project_location: architecture/metaharvest
     consult_required_during:
       - new_project_creation
       - architecture_definition
@@ -207,17 +207,17 @@ context_policy:
       - architecture/architecture_state.md
       - architecture/architecture_decisions/
       - architecture/architecture_reviews/
-      - architecture/architectureharvest/relevance_map.yaml
-      - architecture/architectureharvest/adoption_candidates.md
-      - architecture/architectureharvest/rejected_candidates.md
-      - architecture/architectureharvest/review_history.md
+      - architecture/metaharvest/relevance_map.yaml
+      - architecture/metaharvest/adoption_candidates.md
+      - architecture/metaharvest/rejected_candidates.md
+      - architecture/metaharvest/review_history.md
     recommendation_statuses:
       - active
       - stale
       - superseded
       - retired
     feedback_loop:
-      adoption_outcomes_recorded_in_project: architecture/architectureharvest/
+      adoption_outcomes_recorded_in_project: architecture/metaharvest/
       broadly_useful_outcomes_mirrored_to: external_metaharvest_provider/adoption_log/
     negative_rules:
       - never_force_implementation

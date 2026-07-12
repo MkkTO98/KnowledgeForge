@@ -270,13 +270,13 @@ Illustrative content:
 A pointer to source documentation, standards documentation, or an approved external evidence handle explaining GDP as a measure of economic output.
 ```
 
-This may be a source-documentation reference rather than a MacroForge observational reference because the example is definitional, not empirical. If an appropriate MacroForge evidence handle already exists, it may be referenced. No observational data may be copied.
+This may be a source-documentation reference rather than a external observational reference because the example is definitional, not empirical. If an appropriate external evidence handle already exists, it may be referenced. No observational data may be copied.
 
 Architectural abstraction validated:
 
 - evidence reference as distinct from claim;
 - provenance/evidence pointer without data duplication;
-- MacroForge boundary discipline where observational evidence would be referenced rather than owned;
+- external evidence boundary discipline where observational evidence would be referenced rather than owned;
 - evidence component interaction with a claim;
 - common durable-object kernel for evidence reference when treated as durable;
 - dependency posture on an evidence object.
@@ -287,7 +287,7 @@ Embedding evidence directly inside the claim would not prove that evidence refer
 
 Why necessary for Slice 0:
 
-KnowledgeForge's boundary with MacroForge depends on storing references, not duplicating observations. A separate evidence reference object is the smallest way to validate that boundary conceptually.
+KnowledgeForge's boundary with external observational evidence systems depends on storing references, not duplicating observations. A separate evidence reference object is the smallest way to validate that boundary conceptually.
 
 ## 7. Revision history design
 
@@ -317,7 +317,7 @@ Architectural abstraction validated:
 | Concept A: GDP | Stable concept identity | A claim text cannot validate reusable concept identity |
 | Concept B: aggregate economic output | Multi-concept claim interaction | One concept does not validate claim relations between durable meanings |
 | Claim | Claim-first architecture, facets, and dependency posture | Concepts alone do not assert reusable knowledge or dependency semantics |
-| Evidence Reference | Evidence boundary and provenance reference | Embedded evidence would not validate independent evidence references or MacroForge boundary discipline |
+| Evidence Reference | Evidence boundary and provenance reference | Embedded evidence would not validate independent evidence references or external evidence boundary discipline |
 
 ## 9. Object exclusions and rationale
 
@@ -339,7 +339,7 @@ Reason: the claim already connects two concepts. Adding a relationship represent
 
 Excluded.
 
-Reason: source-indicator mapping would introduce MacroForge source identity, comparability, methodology, and mapping-type semantics. That is important, but it is not necessary to validate the first ecosystem.
+Reason: source-indicator mapping would introduce external source identity, comparability, methodology, and mapping-type semantics. That is important, but it is not necessary to validate the first ecosystem.
 
 ### 9.4 Evidence evaluation object
 

@@ -5,60 +5,67 @@ Runtime interfaces: Deferred
 
 ## 1. Interface philosophy
 
-KnowledgeForge participates in an autonomous EIP ecosystem. It exchanges governed reusable knowledge, evidence references, claims, relationship representations, dependency metadata, navigation structures, and context through explicit contracts. It does not govern other projects and other projects do not govern it.
+KnowledgeForge participates in an autonomous EIP ecosystem, but it remains a sovereign repository. It exchanges governed reusable knowledge, evidence references, claims, relationship representations, dependency metadata, and context through explicit KnowledgeForge-owned contracts.
 
-Interfaces begin as architectural contracts. Runtime APIs, schemas, database protocols, and file formats are deferred.
+KnowledgeForge does not govern other projects, and other projects do not govern KnowledgeForge.
 
-## 2. MacroForge ↔ KnowledgeForge
+Interfaces begin as architectural contracts. Runtime APIs, shared schemas, database protocols, shared implementation packages, and cross-repository adapters are deferred and are not authorized by this specification.
 
-### MacroForge owns
+## 2. External evidence systems -> KnowledgeForge
 
-- ingestion;
-- validation;
-- canonicalization;
+### External evidence systems own
+
+- source acquisition;
+- observational ingestion;
+- observational validation;
+- observational canonicalization;
 - observational lineage;
-- reproducibility;
-- canonical economic database;
+- observational reproducibility;
 - source observational identities;
-- quantitative observations.
+- quantitative observations;
+- source-specific metadata production;
+- observational databases or data stores.
 
 ### KnowledgeForge owns
 
 - reusable concepts;
 - semantic identities;
-- mappings from source indicators to canonical concepts;
+- mappings from source evidence indicators to canonical concepts;
 - durable claims;
 - relationship representations;
 - knowledge dependencies;
 - negative knowledge;
 - methodological knowledge;
 - evidence-backed empirical claims;
-- provenance and epistemic state for knowledge objects;
+- evidence evaluations;
+- KnowledgeForge package identity;
+- provenance envelopes and fingerprints;
 - lifecycle and governance state of knowledge objects.
 
 ### Allowed flow
 
-MacroForge may provide or expose:
+External evidence systems or sources may provide:
 
-- canonical observational identifiers;
+- observational identifiers;
 - source indicator metadata;
 - reproducibility handles;
 - dataset/series references;
-- release/version references;
+- release/version/vintage references;
 - quality/lineage metadata;
-- evidence references.
+- immutable exports or snapshots;
+- source documentation references.
 
-KnowledgeForge may store references to these MacroForge artifacts. It must not copy full observational datasets into its own persistent store.
+KnowledgeForge may store references to these artifacts, or small immutable snapshots where justified by reproducibility. It must not copy full observational datasets into its own persistent store as owned KnowledgeForge data.
 
 ### Boundary rule
 
-If an artifact is primarily about measured values and their reproducibility, it belongs to MacroForge. If it is primarily about reusable meaning, claims, relationship representations, mappings, knowledge dependencies, evidence evaluations, methodological meaning, or epistemic status, it belongs to KnowledgeForge.
+If an artifact is primarily about measured values and their observational reproducibility, it belongs to an external evidence system or source. If it is primarily about reusable meaning, claims, relationship representations, mappings, knowledge dependencies, evidence evaluations, methodological meaning, package provenance, or epistemic status, it belongs to KnowledgeForge.
 
-## 3. KnowledgeForge → InsightForge
+## 3. KnowledgeForge -> downstream reasoning systems
 
-InsightForge should eventually consume KnowledgeForge rather than implement durable knowledge structures itself.
+Downstream reasoning systems should consume KnowledgeForge knowledge rather than implement durable knowledge structures themselves.
 
-KnowledgeForge provides:
+KnowledgeForge may provide:
 
 - concepts;
 - definitions;
@@ -76,20 +83,18 @@ KnowledgeForge provides:
 - applicability regimes;
 - literature/provenance pointers.
 
-InsightForge owns:
+Downstream reasoning systems own:
 
 - reasoning;
 - interpretation;
 - analytical understanding;
 - hypotheses;
-- report generation;
-- narrative synthesis.
+- narrative synthesis;
+- explanation of current situations.
 
-Boundary rule: If the artifact preserves a governed, provenance-bearing reusable claim about what is known, under what applicability conditions, and why it is believed or contested, it belongs to KnowledgeForge. If it says what this implies for an analysis, current situation, hypothesis, narrative, or report, it belongs to InsightForge.
+Boundary rule: if the artifact preserves a governed, provenance-bearing reusable claim about what is known, under what applicability conditions, and why it is believed or contested, it belongs to KnowledgeForge. If it says what this implies for an analysis, current situation, hypothesis, narrative, or report, it belongs to a downstream reasoning system.
 
-## 4. KnowledgeForge → AtlasForge
-
-AtlasForge is the navigation layer. It may eventually navigate both MacroForge data and KnowledgeForge knowledge.
+## 4. KnowledgeForge -> navigation systems
 
 KnowledgeForge may provide:
 
@@ -103,7 +108,7 @@ KnowledgeForge may provide:
 - contradiction pointers;
 - confidence and lifecycle metadata.
 
-AtlasForge owns:
+Navigation systems own:
 
 - visualization;
 - navigation UX;
@@ -111,19 +116,23 @@ AtlasForge owns:
 - presentation of traversals;
 - user-facing maps.
 
-Boundary rule: KnowledgeForge stores navigable knowledge and dependency metadata. AtlasForge makes it navigable to humans. KnowledgeForge does not implement visualization or navigation UX.
+Boundary rule: KnowledgeForge stores navigable knowledge and dependency metadata. Navigation systems make it navigable to humans. KnowledgeForge does not implement visualization or navigation UX.
 
-## 5. InsightForge/KnowledgeForge → BriefForge
+## 5. KnowledgeForge -> presentation systems
 
-BriefForge is presentation only. It consumes outputs from InsightForge and potentially future projects.
+KnowledgeForge does not generate reports or presentation artifacts. It may be cited by downstream reports through evidence references, claim identifiers, and knowledge object identifiers, normally through presentation context produced by an approved downstream consumer.
 
-KnowledgeForge does not generate reports or presentation artifacts. It may be cited by downstream reports through evidence references, claim identifiers, and knowledge object identifiers, normally through presentation context produced by InsightForge or another approved downstream consumer.
+Presentation systems own:
 
-## 6. KnowledgeForge → PredictionForge
+- report layout;
+- decks/documents;
+- audience-specific rendering;
+- narrative packaging;
+- visual style and communication format.
 
-PredictionForge is future-facing and should answer: "What is likely to happen?"
+## 6. KnowledgeForge -> forecasting systems
 
-PredictionForge may consume:
+Forecasting systems may consume:
 
 - empirical claims and relationship representations;
 - regime-dependent knowledge;
@@ -135,11 +144,9 @@ PredictionForge may consume:
 
 KnowledgeForge must not produce forecasts, probability distributions for future outcomes, scenario predictions, or model recommendations. Empirical lead-lag knowledge is allowed only as reusable knowledge, not as a forecast.
 
-## 7. KnowledgeForge → DecisionForge
+## 7. KnowledgeForge -> decision systems
 
-DecisionForge, if created, should answer: "What should be done?"
-
-DecisionForge may consume:
+Decision systems may consume:
 
 - contextual knowledge and applicability conditions;
 - uncertainty;
@@ -148,7 +155,7 @@ DecisionForge may consume:
 - methodological limitations;
 - lifecycle status;
 - evidence references;
-- prediction outputs from PredictionForge.
+- approved forecasting outputs from forecasting systems.
 
 KnowledgeForge must not recommend actions, portfolio changes, policies, trades, or interventions.
 
@@ -162,21 +169,24 @@ Cross-domain expansion must preserve the same boundary rules:
 - reusable knowledge belongs to KnowledgeForge;
 - interpretation belongs to reasoning systems;
 - presentation belongs to presentation systems;
-- predictions belong to prediction systems;
+- predictions belong to forecasting systems;
 - decisions belong to decision systems.
 
-## 9. Interface artifacts required before runtime implementation
+## 9. Contracts required before runtime implementation
 
-Before any runtime API or database integration, create accepted decision artifacts for:
+Before any runtime API, database integration, shared schema, or cross-repository integration, create accepted decision artifacts for:
 
-1. MacroForge evidence reference contract.
+1. Source evidence reference contract.
 2. Knowledge object identifier contract.
 3. Concept/source-indicator mapping contract.
 4. Claim object contract.
 5. Relationship representation contract.
 6. Knowledge dependency contract.
 7. Evidence evaluation contract.
-8. Lifecycle state transition contract.
-9. Governance/review state contract.
-10. Consumer interface contract for InsightForge and AtlasForge.
-11. Versioning and backward-compatibility contract.
+8. Provenance envelope and fingerprint contract.
+9. Lifecycle state transition contract.
+10. Governance/review state contract.
+11. Downstream consumer export/reference contract.
+12. Versioning and backward-compatibility contract.
+
+No runtime integration may be inferred from these conceptual contracts.

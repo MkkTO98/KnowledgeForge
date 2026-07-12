@@ -19,18 +19,18 @@ The initial domain is economics. The architecture is deliberately domain-extensi
 ```text
 Reality
   ↓
-MacroForge        What happened?
+Observation systems       What happened?
   ↓
-KnowledgeForge    What is known?
+KnowledgeForge             What is known?
   ↓
-InsightForge      What does this mean?
+Reasoning systems          What does this mean?
   ↓
-PredictionForge   What is likely to happen?
+Forecasting systems        What is likely to happen?
   ↓
-DecisionForge     What should be done?
+Decision systems           What should be done?
 
-AtlasForge        Navigation
-BriefForge        Presentation
+Navigation systems         Knowledge discovery
+Presentation systems       Communication
 ```
 
 KnowledgeForge is a middle substrate. It consumes evidence references from observational systems and provides governed reusable knowledge interfaces for reasoning, navigation, forecasting, and decision systems without performing those downstream responsibilities itself.
@@ -95,7 +95,7 @@ Content states what the object asserts, defines, relates, maps, limits, or prese
 - mapping-oriented: source indicator to canonical concept mapping semantics;
 - negative: failed, contradicted, unsupported, rejected, incompatible, or not-observed expected knowledge.
 
-Content is not interpretation. KnowledgeForge may preserve a cited theory or empirical result as reusable knowledge, but InsightForge owns applying it to explain current conditions or generate hypotheses.
+Content is not interpretation. KnowledgeForge may preserve a cited theory or empirical result as reusable knowledge, but downstream reasoning systems own applying it to explain current conditions or generate hypotheses.
 
 ### 4.3 Applicability component
 
@@ -131,7 +131,7 @@ Evidence explains why a knowledge object exists and how it is justified. It incl
 - derivation method;
 - supporting literature.
 
-Evidence references point to evidence owned elsewhere, especially MacroForge observational evidence. Evidence evaluations belong to KnowledgeForge when they describe how the evidence supports, weakens, contradicts, or bounds a reusable knowledge claim.
+Evidence references point to evidence owned elsewhere, especially observational evidence systems and source snapshots. Evidence evaluations belong to KnowledgeForge when they describe how the evidence supports, weakens, contradicts, or bounds a reusable knowledge claim.
 
 ### 4.5 Evolution component
 
@@ -221,11 +221,11 @@ KnowledgeForge shall not:
 - perform forecasting;
 - make recommendations;
 - own observational datasets;
-- duplicate MacroForge ingestion, validation, canonicalization, lineage, reproducibility, or canonical observational database responsibilities;
+- duplicate external observational ingestion, validation, canonicalization, lineage, reproducibility, or observational database responsibilities;
 - implement visualization;
 - become the EIP controller;
 - become a general AI platform;
-- own BriefForge presentation concerns;
+- own presentation-system concerns;
 - own PredictionForge forecasting concerns;
 - own DecisionForge action-selection concerns.
 
@@ -314,10 +314,10 @@ Relationships are first-class versioned representations of claims. A relationshi
 
 ### 6.5 Indicator identity model
 
-KnowledgeForge eventually owns the canonical concept layer and mapping semantics. MacroForge owns source observations and source indicator data.
+KnowledgeForge eventually owns the canonical concept layer and mapping semantics. External evidence systems own source observations and source indicator data.
 
 ```text
-MacroForge Source Indicator
+Source Evidence Indicator
   ↓ reference/mapping, not duplication
 KnowledgeForge Canonical Concept
   ↓
@@ -337,7 +337,7 @@ Mappings should not erase source methodology differences. A source identity rema
 
 ## 7. Knowledge database posture
 
-KnowledgeForge should eventually own a sibling knowledge database or equivalent persistent knowledge store separate from MacroForge's canonical observational database.
+KnowledgeForge should eventually own a knowledge database or equivalent persistent knowledge store separate from external observational databases.
 
 The knowledge store should contain reusable knowledge objects, claims, mappings, relationship representations, dependency declarations, methodological knowledge, negative knowledge, and references to evidence. It should not contain duplicated observational datasets.
 
@@ -359,7 +359,7 @@ KnowledgeForge should eventually compute or preserve reusable empirical claims a
 
 However, statistical discovery must be governed carefully:
 
-- computations must reference MacroForge evidence instead of duplicating observations;
+- computations must reference external evidence instead of duplicating observations;
 - methods must be recorded;
 - parameters/windows/frequencies must be recorded;
 - multiple methods may disagree and must be preserved;
@@ -367,16 +367,16 @@ However, statistical discovery must be governed carefully:
 - failed or not-observed expected relationships may be preserved as negative knowledge when evidence scope and method are explicit;
 - statistical relationships are not causal claims unless separately justified by a structural claim;
 - methodological assumptions and limitations must be represented as reusable methodological knowledge where they affect interpretation or reuse;
-- InsightForge may interpret empirical claims, but KnowledgeForge must not generate analytical conclusions.
+- downstream reasoning systems may interpret empirical claims, but KnowledgeForge must not generate analytical conclusions.
 
 ## 9. Interfaces
 
 Detailed interfaces are in `docs/interfaces.md`. The high-level model is:
 
-- MacroForge → KnowledgeForge: evidence references, canonical observational identifiers, source metadata, reproducibility handles.
-- KnowledgeForge → InsightForge: reusable concepts, claims, relationships, dependencies, evidence, uncertainty, contradictions, negative knowledge, methodological knowledge, lifecycle state.
+- Observation/evidence systems → KnowledgeForge: evidence references, observational identifiers, source metadata, reproducibility handles, or immutable source snapshots.
+- KnowledgeForge → downstream reasoning/navigation/forecasting/decision systems: reusable concepts, claims, relationships, dependencies, evidence, uncertainty, contradictions, negative knowledge, methodological knowledge, lifecycle state.
 - KnowledgeForge → AtlasForge: navigable knowledge structures, concept neighborhoods, relationship metadata, dependency metadata, evidence pointers.
-- InsightForge → BriefForge: reports and presentation-ready outputs; KnowledgeForge does not directly own presentation.
+- Downstream reasoning systems → presentation systems: reports and presentation-ready outputs; KnowledgeForge does not directly own presentation.
 - KnowledgeForge → PredictionForge: reusable knowledge, empirical claims, relationship representations, methodological limitations, and negative knowledge; no forecasts.
 - KnowledgeForge → DecisionForge: applicability conditions, contextual knowledge, uncertainty, constraints, and negative knowledge; no recommendations.
 
@@ -414,7 +414,7 @@ Before implementation begins, KnowledgeForge must have accepted decisions for:
 - knowledge object component and common-kernel model;
 - claim facet governed vocabularies and claim object model;
 - stable identity, revision, split, merge, and identity-correction semantics;
-- evidence reference contract with MacroForge;
+- source evidence reference contract;
 - evidence evaluation model;
 - canonical concept and source-indicator mapping contract;
 - relationship representation contract;
@@ -481,7 +481,7 @@ Important unresolved issues are intentionally captured in `docs/open_questions.m
 KnowledgeForge should remain specification-only until the following are stable:
 
 - project boundaries are accepted;
-- interface contracts with MacroForge and InsightForge are accepted;
+- source-evidence and downstream-consumer contracts are accepted;
 - knowledge object common-kernel model, claim facet model, dependency posture/facet model, stable identity semantics, and relationship representation model are specified enough for a minimal implementation;
 - lifecycle, evidence, epistemic, and governance invariants are specified;
 - first implementation slice is narrowly chosen;

@@ -7,7 +7,7 @@ Status: draft
 ## Context used
 - `state/architecture.md`
 - `architecture/architecture_state.md`
-- `architecture/architectureharvest/relevance_map.yaml`
+- `architecture/metaharvest/relevance_map.yaml`
 - relevant decisions/tasks/reports
 - MetaHarvest indexes/cards/relevance maps when applicable
 

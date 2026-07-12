@@ -10,7 +10,7 @@ These invariants constrain future KnowledgeForge architecture and implementation
 
 KnowledgeForge must never own or duplicate observational datasets.
 
-MacroForge remains the system of record for observational data, ingestion, validation, canonicalization, observational lineage, reproducibility, source observational identities, and canonical economic databases.
+External observational systems remain the systems of record for observational data, ingestion, validation, canonicalization, observational lineage, reproducibility, source observational identities, and observational databases.
 
 KnowledgeForge may store references to evidence and may evaluate how referenced evidence supports or weakens reusable knowledge claims.
 
@@ -18,7 +18,7 @@ KnowledgeForge may store references to evidence and may evaluate how referenced 
 
 A durable knowledge object without provenance is not admissible as KnowledgeForge knowledge.
 
-Provenance may point to MacroForge evidence, literature, source documentation, reviewed human curation, prior KnowledgeForge objects, or other approved evidence references.
+Provenance may point to external observational evidence, literature, source documentation, reviewed human curation, prior KnowledgeForge objects, or other approved evidence references.
 
 ## I3. Evidence references and evidence evaluations remain distinct
 
@@ -26,7 +26,7 @@ Evidence references identify source material or reproducibility handles.
 
 Evidence evaluations describe how those references support, weaken, contradict, limit, or fail to support a knowledge object.
 
-KnowledgeForge owns evaluations of reusable knowledge. It does not thereby own the underlying observational evidence when that evidence belongs to MacroForge.
+KnowledgeForge owns evaluations of reusable knowledge. It does not thereby own the underlying observational evidence when that evidence belongs to an external observational system or source.
 
 ## I4. Claims are first-class
 
@@ -136,7 +136,7 @@ A knowledge change is an architectural audit concept, not a database transaction
 
 ## I22. Downstream use is not evidence
 
-Use by InsightForge, AtlasForge, BriefForge, PredictionForge, DecisionForge, or a human does not by itself increase confidence in a KnowledgeForge object.
+Use by downstream reasoning, navigation, presentation, forecasting, decision systems, or a human does not by itself increase confidence in a KnowledgeForge object.
 
 Downstream systems may cite KnowledgeForge; they do not mutate KnowledgeForge state without governed KnowledgeForge review.
 

@@ -23,9 +23,9 @@ GENERATED_REQUIRED = [
  'permissions/escalation_rules.yaml','context/context_policy.yaml','simulation/dry_run_policy.yaml',
  'metrics/metrics_policy.yaml','recovery/escalation_policy.yaml','recovery/continuity_framework.md','hardware/profile.yaml',
  'workspace_config.yaml','tools/check_coherence.py','tools/run.py','tools/architecture_reality_audit.py','tools/recover_session.py',
- 'architecture/architecture_state.md','architecture/architectureharvest/relevance_map.yaml',
- 'architecture/architectureharvest/adoption_candidates.md','architecture/architectureharvest/rejected_candidates.md',
- 'architecture/architectureharvest/review_history.md'
+ 'architecture/architecture_state.md','architecture/metaharvest/relevance_map.yaml',
+ 'architecture/metaharvest/adoption_candidates.md','architecture/metaharvest/rejected_candidates.md',
+ 'architecture/metaharvest/review_history.md'
 ]
 
 
@@ -131,10 +131,10 @@ def check_generated(root: Path):
         blocks.append('workspace_config.yaml must record parent projectforge_root')
     if has_text(root/'state'/'active_goal.md', 'Project:') and not has_text(root/'state'/'active_goal.md', 'Purpose'):
         warns.append('state/active_goal.md appears underpopulated')
-    if not has_text(root/'architecture'/'architectureharvest'/'relevance_map.yaml', 'consult_required_during'):
-        blocks.append('MetaHarvest compatibility relevance_map.yaml missing consultation trigger list')
-    if not has_text(root/'architecture'/'architectureharvest'/'relevance_map.yaml', 'active'):
-        blocks.append('MetaHarvest compatibility relevance_map.yaml missing active/staleness statuses')
+    if not has_text(root/'architecture'/'metaharvest'/'relevance_map.yaml', 'consult_required_during'):
+        blocks.append('MetaHarvest relevance_map.yaml missing consultation trigger list')
+    if not has_text(root/'architecture'/'metaharvest'/'relevance_map.yaml', 'active'):
+        blocks.append('MetaHarvest relevance_map.yaml missing active/staleness statuses')
     return blocks, warns
 
 
