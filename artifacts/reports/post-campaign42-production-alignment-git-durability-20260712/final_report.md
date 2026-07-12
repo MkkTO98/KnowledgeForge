@@ -2,7 +2,7 @@
 
 Date: 2026-07-12
 
-Status: pre-push verification complete; final evidence commit and remote publication pending at the time this report file was written.
+Status: complete.
 
 ## 1. Repository/remote preflight
 
@@ -10,7 +10,7 @@ Status: pre-push verification complete; final evidence commit and remote publica
 - Branch: `main`
 - Starting HEAD: `e7deaa66281e1bbbaa5c90d50a216f0a9b838b11`
 - Remote: `origin git@github.com:MkkTO98/KnowledgeForge.git`
-- `git fetch origin`: passed.
+- `git fetch origin`: passed before publication.
 - Initial ahead/behind: `0 0`.
 - Staged state before publication: empty.
 - Origin changed unexpectedly: no.
@@ -88,18 +88,19 @@ Excluded:
 
 ## 8. Commit groups
 
-Created local commits:
+Published commits:
 
-1. `c0c8fed5522dcce299c0ae370f9d1b898b4094f8` — `feat: align Pearson campaign policy and engine`
-2. `9fac7a652c5df955279cc5d5b8e8f009964cbe8e` — `feat: validate first-difference Pearson method`
+1. `c0c8fed6882173ba09c5d495a9832cb2e1fdbd97` — `feat: align Pearson campaign policy and engine`
+2. `9fac7a6ac6c1e78341e7d1e03fc6a7803c6a02d7` — `feat: validate first-difference Pearson method`
 3. `a7af1c3f1176c61ef9f361c5b90bea0a01d9d4af` — `feat: publish Campaign 41 and 42 repository outputs`
 4. `14116b91b0bc452dfe21e0abc51c8bf37108402d` — `docs: record Campaign 42 publication closeout`
+5. `0671fbd71c3e62a4c69d0f214112e08d9f562717` — `docs: record post-Campaign 42 publication readiness`
 
-A final evidence/publication-readiness commit will include this report, final verification logs, and the Campaign 40 provenance-template compatibility spec correction.
+This final report update is the post-push report record.
 
 ## 9. Complete verification results
 
-Passed:
+Passed before push:
 
 - full test suite: `316 passed, 17 subtests passed in 25.56s`;
 - Python compilation: passed;
@@ -125,6 +126,17 @@ Documented retry corrections:
 - Relationship export CLI expects a query JSON path, not a named query string. The retry used `all_pearson_query.json` and passed.
 - `repository_wide_durability_validator.py` expects `--report`, not `--project/--output-dir`. The retry passed and reported decision `A` with residual off-host operational-state checkpoint risk.
 
+Passed after push:
+
+- `git fetch origin`: passed;
+- local `HEAD` equaled `origin/main` at `0671fbd71c3e62a4c69d0f214112e08d9f562717`;
+- ahead/behind after push: `0 0`;
+- all five new publication commits reachable from `origin/main`;
+- remote tree coverage check passed;
+- clean remote clone canonical validation passed;
+- clean remote clone Python compile passed;
+- clean remote clone durability validator passed with `validator_valid: true`, `sensitive_passes: true`, and `unsafe_absolute_path_dependencies: 0`.
+
 ## 10. Canonical count and fingerprint
 
 - Count: 554.
@@ -149,26 +161,58 @@ Isolated database: `knowledgeforge_post_campaign42_prepush_verify_20260712`.
 
 - Actual secret blockers: 0.
 - Unsafe absolute-path dependencies: 0.
-- Reviewed false positives: 234.
+- Reviewed false positives: 234 pre-push; 212 in clean remote clone.
 - Sensitive scan passes: true.
 
-## 13-15. Push result, remote final commit, remote reconstruction coverage
+## 13. Push result
 
-Pending until push and post-push verification.
+`git push origin main` succeeded:
 
-## 16. Remaining local-only/untracked/ignored changes before push
+`e7deaa6..0671fbd  main -> main`
 
-Expected local residue before push:
+No force push, no tag, no release, no history rewrite.
+
+## 14. Remote final commit
+
+Remote final publication-readiness commit verified: `0671fbd71c3e62a4c69d0f214112e08d9f562717`.
+
+This report update may be committed separately as post-push documentation.
+
+## 15. Remote reconstruction coverage
+
+Remote coverage verified from `origin/main` and clean clone:
+
+- all 554 canonical package object files present;
+- repository manifest present and fingerprint matches accepted baseline;
+- first-difference contracts and implementation present;
+- Campaign 41-42 production specifications and reports present;
+- PostgreSQL projection tooling present;
+- relationship export tooling present;
+- required reproducibility evidence present;
+- clean clone canonical validation passed.
+
+Durability distinctions:
+
+- canonical Git durability: established;
+- implementation Git durability: established;
+- PostgreSQL reconstructability: established by isolated rebuild and verify;
+- local operational-state recoverability: same-host checkpoint tooling/tests passed;
+- off-host mutable-state durability: still pending and not claimed.
+
+## 16. Remaining local-only/untracked/ignored changes
+
+Expected local residue after publication:
 
 - six unrelated tracked deletions under `architecture/architectureharvest/` preserved outside commits;
 - ignored `workspace_config.yaml`, caches, and generated `context/active_context.md`;
 - full local checkpoint payload copies and isolated restore copies;
 - historical untracked logs outside the Campaign 41-42 publication set;
+- temporary clean remote clone directories under `/tmp/kf_remote_verify_*`;
 - isolated PostgreSQL verification database `knowledgeforge_post_campaign42_prepush_verify_20260712`.
 
 ## 17. Remaining machine-loss exposure
 
-Canonical and implementation material are intended for Git durability. Off-host mutable operational-state checkpoint durability remains pending. Same-host checkpoint payloads are local-only and intentionally not published in Git.
+Canonical and implementation material are durable in Git/GitHub. Off-host mutable operational-state checkpoint durability remains pending. Same-host checkpoint payloads are local-only and intentionally not published in Git.
 
 ## 18. Doctrine/architecture classification
 
@@ -180,8 +224,8 @@ No Campaign 43 work, no new calculations/packages, no MacroForge or InsightForge
 
 ## 20. Outcome
 
-Pending final push; expected outcome after successful push: A. production alignment verified and durable publication succeeded.
+A. production alignment verified and durable publication succeeded.
 
 ## 21. Smallest exact next task
 
-After remote publication succeeds: perform a post-publication remote reconstructability smoke check from `origin/main` only, then stop before Campaign 43.
+Before Campaign 43: perform a bounded KnowledgeForge next-production-readiness decision that chooses between expanding first-difference companions, resuming raw Pearson candidate production under the corrected policy, or pausing for retrieval/export improvements.

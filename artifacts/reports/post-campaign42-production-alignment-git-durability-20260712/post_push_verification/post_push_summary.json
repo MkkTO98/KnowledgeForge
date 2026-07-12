@@ -1,0 +1,70 @@
+{
+  "results": [
+    {
+      "name": "fetch_after_push",
+      "cmd": "git fetch origin",
+      "exit": 0,
+      "excerpt": ""
+    },
+    {
+      "name": "head",
+      "cmd": "git rev-parse HEAD",
+      "exit": 0,
+      "excerpt": "0671fbd71c3e62a4c69d0f214112e08d9f562717"
+    },
+    {
+      "name": "origin_main",
+      "cmd": "git rev-parse origin/main",
+      "exit": 0,
+      "excerpt": "0671fbd71c3e62a4c69d0f214112e08d9f562717"
+    },
+    {
+      "name": "ahead_behind",
+      "cmd": "git rev-list --left-right --count HEAD...origin/main",
+      "exit": 0,
+      "excerpt": "0\t0"
+    },
+    {
+      "name": "new_commits_reachable",
+      "cmd": "git merge-base --is-ancestor c0c8fed5522dcce299c0ae370f9d1b898b4094f8 origin/main && git merge-base --is-ancestor 9fac7a652c5df955279cc5d5b8e8f009964cbe8e origin/main && git merge-base --is-ancestor a7af1c3f1176c61ef9f361c5b90bea0a01d9d4af origin/main && git merge-base --is-ancestor 14116b91b0bc452dfe21e0abc51c8bf37108402d origin/main && git merge-base --is-ancestor 0671fbd71c3e62a4c69d0f214112e08d9f562717 origin/main && echo reachable",
+      "exit": 128,
+      "excerpt": "fatal: Not a valid commit name c0c8fed5522dcce299c0ae370f9d1b898b4094f8"
+    },
+    {
+      "name": "clone_origin_main",
+      "cmd": "git clone --depth 1 --branch main git@github.com:MkkTO98/KnowledgeForge.git /tmp/kf_remote_verify_66q0ve9q/KnowledgeForge",
+      "exit": 0,
+      "excerpt": "Cloning into '/tmp/kf_remote_verify_66q0ve9q/KnowledgeForge'..."
+    },
+    {
+      "name": "clone_canonical_validation",
+      "cmd": "python3 - <<'PY'\n\nimport json, pathlib\nroot=pathlib.Path('.')\nmanifest=json.loads((root/'knowledge_repository/manifest.json').read_text())\nobjects=sorted((root/'knowledge_repository/objects').glob('*.json'))\nraw=fd=stat=0\nfor p in objects:\n    pkg=json.loads(p.read_text())\n    ef=pkg.get('scope',{}).get('evidence_family','')\n    pl=(pkg.get('generated_statements') or [{}])[0].get('structured_payload') or {}\n    if 'first_difference_pearson_companion' in ef or pl.get('method_id')=='wdi_annual_scalar_first_difference_pearson_v1': fd+=1\n    elif 'pearson' in ef: raw+=1\n    if 'statistical_summary' in ef or (pkg.get('generated_statements') or [{}])[0].get('statement_type')=='statistical_summary': stat+=1\nsummary={'manifest_count':manifest.get('object_count'),'object_file_count':len(objects),'repository_fingerprint':manifest.get('repository_fingerprint'),'raw_pearson_count':raw,'first_difference_companion_count':fd,'statistical_summary_count':stat,'valid':manifest.get('object_count')==554 and len(objects)==554 and raw==21 and fd==8 and stat==4 and manifest.get('repository_fingerprint')=='sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b'}\nprint(json.dumps(summary,indent=2,sort_keys=True))\nraise SystemExit(0 if summary['valid'] else 2)\n\nPY",
+      "exit": 0,
+      "excerpt": "{\n  \"first_difference_companion_count\": 8,\n  \"manifest_count\": 554,\n  \"object_file_count\": 554,\n  \"raw_pearson_count\": 21,\n  \"repository_fingerprint\": \"sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b\",\n  \"statistical_summary_count\": 4,\n  \"valid\": true\n}"
+    },
+    {
+      "name": "clone_compile_core",
+      "cmd": "python3 -m compileall -q tools tests",
+      "exit": 0,
+      "excerpt": ""
+    },
+    {
+      "name": "clone_durability_validator",
+      "cmd": "python3 tools/repository_wide_durability_validator.py --report artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/post_push_verification/clone_repository_wide_durability_validator",
+      "exit": 0,
+      "excerpt": "        \"pkg-object-srcpkg-campaign39-demographic-rates-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign39-health-system-coverage-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1\"\n      ],\n      \"statistical_summary_objects\": 4,\n      \"statistical_summary_package_ids\": [\n        \"pkg-object-srcpkg-campaign34-denmark-population-statistical-summary\",\n        \"pkg-object-srcpkg-campaign35-dnk-exports-share-statistical-summary-v2\",\n        \"pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2\",\n        \"pkg-object-srcpkg-campaign35-swe-exports-share-statistical-summary-v2\"\n      ]\n    },\n    \"reviewed_false_positives\": 212,\n    \"sensitive_passes\": true,\n    \"unsafe_absolute_path_dependencies\": 0,\n    \"validator_valid\": true\n  }\n}"
+    }
+  ],
+  "remote_tree_coverage": {
+    "missing_required_paths": [
+      "specs/correlation_batches/campaign42_first_difference_pearson_companion_production_spec.json"
+    ],
+    "manifest_count": 554,
+    "repository_fingerprint": "sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b",
+    "object_file_count": 554,
+    "valid": false
+  },
+  "clone_path": "/tmp/kf_remote_verify_66q0ve9q/KnowledgeForge",
+  "all_exit_zero": false,
+  "remote_tree_valid": false
+}
