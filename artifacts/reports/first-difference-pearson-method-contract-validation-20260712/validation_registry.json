@@ -1,0 +1,72 @@
+{
+  "cases": [
+    {
+      "case_id": "close_complete_nor_birth_under5",
+      "entity": "NOR",
+      "expected_pressure": "complete coverage",
+      "semantic": "close",
+      "series_a": "SP.DYN.CBRT.IN",
+      "series_b": "SH.DYN.MORT"
+    },
+    {
+      "case_id": "remote_missing_dnk_forest_broad_money",
+      "entity": "DNK",
+      "expected_pressure": "missing raw periods",
+      "semantic": "remote",
+      "series_a": "AG.LND.FRST.ZS",
+      "series_b": "FM.LBL.BMNY.GD.ZS"
+    },
+    {
+      "case_id": "strong_raw_weak_diff_swe_credit_internet",
+      "entity": "SWE",
+      "expected_pressure": "strong raw weak first-difference diagnostic",
+      "semantic": "moderate",
+      "series_a": "FS.AST.PRVT.GD.ZS",
+      "series_b": "IT.NET.USER.ZS"
+    },
+    {
+      "case_id": "close_nor_birth_life",
+      "entity": "NOR",
+      "expected_pressure": "candidate-policy future pool",
+      "semantic": "close",
+      "series_a": "SP.DYN.CBRT.IN",
+      "series_b": "SP.DYN.LE00.IN"
+    },
+    {
+      "case_id": "negative_zero_variance",
+      "negative_case": "zero_variance_transformed_series",
+      "synthetic": true
+    },
+    {
+      "case_id": "negative_insufficient_overlap",
+      "negative_case": "insufficient_transformed_overlap",
+      "synthetic": true
+    },
+    {
+      "case_id": "negative_non_consecutive_gap",
+      "negative_case": "non_consecutive_gap_no_bridge",
+      "synthetic": true
+    },
+    {
+      "case_id": "negative_duplicate_period",
+      "negative_case": "duplicate_period",
+      "synthetic": true
+    },
+    {
+      "case_id": "negative_unresolved_unit",
+      "negative_case": "unresolved_unit",
+      "synthetic": true
+    }
+  ],
+  "coefficient_free": true,
+  "evidence_boundary": "retained validated KnowledgeForge Campaign 40/41 evidence only; synthetic negatives for fail-closed semantics",
+  "forbidden_selection_inputs": [
+    "post-calculation numeric outcomes",
+    "statistical-test outputs",
+    "post-calculation acceptance outcome"
+  ],
+  "method_under_validation": "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+  "registry_fingerprint": "sha256:100a0218aab154bf89f165ea0b39b278fd479e02c72d0af6d93a70a4974f1470",
+  "registry_id": "first_difference_pearson_method_validation_registry_20260712",
+  "validation_case_count": 9
+}

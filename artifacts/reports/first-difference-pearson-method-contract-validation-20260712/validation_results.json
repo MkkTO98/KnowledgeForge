@@ -1,0 +1,260 @@
+{
+  "case_results": [
+    {
+      "aligned_count": 34,
+      "aligned_periods": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "case_id": "close_complete_nor_birth_under5",
+      "coefficient": {
+        "canonical": "-0.003511112671",
+        "unit": "dimensionless"
+      },
+      "result_fingerprint": "sha256:768f331dd6b7f093854c1bf0f1803878d05f47d8fda12f3db523a7c18eb86c91",
+      "status": "pass"
+    },
+    {
+      "aligned_count": 33,
+      "aligned_periods": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023
+      ],
+      "case_id": "remote_missing_dnk_forest_broad_money",
+      "coefficient": {
+        "canonical": "-0.101990610667",
+        "unit": "dimensionless"
+      },
+      "result_fingerprint": "sha256:0620e0fb2ef601270e099e1c0ca6e6082d4d22487ea92f2291359cc3e80cbcc3",
+      "status": "pass"
+    },
+    {
+      "aligned_count": 34,
+      "aligned_periods": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "case_id": "strong_raw_weak_diff_swe_credit_internet",
+      "coefficient": {
+        "canonical": "0.141137912446",
+        "unit": "dimensionless"
+      },
+      "result_fingerprint": "sha256:2c110fa049c75eac08a32bfa0942b1dae32d92cf382a9ae07bdb489c3271d9ea",
+      "status": "pass"
+    },
+    {
+      "aligned_count": 34,
+      "aligned_periods": [
+        1991,
+        1992,
+        1993,
+        1994,
+        1995,
+        1996,
+        1997,
+        1998,
+        1999,
+        2000,
+        2001,
+        2002,
+        2003,
+        2004,
+        2005,
+        2006,
+        2007,
+        2008,
+        2009,
+        2010,
+        2011,
+        2012,
+        2013,
+        2014,
+        2015,
+        2016,
+        2017,
+        2018,
+        2019,
+        2020,
+        2021,
+        2022,
+        2023,
+        2024
+      ],
+      "case_id": "close_nor_birth_life",
+      "coefficient": {
+        "canonical": "0.388758387248",
+        "unit": "dimensionless"
+      },
+      "result_fingerprint": "sha256:4aa52a1122f5461f2d5bb87a8cb136fe65d862e0c31cd12fd0138630aa6598e4",
+      "status": "pass"
+    }
+  ],
+  "case_results_fingerprint": "sha256:4cb23b73311759f0f4f58278d7db4392fb56775fde5c3821fa9aa13c9487fe3d",
+  "registry": {
+    "cases": [
+      {
+        "case_id": "close_complete_nor_birth_under5",
+        "entity": "NOR",
+        "expected_pressure": "complete coverage",
+        "semantic": "close",
+        "series_a": "SP.DYN.CBRT.IN",
+        "series_b": "SH.DYN.MORT"
+      },
+      {
+        "case_id": "remote_missing_dnk_forest_broad_money",
+        "entity": "DNK",
+        "expected_pressure": "missing raw periods",
+        "semantic": "remote",
+        "series_a": "AG.LND.FRST.ZS",
+        "series_b": "FM.LBL.BMNY.GD.ZS"
+      },
+      {
+        "case_id": "strong_raw_weak_diff_swe_credit_internet",
+        "entity": "SWE",
+        "expected_pressure": "strong raw weak first-difference diagnostic",
+        "semantic": "moderate",
+        "series_a": "FS.AST.PRVT.GD.ZS",
+        "series_b": "IT.NET.USER.ZS"
+      },
+      {
+        "case_id": "close_nor_birth_life",
+        "entity": "NOR",
+        "expected_pressure": "candidate-policy future pool",
+        "semantic": "close",
+        "series_a": "SP.DYN.CBRT.IN",
+        "series_b": "SP.DYN.LE00.IN"
+      },
+      {
+        "case_id": "negative_zero_variance",
+        "negative_case": "zero_variance_transformed_series",
+        "synthetic": true
+      },
+      {
+        "case_id": "negative_insufficient_overlap",
+        "negative_case": "insufficient_transformed_overlap",
+        "synthetic": true
+      },
+      {
+        "case_id": "negative_non_consecutive_gap",
+        "negative_case": "non_consecutive_gap_no_bridge",
+        "synthetic": true
+      },
+      {
+        "case_id": "negative_duplicate_period",
+        "negative_case": "duplicate_period",
+        "synthetic": true
+      },
+      {
+        "case_id": "negative_unresolved_unit",
+        "negative_case": "unresolved_unit",
+        "synthetic": true
+      }
+    ],
+    "coefficient_free": true,
+    "evidence_boundary": "retained validated KnowledgeForge Campaign 40/41 evidence only; synthetic negatives for fail-closed semantics",
+    "forbidden_selection_inputs": [
+      "post-calculation numeric outcomes",
+      "statistical-test outputs",
+      "post-calculation acceptance outcome"
+    ],
+    "method_under_validation": "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+    "registry_fingerprint": "sha256:100a0218aab154bf89f165ea0b39b278fd479e02c72d0af6d93a70a4974f1470",
+    "registry_id": "first_difference_pearson_method_validation_registry_20260712",
+    "validation_case_count": 9
+  }
+}

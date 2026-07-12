@@ -1,0 +1,55 @@
+{
+  "fingerprint": "sha256:46da90b75a5385ad4e2e0e156925781143bd1f88e7257a0b51009f5253380fcb",
+  "negative_cases": [
+    {
+      "case_id": "negative_non_consecutive_gap_no_bridge",
+      "missing_differences": [
+        {
+          "missing_reason": "non_consecutive_or_missing_endpoint",
+          "observed": false,
+          "period": 2001,
+          "value_canonical": null
+        },
+        {
+          "missing_reason": "non_consecutive_or_missing_endpoint",
+          "observed": false,
+          "period": 2002,
+          "value_canonical": null
+        }
+      ],
+      "observed_differences": [
+        {
+          "observed": true,
+          "period": 2003,
+          "value_canonical": "4"
+        }
+      ],
+      "status": "pass"
+    },
+    {
+      "case_id": "negative_duplicate_period",
+      "error": "duplicate entity-indicator-period key",
+      "status": "expected_fail"
+    },
+    {
+      "case_id": "negative_unresolved_unit",
+      "error": "unresolved unit",
+      "status": "expected_fail"
+    },
+    {
+      "case_id": "negative_non_finite",
+      "error": "non-finite decimal value",
+      "status": "expected_fail"
+    },
+    {
+      "case_id": "negative_zero_variance",
+      "error": "zero variance transformed series",
+      "status": "expected_fail"
+    },
+    {
+      "case_id": "negative_insufficient_overlap",
+      "error": "insufficient aligned transformed observations",
+      "status": "expected_fail"
+    }
+  ]
+}

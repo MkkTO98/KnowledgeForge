@@ -1,0 +1,78 @@
+{
+  "compatibility": {
+    "missing_fields": [],
+    "new_package_field_required": false,
+    "package_representation_valid": true,
+    "postgresql_projection_compatible": true,
+    "relationship_export_compatible": true,
+    "schema_change_required": false
+  },
+  "simulated_package": {
+    "confidence_quality": {
+      "lifecycle_state": "simulated"
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:53c9cfc8afb6580738cb1f0803c31cdf06614b03dbf3597b02ed08b9685ee245",
+      "package_payload": "sha256:04ebed4a587705e7c899ca028824fddbbd0656447eb0b84e3e10c0ab7467e508"
+    },
+    "generated_statements": [
+      {
+        "statement_id": "stmt-method-validation-first-difference-companion-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "companion_raw_package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+          "entity_id": "DNK",
+          "frequency": "annual",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "First differencing does not remove every trend or structural break.",
+            "Correlation is not causation.",
+            "No statistical significance is implied.",
+            "No forecast, recommendation, or investment signal is implied.",
+            "Results remain finite-window dependent.",
+            "Measurement revisions can change results.",
+            "Differencing can amplify noise.",
+            "Differencing changes the question from level co-movement to change co-movement.",
+            "Contemporaneous first-difference correlation does not establish lead-lag structure."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "pearson_coefficient": {
+            "canonical": "-0.017407835395",
+            "unit": "dimensionless"
+          },
+          "raw_period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "series_a": {
+            "code": "AG.LND.AGRI.ZS",
+            "transformation": "first_difference"
+          },
+          "series_b": {
+            "code": "AG.LND.FRST.ZS",
+            "transformation": "first_difference"
+          },
+          "transformation_state": "first_difference",
+          "transformed_period_scope": {
+            "end": 2023,
+            "start": 1991
+          }
+        }
+      }
+    ],
+    "package_id": "pkg-object-method-validation-first-difference-companion-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "provenance_envelope": {
+      "evidence_refs": [
+        "validation_simulation_existing_retained_fixtures"
+      ],
+      "method_contract": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade"
+    },
+    "scope": {
+      "evidence_family": "WDI annual scalar relationship"
+    },
+    "status": "validation_simulation_only_not_canonical"
+  }
+}

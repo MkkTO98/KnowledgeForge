@@ -1,0 +1,43 @@
+{
+  "base_pearson_method": "wdi_annual_scalar_pearson_correlation_v1@1.0",
+  "canonical_decimal_places": 12,
+  "decimal_context": {
+    "local_context_required": true,
+    "precision": 50,
+    "rounding": "ROUND_HALF_EVEN"
+  },
+  "deterministic_ordering": "sort periods and canonicalize pair identity by series identity",
+  "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+  "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+  "method_identity": "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+  "method_version": "1.0",
+  "minimum_aligned_transformed_observations": 30,
+  "minimum_transformed_coverage": "0.85",
+  "non_finite_result_handling": "fail closed",
+  "population_sample_convention": "Pearson coefficient uses sums of deviations; population/sample covariance scaling cancels in r",
+  "prohibited_claims": [
+    "causation",
+    "stationarity",
+    "statistical significance",
+    "prediction",
+    "forecast",
+    "investment signal",
+    "lead-lag structure"
+  ],
+  "threshold_justification": "Retained 1990-2024 annual fixtures have at most 34 first differences; 30 preserves raw Pearson v1's minimum evidentiary intent while allowing one-period transformation loss and limited retained missingness. This validation accepts the threshold for bounded companion production; future broader source classes may require revalidation.",
+  "transformation_contract": {
+    "duplicate_key_behavior": "duplicate entity-indicator-period keys fail closed",
+    "formula": "delta_x_t = x_t - x_(t-1)",
+    "gap_behavior": "t and t-1 must be consecutive annual periods; do not bridge gaps using previous available observation",
+    "input_frequency": "annual",
+    "input_transformation": "raw",
+    "missingness_behavior": "missing when either endpoint is missing or invalid",
+    "non_finite_behavior": "non-finite inputs or outputs fail closed",
+    "period_label_semantics": "transformed observation is labeled by ending period t and represents change from t-1 to t",
+    "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+    "transformation_id": "wdi_annual_scalar_first_difference_v1",
+    "transformation_version": "1.0",
+    "unit_semantics": "absolute year-to-year first differences; never percent growth, percent change, growth rate, or elasticity"
+  },
+  "zero_variance_handling": "fail closed"
+}
