@@ -31,6 +31,10 @@ METHOD_FP = "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a
 VALIDATION_REGISTRY_FP = "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
 BASELINE_COUNT = 546
 BASELINE_FP = "sha256:c89c25ede69ec88a12f4791dba94b6199f2927721d0028420a65a74dd6ee735c"
+CAMPAIGN42_PUBLISHED_COUNT = 554
+CAMPAIGN42_PUBLISHED_FP = "sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b"
+POST_CAMPAIGN43_COUNT = 560
+POST_CAMPAIGN43_FP = "sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7"
 INTERNAL_CONTEXT = Context(prec=50, rounding=ROUND_HALF_EVEN)
 Q12 = Decimal("0.000000000001")
 
@@ -127,9 +131,11 @@ def pre_execution_gate(root: Path) -> dict[str, Any]:
     add("candidate_count", len(candidates) == 8, actual=len(candidates), expected=8)
     add("candidate_order", [c["campaign42_candidate_id"] for c in candidates] == spec.get("candidate_ids"), actual=[c["campaign42_candidate_id"] for c in candidates], expected=spec.get("candidate_ids"))
     baseline = repository_counts(root)
-    already_published = baseline["object_count"] == 554 and baseline["first_difference_pearson_companions"] == 8
-    add("repository_baseline_count", baseline["object_count"] == BASELINE_COUNT or already_published, actual=baseline["object_count"], expected=BASELINE_COUNT, idempotent_published_baseline=already_published)
-    add("repository_baseline_fingerprint", baseline["repository_fingerprint"] == BASELINE_FP or already_published, actual=baseline["repository_fingerprint"], expected=BASELINE_FP, idempotent_published_baseline=already_published)
+    campaign42_published = baseline["object_count"] == CAMPAIGN42_PUBLISHED_COUNT and baseline["repository_fingerprint"] == CAMPAIGN42_PUBLISHED_FP and baseline["first_difference_pearson_companions"] == 8
+    post_campaign43 = baseline["object_count"] == POST_CAMPAIGN43_COUNT and baseline["repository_fingerprint"] == POST_CAMPAIGN43_FP and baseline["first_difference_pearson_companions"] == 14
+    accepted_baseline = (baseline["object_count"] == BASELINE_COUNT and baseline["repository_fingerprint"] == BASELINE_FP) or campaign42_published or post_campaign43
+    add("repository_baseline_count", accepted_baseline, actual=baseline["object_count"], expected=[BASELINE_COUNT, CAMPAIGN42_PUBLISHED_COUNT, POST_CAMPAIGN43_COUNT], idempotent_published_baseline=campaign42_published, post_campaign43_baseline=post_campaign43)
+    add("repository_baseline_fingerprint", accepted_baseline, actual=baseline["repository_fingerprint"], expected=[BASELINE_FP, CAMPAIGN42_PUBLISHED_FP, POST_CAMPAIGN43_FP], idempotent_published_baseline=campaign42_published, post_campaign43_baseline=post_campaign43)
     add("raw_pearson_count", baseline["raw_pearson_objects"] == 21, actual=baseline["raw_pearson_objects"], expected=21)
     add("statistical_summary_count", baseline["statistical_summary_objects"] == 4, actual=baseline["statistical_summary_objects"], expected=4)
     # Existing companions may be 0 before publication or 8 for idempotent rerun in a temp copy.

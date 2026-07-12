@@ -64,6 +64,10 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `D-20260712-campaign41-production-sequencing.md`
 - `D-20260712-campaign42-coefficient-free-first-difference-pearson-companion-registry.md`
 - `D-20260712-campaign42-first-difference-pearson-companion-production.md`
+- `D-20260712-campaign43-canonical-publication-accepted.md`
+- `D-20260712-campaign43-companion-package-publication-preflight-accepted.md`
+- `D-20260712-campaign43-first-difference-companion-calculation-accepted.md`
+- `D-20260712-campaign43-first-difference-companion-registry-frozen.md`
 - `D-20260712-durability-destination-policy-and-pre-staging-remediation.md`
 - `D-20260712-first-difference-pearson-method-contract-validation.md`
 - `D-20260712-next-production-readiness-before-campaign43.md`
@@ -78,4 +82,4 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - No folder-specific active work recorded.
 
 ## Needs Attention
-- No folder-specific issues recorded.
+- `D-20260712-campaign43-first-difference-companion-registry-frozen.md` accepts the coefficient-free six-candidate registry freeze only; it does not authorize calculation, package publication, PostgreSQL mutation, doctrine changes, or export/schema redesign.

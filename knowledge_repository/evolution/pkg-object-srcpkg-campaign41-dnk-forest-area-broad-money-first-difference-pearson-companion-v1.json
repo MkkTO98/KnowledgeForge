@@ -1,0 +1,57 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 43 first-difference Pearson companion package construction preflight",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:858abc22d17d0e955213681c8996a20abc316ad50be894aadbfd229a6828caf4",
+    "evidence_references": "sha256:eed854ab32986cbbc2d15a5469924761e8f2f4ee2ef2079e8961aedc16974535",
+    "generated_statements": "sha256:d1f5c6948a75c17ceb22857010ab7dc211e243bd0797c14ec1a8a2d309ba1191",
+    "input_set": "sha256:924c979f3d76c6fc8eaac257d7ef4da9b5d7254115edff97e01ea4ee26989924",
+    "package_manifest": "sha256:ca97d74262e76130c23c52267141fb2d00c0ad5b00706062fb054c731890aa2d",
+    "query_definitions": "sha256:fb4dba34683f18085fe5a6a718e1376e3ed99b9c8bbfd215541ebdd3a5ab2bce"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 41",
+    "source_campaign": "Campaign 43",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+      "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+      "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+      "sha256:dc51c6264def5c3c2057651133fd8bc21c98e3a44c6565b27a4b75afc6e730ef"
+    ],
+    "evidence_refs": [
+      "ev-campaign43-fd-pearson-companion-03"
+    ],
+    "lineage_basis": "Campaign 43 companion package construction from frozen registry and accepted calculation evidence; references raw package pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1 from Campaign 41 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_registry_calculation_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_changes_estimand",
+      "first_difference_discards_one_observation_before_alignment",
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "near_zero_does_not_prove_absence",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

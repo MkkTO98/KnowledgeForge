@@ -1,0 +1,57 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 43 first-difference Pearson companion package construction preflight",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:b413f9663f580f8bf83366dc87ff62ab8e72490c8264d0d59f49a642817433ca",
+    "evidence_references": "sha256:5f1ff4d683f85c50230215121ad25105a9f1dcdce84719bf96104d68c6d496d4",
+    "generated_statements": "sha256:48b9601da261f4022955e57e383d6b34b6ff829da1e901c4503e1e119792b357",
+    "input_set": "sha256:71135aa3cccf4246b7a23a4f05273f52c33438e41f32e84f49ffc187ab7f39ec",
+    "package_manifest": "sha256:c12ceeff3a8bf73f5c9e4cd84e8d051e5ffdaa3483213c1b5b2da502ba3a103b",
+    "query_definitions": "sha256:efe4cdcb782b0d729ef7e975a6e93150f4ec472ac48d3928b1d5d64425de3ca6"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 41",
+    "source_campaign": "Campaign 43",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+      "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+      "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+      "sha256:27cf224c147adee6df41088090e5035798a2a0cb0167323ce4be1e427c92c8c8"
+    ],
+    "evidence_refs": [
+      "ev-campaign43-fd-pearson-companion-04"
+    ],
+    "lineage_basis": "Campaign 43 companion package construction from frozen registry and accepted calculation evidence; references raw package pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1 from Campaign 41 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_registry_calculation_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_changes_estimand",
+      "first_difference_discards_one_observation_before_alignment",
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "near_zero_does_not_prove_absence",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

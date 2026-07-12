@@ -14,6 +14,8 @@ This folder is part of the ProjectForge file-backed operating system for `specs/
 - `campaign41_ready_pearson_batch_spec.json`
 - `campaign42_coefficient_free_first_difference_pearson_companion_registry.json`
 - `campaign42_first_difference_pearson_companion_production_specification.json`
+- `campaign43_coefficient_free_first_difference_companion_registry.json`
+- `campaign43_first_difference_companion_registry_freeze_specification.json`
 - `first_difference_pearson_method_contract_20260712.json`
 - `first_difference_pearson_transformation_contract_20260712.json`
 - `first_difference_pearson_validation_registry_20260712.json`
@@ -25,4 +27,4 @@ This folder is part of the ProjectForge file-backed operating system for `specs/
 - No folder-specific active work recorded.
 
 ## Needs Attention
-- No folder-specific issues recorded.
+- Campaign 43 registry/spec are freeze artifacts only; coefficient calculation and package publication require separate authorization.

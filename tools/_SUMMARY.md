@@ -11,6 +11,9 @@ ProjectForge helper tools plus KnowledgeForge deterministic validators.
 - `build_context.py`
 - `campaign42_first_difference_companion_production.py`
 - `campaign42_first_difference_companion_registry.py`
+- `campaign43_first_difference_companion_calculation.py`
+- `campaign43_first_difference_companion_publication_preflight.py`
+- `campaign43_first_difference_companion_registry.py`
 - `canonical_supersession_immutability_validator.py`
 - `check_coherence.py`
 - `coefficient_free_pearson_candidate_registry.py`
@@ -106,3 +109,4 @@ ProjectForge helper tools plus KnowledgeForge deterministic validators.
 - `relationship_export_v1.py` — KnowledgeForge-owned read-only relationship export CLI for deterministic file snapshots over the PostgreSQL projection.
 - `relationship_export_consumer_simulator_v1.py` — independent export consumer simulator using only export JSON and standard Python libraries.
 - `release_automation_alignment_v1.py` — provider-neutral release automation alignment prototype for synthetic release-v1/v2 change detection, impact analysis, supersession, and downstream delta planning.
+- `campaign43_first_difference_companion_registry.py` — coefficient-free generator/validator for the frozen six-candidate Campaign 43 first-difference companion registry; it must not calculate coefficients or first-difference values.

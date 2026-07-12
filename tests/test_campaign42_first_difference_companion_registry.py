@@ -34,7 +34,7 @@ class Campaign42CompanionRegistryTests(unittest.TestCase):
         registry = result["registry"]
         entries = registry["candidates"]
         self.assertLessEqual(len(entries), 8)
-        if not any((ROOT / "knowledge_repository/objects" / f"{e['expected_companion_package_id']}.json").exists() for e in entries):
+        if entries and not any((ROOT / "knowledge_repository/objects" / f"{e['expected_companion_package_id']}.json").exists() for e in entries):
             self.assertGreaterEqual(len(entries), 2)
         self.assertTrue(registry["coefficient_free"])
         serialized = json.dumps(registry, sort_keys=True).lower()

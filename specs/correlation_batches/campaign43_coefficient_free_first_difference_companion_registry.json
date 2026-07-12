@@ -1,0 +1,562 @@
+{
+  "calculation_authorized": false,
+  "campaign": "Campaign 43",
+  "candidate_boundary": {
+    "authorized_relationship_count": 6,
+    "excluded_sources": [
+      "Campaign 40",
+      "corrected raw-candidate pool",
+      "other campaigns"
+    ],
+    "source": "post-Campaign-42 next-production readiness decision"
+  },
+  "canonical_publication_authorized": false,
+  "coefficient_free": true,
+  "deterministic_ordering": "authorized readiness-decision order, preserved exactly and assigned ordinal candidate ids 01-06",
+  "entries": [
+    {
+      "campaign43_candidate_id": "campaign43-fd-pearson-companion-candidate-01",
+      "candidate_slug": "dnk_agricultural_land_broad_money",
+      "eligibility_status": "included",
+      "entity": "DNK",
+      "exclusion_reasons": [],
+      "frequency": "annual",
+      "future_first_difference_compatibility": {
+        "equivalent_first_difference_companion_exists": false,
+        "expected_companion_package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-first-difference-pearson-companion-v1",
+        "method": {
+          "contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657",
+          "version": "1.0"
+        },
+        "minimum_required_resolvable_aligned_periods": 30,
+        "resolvable_aligned_period_count_for_future_differencing": 33,
+        "resolvable_aligned_period_scope_for_future_differencing": {
+          "end": 2023,
+          "start": 1991
+        },
+        "transformation": {
+          "contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "id": "wdi_annual_scalar_first_difference_v1",
+          "version": "1.0"
+        },
+        "transformed_unit_semantics": [
+          "year-to-year percentage-point change in % of land area",
+          "year-to-year change in percentage points of GDP"
+        ]
+      },
+      "inclusion_or_exclusion_rationale": "Included because the authorized Campaign 41 raw package is accepted, not superseded, has the recorded high shared-time-trend risk basis, resolves to retained annual raw fixtures, has enough consecutive aligned periods for future first-difference evaluation, and has no existing equivalent first-difference companion.",
+      "raw_method": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "id": "wdi_annual_scalar_pearson_correlation_v1",
+        "version": "1.0"
+      },
+      "raw_period_scope": {
+        "end": 2024,
+        "start": 1990
+      },
+      "relationship_label": "DNK agricultural land / broad money",
+      "retained_input_series": [
+        {
+          "identity": "AG.LND.AGRI.ZS__DNK__1990-2024",
+          "normalized_fingerprint": "sha256:bd5f8ecbdcddeabfd572d3575f5b8d5f816f3526a9bbbce29675291fa32b6b0a",
+          "observed_count": 34,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/AG.LND.AGRI.ZS__DNK__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:8764b9f8a237f6b2f26ee743c57388e4c3f1b3b501ac46315a59965ca390966c",
+          "source_raw_fixture_fingerprint": "sha256:096ca90ca993a707617a7218a87fb1ff597a10951366e11edd9ad623eb93e8e9"
+        },
+        {
+          "identity": "FM.LBL.BMNY.GD.ZS__DNK__1990-2024",
+          "normalized_fingerprint": "sha256:8833f55ad34c299ffd0ed1d7d93fc7d443701a3eb88c8e24a8162af6be0858e6",
+          "observed_count": 35,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/FM.LBL.BMNY.GD.ZS__DNK__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:221aaf413fe39f11ac579e9c55bfb2613fcea1d976ea559e212bff6e05df5455",
+          "source_raw_fixture_fingerprint": "sha256:f02cd349b66f6f2f9401dcd8305a9ae2840dea48df3abd3777848f2a0522d01f"
+        }
+      ],
+      "series_pair_ordered": [
+        {
+          "code": "AG.LND.AGRI.ZS",
+          "name": "Agricultural land (% of land area)",
+          "transformation": "raw",
+          "unit": "% of land area"
+        },
+        {
+          "code": "FM.LBL.BMNY.GD.ZS",
+          "name": "Broad money (% of GDP)",
+          "transformation": "raw",
+          "unit": "percent of GDP"
+        }
+      ],
+      "source_raw_package": {
+        "lifecycle_state": "accepted",
+        "package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:b74efa65ccfd9ee609916d21872c1692fac0a6bdc818f7a89a9f3393215a140a",
+        "payload_package_fingerprint": "sha256:45927ad80b30f984acababea69746b53a32e6048e6fd6315cce92ea8cd2502a2",
+        "source_campaign": "Campaign 41",
+        "superseded_by": null
+      },
+      "trend_risk": {
+        "classification": "high_shared_time_trend_risk",
+        "evidence": "Campaign 41 registry advisory review classified the relationship as moderate-to-high shared-time-trend/nonstationarity risk for land-share/financial aggregates; post-Campaign-42 readiness evidence records all Campaign 41 raw outputs as high shared-time-trend risk for companion evaluation."
+      }
+    },
+    {
+      "campaign43_candidate_id": "campaign43-fd-pearson-companion-candidate-02",
+      "candidate_slug": "dnk_agricultural_land_private_credit",
+      "eligibility_status": "included",
+      "entity": "DNK",
+      "exclusion_reasons": [],
+      "frequency": "annual",
+      "future_first_difference_compatibility": {
+        "equivalent_first_difference_companion_exists": false,
+        "expected_companion_package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-first-difference-pearson-companion-v1",
+        "method": {
+          "contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657",
+          "version": "1.0"
+        },
+        "minimum_required_resolvable_aligned_periods": 30,
+        "resolvable_aligned_period_count_for_future_differencing": 33,
+        "resolvable_aligned_period_scope_for_future_differencing": {
+          "end": 2023,
+          "start": 1991
+        },
+        "transformation": {
+          "contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "id": "wdi_annual_scalar_first_difference_v1",
+          "version": "1.0"
+        },
+        "transformed_unit_semantics": [
+          "year-to-year percentage-point change in % of land area",
+          "year-to-year change in percentage points of GDP"
+        ]
+      },
+      "inclusion_or_exclusion_rationale": "Included because the authorized Campaign 41 raw package is accepted, not superseded, has the recorded high shared-time-trend risk basis, resolves to retained annual raw fixtures, has enough consecutive aligned periods for future first-difference evaluation, and has no existing equivalent first-difference companion.",
+      "raw_method": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "id": "wdi_annual_scalar_pearson_correlation_v1",
+        "version": "1.0"
+      },
+      "raw_period_scope": {
+        "end": 2024,
+        "start": 1990
+      },
+      "relationship_label": "DNK agricultural land / private credit",
+      "retained_input_series": [
+        {
+          "identity": "AG.LND.AGRI.ZS__DNK__1990-2024",
+          "normalized_fingerprint": "sha256:bd5f8ecbdcddeabfd572d3575f5b8d5f816f3526a9bbbce29675291fa32b6b0a",
+          "observed_count": 34,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/AG.LND.AGRI.ZS__DNK__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:8764b9f8a237f6b2f26ee743c57388e4c3f1b3b501ac46315a59965ca390966c",
+          "source_raw_fixture_fingerprint": "sha256:096ca90ca993a707617a7218a87fb1ff597a10951366e11edd9ad623eb93e8e9"
+        },
+        {
+          "identity": "FS.AST.PRVT.GD.ZS__DNK__1990-2024",
+          "normalized_fingerprint": "sha256:d1e17d7b87ee4042742579769120b9ff34da0ef6ff80456d95dcee82ebe6dc45",
+          "observed_count": 35,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/FS.AST.PRVT.GD.ZS__DNK__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:bbc71a8fc5a20957498db1f908ef615276879dc9fdd0126fdf0c9c93b1601c0b",
+          "source_raw_fixture_fingerprint": "sha256:deff53d8f43918b16ae46cd234253987df631662c5b06791a90f0ab32c74c2d7"
+        }
+      ],
+      "series_pair_ordered": [
+        {
+          "code": "AG.LND.AGRI.ZS",
+          "name": "Agricultural land (% of land area)",
+          "transformation": "raw",
+          "unit": "% of land area"
+        },
+        {
+          "code": "FS.AST.PRVT.GD.ZS",
+          "name": "Domestic credit to private sector (% of GDP)",
+          "transformation": "raw",
+          "unit": "percent of GDP"
+        }
+      ],
+      "source_raw_package": {
+        "lifecycle_state": "accepted",
+        "package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:1d6577ec481d8c118fb18b7188a5c7748b8d025d63ca7dfe3f216547e42fbd52",
+        "payload_package_fingerprint": "sha256:7962d29f1773e1c0af4071e6df70ca938680ab92859f5d3cfbf55ac4264c1ec3",
+        "source_campaign": "Campaign 41",
+        "superseded_by": null
+      },
+      "trend_risk": {
+        "classification": "high_shared_time_trend_risk",
+        "evidence": "Campaign 41 registry advisory review classified the relationship as moderate-to-high shared-time-trend/nonstationarity risk for land-share/financial aggregates; post-Campaign-42 readiness evidence records all Campaign 41 raw outputs as high shared-time-trend risk for companion evaluation."
+      }
+    },
+    {
+      "campaign43_candidate_id": "campaign43-fd-pearson-companion-candidate-03",
+      "candidate_slug": "dnk_forest_area_broad_money",
+      "eligibility_status": "included",
+      "entity": "DNK",
+      "exclusion_reasons": [],
+      "frequency": "annual",
+      "future_first_difference_compatibility": {
+        "equivalent_first_difference_companion_exists": false,
+        "expected_companion_package_id": "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-first-difference-pearson-companion-v1",
+        "method": {
+          "contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657",
+          "version": "1.0"
+        },
+        "minimum_required_resolvable_aligned_periods": 30,
+        "resolvable_aligned_period_count_for_future_differencing": 33,
+        "resolvable_aligned_period_scope_for_future_differencing": {
+          "end": 2023,
+          "start": 1991
+        },
+        "transformation": {
+          "contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "id": "wdi_annual_scalar_first_difference_v1",
+          "version": "1.0"
+        },
+        "transformed_unit_semantics": [
+          "year-to-year percentage-point change in % of land area",
+          "year-to-year change in percentage points of GDP"
+        ]
+      },
+      "inclusion_or_exclusion_rationale": "Included because the authorized Campaign 41 raw package is accepted, not superseded, has the recorded high shared-time-trend risk basis, resolves to retained annual raw fixtures, has enough consecutive aligned periods for future first-difference evaluation, and has no existing equivalent first-difference companion.",
+      "raw_method": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "id": "wdi_annual_scalar_pearson_correlation_v1",
+        "version": "1.0"
+      },
+      "raw_period_scope": {
+        "end": 2024,
+        "start": 1990
+      },
+      "relationship_label": "DNK forest area / broad money",
+      "retained_input_series": [
+        {
+          "identity": "AG.LND.FRST.ZS__DNK__1990-2024",
+          "normalized_fingerprint": "sha256:6ca9fabae5d3d89339f82e86df39947f0997276c44044464f0b2b5d09538379c",
+          "observed_count": 34,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/AG.LND.FRST.ZS__DNK__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:3fead4f2c1a04e34b79f133342da0edf8294a58eb2f6fe5c8fe4ca7ca2f66cdb",
+          "source_raw_fixture_fingerprint": "sha256:1a42ca934e6c44e3be4f31097191b4011207ea26ac068a0f44da7274f44ceaf3"
+        },
+        {
+          "identity": "FM.LBL.BMNY.GD.ZS__DNK__1990-2024",
+          "normalized_fingerprint": "sha256:8833f55ad34c299ffd0ed1d7d93fc7d443701a3eb88c8e24a8162af6be0858e6",
+          "observed_count": 35,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/FM.LBL.BMNY.GD.ZS__DNK__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:221aaf413fe39f11ac579e9c55bfb2613fcea1d976ea559e212bff6e05df5455",
+          "source_raw_fixture_fingerprint": "sha256:f02cd349b66f6f2f9401dcd8305a9ae2840dea48df3abd3777848f2a0522d01f"
+        }
+      ],
+      "series_pair_ordered": [
+        {
+          "code": "AG.LND.FRST.ZS",
+          "name": "Forest area (% of land area)",
+          "transformation": "raw",
+          "unit": "% of land area"
+        },
+        {
+          "code": "FM.LBL.BMNY.GD.ZS",
+          "name": "Broad money (% of GDP)",
+          "transformation": "raw",
+          "unit": "percent of GDP"
+        }
+      ],
+      "source_raw_package": {
+        "lifecycle_state": "accepted",
+        "package_id": "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:d8719416ec59b40ab84df2e8c6019a86070c05eadb33df16a9da15ad7410df3e",
+        "payload_package_fingerprint": "sha256:4b4f804f00da85fa3d599b7b59c9bb4f3f2728cf3d9b3ee163c576644b1e21cf",
+        "source_campaign": "Campaign 41",
+        "superseded_by": null
+      },
+      "trend_risk": {
+        "classification": "high_shared_time_trend_risk",
+        "evidence": "Campaign 41 registry advisory review classified the relationship as moderate-to-high shared-time-trend/nonstationarity risk for land-share/financial aggregates; post-Campaign-42 readiness evidence records all Campaign 41 raw outputs as high shared-time-trend risk for companion evaluation."
+      }
+    },
+    {
+      "campaign43_candidate_id": "campaign43-fd-pearson-companion-candidate-04",
+      "candidate_slug": "nor_crude_birth_rate_fossil_electricity",
+      "eligibility_status": "included",
+      "entity": "NOR",
+      "exclusion_reasons": [],
+      "frequency": "annual",
+      "future_first_difference_compatibility": {
+        "equivalent_first_difference_companion_exists": false,
+        "expected_companion_package_id": "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-first-difference-pearson-companion-v1",
+        "method": {
+          "contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657",
+          "version": "1.0"
+        },
+        "minimum_required_resolvable_aligned_periods": 30,
+        "resolvable_aligned_period_count_for_future_differencing": 33,
+        "resolvable_aligned_period_scope_for_future_differencing": {
+          "end": 2023,
+          "start": 1991
+        },
+        "transformation": {
+          "contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "id": "wdi_annual_scalar_first_difference_v1",
+          "version": "1.0"
+        },
+        "transformed_unit_semantics": [
+          "absolute year-to-year change in per 1,000 people",
+          "year-to-year percentage-point change in % of total"
+        ]
+      },
+      "inclusion_or_exclusion_rationale": "Included because the authorized Campaign 41 raw package is accepted, not superseded, has the recorded high shared-time-trend risk basis, resolves to retained annual raw fixtures, has enough consecutive aligned periods for future first-difference evaluation, and has no existing equivalent first-difference companion.",
+      "raw_method": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "id": "wdi_annual_scalar_pearson_correlation_v1",
+        "version": "1.0"
+      },
+      "raw_period_scope": {
+        "end": 2024,
+        "start": 1990
+      },
+      "relationship_label": "NOR crude birth rate / fossil electricity",
+      "retained_input_series": [
+        {
+          "identity": "SP.DYN.CBRT.IN__NOR__1990-2024",
+          "normalized_fingerprint": "sha256:c88ad96127bffbabb9520129631fd769d16686edc64d92835c33e20734fc9c86",
+          "observed_count": 35,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.CBRT.IN__NOR__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:9eacb153f48a31c4e20287c12ad7213e8b2ea1af303dc0bf7e386c4baf3f4624",
+          "source_raw_fixture_fingerprint": "sha256:df2c4ae734b1219e90566b2f95b57541698ccad7a143b3ee2ffcf2ba7038e7f5"
+        },
+        {
+          "identity": "EG.ELC.FOSL.ZS__NOR__1990-2024",
+          "normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+          "observed_count": 34,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.FOSL.ZS__NOR__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:e37b6e248050cd96e57a0815fbd05db7dfd536924b2f53d8630ae39d5e6443e6",
+          "source_raw_fixture_fingerprint": "sha256:0a3cc4fdc9bd8fb2b0da1be7b4b460094a93f2bfd13e79a49911556715c32bda"
+        }
+      ],
+      "series_pair_ordered": [
+        {
+          "code": "SP.DYN.CBRT.IN",
+          "name": "Birth rate, crude (per 1,000 people)",
+          "transformation": "raw",
+          "unit": "per 1,000 people"
+        },
+        {
+          "code": "EG.ELC.FOSL.ZS",
+          "name": "Electricity production from oil, gas and coal sources (% of total)",
+          "transformation": "raw",
+          "unit": "% of total"
+        }
+      ],
+      "source_raw_package": {
+        "lifecycle_state": "accepted",
+        "package_id": "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:34a47624a077e33e447c0efb62583da04204cccbe19e933ea38ad158b0ab3162",
+        "payload_package_fingerprint": "sha256:b956faa186fcf38f9b5878982f8bd77ad1f9e15a93937558506476125fb84ac8",
+        "source_campaign": "Campaign 41",
+        "superseded_by": null
+      },
+      "trend_risk": {
+        "classification": "high_shared_time_trend_risk",
+        "evidence": "Campaign 41 registry advisory review classified the relationship as high shared-time-trend/nonstationarity risk likely for the demographic/energy pair; post-Campaign-42 readiness evidence records all Campaign 41 raw outputs as high shared-time-trend risk for companion evaluation."
+      }
+    },
+    {
+      "campaign43_candidate_id": "campaign43-fd-pearson-companion-candidate-05",
+      "candidate_slug": "nor_fossil_electricity_under5_mortality",
+      "eligibility_status": "included",
+      "entity": "NOR",
+      "exclusion_reasons": [],
+      "frequency": "annual",
+      "future_first_difference_compatibility": {
+        "equivalent_first_difference_companion_exists": false,
+        "expected_companion_package_id": "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-first-difference-pearson-companion-v1",
+        "method": {
+          "contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657",
+          "version": "1.0"
+        },
+        "minimum_required_resolvable_aligned_periods": 30,
+        "resolvable_aligned_period_count_for_future_differencing": 33,
+        "resolvable_aligned_period_scope_for_future_differencing": {
+          "end": 2023,
+          "start": 1991
+        },
+        "transformation": {
+          "contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "id": "wdi_annual_scalar_first_difference_v1",
+          "version": "1.0"
+        },
+        "transformed_unit_semantics": [
+          "year-to-year percentage-point change in % of total",
+          "absolute year-to-year change in per 1,000 live births"
+        ]
+      },
+      "inclusion_or_exclusion_rationale": "Included because the authorized Campaign 41 raw package is accepted, not superseded, has the recorded high shared-time-trend risk basis, resolves to retained annual raw fixtures, has enough consecutive aligned periods for future first-difference evaluation, and has no existing equivalent first-difference companion.",
+      "raw_method": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "id": "wdi_annual_scalar_pearson_correlation_v1",
+        "version": "1.0"
+      },
+      "raw_period_scope": {
+        "end": 2024,
+        "start": 1990
+      },
+      "relationship_label": "NOR fossil electricity / under-5 mortality",
+      "retained_input_series": [
+        {
+          "identity": "EG.ELC.FOSL.ZS__NOR__1990-2024",
+          "normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+          "observed_count": 34,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.FOSL.ZS__NOR__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:e37b6e248050cd96e57a0815fbd05db7dfd536924b2f53d8630ae39d5e6443e6",
+          "source_raw_fixture_fingerprint": "sha256:0a3cc4fdc9bd8fb2b0da1be7b4b460094a93f2bfd13e79a49911556715c32bda"
+        },
+        {
+          "identity": "SH.DYN.MORT__NOR__1990-2024",
+          "normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+          "observed_count": 35,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SH.DYN.MORT__NOR__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:79cbf4666a6cc0d0d8c93a8334c9cb4c1a95ac10f68ddb4f5e62f9bb4c209c54",
+          "source_raw_fixture_fingerprint": "sha256:080e0fb17a989b2df3b143ea1f9ab774d603035af0c935a3cc3f84f56be5514f"
+        }
+      ],
+      "series_pair_ordered": [
+        {
+          "code": "EG.ELC.FOSL.ZS",
+          "name": "Electricity production from oil, gas and coal sources (% of total)",
+          "transformation": "raw",
+          "unit": "% of total"
+        },
+        {
+          "code": "SH.DYN.MORT",
+          "name": "Mortality rate, under-5 (per 1,000 live births)",
+          "transformation": "raw",
+          "unit": "per 1,000 live births"
+        }
+      ],
+      "source_raw_package": {
+        "lifecycle_state": "accepted",
+        "package_id": "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:a575cdd3c88a276f7d2dd5fef543a7db905b1f47e98aff0629c07aeb2fa9f88e",
+        "payload_package_fingerprint": "sha256:69666d40e3f34fd90c40ec557d7be06ca0262ea958c8b9112d5b097d45ba7853",
+        "source_campaign": "Campaign 41",
+        "superseded_by": null
+      },
+      "trend_risk": {
+        "classification": "high_shared_time_trend_risk",
+        "evidence": "Campaign 41 registry advisory review classified the relationship as high shared-time-trend/nonstationarity risk likely for the energy/health pair; post-Campaign-42 readiness evidence records all Campaign 41 raw outputs as high shared-time-trend risk for companion evaluation."
+      }
+    },
+    {
+      "campaign43_candidate_id": "campaign43-fd-pearson-companion-candidate-06",
+      "candidate_slug": "nor_nonhydro_renewable_electricity_under5_mortality",
+      "eligibility_status": "included",
+      "entity": "NOR",
+      "exclusion_reasons": [],
+      "frequency": "annual",
+      "future_first_difference_compatibility": {
+        "equivalent_first_difference_companion_exists": false,
+        "expected_companion_package_id": "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-first-difference-pearson-companion-v1",
+        "method": {
+          "contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "id": "wdi_annual_scalar_first_difference_pearson_v1",
+          "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657",
+          "version": "1.0"
+        },
+        "minimum_required_resolvable_aligned_periods": 30,
+        "resolvable_aligned_period_count_for_future_differencing": 31,
+        "resolvable_aligned_period_scope_for_future_differencing": {
+          "end": 2021,
+          "start": 1991
+        },
+        "transformation": {
+          "contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+          "id": "wdi_annual_scalar_first_difference_v1",
+          "version": "1.0"
+        },
+        "transformed_unit_semantics": [
+          "year-to-year percentage-point change in % of total",
+          "absolute year-to-year change in per 1,000 live births"
+        ]
+      },
+      "inclusion_or_exclusion_rationale": "Included because the authorized Campaign 41 raw package is accepted, not superseded, has the recorded high shared-time-trend risk basis, resolves to retained annual raw fixtures, has enough consecutive aligned periods for future first-difference evaluation, and has no existing equivalent first-difference companion.",
+      "raw_method": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "id": "wdi_annual_scalar_pearson_correlation_v1",
+        "version": "1.0"
+      },
+      "raw_period_scope": {
+        "end": 2024,
+        "start": 1990
+      },
+      "relationship_label": "NOR nonhydro renewable electricity / under-5 mortality",
+      "retained_input_series": [
+        {
+          "identity": "EG.ELC.RNWX.ZS__NOR__1990-2024",
+          "normalized_fingerprint": "sha256:435e2b74e25ae91423e017a076cafdf052075f83700ba96196751b940fcd5ac3",
+          "observed_count": 32,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.RNWX.ZS__NOR__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:e2e035fa3b227cc5dc0d3ebfc548dd61e1e6f43bb3da993c9a3217d428d17cec",
+          "source_raw_fixture_fingerprint": "sha256:0cf6d320c63fed94769605b496070cf77e2120defdc711c427830bd48ee80045"
+        },
+        {
+          "identity": "SH.DYN.MORT__NOR__1990-2024",
+          "normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+          "observed_count": 35,
+          "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SH.DYN.MORT__NOR__1990-2024/normalized_observations.json",
+          "selection_fingerprint": "sha256:79cbf4666a6cc0d0d8c93a8334c9cb4c1a95ac10f68ddb4f5e62f9bb4c209c54",
+          "source_raw_fixture_fingerprint": "sha256:080e0fb17a989b2df3b143ea1f9ab774d603035af0c935a3cc3f84f56be5514f"
+        }
+      ],
+      "series_pair_ordered": [
+        {
+          "code": "EG.ELC.RNWX.ZS",
+          "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+          "transformation": "raw",
+          "unit": "% of total"
+        },
+        {
+          "code": "SH.DYN.MORT",
+          "name": "Mortality rate, under-5 (per 1,000 live births)",
+          "transformation": "raw",
+          "unit": "per 1,000 live births"
+        }
+      ],
+      "source_raw_package": {
+        "lifecycle_state": "accepted",
+        "package_id": "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:79461212ae1829adc1e3cab9a0e52f51a253e476fbd40b02126cfc390caea8a5",
+        "payload_package_fingerprint": "sha256:4e7a91e5196367b9da2a5ef975717dfdc91ac5dada2ad6b58ba8ed830a3919f2",
+        "source_campaign": "Campaign 41",
+        "superseded_by": null
+      },
+      "trend_risk": {
+        "classification": "high_shared_time_trend_risk",
+        "evidence": "Campaign 41 registry advisory review classified the relationship as high shared-time-trend/nonstationarity risk likely for the energy/health pair; post-Campaign-42 readiness evidence records all Campaign 41 raw outputs as high shared-time-trend risk for companion evaluation."
+      }
+    }
+  ],
+  "method_contracts": {
+    "future_method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+    "future_method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+    "future_method_validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657",
+    "future_method_version": "1.0",
+    "future_transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+    "future_transformation_id": "wdi_annual_scalar_first_difference_v1",
+    "future_transformation_version": "1.0",
+    "source_raw_method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+    "source_raw_method_id": "wdi_annual_scalar_pearson_correlation_v1",
+    "source_raw_method_version": "1.0"
+  },
+  "production_authorized": false,
+  "purpose": "Freeze the six remaining Campaign 41 high-shared-time-trend raw Pearson relationships for possible later first-difference companion production.",
+  "registry_id": "campaign43_coefficient_free_first_difference_companion_registry",
+  "registry_version": "1.0"
+}

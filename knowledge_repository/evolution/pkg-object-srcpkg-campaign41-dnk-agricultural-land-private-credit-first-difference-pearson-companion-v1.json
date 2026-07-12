@@ -1,0 +1,57 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 43 first-difference Pearson companion package construction preflight",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:9fe925cddb4069f59c6b30ddb86c5c934da7de94cf601c077f1e46eb3a84e88c",
+    "evidence_references": "sha256:bd2c556d74ac3d42b38512776002a132269309598e982fa6660ea3cbe7527737",
+    "generated_statements": "sha256:fa7f9173e8afe3c59cd9dd4dc2608214905403c940e4225834cbedeee16e9a37",
+    "input_set": "sha256:017f62a8bf80754ee4e1d80c08f1e36efa29120f49f2da73c34c95ca911ec527",
+    "package_manifest": "sha256:46365f326c989e8aed78efc51e3d561a0ec77a2a6057949cbc854988240449a6",
+    "query_definitions": "sha256:fb4dba34683f18085fe5a6a718e1376e3ed99b9c8bbfd215541ebdd3a5ab2bce"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 41",
+    "source_campaign": "Campaign 43",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+      "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+      "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+      "sha256:18d73bce55b9806e5e83a18c3d434178258647579926931208528402b49a2674"
+    ],
+    "evidence_refs": [
+      "ev-campaign43-fd-pearson-companion-02"
+    ],
+    "lineage_basis": "Campaign 43 companion package construction from frozen registry and accepted calculation evidence; references raw package pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1 from Campaign 41 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_registry_calculation_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_changes_estimand",
+      "first_difference_discards_one_observation_before_alignment",
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "near_zero_does_not_prove_absence",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

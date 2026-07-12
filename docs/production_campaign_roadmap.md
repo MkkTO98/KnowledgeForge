@@ -928,3 +928,74 @@ Decision A: expand first-difference Pearson companions next. This is a sequencin
 Basis: adversarial Relationship Export Contract checks showed raw and first-difference relationships can be retrieved separately by supported method/transformation filters and independent consumers can discover classes without campaign numbers or package IDs. Retrieval/export improvement is therefore not the blocker. Corrected raw Pearson policy leaves only four additional raw candidates, all high time-risk, while six Campaign 41 raw relationships have documented high shared-time-trend risk and no first-difference companion treatment.
 
 Next roadmap step: Campaign 43 coefficient-free first-difference companion registry freeze for the six remaining Campaign 41 high-risk raw Pearson relationships, stopping before coefficient calculation or package publication.
+
+## Campaign 43 coefficient-free first-difference companion registry freeze — 2026-07-12
+
+Decision A: Campaign 43 coefficient-free first-difference companion registry is frozen for the six remaining Campaign 41 high-shared-time-trend raw Pearson relationships. All six are included; none are excluded.
+
+Frozen fingerprints:
+
+- registry: `sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1`
+- specification: `sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf`
+
+Boundary: no Campaign 43 coefficients, no first-difference execution, no KnowledgeObjectPackage construction, no canonical publication, no PostgreSQL projection/write/rebuild, and no architecture or doctrine change occurred.
+
+Next roadmap step: separately authorize Campaign 43 production preflight and coefficient calculation from the frozen registry, stopping before canonical publication unless publication is separately authorized.
+
+## Campaign 43 first-difference companion calculation gate — 2026-07-12
+
+Campaign 43 coefficients were calculated for the six frozen registry candidates from retained fixtures and accepted as calculation evidence only, not canonical publication.
+
+Calculation result fingerprint: `sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462`
+
+Results:
+
+- DNK agricultural land / broad money: `-0.018892915467` with 33 aligned transformed observations.
+- DNK agricultural land / private credit: `0.058190335423` with 33 aligned transformed observations.
+- DNK forest area / broad money: `-0.101990610667` with 33 aligned transformed observations.
+- NOR crude birth rate / fossil electricity: `0.037781664561` with 33 aligned transformed observations.
+- NOR fossil electricity / under-5 mortality: `-0.083376899169` with 33 aligned transformed observations.
+- NOR nonhydro renewable electricity / under-5 mortality: `0.3855860099` with 31 aligned transformed observations.
+
+Boundary: no KnowledgeObjectPackages were constructed, no canonical publication occurred, no PostgreSQL projection or mutation occurred, no Campaign 40-42 packages changed, and no architecture/doctrine/schema redesign occurred.
+
+Canonical state remains 554 packages with repository fingerprint `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`.
+
+Next roadmap step: Campaign 43 append-only companion package construction and publication preflight from calculation results, stopping before publication unless publication is explicitly authorized.
+
+## Campaign 43 companion package publication preflight — 2026-07-12
+
+Exactly six first-difference Pearson companion candidate packages were constructed outside the canonical repository and validated for publication readiness.
+
+Package-set fingerprint: `sha256:9ed161b9dcf7472b7e13979cbd9cd1a24f1ce3009108e677c41dace20277d559`
+
+Safe dry-run publication expectations:
+
+- post-publication package count: 560
+- post-publication repository fingerprint: `sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7`
+- PostgreSQL projected package count: 560
+- Relationship Export counts: raw Pearson 21; first-difference Pearson 14
+
+Boundary: no candidate was published into `knowledge_repository/objects`, no canonical manifest/index/evolution file was mutated, no PostgreSQL projection or mutation occurred, and no Relationship Export output was published.
+
+Next roadmap step: separately authorize append-only canonical publication of the six Campaign 43 companion packages, followed by existing PostgreSQL and Relationship Export verification. Publication remains unauthorized until explicitly requested.
+
+## Campaign 43 canonical publication and projection closeout — 2026-07-12
+
+Exactly six first-difference Pearson companion packages were published append-only into the canonical Knowledge Repository.
+
+Canonical state:
+
+- package count: 560
+- repository fingerprint: `sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7`
+- package-set fingerprint: `sha256:9ed161b9dcf7472b7e13979cbd9cd1a24f1ce3009108e677c41dace20277d559`
+
+PostgreSQL projection was rebuilt for the established `knowledgeforge` / `knowledgeforge_projection` target and verified at 560 packages with no missing, extra, payload-fidelity, or package-fingerprint failures.
+
+Relationship Export v1 verified 21 raw Pearson relationships, 14 first-difference Pearson relationships, no raw/first-difference overlap, and independent consumer simulation without campaign numbers, filenames, repository reads, runtime imports, or pre-known package IDs.
+
+Interpretation boundary: five coefficients are near zero or weak after differencing; the approximately `0.3855860099` result remains descriptive and non-causal; weakened transformed relationships are retained as robustness/limiting evidence; raw packages are not superseded.
+
+No doctrine, architecture, schema, method-family, PostgreSQL schema, Relationship Export Contract, or KnowledgeObjectPackage redesign occurred.
+
+Next roadmap step: select the next production campaign from the real backlog after Campaign 43, without treating Campaign 43 publication as authorization for a new campaign.

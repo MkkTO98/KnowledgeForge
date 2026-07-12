@@ -89,6 +89,10 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260712-campaign41-generic-correlation-engine-provenance-parameterization.md`
 - `T-20260712-campaign42-coefficient-free-first-difference-pearson-companion-registry.md`
 - `T-20260712-campaign42-first-difference-pearson-companion-production.md`
+- `T-20260712-campaign43-canonical-publication-postgresql-export-closeout.md`
+- `T-20260712-campaign43-coefficient-free-first-difference-companion-registry-freeze.md`
+- `T-20260712-campaign43-companion-package-publication-preflight.md`
+- `T-20260712-campaign43-first-difference-companion-calculation-gate.md`
 - `T-20260712-durability-destination-decision-pre-staging-remediation.md`
 - `T-20260712-first-difference-pearson-method-contract-validation.md`
 - `T-20260712-next-production-readiness-decision-before-campaign43.md`
@@ -111,3 +115,4 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260712-pearson-candidate-policy-v2-consistency-correction.md` — completed; disposition B; corrected canonical exclusion and remote-cap arithmetic, found only 4 future-production candidates, and selected first-difference method validation before further raw production.
 - `T-20260712-first-difference-pearson-method-contract-validation.md` — completed; decision A; validated `wdi_annual_scalar_first_difference_pearson_v1@1.0` as bounded companion method, with next task a coefficient-free companion-production registry before any coefficient calculation/publication.
 - `T-20260712-campaign42-coefficient-free-first-difference-pearson-companion-registry.md` — completed; decision A; froze 8 coefficient-free first-difference Pearson companion candidates with registry fingerprint `sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15` and spec fingerprint `sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00`; no coefficients/packages were produced.
+- `T-20260712-campaign43-coefficient-free-first-difference-companion-registry-freeze.md` — completed; froze all six authorized remaining Campaign 41 high-shared-time-trend raw Pearson relationships with registry fingerprint `sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1`; no coefficients/packages/PostgreSQL mutation.

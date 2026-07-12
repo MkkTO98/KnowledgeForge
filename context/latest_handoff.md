@@ -4,39 +4,26 @@ Date: 2026-07-12
 
 ## Completed
 
-Post-Campaign-42 next-production readiness decision completed.
+Campaign 43 canonical publication completed locally.
 
-Chosen path: A — expand first-difference Pearson companions.
+Exactly six first-difference Pearson companion packages were added append-only to `knowledge_repository/objects`; deterministic manifest/index/evolution metadata was updated; PostgreSQL projection was rebuilt for `knowledgeforge` / `knowledgeforge_projection`; Relationship Export v1 and independent consumer simulation passed.
 
-Key artifacts:
+Canonical state:
 
-- `artifacts/reports/next-production-readiness-decision-20260712/final_report.md`
-- `artifacts/reports/next-production-readiness-decision-20260712/adversarial/adversarial_summary.json`
-- `artifacts/decisions/D-20260712-next-production-readiness-before-campaign43.md`
-- `artifacts/tasks/T-20260712-next-production-readiness-decision-before-campaign43.md`
+- packages: 560
+- repository fingerprint: `sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7`
+- package-set fingerprint: `sha256:9ed161b9dcf7472b7e13979cbd9cd1a24f1ce3009108e677c41dace20277d559`
 
-## Evidence and checks
+Operational checks:
 
-- Raw and first-difference relationships retrieved separately through Relationship Export Contract v1.
-- Independent consumer simulation passed without package IDs or campaign numbers.
-- Current export records expose method, transformation, provenance, package identity/fingerprint, temporal/frequency/entity/series scope, limitations, coefficient, and lifecycle state.
-- Corrected raw policy has four remaining raw candidates, all high time-risk.
-- Six Campaign 41 high-time-risk raw relationships remain suitable for coefficient-free first-difference companion registry evaluation.
+- PostgreSQL verified: 560 projected packages; no missing/extra/fidelity/fingerprint failures.
+- Relationship Export counts: 35 total, 21 raw Pearson, 14 first-difference Pearson; no raw/first-difference overlap.
+- All six Campaign 43 packages retrievable by first-difference method and transformation; none by raw retrieval.
 
-## Boundary
+Interpretation boundary: five coefficients are near zero or weak after differencing; the `0.3855860099` result remains descriptive/non-causal; raw packages are not superseded; weakened transformed relationships are retained as robustness/limiting evidence.
 
-No Campaign 43 began. No coefficients/packages were produced. No PostgreSQL production mutation, schema change, doctrine amendment, package redesign, export redesign, or broad query platform was authorized.
+Protected residue left untouched: six `architecture/architectureharvest/` deletions, operational/checkpoint/report residue, `workspace_config.yaml`, generated active context, caches/dumps/isolated restores, temporary verification directories, and the previously blocked `/tmp` path.
 
-Unrelated `architecture/architectureharvest/` tracked deletions and local residue were preserved untouched.
+## Resume
 
-## Resume command
-
-From `/home/mkkto/srv/EIP/projects/KnowledgeForge`, if authorized, start only this bounded task:
-
-Campaign 43 coefficient-free first-difference companion registry freeze for the six remaining Campaign 41 high-shared-time-trend raw Pearson relationships, stopping before coefficient calculation or package publication.
-
-## Closeout verification
-
-Resume closeout verification completed under `HEAD` / `origin/main` `78b29b5b7ffb92a7a065e36d520ab4d51ff93a5e`. Details: `artifacts/reports/next-production-readiness-decision-20260712/final_verification/resume_closeout_20260712.json`.
-
-Results: supported `python3 -m unittest` targeted tests passed (24 OK); pytest remains an undeclared/uninstalled environment dependency for full discovery; PostgreSQL projection verify passed at 554 objects; canonical count/fingerprint unchanged (`sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`); no package/new-package/PostgreSQL production mutation; coherence/context-health/audit had 0 blocks; `git diff --check` passed; EOF fix is clean.
+If interrupted before final response: verify staged/committed/pushed status. If not yet pushed, stage only the Campaign 43 boundary, commit, fetch, push normally to `origin/main`, then verify HEAD/origin, canonical count/fingerprint, PostgreSQL projection, and export counts.

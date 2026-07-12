@@ -44,6 +44,7 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_campaign3_wdi_freshness_metadata.py`
 - `test_campaign42_first_difference_companion_production.py`
 - `test_campaign42_first_difference_companion_registry.py`
+- `test_campaign43_first_difference_companion_registry.py`
 - `test_campaign4_wdi_indicator_inventory.py`
 - `test_campaign5_wdi_territorial_coverage.py`
 - `test_campaign6_wdi_temporal_coverage.py`
@@ -86,3 +87,4 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_correlation_batch_engine.py` — historical spec reproduction plus Campaign 40 freeze, acquisition contract, rejection isolation, atomic publication, and stale-PostgreSQL safeguards.
 - `test_relationship_export_v1.py` — export contract validation, consumer independence, tamper detection, stale-projection failure, malformed-query rejection, SQL-injection literal handling, and bounded-result enforcement.
 - `test_release_automation_alignment_v1.py` — synthetic release contract, exact change detection, derivation-impact, and boundary-preservation tests.
+- `test_campaign43_first_difference_companion_registry.py` — verifies the six-candidate Campaign 43 boundary, raw package/fingerprint resolution, non-supersession, no existing companion, method/transformation references, coefficient-free enforcement, deterministic/idempotent generation, and unchanged canonical count/fingerprint.

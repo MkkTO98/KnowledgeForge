@@ -1,0 +1,309 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+    "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion package candidate",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture_registry_calculation_and_raw_package_reference",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "first-difference stationarity not proven",
+      "estimand changed by differencing",
+      "one-observation loss before missing-value alignment",
+      "noise amplification",
+      "window and revision dependence"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-first-difference-pearson-companion-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "campaign43_first_difference_companion_publication_preflight",
+  "evidence_integrity": {
+    "calculation_result_fingerprint": "sha256:6261d28d1677921101ad862b36880e14bf616bd45211b8eaf64577a9f675554f",
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:79461212ae1829adc1e3cab9a0e52f51a253e476fbd40b02126cfc390caea8a5"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+      "evidence_ref_id": "ev-campaign43-fd-pearson-companion-06",
+      "reproducibility_handle": "raw package reference plus Campaign 43 registry/calculation fingerprints and retained evidence fixture fingerprints",
+      "snapshot_fingerprint": "sha256:acc291aa90b81f894c71ecbf95b5d493b37784f6826d7851d91db062f9f4516f",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "Retained raw Campaign 41 evidence for EG.ELC.RNWX.ZS and SH.DYN.MORT NOR transformed by Campaign 43 first-difference contract",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "retained_fixture"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 43 first-difference Pearson companion package construction preflight",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:378daa1f42f0833d8f25890f7ae76a715aabe69a261a4ff63e91dfb2437d281b",
+    "evidence_references": "sha256:67e4c73727d16eba9e9190fe43f398610529ceb2993f5b4f8f0ca61b9f9f9cf5",
+    "generated_statements": "sha256:05bca7f3e4be31dce66b8def72544d2a279ae9ca193e1fb315b12b57693e3606",
+    "input_set": "sha256:11c58dbbd0a24298312beeede5b6ecd16290ac473dcbcb036969dce1f43905cc",
+    "package_manifest": "sha256:f63c6055b35b3fb92dd8d485639f5b98acc14a26014a0eed8502b006b8edf4d2",
+    "query_definitions": "sha256:efe4cdcb782b0d729ef7e975a6e93150f4ec472ac48d3928b1d5d64425de3ca6"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "NOR",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1991
+      },
+      "dependencies": [
+        "calc-campaign43-fd-pearson-companion-06",
+        "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign43-fd-pearson-companion-06"
+      ],
+      "origin": "constructed_from_campaign43_frozen_registry_and_accepted_calculation_evidence",
+      "statement_id": "stmt-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-first-difference-pearson-companion-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_observation_fingerprint": "sha256:acc291aa90b81f894c71ecbf95b5d493b37784f6826d7851d91db062f9f4516f",
+        "aligned_transformed_count": 31,
+        "aligned_transformed_periods": [
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021
+        ],
+        "answers_change_co_movement_not_level_co_movement": true,
+        "calculation_result_fingerprint": "sha256:6261d28d1677921101ad862b36880e14bf616bd45211b8eaf64577a9f675554f",
+        "campaign43_calculation_result_fingerprint": "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+        "campaign43_candidate_id": "campaign43-fd-pearson-companion-candidate-06",
+        "campaign43_registry_fingerprint": "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+        "campaign43_specification_fingerprint": "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+        "companion_identity": "append-only first-difference Pearson companion; independently retrievable; does not supersede raw package",
+        "does_not_supersede_raw_package": true,
+        "entity_id": "NOR",
+        "expected_transformed_period_count": 34,
+        "family": "Energy & Mining x Health",
+        "first_difference_pearson_coefficient": {
+          "canonical": "0.3855860099",
+          "unit": "dimensionless"
+        },
+        "frequency": "annual",
+        "independent_recompute_coefficient": {
+          "canonical": "0.3855860099",
+          "unit": "dimensionless"
+        },
+        "interpretation_boundary": {
+          "causal_interpretation_prohibited": true,
+          "descriptive_association_only": true,
+          "near_zero_absence_claim_prohibited": true,
+          "predictive_interpretation_prohibited": true,
+          "significance_claim_prohibited": true,
+          "structural_interpretation_prohibited": true
+        },
+        "limitations": [
+          "First differencing changes the estimand from raw level co-movement to annual-change co-movement.",
+          "First differencing discards one observation before missing-value alignment and therefore changes the period/count basis.",
+          "A near-zero or weakened first-difference coefficient is retained as bounded descriptive robustness evidence; it does not prove absence of a relationship, independence, causality, or structural non-association.",
+          "First differencing does not prove stationarity and may amplify noise.",
+          "Correlation is descriptive finite-window association only; it does not imply causation, mechanism, prediction, forecast, lead-lag structure, recommendation, statistical significance, or investment signal.",
+          "Results are window-, source-revision-, unit-, and transformation-dependent.",
+          "This first-difference companion does not supersede, replace, correct, or mutate the raw Campaign 41 Pearson package."
+        ],
+        "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+        "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+        "method_version": "1.0",
+        "package_fingerprint": "sha256:f343f2d3f32e6a9054a9c26924fe426f990ce289ffdfece7fbafe67293fcc798",
+        "pearson_coefficient": {
+          "canonical": "0.3855860099",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1991
+        },
+        "prior_embedded_diagnostic_reconciliation": {
+          "aligned_count_matches_registry": true,
+          "coefficient_match_basis": "exact_decimal_match",
+          "coefficient_matches_prior_diagnostic_at_recorded_precision": true,
+          "expected_registry_aligned_count": 31,
+          "new_companion_coefficient": "0.3855860099",
+          "prior_embedded_diagnostic_present": true,
+          "prior_embedded_first_difference_coefficient": "0.3855860099"
+        },
+        "raw_evidence_fixtures": [
+          {
+            "identity": "EG.ELC.RNWX.ZS__NOR__1990-2024",
+            "normalized_fingerprint": "sha256:435e2b74e25ae91423e017a076cafdf052075f83700ba96196751b940fcd5ac3",
+            "observed_count": 32,
+            "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.RNWX.ZS__NOR__1990-2024/normalized_observations.json",
+            "selection_fingerprint": "sha256:e2e035fa3b227cc5dc0d3ebfc548dd61e1e6f43bb3da993c9a3217d428d17cec",
+            "source_raw_fixture_fingerprint": "sha256:0cf6d320c63fed94769605b496070cf77e2120defdc711c427830bd48ee80045"
+          },
+          {
+            "identity": "SH.DYN.MORT__NOR__1990-2024",
+            "normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "observed_count": 35,
+            "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SH.DYN.MORT__NOR__1990-2024/normalized_observations.json",
+            "selection_fingerprint": "sha256:79cbf4666a6cc0d0d8c93a8334c9cb4c1a95ac10f68ddb4f5e62f9bb4c209c54",
+            "source_raw_fixture_fingerprint": "sha256:080e0fb17a989b2df3b143ea1f9ab774d603035af0c935a3cc3f84f56be5514f"
+          }
+        ],
+        "raw_package_not_superseded": true,
+        "raw_package_reference": {
+          "package_fingerprint": "sha256:79461212ae1829adc1e3cab9a0e52f51a253e476fbd40b02126cfc390caea8a5",
+          "package_id": "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+          "payload_package_fingerprint": "sha256:4e7a91e5196367b9da2a5ef975717dfdc91ac5dada2ad6b58ba8ed830a3919f2",
+          "source_campaign": "Campaign 41",
+          "superseded_by_this_package": false
+        },
+        "raw_period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "raw_transformation_state": "raw",
+        "raw_units": {
+          "series_a": "% of total",
+          "series_b": "per 1,000 live births"
+        },
+        "relationship_distinction": "first_difference_companion_distinct_from_raw_level_pearson_relationship",
+        "series_a": {
+          "code": "EG.ELC.RNWX.ZS",
+          "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+          "transformation": "raw",
+          "transformed_unit": "year-to-year percentage-point change in % of total",
+          "unit": "% of total"
+        },
+        "series_b": {
+          "code": "SH.DYN.MORT",
+          "name": "Mortality rate, under-5 (per 1,000 live births)",
+          "transformation": "raw",
+          "transformed_unit": "absolute year-to-year change in per 1,000 live births",
+          "unit": "per 1,000 live births"
+        },
+        "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+        "transformation_id": "wdi_annual_scalar_first_difference_v1",
+        "transformation_state": "first_difference",
+        "transformation_version": "1.0",
+        "transformed_coverage_share": {
+          "canonical": "0.911764705882"
+        },
+        "transformed_series_fingerprints": {
+          "input_a": "sha256:754f0f66605f7f8564f1ceb4cfdd6be3337e14a916cef1e5e2450a38d6e1044f",
+          "input_b": "sha256:14b63d3e8109b47c4c096cacd4032db452d41f589aae7b345ac9df61feeb55d7"
+        },
+        "transformed_unit_semantics": [
+          "year-to-year percentage-point change in % of total",
+          "absolute year-to-year change in per 1,000 live births"
+        ],
+        "validation_judgment": "accepted_campaign43_first_difference_pearson_companion_prepublication_candidate",
+        "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+      },
+      "text": "Across aligned annual first differences for NOR from 1991 through 2024, the descriptive Pearson correlation between annual changes in Electricity production from renewable sources, excluding hydroelectric (% of total) and annual changes in Mortality rate, under-5 (per 1,000 live births) is 0.3855860099, using 31 aligned transformed observations. This Campaign 43 package is an append-only first-difference companion to raw package pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1; it does not supersede the raw relationship and makes no causal, predictive, structural, or significance claim."
+    }
+  ],
+  "input_references": [
+    "campaign43_first_difference_companion_publication_preflight",
+    "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+    "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+    "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+    "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+    "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+    "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 41",
+    "source_campaign": "Campaign 43",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-first-difference-pearson-companion-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+      "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+      "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+      "sha256:acc291aa90b81f894c71ecbf95b5d493b37784f6826d7851d91db062f9f4516f"
+    ],
+    "evidence_refs": [
+      "ev-campaign43-fd-pearson-companion-06"
+    ],
+    "lineage_basis": "Campaign 43 companion package construction from frozen registry and accepted calculation evidence; references raw package pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1 from Campaign 41 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "NOR"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+    "period_scope": {
+      "end": 2024,
+      "start": 1991
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_changes_estimand",
+      "first_difference_discards_one_observation_before_alignment",
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "near_zero_does_not_prove_absence",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

@@ -1,0 +1,57 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 43 first-difference Pearson companion package construction preflight",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:0e6d52c8c5cdb9dad85c8ede62420f9c92b5b3c0a04090896a28eca4e87f20ba",
+    "evidence_references": "sha256:d2dd0747274ed586a8524dec06872969635c9fe14857b1aa78d7860043a91031",
+    "generated_statements": "sha256:38122a5e938a1fefaebc080ba63c2b74c20851e40562d6519e9910f2d0805c6c",
+    "input_set": "sha256:706914c4bee965f876b4b50d91ac668402dfb25a3371243505754e609cb57296",
+    "package_manifest": "sha256:75471a45ea8de19abf7dc0718a82d13598d754fbabac8c498665b94229696d0b",
+    "query_definitions": "sha256:efe4cdcb782b0d729ef7e975a6e93150f4ec472ac48d3928b1d5d64425de3ca6"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 41",
+    "source_campaign": "Campaign 43",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+      "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+      "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+      "sha256:d8121130dbff85cebb9110ca5bd6db20cd9e60dfa2f5abb96b48bbdbfa8623cb"
+    ],
+    "evidence_refs": [
+      "ev-campaign43-fd-pearson-companion-05"
+    ],
+    "lineage_basis": "Campaign 43 companion package construction from frozen registry and accepted calculation evidence; references raw package pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1 from Campaign 41 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_registry_calculation_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_changes_estimand",
+      "first_difference_discards_one_observation_before_alignment",
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "near_zero_does_not_prove_absence",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

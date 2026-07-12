@@ -1,0 +1,311 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+    "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion package candidate",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture_registry_calculation_and_raw_package_reference",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "first-difference stationarity not proven",
+      "estimand changed by differencing",
+      "one-observation loss before missing-value alignment",
+      "noise amplification",
+      "window and revision dependence"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign41-dnk-agricultural-land-broad-money-first-difference-pearson-companion-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "campaign43_first_difference_companion_publication_preflight",
+  "evidence_integrity": {
+    "calculation_result_fingerprint": "sha256:cb26ce5d4949d65ba42df374e8d5310c0132d1d44c70221c678b4fb7f26874da",
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:b74efa65ccfd9ee609916d21872c1692fac0a6bdc818f7a89a9f3393215a140a"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+      "evidence_ref_id": "ev-campaign43-fd-pearson-companion-01",
+      "reproducibility_handle": "raw package reference plus Campaign 43 registry/calculation fingerprints and retained evidence fixture fingerprints",
+      "snapshot_fingerprint": "sha256:7de25d516d3629ea41c1417dcd0cf84c0f1b17aea3907be58185cba0e8a4578d",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "Retained raw Campaign 41 evidence for AG.LND.AGRI.ZS and FM.LBL.BMNY.GD.ZS DNK transformed by Campaign 43 first-difference contract",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "retained_fixture"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 43 first-difference Pearson companion package construction preflight",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:f5077e90cef1231109792b187e416de63d40f652c5c87b60a1e2df0324d5943e",
+    "evidence_references": "sha256:75ea31f32b181d1fbc37d55d308e6c103ef44e475ffd3025c84fd896db589b90",
+    "generated_statements": "sha256:b9be34afcbbc90a5344e3316d46a89f70f8434d86ab30c4f721db168b63208be",
+    "input_set": "sha256:758feeaa108219bbd72d5f268fb5f800238319e8dcd8b97f539538158d463f46",
+    "package_manifest": "sha256:5dfcca7a3b90bf8ab058f20b32555145c684fa004140ad457d67fc3dd222db14",
+    "query_definitions": "sha256:fb4dba34683f18085fe5a6a718e1376e3ed99b9c8bbfd215541ebdd3a5ab2bce"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "DNK",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1991
+      },
+      "dependencies": [
+        "calc-campaign43-fd-pearson-companion-01",
+        "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign43-fd-pearson-companion-01"
+      ],
+      "origin": "constructed_from_campaign43_frozen_registry_and_accepted_calculation_evidence",
+      "statement_id": "stmt-srcpkg-campaign41-dnk-agricultural-land-broad-money-first-difference-pearson-companion-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_observation_fingerprint": "sha256:7de25d516d3629ea41c1417dcd0cf84c0f1b17aea3907be58185cba0e8a4578d",
+        "aligned_transformed_count": 33,
+        "aligned_transformed_periods": [
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023
+        ],
+        "answers_change_co_movement_not_level_co_movement": true,
+        "calculation_result_fingerprint": "sha256:cb26ce5d4949d65ba42df374e8d5310c0132d1d44c70221c678b4fb7f26874da",
+        "campaign43_calculation_result_fingerprint": "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+        "campaign43_candidate_id": "campaign43-fd-pearson-companion-candidate-01",
+        "campaign43_registry_fingerprint": "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+        "campaign43_specification_fingerprint": "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+        "companion_identity": "append-only first-difference Pearson companion; independently retrievable; does not supersede raw package",
+        "does_not_supersede_raw_package": true,
+        "entity_id": "DNK",
+        "expected_transformed_period_count": 34,
+        "family": "Agriculture & Rural Development x Financial Sector",
+        "first_difference_pearson_coefficient": {
+          "canonical": "-0.018892915467",
+          "unit": "dimensionless"
+        },
+        "frequency": "annual",
+        "independent_recompute_coefficient": {
+          "canonical": "-0.018892915467",
+          "unit": "dimensionless"
+        },
+        "interpretation_boundary": {
+          "causal_interpretation_prohibited": true,
+          "descriptive_association_only": true,
+          "near_zero_absence_claim_prohibited": true,
+          "predictive_interpretation_prohibited": true,
+          "significance_claim_prohibited": true,
+          "structural_interpretation_prohibited": true
+        },
+        "limitations": [
+          "First differencing changes the estimand from raw level co-movement to annual-change co-movement.",
+          "First differencing discards one observation before missing-value alignment and therefore changes the period/count basis.",
+          "A near-zero or weakened first-difference coefficient is retained as bounded descriptive robustness evidence; it does not prove absence of a relationship, independence, causality, or structural non-association.",
+          "First differencing does not prove stationarity and may amplify noise.",
+          "Correlation is descriptive finite-window association only; it does not imply causation, mechanism, prediction, forecast, lead-lag structure, recommendation, statistical significance, or investment signal.",
+          "Results are window-, source-revision-, unit-, and transformation-dependent.",
+          "This first-difference companion does not supersede, replace, correct, or mutate the raw Campaign 41 Pearson package."
+        ],
+        "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+        "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+        "method_version": "1.0",
+        "package_fingerprint": "sha256:d000b832b0bff13f65821f62739d50ca94cbd98781aaa2717b835f8955cc4e80",
+        "pearson_coefficient": {
+          "canonical": "-0.018892915467",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1991
+        },
+        "prior_embedded_diagnostic_reconciliation": {
+          "aligned_count_matches_registry": true,
+          "coefficient_match_basis": "exact_decimal_match",
+          "coefficient_matches_prior_diagnostic_at_recorded_precision": true,
+          "expected_registry_aligned_count": 33,
+          "new_companion_coefficient": "-0.018892915467",
+          "prior_embedded_diagnostic_present": true,
+          "prior_embedded_first_difference_coefficient": "-0.018892915467"
+        },
+        "raw_evidence_fixtures": [
+          {
+            "identity": "AG.LND.AGRI.ZS__DNK__1990-2024",
+            "normalized_fingerprint": "sha256:bd5f8ecbdcddeabfd572d3575f5b8d5f816f3526a9bbbce29675291fa32b6b0a",
+            "observed_count": 34,
+            "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/AG.LND.AGRI.ZS__DNK__1990-2024/normalized_observations.json",
+            "selection_fingerprint": "sha256:8764b9f8a237f6b2f26ee743c57388e4c3f1b3b501ac46315a59965ca390966c",
+            "source_raw_fixture_fingerprint": "sha256:096ca90ca993a707617a7218a87fb1ff597a10951366e11edd9ad623eb93e8e9"
+          },
+          {
+            "identity": "FM.LBL.BMNY.GD.ZS__DNK__1990-2024",
+            "normalized_fingerprint": "sha256:8833f55ad34c299ffd0ed1d7d93fc7d443701a3eb88c8e24a8162af6be0858e6",
+            "observed_count": 35,
+            "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/FM.LBL.BMNY.GD.ZS__DNK__1990-2024/normalized_observations.json",
+            "selection_fingerprint": "sha256:221aaf413fe39f11ac579e9c55bfb2613fcea1d976ea559e212bff6e05df5455",
+            "source_raw_fixture_fingerprint": "sha256:f02cd349b66f6f2f9401dcd8305a9ae2840dea48df3abd3777848f2a0522d01f"
+          }
+        ],
+        "raw_package_not_superseded": true,
+        "raw_package_reference": {
+          "package_fingerprint": "sha256:b74efa65ccfd9ee609916d21872c1692fac0a6bdc818f7a89a9f3393215a140a",
+          "package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
+          "payload_package_fingerprint": "sha256:45927ad80b30f984acababea69746b53a32e6048e6fd6315cce92ea8cd2502a2",
+          "source_campaign": "Campaign 41",
+          "superseded_by_this_package": false
+        },
+        "raw_period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "raw_transformation_state": "raw",
+        "raw_units": {
+          "series_a": "% of land area",
+          "series_b": "percent of GDP"
+        },
+        "relationship_distinction": "first_difference_companion_distinct_from_raw_level_pearson_relationship",
+        "series_a": {
+          "code": "AG.LND.AGRI.ZS",
+          "name": "Agricultural land (% of land area)",
+          "transformation": "raw",
+          "transformed_unit": "year-to-year percentage-point change in % of land area",
+          "unit": "% of land area"
+        },
+        "series_b": {
+          "code": "FM.LBL.BMNY.GD.ZS",
+          "name": "Broad money (% of GDP)",
+          "transformation": "raw",
+          "transformed_unit": "year-to-year change in percentage points of GDP",
+          "unit": "percent of GDP"
+        },
+        "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+        "transformation_id": "wdi_annual_scalar_first_difference_v1",
+        "transformation_state": "first_difference",
+        "transformation_version": "1.0",
+        "transformed_coverage_share": {
+          "canonical": "0.970588235294"
+        },
+        "transformed_series_fingerprints": {
+          "input_a": "sha256:5448c8c594d19e7c4d2821fb0eaafcd130e8e08c865134b914298004d52482a7",
+          "input_b": "sha256:3f6fe6bf67874947d9dd0245dd272f0c93e3bdaed9aa355e37b23dfb30507b02"
+        },
+        "transformed_unit_semantics": [
+          "year-to-year percentage-point change in % of land area",
+          "year-to-year change in percentage points of GDP"
+        ],
+        "validation_judgment": "accepted_campaign43_first_difference_pearson_companion_prepublication_candidate",
+        "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+      },
+      "text": "Across aligned annual first differences for DNK from 1991 through 2024, the descriptive Pearson correlation between annual changes in Agricultural land (% of land area) and annual changes in Broad money (% of GDP) is -0.018892915467, using 33 aligned transformed observations. This Campaign 43 package is an append-only first-difference companion to raw package pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1; it does not supersede the raw relationship and makes no causal, predictive, structural, or significance claim."
+    }
+  ],
+  "input_references": [
+    "campaign43_first_difference_companion_publication_preflight",
+    "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+    "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+    "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+    "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+    "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+    "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 41",
+    "source_campaign": "Campaign 43",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-first-difference-pearson-companion-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1",
+      "sha256:823ba8d4d144a9d312b41acc4c7fdcf12a2f928b39d2b7a6c615015506ce95cf",
+      "sha256:140eb37de9ef29a5363e0c60a6d87591b5ecd1c7538b1818abca75da306e2462",
+      "sha256:7de25d516d3629ea41c1417dcd0cf84c0f1b17aea3907be58185cba0e8a4578d"
+    ],
+    "evidence_refs": [
+      "ev-campaign43-fd-pearson-companion-01"
+    ],
+    "lineage_basis": "Campaign 43 companion package construction from frozen registry and accepted calculation evidence; references raw package pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1 from Campaign 41 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "DNK"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+    "period_scope": {
+      "end": 2024,
+      "start": 1991
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_changes_estimand",
+      "first_difference_discards_one_observation_before_alignment",
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "near_zero_does_not_prove_absence",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

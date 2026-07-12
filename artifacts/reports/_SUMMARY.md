@@ -97,6 +97,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `campaign41-generic-correlation-engine-provenance-parameterization-20260712/`
 - `campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/`
 - `campaign42-first-difference-pearson-companion-production-20260712/`
+- `campaign43-coefficient-free-first-difference-companion-registry-20260712/`
 - `canonical-supersession-immutability-durability-gate-20260711/`
 - `correlation-method-v1-and-campaign36-design-20260710/`
 - `correlation-production-operationalization-20260711/`
@@ -127,4 +128,4 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - No folder-specific active work recorded.
 
 ## Needs Attention
-- No folder-specific issues recorded.
+- Campaign 43 registry-freeze report records local verification only; publication/production remains separately unauthorized.
