@@ -1,0 +1,74 @@
+{
+  "all_zero_exit": false,
+  "canonical": {
+    "campaign40_42_package_mutations": [],
+    "expected_count_ok": true,
+    "expected_fingerprint_ok": true,
+    "new_package_files": [],
+    "object_count": 554,
+    "object_file_count": 554,
+    "repository_fingerprint": "sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b"
+  },
+  "checks": [
+    {
+      "cmd": "python3 -m pytest tests/test_relationship_export_v1.py -q",
+      "exit_code": 1,
+      "name": "targeted_relationship_export_tests",
+      "output_tail": "/usr/bin/python3: No module named pytest"
+    },
+    {
+      "cmd": "python3 -m pytest tests/test_postgresql_operational_projection.py -q",
+      "exit_code": 1,
+      "name": "targeted_postgresql_projection_tests",
+      "output_tail": "/usr/bin/python3: No module named pytest"
+    },
+    {
+      "cmd": "python3 -m pytest tests/test_first_difference_pearson_method.py tests/test_campaign42_first_difference_companion_registry.py -q",
+      "exit_code": 1,
+      "name": "targeted_first_difference_method_tests",
+      "output_tail": "/usr/bin/python3: No module named pytest"
+    },
+    {
+      "cmd": "python3 tools/postgresql_operational_projection.py verify",
+      "exit_code": 0,
+      "name": "postgresql_projection_verify",
+      "output_tail": "{\n  \"canonical_object_count\": 554,\n  \"extra_package_ids\": [],\n  \"logical_projection_fingerprint\": \"sha256:6699bcb0dcf5f439a715885c281f3c744a0c4f8ed7a6edc66a953006618b4b4e\",\n  \"missing_package_ids\": [],\n  \"package_fingerprint_failure_ids\": [],\n  \"package_fingerprint_failures\": 0,\n  \"payload_fidelity_failure_ids\": [],\n  \"payload_fidelity_failures\": 0,\n  \"projected_object_count\": 554,\n  \"projection_id\": \"sha256:e971da4bb8e65dba1580908a68b1e836001e5f5f885f615ce0a89e50662f2b54\",\n  \"repository_fingerprint\": \"sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b\",\n  \"state_repository_fingerprint\": \"sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b\",\n  \"valid\": true\n}"
+    },
+    {
+      "cmd": "python3 tools/repository_wide_durability_validator.py --report artifacts/reports/next-production-readiness-decision-20260712/final_verification/repository_wide_durability_validator",
+      "exit_code": 0,
+      "name": "repository_wide_durability_validator",
+      "output_tail": "ath-rates-nor-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1\",\n        \"pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1\",\n        \"pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1\"\n      ],\n      \"statistical_summary_objects\": 4,\n      \"statistical_summary_package_ids\": [\n        \"pkg-object-srcpkg-campaign34-denmark-population-statistical-summary\",\n        \"pkg-object-srcpkg-campaign35-dnk-exports-share-statistical-summary-v2\",\n        \"pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2\",\n        \"pkg-object-srcpkg-campaign35-swe-exports-share-statistical-summary-v2\"\n      ]\n    },\n    \"reviewed_false_positives\": 243,\n    \"sensitive_passes\": true,\n    \"unsafe_absolute_path_dependencies\": 0,\n    \"validator_valid\": false\n  }\n}"
+    },
+    {
+      "cmd": "python3 tools/check_coherence.py --project .",
+      "exit_code": 0,
+      "name": "check_coherence",
+      "output_tail": "WARN: context health: context/active_context.md is 320.9 hours old; generated bundles are task-specific and should be regenerated when needed\ncoherence: 0 block(s), 1 warning(s)"
+    },
+    {
+      "cmd": "python3 tools/context_health.py --project . --json",
+      "exit_code": 0,
+      "name": "context_health",
+      "output_tail": "{\n  \"project\": \"/home/mkkto/srv/EIP/projects/KnowledgeForge\",\n  \"blocks\": [],\n  \"warnings\": [\n    \"context/active_context.md is 320.9 hours old; generated bundles are task-specific and should be regenerated when needed\"\n  ],\n  \"measured\": [\n    {\n      \"path\": \"state/active_goal.md\",\n      \"chars\": 647,\n      \"estimated_tokens\": 162,\n      \"limit_chars\": 6000\n    },\n    {\n      \"path\": \"state/project_state.md\",\n      \"chars\": 895,\n      \"estimated_tokens\": 224,\n      \"limit_chars\": 12000\n    },\n    {\n      \"path\": \"state/architecture.md\",\n      \"chars\": 6945,\n      \"estimated_tokens\": 1737,\n      \"limit_chars\": 12000\n    },\n    {\n      \"path\": \"state/recent_changes.md\",\n      \"chars\": 3917,\n      \"estimated_tokens\": 980,\n      \"limit_chars\": 6000\n    },\n    {\n      \"path\": \"context/latest_handoff.md\",\n      \"chars\": 1823,\n      \"estimated_tokens\": 456,\n      \"warn_chars\": 3000,\n      \"block_chars\": 9000\n    },\n    {\n      \"path\": \"context/active_context.md\",\n      \"chars\": 434,\n      \"estimated_tokens\": 109,\n      \"warn_chars\": 40000,\n      \"block_chars\": 256000,\n      \"generated_artifact\": true\n    }\n  ],\n  \"policy\": {\n    \"active_goal_chars\": 6000,\n    \"project_state_chars\": 12000,\n    \"architecture_chars\": 12000,\n    \"recent_changes_chars\": 6000,\n    \"handoff_warn_chars\": 3000,\n    \"handoff_block_chars\": 9000,\n    \"active_context_warn_chars\": 40000,\n    \"active_context_block_chars\": 256000,\n    \"generated_context_stale_hours\": 168\n  }\n}"
+    },
+    {
+      "cmd": "python3 tools/architecture_reality_audit.py --project . --write-report",
+      "exit_code": 0,
+      "name": "architecture_reality_audit",
+      "output_tail": "Report: /home/mkkto/srv/EIP/projects/KnowledgeForge/artifacts/reports/R-20260712-architecture-reality-audit.md\narchitecture-reality-audit: 0 block(s), 0 warning(s)"
+    },
+    {
+      "cmd": "git diff --check",
+      "exit_code": 2,
+      "name": "git_diff_check",
+      "output_tail": "docs/production_campaign_roadmap.md:931: new blank line at EOF."
+    },
+    {
+      "cmd": "git status --short",
+      "exit_code": 0,
+      "name": "git_status_short",
+      "output_tail": "0260711/verification/full_test_suite.log\n?? artifacts/reports/relationship-export-contract-v1-20260711/verification/git_diff_check.log\n?? artifacts/reports/relationship-export-contract-v1-20260711/verification/python_compile.log\n?? artifacts/reports/relationship-export-contract-v1-20260711/verification/targeted_export_tests.log\n?? artifacts/reports/repository-wide-durability-inventory-supersession-correction-20260711/final_context_verification.log\n?? artifacts/reports/repository-wide-durability-inventory-supersession-correction-20260711/final_verification.log\n?? artifacts/reports/repository-wide-durability-inventory-supersession-correction-20260711/final_verification_after_closeout.log\n?? artifacts/reports/repository-wide-durability-inventory-supersession-correction-20260711/summary_refresh.log\n?? artifacts/reports/reviewed-git-durability-publication-20260712/continuation/\n?? artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/\n?? artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/architecture_audit.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/coherence.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/context_health.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/full_tests.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/git_diff_check.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/targeted_method_v2_tests.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/architecture_audit.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/coherence.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/context_health.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/full_tests.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/targeted_fixture_tests.log\n?? artifacts/tasks/T-20260712-next-production-readiness-decision-before-campaign43.md"
+    }
+  ]
+}

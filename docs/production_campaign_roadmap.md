@@ -920,3 +920,11 @@ Decision A: Campaign 42 first-difference Pearson companion production completed 
 Raw Pearson objects remain 21 and first-difference Pearson companions are separately classified as 8. PostgreSQL projection and Relationship Export Contract v1 independent consumer simulation passed without schema expansion.
 
 Next roadmap step: run a bounded post-Campaign-42 readiness gate before any Campaign 43 or additional production. The gate should decide whether to expand first-difference companions or return to raw Pearson candidate production.
+
+## Post-Campaign-42 next-production readiness gate — 2026-07-12
+
+Decision A: expand first-difference Pearson companions next. This is a sequencing decision only, not authorization to begin Campaign 43.
+
+Basis: adversarial Relationship Export Contract checks showed raw and first-difference relationships can be retrieved separately by supported method/transformation filters and independent consumers can discover classes without campaign numbers or package IDs. Retrieval/export improvement is therefore not the blocker. Corrected raw Pearson policy leaves only four additional raw candidates, all high time-risk, while six Campaign 41 raw relationships have documented high shared-time-trend risk and no first-difference companion treatment.
+
+Next roadmap step: Campaign 43 coefficient-free first-difference companion registry freeze for the six remaining Campaign 41 high-risk raw Pearson relationships, stopping before coefficient calculation or package publication.

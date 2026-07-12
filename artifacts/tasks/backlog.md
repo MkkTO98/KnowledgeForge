@@ -1,5 +1,19 @@
 # Backlog
 
+## Current next production task
+
+### B-20260712-001 — Campaign 43 coefficient-free first-difference companion registry freeze
+
+Priority: P0 for next production sequencing
+Status: pending authorization
+Source: `artifacts/decisions/D-20260712-next-production-readiness-before-campaign43.md`
+
+Objective:
+
+- Freeze a coefficient-free first-difference Pearson companion registry for the six remaining Campaign 41 high-shared-time-trend raw Pearson relationships.
+- Reuse the existing `wdi_annual_scalar_first_difference_pearson_v1@1.0` method contract.
+- Stop before coefficient calculation, package publication, PostgreSQL mutation, or Campaign 43 production execution.
+
 ## Completed
 
 ### B-20260709-004 — Campaign 2: WDI demographic-structure completeness buckets

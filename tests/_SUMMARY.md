@@ -42,6 +42,8 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_campaign38_semantically_distinct_correlation.py`
 - `test_campaign39_heterogeneous_correlation_batch.py`
 - `test_campaign3_wdi_freshness_metadata.py`
+- `test_campaign42_first_difference_companion_production.py`
+- `test_campaign42_first_difference_companion_registry.py`
 - `test_campaign4_wdi_indicator_inventory.py`
 - `test_campaign5_wdi_territorial_coverage.py`
 - `test_campaign6_wdi_temporal_coverage.py`
@@ -49,10 +51,14 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_campaign8_wdi_environment_transfer.py`
 - `test_campaign9_wdi_cross_family_comparison.py`
 - `test_canonical_supersession_immutability_validator.py`
+- `test_coefficient_free_pearson_candidate_registry.py`
 - `test_correlation_batch_engine.py`
+- `test_correlation_engine_provenance_parameterization.py`
 - `test_external_outbox_polling_supersession_v1.py`
+- `test_first_difference_pearson_method.py`
 - `test_knowledge_repository.py`
 - `test_macroforge_neutral_release_adapter_v1.py`
+- `test_operational_state_checkpoint.py`
 - `test_package_construction_validation_v1.py`
 - `test_pearson_correlation_v1.py`
 - `test_postgresql_operational_projection.py`

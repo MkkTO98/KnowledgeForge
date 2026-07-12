@@ -6,6 +6,7 @@ This folder is part of the ProjectForge file-backed operating system for `templa
 ## Contains
 <!-- PROJECTFORGE:BEGIN-CONTAINS -->
 - `external_outbox_sources.json`
+- `protected_state_v1.json`
 - `setup_questionnaire.yaml`
 - `sufficiency_policy.yaml`
 <!-- PROJECTFORGE:END-CONTAINS -->

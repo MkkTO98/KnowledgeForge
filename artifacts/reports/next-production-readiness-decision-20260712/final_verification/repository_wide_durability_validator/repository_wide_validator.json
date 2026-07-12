@@ -1,0 +1,76 @@
+{
+  "actual_package_count": 554,
+  "actual_secret_blocker_count": 0,
+  "blocks": [
+    "untracked_recovery_critical_implementation_not_durable",
+    "operational_state_checkpoint_not_machine_loss_durable"
+  ],
+  "current_state_registry_paths": [
+    "artifacts/reports/canonical-supersession-immutability-durability-gate-20260711/corrected_isolated_model/state/current_state_registry.json"
+  ],
+  "extra_package_files": [],
+  "machine_loss_durable": false,
+  "manifest_object_count": 554,
+  "missing_manifest_packages": [],
+  "operational_checkpoint_status": {
+    "candidates_sample": [
+      {
+        "checkpoint": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate",
+        "checkpoint_id": "20260712-local-operational-state-gate",
+        "covered_operational_state_count": 0,
+        "errors": [],
+        "external_destination_configured": false,
+        "file_count": 79,
+        "machine_loss_durable": false,
+        "missing_operational_state_coverage_count": 0,
+        "missing_operational_state_coverage_sample": [],
+        "postgresql_reconstruction_evidence_present": true,
+        "tested_local_only": true,
+        "total_bytes": 4918310,
+        "valid": true
+      }
+    ],
+    "checkpoint_count": 1,
+    "checkpoint_dir": "artifacts/operational-state-checkpoints",
+    "external_destination_configured": false,
+    "has_valid_local_checkpoint_covering_operational_state": true,
+    "machine_loss_durable": false,
+    "selected_checkpoint": {
+      "checkpoint": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate",
+      "checkpoint_id": "20260712-local-operational-state-gate",
+      "covered_operational_state_count": 0,
+      "errors": [],
+      "external_destination_configured": false,
+      "file_count": 79,
+      "machine_loss_durable": false,
+      "missing_operational_state_coverage_count": 0,
+      "missing_operational_state_coverage_sample": [],
+      "postgresql_reconstruction_evidence_present": true,
+      "tested_local_only": true,
+      "total_bytes": 4918310,
+      "valid": true
+    },
+    "tested_local_only": true
+  },
+  "operational_state_without_backup_count": 0,
+  "operational_state_without_backup_paths_sample": [],
+  "package_dependency_warnings": [],
+  "postgresql_not_sole_backup": true,
+  "reviewed_false_positive_count": 243,
+  "staging_counts_as_durable": false,
+  "supersession_lifecycle_mutation_code_paths": [
+    "tools/repository_wide_durability_validator.py",
+    "tools/canonical_supersession_immutability_validator.py",
+    "tools/external_outbox_poller_v1.py"
+  ],
+  "tested_local_only": true,
+  "unsafe_absolute_path_dependency_count": 0,
+  "untracked_canonical_count": 0,
+  "untracked_canonical_paths_sample": [],
+  "untracked_recovery_critical_implementation_count": 2,
+  "untracked_recovery_critical_implementation_paths_sample": [
+    "artifacts/decisions/D-20260712-next-production-readiness-before-campaign43.md",
+    "artifacts/tasks/T-20260712-next-production-readiness-decision-before-campaign43.md"
+  ],
+  "valid": false
+}

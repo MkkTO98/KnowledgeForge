@@ -80,6 +80,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `R-20260709-validator-coverage-report.md`
 - `R-20260710-architecture-reality-audit.md`
 - `R-20260711-architecture-reality-audit.md`
+- `R-20260712-architecture-reality-audit.md`
 - `campaign33_pre_existing_object_hashes.json`
 - `campaign34-statistical-summary-pilot-evaluation-gate-20260710/`
 - `campaign34-wdi-denmark-population-statistical-summary-20260710/`
@@ -89,12 +90,25 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `campaign38-semantically-distinct-wdi-pearson-correlation-20260711/`
 - `campaign39-heterogeneous-wdi-pearson-batch-20260711/`
 - `campaign40-spec-driven-pearson-production-20260711/`
+- `campaign41-assimilation-pearson-path-to-100-review-20260712/`
+- `campaign41-coefficient-free-pearson-candidate-registry-20260712/`
+- `campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/`
+- `campaign41-frozen-pearson-batch-production-20260712/`
+- `campaign41-generic-correlation-engine-provenance-parameterization-20260712/`
+- `campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/`
+- `campaign42-first-difference-pearson-companion-production-20260712/`
 - `canonical-supersession-immutability-durability-gate-20260711/`
 - `correlation-method-v1-and-campaign36-design-20260710/`
 - `correlation-production-operationalization-20260711/`
 - `durability-destination-decision-pre-staging-remediation-20260712/`
+- `first-difference-pearson-method-contract-validation-20260712/`
 - `macroforge-neutral-release-knowledgeforge-compatibility-pilot-20260711/`
 - `macroforge-release-driven-automation-alignment-20260711/`
+- `next-production-readiness-decision-20260712/`
+- `operational-state-backup-restore-durability-gate-20260712/`
+- `pearson-candidate-policy-refinement-mixed-roadmap-20260712/`
+- `pearson-candidate-policy-v2-consistency-correction-20260712/`
+- `post-campaign42-production-alignment-git-durability-20260712/`
 - `postgresql-acceptance-sequencing-20260710/`
 - `postgresql-projection-implementation-20260710/`
 - `postgresql-realization-decision-20260710/`
@@ -104,6 +118,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `relationship-export-existing-commitments-grep.txt`
 - `repository-scale-doctrine-review-20260710/`
 - `repository-wide-durability-inventory-supersession-correction-20260711/`
+- `reviewed-git-durability-publication-20260712/`
 - `statistical-summary-method-v2-and-campaign35-prep-20260710/`
 - `wdi-observation-fixture-statistical-summary-design-gate-20260710/`
 <!-- PROJECTFORGE:END-CONTAINS -->

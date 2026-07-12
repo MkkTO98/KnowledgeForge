@@ -1,0 +1,876 @@
+{
+  "deterministic_content": {
+    "contract": {
+      "identity": "knowledgeforge_relationship_export_v1@1.0",
+      "name": "knowledgeforge_relationship_export_v1",
+      "version": "1.0"
+    },
+    "freshness": {
+      "logical_projection_fingerprint": "sha256:6699bcb0dcf5f439a715885c281f3c744a0c4f8ed7a6edc66a953006618b4b4e",
+      "projection_id": "sha256:e971da4bb8e65dba1580908a68b1e836001e5f5f885f615ce0a89e50662f2b54",
+      "projection_tool_version": "postgresql_operational_projection_v1",
+      "repository_fingerprint": "sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b",
+      "repository_object_count": 554
+    },
+    "package_identities": [
+      "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign39-demographic-rates-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign39-health-system-coverage-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1",
+      "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1",
+      "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-first-difference-pearson-companion-v1",
+      "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-first-difference-pearson-companion-v1",
+      "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1",
+      "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-first-difference-pearson-companion-v1",
+      "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-first-difference-pearson-companion-v1",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1"
+    ],
+    "query": {
+      "controls": {
+        "include_full_package_payload": true,
+        "include_provenance": true,
+        "limit": 100,
+        "max_result_count": 100,
+        "offset": 0,
+        "only_current_valid_projection": true,
+        "sort": "package_id"
+      },
+      "filters": {
+        "statement_type": "derived_relationship"
+      },
+      "query_contract": "knowledgeforge_relationship_query_v1@1.0"
+    },
+    "query_fingerprint": "sha256:3a0626663f382df0f11de9a4258c1ecabb7806f77afe55ffd83a91f78282d449",
+    "result_count": 29,
+    "result_set_fingerprint": "sha256:c96542c429f69d90659e56cc82cec52aba24eb71d38f8411d4168670629fa766",
+    "results": [
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation",
+            "lifecycle_state": "accepted",
+            "missingness_summary": "0 missing/excluded pairs of 35 expected periods",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "mutable_source_reacquisition_limit",
+              "shared_gdp_denominator",
+              "time_ordering_autocorrelation",
+              "structural_breaks",
+              "no_significance_or_causal_claim"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign36-dnk-exports-imports-share-pearson-correlation-v1"
+            }
+          ],
+          "created_at": "2026-07-10",
+          "created_by": "run_campaign36_dnk_exports_imports_correlation",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-10",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment contract, and calculation evidence",
+              "snapshot_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI NE.EXP.GNFS.ZS and NE.IMP.GNFS.ZS DNK annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 36 first bounded production correlation pilot",
+            "changed_inputs_methods_templates_models_validators": [
+              "wdi_annual_scalar_pearson_correlation_v1"
+            ],
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+            "evidence_references": "sha256:51d3ae190d5facc9a6006d7038b3d4722517632f64c55937abe9a32f6369aff5",
+            "generated_statements": "sha256:cb13eafc26ab41643a306fbc3e8d1e7e4dfe20314dc7a3f01258d7785ab1b63c",
+            "input_set": "sha256:dd9a2ab5863ae2a70ec411e7e0e0cb012748524e705f5e4d7e507436397055bf",
+            "package_manifest": "sha256:6a42d69696af4682113f790a065aa9bed22b181f21fbf728e40a0d5285d45842",
+            "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "DNK",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign36-pearson-correlation-v1",
+                "align-campaign36-dnk-exports-imports-share"
+              ],
+              "evidence_refs": [
+                "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+              ],
+              "origin": "computed_from_retained_dual_series_wdi_fixture",
+              "statement_id": "stmt-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "aligned_periods": [
+                  1990,
+                  1991,
+                  1992,
+                  1993,
+                  1994,
+                  1995,
+                  1996,
+                  1997,
+                  1998,
+                  1999,
+                  2000,
+                  2001,
+                  2002,
+                  2003,
+                  2004,
+                  2005,
+                  2006,
+                  2007,
+                  2008,
+                  2009,
+                  2010,
+                  2011,
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023,
+                  2024
+                ],
+                "calculation_evidence_fingerprint": "sha256:e43f4350e99e73e0557cba370bcd35e4ea3d22d88211d125a37695dafac67033",
+                "canonical_pair_identity": "sha256:4f132f3e9cbe36737d994c12257610b20b4e1b13b7da2d9bc1fae8da4ffee6d5",
+                "combined_aligned_evidence_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f",
+                "combined_raw_evidence_fingerprint": "sha256:bd1fffa81ce48a306ea3ed0a0493ae08ce0a41064e21397241beefe1d7b9a560",
+                "entity_id": "DNK",
+                "entity_name": "Denmark",
+                "excluded_periods": [],
+                "frequency": "annual",
+                "limitations": {
+                  "non_causality": "The coefficient is a deterministic contemporaneous mathematical relationship only and is not a causal, predictive, statistical-significance, economic-significance, investment, trend, stationarity, or mechanism claim.",
+                  "shared_gdp_denominator": "Both indicators use GDP as denominator, so correlation may partly reflect shared-denominator movement.",
+                  "structural_breaks": "The coefficient is scoped only to the retained 1990-2024 aligned window and may not hold across structural breaks.",
+                  "time_ordering_autocorrelation": "Annual macroeconomic series can exhibit time ordering/autocorrelation; no stationarity or independence claim is made."
+                },
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "missing_pair_count": 0,
+                "mutable_source_limitation": "Retained bytes, not mutable WDI API reacquisition, provide exact historical reproducibility.",
+                "package_fingerprint": "sha256:d717f394fe4998adb3b0abd3639c6d6ae9fafc6c3fbe850b8f1719d71d81f8b5",
+                "pearson_coefficient": {
+                  "canonical": "0.988873850642",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "provider_metadata": {
+                  "exports": {
+                    "dataset": "World Development Indicators",
+                    "provider": "World Bank",
+                    "source": "World Development Indicators",
+                    "sourceid": "2",
+                    "wdi_lastupdated": "2026-07-01"
+                  },
+                  "imports": {
+                    "dataset": "World Development Indicators",
+                    "provider": "World Bank",
+                    "source": "World Development Indicators",
+                    "sourceid": "2",
+                    "wdi_lastupdated": "2026-07-01"
+                  }
+                },
+                "selection_fingerprint": "sha256:83b19470d2c7dfde5a17d66ce32f6867285539afeae9bd4bf30fe9d9ec5648a4",
+                "series_a": {
+                  "code": "NE.EXP.GNFS.ZS",
+                  "definition": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "name": "Exports of goods and services (% of GDP)",
+                  "normalized_fingerprint": "sha256:afbc4de1619498ee6716c48f1d53b4591971c54f9cd9b7b0162dee951ac9986b",
+                  "raw_fingerprints": {
+                    "metadata": "sha256:57dae5fa8dbd577b2cff50f9cfe581b3273ecdaa1125c4188164ef9a3cdddff4",
+                    "observations": "sha256:1217c3b6dbd7656137cf76cf7f39746e8fffd293315e4cf42ee5554214d76f3a"
+                  },
+                  "unit": "percent of GDP"
+                },
+                "series_b": {
+                  "code": "NE.IMP.GNFS.ZS",
+                  "definition": "Imports of goods includes change in the economic ownership of goods from non-residents to\n\n\n\n\nresidents of the compiling economy, irrespective of physical movement of goods across national borders. Imports of services includes services provided by non-residents to residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "name": "Imports of goods and services (% of GDP)",
+                  "normalized_fingerprint": "sha256:aa45c162c20c317dd183018ff190fab402270c5b41b3f38dfad7dc953d54a0a3",
+                  "raw_fingerprints": {
+                    "metadata": "sha256:a6e803f45b0ecfabb89dfa448350c47e4994f543f62f46d2060362b91853eb75",
+                    "observations": "sha256:e5700dd43c368020283a03b72146e998303e1111d71441b4610a815619ed4a67"
+                  },
+                  "unit": "percent of GDP"
+                },
+                "transformation_state": {
+                  "series_a": "raw",
+                  "series_b": "raw"
+                },
+                "validation_judgment": "accepted_one_bounded_correlation_object"
+              },
+              "text": "Across the aligned annual DNK observations from 1990 through 2024, the Pearson correlation between exports of goods and services as a percentage of GDP and imports of goods and services as a percentage of GDP is 0.988873850642, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign36_dual_series_wdi_https_fixture",
+            "pearson_correlation_calculation_contract_v1"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 36",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "campaign36_alignment_validation",
+              "campaign36_calculation_evidence",
+              "campaign36_non_promoted_diagnostics"
+            ],
+            "evidence_refs": [
+              "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+            ],
+            "lineage_basis": "fresh Campaign 36 HTTPS acquisition; Campaign 35 observations not reused as substitute",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "DNK"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "shared GDP denominator",
+              "economic flow co-movement possible",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:59adc03ff8eb04ad3f230f46cb1336c2e729d747121b76528c5095c151c50d66",
+        "package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:6a42d69696af4682113f790a065aa9bed22b181f21fbf728e40a0d5285d45842",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "0.988873850642",
+            "unit": "dimensionless"
+          },
+          "entity": "DNK",
+          "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "non_causality": "The coefficient is a deterministic contemporaneous mathematical relationship only and is not a causal, predictive, statistical-significance, economic-significance, investment, trend, stationarity, or mechanism claim.",
+            "shared_gdp_denominator": "Both indicators use GDP as denominator, so correlation may partly reflect shared-denominator movement.",
+            "structural_breaks": "The coefficient is scoped only to the retained 1990-2024 aligned window and may not hold across structural breaks.",
+            "time_ordering_autocorrelation": "Annual macroeconomic series can exhibit time ordering/autocorrelation; no stationarity or independence claim is made."
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "campaign36_alignment_validation",
+              "campaign36_calculation_evidence",
+              "campaign36_non_promoted_diagnostics"
+            ],
+            "evidence_refs": [
+              "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+            ],
+            "lineage_basis": "fresh Campaign 36 HTTPS acquisition; Campaign 35 observations not reused as substitute",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "NE.EXP.GNFS.ZS",
+              "definition": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicat
+
+... [OUTPUT TRUNCATED - 419559 chars omitted out of 469559 total] ...
+
+onship",
+              "structured_payload": {
+                "aligned_observation_fingerprint": "sha256:032782cfd304ceb475e3863aa26257f1941fd2ad2e77bc6a1e35d6fe823b8668",
+                "aligned_transformed_count": 34,
+                "answers_change_co_movement_not_level_co_movement": true,
+                "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+                "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+                "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+                "does_not_supersede_raw_package": true,
+                "entity_id": "SWE",
+                "family": "Financial Sector x Infrastructure",
+                "first_difference_pearson_coefficient": {
+                  "canonical": "0.161115218727",
+                  "unit": "dimensionless"
+                },
+                "frequency": "annual",
+                "independent_recompute_coefficient": "0.161115218727",
+                "limitations": [
+                  "First differencing does not prove stationarity.",
+                  "Correlation does not imply causation.",
+                  "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+                  "Differencing may amplify noise.",
+                  "Results remain window- and revision-dependent.",
+                  "This companion does not supersede or correct the raw Pearson package."
+                ],
+                "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+                "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+                "method_version": "1.0",
+                "missing_and_excluded_periods": {
+                  "series_a_missing_or_excluded": [],
+                  "series_b_missing_or_excluded": []
+                },
+                "package_fingerprint": "sha256:70062acec522711090f76030d331d9eb50b6323cdc4ce80aa08e4b8052a840ca",
+                "pearson_coefficient": {
+                  "canonical": "0.161115218727",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1991
+                },
+                "prior_embedded_diagnostic_reconciliation": {
+                  "aligned_count_matches": true,
+                  "coefficient_matches": true,
+                  "new_companion_coefficient": "0.161115218727",
+                  "prior_embedded_diagnostic_present": true,
+                  "prior_embedded_first_difference_coefficient": "0.161115218727",
+                  "transformation_semantics_matches": true
+                },
+                "raw_evidence_fixtures": {
+                  "series_a": {
+                    "identity": "FS.AST.PRVT.GD.ZS__SWE__1990-2024",
+                    "normalized_fingerprint": "sha256:3537de80559a2063e20bf1d6096f06782b900efc1dd8b9d6c3f0b28d71bae9ec",
+                    "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/FS.AST.PRVT.GD.ZS__SWE__1990-2024/normalized_observations.json",
+                    "selection_fingerprint": "sha256:ef4af114fcdd78c4ca9d2f52108d61f0a206a259e4193910aa69d73d5a207080",
+                    "source_raw_fixture_fingerprint": "sha256:d1dcc37b09df9395b5d484ee15eb704b76cfff029b8e0e2be865b23dc92705f6"
+                  },
+                  "series_b": {
+                    "identity": "IT.CEL.SETS.P2__SWE__1990-2024",
+                    "normalized_fingerprint": "sha256:7689361a24f2545a177de984e566594b9cf1284c7bebf19ea1100c37548bf2bd",
+                    "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.CEL.SETS.P2__SWE__1990-2024/normalized_observations.json",
+                    "selection_fingerprint": "sha256:366793cab68ed9c694dc427389b7dd74647206700903413b2e5543b1c9794772",
+                    "source_raw_fixture_fingerprint": "sha256:6bb198696b6e6c5162ef232acca2c2d5f2c6f472bacabe78fbb19fb5fe408f74"
+                  }
+                },
+                "raw_observation_count": {
+                  "series_a": 35,
+                  "series_b": 35
+                },
+                "raw_package_reference": {
+                  "package_fingerprint": "sha256:148edc14151f053c79283af86b5a3385a566dd8426f9d3dd2ce6b7bdcde35922",
+                  "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+                  "source_campaign": "Campaign 41"
+                },
+                "raw_period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "raw_units": {
+                  "series_a": "percent of GDP",
+                  "series_b": "per 100 people"
+                },
+                "series_a": {
+                  "code": "FS.AST.PRVT.GD.ZS",
+                  "name": "Domestic credit to private sector (% of GDP)",
+                  "transformation": "raw",
+                  "transformed_unit": "year-to-year change in percentage points of GDP",
+                  "unit": "percent of GDP"
+                },
+                "series_b": {
+                  "code": "IT.CEL.SETS.P2",
+                  "name": "Mobile cellular subscriptions (per 100 people)",
+                  "transformation": "raw",
+                  "transformed_unit": "absolute year-to-year change in per 100 people",
+                  "unit": "per 100 people"
+                },
+                "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+                "transformation_id": "wdi_annual_scalar_first_difference_v1",
+                "transformation_state": "first_difference",
+                "transformation_version": "1.0",
+                "transformed_coverage": "1.000000000000",
+                "transformed_observation_count": {
+                  "series_a": 34,
+                  "series_b": 34
+                },
+                "transformed_series_fingerprints": {
+                  "series_a": "sha256:8bed333afd1762c84447888589dc84c29bf27eb2854a2062fc419dee09a3fd13",
+                  "series_b": "sha256:49b70ba21995f53ef35f852750e2477979f006891a8fa7dbe25e6f39300b019a"
+                },
+                "transformed_unit_semantics": {
+                  "series_a": "year-to-year change in percentage points of GDP",
+                  "series_b": "absolute year-to-year change in per 100 people"
+                },
+                "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+                "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+              },
+              "text": "Across aligned annual first differences for SWE from 1991 through 2024, the Pearson correlation between annual changes in Domestic credit to private sector (% of GDP) and annual changes in Mobile cellular subscriptions (per 100 people) is 0.161115218727, using 34 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1 and does not supersede it."
+            }
+          ],
+          "input_references": [
+            "campaign42_first_difference_pearson_companion_production",
+            "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+            "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+            "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+            "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+            "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+            "referenced_raw_source_campaign": "Campaign 41",
+            "source_campaign": "Campaign 42",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+              "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+              "sha256:032782cfd304ceb475e3863aa26257f1941fd2ad2e77bc6a1e35d6fe823b8668"
+            ],
+            "evidence_refs": [
+              "ev-campaign42-fd-pearson-companion-08"
+            ],
+            "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1 from Campaign 41 without supersession",
+            "method_refs": [
+              "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+              "wdi_annual_scalar_first_difference_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "SWE"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+            "period_scope": {
+              "end": 2024,
+              "start": 1991
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "first_difference_does_not_prove_stationarity",
+              "correlation_not_causation",
+              "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+              "does_not_supersede_raw_package"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:5c78b0e1946e94c7b2a6536c00cd6b7f844316b8e08cdffebc08b3246ee61d02",
+        "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1",
+        "package_manifest_fingerprint": "sha256:210f01be2a171e40108602a51f76f6aec758e3ae3eb2cfbf9721ed5938c610b9",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "0.161115218727",
+            "unit": "dimensionless"
+          },
+          "entity": "SWE",
+          "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_identifier": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1991
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+              "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+              "sha256:032782cfd304ceb475e3863aa26257f1941fd2ad2e77bc6a1e35d6fe823b8668"
+            ],
+            "evidence_refs": [
+              "ev-campaign42-fd-pearson-companion-08"
+            ],
+            "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1 from Campaign 41 without supersession",
+            "method_refs": [
+              "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+              "wdi_annual_scalar_first_difference_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "FS.AST.PRVT.GD.ZS",
+              "name": "Domestic credit to private sector (% of GDP)",
+              "transformation": "raw",
+              "transformed_unit": "year-to-year change in percentage points of GDP",
+              "unit": "percent of GDP"
+            },
+            {
+              "code": "IT.CEL.SETS.P2",
+              "name": "Mobile cellular subscriptions (per 100 people)",
+              "transformation": "raw",
+              "transformed_unit": "absolute year-to-year change in per 100 people",
+              "unit": "per 100 people"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "first_difference"
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign41-swe-private-credit-mobile-cellular-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-12",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:f793af561f47ea95b24f12b0ea0fece3d8f99bdc4f18ffe109513ac44412cd66"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-12",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign41-swe_private_credit_mobile_cellular-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:f793af561f47ea95b24f12b0ea0fece3d8f99bdc4f18ffe109513ac44412cd66",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI FS.AST.PRVT.GD.ZS and IT.CEL.SETS.P2 SWE annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:ead738bbc782f9ab16f848ded7ca090f3c92990afeefc0b588414279872c9659",
+            "evidence_references": "sha256:cfd623f222d7cc488c5678815a87b117c8bdc611589ac37b0428b92b5f70d292",
+            "generated_statements": "sha256:22601b8e53738acdba22d6d72e438108db1db590ce4e285633b5fa556e1fccba",
+            "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+            "package_manifest": "sha256:523f08874e363df09f3c7d738f1cc3d1e5bcea38eddd3422b4de79f28e557500",
+            "query_definitions": "sha256:731b7fbe5520b5742b9b6be695d6caea1eeaad69be5597ea6b44ce8ebf9ad969"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "SWE",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign41-swe_private_credit_mobile_cellular-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign41-swe_private_credit_mobile_cellular-fixture"
+              ],
+              "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign41-swe-private-credit-mobile-cellular-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "calculation_evidence_fingerprint": "sha256:d804d7d8f514ea7725d22471a4c0947c6693535a3b705407be2cb49eb501118c",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "not present",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "0.161115218727",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "0.910525305233",
+                  "series_b_vs_time_index": "0.935643810072"
+                },
+                "entity_id": "SWE",
+                "family": "Financial Sector x Infrastructure",
+                "fixture_fingerprint": "sha256:f793af561f47ea95b24f12b0ea0fece3d8f99bdc4f18ffe109513ac44412cd66",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:148edc14151f053c79283af86b5a3385a566dd8426f9d3dd2ce6b7bdcde35922",
+                "pearson_coefficient": {
+                  "canonical": "0.937758474347",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "FS.AST.PRVT.GD.ZS",
+                  "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "frequency": "annual",
+                  "name": "Domestic credit to private sector (% of GDP)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "percent of GDP"
+                },
+                "series_b": {
+                  "code": "IT.CEL.SETS.P2",
+                  "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+                  "frequency": "annual",
+                  "name": "Mobile cellular subscriptions (per 100 people)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "per 100 people"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual SWE observations from 1990 through 2024, the Pearson correlation between Domestic credit to private sector (% of GDP) and Mobile cellular subscriptions (per 100 people) is 0.937758474347, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign41_coefficient_free_pearson_batch",
+            "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 41",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:d804d7d8f514ea7725d22471a4c0947c6693535a3b705407be2cb49eb501118c"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-swe_private_credit_mobile_cellular-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "SWE"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_financial_sector_x_infrastructure_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:7107faefeb68a5bb18d198f7343605ec26b0186baf8bfcdfeee16d75db103b18",
+        "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:523f08874e363df09f3c7d738f1cc3d1e5bcea38eddd3422b4de79f28e557500",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "0.937758474347",
+            "unit": "dimensionless"
+          },
+          "entity": "SWE",
+          "evidence_family": "external_wdi_annual_scalar_financial_sector_x_infrastructure_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "0.161115218727",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "0.910525305233",
+            "series_b_vs_time_index": "0.935643810072"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:d804d7d8f514ea7725d22471a4c0947c6693535a3b705407be2cb49eb501118c"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-swe_private_credit_mobile_cellular-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "FS.AST.PRVT.GD.ZS",
+              "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "frequency": "annual",
+              "name": "Domestic credit to private sector (% of GDP)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "percent of GDP"
+            },
+            {
+              "code": "IT.CEL.SETS.P2",
+              "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+              "frequency": "annual",
+              "name": "Mobile cellular subscriptions (per 100 people)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "per 100 people"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      }
+    ],
+    "stable_order": "package_id_ascending"
+  },
+  "deterministic_content_fingerprint": "sha256:b89850915476d3874e70cd95cff595044563d3e62c7e0fe14070a9c1ab13c342",
+  "operational_metadata": {
+    "created_at": "2026-07-12T19:43:03.366167+00:00",
+    "performance_seconds": {
+      "freshness_validation": 0.056127,
+      "payload_validation": 0.010839,
+      "query_execution": 0.147699,
+      "serialization": 0.015044
+    },
+    "query_shape": {
+      "indexed_generic_filters": 1,
+      "jsonb_payload_scans": 0
+    },
+    "sql_shape_evidence": "internal; table and schema details intentionally excluded from contract",
+    "tool": "relationship_export_v1"
+  }
+}

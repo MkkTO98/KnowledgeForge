@@ -91,6 +91,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260712-campaign42-first-difference-pearson-companion-production.md`
 - `T-20260712-durability-destination-decision-pre-staging-remediation.md`
 - `T-20260712-first-difference-pearson-method-contract-validation.md`
+- `T-20260712-next-production-readiness-decision-before-campaign43.md`
 - `T-20260712-operational-state-backup-restore-durability-gate.md`
 - `T-20260712-pearson-candidate-policy-refinement-mixed-roadmap.md`
 - `T-20260712-pearson-candidate-policy-v2-consistency-correction.md`
