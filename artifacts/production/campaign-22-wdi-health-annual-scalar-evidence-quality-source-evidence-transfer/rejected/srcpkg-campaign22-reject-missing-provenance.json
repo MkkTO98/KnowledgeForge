@@ -1,0 +1,113 @@
+{
+  "reason_categories": [
+    "evidence_contract",
+    "lineage_fingerprint",
+    "provenance"
+  ],
+  "source_evidence_package": {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_snapshot_characteristic",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "source_snapshot_fingerprint": "sha256:ae5b1fbdc74b900e42625a1bad562d74cb43bd3c2c1a37e586753775e440e9ce",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "A malformed Campaign 22 candidate omits provenance fields.",
+      "knowledge_category": "provenance",
+      "payload_metadata": {
+        "topic": "malformed provenance"
+      },
+      "scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "malformed provenance"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:3c9db00aaa0f48d5619ae13f513c6c0724b246a405bdae966811cbbf377099d1",
+      "provenance": "sha256:97542a2f122c9740d5a95858571828e2da2799cb8ab9e1f4cb0d77d5fb3d285f",
+      "reproducibility": "sha256:cc7bcef0d6c579649a76716323136392a96c8bd761d0995103b4b2b137b7320d",
+      "source_payload": "sha256:46efc1ccaa0058816e2106efd4a4098067c43969f993ff12694cc5ef075f414a"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic embedded immutable WDI Health evidence snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign22-reject-missing-provenance",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health",
+      "source_name": "World Bank World Development Indicators audited Health evidence snapshot",
+      "source_version": "sha256:ae5b1fbdc74b900e42625a1bad562d74cb43bd3c2c1a37e586753775e440e9ce"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "stage_reports": {
+      "source": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "evidence_contract",
+            "location": "provenance",
+            "message": "missing required field: provenance",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "provenance",
+            "location": "provenance",
+            "message": "provenance must include a source_snapshot_id",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.provenance",
+            "message": "provenance fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.package_manifest",
+            "message": "package_manifest fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+}

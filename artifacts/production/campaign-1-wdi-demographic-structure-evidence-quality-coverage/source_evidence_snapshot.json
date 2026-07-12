@@ -1,0 +1,66 @@
+{
+  "audited_inventory": {
+    "curated_facts": 1377595,
+    "dataset_releases": 3,
+    "explicit_missing_facts": 281806,
+    "indicators_total": 182,
+    "observed_facts": 1095789,
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990,
+    "pipeline_runs": 8,
+    "source": "World Bank World Development Indicators (WDI)",
+    "territories_total": 217
+  },
+  "campaign_id": "campaign-1-wdi-demographic-structure-evidence-quality-coverage",
+  "demographic_structure_inventory": {
+    "age_sex_cohort_indicators": 68,
+    "cohort_granularity": "five-year age-sex cohorts",
+    "measure_families": [
+      "count",
+      "share"
+    ],
+    "observed_rows": 516460,
+    "open_ended_terminal_age_class": "80+",
+    "sex_dimensions": [
+      "female",
+      "male"
+    ]
+  },
+  "evidence_basis": [
+    "artifacts/reports/R-20260709-knowledge-capability-inventory.md",
+    "artifacts/reports/R-20260709-first-production-campaign-recommendation.md",
+    "artifacts/reports/R-20260709-production-gap-analysis.md",
+    "artifacts/reports/R-20260709-campaign-1-production-design.md"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_demographic_structure",
+  "provenance_observations": {
+    "dataset_release_release_date_null_in_audited_rows": true,
+    "license_note_available": true,
+    "lineage_event_checksum_null_in_audited_rows": true,
+    "raw_artifact_hashes_available": true,
+    "raw_artifact_urls_available": true,
+    "release_keys_available": true,
+    "source_url_available": true,
+    "wdi_lastupdated_metadata_available": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "demographic structure evidence",
+    "frequency": "annual",
+    "indicator_scope": "five-year age-sex cohort count/share indicators plus demographic context indicators retained by the audited evidence inventory",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:d2aa2a909c60556109473ca7e18e76d857a66de94a026d676eac428197886fad",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "validation_observations": {
+    "current_audited_evidence_shape": "annual-scalar",
+    "current_audited_repository_source_scope": "WDI-only",
+    "observation_status_explicit": true,
+    "observed_and_missing_status_available": true
+  }
+}

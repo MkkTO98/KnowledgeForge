@@ -1,0 +1,82 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_energy_mining_snapshot_characteristic",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+      "source_snapshot_fingerprint": "sha256:55c4f17efcb14cf6c18bb69820b6c00a969c39a520d15491fd25dae62665b179",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "Campaign 16 uses 35 annual periods from 1990 through 2024 for Energy & Mining evidence coverage.",
+    "knowledge_category": "coverage",
+    "payload_metadata": {
+      "period_count": 35,
+      "period_end": 2024,
+      "period_start": 1990,
+      "topic": "temporal coverage"
+    },
+    "scope": {
+      "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "temporal coverage"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:82748e5ce1f1731de803db3009c84b5030d55809189c21a92da6612d83a42cb6",
+    "provenance": "sha256:9588542bf86a9176182414c57ca9a4726bda77385eb0c7be06327c538b79ac8c",
+    "reproducibility": "sha256:b336fd85f79a98537c87e173122fa5032ba5e21eaffd91f23757ee5d8efa80c3",
+    "source_payload": "sha256:78f839a07d270479bf542353c3237be5cfb581aa1dcfc0e0781ce9caba01f664"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md",
+      "artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md",
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+      "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/reports/family_closeout_report.md"
+    ],
+    "selection_rule": "Phase 2 Production Roadmap selected WDI Energy & Mining annual-scalar evidence as the next production family after WDI Infrastructure reached Mature",
+    "source_family": "external_wdi_annual_scalar_energy_mining",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:55c4f17efcb14cf6c18bb69820b6c00a969c39a520d15491fd25dae62665b179"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI Energy & Mining evidence snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign16-energy_mining-period-scope",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_energy_mining",
+    "source_name": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+    "source_version": "sha256:55c4f17efcb14cf6c18bb69820b6c00a969c39a520d15491fd25dae62665b179"
+  }
+}

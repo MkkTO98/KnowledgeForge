@@ -1,0 +1,16 @@
+# Generated Knowledge Object Catalogue
+
+| Package | Category | Statement | Fingerprint |
+| --- | --- | --- | --- |
+| pkg-object-srcpkg-campaign1-wdi-source-scope | factual | The Campaign 1 source evidence package is scoped to World Bank WDI annual-scalar demographic-structure evidence. | sha256:79a29ca0ead994652165437f0aedc0fcaf8964644164a304c52cf5223002e299 |
+| pkg-object-srcpkg-campaign1-wdi-indicator-inventory | coverage | The audited WDI inventory records 182 indicators within the current WDI annual-scalar evidence scope. | sha256:25e20c65013e79e564f79b71d51f7d8aaf3e83c108dd9f92bef86d9c86555023 |
+| pkg-object-srcpkg-campaign1-wdi-territory-inventory | coverage | The audited WDI inventory records 217 non-aggregate or country-like territories. | sha256:6cc28e35391b93920f7d801bbdc8fa41e2d0354c7a5b813c7aea04a277fa3475 |
+| pkg-object-srcpkg-campaign1-wdi-period-inventory | coverage | The audited WDI annual-scalar inventory covers 35 annual periods from 1990 through 2024. | sha256:8b463e85a69b259ef0256b1104a35c4e0a32b16d0bc3fc9fd6eecd588b8c55ce |
+| pkg-object-srcpkg-campaign1-wdi-observed-missing-counts | evidence_quality | The audited WDI inventory records 1095789 observed facts and 281806 explicit missing facts within 1377595 curated facts. | sha256:e4b3cf0ed85c36d6ac22508365eab5edec9cca0f8e595381e6de23e925458fc4 |
+| pkg-object-srcpkg-campaign1-wdi-observed-missing-shares | derived | Deterministic Campaign 1 computation records observed-fact share 0.795436 and explicit-missing-fact share 0.204564 for the audited WDI inventory. | sha256:c7fbd6991dd17c07756beb6cecbd82823d87d4c784966e3f3946ab74147ac95a |
+| pkg-object-srcpkg-campaign1-wdi-demographic-cohort-family | classified | The audited demographic-structure inventory records 68 five-year age-sex cohort indicators. | sha256:e52e5cc531895f1ff82c360b794ebacc10b823bd02fa9882a1f74ae27c7b36de |
+| pkg-object-srcpkg-campaign1-wdi-demographic-observed-rows | coverage | The audited demographic-structure inventory records 516460 observed rows for five-year age-sex cohort evidence. | sha256:9a88e09ac69e14a322d3145feae895058b76254f5ea63c97ba188cd52086b4f6 |
+| pkg-object-srcpkg-campaign1-wdi-provenance-availability | provenance | The Campaign 1 WDI evidence snapshot records available source URL, license note, raw artifact hash, raw artifact URL, release-key, and WDI last-updated metadata fields. | sha256:f85e8262b4853c000bb03c9f7e9ce155b597ac79f1ebe6507f242a00c6cd9027 |
+| pkg-object-srcpkg-campaign1-wdi-freshness-metadata | evidence_quality | The audited WDI evidence records release-key and WDI last-updated metadata while audited dataset-release date rows are null. | sha256:67c63ee5ca06e2d467b536d510ea94b18b3edb0c310b496ceb3049d866622e64 |
+| pkg-object-srcpkg-campaign1-wdi-validation-state | methodological | The audited WDI evidence records explicit observed and missing observation status within the annual-scalar evidence shape. | sha256:63081c8bf686ec6c3085a058481e821f4c31ee463fb424db0650094e5657f6d5 |
+| pkg-object-srcpkg-campaign1-wdi-negative-boundary | negative | The Campaign 1 WDI evidence snapshot does not support non-WDI source comparison, revision-aware identity statements, or prospective demographic statements. | sha256:0d468e1391404380d1f135ce454d2352db8b1bf1097f27b755e3bb009812181d |

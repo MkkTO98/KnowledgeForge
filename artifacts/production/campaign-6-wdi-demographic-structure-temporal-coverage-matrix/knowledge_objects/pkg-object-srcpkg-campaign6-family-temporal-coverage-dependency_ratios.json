@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign6-family-temporal-coverage-dependency_ratios"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:48cdec6be8b2754c168f336eaaf4daa82c2ccdc06238a3ff52db1076c60d233c"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign6-family-temporal-coverage-dependency_ratios",
+      "reproducibility_handle": "python3 tools/run_campaign6_wdi_temporal_coverage.py --output artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix",
+      "snapshot_fingerprint": "sha256:48cdec6be8b2754c168f336eaaf4daa82c2ccdc06238a3ff52db1076c60d233c",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_temporal_coverage",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure temporal coverage matrix snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:e459f9e034588ffb3a88a464963762d89af6067d323663ee114c922c3e2ab952",
+    "generated_statements": "sha256:86a6074ca07d93de88f559b7e0426f81feb508c793e6df4733181e5f54accc44",
+    "input_set": "sha256:c18524d5adfb61f4c412574b13f94a410b84f28eb3b29f7bb5f8ccba9bb56db4",
+    "package_manifest": "sha256:c43bd68e51ee32069bd40820ba8d2d438d4ced2bf72d01812a067bd495f1915e",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-6-wdi-demographic-structure-temporal-coverage-matrix",
+        "domain": "WDI annual-scalar demographic-structure temporal coverage matrix",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_temporal_coverage_metadata",
+        "topic": "family temporal coverage dependency_ratios"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign6-family-temporal-coverage-dependency_ratios",
+        "eval-srcpkg-campaign6-family-temporal-coverage-dependency_ratios"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign6-family-temporal-coverage-dependency_ratios"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign6-family-temporal-coverage-dependency_ratios",
+      "statement_type": "coverage",
+      "text": "The Campaign 6 matrix records 33 observed periods and 2 missing periods for the dependency-ratios indicator family over 1990-2024."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign6-family-temporal-coverage-dependency_ratios"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:2cfbbe775d0852913c5bc55ff760f21c209e6d512c65b99762677a44628699ee",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign6-family-temporal-coverage-dependency_ratios",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign6-family-temporal-coverage-dependency_ratios",
+      "pkg-object-srcpkg-campaign6-family-temporal-coverage-dependency_ratios"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign6-family-temporal-coverage-dependency_ratios",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign6-family-temporal-coverage-dependency_ratios",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign6-family-temporal-coverage-dependency_ratios"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign6-family-temporal-coverage-dependency_ratios"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign6-family-temporal-coverage-dependency_ratios",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure temporal coverage matrix",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_temporal_coverage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-6-wdi-demographic-structure-temporal-coverage-matrix",
+      "domain": "WDI annual-scalar demographic-structure temporal coverage matrix",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_temporal_coverage_metadata",
+      "topic": "family temporal coverage dependency_ratios"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

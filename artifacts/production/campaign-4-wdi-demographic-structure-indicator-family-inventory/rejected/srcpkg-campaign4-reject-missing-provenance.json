@@ -1,0 +1,113 @@
+{
+  "reason_categories": [
+    "evidence_contract",
+    "lineage_fingerprint",
+    "provenance"
+  ],
+  "source_evidence_package": {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_demographic_structure_indicator_inventory",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+        "source_snapshot_fingerprint": "sha256:cfccbd3fcaf1f80765cbd9355e98d620ec6c808007692728c5844a664972e376",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "A malformed Campaign 4 candidate omits provenance fields.",
+      "knowledge_category": "provenance",
+      "payload_metadata": {
+        "topic": "malformed provenance"
+      },
+      "scope": {
+        "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+        "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_indicator_inventory_metadata",
+        "topic": "malformed provenance"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:575f4fa586b2b7746c2b64aea9ec4164a02bc3cea44f95f080b70f8dc7628bb2",
+      "provenance": "sha256:2f8c01ed7e000bb2c9b98f5206bc0e81ebc2f3f5f936cdc4521015866aea73da",
+      "reproducibility": "sha256:8cb0a5361e29c14b1d697f457825c218917fe9310493b77e2454a8f5ddfaf7d1",
+      "source_payload": "sha256:59aeffb1d36be241f243bd72b6f0e5cffef601c872ff8a09e7997a32c307ee32"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign4_wdi_indicator_inventory.py --output artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic embedded immutable WDI indicator-family inventory snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign4-reject-missing-provenance",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+      "source_name": "World Bank World Development Indicators audited demographic-structure indicator-family inventory snapshot",
+      "source_version": "sha256:cfccbd3fcaf1f80765cbd9355e98d620ec6c808007692728c5844a664972e376"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "stage_reports": {
+      "source": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "evidence_contract",
+            "location": "provenance",
+            "message": "missing required field: provenance",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "provenance",
+            "location": "provenance",
+            "message": "provenance must include a source_snapshot_id",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.provenance",
+            "message": "provenance fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.package_manifest",
+            "message": "package_manifest fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+}

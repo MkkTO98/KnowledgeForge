@@ -1,0 +1,146 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign3-validation-state"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign3-validation-state",
+      "reproducibility_handle": "python3 tools/run_campaign3_wdi_freshness_metadata.py --output artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+      "snapshot_fingerprint": "sha256:3eed1c1774e7bbb4d4905e2b086bc8492d45f071d9d3f596dd61c4bdc1e4c5fb",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_freshness_metadata",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure freshness metadata snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:c0df5a7eee9064a203fa1f15b863bea9482879c9187f6316ce1be361badf3029",
+    "generated_statements": "sha256:54d6e3d636098ca1ede10c3a5012976173b74d3c073adf46323732a202edb46d",
+    "input_set": "sha256:3d3e4b5eed138abafe1f3e3ae6648ba1bcfd4f7c2dacbde908e219b434d9f342",
+    "package_manifest": "sha256:094786ce99257479fd2cd343a4f9fe176037a9afc840150044d4b0eb485c4c71",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+        "domain": "WDI annual-scalar demographic-structure source freshness and release metadata coverage",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_provenance_and_freshness_metadata",
+        "topic": "validation state"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign3-validation-state",
+        "eval-srcpkg-campaign3-validation-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign3-validation-state"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign3-validation-state",
+      "statement_type": "methodological",
+      "text": "Campaign 3 packages are routed through the existing Source Evidence Package to KnowledgeObjectPackage validation pipeline without validator or package-model modification."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign3-validation-state"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign3-validation-state",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign3-validation-state"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign3-validation-state"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign3-validation-state",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure source freshness and release metadata coverage",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_freshness_metadata",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+      "domain": "WDI annual-scalar demographic-structure source freshness and release metadata coverage",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_provenance_and_freshness_metadata",
+      "topic": "validation state"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

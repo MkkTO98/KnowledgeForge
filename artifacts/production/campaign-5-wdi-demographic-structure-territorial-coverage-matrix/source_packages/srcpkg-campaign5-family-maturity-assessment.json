@@ -1,0 +1,97 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_demographic_structure_territorial_coverage_matrix",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+      "source_snapshot_fingerprint": "sha256:9508f42fb4790e543a734b04763ad6689475e6152073955f879638f1f6e01c10",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "Campaigns 1-5 support classifying the current WDI demographic production family as Stable based on repeated deterministic production evidence.",
+    "knowledge_category": "methodological",
+    "payload_metadata": {
+      "basis": "Campaigns 1-5 repeatedly validated deterministic WDI demographic production through evidence-quality, coverage, completeness, freshness, inventory, and territorial matrix scopes without architecture change.",
+      "classification": "Stable",
+      "further_campaigns": "Campaign 6 primarily adds confidence for temporal coverage within the same family; Campaign 8 is the planned family-broadening gate after Campaigns 6-7 complete.",
+      "insufficiently_exercised": [
+        "multi-reference accepted objects",
+        "later-stage production rejection",
+        "partial provenance disagreement",
+        "non-demographic WDI evidence family transfer"
+      ],
+      "topic": "campaign family maturity",
+      "validated": [
+        "deterministic replay",
+        "fingerprint stability",
+        "provenance completeness",
+        "rejected-candidate preservation",
+        "coverage and missingness knowledge",
+        "classified and factual inventory knowledge",
+        "larger deterministic object sets"
+      ]
+    },
+    "scope": {
+      "campaign_id": "campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+      "domain": "WDI annual-scalar demographic-structure territorial coverage matrix",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_territorial_coverage_metadata",
+      "topic": "campaign family maturity"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:c633eacbd76bda6c905ace747e505b9a1ee95c5ba712985331527cfa7dc01c62",
+    "provenance": "sha256:f69f688b3b130e9828abd6959eda137c95c7164d174ee634884d7cf7740c7993",
+    "reproducibility": "sha256:83116d4977e4498e33f5fea9e9790bf7cc67f563d59a609ba3e9dcb5e8ef99c5",
+    "source_payload": "sha256:8792b44c89a41654ada806fe0b1f274a7443052cc17b56248ff482670610cb18"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+      "artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets/production_quality_report.json",
+      "artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata/production_quality_report.json",
+      "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json"
+    ],
+    "selection_rule": "approved Campaign 5 WDI annual-scalar demographic-structure territorial coverage matrix scope",
+    "source_family": "external_wdi_annual_scalar_demographic_structure_territorial_coverage",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:9508f42fb4790e543a734b04763ad6689475e6152073955f879638f1f6e01c10"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign5_wdi_territorial_coverage.py --output artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI territorial coverage matrix snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign5-family-maturity-assessment",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_demographic_structure_territorial_coverage",
+    "source_name": "World Bank World Development Indicators audited demographic-structure territorial coverage matrix snapshot",
+    "source_version": "sha256:9508f42fb4790e543a734b04763ad6689475e6152073955f879638f1f6e01c10"
+  }
+}

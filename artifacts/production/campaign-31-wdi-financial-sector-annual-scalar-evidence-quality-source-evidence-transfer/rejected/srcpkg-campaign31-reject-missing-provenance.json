@@ -1,0 +1,113 @@
+{
+  "reason_categories": [
+    "evidence_contract",
+    "lineage_fingerprint",
+    "provenance"
+  ],
+  "source_evidence_package": {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_financial_sector_snapshot_characteristic",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "source_snapshot_fingerprint": "sha256:e8fbc93d901e8ebf37186071b8543909cca584be534617ead6c7b3f13007d538",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "A malformed Campaign 31 candidate omits provenance fields.",
+      "knowledge_category": "provenance",
+      "payload_metadata": {
+        "topic": "malformed provenance"
+      },
+      "scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "malformed provenance"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:2dec7a365d1f334b3e557843148db56367962b7e373c00d37ce8851fa0e57af9",
+      "provenance": "sha256:636e760ba006ed761a94e093b390e546998124f3a47128d9afd68642517211aa",
+      "reproducibility": "sha256:a1a8a7a99fb3e0bc5402d772fce42bf9765bd23e45ee4c41f8caf5f2bfeebd1b",
+      "source_payload": "sha256:bcf757fd58125e7427902b8fb5848566b0297e0f6cddcb83d4267e22dd12f3ee"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic embedded immutable WDI Financial Sector evidence snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign31-reject-missing-provenance",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_financial_sector",
+      "source_name": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+      "source_version": "sha256:e8fbc93d901e8ebf37186071b8543909cca584be534617ead6c7b3f13007d538"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "stage_reports": {
+      "source": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "evidence_contract",
+            "location": "provenance",
+            "message": "missing required field: provenance",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "provenance",
+            "location": "provenance",
+            "message": "provenance must include a source_snapshot_id",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.provenance",
+            "message": "provenance fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.package_manifest",
+            "message": "package_manifest fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+}

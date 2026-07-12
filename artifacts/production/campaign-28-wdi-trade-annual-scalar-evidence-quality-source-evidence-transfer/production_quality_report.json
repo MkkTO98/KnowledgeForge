@@ -1,0 +1,339 @@
+{
+  "acceptance_rate": 0.826087,
+  "architectural_continuity_classification": "preserves agreed architecture",
+  "architectural_observations": [
+    "Campaign 28 replicated the mature WDI demographic production methodology for WDI Trade evidence without architecture change.",
+    "The existing package hierarchy, validators, Production Support layer, provenance handling, fingerprinting, reporting, and PEL workflow transferred unchanged.",
+    "Campaign 28 does not exercise multi-reference accepted objects; Trade maturation remains the appropriate continuation."
+  ],
+  "average_evidence_references_per_knowledge_object": 1.0,
+  "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+  "candidate_improvements_discovered": [
+    "No validator, taxonomy, helper extraction, or architecture change is justified by Campaign 28.",
+    "PEL-012 remains monitor because accepted Campaign 28 objects still use one evidence reference each.",
+    "PEL-017 gains cross-family transfer evidence but still requires multi-reference comparison and partial-disagreement tests."
+  ],
+  "cross_campaign_metric_comparison": {
+    "campaign_0": {
+      "accepted": 10,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 3
+    },
+    "campaign_1": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_2": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_28": {
+      "accepted": 19,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_3": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_4": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_5": {
+      "accepted": 20,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_6": {
+      "accepted": 18,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_7": {
+      "accepted": 16,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    }
+  },
+  "cross_family_transfer_assessment": {
+    "campaign1_accepted": 12,
+    "campaign1_rejected": 4,
+    "campaign28_accepted": 19,
+    "campaign28_rejected": 4,
+    "fingerprinting": "unchanged",
+    "knowledge_candidate_package_construction": "unchanged",
+    "knowledge_object_package_construction": "unchanged",
+    "methodology_transfer": "successful",
+    "observed_differences": [
+      {
+        "classification": "Trade-specific",
+        "difference": "Trade source family replaces demographic source family while preserving WDI annual-scalar shape."
+      },
+      {
+        "classification": "evidence-family-specific",
+        "difference": "Trade accepted object count differs from Campaign 1 because Campaign 28 includes metadata-family coverage rows."
+      },
+      {
+        "classification": "KnowledgeForge-wide",
+        "difference": "Determinism, fingerprint stability, provenance completeness, and rejected-candidate preservation recur."
+      },
+      {
+        "classification": "architectural",
+        "difference": "No package, taxonomy, validator, or architecture modification was required."
+      }
+    ],
+    "pel_workflow": "unchanged",
+    "production_metrics": "unchanged",
+    "production_support_layer": "unchanged",
+    "production_workflow": "unchanged",
+    "provenance_handling": "unchanged",
+    "reporting": "unchanged",
+    "source_evidence_package_construction": "unchanged",
+    "validator_behaviour": "unchanged"
+  },
+  "determinism_verification": true,
+  "duplicate_knowledge_objects_detected": false,
+  "final_recommendation": "Continue maturing the WDI Trade annual-scalar family under Operational Expansion; preserve the existing KnowledgeForge production methodology unchanged and populate the Knowledge Repository after validation.",
+  "final_snapshot_fingerprint": "sha256:b6507d8d2645cc7bb87a34b502e13359d7db860013efd2ac3b9e8ea78260d727",
+  "fingerprint_stability": true,
+  "knowledge_candidate_packages_generated": 19,
+  "knowledge_categories_produced": {
+    "classified": 1,
+    "coverage": 9,
+    "derived": 1,
+    "evidence_quality": 1,
+    "factual": 1,
+    "methodological": 2,
+    "negative": 3,
+    "provenance": 1
+  },
+  "knowledge_categories_rejected": {
+    "coverage": 1,
+    "provenance": 2,
+    "trade_rating": 1
+  },
+  "knowledge_object_packages_accepted": 19,
+  "knowledge_repository_impact_assessment": {
+    "confidence_gained_through_additional_evidence": [
+      "deterministic replay remained true for a fourth WDI annual-scalar family entry campaign",
+      "fingerprint stability remained true after repository population",
+      "no duplicate Knowledge Objects were detected",
+      "validator rejections remained active for unsupported inference and malformed provenance/fingerprint cases"
+    ],
+    "evidence_family_coverage_expanded": [
+      "external_wdi_annual_scalar_trade"
+    ],
+    "future_recomputation_avoided_for_downstream_projects": [
+      "downstream projects can reuse Trade source-scope and indicator-count facts without rerunning the campaign snapshot",
+      "downstream projects can reuse Trade observed/missing evidence-grid totals and shares",
+      "downstream projects can reuse Trade unsupported-dimension and provenance-state facts",
+      "future Trade maturation campaigns can build on this family-entry baseline"
+    ],
+    "knowledge_categories_expanded": [
+      "classified",
+      "coverage",
+      "derived",
+      "evidence_quality",
+      "factual",
+      "methodological",
+      "negative",
+      "provenance"
+    ],
+    "new_knowledge_object_package_ids": [
+      "pkg-object-srcpkg-campaign28-deterministic-transfer-method",
+      "pkg-object-srcpkg-campaign28-family-completion-and-attainment-metadata",
+      "pkg-object-srcpkg-campaign28-family-enrollment-metadata",
+      "pkg-object-srcpkg-campaign28-family-equity-and-gender-parity-metadata",
+      "pkg-object-srcpkg-campaign28-family-literacy-and-learning-metadata",
+      "pkg-object-srcpkg-campaign28-family-trade-resources-metadata",
+      "pkg-object-srcpkg-campaign28-replication-contract",
+      "pkg-object-srcpkg-campaign28-trade-evidence-quality-state",
+      "pkg-object-srcpkg-campaign28-trade-family-count",
+      "pkg-object-srcpkg-campaign28-trade-missing-share",
+      "pkg-object-srcpkg-campaign28-trade-observed-missing",
+      "pkg-object-srcpkg-campaign28-trade-observed-share",
+      "pkg-object-srcpkg-campaign28-trade-partial-families",
+      "pkg-object-srcpkg-campaign28-trade-period-scope",
+      "pkg-object-srcpkg-campaign28-trade-provenance-state",
+      "pkg-object-srcpkg-campaign28-trade-source-scope",
+      "pkg-object-srcpkg-campaign28-trade-territory-scope",
+      "pkg-object-srcpkg-campaign28-trade-topic-inventory",
+      "pkg-object-srcpkg-campaign28-trade-unsupported-dimensions"
+    ],
+    "new_knowledge_objects_added": 19,
+    "new_reusable_knowledge_introduced": [
+      "Trade source scope and WDI annual-scalar evidence-shape confirmation",
+      "Trade indicator inventory and metadata-family counts",
+      "Trade observed/missing evidence-grid totals and shares",
+      "Trade provenance-state and validation-state facts",
+      "Trade unsupported-dimension negative knowledge"
+    ],
+    "repository_breadth_gained": [
+      "opened WDI Trade as the next Phase 2 production family",
+      "added five Trade metadata-family coverage slices",
+      "expanded WDI annual-scalar family breadth beyond demographic, Environment, and Infrastructure"
+    ],
+    "repository_composition_changes": {
+      "objects_by_evidence_family_after": {
+        "external_wdi_annual_scalar_agriculture_rural_development": 19,
+        "external_wdi_annual_scalar_agriculture_rural_development_maturation": 36,
+        "external_wdi_annual_scalar_agriculture_rural_development_provenance_lineage": 17,
+        "external_wdi_annual_scalar_education": 19,
+        "external_wdi_annual_scalar_education_maturation": 36,
+        "external_wdi_annual_scalar_education_provenance_lineage": 17,
+        "external_wdi_annual_scalar_energy_mining": 19,
+        "external_wdi_annual_scalar_energy_mining_maturation": 36,
+        "external_wdi_annual_scalar_energy_mining_provenance_lineage": 17,
+        "external_wdi_annual_scalar_environment_provenance_lineage": 17,
+        "external_wdi_annual_scalar_health": 19,
+        "external_wdi_annual_scalar_health_maturation": 36,
+        "external_wdi_annual_scalar_health_provenance_lineage": 17,
+        "external_wdi_annual_scalar_infrastructure": 19,
+        "external_wdi_annual_scalar_infrastructure_maturation": 36,
+        "external_wdi_annual_scalar_infrastructure_provenance_lineage": 17,
+        "external_wdi_annual_scalar_trade": 19
+      },
+      "objects_by_knowledge_category_after": {
+        "classified": 52,
+        "coverage": 155,
+        "derived": 32,
+        "evidence_quality": 17,
+        "factual": 22,
+        "methodological": 57,
+        "negative": 44,
+        "provenance": 17
+      },
+      "objects_by_lifecycle_state_after": {
+        "accepted": 396
+      }
+    },
+    "repository_depth_gained": [
+      "added family-entry evidence-quality/source-evidence baseline for Trade maturation",
+      "preserved source/provenance/validation evidence needed for later Trade inventory and provenance-lineage closeout",
+      "added deterministic transfer evidence after three Mature WDI annual-scalar families"
+    ],
+    "repository_object_count_after": 396,
+    "repository_object_count_before": 377,
+    "repository_quality_concerns_discovered": [],
+    "repository_quality_improvements_achieved": [
+      "repository trade now tracks Trade family-entry objects in indexes",
+      "provenance completeness remained true after campaign population",
+      "fingerprint stability remained true after campaign population",
+      "repository object count increased with no unresolved repository-quality concerns"
+    ]
+  },
+  "knowledge_repository_population": {
+    "manifest_path": "knowledge_repository/manifest.json",
+    "persisted_count": 19,
+    "rejected_count": 0,
+    "repository_fingerprint": "sha256:bbaff7f95bff57738db731dbd0d4173cc1d7a60cb94c90dcb913d85fcad55f89",
+    "repository_root": "knowledge_repository",
+    "total_object_count": 396
+  },
+  "processing_statistics": {
+    "accepted_object_fingerprints": [
+      "sha256:e160105e3ad2c08c0d659e773f0acc2ce6ac51f14c77a851deb7f2ed16fec550",
+      "sha256:ad3470da6dffaf11cec26422bbc595bd1e0193c1b5d76254fe5733e150c0e643",
+      "sha256:1e9ed2ad317a36422fee25de7f70f52b9a98f573e1f2d88392169e6503a6154e",
+      "sha256:c5ef2afb1f4824eac199c0dcbd9bef6c2c9d30f8a2ef178a80d48a5b66008929",
+      "sha256:713984847da03d8bf8dc56916831eebbef92d53f81269ae9e32f815d03514145",
+      "sha256:857e431a5061daae36546de7cb198cdc3f0d4e50be01fe88a822099323b7add5",
+      "sha256:231efa01f1ac2a86fca1d796902290958333e65c59bd10a4283061f46795ce1b",
+      "sha256:0a45a331f02bba9ac98191d58b8a9389603663e197f017c1891a3358290f00af",
+      "sha256:cb629f28cc50b1372d581e57e6eaa6d024562e0ea2bb2da185630c5deadd58b6",
+      "sha256:3032f06698c0a43fd3f595e1e0b1281067f1def6b880621659a2f1e4bf88298e",
+      "sha256:66ff5d2cd3cfe7bdd093318cccd7eb5e756c0d44bc3b1a8ddcf8557f58012b6d",
+      "sha256:3353247d92991ad9e0369dbd890f95efa289ec25a01a775472f2ee5a4ed09988",
+      "sha256:a8c6b0ce92a757d082b929f4728ebf54bf973f5ad956e92cd7ab6e76c88a7b73",
+      "sha256:6c5ed3b0471f6fa9ed7efbdca806331451265e9200fb8801a57b48e344ae7f72",
+      "sha256:d3985e4c30e74f1b3f8bd6241dcededceecd533cce5551f2d5ebe6a3e6b66865",
+      "sha256:cc69e6ba0dee03049d96c302886bfe5317718f2a298262e21a3db728c68ca8f8",
+      "sha256:500692f451945c5b6b383c14948344de23cebaffbd29ae99236ac11e76b28b34",
+      "sha256:99f0a955b1abecaef309fe2b0451883e4d0e0a2f1fd2b5bc82f57a19ad2e8b26",
+      "sha256:f5be3fcd137bc8a4f54478c15f9ee7157407af4499f00e02247ccdacace23df2"
+    ],
+    "missing_share": 0.184252,
+    "observed_share": 0.815748,
+    "snapshot_fingerprint": "sha256:664ec2a0ff204c1403f4289d9bba44ec721ec364a98eceb1bad315bf846b7bd2",
+    "trade_family_count": 5,
+    "trade_indicator_count": 112
+  },
+  "provenance_completeness": true,
+  "rejected_candidates": 4,
+  "rejection_rate": 0.173913,
+  "repository_trade_summary": {
+    "fingerprint_stability": true,
+    "manifest_object_count": 396,
+    "manifest_path": "knowledge_repository/manifest.json",
+    "objects_added_this_campaign": 19,
+    "objects_by_evidence_family": {
+      "external_wdi_annual_scalar_agriculture_rural_development": 19,
+      "external_wdi_annual_scalar_agriculture_rural_development_maturation": 36,
+      "external_wdi_annual_scalar_agriculture_rural_development_provenance_lineage": 17,
+      "external_wdi_annual_scalar_education": 19,
+      "external_wdi_annual_scalar_education_maturation": 36,
+      "external_wdi_annual_scalar_education_provenance_lineage": 17,
+      "external_wdi_annual_scalar_energy_mining": 19,
+      "external_wdi_annual_scalar_energy_mining_maturation": 36,
+      "external_wdi_annual_scalar_energy_mining_provenance_lineage": 17,
+      "external_wdi_annual_scalar_environment_provenance_lineage": 17,
+      "external_wdi_annual_scalar_health": 19,
+      "external_wdi_annual_scalar_health_maturation": 36,
+      "external_wdi_annual_scalar_health_provenance_lineage": 17,
+      "external_wdi_annual_scalar_infrastructure": 19,
+      "external_wdi_annual_scalar_infrastructure_maturation": 36,
+      "external_wdi_annual_scalar_infrastructure_provenance_lineage": 17,
+      "external_wdi_annual_scalar_trade": 19
+    },
+    "objects_by_knowledge_category": {
+      "classified": 52,
+      "coverage": 155,
+      "derived": 32,
+      "evidence_quality": 17,
+      "factual": 22,
+      "methodological": 57,
+      "negative": 44,
+      "provenance": 17
+    },
+    "objects_by_lifecycle_state": {
+      "accepted": 396
+    },
+    "previous_repository_object_count": 377,
+    "provenance_completeness": true,
+    "repository_fingerprint": "sha256:bbaff7f95bff57738db731dbd0d4173cc1d7a60cb94c90dcb913d85fcad55f89",
+    "repository_growth_since_previous_campaign": 19,
+    "total_knowledge_objects": 396,
+    "unresolved_repository_quality_concerns": []
+  },
+  "source_evidence_packages_processed": 19,
+  "validator_failures_by_category": {
+    "constitutional_boundary": 1,
+    "evidence_contract": 2,
+    "lineage_fingerprint": 2,
+    "provenance": 1,
+    "unsupported_inference": 1
+  }
+}

@@ -1,0 +1,3422 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-source-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a7c8eabd4107871f9650f75679d7489a3d02fbddc926559a8635f08b7f4d9edc"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-source-scope",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:a7c8eabd4107871f9650f75679d7489a3d02fbddc926559a8635f08b7f4d9edc",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c29e2ff53e5fcbee014d3c358ef528be39c0acb5dfe425772b40a857bdbc0d8d",
+      "generated_statements": "sha256:c6390d3d7c1c9deee2af7aade48ad09963504316723f91fc1802609c71100a62",
+      "input_set": "sha256:b58e713bf0aa72670b73b2bbdfc88a523c0427b132347d4a584550a3f65163ad",
+      "package_manifest": "sha256:e43128657b45606115008dec391ad6630c2ce2d431b28f22fa98611a1b2e9b62",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "source scope"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-source-scope",
+          "eval-srcpkg-campaign31-financial_sector-source-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-source-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-source-scope",
+        "statement_type": "factual",
+        "text": "The Campaign 31 source evidence package is scoped to World Bank WDI annual-scalar Financial Sector evidence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-source-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:69dc4574e9b804db69df3f45e57c33680cd895338130c3eb5ddde951acf77897",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-source-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-source-scope",
+        "pkg-object-srcpkg-campaign31-financial_sector-source-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-source-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-source-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-source-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-source-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-source-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "source scope"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-topic-inventory"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:1409b06f0567e837f78bdd78b5fc161a2ed68b5340045944dad3086b4b5f966f"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-topic-inventory",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:1409b06f0567e837f78bdd78b5fc161a2ed68b5340045944dad3086b4b5f966f",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:d2d958ee0ebd9f5cf846a62845c61d652d84d6c1a01cb3ce21c2abb1c14dcf3e",
+      "generated_statements": "sha256:8ca31e32eb8d698130022dff9020de338bf9a534d58ab906d4ef3757b0c055d2",
+      "input_set": "sha256:3e3061f4939b2af3595c571dd744e2828dd8aec4a4b885999e046c3672c436c0",
+      "package_manifest": "sha256:1ff285f4913df1565f35a4c9b987685dec65e804494516c66cd3b0ec4320b074",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "indicator coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-topic-inventory",
+          "eval-srcpkg-campaign31-financial_sector-topic-inventory"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-topic-inventory"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-topic-inventory",
+        "statement_type": "coverage",
+        "text": "The audited WDI Financial Sector topic inventory records 112 annual-scalar indicators."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-topic-inventory"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:8b174f3a1c1dccb1c8f974f9d38be1fdf63f010053445d6f9a7b099089707f81",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-topic-inventory",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-topic-inventory",
+        "pkg-object-srcpkg-campaign31-financial_sector-topic-inventory"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-topic-inventory",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-topic-inventory",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-topic-inventory"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-topic-inventory"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-topic-inventory",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "indicator coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-territory-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:8bf9586d7c5c9480ba591338542f7545141086cc050f8afb2b906d3f789a4e54"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-territory-scope",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:8bf9586d7c5c9480ba591338542f7545141086cc050f8afb2b906d3f789a4e54",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:6d7c09739a876d108c58bea6c229a122f7e7e94e8c41e5d4e180670e34466a0f",
+      "generated_statements": "sha256:1db8f70e73c08cbbbea4046bdd92b58938454494c6a74e18db8807a59ab58d7e",
+      "input_set": "sha256:a8d822c38f154f853f955723600f32a20c08892cc3fc8d2b05104c45969195fd",
+      "package_manifest": "sha256:b797e694aaa95e99b3b6513032ccbd3fcaedb4388669d6653773e54b09307df3",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "territory coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-territory-scope",
+          "eval-srcpkg-campaign31-financial_sector-territory-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-territory-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-territory-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 31 uses the same audited WDI territory scope count of 217 non-aggregate or country-like territories."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-territory-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b4098759355bad287361e7cd6b073f81a910003db30af4432d9d96a34629974c",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-territory-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-territory-scope",
+        "pkg-object-srcpkg-campaign31-financial_sector-territory-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-territory-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-territory-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-territory-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-territory-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-territory-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "territory coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-period-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b419a5f1d1c057bcb9d512098135aacbcc6ea747b567cc2040f94970718bddd5"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-period-scope",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:b419a5f1d1c057bcb9d512098135aacbcc6ea747b567cc2040f94970718bddd5",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:043d9d9fe53d62a3488ba06d508ffe05d1cfc4c3d889fb3cd9740acc16c88507",
+      "generated_statements": "sha256:b6f5e3df093671a8927cc513cc4cca4910be1545a5ed88dddb888dbff59a6c7a",
+      "input_set": "sha256:5aa36c8f92b07822110fed13a4f88c7dbd9d935690f4f39fdc95451734e7fad0",
+      "package_manifest": "sha256:95fa68dd79bf37fbf6f0d1fa7e2e098e3838ea519e832aaa87bf29193577ee8d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "temporal coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-period-scope",
+          "eval-srcpkg-campaign31-financial_sector-period-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-period-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-period-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 31 uses 35 annual periods from 1990 through 2024 for Financial Sector evidence coverage."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-period-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:180c8c1c29f207014e2bf4487822045731849a2588daeeca049d2c69e1fe4ce8",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-period-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-period-scope",
+        "pkg-object-srcpkg-campaign31-financial_sector-period-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-period-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-period-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-period-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-period-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-period-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "temporal coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-observed-missing"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:693e6d38e5b69c3b105c3de7c0a6ac4f1ab1768fbd27923fae19f48f065d7fdd"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-observed-missing",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:693e6d38e5b69c3b105c3de7c0a6ac4f1ab1768fbd27923fae19f48f065d7fdd",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:e3fe9c02160f7e924429a0798c5793b9419488373ae0d5990434fa101a441248",
+      "generated_statements": "sha256:51b1dde232c988aa0cb0d5cd0efb8a1fd0675328b6d89de4aa4f6a04fae90deb",
+      "input_set": "sha256:b7bf4b67097b60861db5b15f4933d18ab8d2ba6f14a9bbf61c98c3e76b2c7244",
+      "package_manifest": "sha256:45e80a549390518407d7182d6a834938cd2893923472c09bf7c3eb614dd2494b",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed missing coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-observed-missing",
+          "eval-srcpkg-campaign31-financial_sector-observed-missing"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-observed-missing"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-observed-missing",
+        "statement_type": "coverage",
+        "text": "The Campaign 31 Financial Sector snapshot records 543900 observed cells and 122850 explicit missing cells."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-observed-missing"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:ab0a12873df1dfa62ddd7baa73fafbfd9926642c8e2b796188e5c9db8a10f439",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-observed-missing",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-observed-missing",
+        "pkg-object-srcpkg-campaign31-financial_sector-observed-missing"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-observed-missing",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-observed-missing",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-observed-missing"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-observed-missing"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-observed-missing",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed missing coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-observed-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:01ba3d47b1458cfdb8bb5971cd538b400cf6add6091a280cc26aa308bb935069"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-observed-share",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:01ba3d47b1458cfdb8bb5971cd538b400cf6add6091a280cc26aa308bb935069",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:fd21c7bad09b40d7b896e17d0d5cded99386d0a1e07b2218c0219496a01b5125",
+      "generated_statements": "sha256:b14db20998f6ec9034e03f2d3cc2c49d687784f42d1a730685762924c11ddd7c",
+      "input_set": "sha256:e3bf2afb0058b0b273f5451c43f380fd6f9bd150b8e02aad63dd94ae3f8979c8",
+      "package_manifest": "sha256:7d43a77abb76e0eaed7fe8f717e7770a9d66638125b8d4a580442727c3d687be",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-observed-share",
+          "eval-srcpkg-campaign31-financial_sector-observed-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-observed-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-observed-share",
+        "statement_type": "derived",
+        "text": "The Campaign 31 Financial Sector snapshot has observed cell share 0.815748 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-observed-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:521abd6abd0e00a2c89a90dae663d3341915d15888c0567971d968ffc9e68d3b",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-observed-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-observed-share",
+        "pkg-object-srcpkg-campaign31-financial_sector-observed-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-observed-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-observed-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-observed-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-observed-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-observed-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-missing-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:0b716a2821d994deffa339d5117428e7003ad3568e57ae4d6535a1244b69b7bc"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-missing-share",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:0b716a2821d994deffa339d5117428e7003ad3568e57ae4d6535a1244b69b7bc",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:e42821737b24d86a84f7875b7bb721ae7e048e38934801577e18ef2d893b9742",
+      "generated_statements": "sha256:4ea9d36c59ee6be1a66cb1e78713297dabf6becb5f461ec89c43ac471507a8df",
+      "input_set": "sha256:64012e7c9cae503afbe6c44f8ed1899812af8ed7a3fffe80e770dbd1a907ee63",
+      "package_manifest": "sha256:09e565f79fab46ac5b19f53dc973bc02902e413e57d0da1882d906949ff56961",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "missing share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-missing-share",
+          "eval-srcpkg-campaign31-financial_sector-missing-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-missing-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-missing-share",
+        "statement_type": "negative",
+        "text": "The Campaign 31 Financial Sector snapshot has explicit missing cell share 0.184252 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-missing-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:d5182744ad3bb76694940ce7c5d6f07442f1ca20c7c4d09c9ffeb9ceeb20129d",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-missing-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-missing-share",
+        "pkg-object-srcpkg-campaign31-financial_sector-missing-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-missing-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-missing-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-missing-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-missing-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-missing-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "missing share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-family-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:4df8d28f2937d297f98c54213476375312470df4ef83ba65bc429e9daf5db1ed"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-family-count",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:4df8d28f2937d297f98c54213476375312470df4ef83ba65bc429e9daf5db1ed",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:aee64af81ae74a1305769d15a58713a04a3ee55dca54c7ce8f402886aa144a9e",
+      "generated_statements": "sha256:0b9e166f62ac16abc16b9059abe119369dd67aa94a09ba84f9b219d408493254",
+      "input_set": "sha256:9b20e50e1d78c0b002548c5d624fd4fa6c3f3a7e11c8aee0248c8717722e5de3",
+      "package_manifest": "sha256:699f5abb7034a6456bfba80cce7dacab24ecef0f8c746886e1d6f511a65a48bd",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-family-count",
+          "eval-srcpkg-campaign31-financial_sector-family-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-family-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-family-count",
+        "statement_type": "classified",
+        "text": "The Campaign 31 Financial Sector inventory groups the selected indicators into 5 deterministic metadata families."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-family-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:2ab8ff1263fdc4da4bfe4a1c2acad38836459a2a2263c43ff712bf43ea708362",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-family-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-family-count",
+        "pkg-object-srcpkg-campaign31-financial_sector-family-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-family-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-family-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-family-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-family-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-family-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-partial-families"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:12355b4d2a24f1f3f6c310aa992f8a0469a8ddd3efc96cae385e5c4e9b7c73f1"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-partial-families",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:12355b4d2a24f1f3f6c310aa992f8a0469a8ddd3efc96cae385e5c4e9b7c73f1",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:4c720f7834dbd292480b897f6ee4da7e7e98cd7fcf820a975bbae62abc00bbd2",
+      "generated_statements": "sha256:61e69de7493de0391cca838e44afeca268ea8a464672343f43eac0ff7d458e6f",
+      "input_set": "sha256:f30c88ab32e78db9e067bf998b591a3aec8d8f87497dca31a45f6a4406307f9c",
+      "package_manifest": "sha256:76ad7ba51bfca4b76113820a316e3d20f54a6945a56cc08aefc740379dff282a",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "partial family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-partial-families",
+          "eval-srcpkg-campaign31-financial_sector-partial-families"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-partial-families"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-partial-families",
+        "statement_type": "negative",
+        "text": "Campaign 31 records 5 Financial Sector metadata families with explicit missing cells in the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-partial-families"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:5ab61a2970258b0b534b2f85b4929c161726e2415760897098582cb4b0a28366",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-partial-families",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-partial-families",
+        "pkg-object-srcpkg-campaign31-financial_sector-partial-families"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-partial-families",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-partial-families",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-partial-families"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-partial-families"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-partial-families",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "partial family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-provenance-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:af57642208b0af1cd6e87d2e97f1342eef5e0d0c9366ebab78a9effa53fd27f0"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-provenance-state",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:af57642208b0af1cd6e87d2e97f1342eef5e0d0c9366ebab78a9effa53fd27f0",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:58f8312a665f877d99fbabf8d0f63e4aff04b45a0c8549fb406b20ddf7aced18",
+      "generated_statements": "sha256:d5a08b9ee97fa13a915475599401fb6dd42c6b18700dc68a0d1de95058b69a81",
+      "input_set": "sha256:7e47ec1059b87bc439d644523054d4e7e9ff73f8c87c5b9c1bf4af1f17d46026",
+      "package_manifest": "sha256:eae93e8dbb199ea1d6d4ad669ff5eb180337130d11bb2807311001f004831346",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "provenance state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-provenance-state",
+          "eval-srcpkg-campaign31-financial_sector-provenance-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-provenance-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-provenance-state",
+        "statement_type": "provenance",
+        "text": "Campaign 31 records WDI Financial Sector source URLs, raw artifact URLs, raw artifact hashes, release keys, license notes, and WDI last-updated metadata as available in the evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-provenance-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:bd28a8821ad573781ddda86d892eb2d602d4640ff1ee4d376dd20f7c5e6e880c",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-provenance-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-provenance-state",
+        "pkg-object-srcpkg-campaign31-financial_sector-provenance-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-provenance-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-provenance-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-provenance-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-provenance-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-provenance-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "provenance state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-evidence-quality-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:1a133b87071732a53accfee74e91cfa6cfa2ecc818ebff2f7bb04a5db35dbf9c"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-evidence-quality-state",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:1a133b87071732a53accfee74e91cfa6cfa2ecc818ebff2f7bb04a5db35dbf9c",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:19d0aa75ef47ad6a57c68aaf9af6e5230b816132b331b8eed4db2318d1047c3c",
+      "generated_statements": "sha256:5bfba5e120722fe38bc1e987dbf5acc0ebcc1fed24986e9de674e8a6f7cd67f1",
+      "input_set": "sha256:f92af791f659d7a680c72303697a4c9ed0d3a0c75f8927397343ae61110d607c",
+      "package_manifest": "sha256:ccf03eb3077f0a3753c4a9bbdc95fa86ea4c9779139a09b2f2505194d622d9a6",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "evidence quality state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-evidence-quality-state",
+          "eval-srcpkg-campaign31-financial_sector-evidence-quality-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-evidence-quality-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-evidence-quality-state",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 31 records explicit observation status, observed and missing status, WDI-only source scope, and annual-scalar evidence shape for the Financial Sector family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-evidence-quality-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:f5badda9f8d52393bafdad54fc17bf3eeacaf28218e57dc3954379cedc689af4",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-evidence-quality-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-evidence-quality-state",
+        "pkg-object-srcpkg-campaign31-financial_sector-evidence-quality-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-evidence-quality-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-evidence-quality-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-evidence-quality-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-evidence-quality-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-evidence-quality-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "evidence quality state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-financial_sector-unsupported-dimensions"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:20105e7ca7bf4abbd002ac253e1d56cb1955dcf42ff2127fb3e11f84ea1ff00d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-financial_sector-unsupported-dimensions",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:20105e7ca7bf4abbd002ac253e1d56cb1955dcf42ff2127fb3e11f84ea1ff00d",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:d080279d3e7467d8449e050cf3e59812b8f5f6ecdb6c5256c470f3c1a2cb0e0d",
+      "generated_statements": "sha256:ed932b6950bab2fa5e6cbc25e5b3538066a100d302ce80886e743b34c6fe44b0",
+      "input_set": "sha256:9afdd3e1318812cb823490d3c0e6b46a31bc65ee88f594d0a12b6796860a2436",
+      "package_manifest": "sha256:2b29bc782fe07a0a3131689ebfedded3cdc550ea67f4c7c7bd406bc0d58cad03",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "unsupported dimensions"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-financial_sector-unsupported-dimensions",
+          "eval-srcpkg-campaign31-financial_sector-unsupported-dimensions"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-financial_sector-unsupported-dimensions"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-financial_sector-unsupported-dimensions",
+        "statement_type": "negative",
+        "text": "The Campaign 31 Financial Sector annual-scalar evidence snapshot does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the accepted production scope."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-financial_sector-unsupported-dimensions"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:5b713bc3b251abc4bd3fc56126c62a7eafc3257aae6d685e68edb8a1f001bf94",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-unsupported-dimensions",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-financial_sector-unsupported-dimensions",
+        "pkg-object-srcpkg-campaign31-financial_sector-unsupported-dimensions"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-financial_sector-unsupported-dimensions",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-financial_sector-unsupported-dimensions",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-financial_sector-unsupported-dimensions"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-financial_sector-unsupported-dimensions"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-financial_sector-unsupported-dimensions",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-replication-contract"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6e892698f70af9cf1d91e0366dba07089632f7bd0543695a0b856d176e91169d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-replication-contract",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:6e892698f70af9cf1d91e0366dba07089632f7bd0543695a0b856d176e91169d",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:d7f313745cc91cdb4a8ed36982004cf644fa58efba27d6affc65908769a9aa1f",
+      "generated_statements": "sha256:4d7ea6b16053ed38423500dfabafeacfc8a597868b4c4bd00105f38136493d04",
+      "input_set": "sha256:7c7e08a543769607d3665704c5bfe38bb9c5b2a35c55e1416e6f394f1dab2b84",
+      "package_manifest": "sha256:49d597eb90f3d5e47112d1c350b8efe403e6888026fa4e7bf62fa201c31a934a",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "replication contract"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-replication-contract",
+          "eval-srcpkg-campaign31-replication-contract"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-replication-contract"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-replication-contract",
+        "statement_type": "methodological",
+        "text": "Campaign 31 uses unchanged production workflow, package construction, validator behaviour, Production Support, provenance handling, fingerprinting, reporting, metrics, and Production Evolution Log workflow from the mature WDI demographic production method."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-replication-contract"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:6e34b9fa6ef11b23cb2123631c5315b7dbda08caf416ec585b2f814f77dd3a1d",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-replication-contract",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-replication-contract",
+        "pkg-object-srcpkg-campaign31-replication-contract"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-replication-contract",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-replication-contract",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-replication-contract"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-replication-contract"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-replication-contract",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "replication contract"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-deterministic-transfer-method"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:30b7423db590f9ea9dc8a51a650cf102f2f39dadd731c7bab857ae02159ec580"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-deterministic-transfer-method",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:30b7423db590f9ea9dc8a51a650cf102f2f39dadd731c7bab857ae02159ec580",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:9a48a9b8a3cd6d4637c15515ee4344280a6221e8868aa22df9c9007360ac1aa9",
+      "generated_statements": "sha256:c285b5625def3913c378b8b0bb01b3f1e6f890c32e90051fc4caea2c88945116",
+      "input_set": "sha256:0318aed2ed72126ac2ae642955b22b919fdf05c928f812680d28eda99d680ae3",
+      "package_manifest": "sha256:c5592f7eaa78500d57c6aa907046060f5e98415db3559a7beacf5e6dfe9cc8b0",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "deterministic transfer method"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-deterministic-transfer-method",
+          "eval-srcpkg-campaign31-deterministic-transfer-method"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-deterministic-transfer-method"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-deterministic-transfer-method",
+        "statement_type": "methodological",
+        "text": "Campaign 31 derives Financial Sector evidence-quality and coverage objects deterministically from the immutable Financial Sector evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-deterministic-transfer-method"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:6b576c04dfbb6a25878351b156a652cbb8d9a2865e6aca3d0cfce2fea70e2c2a",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-deterministic-transfer-method",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-deterministic-transfer-method",
+        "pkg-object-srcpkg-campaign31-deterministic-transfer-method"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-deterministic-transfer-method",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-deterministic-transfer-method",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-deterministic-transfer-method"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-deterministic-transfer-method"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-deterministic-transfer-method",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "deterministic transfer method"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-family-enrollment-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:4b6181902e1f06247c71cf4a0d397518aae77a7f81647658b2f362029c7cf39f"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-family-enrollment-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:4b6181902e1f06247c71cf4a0d397518aae77a7f81647658b2f362029c7cf39f",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:e42e863fc37140460423c90d9881723486c14580c35cb9f78be5a35e58aad5dd",
+      "generated_statements": "sha256:5dff5330a571010bcc287e246396b4097239e215417e44b2db20526fa90ebf30",
+      "input_set": "sha256:bef9766bcd23038e268b391f0c4b034225be7c8f457b1059c7836f316cc6e73d",
+      "package_manifest": "sha256:6311bcd79a654cf6d2bf61b21c8d46a63f5e6ad31e0c49bf06e13f3372162ddb",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "financial_sector metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-family-enrollment-metadata",
+          "eval-srcpkg-campaign31-family-enrollment-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-family-enrollment-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-family-enrollment-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 31 records 28 annual-scalar indicators for the enrollment_metadata Financial Sector metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-family-enrollment-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:a63b2af889d2d92a40d70532249ae2ebfab799e802f5a2a5117065d33f185fde",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-family-enrollment-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-family-enrollment-metadata",
+        "pkg-object-srcpkg-campaign31-family-enrollment-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-family-enrollment-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-family-enrollment-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-family-enrollment-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-family-enrollment-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-family-enrollment-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "financial_sector metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-family-completion-and-attainment-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:1be2b43f5cfd82a162868bc74be6274fe36f4690b1fd5e80738ad1ce32bf4eb6"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-family-completion-and-attainment-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:1be2b43f5cfd82a162868bc74be6274fe36f4690b1fd5e80738ad1ce32bf4eb6",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:020c45703df818b7f012311be3a533da3439824107fcb3deb48033dceccc9b9f",
+      "generated_statements": "sha256:26a67ef19c925aa697556c320f134445d9e153ae86c1278cf97848cde74f0887",
+      "input_set": "sha256:2f2bccfa42ed4cd6aca4730f107eec0c92a17f44bcc9f2daf8e13c0b9f92f96d",
+      "package_manifest": "sha256:42d06e3bb1254be13a8db6eb9413647201a997df3cdec4a8f3c62dd7407b7c6d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "financial_sector metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-family-completion-and-attainment-metadata",
+          "eval-srcpkg-campaign31-family-completion-and-attainment-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-family-completion-and-attainment-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-family-completion-and-attainment-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 31 records 24 annual-scalar indicators for the completion_and_attainment_metadata Financial Sector metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-family-completion-and-attainment-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:54bbd7578b30f11396ee152dbd6388562532d2705c57a68ebbd964f171e05631",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-family-completion-and-attainment-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-family-completion-and-attainment-metadata",
+        "pkg-object-srcpkg-campaign31-family-completion-and-attainment-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-family-completion-and-attainment-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-family-completion-and-attainment-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-family-completion-and-attainment-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-family-completion-and-attainment-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-family-completion-and-attainment-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "financial_sector metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-family-financial-sector-resources-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6f1b1e449626fa1320c9326c18e38bf1945908b78f5fdc91830913ee47e7d389"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-family-financial-sector-resources-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:6f1b1e449626fa1320c9326c18e38bf1945908b78f5fdc91830913ee47e7d389",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:0d537b3d409b2fb9040d91e154928dbb2198ecacecf872869defe3cc30904b8f",
+      "generated_statements": "sha256:1e65a763dda7dbde331479d4005aee61b7dc32028da5c0986c3468fbc5f24805",
+      "input_set": "sha256:0a116ef546636580bc2531ad5122f4f21efcb7d24c81b92fa333e9101d66a688",
+      "package_manifest": "sha256:5019ad0a801071ddc6c54bea4c538b975c0700fc3a3f40bea61d189a6a836442",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "financial_sector metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-family-financial-sector-resources-metadata",
+          "eval-srcpkg-campaign31-family-financial-sector-resources-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-family-financial-sector-resources-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-family-financial-sector-resources-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 31 records 20 annual-scalar indicators for the financial_sector_resources_metadata Financial Sector metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-family-financial-sector-resources-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:0c0274adf4cf14dfb47e34e532db6a6b19ace957986c34553f3a0952fbfc211a",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-family-financial-sector-resources-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-family-financial-sector-resources-metadata",
+        "pkg-object-srcpkg-campaign31-family-financial-sector-resources-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-family-financial-sector-resources-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-family-financial-sector-resources-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-family-financial-sector-resources-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-family-financial-sector-resources-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-family-financial-sector-resources-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "financial_sector metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-family-literacy-and-learning-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:79f80f3fdbbc09a3996d289663d3ba276cdaa11676423592915b6631f2ddd47b"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-family-literacy-and-learning-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:79f80f3fdbbc09a3996d289663d3ba276cdaa11676423592915b6631f2ddd47b",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:a8022225f47576d67583225f6b4160097c72eb8d2ddcb17e9d5cc66123f43a78",
+      "generated_statements": "sha256:daee47b44c0303c76661e8cc3e3428269f3bf6eb4ea8fac0d7b2f029da057ce4",
+      "input_set": "sha256:2b0c1b177ffb35000b70c4b4005c7b5402fd9d475b3340b3c32f1f5df99d53a3",
+      "package_manifest": "sha256:1800a70411a016dc97069f5188e75e57d9aa37f63ed5311be1be6b77d0484519",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "financial_sector metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-family-literacy-and-learning-metadata",
+          "eval-srcpkg-campaign31-family-literacy-and-learning-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-family-literacy-and-learning-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-family-literacy-and-learning-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 31 records 22 annual-scalar indicators for the literacy_and_learning_metadata Financial Sector metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-family-literacy-and-learning-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:24dc58666dc6a5648cc44a660f14940d45cc609637f3dc754d0c3c56942f929c",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-family-literacy-and-learning-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-family-literacy-and-learning-metadata",
+        "pkg-object-srcpkg-campaign31-family-literacy-and-learning-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-family-literacy-and-learning-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-family-literacy-and-learning-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-family-literacy-and-learning-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-family-literacy-and-learning-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-family-literacy-and-learning-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "financial_sector metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign31-family-equity-and-gender-parity-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:bfee35f6a4baed7ff915b42de471dc902e0e01cf459c64cf8706fbf91b596a1b"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign31-family-equity-and-gender-parity-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:bfee35f6a4baed7ff915b42de471dc902e0e01cf459c64cf8706fbf91b596a1b",
+        "source_family": "external_wdi_annual_scalar_financial_sector",
+        "source_identity": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:1ca59de00bb5e4336243e3dacc2cf7f3d3c34f110cb6d6c98a918cf3b16b5c67",
+      "generated_statements": "sha256:309b382adcf3533ed7dd5191db95eba1a5f3e5c5173248d06373199c8f69905c",
+      "input_set": "sha256:51f2a36c5578827562b64808cfa9441157ed1b5672323e8dfd3ad2bd2d6e4bce",
+      "package_manifest": "sha256:07ed7b254c36b1807902aef2892d434877fdea16058344b3044e981548a007ca",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "financial_sector metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign31-family-equity-and-gender-parity-metadata",
+          "eval-srcpkg-campaign31-family-equity-and-gender-parity-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign31-family-equity-and-gender-parity-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign31-family-equity-and-gender-parity-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 31 records 18 annual-scalar indicators for the equity_and_gender_parity_metadata Financial Sector metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign31-family-equity-and-gender-parity-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:88aff8aef6c021d519b03491211badc6b9314035c3a9f27b851e06dbaccc816b",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign31-family-equity-and-gender-parity-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign31-family-equity-and-gender-parity-metadata",
+        "pkg-object-srcpkg-campaign31-family-equity-and-gender-parity-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign31-family-equity-and-gender-parity-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign31-family-equity-and-gender-parity-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign31-family-equity-and-gender-parity-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign31-family-equity-and-gender-parity-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign31-family-equity-and-gender-parity-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_financial_sector",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "financial_sector metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

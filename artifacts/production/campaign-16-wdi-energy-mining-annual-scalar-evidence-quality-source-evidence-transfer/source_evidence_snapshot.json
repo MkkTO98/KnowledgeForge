@@ -1,0 +1,125 @@
+{
+  "audited_inventory": {
+    "curated_cells": 836000,
+    "dataset_releases": 3,
+    "explicit_missing_cells": 183760,
+    "indicators_total": 138,
+    "observed_cells": 652240,
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990,
+    "pipeline_runs": 8,
+    "selection_source": "Campaign 16 planning gate and Phase 2 Production Roadmap",
+    "source": "World Bank World Development Indicators (WDI)",
+    "territories_total": 217,
+    "wdi_topic_id": 5,
+    "wdi_topic_name": "Energy & Mining"
+  },
+  "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+  "coverage_metrics": {
+    "complete_family_count": 0,
+    "family_count": 5,
+    "missing_share": 0.219809,
+    "observed_share": 0.780191,
+    "partial_family_count": 5
+  },
+  "energy_mining_family_inventory": {
+    "common_frequency": "annual",
+    "common_shape": "scalar observations",
+    "families": [
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "energy_access_metadata",
+        "indicator_count": 31,
+        "missing_series_cells": 38740,
+        "observed_series_cells": 148260
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "energy_production_metadata",
+        "indicator_count": 28,
+        "missing_series_cells": 31220,
+        "observed_series_cells": 132440
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "energy_use_efficiency_metadata",
+        "indicator_count": 27,
+        "missing_series_cells": 34410,
+        "observed_series_cells": 126830
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "mining_and_extractives_metadata",
+        "indicator_count": 26,
+        "missing_series_cells": 42860,
+        "observed_series_cells": 119750
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "emissions_energy_metadata",
+        "indicator_count": 26,
+        "missing_series_cells": 36530,
+        "observed_series_cells": 124960
+      }
+    ],
+    "family_count": 5,
+    "unsupported_dimensions": [
+      "subnational-region",
+      "scenario",
+      "model-projection",
+      "narrative-assessment"
+    ]
+  },
+  "evidence_basis": [
+    "artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md",
+    "artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md",
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+    "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/reports/family_closeout_report.md"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_energy_mining",
+  "provenance_observations": {
+    "license_note_available": true,
+    "lineage_event_checksum_null_in_audited_rows": false,
+    "raw_artifact_hashes_available": true,
+    "raw_artifact_urls_available": true,
+    "release_keys_available": true,
+    "source_url_available": true,
+    "wdi_lastupdated_metadata_available": true
+  },
+  "replication_contract": {
+    "fingerprinting_unchanged": true,
+    "knowledge_candidate_package_construction_unchanged": true,
+    "knowledge_object_package_construction_unchanged": true,
+    "pel_workflow_unchanged": true,
+    "production_metrics_unchanged": true,
+    "production_support_layer_unchanged": true,
+    "production_workflow_unchanged": true,
+    "provenance_handling_unchanged": true,
+    "reporting_unchanged": true,
+    "source_evidence_package_construction_unchanged": true,
+    "validator_behaviour_unchanged": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "energy and mining evidence",
+    "frequency": "annual",
+    "indicator_scope": "WDI Energy & Mining topic annual-scalar indicators selected by the Phase 2 Production Roadmap",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:55c4f17efcb14cf6c18bb69820b6c00a969c39a520d15491fd25dae62665b179",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "validation_observations": {
+    "current_audited_evidence_shape": "annual-scalar",
+    "current_audited_repository_source_scope": "WDI-only",
+    "methodology_transfer_target": "Campaign 1 WDI demographic evidence-quality and coverage workflow",
+    "observation_status_explicit": true,
+    "observed_and_missing_status_available": true
+  }
+}

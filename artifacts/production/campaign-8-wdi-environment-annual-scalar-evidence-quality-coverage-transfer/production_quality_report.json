@@ -1,0 +1,175 @@
+{
+  "acceptance_rate": 0.826087,
+  "architectural_observations": [
+    "Campaign 8 replicated the mature WDI demographic production methodology for WDI Environment evidence without architecture change.",
+    "The existing package hierarchy, validators, Production Support layer, provenance handling, fingerprinting, reporting, and PEL workflow transferred unchanged.",
+    "Campaign 8 does not exercise multi-reference accepted objects; Campaign 9 remains the appropriate test."
+  ],
+  "average_evidence_references_per_knowledge_object": 1.0,
+  "campaign_id": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+  "candidate_improvements_discovered": [
+    "No validator, taxonomy, helper extraction, or architecture change is justified by Campaign 8.",
+    "PEL-012 remains monitor because accepted Campaign 8 objects still use one evidence reference each.",
+    "PEL-017 gains cross-family transfer evidence but still requires multi-reference comparison and partial-disagreement tests."
+  ],
+  "cross_campaign_metric_comparison": {
+    "campaign_0": {
+      "accepted": 10,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 3
+    },
+    "campaign_1": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_2": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_3": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_4": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_5": {
+      "accepted": 20,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_6": {
+      "accepted": 18,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_7": {
+      "accepted": 16,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_8": {
+      "accepted": 19,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    }
+  },
+  "cross_family_transfer_assessment": {
+    "campaign1_accepted": 12,
+    "campaign1_rejected": 4,
+    "campaign8_accepted": 19,
+    "campaign8_rejected": 4,
+    "fingerprinting": "unchanged",
+    "knowledge_candidate_package_construction": "unchanged",
+    "knowledge_object_package_construction": "unchanged",
+    "methodology_transfer": "successful",
+    "observed_differences": [
+      {
+        "classification": "Environment-specific",
+        "difference": "Environment source family replaces demographic source family while preserving WDI annual-scalar shape."
+      },
+      {
+        "classification": "evidence-family-specific",
+        "difference": "Environment accepted object count differs from Campaign 1 because Campaign 8 includes metadata-family coverage rows."
+      },
+      {
+        "classification": "KnowledgeForge-wide",
+        "difference": "Determinism, fingerprint stability, provenance completeness, and rejected-candidate preservation recur."
+      },
+      {
+        "classification": "architectural",
+        "difference": "No package, taxonomy, validator, or architecture modification was required."
+      }
+    ],
+    "pel_workflow": "unchanged",
+    "production_metrics": "unchanged",
+    "production_support_layer": "unchanged",
+    "production_workflow": "unchanged",
+    "provenance_handling": "unchanged",
+    "reporting": "unchanged",
+    "source_evidence_package_construction": "unchanged",
+    "validator_behaviour": "unchanged"
+  },
+  "determinism_verification": true,
+  "duplicate_knowledge_objects_detected": false,
+  "fingerprint_stability": true,
+  "knowledge_candidate_packages_generated": 19,
+  "knowledge_categories_produced": {
+    "classified": 1,
+    "coverage": 9,
+    "derived": 1,
+    "evidence_quality": 1,
+    "factual": 1,
+    "methodological": 2,
+    "negative": 3,
+    "provenance": 1
+  },
+  "knowledge_categories_rejected": {
+    "coverage": 1,
+    "environment_rating": 1,
+    "provenance": 2
+  },
+  "knowledge_object_packages_accepted": 19,
+  "processing_statistics": {
+    "accepted_object_fingerprints": [
+      "sha256:fa7518e96d60182a993ba7ac1e991294d412779a017e3365561f7b6a3add9970",
+      "sha256:592748040f50a417ed5e0c088d3ef1fa5fd132745744f69d9179fcbfbd0a81ad",
+      "sha256:3c6b5a2499de0a43b4327e9e0a83b5e52c17114cfbc97bb298e0ff16bb8b8576",
+      "sha256:19fc07804d32629792bfbe5cd91c14eea3e01d2da31ed5d252cc165105249641",
+      "sha256:cbfb6c999f5bd126e255b0a1bff4819eee3d258319864440b313eb8e30ca881e",
+      "sha256:3ecfa7d57b10cdb2678bb29ca6df21b6138c4748fa9dc96911e657e2a470a743",
+      "sha256:1e1e5d647e3df16fe5ae760cd9df256da0d6d4a322259bbc8dd9f9fd5fe98e5d",
+      "sha256:293212cc846caaeceedb5782bde07785079c22952ab966af809a65ed96d29ebf",
+      "sha256:b389da9af40193f8ea4a030b8e7591c574bb26f9dce4c8abbca30931b8787245",
+      "sha256:5aa07cfdb810c572ce93934719c86d83c9500dfad5002785d92574b451e46211",
+      "sha256:896135657ea192099b27004c47ba78379d6b6d7f32456d625184107d48ac9f36",
+      "sha256:4d4c2ae461c199bd92d8cb81ce5750f80007d0393e8a4be1c142eac876143f40",
+      "sha256:36317e6972a5a5c7de942634276d3f465e60a56aeebc55a6e911e12de71b59b8",
+      "sha256:e42f69fa7c815b2722d2cb8c58953bf0cb966ecdfd91ad7c4591ba0a5cc04d71",
+      "sha256:6fbaf379b886454b3fe782326e0617f52a46b5934c6101dfdc57464d40e517ad",
+      "sha256:d900711c0184136b5c9ed11e1dafb6825e020f3fab47fa6886294d13178046ee",
+      "sha256:0a9552e56180d5f98ede56de5c90a574145642e7551fdadcf17e0f50c2a19808",
+      "sha256:8136b8f62fc6b3cb7a5008046dc3593de340d4389929d7eca7a9c53c0dff59ee",
+      "sha256:7ebed25dbf6c97951e15176e40ff3802243e94b6fd0cb1eb0cacd8a1e2c16d10"
+    ],
+    "environment_family_count": 5,
+    "environment_indicator_count": 188,
+    "missing_share": 0.228729,
+    "observed_share": 0.771271,
+    "snapshot_fingerprint": "sha256:45e49cdae4af8a738bbe8df674c9fd6ca9b7b11ec0df572d2dc46b682525f1d2"
+  },
+  "provenance_completeness": true,
+  "rejected_candidates": 4,
+  "rejection_rate": 0.173913,
+  "source_evidence_packages_processed": 19,
+  "validator_failures_by_category": {
+    "constitutional_boundary": 1,
+    "evidence_contract": 2,
+    "lineage_fingerprint": 2,
+    "provenance": 1,
+    "unsupported_inference": 1
+  }
+}

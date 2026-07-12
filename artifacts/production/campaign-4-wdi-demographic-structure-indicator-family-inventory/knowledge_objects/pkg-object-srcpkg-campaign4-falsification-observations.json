@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign4-falsification-observations"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:20e87197a68d71fe3902629a9f1367f7aa1f0e4c21f792687e32f77ca161e08e"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign4-falsification-observations",
+      "reproducibility_handle": "python3 tools/run_campaign4_wdi_indicator_inventory.py --output artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "snapshot_fingerprint": "sha256:20e87197a68d71fe3902629a9f1367f7aa1f0e4c21f792687e32f77ca161e08e",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure indicator-family inventory snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:54dc1cfcd1c1434e52143dce4aa2b743817e083fabae9ed9d1c21f614bdaa402",
+    "generated_statements": "sha256:02ddcdd5b31288b212a872137a131c76f09bc50611f3a7968515b5434797efe8",
+    "input_set": "sha256:92a2c3df75c04dc4e0a9587f649fdbc7fc1d1a79ff6f88d509aff0909904036c",
+    "package_manifest": "sha256:958fab8b9e51e4310d5cdb6cdbea965dac9c542d126a5847a0e6d9d85671373b",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+        "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_indicator_inventory_metadata",
+        "topic": "Campaign 4 falsification observations"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign4-falsification-observations",
+        "eval-srcpkg-campaign4-falsification-observations"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign4-falsification-observations"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign4-falsification-observations",
+      "statement_type": "methodological",
+      "text": "Campaign 4 naturally exercises classification consistency, object similarity, factual coverage, classified coverage, and supported-versus-unsupported dimension inventory without adding artificial stress cases."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign4-falsification-observations"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:886026ebc351a9574d61f1c5afeb2cefed32b47eab8ec434b9fb423d875377cc",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign4-falsification-observations",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign4-falsification-observations",
+      "pkg-object-srcpkg-campaign4-falsification-observations"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign4-falsification-observations",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign4-falsification-observations",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign4-falsification-observations"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign4-falsification-observations"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign4-falsification-observations",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_indicator_inventory_metadata",
+      "topic": "Campaign 4 falsification observations"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

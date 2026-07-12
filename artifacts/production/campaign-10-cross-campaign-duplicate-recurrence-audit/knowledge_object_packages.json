@@ -1,0 +1,2942 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-artifact-evidence-base"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:cc836745dc5af1757296d193f5cc9c95fce71f47f7ed5bc61702fc2cb28a435b"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-artifact-evidence-base",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:149223ee68ddf2198fbc3b6107b9a3a10e06b2505d9e1cca67595b08c1e82ee6",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-methodology-stability",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:ba49b4f11d62a87752be4ccc229a1aa4b2609b3a39a0d288d4521063aa6528bf",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:2a340529d3b1081ef8018165af20a299f3d850c0c662adb0bb4f49e361695201",
+      "generated_statements": "sha256:1bc12467ab0b1e404922c767f2c91130e07f1dc9e275ab0bd5f9e388bd322a35",
+      "input_set": "sha256:cc836745dc5af1757296d193f5cc9c95fce71f47f7ed5bc61702fc2cb28a435b",
+      "package_manifest": "sha256:ddd35393144d40789ccf17bd04559b1cdf90dd421e9553496adb58670da5bee7",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "prior campaign artifacts as source evidence"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-artifact-evidence-base",
+          "eval-srcpkg-campaign10-artifact-evidence-base",
+          "ev-srcpkg-campaign10-methodology-stability",
+          "eval-srcpkg-campaign10-methodology-stability"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-artifact-evidence-base",
+          "ev-srcpkg-campaign10-methodology-stability"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-artifact-evidence-base",
+        "statement_type": "provenance",
+        "text": "campaign 10 audited 10 existing production quality reports from Campaigns 0 through 9 without external data access."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-artifact-evidence-base",
+      "srcpkg-campaign10-methodology-stability"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c2756368034a80d9fb8f0a09c818a7b6b1dc453cbfebd11818842f67fab0a610",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-artifact-evidence-base",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-artifact-evidence-base",
+        "pkg-object-srcpkg-campaign10-artifact-evidence-base-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-artifact-evidence-base-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-artifact-evidence-base",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-artifact-evidence-base"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-artifact-evidence-base",
+        "ev-srcpkg-campaign10-methodology-stability"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-artifact-evidence-base",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "prior campaign artifacts as source evidence"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-accepted-object-recurrence"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:c5d624d9eb8f61d62cd5676c2a6264c9248f0e975ba0f008a5f2b4dc3287a74a"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-accepted-object-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:e37f5219fac71628a48c2c5841e14d483f87e6505867116568c07680cce879a8",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-rejected-candidate-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:17b5b9acc9132054247df6ad001a5eff1cb81950b5a25f101ceceb9a1b4b0fd8",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:e7a240c9ec5b438b9fd6ff98005159fa91cbea9ff53cd8c21f676a9f6a8ea482",
+      "generated_statements": "sha256:5d5521a8d41d8e55898e90e0b978d50157001c2a972af5aeddd200e80e57cfb1",
+      "input_set": "sha256:c5d624d9eb8f61d62cd5676c2a6264c9248f0e975ba0f008a5f2b4dc3287a74a",
+      "package_manifest": "sha256:37533a7863502af7bc96ebcae37af482195786006d51d58bc577a11e06cde4be",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "accepted object recurrence"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-accepted-object-recurrence",
+          "eval-srcpkg-campaign10-accepted-object-recurrence",
+          "ev-srcpkg-campaign10-rejected-candidate-recurrence",
+          "eval-srcpkg-campaign10-rejected-candidate-recurrence"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-accepted-object-recurrence",
+          "ev-srcpkg-campaign10-rejected-candidate-recurrence"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-accepted-object-recurrence",
+        "statement_type": "derived",
+        "text": "Campaigns 0 through 9 produced 149 accepted KnowledgeObjectPackages in total."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-accepted-object-recurrence",
+      "srcpkg-campaign10-rejected-candidate-recurrence"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:4350c59bc6e487e781cf7fc69c4fd4678ed026d460312db8b778266cb4eeeb49",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-accepted-object-recurrence",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-accepted-object-recurrence",
+        "pkg-object-srcpkg-campaign10-accepted-object-recurrence-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-accepted-object-recurrence-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-accepted-object-recurrence",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-accepted-object-recurrence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-accepted-object-recurrence",
+        "ev-srcpkg-campaign10-rejected-candidate-recurrence"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-accepted-object-recurrence",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "accepted object recurrence"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-rejected-candidate-recurrence"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:10b5f888ab2b5a3f191fa88fb2624a64dfe29ced45a52ba64e27c99091a3f598"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-rejected-candidate-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:17b5b9acc9132054247df6ad001a5eff1cb81950b5a25f101ceceb9a1b4b0fd8",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-accepted-object-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:e37f5219fac71628a48c2c5841e14d483f87e6505867116568c07680cce879a8",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:0e64212485696f265eddfeda2e3303af72eeeefa127555d3980eadcaa2dceed5",
+      "generated_statements": "sha256:bf2717fd9844d32f1b692b999d6afda1fd0e0c1d73b89cc1b6349bba40d7b7aa",
+      "input_set": "sha256:10b5f888ab2b5a3f191fa88fb2624a64dfe29ced45a52ba64e27c99091a3f598",
+      "package_manifest": "sha256:c1e4d936fe3d815c9711ffa9d70b46b467504b6ace4ee93395fead7b873fab55",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "rejected candidate recurrence"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-rejected-candidate-recurrence",
+          "eval-srcpkg-campaign10-rejected-candidate-recurrence",
+          "ev-srcpkg-campaign10-accepted-object-recurrence",
+          "eval-srcpkg-campaign10-accepted-object-recurrence"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-rejected-candidate-recurrence",
+          "ev-srcpkg-campaign10-accepted-object-recurrence"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-rejected-candidate-recurrence",
+        "statement_type": "evidence_quality",
+        "text": "Campaigns 0 through 9 preserved 36 rejected candidates in total."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-rejected-candidate-recurrence",
+      "srcpkg-campaign10-accepted-object-recurrence"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b88790e3d537c14e14a38e4eafdd9db66af1bdb26866d4c7512d7be0eff4053b",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-rejected-candidate-recurrence",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-rejected-candidate-recurrence",
+        "pkg-object-srcpkg-campaign10-rejected-candidate-recurrence-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-rejected-candidate-recurrence-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-rejected-candidate-recurrence",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-rejected-candidate-recurrence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-rejected-candidate-recurrence",
+        "ev-srcpkg-campaign10-accepted-object-recurrence"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-rejected-candidate-recurrence",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "rejected candidate recurrence"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-determinism-recurrence"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:c9473ff1f74321228ecc818322aac4d9d835227b2f26c898e7a44118eb10c16f"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-determinism-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:fa11627df5a71cca2885c5c3acdf6e8ee7ebe21d55db7df28691ac071585bf9f",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-fingerprint-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:8572b9c46ab62e70de9ac57fae37d0e25522e6c9ce157fa3f81c29882cd62cc8",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:9aecc0663433bb81fab8715f6da8aac666efe52cc617bcfdf07226f9947a2ea6",
+      "generated_statements": "sha256:09247a3fe5419dd81d392a9374af5ad7223bb3c7267503768d9f3b57079379be",
+      "input_set": "sha256:c9473ff1f74321228ecc818322aac4d9d835227b2f26c898e7a44118eb10c16f",
+      "package_manifest": "sha256:2d10d75446cee08c603ea0e8829627ba692e9fd8cc6b15dd6e8d5dee794660be",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "deterministic transformation recurrence"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-determinism-recurrence",
+          "eval-srcpkg-campaign10-determinism-recurrence",
+          "ev-srcpkg-campaign10-fingerprint-recurrence",
+          "eval-srcpkg-campaign10-fingerprint-recurrence"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-determinism-recurrence",
+          "ev-srcpkg-campaign10-fingerprint-recurrence"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-determinism-recurrence",
+        "statement_type": "methodological",
+        "text": "10 audited campaigns reported deterministic replay as true."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-determinism-recurrence",
+      "srcpkg-campaign10-fingerprint-recurrence"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b01a1b93f64dc1f16cafb6b0e0ceab63639df7b1b859d9b7cabacab5413e8416",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-determinism-recurrence",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-determinism-recurrence",
+        "pkg-object-srcpkg-campaign10-determinism-recurrence-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-determinism-recurrence-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-determinism-recurrence",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-determinism-recurrence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-determinism-recurrence",
+        "ev-srcpkg-campaign10-fingerprint-recurrence"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-determinism-recurrence",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "deterministic transformation recurrence"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-fingerprint-recurrence"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:7fc16f07eff75f653015404ecd0247c9afa559fb022db2a1df6e7e0d516c4383"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-fingerprint-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:8572b9c46ab62e70de9ac57fae37d0e25522e6c9ce157fa3f81c29882cd62cc8",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-determinism-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:fa11627df5a71cca2885c5c3acdf6e8ee7ebe21d55db7df28691ac071585bf9f",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:1004007218ff74b50b2cd0479da8467b3155d1a46d83ca7b2ace5a1164718d2c",
+      "generated_statements": "sha256:97fe8da24792be2ed86c41eae837b8cd3b7316acb74db8cecb78776364fdf71d",
+      "input_set": "sha256:7fc16f07eff75f653015404ecd0247c9afa559fb022db2a1df6e7e0d516c4383",
+      "package_manifest": "sha256:6ad45ce3d78f11a14b83256f028129ae54e44134d7c9049df66171747fdb19ec",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "fingerprint stability recurrence"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-fingerprint-recurrence",
+          "eval-srcpkg-campaign10-fingerprint-recurrence",
+          "ev-srcpkg-campaign10-determinism-recurrence",
+          "eval-srcpkg-campaign10-determinism-recurrence"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-fingerprint-recurrence",
+          "ev-srcpkg-campaign10-determinism-recurrence"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-fingerprint-recurrence",
+        "statement_type": "methodological",
+        "text": "10 audited campaigns reported fingerprint stability as true."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-fingerprint-recurrence",
+      "srcpkg-campaign10-determinism-recurrence"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:815a87b4499a1530c931e9d0f7e827ff842acbb5874ef68facb5ba10f12f0e18",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-fingerprint-recurrence",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-fingerprint-recurrence",
+        "pkg-object-srcpkg-campaign10-fingerprint-recurrence-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-fingerprint-recurrence-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-fingerprint-recurrence",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-fingerprint-recurrence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-fingerprint-recurrence",
+        "ev-srcpkg-campaign10-determinism-recurrence"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-fingerprint-recurrence",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "fingerprint stability recurrence"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-duplicate-absence"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:4d162713acecda8f4e1c7e5538e29bf837f1bd3117151c00acc356942f7e5bc6"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-duplicate-absence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:af742b3d6911dd7fdaba4e7f2dd1a05c038fe3f1e964a1d48416c64950abc71e",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-cross-family-duplicate-pressure",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:69a3ee4af95fb54af8e18729621c26d36397befcd27d0dd20fc5f106cf94778d",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:4c9370ce09a57b35c630a4bc4af72ebf7c9b7e07df82a6d0e5a5812381a31eba",
+      "generated_statements": "sha256:d8f119a2df91a7067848115e0e6898852bfde9c128893031733e16fbd04b5469",
+      "input_set": "sha256:4d162713acecda8f4e1c7e5538e29bf837f1bd3117151c00acc356942f7e5bc6",
+      "package_manifest": "sha256:a87a0f42e3c00704070a36fd5b1479484ba8e90d272ed1ddf41f7b3a39faa6fe",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "duplicate pressure"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-duplicate-absence",
+          "eval-srcpkg-campaign10-duplicate-absence",
+          "ev-srcpkg-campaign10-cross-family-duplicate-pressure",
+          "eval-srcpkg-campaign10-cross-family-duplicate-pressure"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-duplicate-absence",
+          "ev-srcpkg-campaign10-cross-family-duplicate-pressure"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-duplicate-absence",
+        "statement_type": "negative",
+        "text": "10 audited campaigns reported no duplicate Knowledge Objects."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-duplicate-absence",
+      "srcpkg-campaign10-cross-family-duplicate-pressure"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:1ed4f46914f98054c88ef254509c1e9984c89c6a11be13f642c1103a3768fddd",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-duplicate-absence",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-duplicate-absence",
+        "pkg-object-srcpkg-campaign10-duplicate-absence-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-duplicate-absence-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-duplicate-absence",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-duplicate-absence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-duplicate-absence",
+        "ev-srcpkg-campaign10-cross-family-duplicate-pressure"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-duplicate-absence",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "duplicate pressure"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-cross-family-duplicate-pressure"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:bce46f8a525fa4e48f46e7617581fee06683f18f9167c0fa4f14e5b5445f6655"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-cross-family-duplicate-pressure",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:69a3ee4af95fb54af8e18729621c26d36397befcd27d0dd20fc5f106cf94778d",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-duplicate-absence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:af742b3d6911dd7fdaba4e7f2dd1a05c038fe3f1e964a1d48416c64950abc71e",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:a443fe25957522cd011791901df5c5994a56599c4813eb20aa8347f8d069b49c",
+      "generated_statements": "sha256:76b85606bee5e44fdd66880f97269a064d8a6a117cecf7d857cc35e54c1eb7d9",
+      "input_set": "sha256:bce46f8a525fa4e48f46e7617581fee06683f18f9167c0fa4f14e5b5445f6655",
+      "package_manifest": "sha256:8dc5bd6bca6481d7de7a4b792c4187f9b00b62c1652601a681ac8e5b338cb012",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "cross-family duplicate pressure"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-cross-family-duplicate-pressure",
+          "eval-srcpkg-campaign10-cross-family-duplicate-pressure",
+          "ev-srcpkg-campaign10-duplicate-absence",
+          "eval-srcpkg-campaign10-duplicate-absence"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-cross-family-duplicate-pressure",
+          "ev-srcpkg-campaign10-duplicate-absence"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-cross-family-duplicate-pressure",
+        "statement_type": "negative",
+        "text": "Campaign 9 exercised cross-family overlap and duplicate pressure without duplicate Knowledge Object detection."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-cross-family-duplicate-pressure",
+      "srcpkg-campaign10-duplicate-absence"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:9c2e4e1349e45198064d48149e67bf3ee782438bff3a1c6b2365418b832defea",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-cross-family-duplicate-pressure",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-cross-family-duplicate-pressure",
+        "pkg-object-srcpkg-campaign10-cross-family-duplicate-pressure-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-cross-family-duplicate-pressure-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-cross-family-duplicate-pressure",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-cross-family-duplicate-pressure"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-cross-family-duplicate-pressure",
+        "ev-srcpkg-campaign10-duplicate-absence"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-cross-family-duplicate-pressure",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "cross-family duplicate pressure"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-validator-recurrence"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:96684593db4a9992977339472671479d7350a4ec0a6d1cbf7aa461c34df8f708"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-validator-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:7a260684a7ebaf51f1347271291ac6d8e94cf612110c547af88643f22637861e",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-rejected-candidate-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:17b5b9acc9132054247df6ad001a5eff1cb81950b5a25f101ceceb9a1b4b0fd8",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:a413948e1ff34e0606e33371dfda1fd1edc08374f1e538c80a36111113553e10",
+      "generated_statements": "sha256:0bfabcb722d39b58d7500b68cb714373d636f5caf4114f68aaef4e1b4feacc0b",
+      "input_set": "sha256:96684593db4a9992977339472671479d7350a4ec0a6d1cbf7aa461c34df8f708",
+      "package_manifest": "sha256:b131847a185badc8c3c9a92d21c60135941e4aeb816bf091fba6d607bafd3274",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "repeated validator failures"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-validator-recurrence",
+          "eval-srcpkg-campaign10-validator-recurrence",
+          "ev-srcpkg-campaign10-rejected-candidate-recurrence",
+          "eval-srcpkg-campaign10-rejected-candidate-recurrence"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-validator-recurrence",
+          "ev-srcpkg-campaign10-rejected-candidate-recurrence"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-validator-recurrence",
+        "statement_type": "evidence_quality",
+        "text": "validator failure totals recurred across audited campaigns with categories ['constitutional_boundary', 'evidence_contract', 'lineage_fingerprint', 'provenance', 'unsupported_inference']."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-validator-recurrence",
+      "srcpkg-campaign10-rejected-candidate-recurrence"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:ec02d7c3ef9b416d9c3229c2ae74a5a39cad585f6eff086738d8dd549b793b03",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-validator-recurrence",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-validator-recurrence",
+        "pkg-object-srcpkg-campaign10-validator-recurrence-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-validator-recurrence-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-validator-recurrence",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-validator-recurrence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-validator-recurrence",
+        "ev-srcpkg-campaign10-rejected-candidate-recurrence"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-validator-recurrence",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "repeated validator failures"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-production-support-reuse"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b375dfdf60711bf86525774adecbb472f385818e15b0e2e4240b9b4754d8e438"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-production-support-reuse",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:40c0e05a301ac3c947776fc38f5c74d81a8946097f7bf41ea2d4b3fd2d97b40e",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-helper-extraction-absence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:3bb6ed17134e6a94cfd8896d66d0cb9ac549caeec215d31369c16f9b78622eae",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:80e4406a4e41ac481be73bd8ec0546ae6cf74965d5e55d05abfef66be95c866e",
+      "generated_statements": "sha256:619e77e6a69e1d582b82ff420752cbf8a48b394610f99697f97fa08221750c23",
+      "input_set": "sha256:b375dfdf60711bf86525774adecbb472f385818e15b0e2e4240b9b4754d8e438",
+      "package_manifest": "sha256:3b3ae5ea995f01ece804a36e848c6e0ef612ea5997b8379225fda18bb5d42351",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "Production Support recurrence"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-production-support-reuse",
+          "eval-srcpkg-campaign10-production-support-reuse",
+          "ev-srcpkg-campaign10-helper-extraction-absence",
+          "eval-srcpkg-campaign10-helper-extraction-absence"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-production-support-reuse",
+          "ev-srcpkg-campaign10-helper-extraction-absence"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-production-support-reuse",
+        "statement_type": "methodological",
+        "text": "Campaigns 4 through 9 used the Production Support layer after the bounded proof without contract change."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-production-support-reuse",
+      "srcpkg-campaign10-helper-extraction-absence"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:ac500a3377f76afff32e7316037354edc13c378ca4d8a0176cfaae0abac4bc2f",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-production-support-reuse",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-production-support-reuse",
+        "pkg-object-srcpkg-campaign10-production-support-reuse-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-production-support-reuse-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-production-support-reuse",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-production-support-reuse"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-production-support-reuse",
+        "ev-srcpkg-campaign10-helper-extraction-absence"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-production-support-reuse",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "Production Support recurrence"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-helper-extraction-absence"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b2a30f325d0aa902d2157738fccd88c1f0ad8a61c0fbde320602de79d3f08d02"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-helper-extraction-absence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:3bb6ed17134e6a94cfd8896d66d0cb9ac549caeec215d31369c16f9b78622eae",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-production-support-reuse",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:40c0e05a301ac3c947776fc38f5c74d81a8946097f7bf41ea2d4b3fd2d97b40e",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:908332446744d937b9d26c2f237e92d6317e069a06e0e042a6304a6d7a71cc18",
+      "generated_statements": "sha256:d674b42300d23bcdc16e77032f4720e81867c37ccbb96bd4130054a42f919a29",
+      "input_set": "sha256:b2a30f325d0aa902d2157738fccd88c1f0ad8a61c0fbde320602de79d3f08d02",
+      "package_manifest": "sha256:fd47ab407568662fa11b25e40bbe493053af07707dcdf0f3769272f17316712b",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "helper extraction pressure"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-helper-extraction-absence",
+          "eval-srcpkg-campaign10-helper-extraction-absence",
+          "ev-srcpkg-campaign10-production-support-reuse",
+          "eval-srcpkg-campaign10-production-support-reuse"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-helper-extraction-absence",
+          "ev-srcpkg-campaign10-production-support-reuse"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-helper-extraction-absence",
+        "statement_type": "negative",
+        "text": "Campaign 10 found no new helper extraction justified by Campaigns 0 through 9 production evidence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-helper-extraction-absence",
+      "srcpkg-campaign10-production-support-reuse"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:e411258b1f90b49389dd89ff520a92a27a21ce165dab511ca3464f6b0e0fccf3",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-helper-extraction-absence",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-helper-extraction-absence",
+        "pkg-object-srcpkg-campaign10-helper-extraction-absence-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-helper-extraction-absence-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-helper-extraction-absence",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-helper-extraction-absence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-helper-extraction-absence",
+        "ev-srcpkg-campaign10-production-support-reuse"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-helper-extraction-absence",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "helper extraction pressure"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-taxonomy-recurrence"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:4c65dc0a327963e9c2ec3db8cec575b19a25493049e6c4aa8be05fcc4f1891f0"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-taxonomy-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:6f6f0e202272319f5ecd3c6ea951ef04d2c8cc76030080e1588cb1cb006da872",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-architecture-pressure-absence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:4a8729b14f7afd81a9bede828b7a74ba982f1ffcd7b055d781ff9a5e55fbe486",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:caa490add3655612babe46b37dea136b4e3a661b5d4d9ccfe30663f432c7e8a5",
+      "generated_statements": "sha256:7497cea6be667ccf9a9db42c30fbf76c3741bbb8f22cdf0cd71eaa45ee804ea9",
+      "input_set": "sha256:4c65dc0a327963e9c2ec3db8cec575b19a25493049e6c4aa8be05fcc4f1891f0",
+      "package_manifest": "sha256:28162b939583257db2ad251a62d8ed1c2469325b4e55c36a17f29d5b1a4566dd",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "taxonomy sufficiency"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-taxonomy-recurrence",
+          "eval-srcpkg-campaign10-taxonomy-recurrence",
+          "ev-srcpkg-campaign10-architecture-pressure-absence",
+          "eval-srcpkg-campaign10-architecture-pressure-absence"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-taxonomy-recurrence",
+          "ev-srcpkg-campaign10-architecture-pressure-absence"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-taxonomy-recurrence",
+        "statement_type": "coverage",
+        "text": "accepted objects across audited campaigns used existing categories ['classified', 'coverage', 'derived', 'evidence_quality', 'factual', 'methodological', 'negative', 'provenance'] without taxonomy change."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-taxonomy-recurrence",
+      "srcpkg-campaign10-architecture-pressure-absence"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:795e2c3096099faaa5dc4eb35ede761c42670ed3b1c2c5eedaa6a3d56c3d1f1e",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-taxonomy-recurrence",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-taxonomy-recurrence",
+        "pkg-object-srcpkg-campaign10-taxonomy-recurrence-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-taxonomy-recurrence-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-taxonomy-recurrence",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-taxonomy-recurrence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-taxonomy-recurrence",
+        "ev-srcpkg-campaign10-architecture-pressure-absence"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-taxonomy-recurrence",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "taxonomy sufficiency"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-architecture-pressure-absence"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b22f632c7891407bc06e22d696f3cedc197a1931655d4e6839a0202a12437641"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-architecture-pressure-absence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:4a8729b14f7afd81a9bede828b7a74ba982f1ffcd7b055d781ff9a5e55fbe486",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-taxonomy-recurrence",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:6f6f0e202272319f5ecd3c6ea951ef04d2c8cc76030080e1588cb1cb006da872",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:ee2781bb94043cc525f4f1d8e3e2de3d4c95646d1a8473fd5d09acfff3c100c0",
+      "generated_statements": "sha256:ba17e0814ead45ef71d6eaccf5140018f8a6ad320b6d00a9650b77ef871eb268",
+      "input_set": "sha256:b22f632c7891407bc06e22d696f3cedc197a1931655d4e6839a0202a12437641",
+      "package_manifest": "sha256:84840091835d62075dba1cbb93186eb1923592c124fff03a3959d70fc8e78932",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "architecture pressure"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-architecture-pressure-absence",
+          "eval-srcpkg-campaign10-architecture-pressure-absence",
+          "ev-srcpkg-campaign10-taxonomy-recurrence",
+          "eval-srcpkg-campaign10-taxonomy-recurrence"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-architecture-pressure-absence",
+          "ev-srcpkg-campaign10-taxonomy-recurrence"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-architecture-pressure-absence",
+        "statement_type": "negative",
+        "text": "Campaign 10 found no architecture, taxonomy, validator, or workflow pressure requiring implementation after Campaigns 0 through 9."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-architecture-pressure-absence",
+      "srcpkg-campaign10-taxonomy-recurrence"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:4871756a25b9f90989dfca10574cb11cb57050a5ef03c7c72923ddbb7376be30",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-architecture-pressure-absence",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-architecture-pressure-absence",
+        "pkg-object-srcpkg-campaign10-architecture-pressure-absence-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-architecture-pressure-absence-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-architecture-pressure-absence",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-architecture-pressure-absence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-architecture-pressure-absence",
+        "ev-srcpkg-campaign10-taxonomy-recurrence"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-architecture-pressure-absence",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "architecture pressure"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-maturity-consistency"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a4c620cdbe6d57eb473cd2cd5a6bbae4828b2ebc8732efa78d666ac101114048"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-maturity-consistency",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:862157043e568951281634fc7a2a85abf0e85a3275aec5102d87ea8b7732f4ba",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-environment-maturity-incomplete",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:e3812b685e637632d6341121996311f9c887c279d98327b26457c3a198796957",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:46d3b4ca4f29aecdec61ca16dcef46df66175aeef823eec2e5f39a9eafc46c80",
+      "generated_statements": "sha256:a69f92798405fa8927f75d4c0d22c8f2b866eddb6609f60864d745dcc6e5382f",
+      "input_set": "sha256:a4c620cdbe6d57eb473cd2cd5a6bbae4828b2ebc8732efa78d666ac101114048",
+      "package_manifest": "sha256:cf310e7a4c9c8b183f9f41c14f9e14a71cde362be21366b1b505e6fef4362540",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "production-family maturity consistency"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-maturity-consistency",
+          "eval-srcpkg-campaign10-maturity-consistency",
+          "ev-srcpkg-campaign10-environment-maturity-incomplete",
+          "eval-srcpkg-campaign10-environment-maturity-incomplete"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-maturity-consistency",
+          "ev-srcpkg-campaign10-environment-maturity-incomplete"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-maturity-consistency",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 10 found no conflict between WDI demographic Mature status and Campaigns 0 through 9 production evidence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-maturity-consistency",
+      "srcpkg-campaign10-environment-maturity-incomplete"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:22621a681164879db08ecd3587eb59f23895f26ffd864b9cda1f0456e35e1f5a",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-maturity-consistency",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-maturity-consistency",
+        "pkg-object-srcpkg-campaign10-maturity-consistency-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-maturity-consistency-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-maturity-consistency",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-maturity-consistency"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-maturity-consistency",
+        "ev-srcpkg-campaign10-environment-maturity-incomplete"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-maturity-consistency",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "production-family maturity consistency"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-environment-maturity-incomplete"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:48850b75f2537b626692357a02296853ca6846bc1b7306c96cfdcf0b3ff8fda3"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-environment-maturity-incomplete",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:e3812b685e637632d6341121996311f9c887c279d98327b26457c3a198796957",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-maturity-consistency",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:862157043e568951281634fc7a2a85abf0e85a3275aec5102d87ea8b7732f4ba",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:8a986057afe123d94a7d73f5ec906647206cfd4eded586192891601fcd5087d9",
+      "generated_statements": "sha256:a8165ed654133e2f2ff90e5ce3f49557b51b63bb67e96a24c61b8b13b6a78f67",
+      "input_set": "sha256:48850b75f2537b626692357a02296853ca6846bc1b7306c96cfdcf0b3ff8fda3",
+      "package_manifest": "sha256:4b9c0e5260c3de5179cc7bbd5cb5fd3203c67c2d757a9d51ac0d156e4b449f59",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "Environment maturity progression"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-environment-maturity-incomplete",
+          "eval-srcpkg-campaign10-environment-maturity-incomplete",
+          "ev-srcpkg-campaign10-maturity-consistency",
+          "eval-srcpkg-campaign10-maturity-consistency"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-environment-maturity-incomplete",
+          "ev-srcpkg-campaign10-maturity-consistency"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-environment-maturity-incomplete",
+        "statement_type": "negative",
+        "text": "WDI Environment production maturity remains incomplete after Campaigns 8 and 9 because Environment indicator-family inventory and provenance-lineage completeness have not yet been executed."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-environment-maturity-incomplete",
+      "srcpkg-campaign10-maturity-consistency"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:452452b46b2e0a79b56085a3d32f5191a9f43ebe20b7561c246eee011266da49",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-environment-maturity-incomplete",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-environment-maturity-incomplete",
+        "pkg-object-srcpkg-campaign10-environment-maturity-incomplete-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-environment-maturity-incomplete-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-environment-maturity-incomplete",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-environment-maturity-incomplete"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-environment-maturity-incomplete",
+        "ev-srcpkg-campaign10-maturity-consistency"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-environment-maturity-incomplete",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "Environment maturity progression"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted recurrence statement and paired campaign-artifact evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign10-methodology-stability"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6e11fe3c115aa3e08ab7e609056ebfd87de924ce78fdc22db805cbd0ee4fb9f9"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-methodology-stability",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:ba49b4f11d62a87752be4ccc229a1aa4b2609b3a39a0d288d4521063aa6528bf",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "internal_production_artifact_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign10-artifact-evidence-base",
+        "reproducibility_handle": "python3 tools/run_campaign10_cross_campaign_recurrence_audit.py --output artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "snapshot_fingerprint": "sha256:149223ee68ddf2198fbc3b6107b9a3a10e06b2505d9e1cca67595b08c1e82ee6",
+        "source_family": "knowledgeforge_production_campaign_artifacts",
+        "source_identity": "KnowledgeForge Campaigns 0-9 production artifact recurrence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:9cb0f2cba4a529514fe7bd33864f3b71d77cbe5c17cf08ce2f08bc3004400f64",
+      "evidence_references": "sha256:e440fdc59081c3cd5985d4f7a717fb1c034f0f32735da3c57d19eceaad5deb5c",
+      "generated_statements": "sha256:11306c3b85625e49fa1c50c93032a4795741cb89b640ba88ece4cb8a5bb6ff32",
+      "input_set": "sha256:6e11fe3c115aa3e08ab7e609056ebfd87de924ce78fdc22db805cbd0ee4fb9f9",
+      "package_manifest": "sha256:e979f4a10ee66e411686583b7e9f7f2f9de8b452207feb1b4dfbe063d5a7675e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+          "domain": "KnowledgeForge production campaign artifacts",
+          "exclusions": [
+            "explanatory meaning statements",
+            "future-looking statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_campaign_recurrence_audit",
+          "topic": "production methodology stability"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign10-methodology-stability",
+          "eval-srcpkg-campaign10-methodology-stability",
+          "ev-srcpkg-campaign10-artifact-evidence-base",
+          "eval-srcpkg-campaign10-artifact-evidence-base"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign10-methodology-stability",
+          "ev-srcpkg-campaign10-artifact-evidence-base"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign10-methodology-stability",
+        "statement_type": "methodological",
+        "text": "Campaigns 0 through 9 preserve production methodology stability across repository-level, demographic, Environment, and cross-family artifact evidence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign10-methodology-stability",
+      "srcpkg-campaign10-artifact-evidence-base"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:04430a53b12692ff0a5a7413d215f80736051f309813a6a7cbc13d8bcbafeb0f",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign10-methodology-stability",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign10-methodology-stability",
+        "pkg-object-srcpkg-campaign10-methodology-stability-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign10-methodology-stability-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign10-methodology-stability",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign10-methodology-stability"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign10-methodology-stability",
+        "ev-srcpkg-campaign10-artifact-evidence-base"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign10-methodology-stability",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "Campaigns 0-9 production artifact snapshot",
+        "paired campaign recurrence evidence"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "KnowledgeForge production campaign artifacts",
+      "evidence_family": "knowledgeforge_production_campaign_artifacts",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-10-cross-campaign-duplicate-recurrence-audit",
+        "domain": "KnowledgeForge production campaign artifacts",
+        "exclusions": [
+          "explanatory meaning statements",
+          "future-looking statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_campaign_recurrence_audit",
+        "topic": "production methodology stability"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

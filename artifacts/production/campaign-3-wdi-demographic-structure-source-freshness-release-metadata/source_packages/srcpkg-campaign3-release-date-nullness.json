@@ -1,0 +1,81 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_demographic_structure_freshness_metadata",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+      "source_snapshot_fingerprint": "sha256:5dd9a78d8e23d9585e5e2036c8dbc1d37e41e6f9b846b9f5442d631683bae91b",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "The Campaign 3 WDI freshness snapshot records 3 dataset-release records with null release-date fields.",
+    "knowledge_category": "negative",
+    "payload_metadata": {
+      "release_date_available_count": 0,
+      "release_date_coverage": 0.0,
+      "release_date_null_count": 3,
+      "topic": "release-date nullness"
+    },
+    "scope": {
+      "campaign_id": "campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+      "domain": "WDI annual-scalar demographic-structure source freshness and release metadata coverage",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_provenance_and_freshness_metadata",
+      "topic": "release-date nullness"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:c5095b0c84bda1a1b6572dbf86bb692f61181a9457f7aff2942373eceb86b6ce",
+    "provenance": "sha256:eabe84c2db1c4746fd4dcd30ca52df4566c493a98c65488d354c46afa485e230",
+    "reproducibility": "sha256:080172ea2bfa6367901ccc8ffaab18e2444b40aaa47d005a7eb8ebff4917efa4",
+    "source_payload": "sha256:c9e0f4d07274dda947902fb832b1f5f6b036c8de0f004f1ad5638d47b1a32257"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+      "artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets/production_quality_report.json",
+      "artifacts/reports/R-20260709-production-evolution-decision-report-pel-008-009.md"
+    ],
+    "selection_rule": "approved Campaign 3 WDI annual-scalar demographic-structure source freshness and release metadata scope",
+    "source_family": "external_wdi_annual_scalar_demographic_structure_freshness_metadata_freshness_metadata",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:5dd9a78d8e23d9585e5e2036c8dbc1d37e41e6f9b846b9f5442d631683bae91b"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign3_wdi_freshness_metadata.py --output artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI freshness metadata snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign3-release-date-nullness",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_demographic_structure_freshness_metadata",
+    "source_name": "World Bank World Development Indicators audited demographic-structure freshness metadata snapshot",
+    "source_version": "sha256:5dd9a78d8e23d9585e5e2036c8dbc1d37e41e6f9b846b9f5442d631683bae91b"
+  }
+}

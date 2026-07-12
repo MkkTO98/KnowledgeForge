@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-2-wdi-demographic-structure-completeness-buckets",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_demographic_structure_completeness_bucket",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-2-wdi-demographic-structure-completeness-buckets",
+      "source_snapshot_fingerprint": "sha256:02a45f6fc6435dc981cda409363be7224edb1dd8bfe7ef9622dba2893001a665",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "The retained context indicator family has 579329 observed cells and 281806 missing cells across 861135 expected cells.",
+    "knowledge_category": "coverage",
+    "payload_metadata": {
+      "bucket_id": "retained_context_indicator_family",
+      "bucket_label": "partial",
+      "completeness": 0.67275,
+      "expected_cells": 861135,
+      "indicator_count": 114,
+      "missing_cells": 281806,
+      "observed_cells": 579329,
+      "topic": "indicator-family completeness bucket"
+    },
+    "scope": {
+      "campaign_id": "campaign-2-wdi-demographic-structure-completeness-buckets",
+      "domain": "WDI annual-scalar demographic-structure completeness buckets",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "indicator-family completeness bucket"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:64d98a762db1d01dcde2094ef375fab37fcc3daa5453cedbcbbcb0097648f447",
+    "provenance": "sha256:c423e4fbe48285b98fd63aefdba6d07d7b13ac48e84a31f1ec6c7ef920ec7efc",
+    "reproducibility": "sha256:19bf061fb4b72ff90cee74fd3246e85569755b9cc1bf5e4020a5e97168ddaed8",
+    "source_payload": "sha256:6390c32a1138e3d739435428927a9d66ab7888d0a43449cc205d3e5841781693"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "artifacts/reports/R-20260709-first-production-campaign-recommendation.md",
+      "artifacts/reports/R-20260709-campaign-1-production-design.md",
+      "docs/production_campaign_roadmap.md",
+      "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json"
+    ],
+    "selection_rule": "approved Campaign 2 WDI annual-scalar demographic-structure completeness bucket scope",
+    "source_family": "external_wdi_annual_scalar_demographic_structure",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:02a45f6fc6435dc981cda409363be7224edb1dd8bfe7ef9622dba2893001a665"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign2_wdi_completeness_buckets.py --output artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI completeness snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign2-context-family-partial-bucket",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_demographic_structure",
+    "source_name": "World Bank World Development Indicators audited demographic-structure completeness snapshot",
+    "source_version": "sha256:02a45f6fc6435dc981cda409363be7224edb1dd8bfe7ef9622dba2893001a665"
+  }
+}

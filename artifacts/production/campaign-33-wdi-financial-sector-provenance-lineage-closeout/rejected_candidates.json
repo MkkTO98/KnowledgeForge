@@ -1,0 +1,429 @@
+[
+  {
+    "reason_categories": [
+      "unsupported_inference"
+    ],
+    "source_evidence_package": {
+      "created_at": "2026-07-10",
+      "evidence_metadata": {
+        "classification": {
+          "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "contains_observational_values": false,
+          "direct_evidence": true,
+          "evidence_kind": "audited_wdi_financial_sector_provenance_lineage",
+          "generated_by_llm": false
+        },
+        "evidence_class": "external_observational_metadata",
+        "validation_metadata": {
+          "campaign": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "source_snapshot_fingerprint": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541",
+          "validator": "construct_knowledge_package_v1"
+        }
+      },
+      "evidence_payload": {
+        "factual_statement": "This Financial Sector lineage record is a causal claim and includes a forecast about future evidence value.",
+        "knowledge_category": "provenance",
+        "payload_metadata": {
+          "topic": "boundary rejection"
+        },
+        "scope": {
+          "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Financial Sector provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_financial_sector_provenance_lineage_metadata",
+          "topic": "boundary rejection"
+        }
+      },
+      "fingerprints": {
+        "package_manifest": "sha256:c3edca78d37da61923d495fa0fea34a6b228fca25e1556ff9fbaad0015cb9b43",
+        "provenance": "sha256:aafd3f6c79716a70ff04d67f68386817413d46fed8e7ec5069f1df36765a2533",
+        "reproducibility": "sha256:b7f907d70dc8c5c6322c28b675177f1fe5c62cd89cfafec6c100457e2b02e376",
+        "source_payload": "sha256:3e9ad11ec8c0a1e5f951e5f7652947f117b518af5d6f7a0a6d61addb3202ff52"
+      },
+      "immutability": {
+        "mutation_policy": "read_only",
+        "state": "immutable_fixture"
+      },
+      "package_kind": "SourceEvidencePackage",
+      "package_version": "1.0",
+      "provenance": {
+        "evidence_basis": [
+          "docs/production_campaign_roadmap.md",
+          "docs/production_evolution_log.md",
+          "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/production_quality_report.json",
+          "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/reports/family_closeout_report.md",
+          "artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+          "artifacts/production/campaign-32-wdi-financial-sector-indicator-family-coverage-maturation/production_quality_report.json",
+          "artifacts/decisions/D-20260710-repository-scale-doctrine-review-500-object-gate.md",
+          "artifacts/production/campaign-33-wdi-financial-sector-provenance-lineage-closeout/production_quality_report.json",
+          "artifacts/production/campaign-32-wdi-financial-sector-indicator-family-coverage-maturation/production_quality_report.json",
+          "artifacts/decisions/D-20260710-repository-scale-doctrine-review-500-object-gate.md"
+        ],
+        "selection_rule": "approved Campaign 33 WDI Financial Sector provenance-lineage closeout scope",
+        "source_family": "external_wdi_annual_scalar_financial_sector_provenance_lineage",
+        "source_snapshot_date": "2026-07-10",
+        "source_snapshot_id": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541"
+      },
+      "reproducibility": {
+        "handle": "python3 tools/run_campaign33_wdi_financial_sector_provenance_lineage_closeout.py --output artifacts/production/campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+        "nondeterminism": "none",
+        "rerun_method": "deterministic embedded immutable Financial Sector provenance-lineage snapshot and canonical JSON construction",
+        "state": "reproducible"
+      },
+      "source_evidence_package_id": "srcpkg-campaign33-reject-boundary-language",
+      "source_identity": {
+        "source_family": "external_wdi_annual_scalar_financial_sector_provenance_lineage",
+        "source_name": "World Bank World Development Indicators audited Financial Sector provenance lineage snapshot",
+        "source_version": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541"
+      }
+    },
+    "validation": {
+      "source_validation": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "unsupported_inference",
+            "location": "evidence_payload.factual_statement",
+            "message": "source factual statement contains forbidden boundary language",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "reason_categories": [
+      "evidence_contract",
+      "lineage_fingerprint",
+      "provenance"
+    ],
+    "source_evidence_package": {
+      "created_at": "2026-07-10",
+      "evidence_metadata": {
+        "classification": {
+          "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "contains_observational_values": false,
+          "direct_evidence": true,
+          "evidence_kind": "audited_wdi_financial_sector_provenance_lineage",
+          "generated_by_llm": false
+        },
+        "evidence_class": "external_observational_metadata",
+        "validation_metadata": {
+          "campaign": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "source_snapshot_fingerprint": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541",
+          "validator": "construct_knowledge_package_v1"
+        }
+      },
+      "evidence_payload": {
+        "factual_statement": "A malformed Campaign 33 Financial Sector candidate omits provenance fields.",
+        "knowledge_category": "provenance",
+        "payload_metadata": {
+          "topic": "malformed provenance"
+        },
+        "scope": {
+          "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Financial Sector provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_financial_sector_provenance_lineage_metadata",
+          "topic": "malformed provenance"
+        }
+      },
+      "fingerprints": {
+        "package_manifest": "sha256:8ff37a8a110e5f1b7ef0768f08074a5d5aaef11b853e084c67780b2399558225",
+        "provenance": "sha256:aafd3f6c79716a70ff04d67f68386817413d46fed8e7ec5069f1df36765a2533",
+        "reproducibility": "sha256:b7f907d70dc8c5c6322c28b675177f1fe5c62cd89cfafec6c100457e2b02e376",
+        "source_payload": "sha256:6a707fdc3a97c1aa86546103abb812a24476dba4fb22176e1958843519afb934"
+      },
+      "immutability": {
+        "mutation_policy": "read_only",
+        "state": "immutable_fixture"
+      },
+      "package_kind": "SourceEvidencePackage",
+      "package_version": "1.0",
+      "reproducibility": {
+        "handle": "python3 tools/run_campaign33_wdi_financial_sector_provenance_lineage_closeout.py --output artifacts/production/campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+        "nondeterminism": "none",
+        "rerun_method": "deterministic embedded immutable Financial Sector provenance-lineage snapshot and canonical JSON construction",
+        "state": "reproducible"
+      },
+      "source_evidence_package_id": "srcpkg-campaign33-reject-missing-provenance",
+      "source_identity": {
+        "source_family": "external_wdi_annual_scalar_financial_sector_provenance_lineage",
+        "source_name": "World Bank World Development Indicators audited Financial Sector provenance lineage snapshot",
+        "source_version": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541"
+      }
+    },
+    "validation": {
+      "source_validation": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "evidence_contract",
+            "location": "provenance",
+            "message": "missing required field: provenance",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "provenance",
+            "location": "provenance",
+            "message": "provenance must include a source_snapshot_id",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.provenance",
+            "message": "provenance fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.package_manifest",
+            "message": "package_manifest fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "reason_categories": [
+      "evidence_contract",
+      "lineage_fingerprint"
+    ],
+    "source_evidence_package": {
+      "created_at": "2026-07-10",
+      "evidence_metadata": {
+        "classification": {
+          "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "contains_observational_values": false,
+          "direct_evidence": true,
+          "evidence_kind": "audited_wdi_financial_sector_provenance_lineage",
+          "generated_by_llm": false
+        },
+        "evidence_class": "external_observational_metadata",
+        "validation_metadata": {
+          "campaign": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "source_snapshot_fingerprint": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541",
+          "validator": "construct_knowledge_package_v1"
+        }
+      },
+      "evidence_payload": {
+        "factual_statement": "A malformed Campaign 33 Financial Sector candidate omits lineage fingerprints.",
+        "knowledge_category": "provenance",
+        "payload_metadata": {
+          "topic": "malformed fingerprint"
+        },
+        "scope": {
+          "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Financial Sector provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_financial_sector_provenance_lineage_metadata",
+          "topic": "malformed fingerprint"
+        }
+      },
+      "immutability": {
+        "mutation_policy": "read_only",
+        "state": "immutable_fixture"
+      },
+      "package_kind": "SourceEvidencePackage",
+      "package_version": "1.0",
+      "provenance": {
+        "evidence_basis": [
+          "docs/production_campaign_roadmap.md",
+          "docs/production_evolution_log.md",
+          "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/production_quality_report.json",
+          "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/reports/family_closeout_report.md",
+          "artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+          "artifacts/production/campaign-32-wdi-financial-sector-indicator-family-coverage-maturation/production_quality_report.json",
+          "artifacts/decisions/D-20260710-repository-scale-doctrine-review-500-object-gate.md",
+          "artifacts/production/campaign-33-wdi-financial-sector-provenance-lineage-closeout/production_quality_report.json",
+          "artifacts/production/campaign-32-wdi-financial-sector-indicator-family-coverage-maturation/production_quality_report.json",
+          "artifacts/decisions/D-20260710-repository-scale-doctrine-review-500-object-gate.md"
+        ],
+        "selection_rule": "approved Campaign 33 WDI Financial Sector provenance-lineage closeout scope",
+        "source_family": "external_wdi_annual_scalar_financial_sector_provenance_lineage",
+        "source_snapshot_date": "2026-07-10",
+        "source_snapshot_id": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541"
+      },
+      "reproducibility": {
+        "handle": "python3 tools/run_campaign33_wdi_financial_sector_provenance_lineage_closeout.py --output artifacts/production/campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+        "nondeterminism": "none",
+        "rerun_method": "deterministic embedded immutable Financial Sector provenance-lineage snapshot and canonical JSON construction",
+        "state": "reproducible"
+      },
+      "source_evidence_package_id": "srcpkg-campaign33-reject-missing-fingerprint",
+      "source_identity": {
+        "source_family": "external_wdi_annual_scalar_financial_sector_provenance_lineage",
+        "source_name": "World Bank World Development Indicators audited Financial Sector provenance lineage snapshot",
+        "source_version": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541"
+      }
+    },
+    "validation": {
+      "source_validation": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "evidence_contract",
+            "location": "fingerprints",
+            "message": "missing required field: fingerprints",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints",
+            "message": "fingerprints must be an object",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  },
+  {
+    "reason_categories": [
+      "constitutional_boundary"
+    ],
+    "source_evidence_package": {
+      "created_at": "2026-07-10",
+      "evidence_metadata": {
+        "classification": {
+          "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "contains_observational_values": false,
+          "direct_evidence": true,
+          "evidence_kind": "audited_wdi_financial_sector_provenance_lineage",
+          "generated_by_llm": false
+        },
+        "evidence_class": "external_observational_metadata",
+        "validation_metadata": {
+          "campaign": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "source_snapshot_fingerprint": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541",
+          "validator": "construct_knowledge_package_v1"
+        }
+      },
+      "evidence_payload": {
+        "factual_statement": "A malformed Campaign 33 Financial Sector candidate uses an unsupported lineage-rating category.",
+        "knowledge_category": "lineage_rating",
+        "payload_metadata": {
+          "topic": "unsupported category"
+        },
+        "scope": {
+          "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Financial Sector provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_financial_sector_provenance_lineage_metadata",
+          "topic": "unsupported category"
+        }
+      },
+      "fingerprints": {
+        "package_manifest": "sha256:f441782401f9cfbafa29e16f43ede81a0165e16fe9a41205ebe122c81f8c01bf",
+        "provenance": "sha256:aafd3f6c79716a70ff04d67f68386817413d46fed8e7ec5069f1df36765a2533",
+        "reproducibility": "sha256:b7f907d70dc8c5c6322c28b675177f1fe5c62cd89cfafec6c100457e2b02e376",
+        "source_payload": "sha256:6f24e647afaec98520104a05748e80c088570f1ebc45647cd2534d82a92b6a93"
+      },
+      "immutability": {
+        "mutation_policy": "read_only",
+        "state": "immutable_fixture"
+      },
+      "package_kind": "SourceEvidencePackage",
+      "package_version": "1.0",
+      "provenance": {
+        "evidence_basis": [
+          "docs/production_campaign_roadmap.md",
+          "docs/production_evolution_log.md",
+          "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/production_quality_report.json",
+          "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/reports/family_closeout_report.md",
+          "artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+          "artifacts/production/campaign-32-wdi-financial-sector-indicator-family-coverage-maturation/production_quality_report.json",
+          "artifacts/decisions/D-20260710-repository-scale-doctrine-review-500-object-gate.md",
+          "artifacts/production/campaign-33-wdi-financial-sector-provenance-lineage-closeout/production_quality_report.json",
+          "artifacts/production/campaign-32-wdi-financial-sector-indicator-family-coverage-maturation/production_quality_report.json",
+          "artifacts/decisions/D-20260710-repository-scale-doctrine-review-500-object-gate.md"
+        ],
+        "selection_rule": "approved Campaign 33 WDI Financial Sector provenance-lineage closeout scope",
+        "source_family": "external_wdi_annual_scalar_financial_sector_provenance_lineage",
+        "source_snapshot_date": "2026-07-10",
+        "source_snapshot_id": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541"
+      },
+      "reproducibility": {
+        "handle": "python3 tools/run_campaign33_wdi_financial_sector_provenance_lineage_closeout.py --output artifacts/production/campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+        "nondeterminism": "none",
+        "rerun_method": "deterministic embedded immutable Financial Sector provenance-lineage snapshot and canonical JSON construction",
+        "state": "reproducible"
+      },
+      "source_evidence_package_id": "srcpkg-campaign33-reject-unsupported-category",
+      "source_identity": {
+        "source_family": "external_wdi_annual_scalar_financial_sector_provenance_lineage",
+        "source_name": "World Bank World Development Indicators audited Financial Sector provenance lineage snapshot",
+        "source_version": "sha256:b659ad21373381f2f1eab5c78bb36d2294e8e3e96dd4be2efd109197ce969541"
+      }
+    },
+    "validation": {
+      "source_validation": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "constitutional_boundary",
+            "location": "evidence_payload.knowledge_category",
+            "message": "unsupported knowledge category: lineage_rating",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+]

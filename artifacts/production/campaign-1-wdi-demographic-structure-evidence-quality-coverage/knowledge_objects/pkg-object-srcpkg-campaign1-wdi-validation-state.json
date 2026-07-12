@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign1-wdi-validation-state"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:271a8c8d45070e560699199af7c30947d902c893486bbb6c286dcd9c4ed69127"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign1-wdi-validation-state",
+      "reproducibility_handle": "python3 tools/run_campaign1_wdi_demographic_evidence.py --output artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage",
+      "snapshot_fingerprint": "sha256:271a8c8d45070e560699199af7c30947d902c893486bbb6c286dcd9c4ed69127",
+      "source_family": "external_wdi_annual_scalar_demographic_structure",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure evidence snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:93ab06910dd3b5b0baff3bd5ddfec704593a99020c9e95b35da68b8bfacf8942",
+    "generated_statements": "sha256:b74f9573444eeb9e7a81781f6f0ba5c73855b37545d3495e234a035f5af15ef1",
+    "input_set": "sha256:ac47bd110010740ff425e55250099a3a020bb625f879306700a3e5fe5aab43a4",
+    "package_manifest": "sha256:63081c8bf686ec6c3085a058481e821f4c31ee463fb424db0650094e5657f6d5",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-1-wdi-demographic-structure-evidence-quality-coverage",
+        "domain": "WDI annual-scalar demographic-structure evidence characterization",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "validation state"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign1-wdi-validation-state",
+        "eval-srcpkg-campaign1-wdi-validation-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign1-wdi-validation-state"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign1-wdi-validation-state",
+      "statement_type": "methodological",
+      "text": "The audited WDI evidence records explicit observed and missing observation status within the annual-scalar evidence shape."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign1-wdi-validation-state"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:d7828874955efec699a39d2fab84fac7f17b968015e61c065b09106c323237f0",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign1-wdi-validation-state",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign1-wdi-validation-state",
+      "pkg-object-srcpkg-campaign1-wdi-validation-state"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign1-wdi-validation-state",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign1-wdi-validation-state",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign1-wdi-validation-state"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign1-wdi-validation-state"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign1-wdi-validation-state",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure evidence characterization",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-1-wdi-demographic-structure-evidence-quality-coverage",
+      "domain": "WDI annual-scalar demographic-structure evidence characterization",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "validation state"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

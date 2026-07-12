@@ -1,0 +1,146 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign4-family-membership-urban_rural_population"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign4-family-membership-urban_rural_population",
+      "reproducibility_handle": "python3 tools/run_campaign4_wdi_indicator_inventory.py --output artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "snapshot_fingerprint": "sha256:d3bb4a7e460cb6517793581053772ac2b0f5e496b334dbe916dd8ee29a14da09",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure indicator-family inventory snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:f51fca512b5ed67cd87e1e7de4b82080d24f063123d0c0a4f821423b3bb7a9a3",
+    "generated_statements": "sha256:87e972bc43004f558e24895ce780191974455f75ac880bf542d77a5a378611a4",
+    "input_set": "sha256:d4e940ab05953947bd20742b3acb1adf0d0e1a30ac6fceac0182b6cad5ccdfb2",
+    "package_manifest": "sha256:bc06e2ed2576e627e1b25ff35bb2ee3c635a68c5276907721969051a9d4d69ae",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+        "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_indicator_inventory_metadata",
+        "topic": "family membership urban_rural_population"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign4-family-membership-urban_rural_population",
+        "eval-srcpkg-campaign4-family-membership-urban_rural_population"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign4-family-membership-urban_rural_population"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign4-family-membership-urban_rural_population",
+      "statement_type": "classified",
+      "text": "The Campaign 4 WDI indicator-family inventory assigns 64 indicators to the urban/rural population inventory family."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign4-family-membership-urban_rural_population"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign4-family-membership-urban_rural_population",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign4-family-membership-urban_rural_population"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign4-family-membership-urban_rural_population"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign4-family-membership-urban_rural_population",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_indicator_inventory_metadata",
+      "topic": "family membership urban_rural_population"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

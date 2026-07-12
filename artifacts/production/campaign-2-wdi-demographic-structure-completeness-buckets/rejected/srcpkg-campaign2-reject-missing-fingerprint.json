@@ -1,0 +1,104 @@
+{
+  "reason_categories": [
+    "evidence_contract",
+    "lineage_fingerprint"
+  ],
+  "source_evidence_package": {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-2-wdi-demographic-structure-completeness-buckets",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_demographic_structure_completeness_bucket",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-2-wdi-demographic-structure-completeness-buckets",
+        "source_snapshot_fingerprint": "sha256:02a45f6fc6435dc981cda409363be7224edb1dd8bfe7ef9622dba2893001a665",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "A malformed Campaign 2 candidate omits source fingerprints.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "topic": "malformed fingerprint"
+      },
+      "scope": {
+        "campaign_id": "campaign-2-wdi-demographic-structure-completeness-buckets",
+        "domain": "WDI annual-scalar demographic-structure completeness buckets",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "malformed fingerprint"
+      }
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "artifacts/reports/R-20260709-first-production-campaign-recommendation.md",
+        "artifacts/reports/R-20260709-campaign-1-production-design.md",
+        "docs/production_campaign_roadmap.md",
+        "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 2 WDI annual-scalar demographic-structure completeness bucket scope",
+      "source_family": "external_wdi_annual_scalar_demographic_structure",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:02a45f6fc6435dc981cda409363be7224edb1dd8bfe7ef9622dba2893001a665"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign2_wdi_completeness_buckets.py --output artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic embedded immutable WDI completeness snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign2-reject-missing-fingerprint",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_demographic_structure",
+      "source_name": "World Bank World Development Indicators audited demographic-structure completeness snapshot",
+      "source_version": "sha256:02a45f6fc6435dc981cda409363be7224edb1dd8bfe7ef9622dba2893001a665"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "stage_reports": {
+      "source": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "evidence_contract",
+            "location": "fingerprints",
+            "message": "missing required field: fingerprints",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints",
+            "message": "fingerprints must be an object",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+}

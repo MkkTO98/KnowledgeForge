@@ -1,0 +1,99 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_demographic_structure_provenance_lineage",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+      "source_snapshot_fingerprint": "sha256:b3828804b682136a14bfe625b972809a633055165aab54ce395c99ff9b0a3d83",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "Campaigns 1-7 support Mature status for the WDI demographic production family; remaining gaps are intentionally deferred to cross-family or multi-source campaigns.",
+    "knowledge_category": "methodological",
+    "payload_metadata": {
+      "basis": "Campaigns 1-7 validate deterministic WDI demographic production across evidence-quality, completeness, freshness, inventory, territorial, temporal, and provenance-lineage scopes without architecture change.",
+      "classification": "Mature",
+      "intentionally_deferred": [
+        "multi-reference accepted objects until cross-family campaigns",
+        "partial provenance disagreement until multi-source evidence appears",
+        "non-demographic WDI evidence-family transfer until Campaign 8"
+      ],
+      "maturity_rationale": "The planned WDI demographic production family has now exercised its major evidence-level scopes. Remaining gaps depend on cross-family or multi-source evidence rather than additional demographic deepening.",
+      "topic": "campaign family maturity",
+      "validated": [
+        "deterministic replay",
+        "fingerprint stability",
+        "provenance completeness",
+        "rejected-candidate preservation",
+        "territorial and temporal applicability",
+        "coverage and missingness knowledge",
+        "raw artifact identity and release lineage",
+        "lineage/fingerprint validation"
+      ]
+    },
+    "scope": {
+      "campaign_id": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+      "domain": "WDI annual-scalar demographic-structure provenance lineage completeness",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_provenance_lineage_metadata",
+      "topic": "campaign family maturity"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:8a7e073a603964acbe33a30b6455d7e11d1964fdf05c1d3a560e9727d5193cac",
+    "provenance": "sha256:a6765885b334c9975e4f521bff5e74f132433dfde307f7643712e1919b87922f",
+    "reproducibility": "sha256:570321928b92bcd6bbdc1b9d4691d5e4296f0c4c1e03aea4aa32105b2d963173",
+    "source_payload": "sha256:c42b692fe50a1dbcb45ab90e6e6a49854569b554a3b601a04ebba54ab6557e73"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+      "artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets/production_quality_report.json",
+      "artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata/production_quality_report.json",
+      "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+      "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+      "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+    ],
+    "selection_rule": "approved Campaign 7 WDI annual-scalar demographic-structure provenance lineage completeness scope",
+    "source_family": "external_wdi_annual_scalar_demographic_structure_provenance_lineage",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:b3828804b682136a14bfe625b972809a633055165aab54ce395c99ff9b0a3d83"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign7_wdi_provenance_lineage.py --output artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI provenance lineage snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign7-family-maturity-assessment",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_demographic_structure_provenance_lineage",
+    "source_name": "World Bank World Development Indicators audited demographic-structure provenance lineage snapshot",
+    "source_version": "sha256:b3828804b682136a14bfe625b972809a633055165aab54ce395c99ff9b0a3d83"
+  }
+}

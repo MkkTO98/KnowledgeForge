@@ -1,0 +1,351 @@
+{
+  "architecture_change_authorized": false,
+  "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+  "evidence_basis": [
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+    "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+    "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+    "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+    "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+    "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_environment_maturation",
+  "external_data_accessed": false,
+  "indicator_inventory": {
+    "families": [
+      {
+        "complete_or_near_complete": 184,
+        "complete_period_coverage": false,
+        "family_key": "air_and_climate_metadata",
+        "high_partial": 22,
+        "indicator_count": 44,
+        "insufficient_for_campaign_scope": 2,
+        "label": "air and climate metadata",
+        "missing_periods": 1,
+        "moderate_partial": 9,
+        "observed_periods": 34,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 176,
+        "complete_period_coverage": true,
+        "family_key": "land_and_forest_metadata",
+        "high_partial": 26,
+        "indicator_count": 38,
+        "insufficient_for_campaign_scope": 3,
+        "label": "land and forest metadata",
+        "missing_periods": 0,
+        "moderate_partial": 12,
+        "observed_periods": 35,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 181,
+        "complete_period_coverage": false,
+        "family_key": "water_and_sanitation_metadata",
+        "high_partial": 21,
+        "indicator_count": 36,
+        "insufficient_for_campaign_scope": 4,
+        "label": "water and sanitation metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 152,
+        "complete_period_coverage": false,
+        "family_key": "biodiversity_and_protected_area_metadata",
+        "high_partial": 34,
+        "indicator_count": 28,
+        "insufficient_for_campaign_scope": 7,
+        "label": "biodiversity and protected area metadata",
+        "missing_periods": 4,
+        "moderate_partial": 24,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 169,
+        "complete_period_coverage": false,
+        "family_key": "resource_use_metadata",
+        "high_partial": 29,
+        "indicator_count": 42,
+        "insufficient_for_campaign_scope": 4,
+        "label": "resource use metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      }
+    ],
+    "family_keys": [
+      "air_and_climate_metadata",
+      "land_and_forest_metadata",
+      "water_and_sanitation_metadata",
+      "biodiversity_and_protected_area_metadata",
+      "resource_use_metadata"
+    ],
+    "indicator_families_total": 5,
+    "indicators_total": 188,
+    "supported_dimensions": [
+      "indicator",
+      "territory",
+      "period",
+      "indicator_family"
+    ],
+    "unsupported_dimensions": [
+      "subnational_region",
+      "scenario",
+      "model_projection",
+      "narrative_assessment"
+    ]
+  },
+  "maturation_methodology_comparison": {
+    "equivalent_demographic_stage": "Campaigns 4-6",
+    "family_specific_assumptions": [
+      "environment indicator family names",
+      "environment coverage bucket counts"
+    ],
+    "fingerprint_stability": "unchanged",
+    "knowledge_category_coverage": "same categories, different family counts",
+    "knowledgeforge_wide_assumptions": [
+      "deterministic replay",
+      "fingerprint stability",
+      "rejected-candidate preservation",
+      "provenance completeness"
+    ],
+    "package_construction": "unchanged",
+    "pel_behaviour": "unchanged",
+    "production_pressures": "no new pressure",
+    "production_workflow_transfer": "unchanged",
+    "provenance_handling": "unchanged",
+    "validator_behaviour": "unchanged"
+  },
+  "maturity_assessment": {
+    "basis": "Campaigns 8, 9, 10, and 11 validate WDI Environment production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+    "classification": "Stable",
+    "insufficient_for_mature": [
+      "dedicated Environment provenance-lineage completeness",
+      "Environment family closeout"
+    ],
+    "validated": [
+      "deterministic replay",
+      "fingerprint stability",
+      "provenance completeness",
+      "rejected-candidate preservation",
+      "indicator-family inventory",
+      "territorial coverage",
+      "temporal coverage"
+    ]
+  },
+  "provenance_observations": {
+    "deterministic_rerun_handle_available": true,
+    "evidence_basis_available": true,
+    "selection_rule_available": true,
+    "source_family_available": true,
+    "source_snapshot_fingerprint_available": true
+  },
+  "quality_controls": {
+    "ambiguous_family_assignments": 0,
+    "duplicate_candidate_statements_expected": false,
+    "matrix_cell_counts_verified": true,
+    "period_denominators_verified": true,
+    "territory_bucket_denominators_verified": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "environment evidence",
+    "frequency": "annual",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations and coverage matrices",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "temporal_matrix": {
+    "complete_family_count": 1,
+    "families": [
+      {
+        "complete_or_near_complete": 184,
+        "complete_period_coverage": false,
+        "family_key": "air_and_climate_metadata",
+        "high_partial": 22,
+        "indicator_count": 44,
+        "insufficient_for_campaign_scope": 2,
+        "label": "air and climate metadata",
+        "missing_periods": 1,
+        "moderate_partial": 9,
+        "observed_periods": 34,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 176,
+        "complete_period_coverage": true,
+        "family_key": "land_and_forest_metadata",
+        "high_partial": 26,
+        "indicator_count": 38,
+        "insufficient_for_campaign_scope": 3,
+        "label": "land and forest metadata",
+        "missing_periods": 0,
+        "moderate_partial": 12,
+        "observed_periods": 35,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 181,
+        "complete_period_coverage": false,
+        "family_key": "water_and_sanitation_metadata",
+        "high_partial": 21,
+        "indicator_count": 36,
+        "insufficient_for_campaign_scope": 4,
+        "label": "water and sanitation metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 152,
+        "complete_period_coverage": false,
+        "family_key": "biodiversity_and_protected_area_metadata",
+        "high_partial": 34,
+        "indicator_count": 28,
+        "insufficient_for_campaign_scope": 7,
+        "label": "biodiversity and protected area metadata",
+        "missing_periods": 4,
+        "moderate_partial": 24,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 169,
+        "complete_period_coverage": false,
+        "family_key": "resource_use_metadata",
+        "high_partial": 29,
+        "indicator_count": 42,
+        "insufficient_for_campaign_scope": 4,
+        "label": "resource use metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      }
+    ],
+    "indicator_family_count": 5,
+    "matrix_cell_count": 175,
+    "missing_period_cells": 10,
+    "observed_period_cells": 165,
+    "period_bucket_keys": [
+      "observed_period",
+      "missing_period"
+    ],
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990
+  },
+  "territorial_matrix": {
+    "bucket_keys": [
+      "complete_or_near_complete",
+      "high_partial",
+      "moderate_partial",
+      "insufficient_for_campaign_scope"
+    ],
+    "bucket_totals": {
+      "complete_or_near_complete": 862,
+      "high_partial": 132,
+      "insufficient_for_campaign_scope": 20,
+      "moderate_partial": 71
+    },
+    "coverage_bucket_count": 4,
+    "families": [
+      {
+        "complete_or_near_complete": 184,
+        "complete_period_coverage": false,
+        "family_key": "air_and_climate_metadata",
+        "high_partial": 22,
+        "indicator_count": 44,
+        "insufficient_for_campaign_scope": 2,
+        "label": "air and climate metadata",
+        "missing_periods": 1,
+        "moderate_partial": 9,
+        "observed_periods": 34,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 176,
+        "complete_period_coverage": true,
+        "family_key": "land_and_forest_metadata",
+        "high_partial": 26,
+        "indicator_count": 38,
+        "insufficient_for_campaign_scope": 3,
+        "label": "land and forest metadata",
+        "missing_periods": 0,
+        "moderate_partial": 12,
+        "observed_periods": 35,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 181,
+        "complete_period_coverage": false,
+        "family_key": "water_and_sanitation_metadata",
+        "high_partial": 21,
+        "indicator_count": 36,
+        "insufficient_for_campaign_scope": 4,
+        "label": "water and sanitation metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 152,
+        "complete_period_coverage": false,
+        "family_key": "biodiversity_and_protected_area_metadata",
+        "high_partial": 34,
+        "indicator_count": 28,
+        "insufficient_for_campaign_scope": 7,
+        "label": "biodiversity and protected area metadata",
+        "missing_periods": 4,
+        "moderate_partial": 24,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 169,
+        "complete_period_coverage": false,
+        "family_key": "resource_use_metadata",
+        "high_partial": 29,
+        "indicator_count": 42,
+        "insufficient_for_campaign_scope": 4,
+        "label": "resource use metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      }
+    ],
+    "indicator_family_count": 5,
+    "matrix_cell_count": 1085,
+    "territory_count": 217
+  }
+}

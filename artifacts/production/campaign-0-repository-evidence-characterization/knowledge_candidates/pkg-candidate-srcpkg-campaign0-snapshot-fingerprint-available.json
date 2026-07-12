@@ -1,0 +1,144 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign0-snapshot-fingerprint-available"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "source_evidence_package",
+      "evidence_ref_id": "ev-srcpkg-campaign0-snapshot-fingerprint-available",
+      "reproducibility_handle": "python3 tools/run_campaign0_repository_evidence.py --output artifacts/production/campaign-0-repository-evidence-characterization",
+      "snapshot_fingerprint": "sha256:d59d2bfb66636b42945f7221cd35bd8139c1769a2530564e096b167ab13a7ce1",
+      "source_family": "repository_evidence",
+      "source_identity": "KnowledgeForge repository selected evidence snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:88eb2dfc6037cd95893017487e3b0672c4862e718f41f0d0f1c82a96b92766ec",
+    "generated_statements": "sha256:8959fc4ff3928bef19f7af2d6f38415d85c87dc785f668fb1ede9f811fdf83ee",
+    "input_set": "sha256:980aa3aa48976ccb9bee862ddbaeb554e8fe8dcd844228d4ef36de10993393d9",
+    "package_manifest": "sha256:47efec9fafffd004bc6020ac6da796ac82f004bd2b74c9b630a1faef7f5cc304",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-0-repository-evidence-characterization",
+        "domain": "repository evidence characterization",
+        "exclusions": [
+          "interpretive claims",
+          "unsupported explanatory claims",
+          "future-oriented claims",
+          "cause-effect claims",
+          "action-selection claims",
+          "audience-facing prose",
+          "financial-meaning claims",
+          "government-action-meaning claims"
+        ],
+        "scope_type": "repository_evidence_characterization"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign0-snapshot-fingerprint-available",
+        "eval-srcpkg-campaign0-snapshot-fingerprint-available"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign0-snapshot-fingerprint-available"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign0-snapshot-fingerprint-available",
+      "statement_type": "provenance",
+      "text": "The Campaign 0 selected repository evidence snapshot has a canonical SHA-256 snapshot fingerprint."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign0-snapshot-fingerprint-available"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign0-snapshot-fingerprint-available",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign0-snapshot-fingerprint-available"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign0-snapshot-fingerprint-available"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign0-snapshot-fingerprint-available",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "repository evidence characterization",
+    "evidence_family": "repository_evidence",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-0-repository-evidence-characterization",
+      "domain": "repository evidence characterization",
+      "exclusions": [
+        "interpretive claims",
+        "unsupported explanatory claims",
+        "future-oriented claims",
+        "cause-effect claims",
+        "action-selection claims",
+        "audience-facing prose",
+        "financial-meaning claims",
+        "government-action-meaning claims"
+      ],
+      "scope_type": "repository_evidence_characterization"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

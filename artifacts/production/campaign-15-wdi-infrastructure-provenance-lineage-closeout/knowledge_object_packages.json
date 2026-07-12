@@ -1,0 +1,3062 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-artifact-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:d813c075a8c03ed5244be4e7d5800c227ab2c5a4d09d095668a2bc263c70b3fd"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-artifact-count",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:d813c075a8c03ed5244be4e7d5800c227ab2c5a4d09d095668a2bc263c70b3fd",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:a52a773aecff29fda400f6642a0c94f737601b9caffeed765555b1ed81eeac45",
+      "generated_statements": "sha256:9beffd88c83c60f72ece0041ac0498ac880525f8bf123b0a8f182001bdacf29f",
+      "input_set": "sha256:26c9e106a9665fde9377f25f6d3902edcee1413c4e6a4b340ee96baac37624a8",
+      "package_manifest": "sha256:c45e9fad074cec892409b9fad42ed6a78114659a639a8f4b482538a3b780d910",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "artifact count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-artifact-count",
+          "eval-srcpkg-campaign15-artifact-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-artifact-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-artifact-count",
+        "statement_type": "factual",
+        "text": "The Campaign 15 WDI Infrastructure provenance-lineage snapshot contains 5 raw artifact identity records."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-artifact-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:f4ab01141cc807a2ba0d3587d5598500bc00903d92ea7c1c798eb8df2a2498cc",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-artifact-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-artifact-count",
+        "pkg-object-srcpkg-campaign15-artifact-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-artifact-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-artifact-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-artifact-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-artifact-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-artifact-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "artifact count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-required-lineage-fields"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:dedb02b006fe4c7d85da04b83781d5e1e9a5b40c7d000269746258304061cb3b"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-required-lineage-fields",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:dedb02b006fe4c7d85da04b83781d5e1e9a5b40c7d000269746258304061cb3b",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:a144d8d9cae581c1b25c59b2e4e124fdad16962afbb1f29f275f9c9932e97469",
+      "generated_statements": "sha256:f8a33e822c5f2d81c4abfecedd9a2ada30c47aaee58edeaefc7fca6a716fc276",
+      "input_set": "sha256:2405b7b7e472725f8185a6446be4491bb63088e7666784ad2ab27edbaf5c80db",
+      "package_manifest": "sha256:513eb865383f39382401ee3ad420aaf92391e8d6d98d0608476bf0a4bb448dfd",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "required lineage fields"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-required-lineage-fields",
+          "eval-srcpkg-campaign15-required-lineage-fields"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-required-lineage-fields"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-required-lineage-fields",
+        "statement_type": "provenance",
+        "text": "Campaign 15 required lineage fields are raw artifact URL, raw artifact hash, release key, source URL, license note, and provenance envelope presence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-required-lineage-fields"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:71ad4e6405d465b9684255a4331361115cf3825a36349ccaf49c397c0952b6ff",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-required-lineage-fields",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-required-lineage-fields",
+        "pkg-object-srcpkg-campaign15-required-lineage-fields"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-required-lineage-fields",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-required-lineage-fields",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-required-lineage-fields"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-required-lineage-fields"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-required-lineage-fields",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "required lineage fields"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-complete-lineage-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:778f5ef2d4cd35f17b0a6a97d6aa223daf182fec84a25163157d621ae7e2cbb9"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-complete-lineage-count",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:778f5ef2d4cd35f17b0a6a97d6aa223daf182fec84a25163157d621ae7e2cbb9",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:148376bac1a5e41e3c4e531af031e10a4aeae0a5714da7f91e353b3ad90ae609",
+      "generated_statements": "sha256:52253eb9e095ac91a9ce776b711b7dbfabfb3aac5fc633159c44e4bb5e65a1a6",
+      "input_set": "sha256:bae06403888c75f01c8d9ba4b9b4cd3c4b977a4a57637028f376ac15693f8e24",
+      "package_manifest": "sha256:9fdd2379924263a71efc1f962ee2387da688f76edef667915aca600ce46a766a",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "complete lineage count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-complete-lineage-count",
+          "eval-srcpkg-campaign15-complete-lineage-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-complete-lineage-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-complete-lineage-count",
+        "statement_type": "derived",
+        "text": "Campaign 15 records 5 Infrastructure artifacts with all required provenance-lineage fields present."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-complete-lineage-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:f8ade98bb0bb97792cf595bdf22393fb797d6f74f0693672b79695c4b1b9a717",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-complete-lineage-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-complete-lineage-count",
+        "pkg-object-srcpkg-campaign15-complete-lineage-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-complete-lineage-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-complete-lineage-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-complete-lineage-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-complete-lineage-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-complete-lineage-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "complete lineage count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-missing-lineage-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e71f97a50e36a8e2c2a638021ad48201e728176b539956d2167e7374f314fcf2"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-missing-lineage-count",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:e71f97a50e36a8e2c2a638021ad48201e728176b539956d2167e7374f314fcf2",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:b27266c70b8d02f31f8c32239e79bba811e043a888186202d147e2b88588eb57",
+      "generated_statements": "sha256:92d517b6203bdf513aaf3a07915ff5425ca3c8e66a431e48f198bbd523bf26f4",
+      "input_set": "sha256:4c573f14701b1b8bc53c76b5f6f764127d50e6ae7f8b89a290051b40a02ce028",
+      "package_manifest": "sha256:e7aa63bbf982700b91c6a71e7ca2596e48bea8034f84395ba056733f93e84839",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "missing lineage count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-missing-lineage-count",
+          "eval-srcpkg-campaign15-missing-lineage-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-missing-lineage-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-missing-lineage-count",
+        "statement_type": "negative",
+        "text": "Campaign 15 records 0 missing required lineage fields in the audited Infrastructure lineage snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-missing-lineage-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:6228cdba5b9cb9d50392faa8a64ce39cd6ced3deb28307b293d7ca3c22e34185",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-missing-lineage-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-missing-lineage-count",
+        "pkg-object-srcpkg-campaign15-missing-lineage-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-missing-lineage-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-missing-lineage-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-missing-lineage-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-missing-lineage-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-missing-lineage-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "missing lineage count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-lineage-completeness-classification"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:64357834184f073c152268f29bca8632000353347df51ad5e0ca61ff6ca437f7"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-lineage-completeness-classification",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:64357834184f073c152268f29bca8632000353347df51ad5e0ca61ff6ca437f7",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:91d11a05c0d1ea7e6c9e5d8524b585decb8ae21e3858543866a7a1f8558c858b",
+      "generated_statements": "sha256:5b473c482af48a164277e907e770fb6ec3dd41bcfeb11c025b12d85bc788fa11",
+      "input_set": "sha256:349ae33e5355f1fc4f4b61d7f1f27d3c5fe415367ce38a895cab6af7dbe952c6",
+      "package_manifest": "sha256:1f6d33d129e1ba48edcee3e4475d176a32ca853dfbeb1d6dfafd0dc9d9ad4292",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "lineage completeness classification"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-lineage-completeness-classification",
+          "eval-srcpkg-campaign15-lineage-completeness-classification"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-lineage-completeness-classification"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-lineage-completeness-classification",
+        "statement_type": "classified",
+        "text": "Campaign 15 classifies the audited WDI Infrastructure provenance-lineage snapshot as complete for the required lineage field set."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-lineage-completeness-classification"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:6a709a5c5f8b7b25226b181b575f35d26ad7bf38d6675643d5d9c223279ea3b4",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-lineage-completeness-classification",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-lineage-completeness-classification",
+        "pkg-object-srcpkg-campaign15-lineage-completeness-classification"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-lineage-completeness-classification",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-lineage-completeness-classification",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-lineage-completeness-classification"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-lineage-completeness-classification"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-lineage-completeness-classification",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "lineage completeness classification"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-raw-artifact-hash-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e01a8a66aa0be0c7adf626638869658b804ef223dfae0200ae431a00ff4bc6db"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-raw-artifact-hash-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:e01a8a66aa0be0c7adf626638869658b804ef223dfae0200ae431a00ff4bc6db",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:9ed87433199cac6aa4cfe8edaff2cd2a66162e1932268ae9ded964e61e156f8d",
+      "generated_statements": "sha256:5c9526977a8c12ef5fe36057e1736ff2b391bab5f347cd1eedb18a301d608d0e",
+      "input_set": "sha256:88661959807cfda7ac55999ede8f1b444f60dacd011664b52b4be1be832aecd7",
+      "package_manifest": "sha256:540d43ccfaed4d41c3120e9505152a480920ef399efc1398dbb87e484020ff87",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "raw artifact hash coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-raw-artifact-hash-coverage",
+          "eval-srcpkg-campaign15-raw-artifact-hash-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-raw-artifact-hash-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-raw-artifact-hash-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 15 records raw artifact hashes for 5 audited WDI Infrastructure artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-raw-artifact-hash-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:a97489f21f34caff3734f964612f1452c8143dfb4b64a9004107221bd97ff7ef",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-raw-artifact-hash-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-raw-artifact-hash-coverage",
+        "pkg-object-srcpkg-campaign15-raw-artifact-hash-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-raw-artifact-hash-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-raw-artifact-hash-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-raw-artifact-hash-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-raw-artifact-hash-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-raw-artifact-hash-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "raw artifact hash coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-raw-artifact-url-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:54e55622c8686ea4e08cdcfb4319881be242b3eeda89cc42d0c4c829888a43a3"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-raw-artifact-url-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:54e55622c8686ea4e08cdcfb4319881be242b3eeda89cc42d0c4c829888a43a3",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:cb424b686e68ff8f8e9283414e5445ebe3f58d1f3a715f67a59e8a0b26dd49c0",
+      "generated_statements": "sha256:47adf6e6a9d63897a06d36c501c0af55c861d99d95da0217fc2cd06b8eef168a",
+      "input_set": "sha256:3d783a4df7c6328629204e4448d2bf1df9d0f5ec88f85fd9387c632028960b88",
+      "package_manifest": "sha256:e8eb94a9700784bbe697365ba7f9659156216064616a71e172b63a26365bc5ca",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "raw artifact url coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-raw-artifact-url-coverage",
+          "eval-srcpkg-campaign15-raw-artifact-url-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-raw-artifact-url-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-raw-artifact-url-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 15 records raw artifact URLs for 5 audited WDI Infrastructure artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-raw-artifact-url-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:d48ac31b9c57d4823e0bf277b34b285d898a7d080d08bfdc0905e3b5289e6100",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-raw-artifact-url-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-raw-artifact-url-coverage",
+        "pkg-object-srcpkg-campaign15-raw-artifact-url-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-raw-artifact-url-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-raw-artifact-url-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-raw-artifact-url-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-raw-artifact-url-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-raw-artifact-url-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "raw artifact url coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-release-key-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:d5bceac82a9293e917b3039a5cf0ce5483f434c98d3f7f278154627eafda23a9"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-release-key-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:d5bceac82a9293e917b3039a5cf0ce5483f434c98d3f7f278154627eafda23a9",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:2a4a5e29f8708154b6c3ced3868135c8311867cdf0a1a8496d0b5695ae33e573",
+      "generated_statements": "sha256:9746994489e0348a8c3d6aea45dbdc64a0d67b53b17542a471b4fcb10dc775c6",
+      "input_set": "sha256:7422d9bd99823cde05aaeda83dc8f9f0b57239609f5e79e5e623d9f114eb70c8",
+      "package_manifest": "sha256:7190c87433ffd1e84b67c4a74a414aaa5c754b3df16b0f7e8fce3650b7a3292e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "release key coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-release-key-coverage",
+          "eval-srcpkg-campaign15-release-key-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-release-key-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-release-key-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 15 records release keys for 5 audited WDI Infrastructure artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-release-key-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:07f4e3b3bbafa06ef79e4a52035d8f7b52f4ec507d29428ee73b106da009fda5",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-release-key-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-release-key-coverage",
+        "pkg-object-srcpkg-campaign15-release-key-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-release-key-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-release-key-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-release-key-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-release-key-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-release-key-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "release key coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-source-url-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b9519ad6a12dac63f0d2ec84e6cf2704d8d4ed9416fd5e5d671d5e970cdecbbe"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-source-url-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:b9519ad6a12dac63f0d2ec84e6cf2704d8d4ed9416fd5e5d671d5e970cdecbbe",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:a1cdf03e6918899be06d3317c6f9194180d96ec20fafe7116d6059caaf651524",
+      "generated_statements": "sha256:e88ec4b64db332e70583fb6cc5785a7cd7a53c4bce6863901b620c4d3152b9ab",
+      "input_set": "sha256:81aea3d06fa72840ce9ff625ae9cc8f05f83f533b1904fd4702c57208b1b74c2",
+      "package_manifest": "sha256:0cecfc12f9a5dd0fcf517f32850723584de3e0e23beb2ac4b160fd7bf431d344",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "source url coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-source-url-coverage",
+          "eval-srcpkg-campaign15-source-url-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-source-url-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-source-url-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 15 records source URLs for 5 audited WDI Infrastructure artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-source-url-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:ecab5ee6298d44af1a9a977ece4d81a51d42b3e62c1cc0f322ed85ca97ab46c3",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-source-url-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-source-url-coverage",
+        "pkg-object-srcpkg-campaign15-source-url-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-source-url-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-source-url-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-source-url-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-source-url-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-source-url-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "source url coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-license-note-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:bcce28fef440e71844a8c4f5fec32112836ac4dc1c422fab70d857835c6b3877"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-license-note-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:bcce28fef440e71844a8c4f5fec32112836ac4dc1c422fab70d857835c6b3877",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:8d06d405cf483a9f5fc36cdba0f70fef945a3ac095ccef9700f94a2967aba764",
+      "generated_statements": "sha256:b4110e1428d8a14430bf94c40488d1ff71fd390e30c26c43be088e680c4f6877",
+      "input_set": "sha256:0d50231be65a2303118e6d9b1390dd23389def2229455375dfb08b7530f67250",
+      "package_manifest": "sha256:90325ca567a40861b59e1d2da48c94b9eb6f648bc145b73a27f2570be19c5eb8",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "license note coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-license-note-coverage",
+          "eval-srcpkg-campaign15-license-note-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-license-note-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-license-note-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 15 records license notes for 5 audited WDI Infrastructure artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-license-note-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:95bd3d2ecfca1a5a32123e55becc34d1e8323001297323bd767bc9ae460cabd0",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-license-note-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-license-note-coverage",
+        "pkg-object-srcpkg-campaign15-license-note-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-license-note-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-license-note-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-license-note-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-license-note-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-license-note-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "license note coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-lineage-envelope-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:edbac035d5a04d6d47324a7d5af8cb44cef8f80cd0e45d3c61a9cec6fe14041d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-lineage-envelope-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:edbac035d5a04d6d47324a7d5af8cb44cef8f80cd0e45d3c61a9cec6fe14041d",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:e110cea9d11cd4e0ae04e8f741b0de9a24305b37b2b582fa9402dfe4ba1f070b",
+      "generated_statements": "sha256:05983975a090541f8ffff77c80a883100cb8c945ac707b11680f7b4f5691c858",
+      "input_set": "sha256:c9da553af3e7778a7632f9a11920deac3759af4aa65022930f06ddaa1021d3a9",
+      "package_manifest": "sha256:6bcaf969fa955e2f94547bc13f6d73068820268030cc2361b13b42b1901857d0",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "lineage envelope coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-lineage-envelope-coverage",
+          "eval-srcpkg-campaign15-lineage-envelope-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-lineage-envelope-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-lineage-envelope-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 15 records provenance envelope presence for 5 audited WDI Infrastructure artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-lineage-envelope-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:ef5dae196befa638c0c55043e0ae8ca1ca66316b052df61f39f2efd958ea04f8",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-lineage-envelope-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-lineage-envelope-coverage",
+        "pkg-object-srcpkg-campaign15-lineage-envelope-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-lineage-envelope-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-lineage-envelope-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-lineage-envelope-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-lineage-envelope-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-lineage-envelope-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "lineage envelope coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-quality-control-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:4b8758183adefefa6f3f750ace62c0436f50b810ee2118b1b141fe881b7f8158"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-quality-control-state",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:4b8758183adefefa6f3f750ace62c0436f50b810ee2118b1b141fe881b7f8158",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:37cd92f8e5f9853baf732fdc1ecfddafd80e566182ec6aa3f8b13561f9649b8e",
+      "generated_statements": "sha256:7ce98761dea0d3bd831a790b9d4e7aaa9b87ec19920a653fa3706033d0f5da96",
+      "input_set": "sha256:7753e75d8b597247084c59092f280cf81fa9c6a9e3775fd2b15fb5f38257536d",
+      "package_manifest": "sha256:70ae5442d58258144c067b9bac407d88e904a22237cd3c23eb17ea1338418c5a",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "quality control state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-quality-control-state",
+          "eval-srcpkg-campaign15-quality-control-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-quality-control-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-quality-control-state",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 15 quality control confirms required lineage fields, lineage fingerprint inputs, source identity, release metadata, and non-interpretive scope for Infrastructure provenance-lineage closeout."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-quality-control-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:f10f896c905de18625b1f3a5bf2c81a7851eb3a6a3afb21edc9862e80316ac9d",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-quality-control-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-quality-control-state",
+        "pkg-object-srcpkg-campaign15-quality-control-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-quality-control-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-quality-control-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-quality-control-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-quality-control-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-quality-control-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "quality control state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-validation-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:923bf0967a90338d5cd4c7bc3c54feb74b6b8bbd0858d15beecb1c3d89702bb5"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-validation-state",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:923bf0967a90338d5cd4c7bc3c54feb74b6b8bbd0858d15beecb1c3d89702bb5",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:7490ec5855332c0c3d7aabf2ccee5b5b23839d4eea046bb95d41f4f6870ebeef",
+      "generated_statements": "sha256:022299812ed8d094d7ebe9faf0093819077fbce019a900f9255e89456f3ddfbb",
+      "input_set": "sha256:8828c1093e2c426170abba60412d43435992b50592bbf7d389210eef4149fda5",
+      "package_manifest": "sha256:99396153b0311f5ef81cd92a547496c08c8286ec9f9fc5b1ba4cad7f4323bd54",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "validation state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-validation-state",
+          "eval-srcpkg-campaign15-validation-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-validation-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-validation-state",
+        "statement_type": "methodological",
+        "text": "Campaign 15 routes Infrastructure provenance-lineage packages through the existing validation pipeline without validator, taxonomy, package-model, Production Support, provenance, fingerprint, or reporting modification."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-validation-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:aced8d1ff3200c92ebfea8426d23e1f91854aba3c49c9a3d782e8ff2398423cb",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-validation-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-validation-state",
+        "pkg-object-srcpkg-campaign15-validation-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-validation-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-validation-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-validation-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-validation-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-validation-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "validation state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-deterministic-lineage-transform"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a5327fd5fb7b8a0b13a9ced43beed5f174356a42469737dcae0fb7e6824be10e"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-deterministic-lineage-transform",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:a5327fd5fb7b8a0b13a9ced43beed5f174356a42469737dcae0fb7e6824be10e",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:99820e288d6eabbf817bdc295ad990a067870e730edf32bc81568ae320d5a32d",
+      "generated_statements": "sha256:a275058b40ccc3387a2bcf80f4bdc2fb642e22f44896014d99ef0b8216bb4dd6",
+      "input_set": "sha256:6f44e21398474a3e84e6c8f0c5becf09dd88a51c8d7d4a94eabb2be1750142c6",
+      "package_manifest": "sha256:40abc8465feed2cde82d91d72d17833d8dc9244883aed86ce709529e0e69bc6b",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "deterministic lineage transform"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-deterministic-lineage-transform",
+          "eval-srcpkg-campaign15-deterministic-lineage-transform"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-deterministic-lineage-transform"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-deterministic-lineage-transform",
+        "statement_type": "methodological",
+        "text": "Campaign 15 derives Infrastructure lineage completeness counts deterministically from the immutable artifact lineage snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-deterministic-lineage-transform"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:55c2f3f15b82f700c359133261010fd416750da131f816a434553319c043f600",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-deterministic-lineage-transform",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-deterministic-lineage-transform",
+        "pkg-object-srcpkg-campaign15-deterministic-lineage-transform"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-deterministic-lineage-transform",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-deterministic-lineage-transform",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-deterministic-lineage-transform"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-deterministic-lineage-transform"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-deterministic-lineage-transform",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "deterministic lineage transform"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-infrastructure-family-maturity-assessment"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:3564813d971be783965d0d78b18acea48296bb80be0cb37d8954711dc96d6259"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-infrastructure-family-maturity-assessment",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:3564813d971be783965d0d78b18acea48296bb80be0cb37d8954711dc96d6259",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:33691969d31868ec13eb2908e836596e147a9f1aedba9e47bef0c32a4be688b0",
+      "generated_statements": "sha256:8bae41e098ef03806885d06678f5ac1fc22c5bda27826dcc0e63d603e9ae9785",
+      "input_set": "sha256:c862370b9b6cfdd5bbbb3781892ee6bf57ef8cff6cf88871db190caed6bf7b4d",
+      "package_manifest": "sha256:36f19b8bc18894804d31365078e71d3229620b727ee9c0f0d05d0ab27ad9f224",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "Infrastructure family maturity"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-infrastructure-family-maturity-assessment",
+          "eval-srcpkg-campaign15-infrastructure-family-maturity-assessment"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-infrastructure-family-maturity-assessment"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-infrastructure-family-maturity-assessment",
+        "statement_type": "methodological",
+        "text": "Campaigns 13-15 support Mature status for the WDI Infrastructure production family using the established Family Closeout methodology unchanged."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-infrastructure-family-maturity-assessment"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:672c58ccd440c8f4f8ba717347acc4b2c891496cd4f62c290c9225e66c5d5181",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-infrastructure-family-maturity-assessment",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-infrastructure-family-maturity-assessment",
+        "pkg-object-srcpkg-campaign15-infrastructure-family-maturity-assessment"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-infrastructure-family-maturity-assessment",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-infrastructure-family-maturity-assessment",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-infrastructure-family-maturity-assessment"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-infrastructure-family-maturity-assessment"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-infrastructure-family-maturity-assessment",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "Infrastructure family maturity"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-production-methodology-assessment"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:60b13ad6f22a223990c3af25c6ad334231aec9b96fd94fb3196dd803d61e77df"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-production-methodology-assessment",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:60b13ad6f22a223990c3af25c6ad334231aec9b96fd94fb3196dd803d61e77df",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:7d3c12a2abb52e56f2b190071122bc3e0be0cd0481344e38d2f5b784b88ab0c8",
+      "generated_statements": "sha256:56265b7d3957f4c0c7b67c0fdcd33f76e656fab25e617fe0b26b06f43c83fc2f",
+      "input_set": "sha256:97aac8694fd3a22c5c5da2641f77cffd2cf06ba39157d8ffca5ab7bfb65ed990",
+      "package_manifest": "sha256:034c2a3b577ddb4911350397b9417c72c53d79473d489a46c4a9e3e34e37140a",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "production methodology assessment"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-production-methodology-assessment",
+          "eval-srcpkg-campaign15-production-methodology-assessment"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-production-methodology-assessment"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-production-methodology-assessment",
+        "statement_type": "methodological",
+        "text": "Campaign 15 records the KnowledgeForge production methodology as preserved across three Mature WDI annual-scalar production families without architecture refinement."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-production-methodology-assessment"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:bbfe8dfcd54f0427a3ea610c73c9ca655a2434f102872958cd3ae676f3d4c845",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-production-methodology-assessment",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-production-methodology-assessment",
+        "pkg-object-srcpkg-campaign15-production-methodology-assessment"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-production-methodology-assessment",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-production-methodology-assessment",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-production-methodology-assessment"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-production-methodology-assessment"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-production-methodology-assessment",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "production methodology assessment"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign15-architectural-continuity-review"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:ec9bddbd6f93ec2f1576f5e7d19c6cede11e475fe07106ad158210b83b00eeff"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign15-architectural-continuity-review",
+        "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:ec9bddbd6f93ec2f1576f5e7d19c6cede11e475fe07106ad158210b83b00eeff",
+        "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:ea95e0111c7ec66f806b4fff4cc78ecf740372cd9609f3897f861d10caead20e",
+      "generated_statements": "sha256:d04d9d0cc30dcd5a7f0a8e9a20072ba262e240e159ccf710d476f5381f96b231",
+      "input_set": "sha256:68a9dda61aee3afe474e58e9dde2bab4724715aba01ee92a9fe6ec674b95f89a",
+      "package_manifest": "sha256:1e6a8cf14ba809ecd36540ea6f874865919fed53585510662d0d4761d061df9a",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_infrastructure_provenance_lineage_metadata",
+          "topic": "architectural continuity review"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign15-architectural-continuity-review",
+          "eval-srcpkg-campaign15-architectural-continuity-review"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign15-architectural-continuity-review"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign15-architectural-continuity-review",
+        "statement_type": "methodological",
+        "text": "Campaign 15 architectural continuity review classifies the next-phase path as preserving the agreed architecture and identifies no refinement, duplicate concept, contradiction, or architectural drift."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign15-architectural-continuity-review"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:426231131981eee2f7ef7d7268c6899c7480f3b59af2af9e06aff59fe1251f2e",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign15-architectural-continuity-review",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign15-architectural-continuity-review",
+        "pkg-object-srcpkg-campaign15-architectural-continuity-review"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign15-architectural-continuity-review",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-architectural-continuity-review",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign15-architectural-continuity-review"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-architectural-continuity-review"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign15-architectural-continuity-review",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "architectural continuity review"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

@@ -1,0 +1,178 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign0-acceptance-criteria-present"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:15d791ec59a4ceaadc5a1bdcca55d5bffc8ec70857deb003a14a280a79c094cc"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "source_evidence_package",
+      "evidence_ref_id": "ev-srcpkg-campaign0-acceptance-criteria-present",
+      "reproducibility_handle": "python3 tools/run_campaign0_repository_evidence.py --output artifacts/production/campaign-0-repository-evidence-characterization",
+      "snapshot_fingerprint": "sha256:15d791ec59a4ceaadc5a1bdcca55d5bffc8ec70857deb003a14a280a79c094cc",
+      "source_family": "repository_evidence",
+      "source_identity": "KnowledgeForge repository selected evidence snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:b55ffb7cf4c2af54d08be8300ebb0458067c00ee284fa0705a2ff4be72dc104d",
+    "generated_statements": "sha256:c5e55e70753cc58d6c073700e2b38fb99efc6c308b4aea33933338fd8707eb61",
+    "input_set": "sha256:ddb2278170f303e6d8ddb99e8d90110983d3ddb818aa4ced471df4a0213c4977",
+    "package_manifest": "sha256:d3400a86e9c85633b3430a770939e818824009a94674af5d7713d1e0140c2769",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-0-repository-evidence-characterization",
+        "domain": "repository evidence characterization",
+        "exclusions": [
+          "interpretive claims",
+          "unsupported explanatory claims",
+          "future-oriented claims",
+          "cause-effect claims",
+          "action-selection claims",
+          "audience-facing prose",
+          "financial-meaning claims",
+          "government-action-meaning claims"
+        ],
+        "scope_type": "repository_evidence_characterization"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign0-acceptance-criteria-present",
+        "eval-srcpkg-campaign0-acceptance-criteria-present"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign0-acceptance-criteria-present"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign0-acceptance-criteria-present",
+      "statement_type": "methodological",
+      "text": "The Campaign 0 selected repository evidence snapshot records knowledge acceptance criteria presence as true."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign0-acceptance-criteria-present"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:f2bb72ca4e89e5851e0e53d282c7140a006592ab2ed66944eb7dab5b6667a672",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign0-acceptance-criteria-present",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign0-acceptance-criteria-present",
+      "pkg-object-srcpkg-campaign0-acceptance-criteria-present"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign0-acceptance-criteria-present",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign0-acceptance-criteria-present",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign0-acceptance-criteria-present"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign0-acceptance-criteria-present"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign0-acceptance-criteria-present",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "repository evidence characterization",
+    "evidence_family": "repository_evidence",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-0-repository-evidence-characterization",
+      "domain": "repository evidence characterization",
+      "exclusions": [
+        "interpretive claims",
+        "unsupported explanatory claims",
+        "future-oriented claims",
+        "cause-effect claims",
+        "action-selection claims",
+        "audience-facing prose",
+        "financial-meaning claims",
+        "government-action-meaning claims"
+      ],
+      "scope_type": "repository_evidence_characterization"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

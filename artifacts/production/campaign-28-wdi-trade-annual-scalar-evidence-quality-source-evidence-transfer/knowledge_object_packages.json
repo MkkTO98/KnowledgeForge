@@ -1,0 +1,3422 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-source-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:330fae6f24c9ea24e00d9909ae7d1c14d68b3069ff7e6f16e45738ceea13b835"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-source-scope",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:330fae6f24c9ea24e00d9909ae7d1c14d68b3069ff7e6f16e45738ceea13b835",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:994ba5a084038192b3a7032452ea78d33feff4893f1efec0187707c517b3afd9",
+      "generated_statements": "sha256:329cbc060e542818c8b0dc3fb06a8b2d19b158580cb887545a04e6be057c57b8",
+      "input_set": "sha256:d1be690de4bc1417f43f50b1748cef3d051277ea657a3d2fd3c6ce286a8c6cf6",
+      "package_manifest": "sha256:e160105e3ad2c08c0d659e773f0acc2ce6ac51f14c77a851deb7f2ed16fec550",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "source scope"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-source-scope",
+          "eval-srcpkg-campaign28-trade-source-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-source-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-source-scope",
+        "statement_type": "factual",
+        "text": "The Campaign 28 source evidence package is scoped to World Bank WDI annual-scalar Trade evidence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-source-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:868408c6014dbcfbaf27dfd9c716d4389e970be485ef6ea9415bf601858aa78a",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-source-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-source-scope",
+        "pkg-object-srcpkg-campaign28-trade-source-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-source-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-source-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-source-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-source-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-source-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "source scope"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-topic-inventory"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:235437efd50d203a59e14eb3a71a23aed2992083a2cf32916147c1a3bc515b79"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-topic-inventory",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:235437efd50d203a59e14eb3a71a23aed2992083a2cf32916147c1a3bc515b79",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:def287bb1344c762afc0ceb9b5625f9cee5a443eb67403feccea7d9caa4a3aec",
+      "generated_statements": "sha256:cf30ccd3b42fed1f765bd1671ec08dbe7f946be96eb4d637eea0338d67a5bc95",
+      "input_set": "sha256:73e968bd327a5bc73eb9f9f0c1f77866224c54f7549318d6f813624f0113e341",
+      "package_manifest": "sha256:ad3470da6dffaf11cec26422bbc595bd1e0193c1b5d76254fe5733e150c0e643",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "indicator coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-topic-inventory",
+          "eval-srcpkg-campaign28-trade-topic-inventory"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-topic-inventory"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-topic-inventory",
+        "statement_type": "coverage",
+        "text": "The audited WDI Trade topic inventory records 112 annual-scalar indicators."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-topic-inventory"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:4161bec4840ff73f34c97958937012c28a98d3971a8e7918ca3d1422c337e60d",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-topic-inventory",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-topic-inventory",
+        "pkg-object-srcpkg-campaign28-trade-topic-inventory"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-topic-inventory",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-topic-inventory",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-topic-inventory"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-topic-inventory"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-topic-inventory",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "indicator coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-territory-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:c053273bbbfc4d480800b600d2aa8cf90a172dd0bde3bb5ab3995a068a3b5fc8"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-territory-scope",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:c053273bbbfc4d480800b600d2aa8cf90a172dd0bde3bb5ab3995a068a3b5fc8",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c5df08e8280fc9c8725159c52af1143223d9c05d1a24d7712e012894bb4f4106",
+      "generated_statements": "sha256:a044039367846a5dcc30456dbaf3f5ba8a788a9e46accef0772b4a775c4a7e4a",
+      "input_set": "sha256:d490fcc00e2e13a8c17a4e04595d2b59c0676cfba288cde2e5d2bf8c82fb1714",
+      "package_manifest": "sha256:1e9ed2ad317a36422fee25de7f70f52b9a98f573e1f2d88392169e6503a6154e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "territory coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-territory-scope",
+          "eval-srcpkg-campaign28-trade-territory-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-territory-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-territory-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 28 uses the same audited WDI territory scope count of 217 non-aggregate or country-like territories."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-territory-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:0332a0aebaed3eb4a124ca6809583f4e5301d0e777d4ac7a49a5c84e59c8afc8",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-territory-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-territory-scope",
+        "pkg-object-srcpkg-campaign28-trade-territory-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-territory-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-territory-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-territory-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-territory-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-territory-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "territory coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-period-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:d3fa96bc428b776fcffaa11b49d862dac5637ea4f1b7026773b5a317dae796ac"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-period-scope",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:d3fa96bc428b776fcffaa11b49d862dac5637ea4f1b7026773b5a317dae796ac",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:4ece224cc9b5903fdff1d65f9681a2d0b80d68f95bfa02bc9a04dc91504ea124",
+      "generated_statements": "sha256:cfd333bbb5f361e6d0fc26ab728f629827e0ae895e7cff5ad6871ef065e77ba0",
+      "input_set": "sha256:944ba55b8ac1e03a59326cd084ff7f35707e158276d860b16cac158bd5125b11",
+      "package_manifest": "sha256:c5ef2afb1f4824eac199c0dcbd9bef6c2c9d30f8a2ef178a80d48a5b66008929",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "temporal coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-period-scope",
+          "eval-srcpkg-campaign28-trade-period-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-period-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-period-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 28 uses 35 annual periods from 1990 through 2024 for Trade evidence coverage."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-period-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c66a0daf7fb91504649e8cd953ea27d6fc02686be16e7a0e99fa16020df3aa77",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-period-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-period-scope",
+        "pkg-object-srcpkg-campaign28-trade-period-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-period-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-period-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-period-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-period-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-period-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "temporal coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-observed-missing"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:dd1fd1db146fc8ba6ab736906b14bedd07b69155f6b4817e7b810f29d4299e8c"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-observed-missing",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:dd1fd1db146fc8ba6ab736906b14bedd07b69155f6b4817e7b810f29d4299e8c",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:276f699420d67e050af0845603d0c5abd8141539731370be3dfdfc553b78b79f",
+      "generated_statements": "sha256:a66645cb762cc132b5943239367790c305d709ed2a9f40b0fbdcc04a2a81c220",
+      "input_set": "sha256:de49faf64954bad036cea8066e8688f4bb8affbbce227810abdf3b7ca61facc6",
+      "package_manifest": "sha256:713984847da03d8bf8dc56916831eebbef92d53f81269ae9e32f815d03514145",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed missing coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-observed-missing",
+          "eval-srcpkg-campaign28-trade-observed-missing"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-observed-missing"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-observed-missing",
+        "statement_type": "coverage",
+        "text": "The Campaign 28 Trade snapshot records 543900 observed cells and 122850 explicit missing cells."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-observed-missing"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:16f0b55050f40745e6973c40a77d113e3abe4452c658606a32e0c38a4cbb70a3",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-observed-missing",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-observed-missing",
+        "pkg-object-srcpkg-campaign28-trade-observed-missing"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-observed-missing",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-observed-missing",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-observed-missing"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-observed-missing"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-observed-missing",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed missing coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-observed-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a6646998692d40f0597c985acfccc9aaacca6b30eccfbc80e32b7b77ffa4f4c7"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-observed-share",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:a6646998692d40f0597c985acfccc9aaacca6b30eccfbc80e32b7b77ffa4f4c7",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:e2d48ef33a4540d6671c2d3e9501d811e5eaec4e1ca1316dfa4c701d7cd85e50",
+      "generated_statements": "sha256:2771bd1b6a17cea8d39863015543eef01306b6674131242f427f905040239e23",
+      "input_set": "sha256:ae4b0b60ac062469df13e0976e7b4e135c9e368d139ea4e904b516991c2eecdd",
+      "package_manifest": "sha256:857e431a5061daae36546de7cb198cdc3f0d4e50be01fe88a822099323b7add5",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-observed-share",
+          "eval-srcpkg-campaign28-trade-observed-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-observed-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-observed-share",
+        "statement_type": "derived",
+        "text": "The Campaign 28 Trade snapshot has observed cell share 0.815748 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-observed-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:bf1afee54fe20464b0f8141839c36d15f2fc04a574d46758acfb0166f3bfe75a",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-observed-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-observed-share",
+        "pkg-object-srcpkg-campaign28-trade-observed-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-observed-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-observed-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-observed-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-observed-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-observed-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-missing-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:51b4658b0065d99c71a7ea0f9352e5ff90a04146d8aa7be58e89699d532f38ae"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-missing-share",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:51b4658b0065d99c71a7ea0f9352e5ff90a04146d8aa7be58e89699d532f38ae",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:852dacbbc1e1fa524dedb747fcdfc7147af2395d1392f7ddaf2d24cc5089f9a8",
+      "generated_statements": "sha256:2906b0f9bd7d6d7902749168b717864bcea92f98c19806751b3db7bfed396e29",
+      "input_set": "sha256:9f2804af17a5469a7202db211796a485653da765ace10210d1679e001dc44461",
+      "package_manifest": "sha256:231efa01f1ac2a86fca1d796902290958333e65c59bd10a4283061f46795ce1b",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "missing share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-missing-share",
+          "eval-srcpkg-campaign28-trade-missing-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-missing-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-missing-share",
+        "statement_type": "negative",
+        "text": "The Campaign 28 Trade snapshot has explicit missing cell share 0.184252 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-missing-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:43317627b675458a42db8f836204a5d669ec43af96d63b0926fed4b7e0bfe528",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-missing-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-missing-share",
+        "pkg-object-srcpkg-campaign28-trade-missing-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-missing-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-missing-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-missing-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-missing-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-missing-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "missing share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-family-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:11a72117f52c7a43507ca29c1673b247b1d3352a6b967949f9ff77fc5cf342d4"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-family-count",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:11a72117f52c7a43507ca29c1673b247b1d3352a6b967949f9ff77fc5cf342d4",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:24c7d42ce724f64b73fcb2d06ebdbe421c70079dd6b958397979929b4d92ecde",
+      "generated_statements": "sha256:79e6f371b3cdb331c012f52f3c05cfe3d321d392749188fdbc5ed0d33c227cdd",
+      "input_set": "sha256:42618cdff8919ced73af827f290388cdbdb869994663640cded8b346385b387f",
+      "package_manifest": "sha256:0a45a331f02bba9ac98191d58b8a9389603663e197f017c1891a3358290f00af",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-family-count",
+          "eval-srcpkg-campaign28-trade-family-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-family-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-family-count",
+        "statement_type": "classified",
+        "text": "The Campaign 28 Trade inventory groups the selected indicators into 5 deterministic metadata families."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-family-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:d253a76f3e7bfa1bf2c60d26821b896a4167d318b240c078ca3ba19a96965a32",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-family-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-family-count",
+        "pkg-object-srcpkg-campaign28-trade-family-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-family-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-family-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-family-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-family-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-family-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-partial-families"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:50814bb4e7463cd643341a8bb2fff546b0e0fd1e260a89ab9407545987295d72"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-partial-families",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:50814bb4e7463cd643341a8bb2fff546b0e0fd1e260a89ab9407545987295d72",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:1b2700b1e0ac74901ba31157db68dec5baa22dd2abbbd973060558a748ab96d5",
+      "generated_statements": "sha256:02a158c774d074b9cb125181b0108cb0b9d1f4038db954f42b42ce3d0cf166c9",
+      "input_set": "sha256:f63a9d3299630168f48df2f0a1f116ac3d5bf1227e9794527b603d4f9ae05135",
+      "package_manifest": "sha256:cb629f28cc50b1372d581e57e6eaa6d024562e0ea2bb2da185630c5deadd58b6",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "partial family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-partial-families",
+          "eval-srcpkg-campaign28-trade-partial-families"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-partial-families"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-partial-families",
+        "statement_type": "negative",
+        "text": "Campaign 28 records 5 Trade metadata families with explicit missing cells in the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-partial-families"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:1f7cc480e2beef14822d5ea58db9e03390e2a33b67fa82bc2f286c2c58509249",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-partial-families",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-partial-families",
+        "pkg-object-srcpkg-campaign28-trade-partial-families"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-partial-families",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-partial-families",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-partial-families"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-partial-families"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-partial-families",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "partial family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-provenance-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b2d158413f29b53b91e4d27b3cb14eeb67b1d13aee135164fad5fd715122ccdd"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-provenance-state",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:b2d158413f29b53b91e4d27b3cb14eeb67b1d13aee135164fad5fd715122ccdd",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c3f3b9e341739a679284c0787c6e9a6ea8c9ae9e925893819665afa0da8474ac",
+      "generated_statements": "sha256:dac797d4495a9bb9a2509dd72879bdba51de11f820fd4c47e4f01e15cd3db4a9",
+      "input_set": "sha256:c73702baa1fe79447795975474050b4c989d9afe207dbe296e475c1f846a4772",
+      "package_manifest": "sha256:3032f06698c0a43fd3f595e1e0b1281067f1def6b880621659a2f1e4bf88298e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "provenance state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-provenance-state",
+          "eval-srcpkg-campaign28-trade-provenance-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-provenance-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-provenance-state",
+        "statement_type": "provenance",
+        "text": "Campaign 28 records WDI Trade source URLs, raw artifact URLs, raw artifact hashes, release keys, license notes, and WDI last-updated metadata as available in the evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-provenance-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:920906960a4985df82034205e3dcd6c427e9ed5e183dc741efdf0f98db0e2e8e",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-provenance-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-provenance-state",
+        "pkg-object-srcpkg-campaign28-trade-provenance-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-provenance-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-provenance-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-provenance-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-provenance-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-provenance-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "provenance state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-evidence-quality-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:c3305527e04d52670e9b13bdf4e944f7d64695fb575bae355a8e5b7968fd547b"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-evidence-quality-state",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:c3305527e04d52670e9b13bdf4e944f7d64695fb575bae355a8e5b7968fd547b",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:91316ab105d176f1434126b2f6a917d865aef0b04cd6545428f16750d088053a",
+      "generated_statements": "sha256:3a3041f88eb31b8119a4865d1ff9b2bd4d2f98cfd449cb414cf6d86c2a4e3c6e",
+      "input_set": "sha256:754f58b53164dbdf47d2c4073fb3b24bdf582ff2ff84ad4052bb6beffb244cc1",
+      "package_manifest": "sha256:66ff5d2cd3cfe7bdd093318cccd7eb5e756c0d44bc3b1a8ddcf8557f58012b6d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "evidence quality state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-evidence-quality-state",
+          "eval-srcpkg-campaign28-trade-evidence-quality-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-evidence-quality-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-evidence-quality-state",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 28 records explicit observation status, observed and missing status, WDI-only source scope, and annual-scalar evidence shape for the Trade family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-evidence-quality-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:1d6d02c426d30cb57a5667b4bc08868ea7b947dd68760729d59c784cf7c20cb0",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-evidence-quality-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-evidence-quality-state",
+        "pkg-object-srcpkg-campaign28-trade-evidence-quality-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-evidence-quality-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-evidence-quality-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-evidence-quality-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-evidence-quality-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-evidence-quality-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "evidence quality state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-trade-unsupported-dimensions"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:02529c78a45c2687a2a815fe4b5d72f41a2d460531c093ef50c33bd2048fceb6"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-trade-unsupported-dimensions",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:02529c78a45c2687a2a815fe4b5d72f41a2d460531c093ef50c33bd2048fceb6",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:207e633a41476f0156f932d4ba4ab8e4f080004653aca094464aed27efe4ca17",
+      "generated_statements": "sha256:52da161ec691b86ebef8d9b58976dd10d0ca25a529d4535263529a710d5b01cc",
+      "input_set": "sha256:a69ba7c78b163e0aca997a6cb55c7aef2e27bef0b0c6ffb318e3eef57e987f07",
+      "package_manifest": "sha256:3353247d92991ad9e0369dbd890f95efa289ec25a01a775472f2ee5a4ed09988",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "unsupported dimensions"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-trade-unsupported-dimensions",
+          "eval-srcpkg-campaign28-trade-unsupported-dimensions"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-trade-unsupported-dimensions"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-trade-unsupported-dimensions",
+        "statement_type": "negative",
+        "text": "The Campaign 28 Trade annual-scalar evidence snapshot does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the accepted production scope."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-trade-unsupported-dimensions"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:a788a9221cfea1a306559e0f1c9f397e6a50755a47765d28356dddce031de9c0",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-trade-unsupported-dimensions",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-trade-unsupported-dimensions",
+        "pkg-object-srcpkg-campaign28-trade-unsupported-dimensions"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-trade-unsupported-dimensions",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-trade-unsupported-dimensions",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-trade-unsupported-dimensions"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-trade-unsupported-dimensions"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-trade-unsupported-dimensions",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-replication-contract"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:17179b716795efc2d3a289ef5b50337a5cb2f284ee21893ea7ce15e730361993"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-replication-contract",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:17179b716795efc2d3a289ef5b50337a5cb2f284ee21893ea7ce15e730361993",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c992a1d013f7493638b733fcb3e21a61f7f1b08e31b8654c5bf49d55e8d59bfc",
+      "generated_statements": "sha256:cb0b7f15bf17096d8646f21780686ae53e2a7e4c64f308c875ac54e86949595f",
+      "input_set": "sha256:5fa25178a25bee1b2644134d7b6138130375745b55eaff40b54e665c9f4a9805",
+      "package_manifest": "sha256:a8c6b0ce92a757d082b929f4728ebf54bf973f5ad956e92cd7ab6e76c88a7b73",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "replication contract"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-replication-contract",
+          "eval-srcpkg-campaign28-replication-contract"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-replication-contract"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-replication-contract",
+        "statement_type": "methodological",
+        "text": "Campaign 28 uses unchanged production workflow, package construction, validator behaviour, Production Support, provenance handling, fingerprinting, reporting, metrics, and Production Evolution Log workflow from the mature WDI demographic production method."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-replication-contract"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c8e218c04ac759ba80ddbddec10dc33015f09e25949af5b0b11d65e5df7e9efb",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-replication-contract",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-replication-contract",
+        "pkg-object-srcpkg-campaign28-replication-contract"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-replication-contract",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-replication-contract",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-replication-contract"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-replication-contract"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-replication-contract",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "replication contract"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-deterministic-transfer-method"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:edca7a04326b17d29ccffbeb159a3cf65f015aa052de0c2bebe5395d8a6f0d62"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-deterministic-transfer-method",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:edca7a04326b17d29ccffbeb159a3cf65f015aa052de0c2bebe5395d8a6f0d62",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:5cc9e5050e879392cd9a0b75bc230c323bf87fe248556f031019e3a8304e20c9",
+      "generated_statements": "sha256:af681624a4b8177fef47364073106a92d43d2e6d3999076717dce6bbd692eb36",
+      "input_set": "sha256:a454ba8eb82d9cb70bbccc269d5c44366d2e2177cbe29cebb68b9d739bca0947",
+      "package_manifest": "sha256:6c5ed3b0471f6fa9ed7efbdca806331451265e9200fb8801a57b48e344ae7f72",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "deterministic transfer method"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-deterministic-transfer-method",
+          "eval-srcpkg-campaign28-deterministic-transfer-method"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-deterministic-transfer-method"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-deterministic-transfer-method",
+        "statement_type": "methodological",
+        "text": "Campaign 28 derives Trade evidence-quality and coverage objects deterministically from the immutable Trade evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-deterministic-transfer-method"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:796d14282c9f071d32642638acc09d586fde47d98c5430187ef1b6e3e02cd7be",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-deterministic-transfer-method",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-deterministic-transfer-method",
+        "pkg-object-srcpkg-campaign28-deterministic-transfer-method"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-deterministic-transfer-method",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-deterministic-transfer-method",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-deterministic-transfer-method"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-deterministic-transfer-method"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-deterministic-transfer-method",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "deterministic transfer method"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-family-enrollment-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b0cdc13814a3863790b89c81ff8fbfc42aa110252bf247851962d6f7a06d4875"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-family-enrollment-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:b0cdc13814a3863790b89c81ff8fbfc42aa110252bf247851962d6f7a06d4875",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:2399924822001b437ae9baa16a308e5ed67683335d5fe79fd1e8df7ac563d102",
+      "generated_statements": "sha256:70fde04878562a4fe02f90009bd60fde5e8d9a14fbcadc9002c2598f62503715",
+      "input_set": "sha256:c1b0cce8810cad6b9e91fd81a570c9d39ef61bfd4f889b9c956013be8b3cfd1f",
+      "package_manifest": "sha256:d3985e4c30e74f1b3f8bd6241dcededceecd533cce5551f2d5ebe6a3e6b66865",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "trade metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-family-enrollment-metadata",
+          "eval-srcpkg-campaign28-family-enrollment-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-family-enrollment-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-family-enrollment-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 28 records 28 annual-scalar indicators for the enrollment_metadata Trade metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-family-enrollment-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:4dc31200b2e6bc73459c0f80763b5a7db4baf3c168a0afe3ad082b805090ed30",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-family-enrollment-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-family-enrollment-metadata",
+        "pkg-object-srcpkg-campaign28-family-enrollment-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-family-enrollment-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-family-enrollment-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-family-enrollment-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-family-enrollment-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-family-enrollment-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "trade metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-family-completion-and-attainment-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:86900b13dfcb0c295fce07e774445c987df4a6904c4e51781e67a906b3b9f975"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-family-completion-and-attainment-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:86900b13dfcb0c295fce07e774445c987df4a6904c4e51781e67a906b3b9f975",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:7811c6ea35ba544d3c0de047b8584f9ad19479e0502dfef905b9b456fc6c03b8",
+      "generated_statements": "sha256:7b2a46ef5868269a662581a6cca5111e540c8bcb62b173763ba43380fccfbfe1",
+      "input_set": "sha256:887488409213b487d79b6af8955e799415c719ce3252e4e75bcccdf0eb267040",
+      "package_manifest": "sha256:cc69e6ba0dee03049d96c302886bfe5317718f2a298262e21a3db728c68ca8f8",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "trade metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-family-completion-and-attainment-metadata",
+          "eval-srcpkg-campaign28-family-completion-and-attainment-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-family-completion-and-attainment-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-family-completion-and-attainment-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 28 records 24 annual-scalar indicators for the completion_and_attainment_metadata Trade metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-family-completion-and-attainment-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c60650355fe08ed73e189c5017f3f290480703d09f4c57a0d7ff745b5e3aa6da",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-family-completion-and-attainment-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-family-completion-and-attainment-metadata",
+        "pkg-object-srcpkg-campaign28-family-completion-and-attainment-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-family-completion-and-attainment-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-family-completion-and-attainment-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-family-completion-and-attainment-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-family-completion-and-attainment-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-family-completion-and-attainment-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "trade metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-family-trade-resources-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:5a7da9be563f6eac1128c524028a00310fc80d268625547e9984503fc06de6d6"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-family-trade-resources-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:5a7da9be563f6eac1128c524028a00310fc80d268625547e9984503fc06de6d6",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:024bb736a10147b729f5419bd621dcc94b041cb413ddf42d7c6979e94c612ddc",
+      "generated_statements": "sha256:e78dcda598c3d0cb841ab47a42f09aa9a07f4688673ce7cf82ad10424c2a2607",
+      "input_set": "sha256:c74edf34439b0e325ac2a75faf33803ccef47566836371448c1d57a6b3765573",
+      "package_manifest": "sha256:500692f451945c5b6b383c14948344de23cebaffbd29ae99236ac11e76b28b34",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "trade metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-family-trade-resources-metadata",
+          "eval-srcpkg-campaign28-family-trade-resources-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-family-trade-resources-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-family-trade-resources-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 28 records 20 annual-scalar indicators for the trade_resources_metadata Trade metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-family-trade-resources-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:9918d335cb0680c053cd0da48c053d8d9cdd25925271c99d002a287f4bda1ea3",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-family-trade-resources-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-family-trade-resources-metadata",
+        "pkg-object-srcpkg-campaign28-family-trade-resources-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-family-trade-resources-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-family-trade-resources-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-family-trade-resources-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-family-trade-resources-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-family-trade-resources-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "trade metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-family-literacy-and-learning-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:12df48c8c43d03a4e51202fb3c2fc75c43cca001529336f45f8784f0daf1e7d6"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-family-literacy-and-learning-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:12df48c8c43d03a4e51202fb3c2fc75c43cca001529336f45f8784f0daf1e7d6",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:67fb0757c07169302f9199428a2789df95981e89f1a67045f8cc94edf66de13c",
+      "generated_statements": "sha256:e97d7c5a303f0a4181db988c1f2cae65b5680758717425e4817105cf25075f7a",
+      "input_set": "sha256:2382c5f48c9ec50750bd14558681c3e0543a7ffde9b24fba17fad9df6a99abd8",
+      "package_manifest": "sha256:99f0a955b1abecaef309fe2b0451883e4d0e0a2f1fd2b5bc82f57a19ad2e8b26",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "trade metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-family-literacy-and-learning-metadata",
+          "eval-srcpkg-campaign28-family-literacy-and-learning-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-family-literacy-and-learning-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-family-literacy-and-learning-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 28 records 22 annual-scalar indicators for the literacy_and_learning_metadata Trade metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-family-literacy-and-learning-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:18f1582bb963b59f7d9be322d8629a530b73db1db42fca4b50a3f6b525f2df70",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-family-literacy-and-learning-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-family-literacy-and-learning-metadata",
+        "pkg-object-srcpkg-campaign28-family-literacy-and-learning-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-family-literacy-and-learning-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-family-literacy-and-learning-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-family-literacy-and-learning-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-family-literacy-and-learning-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-family-literacy-and-learning-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "trade metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign28-family-equity-and-gender-parity-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:fb942b23b458617f13b22960c80e406d4aab06d30098e697f3856912ec5fe590"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign28-family-equity-and-gender-parity-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:fb942b23b458617f13b22960c80e406d4aab06d30098e697f3856912ec5fe590",
+        "source_family": "external_wdi_annual_scalar_trade",
+        "source_identity": "World Bank World Development Indicators audited Trade evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:4dd843842221abd999c5ea54aafec27b6d88f38bf0fc93ca0cf28434902c23f9",
+      "generated_statements": "sha256:5d4ea3c07ca80077a70d23ba45356f3b02c62abb48df4e5c18917d8261bfba6f",
+      "input_set": "sha256:6ec96cc2af4d2ea147bf02c76b21b2220eed8d716af33e786c6a5317a53b43ca",
+      "package_manifest": "sha256:f5be3fcd137bc8a4f54478c15f9ee7157407af4499f00e02247ccdacace23df2",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "trade metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign28-family-equity-and-gender-parity-metadata",
+          "eval-srcpkg-campaign28-family-equity-and-gender-parity-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign28-family-equity-and-gender-parity-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign28-family-equity-and-gender-parity-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 28 records 18 annual-scalar indicators for the equity_and_gender_parity_metadata Trade metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign28-family-equity-and-gender-parity-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:75dcb2e296c25afa9055fb871648d6a9bc879ee79104dc84a9e57e3a6694ba20",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign28-family-equity-and-gender-parity-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign28-family-equity-and-gender-parity-metadata",
+        "pkg-object-srcpkg-campaign28-family-equity-and-gender-parity-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign28-family-equity-and-gender-parity-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign28-family-equity-and-gender-parity-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign28-family-equity-and-gender-parity-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign28-family-equity-and-gender-parity-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign28-family-equity-and-gender-parity-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_trade",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "trade metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

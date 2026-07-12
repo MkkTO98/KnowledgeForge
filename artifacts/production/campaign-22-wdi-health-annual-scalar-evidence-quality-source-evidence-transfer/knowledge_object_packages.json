@@ -1,0 +1,3422 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-source-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:7caee739897ee16bc9a6538a173170ac62b9e311709f5c84661411af4ef93283"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-source-scope",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:7caee739897ee16bc9a6538a173170ac62b9e311709f5c84661411af4ef93283",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:5cb6d28323ae490115873e1b1db87ef8c183015d93ebd78ed9aa3b7faafe6746",
+      "generated_statements": "sha256:dd1d3e438f48e983e0ef1b90fa8878e1763591de0aec9af35450f22990f84a7d",
+      "input_set": "sha256:6c4f223393b2e3673fe622c6783d3d88edc608e278a8ee0df420b0ded578cebf",
+      "package_manifest": "sha256:40d1eb4e9c1b862469d9e8f045a0e8fbed1f7b31baaa9d896dce9c7289e705f5",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "source scope"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-source-scope",
+          "eval-srcpkg-campaign22-health-source-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-source-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-source-scope",
+        "statement_type": "factual",
+        "text": "The Campaign 22 source evidence package is scoped to World Bank WDI annual-scalar Health evidence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-source-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b5d7bdaa58ab846102985715210a175b767de45632ed72c62c924e396dd1a230",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-source-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-source-scope",
+        "pkg-object-srcpkg-campaign22-health-source-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-source-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-source-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-source-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-source-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-source-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "source scope"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-topic-inventory"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b9a7d8a7d075467e0b652d1171faa76f8a2c9c22b02275131a3f3b72d7d4d753"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-topic-inventory",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:b9a7d8a7d075467e0b652d1171faa76f8a2c9c22b02275131a3f3b72d7d4d753",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:441fd38431652361ef5148ea1f3ec8a81f5585ffceeaa10503fefc217f0f8aaa",
+      "generated_statements": "sha256:501b0905b0a7da868b02ef4dd46f685ff9806aa873cd1098253af5f70b49affd",
+      "input_set": "sha256:02609cf2067f6dd0d8ce79ad6736983b5316c5448471708382ec28c810ddec60",
+      "package_manifest": "sha256:760e7568f7ab11b244806988b0907154439c888f07c478bef42aebc379b28841",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "indicator coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-topic-inventory",
+          "eval-srcpkg-campaign22-health-topic-inventory"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-topic-inventory"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-topic-inventory",
+        "statement_type": "coverage",
+        "text": "The audited WDI Health topic inventory records 110 annual-scalar indicators."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-topic-inventory"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:29c7edce839b12d2521051e3f6224a4a1d35b75051e82b55d7bf3d4ff8a173ce",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-topic-inventory",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-topic-inventory",
+        "pkg-object-srcpkg-campaign22-health-topic-inventory"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-topic-inventory",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-topic-inventory",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-topic-inventory"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-topic-inventory"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-topic-inventory",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "indicator coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-territory-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:7e5bcc618d4590688475a9a8e57aeaf9099ed6a4f8b95bb2a7bcbbf5ec1a04d0"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-territory-scope",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:7e5bcc618d4590688475a9a8e57aeaf9099ed6a4f8b95bb2a7bcbbf5ec1a04d0",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c58edcc5834cf72fc35e76872874407861087eee3104c4fea848159a38e17683",
+      "generated_statements": "sha256:7c784a5ffdd04526009c672d1bf50a8e97e9b7462bc022006b686e73e519facd",
+      "input_set": "sha256:36c5ec4a8699e7993c06938098bfc8aff8b8195e49e53afa9ab587f8c7d1f43b",
+      "package_manifest": "sha256:d116cafb81bb6ee59976e047978caa347a0f8f790d4578e955e3f48eedb94d7a",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "territory coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-territory-scope",
+          "eval-srcpkg-campaign22-health-territory-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-territory-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-territory-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 22 uses the same audited WDI territory scope count of 217 non-aggregate or country-like territories."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-territory-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:0391ac9cd3b4e16a1f56549915e0268a2e501b4a447ed48caa5ee486142c1706",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-territory-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-territory-scope",
+        "pkg-object-srcpkg-campaign22-health-territory-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-territory-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-territory-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-territory-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-territory-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-territory-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "territory coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-period-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:58293d680b73be61c02e53a6f7330fbde302fb61a5d078dc24b0c1a491a86742"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-period-scope",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:58293d680b73be61c02e53a6f7330fbde302fb61a5d078dc24b0c1a491a86742",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:a6f242e77cbb657fb2c0868d54296fbcffeb71b4ab769404eec7a63e1c4fbcf2",
+      "generated_statements": "sha256:d7a48afa8567832f345112ba685e86e4238a6563ad66f52e0bfeb365d1ed05be",
+      "input_set": "sha256:e648e058193895574e4af8ed16b5ba98e79dfd22c17696d352273a1911c34af9",
+      "package_manifest": "sha256:2a3968c11edbb731a8677325856c34ddb11fa4df6c7faa3de116636831e18c42",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "temporal coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-period-scope",
+          "eval-srcpkg-campaign22-health-period-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-period-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-period-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 22 uses 35 annual periods from 1990 through 2024 for Health evidence coverage."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-period-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:6ddc2cf8ba33c229d28724ccd27db5f54f71f12a47215b578bb9065acb8d1f83",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-period-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-period-scope",
+        "pkg-object-srcpkg-campaign22-health-period-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-period-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-period-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-period-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-period-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-period-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "temporal coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-observed-missing"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:aaa2d22e65bcbc2f61b712f11357d355f2a36cc605ed087ae571d526418d73a4"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-observed-missing",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:aaa2d22e65bcbc2f61b712f11357d355f2a36cc605ed087ae571d526418d73a4",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:9146db5ce818a76bab16f39b69c6b8a01ec7130c116bfeda288b20c2e6239c86",
+      "generated_statements": "sha256:c5a2e9837d433db5dccf38bbe70e89fad17e2338bd0504fb92cc452cfa512605",
+      "input_set": "sha256:2259b5dacdf5bbb6ec4275dea512c3ae83d887da5c0a6a728d5eff3051e54600",
+      "package_manifest": "sha256:5c800c4d2887dd744c376dfe6b37bdcafa85331d23ce253e1bec4e74891c639c",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed missing coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-observed-missing",
+          "eval-srcpkg-campaign22-health-observed-missing"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-observed-missing"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-observed-missing",
+        "statement_type": "coverage",
+        "text": "The Campaign 22 Health snapshot records 548800 observed cells and 107410 explicit missing cells."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-observed-missing"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c75d3fc6eba71fa51f87cf261a83b96aec39cc708d38fd8af97a41f48d56b72d",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-observed-missing",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-observed-missing",
+        "pkg-object-srcpkg-campaign22-health-observed-missing"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-observed-missing",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-observed-missing",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-observed-missing"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-observed-missing"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-observed-missing",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed missing coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-observed-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:5cdc3ae9dae994f2f6c6d67749c7aa52f59feb4180ca8a2e3a7990fa70660ac5"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-observed-share",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:5cdc3ae9dae994f2f6c6d67749c7aa52f59feb4180ca8a2e3a7990fa70660ac5",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:059245ca430c489d9c6b79fcd372da33dc37bd207b66dc4e86c25bb0e08a6d81",
+      "generated_statements": "sha256:069f8cba163cdbddbbe96cb0a144a60ba5d847cd728748c650c20b82f67c09cb",
+      "input_set": "sha256:d4c85948e625ef1f696971ef4be40c1bc3ea767c659933051ed3712ce171028e",
+      "package_manifest": "sha256:e96244e9aba45eb1a3dd14dfaa6aa2f28eda7a651bd14869b48421e4b7e6d461",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-observed-share",
+          "eval-srcpkg-campaign22-health-observed-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-observed-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-observed-share",
+        "statement_type": "derived",
+        "text": "The Campaign 22 Health snapshot has observed cell share 0.836318 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-observed-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:877468fe31b9a9ac93e68a7d6c977bbc553eced3c793428d69889fdccb314efa",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-observed-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-observed-share",
+        "pkg-object-srcpkg-campaign22-health-observed-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-observed-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-observed-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-observed-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-observed-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-observed-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-missing-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:3311c524bc0f654f8b71778ca31be3b5c11f75d749803d2be4030704aa5475fa"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-missing-share",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:3311c524bc0f654f8b71778ca31be3b5c11f75d749803d2be4030704aa5475fa",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:0020a37ca7723356c9992d99df8b72fa44a396dba9c621420be349b1f7816f0b",
+      "generated_statements": "sha256:6615062ce02735e4706926d1a0fc9b7ffc0cb8b7ccee033c7443ab30c928cbf9",
+      "input_set": "sha256:1755b077020a910901e70c5404e59a45ceb069670b7db6fb55753836aa85f184",
+      "package_manifest": "sha256:e09167107c4868ce81713fe339fb70614f82089d08d622dda4bd65bf7829c717",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "missing share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-missing-share",
+          "eval-srcpkg-campaign22-health-missing-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-missing-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-missing-share",
+        "statement_type": "negative",
+        "text": "The Campaign 22 Health snapshot has explicit missing cell share 0.163682 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-missing-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:baaca1b2c8f7132918d611ae6bea6a6ff8ca811aa4d9dd3bb1f3eaed780dfd94",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-missing-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-missing-share",
+        "pkg-object-srcpkg-campaign22-health-missing-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-missing-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-missing-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-missing-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-missing-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-missing-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "missing share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-family-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:7e089274dde49daa60bab5fd04eab3944fa3997fb48faf08ce16f17823ba40cd"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-family-count",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:7e089274dde49daa60bab5fd04eab3944fa3997fb48faf08ce16f17823ba40cd",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:ad6a2906c0331e66ce8b063f7c476473622914ffff128c896d3d9352d366cc3b",
+      "generated_statements": "sha256:0f71f3e79268030a61cc12b528297db44c283f0381d6d9bf490b6ebbe688d070",
+      "input_set": "sha256:b15b09872a7793341504d5ea9835a9e2b3b6e0e93622ec700e8ac9d2e216ee57",
+      "package_manifest": "sha256:ce96f94f10e2f9408bbdfafa8166775033e0c186c084eb063f85970def36618f",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-family-count",
+          "eval-srcpkg-campaign22-health-family-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-family-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-family-count",
+        "statement_type": "classified",
+        "text": "The Campaign 22 Health inventory groups the selected indicators into 5 deterministic metadata families."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-family-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:3277ab44f0143f2b1d8e572cd7d326f3e037118ff52913e58ada23eecf1081d6",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-family-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-family-count",
+        "pkg-object-srcpkg-campaign22-health-family-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-family-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-family-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-family-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-family-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-family-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-partial-families"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:20470cb611efd4e80b7fff985bb5be48c926478133b36b9a6e035514c4d53919"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-partial-families",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:20470cb611efd4e80b7fff985bb5be48c926478133b36b9a6e035514c4d53919",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:4a942c66d6c0cfe09f23f638a090df1d4adee084d75cc82d3ad1b5293b0ba1cf",
+      "generated_statements": "sha256:adbdd50142323abbd47edbff277172a7188ab49ec1a757d55a70abfb3f3e7138",
+      "input_set": "sha256:d4de3e2c20b3998b7bf32a8b140ec260c1f9b6293cbc2b81013dc75497997355",
+      "package_manifest": "sha256:4e9027262ed3659a1a17ea7ebfb22393997e795d6931604537e9ac5aaa84822c",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "partial family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-partial-families",
+          "eval-srcpkg-campaign22-health-partial-families"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-partial-families"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-partial-families",
+        "statement_type": "negative",
+        "text": "Campaign 22 records 5 Health metadata families with explicit missing cells in the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-partial-families"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:5c21a93474413dbb6d51e5332140ed480be2d2438411f6db7f03efa4217c562a",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-partial-families",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-partial-families",
+        "pkg-object-srcpkg-campaign22-health-partial-families"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-partial-families",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-partial-families",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-partial-families"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-partial-families"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-partial-families",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "partial family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-provenance-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:8ba6445a6c2875c595a64a89e058ef080915cfe1b0f01b9f9298a96341d7502c"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-provenance-state",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:8ba6445a6c2875c595a64a89e058ef080915cfe1b0f01b9f9298a96341d7502c",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:8e52cc7d5a65faa5a70e53f64501bcf50675bfc10cd8bfdcef6356b5e9c5f507",
+      "generated_statements": "sha256:25c24074d0f15260e07b06e39668ed87954bb9e213e15c14ec77a83e71c17b60",
+      "input_set": "sha256:15fbd7e2ba0fdf0848d3051441dd4cd2d9082c9d8e26aefe030b1c60c3a53463",
+      "package_manifest": "sha256:bd979765075d79026cb1f43532f78c4f505e982f1f333a5cd90ac41e134cc9f0",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "provenance state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-provenance-state",
+          "eval-srcpkg-campaign22-health-provenance-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-provenance-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-provenance-state",
+        "statement_type": "provenance",
+        "text": "Campaign 22 records WDI Health source URLs, raw artifact URLs, raw artifact hashes, release keys, license notes, and WDI last-updated metadata as available in the evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-provenance-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c89b8fddef24d2871b913456ca9ca165116392cf4e29f84bf101bd80ec510b3a",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-provenance-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-provenance-state",
+        "pkg-object-srcpkg-campaign22-health-provenance-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-provenance-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-provenance-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-provenance-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-provenance-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-provenance-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "provenance state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-evidence-quality-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:f3deaac690e3d97fd1a430d76fceb1d4c23f4501a7fee06b6b28f14b228400c0"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-evidence-quality-state",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:f3deaac690e3d97fd1a430d76fceb1d4c23f4501a7fee06b6b28f14b228400c0",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:9e11560c6a6505e815fda9914b5dad0a03477e0bb97db01f0f4aa1a8c5d1c827",
+      "generated_statements": "sha256:99fd67562dee70e6201f1b749f311157594a055362df3626370f59322f6c8833",
+      "input_set": "sha256:1bcb7abf53013f3494aaa789dc1f0ba9bf80a41a0a537cd60abde3da5a0d96e9",
+      "package_manifest": "sha256:4f866025960034f6db267c14c6c9f2fdc23b20c721e8e3a32edd1b5d2eb13a87",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "evidence quality state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-evidence-quality-state",
+          "eval-srcpkg-campaign22-health-evidence-quality-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-evidence-quality-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-evidence-quality-state",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 22 records explicit observation status, observed and missing status, WDI-only source scope, and annual-scalar evidence shape for the Health family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-evidence-quality-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:6db27f359ee6241d58108ecb1af0542a0e4a39c7350e5f324ffcfca4c0d9e624",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-evidence-quality-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-evidence-quality-state",
+        "pkg-object-srcpkg-campaign22-health-evidence-quality-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-evidence-quality-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-evidence-quality-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-evidence-quality-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-evidence-quality-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-evidence-quality-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "evidence quality state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-health-unsupported-dimensions"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:41f6a98d2bdab166e7b9598f21b21aa1c932b370be2c617bc2886db6a8d95779"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-health-unsupported-dimensions",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:41f6a98d2bdab166e7b9598f21b21aa1c932b370be2c617bc2886db6a8d95779",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:b102366e0b4eaabf6203efcfc99e625368b3f330668738e48ed02d7c9767e413",
+      "generated_statements": "sha256:ead8935b95f4cbad083efa2f47ed54af8e8c6f933ecb3050ec2293171d0a7fe1",
+      "input_set": "sha256:c8fa8b759eb93417315180e2f6714ac981ec306495bb79c5b3d9193b04781913",
+      "package_manifest": "sha256:a5d971034adce6a2db1ab0338145c17d592b4e503267d3ca6402cbab50a946da",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "unsupported dimensions"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-health-unsupported-dimensions",
+          "eval-srcpkg-campaign22-health-unsupported-dimensions"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-health-unsupported-dimensions"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-health-unsupported-dimensions",
+        "statement_type": "negative",
+        "text": "The Campaign 22 Health annual-scalar evidence snapshot does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the accepted production scope."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-health-unsupported-dimensions"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:abf87c28497d0010c87d66fae38fb1183808114fb958272d21a44af755624720",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-health-unsupported-dimensions",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-health-unsupported-dimensions",
+        "pkg-object-srcpkg-campaign22-health-unsupported-dimensions"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-health-unsupported-dimensions",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-health-unsupported-dimensions",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-health-unsupported-dimensions"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-health-unsupported-dimensions"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-health-unsupported-dimensions",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-replication-contract"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:8a25442f0f987ff9589c9268d9da965ecc135a74a7da7832daeb5819f27c13ac"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-replication-contract",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:8a25442f0f987ff9589c9268d9da965ecc135a74a7da7832daeb5819f27c13ac",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:aab8cebca5c6c171ffb1730971d19f549891ea1a9083a8e0a51e27fd30bb4e03",
+      "generated_statements": "sha256:fd1d83acaa066bb387c2f00e1d77e232e7ef2f8b147b940162a81a84c12e7706",
+      "input_set": "sha256:5211d9f261cbaa6236a86895dcd1bc17b33d7c2e6d4d69db626f9b73f2b04060",
+      "package_manifest": "sha256:a8e89c57d1644d63301ef40660572f04b8d492684ba3c424b0359b4bf932a750",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "replication contract"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-replication-contract",
+          "eval-srcpkg-campaign22-replication-contract"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-replication-contract"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-replication-contract",
+        "statement_type": "methodological",
+        "text": "Campaign 22 uses unchanged production workflow, package construction, validator behaviour, Production Support, provenance handling, fingerprinting, reporting, metrics, and Production Evolution Log workflow from the mature WDI demographic production method."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-replication-contract"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c8ba91f762b931f0ed64e5a4fcad08553d7f6a3ad4b10f91b7e7415cd1415d4c",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-replication-contract",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-replication-contract",
+        "pkg-object-srcpkg-campaign22-replication-contract"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-replication-contract",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-replication-contract",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-replication-contract"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-replication-contract"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-replication-contract",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "replication contract"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-deterministic-transfer-method"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:7fbcba9aad16245cd660f3f17f0c14871780188747ce9125c9f04207b655123d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-deterministic-transfer-method",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:7fbcba9aad16245cd660f3f17f0c14871780188747ce9125c9f04207b655123d",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c5a6f2ac75558e75b36f7f43c044cf72aee4f3be21c1ea449514ebd24f533756",
+      "generated_statements": "sha256:2a957ea4a1450da90c3cb478ad9853e44129cd7b00d89cfb159ba094fdefbfbb",
+      "input_set": "sha256:f4ad3b2d206c91bf444a22ac5dcac47a543b52f47bd36d5c3d7fd81b40923888",
+      "package_manifest": "sha256:ac0c1ab5e625e3aec3d0c36929eaa8deb6518b8091ea4efb82260a28b4ad4718",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "deterministic transfer method"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-deterministic-transfer-method",
+          "eval-srcpkg-campaign22-deterministic-transfer-method"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-deterministic-transfer-method"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-deterministic-transfer-method",
+        "statement_type": "methodological",
+        "text": "Campaign 22 derives Health evidence-quality and coverage objects deterministically from the immutable Health evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-deterministic-transfer-method"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:12429bf012cd3c5d687313d474b11f0f5517615b6bdc6f743d700f73ce2f5da1",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-deterministic-transfer-method",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-deterministic-transfer-method",
+        "pkg-object-srcpkg-campaign22-deterministic-transfer-method"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-deterministic-transfer-method",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-deterministic-transfer-method",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-deterministic-transfer-method"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-deterministic-transfer-method"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-deterministic-transfer-method",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "deterministic transfer method"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-family-mortality-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6923f30baa308d3d94e83346fca4ee2dc1577b8b5211d0730ff8cab123002beb"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-family-mortality-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:6923f30baa308d3d94e83346fca4ee2dc1577b8b5211d0730ff8cab123002beb",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:52d77574650dfb2ec52a17bce9083e72bbd980bfe4dc9465baa69d8bcdaec463",
+      "generated_statements": "sha256:ac6897da8f8e535a75787c50a0731f8823bae88cf8cb8985fd1645ae6c260bce",
+      "input_set": "sha256:4307ae27f9f2c7b2a97d7c4def16f920cc84db46b719de11cab876f8709970bd",
+      "package_manifest": "sha256:53dfb33f5d009ce667048febf2305a53c259a3fbfb141e07de73b03c159adbed",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "health metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-family-mortality-metadata",
+          "eval-srcpkg-campaign22-family-mortality-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-family-mortality-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-family-mortality-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 22 records 26 annual-scalar indicators for the mortality_metadata Health metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-family-mortality-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:8090900df0ef110e0169d3eafab5a74565bac549cd81001695abd85a5d8493a2",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-family-mortality-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-family-mortality-metadata",
+        "pkg-object-srcpkg-campaign22-family-mortality-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-family-mortality-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-family-mortality-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-family-mortality-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-family-mortality-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-family-mortality-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "health metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-family-health-systems-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e37e50393e36a68e9350146d89b026f754dd9328e1230c909dec0a8e49e7fa8d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-family-health-systems-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:e37e50393e36a68e9350146d89b026f754dd9328e1230c909dec0a8e49e7fa8d",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:d478412024f30fc128767a0bf6e6e618a41e1a63ec982e65b19e8397e59fe9d1",
+      "generated_statements": "sha256:293adfc380afc3b1aa52d7e641413e191e366efdfebcfb4a213f11ed8203673d",
+      "input_set": "sha256:768981c3d2add6606517120cf2b0db7817868287f266e5570842b4e7534de015",
+      "package_manifest": "sha256:ffafa82d469364585c4c2d1822672b333f9d20384a7354d7d53fa6c010c79515",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "health metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-family-health-systems-metadata",
+          "eval-srcpkg-campaign22-family-health-systems-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-family-health-systems-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-family-health-systems-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 22 records 24 annual-scalar indicators for the health_systems_metadata Health metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-family-health-systems-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:97a5bfd0f738168f5e890c76f918b700ae6fbaeb51414a62197175e94f7d740a",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-family-health-systems-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-family-health-systems-metadata",
+        "pkg-object-srcpkg-campaign22-family-health-systems-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-family-health-systems-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-family-health-systems-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-family-health-systems-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-family-health-systems-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-family-health-systems-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "health metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-family-nutrition-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:393aa7f4b04993cbc0b425713bd7e14722b756fef8d7ef91d4254a62bf6c3454"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-family-nutrition-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:393aa7f4b04993cbc0b425713bd7e14722b756fef8d7ef91d4254a62bf6c3454",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:8659efb97942dee783e0645bb53932db01b77b475c820f4b5c8e491b4da49787",
+      "generated_statements": "sha256:069b37492bfa69a3d40d9e8417de98074f6ca097a6671749bb63c5312e441b8e",
+      "input_set": "sha256:19fbd3d40938a67522203f48d469c1652112e51f14b7d719c44689265cebc0df",
+      "package_manifest": "sha256:01faf218364b85758ac6eec2b22d80c2e17ba35350e1941002a878fde34c0109",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "health metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-family-nutrition-metadata",
+          "eval-srcpkg-campaign22-family-nutrition-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-family-nutrition-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-family-nutrition-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 22 records 21 annual-scalar indicators for the nutrition_metadata Health metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-family-nutrition-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:3d4af4f786de13e9e4a74d4d015b3eabab860b372ededbf9e2400971262717c2",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-family-nutrition-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-family-nutrition-metadata",
+        "pkg-object-srcpkg-campaign22-family-nutrition-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-family-nutrition-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-family-nutrition-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-family-nutrition-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-family-nutrition-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-family-nutrition-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "health metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-family-disease-and-immunization-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a31be72e6895f3b9dd45f960acb3b4a72bf6301c1655714e586cbd81d707b1b1"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-family-disease-and-immunization-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:a31be72e6895f3b9dd45f960acb3b4a72bf6301c1655714e586cbd81d707b1b1",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:724458749d1386bfd9aae44bed01dc6703fc30d336b02f7f8af5fa9ee8c4f6c2",
+      "generated_statements": "sha256:4243823aa47618291f031dca2669be5e2ab37157fd357f78c4e0718a74168884",
+      "input_set": "sha256:3683e476d90ddf0071f328f5175afd3795047789eed41b2d5c07446627a07288",
+      "package_manifest": "sha256:e4b5e1894cd24d2884835fca55559ccd0fec25245ceb8c5b6d5d56eca28d17a0",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "health metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-family-disease-and-immunization-metadata",
+          "eval-srcpkg-campaign22-family-disease-and-immunization-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-family-disease-and-immunization-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-family-disease-and-immunization-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 22 records 22 annual-scalar indicators for the disease_and_immunization_metadata Health metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-family-disease-and-immunization-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:0e3cfde41cf8c10b252e1520b58bcc607c96ee956f907340fa80288e26fd9234",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-family-disease-and-immunization-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-family-disease-and-immunization-metadata",
+        "pkg-object-srcpkg-campaign22-family-disease-and-immunization-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-family-disease-and-immunization-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-family-disease-and-immunization-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-family-disease-and-immunization-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-family-disease-and-immunization-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-family-disease-and-immunization-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "health metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign22-family-reproductive-and-child-health-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:16f89c767154ed984bc704e2e34bcd0e85e341395dd1e402786b9ebcde14b445"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign22-family-reproductive-and-child-health-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign22_wdi_health_transfer.py --output artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:16f89c767154ed984bc704e2e34bcd0e85e341395dd1e402786b9ebcde14b445",
+        "source_family": "external_wdi_annual_scalar_health",
+        "source_identity": "World Bank World Development Indicators audited Health evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:f35eb4c268978c2384d6ca0b95c65e2d422896108b6ebd52e6153fe77029f334",
+      "generated_statements": "sha256:28143137d3489b2d809a2065c114cda03309e2716e4b87d5f4bea78f56e0e210",
+      "input_set": "sha256:b5b9a31a2ff5337061589c51d19399a03196775a41dcc71d3897a3ab6a6f0e18",
+      "package_manifest": "sha256:fcbca3dfeb517e6abe08cef05f97bd310236feedb16c4e2eeb4d89cc448f9a6d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "health metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign22-family-reproductive-and-child-health-metadata",
+          "eval-srcpkg-campaign22-family-reproductive-and-child-health-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign22-family-reproductive-and-child-health-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign22-family-reproductive-and-child-health-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 22 records 17 annual-scalar indicators for the reproductive_and_child_health_metadata Health metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign22-family-reproductive-and-child-health-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:4def02094a2b52557f36fa253469db5d34a7c3bcdecc5b5a5892959f880af565",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign22-family-reproductive-and-child-health-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign22-family-reproductive-and-child-health-metadata",
+        "pkg-object-srcpkg-campaign22-family-reproductive-and-child-health-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign22-family-reproductive-and-child-health-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign22-family-reproductive-and-child-health-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign22-family-reproductive-and-child-health-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign22-family-reproductive-and-child-health-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign22-family-reproductive-and-child-health-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_health",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar health evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "health metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

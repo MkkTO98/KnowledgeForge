@@ -1,0 +1,41 @@
+{
+  "preserved_source_package_id": "srcpkg-campaign0-selected-repository-file-count",
+  "rejection_id": "rej-campaign0-missing-provenance",
+  "rejection_reason": "missing provenance",
+  "validator_result": {
+    "blockers": [
+      {
+        "blocks_acceptance": true,
+        "category": "evidence_contract",
+        "location": "provenance",
+        "message": "missing required field: provenance",
+        "severity": "blocker"
+      },
+      {
+        "blocks_acceptance": true,
+        "category": "provenance",
+        "location": "provenance",
+        "message": "provenance must include a source_snapshot_id",
+        "severity": "blocker"
+      },
+      {
+        "blocks_acceptance": true,
+        "category": "lineage_fingerprint",
+        "location": "fingerprints.provenance",
+        "message": "provenance fingerprint does not match canonical source package content",
+        "severity": "blocker"
+      },
+      {
+        "blocks_acceptance": true,
+        "category": "lineage_fingerprint",
+        "location": "fingerprints.package_manifest",
+        "message": "package_manifest fingerprint does not match canonical source package content",
+        "severity": "blocker"
+      }
+    ],
+    "ok": false,
+    "stage": "source_evidence_package",
+    "validator_version": "construction-v1",
+    "warnings": []
+  }
+}

@@ -1,0 +1,80 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_education_snapshot_characteristic",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+      "source_snapshot_fingerprint": "sha256:16a3e35ac45d918d3ff3c0a1060c9858ba1b034b8de2d961b951f5a41a067030",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "Campaign 25 uses the same audited WDI territory scope count of 217 non-aggregate or country-like territories.",
+    "knowledge_category": "coverage",
+    "payload_metadata": {
+      "territory_count": 217,
+      "topic": "territory coverage"
+    },
+    "scope": {
+      "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "territory coverage"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:96c74748fe13b3aa170d12e05c5a75c4591e024c978ca509da026e197620465a",
+    "provenance": "sha256:a5353ff140c58e89c9d92cf6b8f5a64627a0d22e2610f0e86fcf5532a184298e",
+    "reproducibility": "sha256:ff254eab22d5e3e36e04044e794d3802c0bcbba9c3ee87749610a182204afd82",
+    "source_payload": "sha256:6f2ac431d2454f428e052874fc999568be44057ca2e25b368dc403181de555c9"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md",
+      "artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md",
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-24-wdi-health-provenance-lineage-closeout/production_quality_report.json",
+      "artifacts/production/campaign-24-wdi-health-provenance-lineage-closeout/reports/family_closeout_report.md"
+    ],
+    "selection_rule": "Phase 2 Production Roadmap selected WDI Education annual-scalar evidence as the next production family after WDI Energy & Mining reached Mature",
+    "source_family": "external_wdi_annual_scalar_education",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:16a3e35ac45d918d3ff3c0a1060c9858ba1b034b8de2d961b951f5a41a067030"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI Education evidence snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign25-education-territory-scope",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_education",
+    "source_name": "World Bank World Development Indicators audited Education evidence snapshot",
+    "source_version": "sha256:16a3e35ac45d918d3ff3c0a1060c9858ba1b034b8de2d961b951f5a41a067030"
+  }
+}

@@ -1,0 +1,2762 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-demographic-family-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:2e346970bc30c8013f7aa30ca63e77f746e9fb80097c375e0c875a150e8b4f73"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-demographic-family-scope",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:2e346970bc30c8013f7aa30ca63e77f746e9fb80097c375e0c875a150e8b4f73",
+        "source_family": "external_wdi_annual_scalar_demographic_structure",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:cb0a5d79ee473325c748d09fa815abceebd55e79f6e97556948bcf615c0e38c6",
+      "generated_statements": "sha256:458696d26ef5a1a23351d8dd8309850af24fe5131033414d367226ff008a1ab5",
+      "input_set": "sha256:11acae2adf6a6035e854d77f8d499f75790e500008df9b3f0ffc722e2c384f50",
+      "package_manifest": "sha256:26af187388b0c1ac6922b1f1ab83d8050785b30fb7a617efed29ac9d0ac84913",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "family scope"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-demographic-family-scope",
+          "eval-srcpkg-campaign9-demographic-family-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-demographic-family-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-demographic-family-scope",
+        "statement_type": "coverage",
+        "text": "the demographic comparison input contains 182 WDI annual-scalar indicators."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-demographic-family-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c25add36e26bf9a6b948233ee2b34027dd5febaed3a2ec7a32ad2098715c3242",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-demographic-family-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-demographic-family-scope",
+        "pkg-object-srcpkg-campaign9-demographic-family-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-demographic-family-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-demographic-family-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-demographic-family-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-demographic-family-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-demographic-family-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_demographic_structure",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "family scope"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-environment-family-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b74516db61c9f65a92990f7e29859787dbcb184256e07e251543f5345f168b34"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-environment-family-scope",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:b74516db61c9f65a92990f7e29859787dbcb184256e07e251543f5345f168b34",
+        "source_family": "external_wdi_annual_scalar_environment",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:3ace3401bb4d9fe35e7ca67c911487cdda34f53edd867437a81439aa2c62f3d8",
+      "generated_statements": "sha256:2a62c954f47d8e38284e465a3f052a1faa2beacacba23c0565d034a31e7dd8e5",
+      "input_set": "sha256:435363295930e0e00755c983fe2dcb513fb27e2438c369e94f3797636f29445e",
+      "package_manifest": "sha256:7cbb6e7a45f899e289fe7daea54dffb9cd794ea81800e55c448c94cd53dc6588",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "family scope"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-environment-family-scope",
+          "eval-srcpkg-campaign9-environment-family-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-environment-family-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-environment-family-scope",
+        "statement_type": "coverage",
+        "text": "the environment comparison input contains 188 WDI annual-scalar indicators."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-environment-family-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:0ed70dc69bc8dad23e5a183c6bbd6993544b46fddb3a14eeb55b88de6c518115",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-environment-family-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-environment-family-scope",
+        "pkg-object-srcpkg-campaign9-environment-family-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-environment-family-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-environment-family-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-environment-family-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-environment-family-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-environment-family-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_environment",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "family scope"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-overlapping-territory-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:74f73cea6f9f406c8550f16a9e6fe0637cfcc7193424b31b2ff615d6ff385201"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-overlapping-territory-scope",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:090d694c20796f72c6b4cc2d5dc3bcf08aedb1f1c05aea5722a9f4d6991f4ebf",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-overlapping-temporal-scope",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:015b14989abdf41dee220fde2603e9fda0a5defaaa488fe06461d0784780662e",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:48ce82119329d0c4d02b2b4b82a43b5835f0817c34b29c3d331be9e62d874be7",
+      "generated_statements": "sha256:b3f8b6d39d28ed0cd7ae7b1075d135b71dc6b22e17646e28c011563f6954c8b0",
+      "input_set": "sha256:74f73cea6f9f406c8550f16a9e6fe0637cfcc7193424b31b2ff615d6ff385201",
+      "package_manifest": "sha256:29790a6547eaed7950ecbd3cf46a53ac786d2766fb04bde75764400eff1a49c1",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "overlapping territory coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-overlapping-territory-scope",
+          "eval-srcpkg-campaign9-overlapping-territory-scope",
+          "ev-srcpkg-campaign9-overlapping-temporal-scope",
+          "eval-srcpkg-campaign9-overlapping-temporal-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-overlapping-territory-scope",
+          "ev-srcpkg-campaign9-overlapping-temporal-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-overlapping-territory-scope",
+        "statement_type": "coverage",
+        "text": "the demographic and environment comparison inputs share 217 audited WDI territories."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-overlapping-territory-scope",
+      "srcpkg-campaign9-overlapping-temporal-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:f39d41542b727e18860b5f02c082d1c705cf770903d3edb61393602ea58604e7",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-overlapping-territory-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-overlapping-territory-scope",
+        "pkg-object-srcpkg-campaign9-overlapping-territory-scope-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-overlapping-territory-scope-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-overlapping-territory-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-overlapping-territory-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-overlapping-territory-scope",
+        "ev-srcpkg-campaign9-overlapping-temporal-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-overlapping-territory-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "overlapping territory coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-overlapping-temporal-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:eef5e4c91bb5cb3cdf4d29d4656aa004b6e64c8f8dc7e3d12721e0bc8568ed93"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-overlapping-temporal-scope",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:015b14989abdf41dee220fde2603e9fda0a5defaaa488fe06461d0784780662e",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-overlapping-territory-scope",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:090d694c20796f72c6b4cc2d5dc3bcf08aedb1f1c05aea5722a9f4d6991f4ebf",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:98e5d04ae0767a90e0836738378b786ca7fd4dd3eb5dbb5c39130fd27c244feb",
+      "generated_statements": "sha256:7a954034f386ba18d11fd91b63f0c3033dee5b41b8108932136dc62330ffa7ed",
+      "input_set": "sha256:eef5e4c91bb5cb3cdf4d29d4656aa004b6e64c8f8dc7e3d12721e0bc8568ed93",
+      "package_manifest": "sha256:1c523785f58149e09e724ce797176ebba5f6b520cb80c2c946e316d10c6bd52c",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "overlapping temporal coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-overlapping-temporal-scope",
+          "eval-srcpkg-campaign9-overlapping-temporal-scope",
+          "ev-srcpkg-campaign9-overlapping-territory-scope",
+          "eval-srcpkg-campaign9-overlapping-territory-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-overlapping-temporal-scope",
+          "ev-srcpkg-campaign9-overlapping-territory-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-overlapping-temporal-scope",
+        "statement_type": "coverage",
+        "text": "the demographic and environment comparison inputs share annual periods from 1990 through 2024."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-overlapping-temporal-scope",
+      "srcpkg-campaign9-overlapping-territory-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:dfa15bd512fee0c333c5adee2123aac53366530f27c2aabbc4a87e8a0844c8da",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-overlapping-temporal-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-overlapping-temporal-scope",
+        "pkg-object-srcpkg-campaign9-overlapping-temporal-scope-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-overlapping-temporal-scope-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-overlapping-temporal-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-overlapping-temporal-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-overlapping-temporal-scope",
+        "ev-srcpkg-campaign9-overlapping-territory-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-overlapping-temporal-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "overlapping temporal coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-indicator-count-comparison"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:156097aac70e56690f06af816006184b222caf3a2049877c9b87516ee20b4508"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-indicator-count-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:4d2f1b4e3c745fdc39069f649af38d6a3678ad187b16dd84fa13c7e247fb5195",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-demographic-family-scope",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:2e346970bc30c8013f7aa30ca63e77f746e9fb80097c375e0c875a150e8b4f73",
+        "source_family": "external_wdi_annual_scalar_demographic_structure",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:ab48ae7aaeceb9c2a0db8c4384f2d7e196a4200c4f01d1e21ae4cf991ba97aba",
+      "generated_statements": "sha256:5f341551bb211a9c80b35a3d96c251d1399d60aa6fe00febfca3ec214faf18ac",
+      "input_set": "sha256:156097aac70e56690f06af816006184b222caf3a2049877c9b87516ee20b4508",
+      "package_manifest": "sha256:491ffd294e98ad5b5acff2066b8d0b423a4856c68e91b83c54fcf22603a49918",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "indicator count comparison"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-indicator-count-comparison",
+          "eval-srcpkg-campaign9-indicator-count-comparison",
+          "ev-srcpkg-campaign9-demographic-family-scope",
+          "eval-srcpkg-campaign9-demographic-family-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-indicator-count-comparison",
+          "ev-srcpkg-campaign9-demographic-family-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-indicator-count-comparison",
+        "statement_type": "derived",
+        "text": "the environment comparison input contains 6 more indicators than the demographic comparison input."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-indicator-count-comparison",
+      "srcpkg-campaign9-demographic-family-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:fad4093f3f4ff6806cf4f1a1092813e7e50d36eb893b0efcaed9b8f4e0a4b4d3",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-indicator-count-comparison",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-indicator-count-comparison",
+        "pkg-object-srcpkg-campaign9-indicator-count-comparison-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-indicator-count-comparison-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-indicator-count-comparison",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-indicator-count-comparison"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-indicator-count-comparison",
+        "ev-srcpkg-campaign9-demographic-family-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-indicator-count-comparison",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "indicator count comparison"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-observed-cell-comparison"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a5964d317dbbc4db0453d1a12993cd7df579e8244d625083dd2a59867bfdb417"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-observed-cell-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:91256c1c0571e956098e7450cb4c85427f8004de1cd6f0c8f48807bcd26b12f7",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-missing-cell-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:17f1b3d158d30e209ab0cb7f95e7aca8bfefd00aed559f565e271a2e47c21d34",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:bc582961252ef33a879cfc6d6e8137be3947eb4a9c53a016f4650ed091005820",
+      "generated_statements": "sha256:20f6c3a500d6f68518dfc75f502632c7fb79d4857fb2fb05ce2aa1e19fec67e9",
+      "input_set": "sha256:a5964d317dbbc4db0453d1a12993cd7df579e8244d625083dd2a59867bfdb417",
+      "package_manifest": "sha256:056346a3b7d63968545d8ef389248552e0062841bf107f6ce17a98c795dad250",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "observed evidence comparison"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-observed-cell-comparison",
+          "eval-srcpkg-campaign9-observed-cell-comparison",
+          "ev-srcpkg-campaign9-missing-cell-comparison",
+          "eval-srcpkg-campaign9-missing-cell-comparison"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-observed-cell-comparison",
+          "ev-srcpkg-campaign9-missing-cell-comparison"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-observed-cell-comparison",
+        "statement_type": "derived",
+        "text": "the environment comparison input records 62440 more observed cells than the demographic comparison input."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-observed-cell-comparison",
+      "srcpkg-campaign9-missing-cell-comparison"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:dfce0bb7fe0cc0deda590a8c65af96124047198eff1e7c4413f077a715669281",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-observed-cell-comparison",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-observed-cell-comparison",
+        "pkg-object-srcpkg-campaign9-observed-cell-comparison-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-observed-cell-comparison-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-observed-cell-comparison",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-observed-cell-comparison"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-observed-cell-comparison",
+        "ev-srcpkg-campaign9-missing-cell-comparison"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-observed-cell-comparison",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "observed evidence comparison"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-missing-cell-comparison"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6bb088453b80f0c00d70d9561544f5993ee55c55432fa7575617f1d65896e1f7"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-missing-cell-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:17f1b3d158d30e209ab0cb7f95e7aca8bfefd00aed559f565e271a2e47c21d34",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-observed-cell-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:91256c1c0571e956098e7450cb4c85427f8004de1cd6f0c8f48807bcd26b12f7",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:293468ddc7b8427bfb0500c21fb73971d8e201f22d48a2054027390f2cb44beb",
+      "generated_statements": "sha256:5a03b522c7ba1db6656013353c2cf67c40b79bb6f17a7f21de9d8304057be3c2",
+      "input_set": "sha256:6bb088453b80f0c00d70d9561544f5993ee55c55432fa7575617f1d65896e1f7",
+      "package_manifest": "sha256:7afa8e3a7d4f45d15a1ec1da560622f65e3cb44a9fae62c88cfe5a0c520eeb26",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "missing evidence comparison"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-missing-cell-comparison",
+          "eval-srcpkg-campaign9-missing-cell-comparison",
+          "ev-srcpkg-campaign9-observed-cell-comparison",
+          "eval-srcpkg-campaign9-observed-cell-comparison"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-missing-cell-comparison",
+          "ev-srcpkg-campaign9-observed-cell-comparison"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-missing-cell-comparison",
+        "statement_type": "negative",
+        "text": "the environment comparison input records 5550 fewer explicit missing cells than the demographic comparison input."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-missing-cell-comparison",
+      "srcpkg-campaign9-observed-cell-comparison"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:25f4b5d14df7241e77d3a532b7eb22e0a73491457149ebf8f4e7a5e7514a6697",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-missing-cell-comparison",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-missing-cell-comparison",
+        "pkg-object-srcpkg-campaign9-missing-cell-comparison-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-missing-cell-comparison-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-missing-cell-comparison",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-missing-cell-comparison"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-missing-cell-comparison",
+        "ev-srcpkg-campaign9-observed-cell-comparison"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-missing-cell-comparison",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "missing evidence comparison"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-observed-share-comparison"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:da1e2f500bfc97eab4e9f93b49bf8290102735ae9ac464ef9f923818ba771031"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-observed-share-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:e8dd1be1eafc8cbd7cd3d85c004f9534abdefcf2ce5a089579f6c99fa7973b59",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-missing-share-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:4014f08f5889c6c4dbc6e69e979fb1c9f9d5bfa3b9a43d032b6ff800d3cf7d1e",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:1642bdefd7ddb4b67d383570769b5473d54b4a4df5e28089ef07343ca97f349f",
+      "generated_statements": "sha256:92e98ff8951b76be7d98e93ce041e48412b69bf93c2253030a886cd747e5d26f",
+      "input_set": "sha256:da1e2f500bfc97eab4e9f93b49bf8290102735ae9ac464ef9f923818ba771031",
+      "package_manifest": "sha256:b6c342b3a540bb8f574b44bd041f70a66cba550f9d83419b937f5359da6e2aea",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "observed share comparison"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-observed-share-comparison",
+          "eval-srcpkg-campaign9-observed-share-comparison",
+          "ev-srcpkg-campaign9-missing-share-comparison",
+          "eval-srcpkg-campaign9-missing-share-comparison"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-observed-share-comparison",
+          "ev-srcpkg-campaign9-missing-share-comparison"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-observed-share-comparison",
+        "statement_type": "derived",
+        "text": "the observed-share difference between the environment and demographic comparison inputs is 0.017037."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-observed-share-comparison",
+      "srcpkg-campaign9-missing-share-comparison"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:aff02fb473359cf4c3c095940ee1c8f5f94711a8f653591896d87024dbd853c6",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-observed-share-comparison",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-observed-share-comparison",
+        "pkg-object-srcpkg-campaign9-observed-share-comparison-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-observed-share-comparison-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-observed-share-comparison",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-observed-share-comparison"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-observed-share-comparison",
+        "ev-srcpkg-campaign9-missing-share-comparison"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-observed-share-comparison",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "observed share comparison"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-missing-share-comparison"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:86a880a504b6f13d748dc5a5519e442b6cf294f941cb9d678762acf067b1cae5"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-missing-share-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:4014f08f5889c6c4dbc6e69e979fb1c9f9d5bfa3b9a43d032b6ff800d3cf7d1e",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-observed-share-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:e8dd1be1eafc8cbd7cd3d85c004f9534abdefcf2ce5a089579f6c99fa7973b59",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:9123e86261590bef30f5d29a7548833a86290021bba25ba007e37ad4c2aad24e",
+      "generated_statements": "sha256:35609c8f6889edfc8ba279c4f2d3b38c025d9b11e25fe5c9a24eafba1df9efdb",
+      "input_set": "sha256:86a880a504b6f13d748dc5a5519e442b6cf294f941cb9d678762acf067b1cae5",
+      "package_manifest": "sha256:1f8239521a197267b8096c6d7d16f0bc9afab256de07b4c8c25e9c63712a43b9",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "missing share comparison"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-missing-share-comparison",
+          "eval-srcpkg-campaign9-missing-share-comparison",
+          "ev-srcpkg-campaign9-observed-share-comparison",
+          "eval-srcpkg-campaign9-observed-share-comparison"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-missing-share-comparison",
+          "ev-srcpkg-campaign9-observed-share-comparison"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-missing-share-comparison",
+        "statement_type": "negative",
+        "text": "the missing-share difference between the environment and demographic comparison inputs is -0.017037."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-missing-share-comparison",
+      "srcpkg-campaign9-observed-share-comparison"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:bd4507956ab23a202ec8ff6c6ef0f360219517dfb31263f9e8f88a5eb11837fe",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-missing-share-comparison",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-missing-share-comparison",
+        "pkg-object-srcpkg-campaign9-missing-share-comparison-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-missing-share-comparison-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-missing-share-comparison",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-missing-share-comparison"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-missing-share-comparison",
+        "ev-srcpkg-campaign9-observed-share-comparison"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-missing-share-comparison",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "missing share comparison"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-provenance-field-comparison"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:034f200f573d44d481b3af0e6853d62b15a2a4cf3b4d35df680d80e801c3789f"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-provenance-field-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:15c9492075b76eb093ba7c93a0ce3f94f23791b373d7fb12072673b52f5cc347",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-overlapping-temporal-scope",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:015b14989abdf41dee220fde2603e9fda0a5defaaa488fe06461d0784780662e",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:f2db38143ad47e1bdf1ba456972fd3f7cb2f26a2be0d6ab6ed3baf134f5a3e78",
+      "generated_statements": "sha256:8fa8dac6cd9876713e7005578759b8a07753eeec4eb767c46a6522cd6621bee7",
+      "input_set": "sha256:034f200f573d44d481b3af0e6853d62b15a2a4cf3b4d35df680d80e801c3789f",
+      "package_manifest": "sha256:bda85b2ef30517261dce9f63b2c818b05f6d6c91cfe5b640a8efaab5ae701ba9",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "provenance comparison"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-provenance-field-comparison",
+          "eval-srcpkg-campaign9-provenance-field-comparison",
+          "ev-srcpkg-campaign9-overlapping-temporal-scope",
+          "eval-srcpkg-campaign9-overlapping-temporal-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-provenance-field-comparison",
+          "ev-srcpkg-campaign9-overlapping-temporal-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-provenance-field-comparison",
+        "statement_type": "provenance",
+        "text": "the demographic and environment comparison inputs differ on lineage event checksum null-state metadata."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-provenance-field-comparison",
+      "srcpkg-campaign9-overlapping-temporal-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:919123e4daad48507fed2bdce631ca8b15ec4a4e4c89cb058f4fad3145d33354",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-provenance-field-comparison",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-provenance-field-comparison",
+        "pkg-object-srcpkg-campaign9-provenance-field-comparison-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-provenance-field-comparison-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-provenance-field-comparison",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-provenance-field-comparison"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-provenance-field-comparison",
+        "ev-srcpkg-campaign9-overlapping-temporal-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-provenance-field-comparison",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "provenance comparison"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-validation-state-comparison"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:9f537b6009d194c59c2b280f4de4d25d2e753d0245de37abeb94b3ca50d8089f"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-validation-state-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:964277327210cadf84c89d08d7c56e9bac49ab0118ffb316dc29db051cc84adc",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-provenance-field-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:15c9492075b76eb093ba7c93a0ce3f94f23791b373d7fb12072673b52f5cc347",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:44901da2915ad864131f7c642161f22473619bafdeaaeedc9f4f29e9f1b90db9",
+      "generated_statements": "sha256:a1a30935262fcca4aa225b63944b6735fe00fb457b38048d85e1974b9f208f8a",
+      "input_set": "sha256:9f537b6009d194c59c2b280f4de4d25d2e753d0245de37abeb94b3ca50d8089f",
+      "package_manifest": "sha256:4ed45a308ff8d2fa146554383c01c88168a1fc4f21f9f44f28978fd8b3b6fde7",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "validation state comparison"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-validation-state-comparison",
+          "eval-srcpkg-campaign9-validation-state-comparison",
+          "ev-srcpkg-campaign9-provenance-field-comparison",
+          "eval-srcpkg-campaign9-provenance-field-comparison"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-validation-state-comparison",
+          "ev-srcpkg-campaign9-provenance-field-comparison"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-validation-state-comparison",
+        "statement_type": "evidence_quality",
+        "text": "both comparison inputs have deterministic production validation state available from prior accepted campaigns."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-validation-state-comparison",
+      "srcpkg-campaign9-provenance-field-comparison"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:8aa89e35ed9fc0c3fffb4c0a1e89f52fa5d4770cea9d1b081783b2b743417a02",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-validation-state-comparison",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-validation-state-comparison",
+        "pkg-object-srcpkg-campaign9-validation-state-comparison-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-validation-state-comparison-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-validation-state-comparison",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-validation-state-comparison"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-validation-state-comparison",
+        "ev-srcpkg-campaign9-provenance-field-comparison"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-validation-state-comparison",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "validation state comparison"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-cross-family-method"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:4c54508abfa33fbac1bf9c9bf6dfcf180d5d17d36bd74c70c0fbb47b153f6db1"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-cross-family-method",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:031c456a33b367e6c45cc4b3780eef474d70afc2f030391e032008e1032f8192",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-validation-state-comparison",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:964277327210cadf84c89d08d7c56e9bac49ab0118ffb316dc29db051cc84adc",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:cfe6856f1113233bb15b00446031ebbc323cd46c3c68b9652cf8322f4ddf7037",
+      "generated_statements": "sha256:a40b22da787d2c97fd324f9997e9d0c7ed35aca95034c288b95948d4f83909e2",
+      "input_set": "sha256:4c54508abfa33fbac1bf9c9bf6dfcf180d5d17d36bd74c70c0fbb47b153f6db1",
+      "package_manifest": "sha256:4966a8e6066c4dbec3b2179888d5763d765738833603f90d6bc7c892f61d2311",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "cross-family comparison method"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-cross-family-method",
+          "eval-srcpkg-campaign9-cross-family-method",
+          "ev-srcpkg-campaign9-validation-state-comparison",
+          "eval-srcpkg-campaign9-validation-state-comparison"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-cross-family-method",
+          "ev-srcpkg-campaign9-validation-state-comparison"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-cross-family-method",
+        "statement_type": "methodological",
+        "text": "campaign 9 compares WDI annual-scalar evidence inventory fields across two source families without interpretive claims."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-cross-family-method",
+      "srcpkg-campaign9-validation-state-comparison"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:6412cc763c293b7367badcf98b98669a37004d88519219b7bbb068c2bb12b5dd",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-cross-family-method",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-cross-family-method",
+        "pkg-object-srcpkg-campaign9-cross-family-method-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-cross-family-method-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-cross-family-method",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-cross-family-method"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-cross-family-method",
+        "ev-srcpkg-campaign9-validation-state-comparison"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-cross-family-method",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "cross-family comparison method"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-unsupported-dimensions"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:c294f9fbcf0d9ea2e6bf4a85d7adbb08b4ed0bc21acbb243bbd7840da1545e27"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-unsupported-dimensions",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:e5ea13f696e7705b5f2130eef5db358f75e22188294dbeeaab66773951372ba6",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-cross-family-method",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:031c456a33b367e6c45cc4b3780eef474d70afc2f030391e032008e1032f8192",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:09d4da36fc1d792e38179da13e321ba45b45b3d1986481ea85996ce45089ecb0",
+      "generated_statements": "sha256:d6bd2ffdd62fd64fdbd7aa9d4ac7e95a2325793270f3f78427bdc1da445c6008",
+      "input_set": "sha256:c294f9fbcf0d9ea2e6bf4a85d7adbb08b4ed0bc21acbb243bbd7840da1545e27",
+      "package_manifest": "sha256:5859cd14b4d80cedd0ec7a86f4f9770f885463a23a016657e8ad2f80b19b8ff2",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "unsupported dimensions"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-unsupported-dimensions",
+          "eval-srcpkg-campaign9-unsupported-dimensions",
+          "ev-srcpkg-campaign9-cross-family-method",
+          "eval-srcpkg-campaign9-cross-family-method"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-unsupported-dimensions",
+          "ev-srcpkg-campaign9-cross-family-method"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-unsupported-dimensions",
+        "statement_type": "negative",
+        "text": "campaign 9 does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the accepted comparison scope."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-unsupported-dimensions",
+      "srcpkg-campaign9-cross-family-method"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:a5691040dddc32353515efdc07b6440095b47fefc910fb9f785f0a7a5d9b9531",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-unsupported-dimensions",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-unsupported-dimensions",
+        "pkg-object-srcpkg-campaign9-unsupported-dimensions-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-unsupported-dimensions-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-unsupported-dimensions",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-unsupported-dimensions"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-unsupported-dimensions",
+        "ev-srcpkg-campaign9-cross-family-method"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-unsupported-dimensions",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "multi_reference": true
+      },
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted cross-family factual statement and paired evidence references",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign9-duplicate-pressure-control"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:15bb735b6541cb7a176b45a1c52e6fba6c7e1d779c434c8d7c37e52e7958a90e"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-duplicate-pressure-control",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:d80824d0cf0b1406ca2f649f4c46bee9e5a3f560c5f6b50e1183955ad02972ba",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      },
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign9-overlapping-territory-scope",
+        "reproducibility_handle": "python3 tools/run_campaign9_wdi_cross_family_comparison.py --output artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "snapshot_fingerprint": "sha256:090d694c20796f72c6b4cc2d5dc3bcf08aedb1f1c05aea5722a9f4d6991f4ebf",
+        "source_family": "external_wdi_annual_scalar_cross_family_comparison",
+        "source_identity": "World Bank World Development Indicators cross-family coverage comparison snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b67ac723123f1951e916af8d6a3830c954fcde67a2b327c11cc8f69bf8046642",
+      "evidence_references": "sha256:0da40bd9f35ef33062809ed45e924f5bb4cc96789cf80a66387be4435884c1ab",
+      "generated_statements": "sha256:1c1f7a966a43e324bb53006f5c97ba1e91a00aa515d6e5aaf5f0ac0d4b050b84",
+      "input_set": "sha256:15bb735b6541cb7a176b45a1c52e6fba6c7e1d779c434c8d7c37e52e7958a90e",
+      "package_manifest": "sha256:7758f83f5231e7df2840417e3b9815210bffe2879c08213ace5ae9c70996e81f",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+          "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "cross_family_evidence_inventory_comparison",
+          "topic": "duplicate pressure control"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign9-duplicate-pressure-control",
+          "eval-srcpkg-campaign9-duplicate-pressure-control",
+          "ev-srcpkg-campaign9-overlapping-territory-scope",
+          "eval-srcpkg-campaign9-overlapping-territory-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign9-duplicate-pressure-control",
+          "ev-srcpkg-campaign9-overlapping-territory-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign9-duplicate-pressure-control",
+        "statement_type": "methodological",
+        "text": "campaign 9 includes overlapping scope objects to test duplicate pressure while retaining distinct evidence topics."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign9-duplicate-pressure-control",
+      "srcpkg-campaign9-overlapping-territory-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:196a234032f60554fcd86d129e55074d646681b53f3907ba7a76e255e9769ca8",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign9-duplicate-pressure-control",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign9-duplicate-pressure-control",
+        "pkg-object-srcpkg-campaign9-duplicate-pressure-control-multi-ref"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign9-duplicate-pressure-control-multi-ref",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign9-duplicate-pressure-control",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign9-duplicate-pressure-control"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign9-duplicate-pressure-control",
+        "ev-srcpkg-campaign9-overlapping-territory-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign9-duplicate-pressure-control",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture",
+        "paired immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+      "evidence_family": "external_wdi_annual_scalar_cross_family_comparison",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+        "domain": "WDI annual-scalar cross-family evidence coverage comparison",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "cross_family_evidence_inventory_comparison",
+        "topic": "duplicate pressure control"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

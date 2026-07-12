@@ -1,0 +1,327 @@
+{
+  "acceptance_rate": 0.826087,
+  "architectural_continuity_classification": "preserves agreed architecture",
+  "architectural_observations": [
+    "Campaign 22 replicated the mature WDI demographic production methodology for WDI Health evidence without architecture change.",
+    "The existing package hierarchy, validators, Production Support layer, provenance handling, fingerprinting, reporting, and PEL workflow transferred unchanged.",
+    "Campaign 22 does not exercise multi-reference accepted objects; Health maturation remains the appropriate continuation."
+  ],
+  "average_evidence_references_per_knowledge_object": 1.0,
+  "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+  "candidate_improvements_discovered": [
+    "No validator, taxonomy, helper extraction, or architecture change is justified by Campaign 22.",
+    "PEL-012 remains monitor because accepted Campaign 22 objects still use one evidence reference each.",
+    "PEL-017 gains cross-family transfer evidence but still requires multi-reference comparison and partial-disagreement tests."
+  ],
+  "cross_campaign_metric_comparison": {
+    "campaign_0": {
+      "accepted": 10,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 3
+    },
+    "campaign_1": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_2": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_22": {
+      "accepted": 19,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_3": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_4": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_5": {
+      "accepted": 20,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_6": {
+      "accepted": 18,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_7": {
+      "accepted": 16,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    }
+  },
+  "cross_family_transfer_assessment": {
+    "campaign1_accepted": 12,
+    "campaign1_rejected": 4,
+    "campaign22_accepted": 19,
+    "campaign22_rejected": 4,
+    "fingerprinting": "unchanged",
+    "knowledge_candidate_package_construction": "unchanged",
+    "knowledge_object_package_construction": "unchanged",
+    "methodology_transfer": "successful",
+    "observed_differences": [
+      {
+        "classification": "Health-specific",
+        "difference": "Health source family replaces demographic source family while preserving WDI annual-scalar shape."
+      },
+      {
+        "classification": "evidence-family-specific",
+        "difference": "Health accepted object count differs from Campaign 1 because Campaign 22 includes metadata-family coverage rows."
+      },
+      {
+        "classification": "KnowledgeForge-wide",
+        "difference": "Determinism, fingerprint stability, provenance completeness, and rejected-candidate preservation recur."
+      },
+      {
+        "classification": "architectural",
+        "difference": "No package, taxonomy, validator, or architecture modification was required."
+      }
+    ],
+    "pel_workflow": "unchanged",
+    "production_metrics": "unchanged",
+    "production_support_layer": "unchanged",
+    "production_workflow": "unchanged",
+    "provenance_handling": "unchanged",
+    "reporting": "unchanged",
+    "source_evidence_package_construction": "unchanged",
+    "validator_behaviour": "unchanged"
+  },
+  "determinism_verification": true,
+  "duplicate_knowledge_objects_detected": false,
+  "final_recommendation": "Continue maturing the WDI Health annual-scalar family under Operational Expansion; preserve the existing KnowledgeForge production methodology unchanged and populate the Knowledge Repository after validation.",
+  "final_snapshot_fingerprint": "sha256:9d4a6fd951630c95a52cbf7f649d5db707de2c5c6448b34a62ce6b664a09bb04",
+  "fingerprint_stability": true,
+  "knowledge_candidate_packages_generated": 19,
+  "knowledge_categories_produced": {
+    "classified": 1,
+    "coverage": 9,
+    "derived": 1,
+    "evidence_quality": 1,
+    "factual": 1,
+    "methodological": 2,
+    "negative": 3,
+    "provenance": 1
+  },
+  "knowledge_categories_rejected": {
+    "coverage": 1,
+    "health_rating": 1,
+    "provenance": 2
+  },
+  "knowledge_object_packages_accepted": 19,
+  "knowledge_repository_impact_assessment": {
+    "confidence_gained_through_additional_evidence": [
+      "deterministic replay remained true for a fourth WDI annual-scalar family entry campaign",
+      "fingerprint stability remained true after repository population",
+      "no duplicate Knowledge Objects were detected",
+      "validator rejections remained active for unsupported inference and malformed provenance/fingerprint cases"
+    ],
+    "evidence_family_coverage_expanded": [
+      "external_wdi_annual_scalar_health"
+    ],
+    "future_recomputation_avoided_for_downstream_projects": [
+      "downstream projects can reuse Health source-scope and indicator-count facts without rerunning the campaign snapshot",
+      "downstream projects can reuse Health observed/missing evidence-grid totals and shares",
+      "downstream projects can reuse Health unsupported-dimension and provenance-state facts",
+      "future Health maturation campaigns can build on this family-entry baseline"
+    ],
+    "knowledge_categories_expanded": [
+      "classified",
+      "coverage",
+      "derived",
+      "evidence_quality",
+      "factual",
+      "methodological",
+      "negative",
+      "provenance"
+    ],
+    "new_knowledge_object_package_ids": [
+      "pkg-object-srcpkg-campaign22-deterministic-transfer-method",
+      "pkg-object-srcpkg-campaign22-family-disease-and-immunization-metadata",
+      "pkg-object-srcpkg-campaign22-family-health-systems-metadata",
+      "pkg-object-srcpkg-campaign22-family-mortality-metadata",
+      "pkg-object-srcpkg-campaign22-family-nutrition-metadata",
+      "pkg-object-srcpkg-campaign22-family-reproductive-and-child-health-metadata",
+      "pkg-object-srcpkg-campaign22-health-evidence-quality-state",
+      "pkg-object-srcpkg-campaign22-health-family-count",
+      "pkg-object-srcpkg-campaign22-health-missing-share",
+      "pkg-object-srcpkg-campaign22-health-observed-missing",
+      "pkg-object-srcpkg-campaign22-health-observed-share",
+      "pkg-object-srcpkg-campaign22-health-partial-families",
+      "pkg-object-srcpkg-campaign22-health-period-scope",
+      "pkg-object-srcpkg-campaign22-health-provenance-state",
+      "pkg-object-srcpkg-campaign22-health-source-scope",
+      "pkg-object-srcpkg-campaign22-health-territory-scope",
+      "pkg-object-srcpkg-campaign22-health-topic-inventory",
+      "pkg-object-srcpkg-campaign22-health-unsupported-dimensions",
+      "pkg-object-srcpkg-campaign22-replication-contract"
+    ],
+    "new_knowledge_objects_added": 19,
+    "new_reusable_knowledge_introduced": [
+      "Health source scope and WDI annual-scalar evidence-shape confirmation",
+      "Health indicator inventory and metadata-family counts",
+      "Health observed/missing evidence-grid totals and shares",
+      "Health provenance-state and validation-state facts",
+      "Health unsupported-dimension negative knowledge"
+    ],
+    "repository_breadth_gained": [
+      "opened WDI Health as the next Phase 2 production family",
+      "added five Health metadata-family coverage slices",
+      "expanded WDI annual-scalar family breadth beyond demographic, Environment, and Infrastructure"
+    ],
+    "repository_composition_changes": {
+      "objects_by_evidence_family_after": {
+        "external_wdi_annual_scalar_agriculture_rural_development": 19,
+        "external_wdi_annual_scalar_agriculture_rural_development_maturation": 36,
+        "external_wdi_annual_scalar_agriculture_rural_development_provenance_lineage": 17,
+        "external_wdi_annual_scalar_energy_mining": 19,
+        "external_wdi_annual_scalar_energy_mining_maturation": 36,
+        "external_wdi_annual_scalar_energy_mining_provenance_lineage": 17,
+        "external_wdi_annual_scalar_environment_provenance_lineage": 17,
+        "external_wdi_annual_scalar_health": 19,
+        "external_wdi_annual_scalar_infrastructure": 19,
+        "external_wdi_annual_scalar_infrastructure_maturation": 36,
+        "external_wdi_annual_scalar_infrastructure_provenance_lineage": 17
+      },
+      "objects_by_knowledge_category_after": {
+        "classified": 32,
+        "coverage": 99,
+        "derived": 20,
+        "evidence_quality": 11,
+        "factual": 14,
+        "methodological": 37,
+        "negative": 28,
+        "provenance": 11
+      },
+      "objects_by_lifecycle_state_after": {
+        "accepted": 252
+      }
+    },
+    "repository_depth_gained": [
+      "added family-entry evidence-quality/source-evidence baseline for Health maturation",
+      "preserved source/provenance/validation evidence needed for later Health inventory and provenance-lineage closeout",
+      "added deterministic transfer evidence after three Mature WDI annual-scalar families"
+    ],
+    "repository_object_count_after": 252,
+    "repository_object_count_before": 233,
+    "repository_quality_concerns_discovered": [],
+    "repository_quality_improvements_achieved": [
+      "repository health now tracks Health family-entry objects in indexes",
+      "provenance completeness remained true after campaign population",
+      "fingerprint stability remained true after campaign population",
+      "repository object count increased with no unresolved repository-quality concerns"
+    ]
+  },
+  "knowledge_repository_population": {
+    "manifest_path": "knowledge_repository/manifest.json",
+    "persisted_count": 19,
+    "rejected_count": 0,
+    "repository_fingerprint": "sha256:1b795e33abb4bca1ab06acc6e8fd094019a7727a81cd0264a201103c26e59006",
+    "repository_root": "knowledge_repository",
+    "total_object_count": 252
+  },
+  "processing_statistics": {
+    "accepted_object_fingerprints": [
+      "sha256:40d1eb4e9c1b862469d9e8f045a0e8fbed1f7b31baaa9d896dce9c7289e705f5",
+      "sha256:760e7568f7ab11b244806988b0907154439c888f07c478bef42aebc379b28841",
+      "sha256:d116cafb81bb6ee59976e047978caa347a0f8f790d4578e955e3f48eedb94d7a",
+      "sha256:2a3968c11edbb731a8677325856c34ddb11fa4df6c7faa3de116636831e18c42",
+      "sha256:5c800c4d2887dd744c376dfe6b37bdcafa85331d23ce253e1bec4e74891c639c",
+      "sha256:e96244e9aba45eb1a3dd14dfaa6aa2f28eda7a651bd14869b48421e4b7e6d461",
+      "sha256:e09167107c4868ce81713fe339fb70614f82089d08d622dda4bd65bf7829c717",
+      "sha256:ce96f94f10e2f9408bbdfafa8166775033e0c186c084eb063f85970def36618f",
+      "sha256:4e9027262ed3659a1a17ea7ebfb22393997e795d6931604537e9ac5aaa84822c",
+      "sha256:bd979765075d79026cb1f43532f78c4f505e982f1f333a5cd90ac41e134cc9f0",
+      "sha256:4f866025960034f6db267c14c6c9f2fdc23b20c721e8e3a32edd1b5d2eb13a87",
+      "sha256:a5d971034adce6a2db1ab0338145c17d592b4e503267d3ca6402cbab50a946da",
+      "sha256:a8e89c57d1644d63301ef40660572f04b8d492684ba3c424b0359b4bf932a750",
+      "sha256:ac0c1ab5e625e3aec3d0c36929eaa8deb6518b8091ea4efb82260a28b4ad4718",
+      "sha256:53dfb33f5d009ce667048febf2305a53c259a3fbfb141e07de73b03c159adbed",
+      "sha256:ffafa82d469364585c4c2d1822672b333f9d20384a7354d7d53fa6c010c79515",
+      "sha256:01faf218364b85758ac6eec2b22d80c2e17ba35350e1941002a878fde34c0109",
+      "sha256:e4b5e1894cd24d2884835fca55559ccd0fec25245ceb8c5b6d5d56eca28d17a0",
+      "sha256:fcbca3dfeb517e6abe08cef05f97bd310236feedb16c4e2eeb4d89cc448f9a6d"
+    ],
+    "health_family_count": 5,
+    "health_indicator_count": 110,
+    "missing_share": 0.163682,
+    "observed_share": 0.836318,
+    "snapshot_fingerprint": "sha256:ae5b1fbdc74b900e42625a1bad562d74cb43bd3c2c1a37e586753775e440e9ce"
+  },
+  "provenance_completeness": true,
+  "rejected_candidates": 4,
+  "rejection_rate": 0.173913,
+  "repository_health_summary": {
+    "fingerprint_stability": true,
+    "manifest_object_count": 252,
+    "manifest_path": "knowledge_repository/manifest.json",
+    "objects_added_this_campaign": 19,
+    "objects_by_evidence_family": {
+      "external_wdi_annual_scalar_agriculture_rural_development": 19,
+      "external_wdi_annual_scalar_agriculture_rural_development_maturation": 36,
+      "external_wdi_annual_scalar_agriculture_rural_development_provenance_lineage": 17,
+      "external_wdi_annual_scalar_energy_mining": 19,
+      "external_wdi_annual_scalar_energy_mining_maturation": 36,
+      "external_wdi_annual_scalar_energy_mining_provenance_lineage": 17,
+      "external_wdi_annual_scalar_environment_provenance_lineage": 17,
+      "external_wdi_annual_scalar_health": 19,
+      "external_wdi_annual_scalar_infrastructure": 19,
+      "external_wdi_annual_scalar_infrastructure_maturation": 36,
+      "external_wdi_annual_scalar_infrastructure_provenance_lineage": 17
+    },
+    "objects_by_knowledge_category": {
+      "classified": 32,
+      "coverage": 99,
+      "derived": 20,
+      "evidence_quality": 11,
+      "factual": 14,
+      "methodological": 37,
+      "negative": 28,
+      "provenance": 11
+    },
+    "objects_by_lifecycle_state": {
+      "accepted": 252
+    },
+    "previous_repository_object_count": 233,
+    "provenance_completeness": true,
+    "repository_fingerprint": "sha256:1b795e33abb4bca1ab06acc6e8fd094019a7727a81cd0264a201103c26e59006",
+    "repository_growth_since_previous_campaign": 19,
+    "total_knowledge_objects": 252,
+    "unresolved_repository_quality_concerns": []
+  },
+  "source_evidence_packages_processed": 19,
+  "validator_failures_by_category": {
+    "constitutional_boundary": 1,
+    "evidence_contract": 2,
+    "lineage_fingerprint": 2,
+    "provenance": 1,
+    "unsupported_inference": 1
+  }
+}

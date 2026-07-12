@@ -1,0 +1,87 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_demographic_structure_indicator_inventory",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "source_snapshot_fingerprint": "sha256:cfccbd3fcaf1f80765cbd9355e98d620ec6c808007692728c5844a664972e376",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "The Campaign 4 WDI indicator-family inventory assigns 32 indicators to the population totals family.",
+    "knowledge_category": "classified",
+    "payload_metadata": {
+      "family_key": "population_totals",
+      "indicator_count": 32,
+      "label": "population totals",
+      "supported_dimensions": [
+        "indicator",
+        "territory",
+        "period"
+      ],
+      "topic": "family membership population_totals"
+    },
+    "scope": {
+      "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_indicator_inventory_metadata",
+      "topic": "family membership population_totals"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:4c02f4ecd97340025e8cf4df77e1d4211d6eb2658efd2ce0348db46b03f4a780",
+    "provenance": "sha256:2f8c01ed7e000bb2c9b98f5206bc0e81ebc2f3f5f936cdc4521015866aea73da",
+    "reproducibility": "sha256:8cb0a5361e29c14b1d697f457825c218917fe9310493b77e2454a8f5ddfaf7d1",
+    "source_payload": "sha256:8bd60810bd97c98eabda45abb8e092633da81662c348f000bc2c70d2499c300e"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/reports/R-20260709-production-falsification-review.md",
+      "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+      "artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets/production_quality_report.json",
+      "artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata/production_quality_report.json"
+    ],
+    "selection_rule": "approved Campaign 4 WDI annual-scalar demographic-structure indicator-family inventory scope",
+    "source_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:cfccbd3fcaf1f80765cbd9355e98d620ec6c808007692728c5844a664972e376"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign4_wdi_indicator_inventory.py --output artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI indicator-family inventory snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign4-family-membership-population_totals",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+    "source_name": "World Bank World Development Indicators audited demographic-structure indicator-family inventory snapshot",
+    "source_version": "sha256:cfccbd3fcaf1f80765cbd9355e98d620ec6c808007692728c5844a664972e376"
+  }
+}

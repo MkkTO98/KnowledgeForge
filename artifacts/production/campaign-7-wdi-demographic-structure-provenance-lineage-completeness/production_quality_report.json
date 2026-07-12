@@ -1,0 +1,166 @@
+{
+  "acceptance_rate": 0.8,
+  "architectural_observations": [
+    "Existing package and validator contracts handled Campaign 7 provenance-lineage completeness without modification.",
+    "Campaigns 1-7 support Mature status for the WDI demographic production family.",
+    "Remaining gaps are intentionally deferred to cross-family or multi-source campaigns rather than additional demographic deepening."
+  ],
+  "average_evidence_references_per_knowledge_object": 1.0,
+  "campaign_family_maturity_assessment": {
+    "basis": "Campaigns 1-7 validate deterministic WDI demographic production across evidence-quality, completeness, freshness, inventory, territorial, temporal, and provenance-lineage scopes without architecture change.",
+    "classification": "Mature",
+    "intentionally_deferred": [
+      "multi-reference accepted objects until cross-family campaigns",
+      "partial provenance disagreement until multi-source evidence appears",
+      "non-demographic WDI evidence-family transfer until Campaign 8"
+    ],
+    "maturity_rationale": "The planned WDI demographic production family has now exercised its major evidence-level scopes. Remaining gaps depend on cross-family or multi-source evidence rather than additional demographic deepening.",
+    "validated": [
+      "deterministic replay",
+      "fingerprint stability",
+      "provenance completeness",
+      "rejected-candidate preservation",
+      "territorial and temporal applicability",
+      "coverage and missingness knowledge",
+      "raw artifact identity and release lineage",
+      "lineage/fingerprint validation"
+    ]
+  },
+  "campaign_id": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+  "candidate_improvements_discovered": [
+    "No validator, taxonomy, helper extraction, or architecture change is justified by Campaign 7.",
+    "PEL-012 remains monitor because accepted objects still use one evidence reference each; Campaign 9 is the appropriate multi-source test.",
+    "PEL-017 can be narrowed: provenance-lineage completeness is validated; multi-reference objects and partial provenance disagreement remain deferred to cross-family/multi-source campaigns."
+  ],
+  "cross_campaign_metric_comparison": {
+    "campaign_0": {
+      "accepted": 10,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 3
+    },
+    "campaign_1": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_2": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_3": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_4": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_5": {
+      "accepted": 20,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_6": {
+      "accepted": 18,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_7": {
+      "accepted": 16,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    }
+  },
+  "determinism_verification": true,
+  "duplicate_knowledge_objects_detected": false,
+  "fingerprint_stability": true,
+  "knowledge_candidate_packages_generated": 16,
+  "knowledge_categories_produced": {
+    "classified": 1,
+    "coverage": 6,
+    "derived": 1,
+    "evidence_quality": 1,
+    "factual": 1,
+    "methodological": 4,
+    "negative": 1,
+    "provenance": 1
+  },
+  "knowledge_categories_rejected": {
+    "lineage_rating": 1,
+    "provenance": 3
+  },
+  "knowledge_object_packages_accepted": 16,
+  "lineage_completeness_observations": {
+    "duplicate_pressure": "not_observed",
+    "license_notes": "exercised",
+    "lineage_fingerprint_validation": "exercised",
+    "malformed_provenance_rejection": "exercised",
+    "provenance_envelopes": "exercised",
+    "raw_artifact_hashes": "exercised",
+    "raw_artifact_urls": "exercised",
+    "release_keys": "exercised",
+    "source_urls": "exercised"
+  },
+  "processing_statistics": {
+    "accepted_object_fingerprints": [
+      "sha256:835cbbaf4a7ae442ac7f5a77bf8ec9e64054df301f93869130cced4cc1e2386e",
+      "sha256:0cde52eef7813a462fff340d4cb40f02cbae14b2eb77efd54ea05653a3f67baa",
+      "sha256:81b7eb644ca0ea47d39b6392208865cc0a13ee9e5f2b318c6711ca03cd41f0fa",
+      "sha256:5ca75663555a281f69bd34af1ce62653d276b4c72103e5e5c182a0b60dc8e5df",
+      "sha256:4faee1183ce1a987ced9188f0280530fbef4fe4cf41056e9867c921c55359369",
+      "sha256:55645f017e87e34ad8d2a041eb4584952206b3cb12ded1240987769122fd5dc3",
+      "sha256:4b52f4e7f05fe12209583a68d4d89ad913c92bb70086edcfb0b4364529249c3c",
+      "sha256:ccf1402ef325eb50563015fd53147e5f280085b3ab3829cb9c0453f8a1339462",
+      "sha256:39e49cf2cb01efa3619b5e4203a7459a61986847f167fb0135203015470bbc9d",
+      "sha256:f38f1a5c5e3e96da3a758c85c539853f715389ea6fa2b406036e7c932ba8114a",
+      "sha256:c5784fb883f5afaeb3114f597a8494c012ce45eb4d8fcb26cfc61a5b9ebc75bd",
+      "sha256:0f6bab92fa024b0b0e521c0c22d3587f3c0f43efbd0d0551ca461a58f1da6102",
+      "sha256:c185180f09182ca7e5a3b8b9b2f5c627d1feeb50aa17f82e84ddc8e39d1e5cbb",
+      "sha256:2889fbff51fa532b2512a5adf9c5e6400efd265dff11231fb02f88e55e6b468e",
+      "sha256:8e8fb41a4437f041e22e2ca3e41681b14bb6e9f17bfb77e1c485ff40dc329487",
+      "sha256:d185a61b31d51f03a565f8602b5c8fc7f17fdd1d2908dad24780f6f7f12af6ed"
+    ],
+    "artifact_count": 4,
+    "complete_lineage_artifact_count": 4,
+    "missing_lineage_field_count": 0,
+    "required_lineage_fields": [
+      "raw_artifact_url",
+      "raw_artifact_hash",
+      "release_key",
+      "source_url",
+      "license_note",
+      "lineage_envelope_present"
+    ],
+    "snapshot_fingerprint": "sha256:b3828804b682136a14bfe625b972809a633055165aab54ce395c99ff9b0a3d83"
+  },
+  "provenance_completeness": true,
+  "rejected_candidates": 4,
+  "rejection_rate": 0.2,
+  "source_evidence_packages_processed": 16,
+  "validator_failures_by_category": {
+    "constitutional_boundary": 1,
+    "evidence_contract": 2,
+    "lineage_fingerprint": 2,
+    "provenance": 1,
+    "unsupported_inference": 1
+  }
+}

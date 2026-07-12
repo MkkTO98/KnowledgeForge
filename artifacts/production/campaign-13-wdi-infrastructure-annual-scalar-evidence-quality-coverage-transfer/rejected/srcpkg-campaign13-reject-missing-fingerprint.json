@@ -1,0 +1,106 @@
+{
+  "reason_categories": [
+    "evidence_contract",
+    "lineage_fingerprint"
+  ],
+  "source_evidence_package": {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_snapshot_characteristic",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer",
+        "source_snapshot_fingerprint": "sha256:a7aac06921e1476259a1bbe3adf6c393bc1068694452361380b9d89981902231",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "A malformed Campaign 13 candidate omits lineage fingerprints.",
+      "knowledge_category": "provenance",
+      "payload_metadata": {
+        "topic": "malformed fingerprint"
+      },
+      "scope": {
+        "campaign_id": "campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer",
+        "domain": "WDI annual-scalar infrastructure evidence-quality and coverage transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "malformed fingerprint"
+      }
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "artifacts/reports/R-20260709-second-production-family-evaluation.md",
+        "artifacts/reports/R-20260709-second-production-family-initial-roadmap.md",
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+        "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/reports/family_closeout_report.md"
+      ],
+      "selection_rule": "Campaign 13 planning gate selected WDI Infrastructure annual-scalar evidence for the second production family",
+      "source_family": "external_wdi_annual_scalar_infrastructure",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:a7aac06921e1476259a1bbe3adf6c393bc1068694452361380b9d89981902231"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign13_wdi_infrastructure_transfer.py --output artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic embedded immutable WDI Infrastructure evidence snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign13-reject-missing-fingerprint",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure",
+      "source_name": "World Bank World Development Indicators audited Infrastructure evidence snapshot",
+      "source_version": "sha256:a7aac06921e1476259a1bbe3adf6c393bc1068694452361380b9d89981902231"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "stage_reports": {
+      "source": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "evidence_contract",
+            "location": "fingerprints",
+            "message": "missing required field: fingerprints",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints",
+            "message": "fingerprints must be an object",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+}

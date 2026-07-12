@@ -1,0 +1,84 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_energy_mining_snapshot_characteristic",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+      "source_snapshot_fingerprint": "sha256:55c4f17efcb14cf6c18bb69820b6c00a969c39a520d15491fd25dae62665b179",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "Campaign 16 records 26 annual-scalar indicators for the mining_and_extractives_metadata Energy & Mining metadata family.",
+    "knowledge_category": "coverage",
+    "payload_metadata": {
+      "applicability": "annual scalar indicator metadata",
+      "family": "mining_and_extractives_metadata",
+      "indicator_count": 26,
+      "missing_series_cells": 42860,
+      "observed_series_cells": 119750,
+      "topic": "energy and mining metadata family"
+    },
+    "scope": {
+      "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "energy and mining metadata family"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:85aa53f0f51ba3f2870d087a844ad11f5feecf6626a01c82b27919666149cbc3",
+    "provenance": "sha256:9588542bf86a9176182414c57ca9a4726bda77385eb0c7be06327c538b79ac8c",
+    "reproducibility": "sha256:b336fd85f79a98537c87e173122fa5032ba5e21eaffd91f23757ee5d8efa80c3",
+    "source_payload": "sha256:c0f5edfa8151e1eb855c6c329dd8066cea0deeca3bfcb691b9b113a63fc7b9d6"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md",
+      "artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md",
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+      "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/reports/family_closeout_report.md"
+    ],
+    "selection_rule": "Phase 2 Production Roadmap selected WDI Energy & Mining annual-scalar evidence as the next production family after WDI Infrastructure reached Mature",
+    "source_family": "external_wdi_annual_scalar_energy_mining",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:55c4f17efcb14cf6c18bb69820b6c00a969c39a520d15491fd25dae62665b179"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI Energy & Mining evidence snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign16-family-mining-and-extractives-metadata",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_energy_mining",
+    "source_name": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+    "source_version": "sha256:55c4f17efcb14cf6c18bb69820b6c00a969c39a520d15491fd25dae62665b179"
+  }
+}

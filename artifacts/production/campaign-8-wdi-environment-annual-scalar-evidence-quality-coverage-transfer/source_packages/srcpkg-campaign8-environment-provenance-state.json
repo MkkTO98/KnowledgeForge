@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_environment_snapshot_characteristic",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+      "source_snapshot_fingerprint": "sha256:45e49cdae4af8a738bbe8df674c9fd6ca9b7b11ec0df572d2dc46b682525f1d2",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "Campaign 8 records WDI Environment source URLs, raw artifact URLs, raw artifact hashes, release keys, license notes, and WDI last-updated metadata as available in the evidence snapshot.",
+    "knowledge_category": "provenance",
+    "payload_metadata": {
+      "license_note_available": true,
+      "lineage_event_checksum_null_in_audited_rows": false,
+      "raw_artifact_hashes_available": true,
+      "raw_artifact_urls_available": true,
+      "release_keys_available": true,
+      "source_url_available": true,
+      "topic": "provenance state",
+      "wdi_lastupdated_metadata_available": true
+    },
+    "scope": {
+      "campaign_id": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+      "domain": "WDI annual-scalar environment evidence-quality and coverage transfer",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "provenance state"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:5c5a23c4791cf82028929b1c21e6c2d14236773c00ec179afeadb47462875420",
+    "provenance": "sha256:d2d091bdf6db8fafe5c55971570ed380d8e5be96f397d17904e143f98245f19a",
+    "reproducibility": "sha256:8a8bf8260f953d45cbb428c899967bf2c981f21c75c1a776eeb0ce85741fc821",
+    "source_payload": "sha256:fe4c39d2d588a227fa24bbde4db52736bd4855956cdfd52b7975e412e70c67a8"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "artifacts/reports/R-20260709-second-production-family-evaluation.md",
+      "artifacts/reports/R-20260709-second-production-family-initial-roadmap.md",
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+      "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/reports/family_closeout_report.md"
+    ],
+    "selection_rule": "Campaign 8 planning gate selected WDI Environment annual-scalar evidence for the second production family",
+    "source_family": "external_wdi_annual_scalar_environment",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:45e49cdae4af8a738bbe8df674c9fd6ca9b7b11ec0df572d2dc46b682525f1d2"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign8_wdi_environment_transfer.py --output artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI Environment evidence snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign8-environment-provenance-state",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_environment",
+    "source_name": "World Bank World Development Indicators audited Environment evidence snapshot",
+    "source_version": "sha256:45e49cdae4af8a738bbe8df674c9fd6ca9b7b11ec0df572d2dc46b682525f1d2"
+  }
+}

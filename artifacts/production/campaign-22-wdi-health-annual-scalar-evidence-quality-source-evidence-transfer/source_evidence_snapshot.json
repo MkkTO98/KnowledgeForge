@@ -1,0 +1,125 @@
+{
+  "audited_inventory": {
+    "curated_cells": 656210,
+    "dataset_releases": 3,
+    "explicit_missing_cells": 107410,
+    "indicators_total": 110,
+    "observed_cells": 548800,
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990,
+    "pipeline_runs": 8,
+    "selection_source": "Campaign 22 planning gate and Phase 2 Production Roadmap",
+    "source": "World Bank World Development Indicators (WDI)",
+    "territories_total": 217,
+    "wdi_topic_id": 8,
+    "wdi_topic_name": "Health"
+  },
+  "campaign_id": "campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer",
+  "coverage_metrics": {
+    "complete_family_count": 0,
+    "family_count": 5,
+    "missing_share": 0.163682,
+    "observed_share": 0.836318,
+    "partial_family_count": 5
+  },
+  "evidence_basis": [
+    "artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md",
+    "artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md",
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/production/campaign-21-wdi-agriculture-rural-development-provenance-lineage-closeout/production_quality_report.json",
+    "artifacts/production/campaign-21-wdi-agriculture-rural-development-provenance-lineage-closeout/reports/family_closeout_report.md"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_health",
+  "health_family_inventory": {
+    "common_frequency": "annual",
+    "common_shape": "scalar observations",
+    "families": [
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "mortality_metadata",
+        "indicator_count": 26,
+        "missing_series_cells": 22460,
+        "observed_series_cells": 126440
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "health_systems_metadata",
+        "indicator_count": 24,
+        "missing_series_cells": 25280,
+        "observed_series_cells": 117820
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "nutrition_metadata",
+        "indicator_count": 21,
+        "missing_series_cells": 21680,
+        "observed_series_cells": 103760
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "disease_and_immunization_metadata",
+        "indicator_count": 22,
+        "missing_series_cells": 19570,
+        "observed_series_cells": 111330
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "reproductive_and_child_health_metadata",
+        "indicator_count": 17,
+        "missing_series_cells": 18420,
+        "observed_series_cells": 89450
+      }
+    ],
+    "family_count": 5,
+    "unsupported_dimensions": [
+      "subnational-region",
+      "scenario",
+      "model-projection",
+      "narrative-assessment"
+    ]
+  },
+  "provenance_observations": {
+    "license_note_available": true,
+    "lineage_event_checksum_null_in_audited_rows": false,
+    "raw_artifact_hashes_available": true,
+    "raw_artifact_urls_available": true,
+    "release_keys_available": true,
+    "source_url_available": true,
+    "wdi_lastupdated_metadata_available": true
+  },
+  "replication_contract": {
+    "fingerprinting_unchanged": true,
+    "knowledge_candidate_package_construction_unchanged": true,
+    "knowledge_object_package_construction_unchanged": true,
+    "pel_workflow_unchanged": true,
+    "production_metrics_unchanged": true,
+    "production_support_layer_unchanged": true,
+    "production_workflow_unchanged": true,
+    "provenance_handling_unchanged": true,
+    "reporting_unchanged": true,
+    "source_evidence_package_construction_unchanged": true,
+    "validator_behaviour_unchanged": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "health evidence",
+    "frequency": "annual",
+    "indicator_scope": "WDI Health topic annual-scalar indicators selected by the Phase 2 Production Roadmap",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:ae5b1fbdc74b900e42625a1bad562d74cb43bd3c2c1a37e586753775e440e9ce",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "validation_observations": {
+    "current_audited_evidence_shape": "annual-scalar",
+    "current_audited_repository_source_scope": "WDI-only",
+    "methodology_transfer_target": "Campaign 1 WDI demographic evidence-quality and coverage workflow",
+    "observation_status_explicit": true,
+    "observed_and_missing_status_available": true
+  }
+}

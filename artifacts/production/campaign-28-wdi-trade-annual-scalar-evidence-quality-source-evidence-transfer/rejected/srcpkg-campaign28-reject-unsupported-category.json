@@ -1,0 +1,104 @@
+{
+  "reason_categories": [
+    "constitutional_boundary"
+  ],
+  "source_evidence_package": {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_trade_snapshot_characteristic",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "source_snapshot_fingerprint": "sha256:664ec2a0ff204c1403f4289d9bba44ec721ec364a98eceb1bad315bf846b7bd2",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "A malformed Campaign 28 candidate uses an unsupported energy-mining-rating category.",
+      "knowledge_category": "trade_rating",
+      "payload_metadata": {
+        "topic": "unsupported category"
+      },
+      "scope": {
+        "campaign_id": "campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar trade evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "unsupported category"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:f406d23d711761d7e9549a93a5cddc1c01fb35bb14b17e4b15c89d85c6d34722",
+      "provenance": "sha256:ed89fc0aa5bff72292b27fd8f583ecd291f9b801e50902771d20e1e90d36ff70",
+      "reproducibility": "sha256:751bd86c53236e43cd0a1b8983810fe6c2f6a7c73531507d256112f47215a45e",
+      "source_payload": "sha256:8d47160768be33f75a272348680eb5d62fbf7187713b1b2f46cf16d21393cb75"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md",
+        "artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md",
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-24-wdi-health-provenance-lineage-closeout/production_quality_report.json",
+        "artifacts/production/campaign-24-wdi-health-provenance-lineage-closeout/reports/family_closeout_report.md"
+      ],
+      "selection_rule": "Phase 2 Production Roadmap selected WDI Trade annual-scalar evidence as the next production family after WDI Energy & Mining reached Mature",
+      "source_family": "external_wdi_annual_scalar_trade",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:664ec2a0ff204c1403f4289d9bba44ec721ec364a98eceb1bad315bf846b7bd2"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign28_wdi_trade_transfer.py --output artifacts/production/campaign-28-wdi-trade-annual-scalar-evidence-quality-source-evidence-transfer",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic embedded immutable WDI Trade evidence snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign28-reject-unsupported-category",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_trade",
+      "source_name": "World Bank World Development Indicators audited Trade evidence snapshot",
+      "source_version": "sha256:664ec2a0ff204c1403f4289d9bba44ec721ec364a98eceb1bad315bf846b7bd2"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "stage_reports": {
+      "source": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "constitutional_boundary",
+            "location": "evidence_payload.knowledge_category",
+            "message": "unsupported knowledge category: trade_rating",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+}

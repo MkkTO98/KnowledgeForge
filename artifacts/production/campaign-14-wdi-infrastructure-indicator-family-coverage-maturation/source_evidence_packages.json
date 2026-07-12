@@ -1,0 +1,3205 @@
+[
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 WDI Infrastructure maturation snapshot contains 142 indicators grouped into 5 Infrastructure indicator families.",
+      "knowledge_category": "factual",
+      "payload_metadata": {
+        "indicator_families_total": 5,
+        "indicators_total": 142,
+        "topic": "indicator inventory total"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "indicator inventory total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:d05eb88cf0c12b26c2038d66f49bccef552f53b2ddc2c001a3e29119872ce5c8",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:47b05905953292c4e8431054e9bf4ca84f81a384d2ddaca5d43c7becf0373fc2"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-inventory-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 classifies the audited WDI Infrastructure inventory into air-and-climate metadata, land-and-forest metadata, water-and-sanitation metadata, biodiversity-and-protected-area metadata, and resource-use metadata families.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "family_keys": [
+          "transport_services_metadata",
+          "communications_access_metadata",
+          "digital_connectivity_metadata",
+          "energy_access_infrastructure_metadata",
+          "logistics_and_trade_facilitation_metadata"
+        ],
+        "topic": "family classification set"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family classification set"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:bb33483e814c779f506c0767acfed9585e184dcb3b987dc4a597b119aad0d14e",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:b86e5426218b9a23158636ce210ea95a02a9d4de07b33a4eef7ceac210e5fb0e"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-classification-set",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 WDI Infrastructure inventory assigns 31 indicators to the transport services metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 178,
+        "complete_period_coverage": false,
+        "family_key": "transport_services_metadata",
+        "high_partial": 25,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 4,
+        "label": "transport services metadata",
+        "missing_periods": 2,
+        "moderate_partial": 10,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership transport_services_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family membership transport_services_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:ef1f14c2958e0f57c45a84cd127bbbaa11d4aa23b669c8d42aeb8c8792001852",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:ed5c28b68b6b3e1d4bd6947a6d259bf880693d315bce34e00b4dbedb40ccd6ea"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-membership-transport_services_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 WDI Infrastructure inventory assigns 29 indicators to the communications access metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 186,
+        "complete_period_coverage": false,
+        "family_key": "communications_access_metadata",
+        "high_partial": 19,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 4,
+        "label": "communications access metadata",
+        "missing_periods": 1,
+        "moderate_partial": 8,
+        "observed_periods": 34,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership communications_access_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family membership communications_access_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:baec06633291cc089e2385282f28543ef72c82091cc2c4d9971f3aede6f7fb07",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:0ca70b08a7eb3db9b0badb1d6b889352a6d02b38b0bd3499bcf118750bb3759d"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-membership-communications_access_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 WDI Infrastructure inventory assigns 24 indicators to the digital connectivity metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 162,
+        "complete_period_coverage": false,
+        "family_key": "digital_connectivity_metadata",
+        "high_partial": 31,
+        "indicator_count": 24,
+        "insufficient_for_campaign_scope": 7,
+        "label": "digital connectivity metadata",
+        "missing_periods": 3,
+        "moderate_partial": 17,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership digital_connectivity_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family membership digital_connectivity_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:d1fd6b4cd7ff4c5cd8ce6d81ab265b152135e1efe2eeba23828676c76827c8c0",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:d4dbd974573ce4bf1abf2ebeef8d1f85acb1119bc788a12b10b592cfe162973a"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-membership-digital_connectivity_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 WDI Infrastructure inventory assigns 27 indicators to the energy access infrastructure metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 171,
+        "complete_period_coverage": false,
+        "family_key": "energy_access_infrastructure_metadata",
+        "high_partial": 27,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "energy access infrastructure metadata",
+        "missing_periods": 4,
+        "moderate_partial": 14,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership energy_access_infrastructure_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family membership energy_access_infrastructure_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:ae3bdfe003fe2d7b226d365b3e14b29cd4b8ec5e866fcba14f1a1e4a70ebd7a7",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:21c6789c8616a600be09ba4d3da17d2c76056ef6822ce01a79790ac4b29d4c11"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-membership-energy_access_infrastructure_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 WDI Infrastructure inventory assigns 31 indicators to the logistics and trade facilitation metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 168,
+        "complete_period_coverage": false,
+        "family_key": "logistics_and_trade_facilitation_metadata",
+        "high_partial": 28,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 6,
+        "label": "logistics and trade facilitation metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership logistics_and_trade_facilitation_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family membership logistics_and_trade_facilitation_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:f05311d228b798c9773ee9b7d0ed924fae6cc2fc5684e188812120d7c8620790",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:ae65326f1c3a18e7346a2bb1a91c59813d817930b8d1712af6408b13e02b0b82"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-membership-logistics_and_trade_facilitation_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 records indicator, territory, period, and indicator-family as supported dimensions for audited Infrastructure maturation objects.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "supported_dimensions": [
+          "indicator",
+          "territory",
+          "period",
+          "indicator_family"
+        ],
+        "topic": "supported dimensions"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "supported dimensions"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:b3028f1682d996bb3696eda46cbdb19080895b29b136180145b7feeca740a35e",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:e7c8fbc40a9d2943b6a15cf66494c0da2ddc8e937db9ca67f0c181a8de664ddd"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-supported-dimensions",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the audited Infrastructure maturation scope.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "topic": "unsupported dimensions",
+        "unsupported_dimensions": [
+          "subnational_region",
+          "scenario",
+          "model_projection",
+          "narrative_assessment"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:515fbf6b554724561981667bf87e960d8ab6866d9be3593e20dc52bd2f4e36a3",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:5454b94ea6900264cb47430c5b7835afd9d2dcca8b9c48bbe1304e524a661059"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-unsupported-dimensions",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial coverage matrix has 1085 territory-by-family cells across 5 indicator families.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "indicator_family_count": 5,
+        "matrix_cell_count": 1085,
+        "topic": "territorial matrix shape"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "territorial matrix shape"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:2723a188655414b07c4a542552ac8f721f10d3c3124a8d4d556045d70b544c40",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:75d60103fd340669206f6d0c20b357d0712474a832ccfe784a6495ba4bb037c6"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-territorial-matrix-shape",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 classifies Infrastructure territorial coverage cells into complete-or-near-complete, high-partial, moderate-partial, and insufficient-for-campaign-scope buckets.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "bucket_keys": [
+          "complete_or_near_complete",
+          "high_partial",
+          "moderate_partial",
+          "insufficient_for_campaign_scope"
+        ],
+        "topic": "territorial bucket taxonomy"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "territorial bucket taxonomy"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:216d61c5cc1ff6ac9e0f2b7ce6bea86187264f927d4e9b2dadaca4bff80ba07f",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:55b483022b4034346d4051fefc6317571b3fd4e20d1bf550c6b7ca25c02cf385"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-territorial-bucket-taxonomy",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial matrix assigns 865 family-territory cells to the complete-or-near-complete bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 865,
+        "topic": "territorial complete total"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "territorial complete total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:1fb8b7a0712b8ca8cb99fe35562acb8a9e10b6bd806f7f30a144be920b6371a4",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:e193b6835d0fc21ff5ae6d4db4640a98d6c05e829ef70e18c542e35b269273d0"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-territorial-complete-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial matrix assigns 130 family-territory cells to the high-partial bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 130,
+        "topic": "territorial high partial total"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "territorial high partial total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:86d5e3535f0d662a9d13390cf10f53e29dca614787331647bd7652c7bb5382fb",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:671de7c86a0fee6ae2080c66910778966f2e595d1caeb24b215551eebebb4906"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-territorial-high-partial-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial matrix assigns 64 family-territory cells to the moderate-partial bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 64,
+        "topic": "territorial moderate partial total"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "territorial moderate partial total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:b97c1f21d771767b9790bb4b8761ad0e1b06e705d8622b302f0e98d8a9456c03",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:c711f6b272d2a9b43b96709d9a1c97a56c91cc743cf2eb0ce537355eb38c6978"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-territorial-moderate-partial-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial matrix assigns 26 family-territory cells to the insufficient-for-campaign-scope bucket.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "bucket_total": 26,
+        "topic": "territorial insufficient total"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "territorial insufficient total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:038cb26bda399daff320ef0a1cb96726df245148bfec2961d3d3c46fc04ee210",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:62ca9e9c18c89827933ac3e3d15bdb4cdff75dfc54ad3074d24b5ce97604c8a0"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-territorial-insufficient-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial matrix records coverage buckets for 217 audited territories in the transport-services-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 178,
+        "complete_period_coverage": false,
+        "family_key": "transport_services_metadata",
+        "high_partial": 25,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 4,
+        "label": "transport services metadata",
+        "missing_periods": 2,
+        "moderate_partial": 10,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage transport_services_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage transport_services_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:5a1ec7dd7b005938f6175ffdedf03816e947d27b0b14ecd2bed60d1623352f05",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:35daeeabc43b16aacbd23b6268cec7ece0297f9568ed5c3a78c9e7374bd09c66"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-territorial-coverage-transport_services_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial matrix records coverage buckets for 217 audited territories in the communications-access-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 186,
+        "complete_period_coverage": false,
+        "family_key": "communications_access_metadata",
+        "high_partial": 19,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 4,
+        "label": "communications access metadata",
+        "missing_periods": 1,
+        "moderate_partial": 8,
+        "observed_periods": 34,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage communications_access_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage communications_access_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:e2cbd9e413ef267b0fb23c73f57843f8fc4076eae07b4ccf158de7d1a6d43257",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:9fa909465429d74c57e8562e62ae8bffddc27defeb577d1a13412af79bd376e8"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-territorial-coverage-communications_access_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial matrix records coverage buckets for 217 audited territories in the digital-connectivity-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 162,
+        "complete_period_coverage": false,
+        "family_key": "digital_connectivity_metadata",
+        "high_partial": 31,
+        "indicator_count": 24,
+        "insufficient_for_campaign_scope": 7,
+        "label": "digital connectivity metadata",
+        "missing_periods": 3,
+        "moderate_partial": 17,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage digital_connectivity_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage digital_connectivity_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:a47fb207af962456676fef5c1d49e77c9caf8e2f53ce815a964a09d8714998da",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:aa99cf9a0b119fdcc7b94f69e3f0cc3cf46b44af2c0ba3c1f294ad257fcab7ef"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-territorial-coverage-digital_connectivity_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial matrix records coverage buckets for 217 audited territories in the energy-access-infrastructure-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 171,
+        "complete_period_coverage": false,
+        "family_key": "energy_access_infrastructure_metadata",
+        "high_partial": 27,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "energy access infrastructure metadata",
+        "missing_periods": 4,
+        "moderate_partial": 14,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage energy_access_infrastructure_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage energy_access_infrastructure_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:c1f71389f72214ef4c19b625d960f315d46974aca9674300edd7be547330ed58",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:846c92efa51fe36fbd8dc1bdcdd2e00f68316ffa60d140a2a06b5f469e8ea9e4"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-territorial-coverage-energy_access_infrastructure_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure territorial matrix records coverage buckets for 217 audited territories in the logistics-and-trade-facilitation-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 168,
+        "complete_period_coverage": false,
+        "family_key": "logistics_and_trade_facilitation_metadata",
+        "high_partial": 28,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 6,
+        "label": "logistics and trade facilitation metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage logistics_and_trade_facilitation_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage logistics_and_trade_facilitation_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:52dfc17c2e67af0c9dda9d7272592d3a5322e79d406638df5b5e9cf581815018",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:e4acd94b049eb354e05b6bf4a730ed9a3582f5e0970d97e8edc3dc4ff4efdf92"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-territorial-coverage-logistics_and_trade_facilitation_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure temporal coverage matrix covers annual periods from 1990 through 2024.",
+      "knowledge_category": "factual",
+      "payload_metadata": {
+        "period_end": 2024,
+        "period_start": 1990,
+        "topic": "temporal period range"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "temporal period range"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:779ea29e4f49732d12cb30984e733623010e455ef835164c6ac3a07cf68bf8e7",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:b98af553c2cb4649b7b6f21c849f34d2a7f25472006f99b54af9838d51b4cb11"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-temporal-period-range",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure temporal coverage matrix has 175 period-by-family cells across 5 indicator families.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "matrix_cell_count": 175,
+        "topic": "temporal matrix shape"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "temporal matrix shape"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:18c77d1a4787628a084690ebb8421911a33855acfefd5d44a3291157fe4c3607",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:a6e9db395de5052b96bf9cb9afcf009d0b8f2456720bc076db3ead98b7a1e6ba"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-temporal-matrix-shape",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure temporal matrix records 162 observed period-family cells.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "observed_period_cells": 162,
+        "topic": "temporal observed total"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "temporal observed total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:321adb7ff1ded3771cff8fce7e0079252dcfe2fa9b8d931789813085f0871d51",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:34e24ff4e50648909a2fce59e6a1b3cff5b78db0a3304c292a70ad36254ffb76"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-temporal-observed-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure temporal matrix records 13 missing period-family cells.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "missing_period_cells": 13,
+        "topic": "temporal missing total"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "temporal missing total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:f1e1d89b973ecbb25a432a9f6895010ad845ce5fa393168acc2664b5a6d29913",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:07cce71183561e22bcb8a4094305e9b53439977cef6c109105c94240c46e78b2"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-temporal-missing-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure temporal matrix records 33 observed periods and 2 missing periods for the transport-services-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 178,
+        "complete_period_coverage": false,
+        "family_key": "transport_services_metadata",
+        "high_partial": 25,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 4,
+        "label": "transport services metadata",
+        "missing_periods": 2,
+        "moderate_partial": 10,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage transport_services_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage transport_services_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:eef7547ab86309689ca7b3d222dbc932851b31261d2efc18db186c79076d28a8",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:3fb5f8424e47d1bae7fe85f90d2f4f34c610b91c89f9ab75d1762f4a8b2acd96"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-temporal-coverage-transport_services_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure temporal matrix records 34 observed periods and 1 missing periods for the communications-access-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 186,
+        "complete_period_coverage": false,
+        "family_key": "communications_access_metadata",
+        "high_partial": 19,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 4,
+        "label": "communications access metadata",
+        "missing_periods": 1,
+        "moderate_partial": 8,
+        "observed_periods": 34,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage communications_access_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage communications_access_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:d3cdfaa7cfeaa88bf08db385747f06e93f535b454ad3df33bf676915bea88399",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:383a895efa4c05673d6abfdb589cd2447440e0b6df4bb0686b28718ede87b20c"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-temporal-coverage-communications_access_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure temporal matrix records 32 observed periods and 3 missing periods for the digital-connectivity-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 162,
+        "complete_period_coverage": false,
+        "family_key": "digital_connectivity_metadata",
+        "high_partial": 31,
+        "indicator_count": 24,
+        "insufficient_for_campaign_scope": 7,
+        "label": "digital connectivity metadata",
+        "missing_periods": 3,
+        "moderate_partial": 17,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage digital_connectivity_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage digital_connectivity_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:e497b561dd161d4e6a975e3e29fed7b6a80391f6ab8baf6fa15c4b933812c08a",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:fe13bf6bd57e197f3645a616d4614bae1a660dc664f993002489f24019cc44af"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-temporal-coverage-digital_connectivity_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure temporal matrix records 31 observed periods and 4 missing periods for the energy-access-infrastructure-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 171,
+        "complete_period_coverage": false,
+        "family_key": "energy_access_infrastructure_metadata",
+        "high_partial": 27,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "energy access infrastructure metadata",
+        "missing_periods": 4,
+        "moderate_partial": 14,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage energy_access_infrastructure_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage energy_access_infrastructure_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:767ec54e98dcdca071a8e8bdcb570b7b0a3a8d24ac0daba32732bf1f52d97e43",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:0a739da013405deb26ec42efbbda703f7f93d31b9a093dba011d6395ce7934b2"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-temporal-coverage-energy_access_infrastructure_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure temporal matrix records 32 observed periods and 3 missing periods for the logistics-and-trade-facilitation-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 168,
+        "complete_period_coverage": false,
+        "family_key": "logistics_and_trade_facilitation_metadata",
+        "high_partial": 28,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 6,
+        "label": "logistics and trade facilitation metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage logistics_and_trade_facilitation_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage logistics_and_trade_facilitation_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:2610cff2288908dc7a23192117a7f28864c4a18708c290f0ebb3ff33f14d45e8",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:f0d888e519f5a9441ed88befda3cb866730f7abaa8ef546076b4fcbc381a81c3"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-family-temporal-coverage-logistics_and_trade_facilitation_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 quality control verifies territory-bucket denominators, period denominators, and matrix cell counts for the Infrastructure maturation snapshot.",
+      "knowledge_category": "evidence_quality",
+      "payload_metadata": {
+        "ambiguous_family_assignments": 0,
+        "duplicate_candidate_statements_expected": false,
+        "matrix_cell_counts_verified": true,
+        "period_denominators_verified": true,
+        "territory_bucket_denominators_verified": true,
+        "topic": "denominator quality"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "denominator quality"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:fd1eeacf33bf21c1fcc0edec5d98086c70ab3858cb25205b1d2b9542f5d66ead",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:4a561ad1b57cf249bdc0d9d0922818b325c3ca618b3babc47eeff5d99a0cf2f1"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-denominator-quality",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 Infrastructure maturation packages record source snapshot fingerprint, source family, selection rule, evidence basis, and deterministic rerun handle.",
+      "knowledge_category": "provenance",
+      "payload_metadata": {
+        "deterministic_rerun_handle_available": true,
+        "evidence_basis_available": true,
+        "selection_rule_available": true,
+        "source_family_available": true,
+        "source_snapshot_fingerprint_available": true,
+        "topic": "provenance state"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "provenance state"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:883d17a9f5279ca783f241d4c936bd7bdd555d482573ebf84670287b0d02d737",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:f01b519d6154218bbd6783871cc1a1c6f2485670f3198b90ac90e1fd990e90ae"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-provenance-state",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 routes Infrastructure maturation packages through the existing validation pipeline without validator, taxonomy, package-model, or workflow modification.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "taxonomy_modified": false,
+        "topic": "validation state",
+        "validator_modified": false,
+        "workflow_modified": false
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "validation state"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:3c512eba7881be4de08d279a22c8c0d7d0a40c477efad946e35369b1c5ee4c9f",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:5fe8cd62bdc2281590c628fbc6c7b0461d5e80cf4e5f97b35d594ea08a5678a8"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-validation-state",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 derives Infrastructure inventory totals, territorial bucket totals, and temporal cell totals deterministically from the immutable maturation snapshot.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "temporal_observed_period_cells": 162,
+        "territorial_bucket_totals": {
+          "complete_or_near_complete": 865,
+          "high_partial": 130,
+          "insufficient_for_campaign_scope": 26,
+          "moderate_partial": 64
+        },
+        "topic": "deterministic transform"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "deterministic transform"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:4dcbe0b8621da3bcefb4d9d71939abfa2891864769d04005cd780b77f54e6f67",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:8b19b1b66c9df1a133c5576c817805a5ffc65350123be9fa9c5d36fe8bb7653e"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-deterministic-transform",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 classifies the WDI Infrastructure production family as Stable using Infrastructure-family production evidence from Campaigns 13 and 14.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "basis": "Campaigns 13 and 14 validate WDI Infrastructure production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+        "classification": "Stable",
+        "insufficient_for_mature": [
+          "dedicated Infrastructure provenance-lineage completeness",
+          "Infrastructure family closeout"
+        ],
+        "topic": "Infrastructure family maturity",
+        "validated": [
+          "deterministic replay",
+          "fingerprint stability",
+          "provenance completeness",
+          "rejected-candidate preservation",
+          "indicator-family inventory",
+          "territorial coverage",
+          "temporal coverage"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "Infrastructure family maturity"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:84a5d9c9e84a04476e22b3167283a5bfc888955c20cce1e2333b8239906d9ee4",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:611579f29cd5db1dcb2a2c864f57578814761f67d185e79a4d5453272c79afec"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-infrastructure-family-stable",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 14 Infrastructure maturity assessment does not classify the WDI Infrastructure production family as Mature because dedicated Infrastructure provenance-lineage completeness has not yet been executed.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "basis": "Campaigns 13 and 14 validate WDI Infrastructure production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+        "classification": "Stable",
+        "insufficient_for_mature": [
+          "dedicated Infrastructure provenance-lineage completeness",
+          "Infrastructure family closeout"
+        ],
+        "topic": "Infrastructure family not Mature",
+        "validated": [
+          "deterministic replay",
+          "fingerprint stability",
+          "provenance completeness",
+          "rejected-candidate preservation",
+          "indicator-family inventory",
+          "territorial coverage",
+          "temporal coverage"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "Infrastructure family not Mature"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:1e00463eef99849d59d90edebc228dda23e61a943dfc16f7007aa3bec50b28d2",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:18c6dff29a884cee23d5a709e5d5e79429c551c81ad62b6c06b5fbacca6883d6"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-infrastructure-not-mature",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_infrastructure_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 14 records unchanged workflow, validator behaviour, package construction, provenance handling, fingerprint stability, and PEL behaviour compared with the demographic inventory and coverage-matrix maturation stage.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "equivalent_demographic_stage": "Campaigns 4-6",
+        "family_specific_assumptions": [
+          "infrastructure indicator family names",
+          "infrastructure coverage bucket counts"
+        ],
+        "fingerprint_stability": "unchanged",
+        "knowledge_category_coverage": "same categories, different family counts",
+        "knowledgeforge_wide_assumptions": [
+          "deterministic replay",
+          "fingerprint stability",
+          "rejected-candidate preservation",
+          "provenance completeness"
+        ],
+        "package_construction": "unchanged",
+        "pel_behaviour": "unchanged",
+        "production_pressures": "no new pressure",
+        "production_workflow_transfer": "unchanged",
+        "provenance_handling": "unchanged",
+        "topic": "maturation methodology comparison",
+        "validator_behaviour": "unchanged"
+      },
+      "scope": {
+        "campaign_id": "campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar infrastructure indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_inventory_and_coverage_metadata",
+        "topic": "maturation methodology comparison"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:0ac0689a66f43b330fb17c6a2d73c30a74eb3d717ec22c459e32af53a645896e",
+      "provenance": "sha256:08b48b9330d8d0993e96d4fda492c1327d445d457dfaa6cc3492d8371df7e000",
+      "reproducibility": "sha256:23d5da72ae5a81f09504ce938c0ee5120b181521ee2552a250c90d761dabfed4",
+      "source_payload": "sha256:02e17aab63d006e2b98a8e3684e27dbcd9d7bea9b75f3f8b7c7da49eb1908c7d"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 14 WDI Infrastructure maturation scope",
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign14_wdi_infrastructure_maturation.py --output artifacts/production/campaign-14-wdi-infrastructure-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Infrastructure maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign14-maturation-methodology-comparison",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_infrastructure_maturation",
+      "source_name": "World Bank World Development Indicators audited Infrastructure maturation snapshot",
+      "source_version": "sha256:ff3941108e1346ffa92d33595f8e954117e74f625aee75fc130d52cb7d085d2a"
+    }
+  }
+]

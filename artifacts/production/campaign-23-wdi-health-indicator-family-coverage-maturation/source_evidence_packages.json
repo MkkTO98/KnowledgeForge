@@ -1,0 +1,3205 @@
+[
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 WDI Health maturation snapshot contains 122 indicators grouped into 5 Health indicator families.",
+      "knowledge_category": "factual",
+      "payload_metadata": {
+        "indicator_families_total": 5,
+        "indicators_total": 122,
+        "topic": "indicator inventory total"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "indicator inventory total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:220db7c23c83c9bbd6fb459668ae8a306be3c0c596650ae6f7348aa4d7883310",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:103e86c3c6f03d68fc721426fcc816eeb0d6c7bb4c0b68184f2793fb6d358c99"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-inventory-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 classifies the audited WDI Health inventory into agricultural land use metadata, crop and livestock metadata, rural population metadata, food security and productivity metadata, and agricultural inputs metadata families.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "family_keys": [
+          "mortality_metadata",
+          "health_systems_metadata",
+          "nutrition_metadata",
+          "disease_and_immunization_metadata",
+          "reproductive_and_child_health_metadata"
+        ],
+        "topic": "family classification set"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family classification set"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:5669d0f96dd9ec8d1bf511ecae026314ae177ca94d523cbc62636be3f8805f63",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:6fcdbd73afebc2c12641bda105af5a45fbf31efcafb8af2d7ca4d95e1fc1f674"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-classification-set",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 WDI Health inventory assigns 29 indicators to the mortality metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 171,
+        "complete_period_coverage": false,
+        "family_key": "mortality_metadata",
+        "high_partial": 31,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 4,
+        "label": "mortality metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership mortality_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family membership mortality_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:33c9e647f3352a71495f018ffa9a3555a45dbe180b392867a067a71537ef56a2",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:b1b93ca72d628745a4c2ecc5f001b0bf4811a852e467b9ce89735cab7c91fc5a"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-membership-mortality_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 WDI Health inventory assigns 27 indicators to the health systems metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 164,
+        "complete_period_coverage": false,
+        "family_key": "health_systems_metadata",
+        "high_partial": 34,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "health systems metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership health_systems_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family membership health_systems_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:1a05654eb4e6bfcc2fc890fa90d13371c20d1f066a4e60e10f82cde5cedba9f5",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:5ed01d94e340124e9e85a60d380c0b29dac2f967409abd4edceca9782ead2488"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-membership-health_systems_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 WDI Health inventory assigns 23 indicators to the nutrition metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 162,
+        "complete_period_coverage": false,
+        "family_key": "nutrition_metadata",
+        "high_partial": 34,
+        "indicator_count": 23,
+        "insufficient_for_campaign_scope": 6,
+        "label": "nutrition metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership nutrition_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family membership nutrition_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:8da7507c0664c079f9dde5d58435f411b7610fdad9d90d3313961284a65d6693",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:95a633d08109bc54498f793292247a98ba4c8fc06acc54dc450367a2a4ecb43c"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-membership-nutrition_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 WDI Health inventory assigns 25 indicators to the disease and immunization metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 160,
+        "complete_period_coverage": false,
+        "family_key": "disease_and_immunization_metadata",
+        "high_partial": 35,
+        "indicator_count": 25,
+        "insufficient_for_campaign_scope": 6,
+        "label": "disease and immunization metadata",
+        "missing_periods": 4,
+        "moderate_partial": 16,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership disease_and_immunization_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family membership disease_and_immunization_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:be9dd7c9ca13b92d50b74cb57a22d661e6bed94b1823fd6663247caa25763829",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:33cfc2bdf9cc6f03f2a028e4757723857c964914150d95142e8edfbeb1d3f67f"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-membership-disease_and_immunization_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 WDI Health inventory assigns 18 indicators to the reproductive and child health metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 151,
+        "complete_period_coverage": false,
+        "family_key": "reproductive_and_child_health_metadata",
+        "high_partial": 39,
+        "indicator_count": 18,
+        "insufficient_for_campaign_scope": 7,
+        "label": "reproductive and child health metadata",
+        "missing_periods": 5,
+        "moderate_partial": 20,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership reproductive_and_child_health_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family membership reproductive_and_child_health_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:2e22280f35446fce864d4a05c6245bc4f3a7db42f0c1c8e002b91e62147bf4c8",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:c9c9d49e609ea4ae761f19d285623e466decc1473f7edba5c1081350e43458a6"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-membership-reproductive_and_child_health_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 records indicator, territory, period, and indicator-family as supported dimensions for audited Health maturation objects.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "supported_dimensions": [
+          "indicator",
+          "territory",
+          "period",
+          "indicator_family"
+        ],
+        "topic": "supported dimensions"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "supported dimensions"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:8d4cceb92b30f56df955c5e8369582ca4da2c989a4e84adb1ecef97722e84c12",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:fc16e1b856766817fd2d8697574ea5e6e471c4e329e7fdabb093868d35de78b3"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-supported-dimensions",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the audited Health maturation scope.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "topic": "unsupported dimensions",
+        "unsupported_dimensions": [
+          "subnational_region",
+          "scenario",
+          "model_projection",
+          "narrative_assessment"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:e2f98d885d7f2de68e29ed304956e117a60b2620fad8bacbf834fbdb67cde785",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:3d7b5951b1b831e88457b2528e0c0072b975adfa62560de26ab078070dfe828c"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-unsupported-dimensions",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial coverage matrix has 1085 territory-by-family cells across 5 indicator families.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "indicator_family_count": 5,
+        "matrix_cell_count": 1085,
+        "topic": "territorial matrix shape"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "territorial matrix shape"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:a463aaaee725e1f9043db6a68ed5c02ab8aed00f45bd6ac9776bc68d6eeba4ca",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:321d6b9bad996b6bb0ea01f76d956f35c5a07e2e1c2fbfeae33b5f62cb0c1993"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-territorial-matrix-shape",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 classifies Health territorial coverage cells into complete-or-near-complete, high-partial, moderate-partial, and insufficient-for-campaign-scope buckets.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "bucket_keys": [
+          "complete_or_near_complete",
+          "high_partial",
+          "moderate_partial",
+          "insufficient_for_campaign_scope"
+        ],
+        "topic": "territorial bucket taxonomy"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "territorial bucket taxonomy"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:8b5760aea171f580962ad3afe5d6f7df65298a15b2aff1d55f0cdccf7884de29",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:c7c8003d6dbc88e7133a823ea845b894570d08bfad89171556966f18b317252b"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-territorial-bucket-taxonomy",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial matrix assigns 808 family-territory cells to the complete-or-near-complete bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 808,
+        "topic": "territorial complete total"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "territorial complete total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:b05903873e5e6002a3e6da43407cb7732e6c9a3f5bab1db08ba33f71006e3488",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:d7778546f8a3787dcd2a0a6435f1c8cb14c74cdf43b19d518b27af5cc4cfa799"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-territorial-complete-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial matrix assigns 173 family-territory cells to the high-partial bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 173,
+        "topic": "territorial high partial total"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "territorial high partial total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:9b086991b82717d49115230aa75f330ad58fb55abb354c4c8a2bb4f6d57628c7",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:d49462acbf30bb1d4408cc75bb0c37446ec2a5892a251ea90bba65ab27690023"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-territorial-high-partial-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial matrix assigns 76 family-territory cells to the moderate-partial bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 76,
+        "topic": "territorial moderate partial total"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "territorial moderate partial total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:f3e9c981f8b40bc9b622af0a115080150e0693da3293931c05d783c2c7b68cc3",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:ba6324a70f383ef4a92dc8071b74cb37a0c66aa216f8dec0c4d2cfb2512912c7"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-territorial-moderate-partial-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial matrix assigns 28 family-territory cells to the insufficient-for-campaign-scope bucket.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "bucket_total": 28,
+        "topic": "territorial insufficient total"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "territorial insufficient total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:793fc9f964253219fe0eed19eddc45062efc202858b0e00cfc38baa73f53d592",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:320a9a89c8203d4d32e4c1041f6c6f7d1f53e5f492d4ba603b3bd11aeb3c3e56"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-territorial-insufficient-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial matrix records coverage buckets for 217 audited territories in the mortality-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 171,
+        "complete_period_coverage": false,
+        "family_key": "mortality_metadata",
+        "high_partial": 31,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 4,
+        "label": "mortality metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage mortality_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage mortality_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:3f0d83093154f2eb7288fd9f94125a5ef5da7edbed2614b4ca2e220621dfaccb",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:370da1d14a4c8603b46af93c33f17082714c6827996113fea2a3887bfca0609d"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-territorial-coverage-mortality_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial matrix records coverage buckets for 217 audited territories in the health-systems-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 164,
+        "complete_period_coverage": false,
+        "family_key": "health_systems_metadata",
+        "high_partial": 34,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "health systems metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage health_systems_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage health_systems_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:a0866d38093b07f2dd35cfac16d08a78a96e87187536050cac337af4110dcd8b",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:c35946a0c10f01cfa21204496609c5c09a24a868d591d85917db574443310e4f"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-territorial-coverage-health_systems_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial matrix records coverage buckets for 217 audited territories in the nutrition-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 162,
+        "complete_period_coverage": false,
+        "family_key": "nutrition_metadata",
+        "high_partial": 34,
+        "indicator_count": 23,
+        "insufficient_for_campaign_scope": 6,
+        "label": "nutrition metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage nutrition_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage nutrition_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:3ecee0dc1d2554e043af46b91dee6d3abdf74b9c3da62a834a2b8e03d59099f7",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:ad943dc9ee1a8a4ff3f6cbf1a1f059915282be429b4ba3c0c0d82842ec54d1ba"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-territorial-coverage-nutrition_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial matrix records coverage buckets for 217 audited territories in the disease-and-immunization-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 160,
+        "complete_period_coverage": false,
+        "family_key": "disease_and_immunization_metadata",
+        "high_partial": 35,
+        "indicator_count": 25,
+        "insufficient_for_campaign_scope": 6,
+        "label": "disease and immunization metadata",
+        "missing_periods": 4,
+        "moderate_partial": 16,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage disease_and_immunization_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage disease_and_immunization_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:eaf4329fc260ed2c6acee4c8e1f2d86909cc6b0803830172665b67dd3fbe0494",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:31a852879412fec098b356ca550e333d4194ca819b84875cf5701b2ebe5feb5d"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-territorial-coverage-disease_and_immunization_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health territorial matrix records coverage buckets for 217 audited territories in the reproductive-and-child-health-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 151,
+        "complete_period_coverage": false,
+        "family_key": "reproductive_and_child_health_metadata",
+        "high_partial": 39,
+        "indicator_count": 18,
+        "insufficient_for_campaign_scope": 7,
+        "label": "reproductive and child health metadata",
+        "missing_periods": 5,
+        "moderate_partial": 20,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage reproductive_and_child_health_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage reproductive_and_child_health_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:fe645cc61b15e8e89fb1d1cbf5224ef43ce451cea39b57c7cd94b1dc44c61b1a",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:7dc24bae00d0c71b0e3780cb7578775ffe03418ca1db0ae014b58a3d5c7877d4"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-territorial-coverage-reproductive_and_child_health_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health temporal coverage matrix covers annual periods from 1990 through 2024.",
+      "knowledge_category": "factual",
+      "payload_metadata": {
+        "period_end": 2024,
+        "period_start": 1990,
+        "topic": "temporal period range"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "temporal period range"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:b49d43a8055301fd79eb5fc2628d43131e5626acc7fc1ca10cf0bc24b923d1f2",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:203b6f3fa7fc75bd8b4e519c5553463d6d8b8d152d0a31b974dd23329cabc7ca"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-temporal-period-range",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health temporal coverage matrix has 175 period-by-family cells across 5 indicator families.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "matrix_cell_count": 175,
+        "topic": "temporal matrix shape"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "temporal matrix shape"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:104b71a80a9d24c270c6487743522c91196980d97c106454a4c80b13644e452a",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:a85b60a64a199612931faefc1dccd93bc09dab320c9b2769fc7056aae495276a"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-temporal-matrix-shape",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health temporal matrix records 158 observed period-family cells.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "observed_period_cells": 158,
+        "topic": "temporal observed total"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "temporal observed total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:34574762ad011f32b473be4fd834885650626f4436acf9c565010a3ea7b30d3e",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:435d1a920cde9c688b6bf4086bc5684a48cb07dbb94e290da744fb584ec73d9d"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-temporal-observed-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health temporal matrix records 17 missing period-family cells.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "missing_period_cells": 17,
+        "topic": "temporal missing total"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "temporal missing total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:7a13584fd7631ccef3f99eb8b9382bfbb8b3d147e30ce5f39f5a680abfce4f26",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:d742b15e3294c6b9dc51bcea2b0c90a2d3adfe4c1a4efc3c6341bea78429390b"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-temporal-missing-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health temporal matrix records 33 observed periods and 2 missing periods for the mortality-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 171,
+        "complete_period_coverage": false,
+        "family_key": "mortality_metadata",
+        "high_partial": 31,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 4,
+        "label": "mortality metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage mortality_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage mortality_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:7c65b17f76fdf2c5bd89737ac827d67d1b5dec7d50d300514103c6105cda66f7",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:d3720e478b7a5963cb3a8355fec3c235b4ffb85b4362b1e652910cc6dac275ad"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-temporal-coverage-mortality_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health temporal matrix records 32 observed periods and 3 missing periods for the health-systems-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 164,
+        "complete_period_coverage": false,
+        "family_key": "health_systems_metadata",
+        "high_partial": 34,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "health systems metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage health_systems_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage health_systems_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:d8bd1eff885206cf7758a011e61010abcb65ed6936de55d70166b4a564118449",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:8c15a83e2c043179ae000b461b41727598d580139018238f25c905edc1497972"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-temporal-coverage-health_systems_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health temporal matrix records 32 observed periods and 3 missing periods for the nutrition-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 162,
+        "complete_period_coverage": false,
+        "family_key": "nutrition_metadata",
+        "high_partial": 34,
+        "indicator_count": 23,
+        "insufficient_for_campaign_scope": 6,
+        "label": "nutrition metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage nutrition_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage nutrition_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:8b953fb3a55574470e8b3ff4966bd346242d2f425f6b784378049527301ee9b8",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:726e1f2524f611941ff7057815d99dd6bfbbf876b86e3735a0519dcbb7b12653"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-temporal-coverage-nutrition_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health temporal matrix records 31 observed periods and 4 missing periods for the disease-and-immunization-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 160,
+        "complete_period_coverage": false,
+        "family_key": "disease_and_immunization_metadata",
+        "high_partial": 35,
+        "indicator_count": 25,
+        "insufficient_for_campaign_scope": 6,
+        "label": "disease and immunization metadata",
+        "missing_periods": 4,
+        "moderate_partial": 16,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage disease_and_immunization_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage disease_and_immunization_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:491e9631e981ae19d99b4d6c8ddff5eb8df59a472f723d4a177f0ee3f095b7a7",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:3fa03bc800661bd2a9d092a5d11c200958ab1ae6d1aaf04bd1e8da5d186b05eb"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-temporal-coverage-disease_and_immunization_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health temporal matrix records 30 observed periods and 5 missing periods for the reproductive-and-child-health-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 151,
+        "complete_period_coverage": false,
+        "family_key": "reproductive_and_child_health_metadata",
+        "high_partial": 39,
+        "indicator_count": 18,
+        "insufficient_for_campaign_scope": 7,
+        "label": "reproductive and child health metadata",
+        "missing_periods": 5,
+        "moderate_partial": 20,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage reproductive_and_child_health_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage reproductive_and_child_health_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:c0efb80a6556fe1173c79f5a6392cf1a31a089b6e3c463688a05bc8e326abe87",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:3ce9452a158adf28e3a9a48716e0570f0385a6b2a3cfc5e3bda947d2bd0493cd"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-family-temporal-coverage-reproductive_and_child_health_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 quality control verifies territory-bucket denominators, period denominators, and matrix cell counts for the Health maturation snapshot.",
+      "knowledge_category": "evidence_quality",
+      "payload_metadata": {
+        "ambiguous_family_assignments": 0,
+        "duplicate_candidate_statements_expected": false,
+        "matrix_cell_counts_verified": true,
+        "period_denominators_verified": true,
+        "territory_bucket_denominators_verified": true,
+        "topic": "denominator quality"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "denominator quality"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:e576dc20e46274632bb14021ddf17944fcb26200d4b182a664fcd795a5e0d05b",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:3b1395fa2df30b9f2e1402d6bd2f13fe3dd0f41df8a7ef7ac8cbcecb80ca6aa4"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-denominator-quality",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 Health maturation packages record source snapshot fingerprint, source family, selection rule, evidence basis, and deterministic rerun handle.",
+      "knowledge_category": "provenance",
+      "payload_metadata": {
+        "deterministic_rerun_handle_available": true,
+        "evidence_basis_available": true,
+        "selection_rule_available": true,
+        "source_family_available": true,
+        "source_snapshot_fingerprint_available": true,
+        "topic": "provenance state"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "provenance state"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:88b201f5d0bed3b6adf743588aa7f248863076367ee0adade675ebbc00d0a619",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:15dcb01e65a3e5699c5b533b6198ea4c9d74215ccaa6ee73be1c8d37d7241392"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-provenance-state",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 routes Health maturation packages through the existing validation pipeline without validator, taxonomy, package-model, or workflow modification.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "taxonomy_modified": false,
+        "topic": "validation state",
+        "validator_modified": false,
+        "workflow_modified": false
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "validation state"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:cb089d40f590042e4ac932a527058722094db8ca8b759f4dd9b8a3abab610b3e",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:f876fa9529c47128195dd7687280409921034aa9d53c165c7e19a1c97669f31f"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-validation-state",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 derives Health inventory totals, territorial bucket totals, and temporal cell totals deterministically from the immutable maturation snapshot.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "temporal_observed_period_cells": 158,
+        "territorial_bucket_totals": {
+          "complete_or_near_complete": 808,
+          "high_partial": 173,
+          "insufficient_for_campaign_scope": 28,
+          "moderate_partial": 76
+        },
+        "topic": "deterministic transform"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "deterministic transform"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:adc0f321884ad9c87bdfac497391cddbec3c8b8cd65d5a86863efa0a27d4bb92",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:ff6ad572e5e1641819ff03085f1059625cbcecf8edb53a09bf5a8d19f5a87716"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-deterministic-transform",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 classifies the WDI Health production family as Stable using Health-family production evidence from Campaigns 16 and 17.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "basis": "Campaigns 16 and 17 validate WDI Health production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+        "classification": "Stable",
+        "insufficient_for_mature": [
+          "dedicated Health provenance-lineage completeness",
+          "Health family closeout"
+        ],
+        "topic": "Health family maturity",
+        "validated": [
+          "deterministic replay",
+          "fingerprint stability",
+          "provenance completeness",
+          "rejected-candidate preservation",
+          "indicator-family inventory",
+          "territorial coverage",
+          "temporal coverage"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "Health family maturity"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:71500702fb15c1951f50611a9499e8039890568c8de850cc45be62f7f3825d9e",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:c7838e3c56a900856e1edebb151aaaa4d14061a234969375a9868f1c7896c6bd"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-health-family-stable",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 23 Health maturity assessment does not classify the WDI Health production family as Mature because dedicated Health provenance-lineage completeness has not yet been executed.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "basis": "Campaigns 16 and 17 validate WDI Health production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+        "classification": "Stable",
+        "insufficient_for_mature": [
+          "dedicated Health provenance-lineage completeness",
+          "Health family closeout"
+        ],
+        "topic": "Health family not Mature",
+        "validated": [
+          "deterministic replay",
+          "fingerprint stability",
+          "provenance completeness",
+          "rejected-candidate preservation",
+          "indicator-family inventory",
+          "territorial coverage",
+          "temporal coverage"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "Health family not Mature"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:748e5ab3bcbc529c8c7a45b857caea7f5d7544c3b4368c40c493d43b00ad3c46",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:db6c2e2d09db3f81e2144b15092066216510bb312f71f086f9cce05add1b35c5"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-health-not-mature",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_health_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 23 records unchanged workflow, validator behaviour, package construction, provenance handling, fingerprint stability, and PEL behaviour compared with the demographic inventory and coverage-matrix maturation stage.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "equivalent_demographic_stage": "Campaigns 4-6",
+        "family_specific_assumptions": [
+          "Health indicator family names",
+          "Health coverage bucket counts"
+        ],
+        "fingerprint_stability": "unchanged",
+        "knowledge_category_coverage": "same categories, different family counts",
+        "knowledgeforge_wide_assumptions": [
+          "deterministic replay",
+          "fingerprint stability",
+          "rejected-candidate preservation",
+          "provenance completeness"
+        ],
+        "package_construction": "unchanged",
+        "pel_behaviour": "unchanged",
+        "production_pressures": "no new pressure",
+        "production_workflow_transfer": "unchanged",
+        "provenance_handling": "unchanged",
+        "topic": "maturation methodology comparison",
+        "validator_behaviour": "unchanged"
+      },
+      "scope": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "maturation methodology comparison"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:ccb26dae012231ef5c15426da452a443dcf2044e080c28ecda73f09dac5931aa",
+      "provenance": "sha256:58ec8794e6dd0e4950df850c06138dcc20e7ca87f278256b07a955d4ba5aa008",
+      "reproducibility": "sha256:8f16b1128715cfc472aae313853ff5aafd0f7d1392b25f259f5ae50cb58c8096",
+      "source_payload": "sha256:b39e5ab9b05d5bc9a4a51e7e5769c4a68b85d2f42fe267afc490090290a5f7d4"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 23 WDI Health maturation scope",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Health maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign23-maturation-methodology-comparison",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_name": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_version": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7"
+    }
+  }
+]

@@ -1,0 +1,146 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign4-provenance-state"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign4-provenance-state",
+      "reproducibility_handle": "python3 tools/run_campaign4_wdi_indicator_inventory.py --output artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "snapshot_fingerprint": "sha256:f350e8dd93387ec94c74f1e03fdd01ddbe0a6f5531a2039f9dab883b9e761357",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure indicator-family inventory snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:99f34b6815bea542d714cd61e3c189a4c477a836abbab0c0a58eb9c395c7834a",
+    "generated_statements": "sha256:c3ecd00a9604cd146d8a9a6ece30a47475885d2adc4f3d15a3d4bd01a484cda6",
+    "input_set": "sha256:633eae2ffceb994d62a43e82420cad4901d58fa7fef7d130ffcfee49dcc4e6ac",
+    "package_manifest": "sha256:5dc399282c8341da57d318b458d662e6d3b236a15c9f2350e557ee5d7cd3141c",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+        "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_indicator_inventory_metadata",
+        "topic": "provenance state"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign4-provenance-state",
+        "eval-srcpkg-campaign4-provenance-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign4-provenance-state"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign4-provenance-state",
+      "statement_type": "provenance",
+      "text": "Campaign 4 indicator-family inventory packages record source snapshot fingerprint, source family, selection rule, evidence basis, and deterministic rerun handle."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign4-provenance-state"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign4-provenance-state",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign4-provenance-state"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign4-provenance-state"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign4-provenance-state",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_indicator_inventory_metadata",
+      "topic": "provenance state"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

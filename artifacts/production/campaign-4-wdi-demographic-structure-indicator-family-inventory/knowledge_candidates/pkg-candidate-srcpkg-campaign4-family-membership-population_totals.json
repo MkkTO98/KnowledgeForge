@@ -1,0 +1,146 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign4-family-membership-population_totals"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign4-family-membership-population_totals",
+      "reproducibility_handle": "python3 tools/run_campaign4_wdi_indicator_inventory.py --output artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "snapshot_fingerprint": "sha256:4c02f4ecd97340025e8cf4df77e1d4211d6eb2658efd2ce0348db46b03f4a780",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure indicator-family inventory snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:d3b6b058155703e5e61985588e196f878624b36d985aab158fbf23b811001652",
+    "generated_statements": "sha256:af52d0c7fa07791d2308907868ffe3ac2e3b233ae32c203ac400a3cef2c1fa36",
+    "input_set": "sha256:1be5f1984a63c5311ccb9cd75a3c86b71984f9affee575365e6fa830596b5efa",
+    "package_manifest": "sha256:31a1f8ea34796286bcff94158d71a1490c4d2db073a63d5201e807df99570610",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+        "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_indicator_inventory_metadata",
+        "topic": "family membership population_totals"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign4-family-membership-population_totals",
+        "eval-srcpkg-campaign4-family-membership-population_totals"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign4-family-membership-population_totals"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign4-family-membership-population_totals",
+      "statement_type": "classified",
+      "text": "The Campaign 4 WDI indicator-family inventory assigns 32 indicators to the population totals family."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign4-family-membership-population_totals"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign4-family-membership-population_totals",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign4-family-membership-population_totals"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign4-family-membership-population_totals"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign4-family-membership-population_totals",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+      "domain": "WDI annual-scalar demographic-structure indicator-family inventory",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_indicator_inventory_metadata",
+      "topic": "family membership population_totals"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

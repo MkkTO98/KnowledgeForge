@@ -1,0 +1,146 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign6-unsupported-temporal-fields"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign6-unsupported-temporal-fields",
+      "reproducibility_handle": "python3 tools/run_campaign6_wdi_temporal_coverage.py --output artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix",
+      "snapshot_fingerprint": "sha256:372752a83fb0329b48b167e6053a9099488dde51e0a835375a5b8e3aa6b5c9ba",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_temporal_coverage",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure temporal coverage matrix snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:08f99502225ee3f7f9cfa41479e8fc3a8e5bb3ccd573ee04da08a2d07e344be5",
+    "generated_statements": "sha256:c851eda8588f3aa5030ad94cf78e8fbd44191f1a5473251e526778bc5db135f9",
+    "input_set": "sha256:b689f7b41fcf9d8cd1d43e897e20497c6f02ca7dd9da580c3ad068dfcf2c4045",
+    "package_manifest": "sha256:40e75330b22e69cb5da201b64f8159dd59eabcacfeeb23cbc00b3d0651422a85",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-6-wdi-demographic-structure-temporal-coverage-matrix",
+        "domain": "WDI annual-scalar demographic-structure temporal coverage matrix",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_temporal_coverage_metadata",
+        "topic": "unsupported temporal fields"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign6-unsupported-temporal-fields",
+        "eval-srcpkg-campaign6-unsupported-temporal-fields"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign6-unsupported-temporal-fields"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign6-unsupported-temporal-fields",
+      "statement_type": "negative",
+      "text": "Campaign 6 does not include future-period, scenario, quarter, month, or policy-regime applicability fields in the audited temporal coverage scope."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign6-unsupported-temporal-fields"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign6-unsupported-temporal-fields",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign6-unsupported-temporal-fields"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign6-unsupported-temporal-fields"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign6-unsupported-temporal-fields",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure temporal coverage matrix",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_temporal_coverage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-6-wdi-demographic-structure-temporal-coverage-matrix",
+      "domain": "WDI annual-scalar demographic-structure temporal coverage matrix",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_temporal_coverage_metadata",
+      "topic": "unsupported temporal fields"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

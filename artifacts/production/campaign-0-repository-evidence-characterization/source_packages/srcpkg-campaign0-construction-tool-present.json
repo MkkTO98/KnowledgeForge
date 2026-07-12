@@ -1,0 +1,75 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-0-repository-evidence-characterization",
+      "contains_observational_values": false,
+      "evidence_kind": "repository_snapshot_characteristic",
+      "generated_by_llm": false
+    },
+    "evidence_class": "source_evidence_package",
+    "validation_metadata": {
+      "campaign": "campaign-0-repository-evidence-characterization",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "The Campaign 0 selected repository evidence snapshot records deterministic construction tool presence as true.",
+    "knowledge_category": "methodological",
+    "payload_metadata": {
+      "artifact": "tools/construct_knowledge_package_v1.py",
+      "present": true
+    },
+    "scope": {
+      "campaign_id": "campaign-0-repository-evidence-characterization",
+      "domain": "repository evidence characterization",
+      "exclusions": [
+        "interpretive claims",
+        "unsupported explanatory claims",
+        "future-oriented claims",
+        "cause-effect claims",
+        "action-selection claims",
+        "audience-facing prose",
+        "financial-meaning claims",
+        "government-action-meaning claims"
+      ],
+      "scope_type": "repository_evidence_characterization"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:3ebea44d4e47ec92c32a22a495a34b0acd5bc88a3902b1a052c8148fac40243f",
+    "provenance": "sha256:ff1b696e0458c618741185669a8faed8e6886159d89721dcb4558c3f58245b9c",
+    "reproducibility": "sha256:1b69de6e7594e05c1d16d23c9cc5010f559e9f7f485e8570643df912fb09f631",
+    "source_payload": "sha256:e93f2e2f931e6e7a4be10a7d3df8b1ae70ff8073890281e5157b672d7bc01356"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "selected_roots": [
+      "CONSTITUTION.md",
+      "README.md",
+      "docs",
+      "tools",
+      "tests"
+    ],
+    "selection_rule": "deterministic selected-root file inventory excluding cache/VCS directories",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:fbf60d0b29aea6017e0e0666e622ca3895887d4d69f9088eebe71b41aa161fbf"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign0_repository_evidence.py --output artifacts/production/campaign-0-repository-evidence-characterization",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic repository snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign0-construction-tool-present",
+  "source_identity": {
+    "source_family": "repository_evidence",
+    "source_name": "KnowledgeForge repository selected evidence snapshot",
+    "source_version": "sha256:fbf60d0b29aea6017e0e0666e622ca3895887d4d69f9088eebe71b41aa161fbf"
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign3-pel008-recurrence"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign3-pel008-recurrence",
+      "reproducibility_handle": "python3 tools/run_campaign3_wdi_freshness_metadata.py --output artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+      "snapshot_fingerprint": "sha256:22b621852b1d3f3cf2c92b2863c16900905d6835824fcd1fb60bc0818d9ad67d",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_freshness_metadata",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure freshness metadata snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:7285f2a6c70ee395c9189f52b6e580702b3d7d5b54496b3400a467b78443e1c0",
+    "generated_statements": "sha256:4f9e309a2e46d4de5c3233f3e9b5c6c53223c0066c2be41f50b6fb6b7ac8adbc",
+    "input_set": "sha256:7ea444e8fab7e9b8f247fb3ac859861349c18efd4da048a3d8e1e6ecd713b660",
+    "package_manifest": "sha256:42b97c1629e0a089c309ed7950d18b345403abb9927dfb28c2087c9885695e80",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+        "domain": "WDI annual-scalar demographic-structure source freshness and release metadata coverage",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_provenance_and_freshness_metadata",
+        "topic": "PEL-008 recurrence evidence"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign3-pel008-recurrence",
+        "eval-srcpkg-campaign3-pel008-recurrence"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign3-pel008-recurrence"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign3-pel008-recurrence",
+      "statement_type": "methodological",
+      "text": "Campaign 3 source-package construction again required deterministic SourceEvidencePackage field authoring across accepted and rejected candidates."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign3-pel008-recurrence"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign3-pel008-recurrence",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign3-pel008-recurrence"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign3-pel008-recurrence"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign3-pel008-recurrence",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure source freshness and release metadata coverage",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_freshness_metadata",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+      "domain": "WDI annual-scalar demographic-structure source freshness and release metadata coverage",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_provenance_and_freshness_metadata",
+      "topic": "PEL-008 recurrence evidence"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

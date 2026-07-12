@@ -1,0 +1,118 @@
+{
+  "audited_inventory": {
+    "family_keys": [
+      "population_totals",
+      "age_structure",
+      "dependency_ratios",
+      "urban_rural_population"
+    ],
+    "indicator_families_total": 4,
+    "indicators_total": 182,
+    "period_count": 35,
+    "territories_total": 217
+  },
+  "campaign_id": "campaign-4-wdi-demographic-structure-indicator-family-inventory",
+  "classification_observations": {
+    "ambiguous_family_assignments": 0,
+    "classification_consistency_checked": true,
+    "family_membership_rule": "explicit campaign snapshot membership counts by indicator-family key",
+    "overlapping_valid_objects_expected": true,
+    "overlapping_valid_objects_observed": true
+  },
+  "dimension_inventory": {
+    "all_families_use_same_supported_dimensions": true,
+    "supported_dimension_count": 3,
+    "supported_dimensions": [
+      "indicator",
+      "territory",
+      "period"
+    ],
+    "unsupported_dimension_count": 5,
+    "unsupported_dimensions": [
+      "age_band",
+      "sex",
+      "cohort",
+      "subnational_region",
+      "scenario"
+    ]
+  },
+  "evidence_basis": [
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/reports/R-20260709-production-falsification-review.md",
+    "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+    "artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets/production_quality_report.json",
+    "artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata/production_quality_report.json"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_demographic_structure_indicator_inventory",
+  "falsification_focus": {
+    "classification_consistency": "exercised",
+    "duplicate_pressure": "not_observed",
+    "factual_classified_coverage": "increased",
+    "later_stage_validator_rejection": "not_naturally_exercised",
+    "object_similarity": "exercised",
+    "overlapping_valid_objects": "observed_as_scoped_non_conflicting_objects",
+    "supported_unsupported_dimensions": "exercised"
+  },
+  "indicator_families": [
+    {
+      "family_key": "population_totals",
+      "indicator_count": 32,
+      "label": "population totals",
+      "supported_dimensions": [
+        "indicator",
+        "territory",
+        "period"
+      ]
+    },
+    {
+      "family_key": "age_structure",
+      "indicator_count": 68,
+      "label": "age-structure inventory",
+      "supported_dimensions": [
+        "indicator",
+        "territory",
+        "period"
+      ]
+    },
+    {
+      "family_key": "dependency_ratios",
+      "indicator_count": 18,
+      "label": "dependency-ratio inventory",
+      "supported_dimensions": [
+        "indicator",
+        "territory",
+        "period"
+      ]
+    },
+    {
+      "family_key": "urban_rural_population",
+      "indicator_count": 64,
+      "label": "urban/rural population inventory",
+      "supported_dimensions": [
+        "indicator",
+        "territory",
+        "period"
+      ]
+    }
+  ],
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "demographic structure evidence",
+    "frequency": "annual",
+    "metadata_scope": "indicator-family inventory, membership counts, and supported/unsupported dimensions",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:cfccbd3fcaf1f80765cbd9355e98d620ec6c808007692728c5844a664972e376",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "validation_state": {
+    "package_model_modified": false,
+    "pipeline_modified": false,
+    "production_support_layer_used": true,
+    "validator_modified": false
+  }
+}

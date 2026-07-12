@@ -1,0 +1,2484 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-artifact-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-artifact-count",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:48e80ebbaa1c165a4ce0bdc2930cb4999522eac4d2e5842d9eabe2e6b7cddb87",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:d39f186b23d76db412c41f84c0907ac226e67e231b1ceb30539256605e26c392",
+      "generated_statements": "sha256:6e020363285953a5cf06c892d5ae6b75e8a7c115e9a8c6b8687caf2c58f38058",
+      "input_set": "sha256:d43e8ba3df82403a9d49eb3b35231627efdf6953a29657796da82c483a8c9fa5",
+      "package_manifest": "sha256:a6ef176c32ab7405d6f3a2b9ac4dfdc496517f9b584a1cf6bc106df908dcd377",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "artifact count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-artifact-count",
+          "eval-srcpkg-campaign30-artifact-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-artifact-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-artifact-count",
+        "statement_type": "factual",
+        "text": "The Campaign 30 WDI Trade provenance-lineage snapshot contains 5 raw artifact identity records."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-artifact-count"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-artifact-count",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-artifact-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-artifact-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-artifact-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "artifact count"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-required-lineage-fields"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-required-lineage-fields",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:7038bd920f67ea78481a5a01836cdb4c0e50a2e62815f81dc32f4c20737cdcf2",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:7b4233dab5d3f8a84516f9dc6ad821b98c9dac4566ac575522502df3a9d97120",
+      "generated_statements": "sha256:b37e5bbc089281460958cb974acff2fa8e6fbef83c1440f6bf6e99235ac65755",
+      "input_set": "sha256:b8ff865ea4bf4f3da75023f3e84b2b1a759808378f6552bdbb0e83c3b28e9178",
+      "package_manifest": "sha256:3f96142ecb7b80b8ee73f0cdfc37fb4e5f05622b60034ab110eb0a44ca36c207",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "required lineage fields"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-required-lineage-fields",
+          "eval-srcpkg-campaign30-required-lineage-fields"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-required-lineage-fields"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-required-lineage-fields",
+        "statement_type": "provenance",
+        "text": "Campaign 30 required lineage fields are raw artifact URL, raw artifact hash, release key, source URL, license note, and provenance envelope presence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-required-lineage-fields"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-required-lineage-fields",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-required-lineage-fields"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-required-lineage-fields"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-required-lineage-fields",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "required lineage fields"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-complete-lineage-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-complete-lineage-count",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:cfcb45b2bcc3d3834e523ff2f1a6314b0db61c8833493588bc9cfc4c016ad3fa",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:f0628e1c9b308f75ad3c56006161bf374015a221749ff739add7e49181f55cba",
+      "generated_statements": "sha256:eef873f9676738c79fa44798865393b338e34201c26a83b9baf9180795514b4b",
+      "input_set": "sha256:d120b87ff2e673032dad2b29b3b0b21f31543b23a7fe42c557bf1a6f54e388fe",
+      "package_manifest": "sha256:26c63f1b94aa5d2b9cfed8b7cbd098f62fde96ee734bddde8e008765350a124f",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "complete lineage count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-complete-lineage-count",
+          "eval-srcpkg-campaign30-complete-lineage-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-complete-lineage-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-complete-lineage-count",
+        "statement_type": "derived",
+        "text": "Campaign 30 records 5 Trade artifacts with all required provenance-lineage fields present."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-complete-lineage-count"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-complete-lineage-count",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-complete-lineage-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-complete-lineage-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-complete-lineage-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "complete lineage count"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-missing-lineage-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-missing-lineage-count",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:bb47187d38d21ed92097796e6891fd62ee779ba78aa585cf9cb63ed8afdc5d2f",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:1966f4088576627319993910668509f005d76efa1cd830cebba8cb950127197b",
+      "generated_statements": "sha256:e17fa35495a3af482bbff9dca35b59d03d1b43421b0532dc2809f0d5d4c75276",
+      "input_set": "sha256:f8e46a05e0b2fbc2e57d1641bcc25a8128c5a68aa7bab6c11b58b649737494bd",
+      "package_manifest": "sha256:b4c4340b8fc39db6712fd6042be1debe03024a9c08dd33633b6bc9131e4cb6da",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "missing lineage count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-missing-lineage-count",
+          "eval-srcpkg-campaign30-missing-lineage-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-missing-lineage-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-missing-lineage-count",
+        "statement_type": "negative",
+        "text": "Campaign 30 records 0 missing required lineage fields in the audited Trade lineage snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-missing-lineage-count"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-missing-lineage-count",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-missing-lineage-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-missing-lineage-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-missing-lineage-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "missing lineage count"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-lineage-completeness-classification"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-lineage-completeness-classification",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:43e22f47aac26a0fc82b944cebd9c659e4b38c9974cfcd8ec086979d75b2fdfa",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c32dd584d60799f381799047127e17c8d0ec6cb85942896ac0bdd03fbbcfbb3d",
+      "generated_statements": "sha256:2647bde96b8f7b3f8ef8fd9b2f2f8750af9be1db17c739f2ff772fe9e4f64cd7",
+      "input_set": "sha256:fccb575cf426c8bd299a8b2da330944fb3be80715a97c433bbf7ada50a21de12",
+      "package_manifest": "sha256:83d85fe13437bffb888b787e9b8c83c1dcf088234b9388ca4c88820b76d7ca00",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "lineage completeness classification"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-lineage-completeness-classification",
+          "eval-srcpkg-campaign30-lineage-completeness-classification"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-lineage-completeness-classification"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-lineage-completeness-classification",
+        "statement_type": "classified",
+        "text": "Campaign 30 classifies the audited WDI Trade provenance-lineage snapshot as complete for the required lineage field set."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-lineage-completeness-classification"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-lineage-completeness-classification",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-lineage-completeness-classification"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-lineage-completeness-classification"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-lineage-completeness-classification",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "lineage completeness classification"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-raw-artifact-hash-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-raw-artifact-hash-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:9677d1cd372ce748673b72ee56fa15f2132cb0aa01385a4064fe42a486b63bee",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:2a1790b68a6604d926413219143547e1f461e92c9ac41c73d0361f04e27f9505",
+      "generated_statements": "sha256:75cf31b6728820beaedfc2e07c63e54a3b02aaa75ebc3db3743f68244d106f52",
+      "input_set": "sha256:94c4f73190ed7ba29db8f36292146d6687d43947d40e696b05ccb15dc0b38b16",
+      "package_manifest": "sha256:db179efd85b4884458b2533c3ae153b9da37d85f4488d28e29758e3f8f9175c3",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "raw artifact hash coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-raw-artifact-hash-coverage",
+          "eval-srcpkg-campaign30-raw-artifact-hash-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-raw-artifact-hash-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-raw-artifact-hash-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 30 records raw artifact hashes for 5 audited WDI Trade artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-raw-artifact-hash-coverage"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-raw-artifact-hash-coverage",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-raw-artifact-hash-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-raw-artifact-hash-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-raw-artifact-hash-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "raw artifact hash coverage"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-raw-artifact-url-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-raw-artifact-url-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:614f72ec3894ac80e68fccd5ed3b879bfb18912f3c94a22950ac09b899bea3f5",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:5cdae7c3c3800441a41a860789d8521784e349fe74e57cfa7a6cc73a993220f3",
+      "generated_statements": "sha256:e753080181d24595b9e29c4603b7248014d70ce1f33da5aebfab51c949037d6f",
+      "input_set": "sha256:95fe3ebb073315990e00b7c8186bb539d3d973f04a3a91b3cdb1f46b802f9872",
+      "package_manifest": "sha256:e9640812bfd6dcd3dfe1692d4f521e194a3a9150b4223d16323d1bb73bd6fa8e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "raw artifact url coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-raw-artifact-url-coverage",
+          "eval-srcpkg-campaign30-raw-artifact-url-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-raw-artifact-url-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-raw-artifact-url-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 30 records raw artifact URLs for 5 audited WDI Trade artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-raw-artifact-url-coverage"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-raw-artifact-url-coverage",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-raw-artifact-url-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-raw-artifact-url-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-raw-artifact-url-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "raw artifact url coverage"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-release-key-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-release-key-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:7d22befcae6ae9ec04ef6e18c2ab0116567e66fe66ff58813aaed9d79b1d2ec8",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:b9592fcd03b72af1fccdd2c59530619f1dcabe9e6d37010bb1dfe1532cdc1339",
+      "generated_statements": "sha256:69ee0cf65ce541c371b50c79a5521253ef84d7be7a7f259aa3bb85bd8ec420b5",
+      "input_set": "sha256:f85a9940e89c0c2e2d8daea5729edd304ff7ce92eb2f1bb882312126d30c3d53",
+      "package_manifest": "sha256:e3b0206981248929fdc6138e51b47ecfdeef1571f15927639bcd69d456a3ce75",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "release key coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-release-key-coverage",
+          "eval-srcpkg-campaign30-release-key-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-release-key-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-release-key-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 30 records release keys for 5 audited WDI Trade artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-release-key-coverage"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-release-key-coverage",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-release-key-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-release-key-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-release-key-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "release key coverage"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-source-url-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-source-url-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:3e1c416cc15a1531633ebdecfd0a0da04c0f2dae88f7bf0e99aae773e2073ac6",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:5f10087f26ee4a4eb5637097f5abb690ddb2d4096cfc67ceb32cbfef764a1cf5",
+      "generated_statements": "sha256:58ff55db5e1d4871f181406752303852032feca7b94bde061ff5d80448bf7bed",
+      "input_set": "sha256:9211c7612a3939f14330a4242d68d93cb5a44363871e1128a68d119f900eda1e",
+      "package_manifest": "sha256:d71af6566a034a1697cb5cce5df26703c137a9297252fa133b26415614ef96ec",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "source url coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-source-url-coverage",
+          "eval-srcpkg-campaign30-source-url-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-source-url-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-source-url-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 30 records source URLs for 5 audited WDI Trade artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-source-url-coverage"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-source-url-coverage",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-source-url-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-source-url-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-source-url-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "source url coverage"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-license-note-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-license-note-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:c3fd7b75e4da65114851395cd3d3262fa7ab941b4499abb13ca9ba673cf16d33",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:bb7f601a7d4d8b76b6bc3a544aae23eb8b556619bf775dbcfb647751e8d625a2",
+      "generated_statements": "sha256:17638387b670f58907ee84a67dcd9df4f6d6f68d3a146985e2f37af01cad8d88",
+      "input_set": "sha256:bd9917de5da8adc9048dff1d05b71e1f8b274f5820654fc6838cf73b68866d80",
+      "package_manifest": "sha256:64846a8a83db1286bbe8c51b38d5ad9b6318911f284f37add41f6e167267f910",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "license note coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-license-note-coverage",
+          "eval-srcpkg-campaign30-license-note-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-license-note-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-license-note-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 30 records license notes for 5 audited WDI Trade artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-license-note-coverage"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-license-note-coverage",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-license-note-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-license-note-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-license-note-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "license note coverage"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-lineage-envelope-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-lineage-envelope-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:bb8efded7c001e2088af3ac464e3f46f23793d4bfd22d5981fa658da31bf4cd0",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:4eb191e8e872a53ca3bca66104a97680f54adb20d2d4882ae3de49da245eb165",
+      "generated_statements": "sha256:020bd86aea5c33bc3b35d4c3f3dcf1aa7f7962f027ced93983d80d4622407c0d",
+      "input_set": "sha256:c091ae87347269b35ac3a7b18681d06389b64c66d0b94d34f08d33a994c976ed",
+      "package_manifest": "sha256:8acadae8e4d33c150f9c954cef3fb494bda4e19f17d58c0ab9022fda481d71e2",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "lineage envelope coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-lineage-envelope-coverage",
+          "eval-srcpkg-campaign30-lineage-envelope-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-lineage-envelope-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-lineage-envelope-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 30 records provenance envelope presence for 5 audited WDI Trade artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-lineage-envelope-coverage"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-lineage-envelope-coverage",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-lineage-envelope-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-lineage-envelope-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-lineage-envelope-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "lineage envelope coverage"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-quality-control-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-quality-control-state",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:2f3ea7fb6d313dcb01f3ebbc0892102376b5715302864c5fa9af1d7743cd2c0c",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:b9b0ed5043f20a88c104409273775fcbfdf4d099bf0af8ecf88bd3970ff2ae0a",
+      "generated_statements": "sha256:c725c3a48065126e5d3f190e00211bc1e7c964ef6522021fc3320b41056ca2d7",
+      "input_set": "sha256:643a3b7782f415d8aec4651d01aea8dc74991d0efe25a108092bc2b8f8b52d58",
+      "package_manifest": "sha256:6caa6901c87f6126d677a2873f732e3cddd772444c679d23f9f3094917c72770",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "quality control state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-quality-control-state",
+          "eval-srcpkg-campaign30-quality-control-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-quality-control-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-quality-control-state",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 30 quality control confirms required lineage fields, lineage fingerprint inputs, source identity, release metadata, and non-interpretive scope for Trade provenance-lineage closeout."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-quality-control-state"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-quality-control-state",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-quality-control-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-quality-control-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-quality-control-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "quality control state"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-validation-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-validation-state",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:e244d67024919b0f3ad69feefb85c5331344360e32a63ae893701ffcf0e5df65",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:d90056e00d84e647ad4b1f0061a4d74c66c34abba6a0376d6544dffdeceb64d7",
+      "generated_statements": "sha256:92f457eac1d165885144f4607fd8824ee0aa6557f7acf5e72b52e581dea19bd2",
+      "input_set": "sha256:def8822c5435c3a7f5be56b6639d5cf9fcf4acf5acf9fda4f5ea2b2a3c5c7782",
+      "package_manifest": "sha256:d4aae582baa539da107d70b74e865006f446b8aca77d0ac6ce6168dc81b4bf20",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "validation state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-validation-state",
+          "eval-srcpkg-campaign30-validation-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-validation-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-validation-state",
+        "statement_type": "methodological",
+        "text": "Campaign 30 routes Trade provenance-lineage packages through the existing validation pipeline without validator, taxonomy, package-model, Production Support, provenance, fingerprint, or reporting modification."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-validation-state"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-validation-state",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-validation-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-validation-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-validation-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "validation state"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-deterministic-lineage-transform"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-deterministic-lineage-transform",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:e6d166c8c0bea23a5932fa2a3fb00dcb90d0d321a55bb909090cd84de28dc131",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:45c583ceec26c6f185ba1d3f43b7416f3b3464f8490483ea4f1c174199a480b2",
+      "generated_statements": "sha256:0bd5c03b66c405f79f7ce8f57e26f40ea2e9daa67f6b6121ad1718ea23e19431",
+      "input_set": "sha256:e0eae4b9adf8ed10c8e6eb32ffd339c6ff05dc8e52c28ca8aab79321047c0d4b",
+      "package_manifest": "sha256:9bc7768955c784807850a9228e1aededc8c43fe78d23b398db9131e925d5d61e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "deterministic lineage transform"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-deterministic-lineage-transform",
+          "eval-srcpkg-campaign30-deterministic-lineage-transform"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-deterministic-lineage-transform"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-deterministic-lineage-transform",
+        "statement_type": "methodological",
+        "text": "Campaign 30 derives Trade lineage completeness counts deterministically from the immutable artifact lineage snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-deterministic-lineage-transform"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-deterministic-lineage-transform",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-deterministic-lineage-transform"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-deterministic-lineage-transform"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-deterministic-lineage-transform",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "deterministic lineage transform"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-trade-family-maturity-assessment"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-trade-family-maturity-assessment",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:93e3f3a86334f3e1ca8237915f23c1ffe7524dadfee44ed93d52c98929175c83",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:43117bffeb3615949a5852fcd285377418dbed379672db599d5213d333e27ee4",
+      "generated_statements": "sha256:d9ff011bb84c9e56c95d06d59344c6bc9954b12383ff07d7b2b6b1e4a1231193",
+      "input_set": "sha256:2301f179ed3f14856e01fbb311e0c4fdf5f159a51573301791a80fcfca1ad17f",
+      "package_manifest": "sha256:1c5f2068d35368c5be5da821d6440b7fcc80b1afb75b3cb627c4396be23d87c7",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "Trade family maturity"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-trade-family-maturity-assessment",
+          "eval-srcpkg-campaign30-trade-family-maturity-assessment"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-trade-family-maturity-assessment"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-trade-family-maturity-assessment",
+        "statement_type": "methodological",
+        "text": "Campaigns 28-30 support Mature status for the WDI Trade production family using the established Family Closeout methodology unchanged."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-trade-family-maturity-assessment"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-trade-family-maturity-assessment",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-trade-family-maturity-assessment"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-trade-family-maturity-assessment"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-trade-family-maturity-assessment",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "Trade family maturity"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-production-methodology-assessment"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-production-methodology-assessment",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:73fae2ece6f1800203d733b06ae0b6042ac0406c3d1dcfc57d6410d38ea95eb5",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:840e6a99a52aee51b13d2dbc6264eb45fbeb8564fc999910df915088e51e0abf",
+      "generated_statements": "sha256:4514e524face07f0f11f09e9bf07ba44d95b474c1964bfa268565d07b1e0c219",
+      "input_set": "sha256:c13db416a544bac6e62e340eac9f1ce42b6e93b6e28814795a67073bdb9d1c28",
+      "package_manifest": "sha256:546771c82777fe5a944bd916dde9c181cf959c1deb316b52f0ff3889b7eb63b2",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "production methodology assessment"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-production-methodology-assessment",
+          "eval-srcpkg-campaign30-production-methodology-assessment"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-production-methodology-assessment"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-production-methodology-assessment",
+        "statement_type": "methodological",
+        "text": "Campaign 30 records the KnowledgeForge production methodology as preserved across eight Mature WDI annual-scalar production families without architecture refinement."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-production-methodology-assessment"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-production-methodology-assessment",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-production-methodology-assessment"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-production-methodology-assessment"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-production-methodology-assessment",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "production methodology assessment"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "candidate",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "validated"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign30-architectural-continuity-review"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign30-architectural-continuity-review",
+        "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:eeaa29002da98d10b2340bd8392d2f4fe9be25223ef9153c61d5f00c4af38098",
+        "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:66dee0a3e377075bc15a60b0814663fb3d8785028654a6318f5cfce2cda85880",
+      "generated_statements": "sha256:b8eb69305b33577dd68147c58fd89c78d218daf55bd752c2bcbe6c9d0a87cf5b",
+      "input_set": "sha256:9be46f626f0fcc02e47023d9a6e2d337878b0c9a790a1b3234ca04a166af55cf",
+      "package_manifest": "sha256:5f4bd5a70af288b12d5f059c3170e1954e6d4cb1269b0d70be5df7305dea35af",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_trade_provenance_lineage_metadata",
+          "topic": "architectural continuity review"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign30-architectural-continuity-review",
+          "eval-srcpkg-campaign30-architectural-continuity-review"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign30-architectural-continuity-review"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign30-architectural-continuity-review",
+        "statement_type": "methodological",
+        "text": "Campaign 30 architectural continuity review classifies the next-phase path as preserving the agreed architecture and identifies no refinement, duplicate concept, contradiction, or architectural drift."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign30-architectural-continuity-review"
+    ],
+    "package_id": "pkg-candidate-srcpkg-campaign30-architectural-continuity-review",
+    "package_kind": "KnowledgeCandidatePackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign30-architectural-continuity-review"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-architectural-continuity-review"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-candidate-srcpkg-campaign30-architectural-continuity-review",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "architectural continuity review"
+      }
+    },
+    "status": "validated",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": true,
+      "validation_result": "pending",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

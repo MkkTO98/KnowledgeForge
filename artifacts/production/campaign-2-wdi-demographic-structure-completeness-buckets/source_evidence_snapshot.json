@@ -1,0 +1,113 @@
+{
+  "audited_inventory": {
+    "curated_facts": 1377595,
+    "explicit_missing_facts": 281806,
+    "indicators_total": 182,
+    "observed_facts": 1095789,
+    "overall_completeness": 0.795436,
+    "overall_missing_share": 0.204564,
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990,
+    "territories_total": 217
+  },
+  "campaign_id": "campaign-2-wdi-demographic-structure-completeness-buckets",
+  "evidence_basis": [
+    "artifacts/reports/R-20260709-first-production-campaign-recommendation.md",
+    "artifacts/reports/R-20260709-campaign-1-production-design.md",
+    "docs/production_campaign_roadmap.md",
+    "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_demographic_structure",
+  "freshness_metadata": {
+    "dataset_release_release_date_null_in_audited_rows": true,
+    "dataset_releases": 3,
+    "pipeline_runs": 8,
+    "wdi_lastupdated_metadata_available": true
+  },
+  "indicator_family_buckets": [
+    {
+      "bucket_id": "age_sex_cohort_family",
+      "bucket_label": "complete",
+      "completeness": 1.0,
+      "expected_cells": 516460,
+      "indicator_count": 68,
+      "missing_cells": 0,
+      "observed_cells": 516460
+    },
+    {
+      "bucket_id": "retained_context_indicator_family",
+      "bucket_label": "partial",
+      "completeness": 0.67275,
+      "expected_cells": 861135,
+      "indicator_count": 114,
+      "missing_cells": 281806,
+      "observed_cells": 579329
+    },
+    {
+      "bucket_id": "combined_audited_demographic_structure_scope",
+      "bucket_label": "medium",
+      "completeness": 0.795436,
+      "expected_cells": 1377595,
+      "indicator_count": 182,
+      "missing_cells": 281806,
+      "observed_cells": 1095789
+    }
+  ],
+  "period_buckets": [
+    {
+      "bucket_id": "represented_annual_period_keys",
+      "bucket_label": "complete",
+      "completeness": 1.0,
+      "expected_period_count": 35,
+      "missing_period_keys": 0,
+      "period_count": 35,
+      "period_end": 2024,
+      "period_start": 1990,
+      "represented_period_count": 35
+    },
+    {
+      "bucket_id": "per_period_observed_missing_distribution",
+      "bucket_label": "not_available_in_snapshot",
+      "distribution_available_in_campaign_snapshot": false,
+      "missing_distribution_reason": "Campaign 2 immutable snapshot records aggregate observed and missing facts but does not contain per-period observed/missing counts."
+    }
+  ],
+  "provenance_observations": {
+    "license_note_available": true,
+    "raw_artifact_hashes_available": true,
+    "raw_artifact_urls_available": true,
+    "release_keys_available": true,
+    "source_url_available": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "demographic structure evidence",
+    "frequency": "annual",
+    "indicator_scope": "five-year age-sex cohort indicators plus demographic context indicators retained by the audited evidence inventory",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:02a45f6fc6435dc981cda409363be7224edb1dd8bfe7ef9622dba2893001a665",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "territory_buckets": [
+    {
+      "bucket_id": "represented_country_like_territory_keys",
+      "bucket_label": "complete",
+      "completeness": 1.0,
+      "expected_territory_count": 217,
+      "missing_territory_keys": 0,
+      "represented_territory_count": 217,
+      "territory_count": 217
+    },
+    {
+      "bucket_id": "per_territory_observed_missing_distribution",
+      "bucket_label": "not_available_in_snapshot",
+      "distribution_available_in_campaign_snapshot": false,
+      "missing_distribution_reason": "Campaign 2 immutable snapshot records aggregate observed and missing facts but does not contain per-territory observed/missing counts."
+    }
+  ]
+}

@@ -1,0 +1,86 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_financial_sector_snapshot_characteristic",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+      "source_snapshot_fingerprint": "sha256:e8fbc93d901e8ebf37186071b8543909cca584be534617ead6c7b3f13007d538",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "Campaign 31 records WDI Financial Sector source URLs, raw artifact URLs, raw artifact hashes, release keys, license notes, and WDI last-updated metadata as available in the evidence snapshot.",
+    "knowledge_category": "provenance",
+    "payload_metadata": {
+      "license_note_available": true,
+      "lineage_event_checksum_null_in_audited_rows": false,
+      "raw_artifact_hashes_available": true,
+      "raw_artifact_urls_available": true,
+      "release_keys_available": true,
+      "source_url_available": true,
+      "topic": "provenance state",
+      "wdi_lastupdated_metadata_available": true
+    },
+    "scope": {
+      "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+      "domain": "WDI annual-scalar financial_sector evidence-quality and source-evidence transfer",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "provenance state"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:af57642208b0af1cd6e87d2e97f1342eef5e0d0c9366ebab78a9effa53fd27f0",
+    "provenance": "sha256:636e760ba006ed761a94e093b390e546998124f3a47128d9afd68642517211aa",
+    "reproducibility": "sha256:a1a8a7a99fb3e0bc5402d772fce42bf9765bd23e45ee4c41f8caf5f2bfeebd1b",
+    "source_payload": "sha256:7e628c05dd6b121f4eb8af5bad50a1eb98c01ce60c17b0645559b53ce6945cdb"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md",
+      "artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md",
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-24-wdi-health-provenance-lineage-closeout/production_quality_report.json",
+      "artifacts/production/campaign-24-wdi-health-provenance-lineage-closeout/reports/family_closeout_report.md"
+    ],
+    "selection_rule": "Phase 2 Production Roadmap selected WDI Financial Sector annual-scalar evidence as the next production family after WDI Energy & Mining reached Mature",
+    "source_family": "external_wdi_annual_scalar_financial_sector",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:e8fbc93d901e8ebf37186071b8543909cca584be534617ead6c7b3f13007d538"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign31_wdi_financial_sector_transfer.py --output artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI Financial Sector evidence snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign31-financial_sector-provenance-state",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_financial_sector",
+    "source_name": "World Bank World Development Indicators audited Financial Sector evidence snapshot",
+    "source_version": "sha256:e8fbc93d901e8ebf37186071b8543909cca584be534617ead6c7b3f13007d538"
+  }
+}

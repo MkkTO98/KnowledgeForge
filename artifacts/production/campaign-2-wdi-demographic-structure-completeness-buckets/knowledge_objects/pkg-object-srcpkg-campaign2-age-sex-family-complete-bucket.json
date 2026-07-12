@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign2-age-sex-family-complete-bucket"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:fda2de3e5b0c7433de054caf95d250040cb1298e8f04cdec0d5422efec9b12c2"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign2-age-sex-family-complete-bucket",
+      "reproducibility_handle": "python3 tools/run_campaign2_wdi_completeness_buckets.py --output artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets",
+      "snapshot_fingerprint": "sha256:fda2de3e5b0c7433de054caf95d250040cb1298e8f04cdec0d5422efec9b12c2",
+      "source_family": "external_wdi_annual_scalar_demographic_structure",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure completeness snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:9a96b13a4c008370e4198f73af37610f6bfe7d3da0567cc8f2afb5bd432c863f",
+    "generated_statements": "sha256:be4f9b465b0eca461768627f38e62ac6214a4a95bcea4bfebf1565763681e60b",
+    "input_set": "sha256:c0a29d1b7b45d8a0620ef9612692193bd4d457de74e699051ed81808b4b45d79",
+    "package_manifest": "sha256:41647a080df47a2600afda4a4f4cbd5fadf56f5c63c6225bc39ef003e9982ab3",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-2-wdi-demographic-structure-completeness-buckets",
+        "domain": "WDI annual-scalar demographic-structure completeness buckets",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "indicator-family completeness bucket"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign2-age-sex-family-complete-bucket",
+        "eval-srcpkg-campaign2-age-sex-family-complete-bucket"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign2-age-sex-family-complete-bucket"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign2-age-sex-family-complete-bucket",
+      "statement_type": "coverage",
+      "text": "The five-year age-sex cohort indicator family has 516460 observed cells and 0 missing cells across 516460 expected cells."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign2-age-sex-family-complete-bucket"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:5817fffddd14bc95a178cf058d16b43f47486e43f6f2925d7c2e4d3d062c134a",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign2-age-sex-family-complete-bucket",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign2-age-sex-family-complete-bucket",
+      "pkg-object-srcpkg-campaign2-age-sex-family-complete-bucket"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign2-age-sex-family-complete-bucket",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign2-age-sex-family-complete-bucket",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign2-age-sex-family-complete-bucket"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign2-age-sex-family-complete-bucket"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign2-age-sex-family-complete-bucket",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure completeness buckets",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-2-wdi-demographic-structure-completeness-buckets",
+      "domain": "WDI annual-scalar demographic-structure completeness buckets",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "indicator-family completeness bucket"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign8-family-water-and-sanitation-metadata"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:1335db398f86dbda1af55b76cd1d67518ce4e5fafb734e0335ca0e867dd03eb9"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign8-family-water-and-sanitation-metadata",
+      "reproducibility_handle": "python3 tools/run_campaign8_wdi_environment_transfer.py --output artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+      "snapshot_fingerprint": "sha256:1335db398f86dbda1af55b76cd1d67518ce4e5fafb734e0335ca0e867dd03eb9",
+      "source_family": "external_wdi_annual_scalar_environment",
+      "source_identity": "World Bank World Development Indicators audited Environment evidence snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:77da9d950e750ca6b8e3ba62ed10c51a34699bab64f155fca42df184114882ab",
+    "generated_statements": "sha256:8ab0de48bf3572e419b5079d70f4ea1e0b42567504837f6742351bc9efa7b927",
+    "input_set": "sha256:180a7aacf8e2c5f61c7fb52c9a2e3bf01fb455b24c1785873a61b75207e39230",
+    "package_manifest": "sha256:0a9552e56180d5f98ede56de5c90a574145642e7551fdadcf17e0f50c2a19808",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+        "domain": "WDI annual-scalar environment evidence-quality and coverage transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "environment metadata family"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign8-family-water-and-sanitation-metadata",
+        "eval-srcpkg-campaign8-family-water-and-sanitation-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign8-family-water-and-sanitation-metadata"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign8-family-water-and-sanitation-metadata",
+      "statement_type": "coverage",
+      "text": "Campaign 8 records 36 annual-scalar indicators for the water_and_sanitation_metadata Environment metadata family."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign8-family-water-and-sanitation-metadata"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:9382e9441c46816f1e05ed49068bcd56ab251b15d2e3cb91cf13acf1933c478a",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign8-family-water-and-sanitation-metadata",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign8-family-water-and-sanitation-metadata",
+      "pkg-object-srcpkg-campaign8-family-water-and-sanitation-metadata"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign8-family-water-and-sanitation-metadata",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign8-family-water-and-sanitation-metadata",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign8-family-water-and-sanitation-metadata"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign8-family-water-and-sanitation-metadata"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign8-family-water-and-sanitation-metadata",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar environment evidence-quality and coverage transfer",
+    "evidence_family": "external_wdi_annual_scalar_environment",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+      "domain": "WDI annual-scalar environment evidence-quality and coverage transfer",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "environment metadata family"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

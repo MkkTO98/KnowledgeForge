@@ -1,0 +1,351 @@
+{
+  "architecture_change_authorized": false,
+  "campaign_id": "campaign-32-wdi-financial-sector-indicator-family-coverage-maturation",
+  "evidence_basis": [
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/production/campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+    "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+    "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+    "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+    "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+    "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_financial_sector_maturation",
+  "external_data_accessed": false,
+  "indicator_inventory": {
+    "families": [
+      {
+        "complete_or_near_complete": 170,
+        "complete_period_coverage": false,
+        "family_key": "enrollment_metadata",
+        "high_partial": 32,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 4,
+        "label": "enrollment metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 163,
+        "complete_period_coverage": false,
+        "family_key": "completion_and_attainment_metadata",
+        "high_partial": 35,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "completion and attainment metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 154,
+        "complete_period_coverage": false,
+        "family_key": "financial_sector_resources_metadata",
+        "high_partial": 38,
+        "indicator_count": 24,
+        "insufficient_for_campaign_scope": 7,
+        "label": "financial_sector resources metadata",
+        "missing_periods": 4,
+        "moderate_partial": 18,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 158,
+        "complete_period_coverage": false,
+        "family_key": "literacy_and_learning_metadata",
+        "high_partial": 36,
+        "indicator_count": 25,
+        "insufficient_for_campaign_scope": 6,
+        "label": "literacy and learning metadata",
+        "missing_periods": 4,
+        "moderate_partial": 17,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 149,
+        "complete_period_coverage": false,
+        "family_key": "equity_and_gender_parity_metadata",
+        "high_partial": 41,
+        "indicator_count": 19,
+        "insufficient_for_campaign_scope": 7,
+        "label": "equity and gender parity metadata",
+        "missing_periods": 5,
+        "moderate_partial": 20,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217
+      }
+    ],
+    "family_keys": [
+      "enrollment_metadata",
+      "completion_and_attainment_metadata",
+      "financial_sector_resources_metadata",
+      "literacy_and_learning_metadata",
+      "equity_and_gender_parity_metadata"
+    ],
+    "indicator_families_total": 5,
+    "indicators_total": 126,
+    "supported_dimensions": [
+      "indicator",
+      "territory",
+      "period",
+      "indicator_family"
+    ],
+    "unsupported_dimensions": [
+      "subnational_region",
+      "scenario",
+      "model_projection",
+      "narrative_assessment"
+    ]
+  },
+  "maturation_methodology_comparison": {
+    "equivalent_demographic_stage": "Campaigns 4-6",
+    "family_specific_assumptions": [
+      "Financial Sector indicator family names",
+      "Financial Sector coverage bucket counts"
+    ],
+    "fingerprint_stability": "unchanged",
+    "knowledge_category_coverage": "same categories, different family counts",
+    "knowledgeforge_wide_assumptions": [
+      "deterministic replay",
+      "fingerprint stability",
+      "rejected-candidate preservation",
+      "provenance completeness"
+    ],
+    "package_construction": "unchanged",
+    "pel_behaviour": "unchanged",
+    "production_pressures": "no new pressure",
+    "production_workflow_transfer": "unchanged",
+    "provenance_handling": "unchanged",
+    "validator_behaviour": "unchanged"
+  },
+  "maturity_assessment": {
+    "basis": "Campaigns 16 and 17 validate WDI Financial Sector production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+    "classification": "Stable",
+    "insufficient_for_mature": [
+      "dedicated Financial Sector provenance-lineage completeness",
+      "Financial Sector family closeout"
+    ],
+    "validated": [
+      "deterministic replay",
+      "fingerprint stability",
+      "provenance completeness",
+      "rejected-candidate preservation",
+      "indicator-family inventory",
+      "territorial coverage",
+      "temporal coverage"
+    ]
+  },
+  "provenance_observations": {
+    "deterministic_rerun_handle_available": true,
+    "evidence_basis_available": true,
+    "selection_rule_available": true,
+    "source_family_available": true,
+    "source_snapshot_fingerprint_available": true
+  },
+  "quality_controls": {
+    "ambiguous_family_assignments": 0,
+    "duplicate_candidate_statements_expected": false,
+    "matrix_cell_counts_verified": true,
+    "period_denominators_verified": true,
+    "territory_bucket_denominators_verified": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "financial_sector evidence",
+    "frequency": "annual",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations and coverage matrices",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:aab661bcb30ed1858dcae87180641441b4e5f42e4d09a5864489d7dd9762153e",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "temporal_matrix": {
+    "complete_family_count": 0,
+    "families": [
+      {
+        "complete_or_near_complete": 170,
+        "complete_period_coverage": false,
+        "family_key": "enrollment_metadata",
+        "high_partial": 32,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 4,
+        "label": "enrollment metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 163,
+        "complete_period_coverage": false,
+        "family_key": "completion_and_attainment_metadata",
+        "high_partial": 35,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "completion and attainment metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 154,
+        "complete_period_coverage": false,
+        "family_key": "financial_sector_resources_metadata",
+        "high_partial": 38,
+        "indicator_count": 24,
+        "insufficient_for_campaign_scope": 7,
+        "label": "financial_sector resources metadata",
+        "missing_periods": 4,
+        "moderate_partial": 18,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 158,
+        "complete_period_coverage": false,
+        "family_key": "literacy_and_learning_metadata",
+        "high_partial": 36,
+        "indicator_count": 25,
+        "insufficient_for_campaign_scope": 6,
+        "label": "literacy and learning metadata",
+        "missing_periods": 4,
+        "moderate_partial": 17,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 149,
+        "complete_period_coverage": false,
+        "family_key": "equity_and_gender_parity_metadata",
+        "high_partial": 41,
+        "indicator_count": 19,
+        "insufficient_for_campaign_scope": 7,
+        "label": "equity and gender parity metadata",
+        "missing_periods": 5,
+        "moderate_partial": 20,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217
+      }
+    ],
+    "indicator_family_count": 5,
+    "matrix_cell_count": 175,
+    "missing_period_cells": 18,
+    "observed_period_cells": 157,
+    "period_bucket_keys": [
+      "observed_period",
+      "missing_period"
+    ],
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990
+  },
+  "territorial_matrix": {
+    "bucket_keys": [
+      "complete_or_near_complete",
+      "high_partial",
+      "moderate_partial",
+      "insufficient_for_campaign_scope"
+    ],
+    "bucket_totals": {
+      "complete_or_near_complete": 794,
+      "high_partial": 182,
+      "insufficient_for_campaign_scope": 29,
+      "moderate_partial": 80
+    },
+    "coverage_bucket_count": 4,
+    "families": [
+      {
+        "complete_or_near_complete": 170,
+        "complete_period_coverage": false,
+        "family_key": "enrollment_metadata",
+        "high_partial": 32,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 4,
+        "label": "enrollment metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 163,
+        "complete_period_coverage": false,
+        "family_key": "completion_and_attainment_metadata",
+        "high_partial": 35,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "completion and attainment metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 154,
+        "complete_period_coverage": false,
+        "family_key": "financial_sector_resources_metadata",
+        "high_partial": 38,
+        "indicator_count": 24,
+        "insufficient_for_campaign_scope": 7,
+        "label": "financial_sector resources metadata",
+        "missing_periods": 4,
+        "moderate_partial": 18,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 158,
+        "complete_period_coverage": false,
+        "family_key": "literacy_and_learning_metadata",
+        "high_partial": 36,
+        "indicator_count": 25,
+        "insufficient_for_campaign_scope": 6,
+        "label": "literacy and learning metadata",
+        "missing_periods": 4,
+        "moderate_partial": 17,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 149,
+        "complete_period_coverage": false,
+        "family_key": "equity_and_gender_parity_metadata",
+        "high_partial": 41,
+        "indicator_count": 19,
+        "insufficient_for_campaign_scope": 7,
+        "label": "equity and gender parity metadata",
+        "missing_periods": 5,
+        "moderate_partial": 20,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217
+      }
+    ],
+    "indicator_family_count": 5,
+    "matrix_cell_count": 1085,
+    "territory_count": 217
+  }
+}

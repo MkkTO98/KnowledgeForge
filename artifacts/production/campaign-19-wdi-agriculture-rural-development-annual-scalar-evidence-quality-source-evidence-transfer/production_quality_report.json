@@ -1,0 +1,321 @@
+{
+  "acceptance_rate": 0.826087,
+  "architectural_continuity_classification": "preserves agreed architecture",
+  "architectural_observations": [
+    "Campaign 19 replicated the mature WDI demographic production methodology for WDI Agriculture & Rural Development evidence without architecture change.",
+    "The existing package hierarchy, validators, Production Support layer, provenance handling, fingerprinting, reporting, and PEL workflow transferred unchanged.",
+    "Campaign 19 does not exercise multi-reference accepted objects; Agriculture & Rural Development maturation remains the appropriate continuation."
+  ],
+  "average_evidence_references_per_knowledge_object": 1.0,
+  "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+  "candidate_improvements_discovered": [
+    "No validator, taxonomy, helper extraction, or architecture change is justified by Campaign 19.",
+    "PEL-012 remains monitor because accepted Campaign 19 objects still use one evidence reference each.",
+    "PEL-017 gains cross-family transfer evidence but still requires multi-reference comparison and partial-disagreement tests."
+  ],
+  "cross_campaign_metric_comparison": {
+    "campaign_0": {
+      "accepted": 10,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 3
+    },
+    "campaign_1": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_19": {
+      "accepted": 19,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_2": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_3": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_4": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_5": {
+      "accepted": 20,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_6": {
+      "accepted": 18,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_7": {
+      "accepted": 16,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    }
+  },
+  "cross_family_transfer_assessment": {
+    "campaign19_accepted": 19,
+    "campaign19_rejected": 4,
+    "campaign1_accepted": 12,
+    "campaign1_rejected": 4,
+    "fingerprinting": "unchanged",
+    "knowledge_candidate_package_construction": "unchanged",
+    "knowledge_object_package_construction": "unchanged",
+    "methodology_transfer": "successful",
+    "observed_differences": [
+      {
+        "classification": "Agriculture & Rural Development-specific",
+        "difference": "Agriculture & Rural Development source family replaces demographic source family while preserving WDI annual-scalar shape."
+      },
+      {
+        "classification": "evidence-family-specific",
+        "difference": "Agriculture & Rural Development accepted object count differs from Campaign 1 because Campaign 19 includes metadata-family coverage rows."
+      },
+      {
+        "classification": "KnowledgeForge-wide",
+        "difference": "Determinism, fingerprint stability, provenance completeness, and rejected-candidate preservation recur."
+      },
+      {
+        "classification": "architectural",
+        "difference": "No package, taxonomy, validator, or architecture modification was required."
+      }
+    ],
+    "pel_workflow": "unchanged",
+    "production_metrics": "unchanged",
+    "production_support_layer": "unchanged",
+    "production_workflow": "unchanged",
+    "provenance_handling": "unchanged",
+    "reporting": "unchanged",
+    "source_evidence_package_construction": "unchanged",
+    "validator_behaviour": "unchanged"
+  },
+  "determinism_verification": true,
+  "duplicate_knowledge_objects_detected": false,
+  "final_recommendation": "Continue maturing the WDI Agriculture & Rural Development annual-scalar family under Operational Expansion; preserve the existing KnowledgeForge production methodology unchanged and populate the Knowledge Repository after validation.",
+  "final_snapshot_fingerprint": "sha256:e6426f807f1a07cb62b125866dc4fb52239abb5106c22c23b571c0cbc20a6772",
+  "fingerprint_stability": true,
+  "knowledge_candidate_packages_generated": 19,
+  "knowledge_categories_produced": {
+    "classified": 1,
+    "coverage": 9,
+    "derived": 1,
+    "evidence_quality": 1,
+    "factual": 1,
+    "methodological": 2,
+    "negative": 3,
+    "provenance": 1
+  },
+  "knowledge_categories_rejected": {
+    "agriculture_rural_development_rating": 1,
+    "coverage": 1,
+    "provenance": 2
+  },
+  "knowledge_object_packages_accepted": 19,
+  "knowledge_repository_impact_assessment": {
+    "confidence_gained_through_additional_evidence": [
+      "deterministic replay remained true for a fourth WDI annual-scalar family entry campaign",
+      "fingerprint stability remained true after repository population",
+      "no duplicate Knowledge Objects were detected",
+      "validator rejections remained active for unsupported inference and malformed provenance/fingerprint cases"
+    ],
+    "evidence_family_coverage_expanded": [
+      "external_wdi_annual_scalar_agriculture_rural_development"
+    ],
+    "future_recomputation_avoided_for_downstream_projects": [
+      "downstream projects can reuse Agriculture & Rural Development source-scope and indicator-count facts without rerunning the campaign snapshot",
+      "downstream projects can reuse Agriculture & Rural Development observed/missing evidence-grid totals and shares",
+      "downstream projects can reuse Agriculture & Rural Development unsupported-dimension and provenance-state facts",
+      "future Agriculture & Rural Development maturation campaigns can build on this family-entry baseline"
+    ],
+    "knowledge_categories_expanded": [
+      "classified",
+      "coverage",
+      "derived",
+      "evidence_quality",
+      "factual",
+      "methodological",
+      "negative",
+      "provenance"
+    ],
+    "new_knowledge_object_package_ids": [
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-family-count",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-missing-share",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-observed-missing",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-observed-share",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-partial-families",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-period-scope",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-provenance-state",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-source-scope",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-territory-scope",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-topic-inventory",
+      "pkg-object-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions",
+      "pkg-object-srcpkg-campaign19-deterministic-transfer-method",
+      "pkg-object-srcpkg-campaign19-family-agricultural-inputs-metadata",
+      "pkg-object-srcpkg-campaign19-family-agricultural-land-use-metadata",
+      "pkg-object-srcpkg-campaign19-family-crop-and-livestock-metadata",
+      "pkg-object-srcpkg-campaign19-family-food-security-and-productivity-metadata",
+      "pkg-object-srcpkg-campaign19-family-rural-population-metadata",
+      "pkg-object-srcpkg-campaign19-replication-contract"
+    ],
+    "new_knowledge_objects_added": 19,
+    "new_reusable_knowledge_introduced": [
+      "Agriculture & Rural Development source scope and WDI annual-scalar evidence-shape confirmation",
+      "Agriculture & Rural Development indicator inventory and metadata-family counts",
+      "Agriculture & Rural Development observed/missing evidence-grid totals and shares",
+      "Agriculture & Rural Development provenance-state and validation-state facts",
+      "Agriculture & Rural Development unsupported-dimension negative knowledge"
+    ],
+    "repository_breadth_gained": [
+      "opened WDI Agriculture & Rural Development as the next Phase 2 production family",
+      "added five Agriculture & Rural Development metadata-family coverage slices",
+      "expanded WDI annual-scalar family breadth beyond demographic, Environment, and Infrastructure"
+    ],
+    "repository_composition_changes": {
+      "objects_by_evidence_family_after": {
+        "external_wdi_annual_scalar_agriculture_rural_development": 19,
+        "external_wdi_annual_scalar_energy_mining": 19,
+        "external_wdi_annual_scalar_energy_mining_maturation": 36,
+        "external_wdi_annual_scalar_energy_mining_provenance_lineage": 17,
+        "external_wdi_annual_scalar_environment_provenance_lineage": 17,
+        "external_wdi_annual_scalar_infrastructure": 19,
+        "external_wdi_annual_scalar_infrastructure_maturation": 36,
+        "external_wdi_annual_scalar_infrastructure_provenance_lineage": 17
+      },
+      "objects_by_knowledge_category_after": {
+        "classified": 22,
+        "coverage": 71,
+        "derived": 14,
+        "evidence_quality": 8,
+        "factual": 10,
+        "methodological": 27,
+        "negative": 20,
+        "provenance": 8
+      },
+      "objects_by_lifecycle_state_after": {
+        "accepted": 180
+      }
+    },
+    "repository_depth_gained": [
+      "added family-entry evidence-quality/source-evidence baseline for Agriculture & Rural Development maturation",
+      "preserved source/provenance/validation evidence needed for later Agriculture & Rural Development inventory and provenance-lineage closeout",
+      "added deterministic transfer evidence after three Mature WDI annual-scalar families"
+    ],
+    "repository_object_count_after": 180,
+    "repository_object_count_before": 161,
+    "repository_quality_concerns_discovered": [],
+    "repository_quality_improvements_achieved": [
+      "repository health now tracks Agriculture & Rural Development family-entry objects in indexes",
+      "provenance completeness remained true after campaign population",
+      "fingerprint stability remained true after campaign population",
+      "repository object count increased with no unresolved repository-quality concerns"
+    ]
+  },
+  "knowledge_repository_population": {
+    "manifest_path": "knowledge_repository/manifest.json",
+    "persisted_count": 19,
+    "rejected_count": 0,
+    "repository_fingerprint": "sha256:6b4b077a271c1514ff19c2d8d6b4bd5149a37e2b5b9d5125a72825fe5a6e058f",
+    "repository_root": "knowledge_repository",
+    "total_object_count": 180
+  },
+  "processing_statistics": {
+    "accepted_object_fingerprints": [
+      "sha256:8375d49ccfacaaad50023b3efe36bfca2f968da23647bc4f39c9fc675c717f59",
+      "sha256:4f4b64d0f64108b749b7816a1fdfadca2f10ef5f825319f8453eec91da130c34",
+      "sha256:7b91ec946e74d32651450d7468677a6fce7966574a0310238166a99fa9b91437",
+      "sha256:c4494bdaa3c6cb0af944ab095f9bca08226cc6e06de9c3c643310550839a9fb2",
+      "sha256:14a8fdafb840014aa79f06b38a6745880c3f1672cb1b7587de9b88b292fdb338",
+      "sha256:9702a9e3b5429327dab96c1153bb5a7f46e522a0a3fb68005d5924479a9b641d",
+      "sha256:91301faceccd8241fd63948189c0d7d9be9b0d75f6233db2b42e6a59db6b791f",
+      "sha256:8dc5099efab9f650651581d61377e5e7816e7bdbc1a1fd496fcaa9295e4ef650",
+      "sha256:6986309586a18fd3926c4c40b9ec8ba9f3a129c70336ff4b5abad69b61e5e322",
+      "sha256:342512f478feeab41d2513f860956a087d955969cedef378d750625dcc4318f8",
+      "sha256:3c56cc0472e47ff6904746ded1b10743386a93de53bcc3d00409087ab6478292",
+      "sha256:fd3762544b4e42519ba3055f4652ddba7ffac1f0f603dc857430f1363d0bf685",
+      "sha256:93ae1dfe714779d0a6d94419ba85eab1a4f5b2eee9c6ec4c82c82b72987e5756",
+      "sha256:1e05737a4d043f533c3eed8863b6d7c3d295a3bf106cfa56fae4ad5408075642",
+      "sha256:6fe019582464432584ec30aea1b9e9cbd2f1d4de8f5db81a6c8ca3091a861f4c",
+      "sha256:4216e20cf505b14e53d1bbdb26142774b6710fa273e8d0cfe0dcd0c5ba5eca8e",
+      "sha256:f1395f3196e258960afccef1f433030e3d32c2e04eef7b76e16a3b62905ae69d",
+      "sha256:cc914d15e33a8bccba6214b5c2532afca4ccf956db30936bf8f3ba0f57b4aead",
+      "sha256:34ab09df616f89fab4afed7336b2d163edfaf6049852aa53c0228a5c2405fa6a"
+    ],
+    "agriculture_rural_development_family_count": 5,
+    "agriculture_rural_development_indicator_count": 126,
+    "missing_share": 0.190029,
+    "observed_share": 0.809971,
+    "snapshot_fingerprint": "sha256:ff98a122c36379580ea052c86b4598947cc6f143b237a9ff05f521a759b5a48a"
+  },
+  "provenance_completeness": true,
+  "rejected_candidates": 4,
+  "rejection_rate": 0.173913,
+  "repository_health_summary": {
+    "fingerprint_stability": true,
+    "manifest_object_count": 180,
+    "manifest_path": "knowledge_repository/manifest.json",
+    "objects_added_this_campaign": 19,
+    "objects_by_evidence_family": {
+      "external_wdi_annual_scalar_agriculture_rural_development": 19,
+      "external_wdi_annual_scalar_energy_mining": 19,
+      "external_wdi_annual_scalar_energy_mining_maturation": 36,
+      "external_wdi_annual_scalar_energy_mining_provenance_lineage": 17,
+      "external_wdi_annual_scalar_environment_provenance_lineage": 17,
+      "external_wdi_annual_scalar_infrastructure": 19,
+      "external_wdi_annual_scalar_infrastructure_maturation": 36,
+      "external_wdi_annual_scalar_infrastructure_provenance_lineage": 17
+    },
+    "objects_by_knowledge_category": {
+      "classified": 22,
+      "coverage": 71,
+      "derived": 14,
+      "evidence_quality": 8,
+      "factual": 10,
+      "methodological": 27,
+      "negative": 20,
+      "provenance": 8
+    },
+    "objects_by_lifecycle_state": {
+      "accepted": 180
+    },
+    "previous_repository_object_count": 161,
+    "provenance_completeness": true,
+    "repository_fingerprint": "sha256:6b4b077a271c1514ff19c2d8d6b4bd5149a37e2b5b9d5125a72825fe5a6e058f",
+    "repository_growth_since_previous_campaign": 19,
+    "total_knowledge_objects": 180,
+    "unresolved_repository_quality_concerns": []
+  },
+  "source_evidence_packages_processed": 19,
+  "validator_failures_by_category": {
+    "constitutional_boundary": 1,
+    "evidence_contract": 2,
+    "lineage_fingerprint": 2,
+    "provenance": 1,
+    "unsupported_inference": 1
+  }
+}

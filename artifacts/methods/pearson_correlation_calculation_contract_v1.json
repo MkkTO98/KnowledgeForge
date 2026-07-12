@@ -1,0 +1,57 @@
+{
+  "accepted_numeric_representation": "base-10 decimal strings; scientific notation forbidden",
+  "calculation_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+  "canonical_serialization": "JSON sort_keys=True compact separators UTF-8",
+  "canonical_stored_decimal_places": 12,
+  "coefficient_bounds_validation": "accepted coefficients must lie in [-1, 1]; tiny Decimal overrun is clamped only if within 1e-40",
+  "constant_series_rejection": true,
+  "covariance_numerator": "sum((x_i - mean_x) * (y_i - mean_y))",
+  "coverage_threshold": "0.85",
+  "decimal_context": {
+    "local_context_required": true,
+    "precision": 50,
+    "rounding": "ROUND_HALF_EVEN"
+  },
+  "duplicate_handling": "duplicate period keys fail closed",
+  "entity_scope": "same entity by default for first pilot; cross-entity allowed only if explicitly requested",
+  "frequency": "annual scalar observations for this method family",
+  "join_semantics": "inner join on observed periods",
+  "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+  "method_identity": "wdi_annual_scalar_pearson_correlation_v1@1.0",
+  "method_version": "1.0",
+  "minimum_pair_threshold": 30,
+  "missing_pair_exclusion": "exclude pairs where either value is missing; record missing/excluded periods",
+  "negative_zero_handling": "canonicalize to 0",
+  "observation_key_alignment": "period equality after series identity validation",
+  "output_fingerprint": "sha256 of canonical result excluding no fields",
+  "pearson_formula": "covariance numerator / sqrt(variance_x * variance_y)",
+  "period_scope": "intersection of observed periods after explicit missing-pair exclusion",
+  "prohibited_outputs": [
+    "p-values",
+    "confidence intervals",
+    "hypothesis tests",
+    "regression coefficients",
+    "Spearman",
+    "partial correlation",
+    "rolling correlation",
+    "lagged correlation",
+    "multiple-testing correction"
+  ],
+  "scientific_notation_policy": "forbidden in inputs and canonical outputs",
+  "series_identity": [
+    "indicator_code",
+    "entity_id",
+    "frequency",
+    "unit",
+    "transformation"
+  ],
+  "transformation_state": [
+    "raw",
+    "first_difference",
+    "percentage_change",
+    "log_difference",
+    "other explicit derived transformation"
+  ],
+  "variance_terms": "sum((x_i - mean_x)^2), sum((y_i - mean_y)^2)",
+  "zero_variance_rejection": true
+}

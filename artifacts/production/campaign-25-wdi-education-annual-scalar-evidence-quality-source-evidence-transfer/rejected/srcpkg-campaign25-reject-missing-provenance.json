@@ -1,0 +1,113 @@
+{
+  "reason_categories": [
+    "evidence_contract",
+    "lineage_fingerprint",
+    "provenance"
+  ],
+  "source_evidence_package": {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_education_snapshot_characteristic",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "source_snapshot_fingerprint": "sha256:16a3e35ac45d918d3ff3c0a1060c9858ba1b034b8de2d961b951f5a41a067030",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "A malformed Campaign 25 candidate omits provenance fields.",
+      "knowledge_category": "provenance",
+      "payload_metadata": {
+        "topic": "malformed provenance"
+      },
+      "scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "malformed provenance"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:92cd0722bd0165a2f3aa27ad50d42eeef680d4856f073873fb95df8e9259ab76",
+      "provenance": "sha256:a5353ff140c58e89c9d92cf6b8f5a64627a0d22e2610f0e86fcf5532a184298e",
+      "reproducibility": "sha256:ff254eab22d5e3e36e04044e794d3802c0bcbba9c3ee87749610a182204afd82",
+      "source_payload": "sha256:3dfa1c8b448ef92a261e39b722e6a93372b0cdbfd99213396d0272274c8b6598"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic embedded immutable WDI Education evidence snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign25-reject-missing-provenance",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_education",
+      "source_name": "World Bank World Development Indicators audited Education evidence snapshot",
+      "source_version": "sha256:16a3e35ac45d918d3ff3c0a1060c9858ba1b034b8de2d961b951f5a41a067030"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "stage_reports": {
+      "source": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "evidence_contract",
+            "location": "provenance",
+            "message": "missing required field: provenance",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "provenance",
+            "location": "provenance",
+            "message": "provenance must include a source_snapshot_id",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.provenance",
+            "message": "provenance fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.package_manifest",
+            "message": "package_manifest fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+}

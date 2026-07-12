@@ -1,0 +1,3422 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-source-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:46ebbedac6af564f4f363f4814be159fe8be91dc6a1156d0edb0bc8ba71623dc"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-source-scope",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:46ebbedac6af564f4f363f4814be159fe8be91dc6a1156d0edb0bc8ba71623dc",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:6fb217124db2367998b50bf1ddb0c67e0de77fc2287802b280212b80f13cc28c",
+      "generated_statements": "sha256:da12f1b3a2f0ebdee4010adeb076e373003d4c15ee124a44111c60d015b10755",
+      "input_set": "sha256:1ab12e817131bfd6c66c3fed55d36dfd2d3bc67d087894162c962f62d4de35ad",
+      "package_manifest": "sha256:cc8a62a334e8bc451a24d871e9f2e371780bda0f0c3b08863cecdcefbce06cf3",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "source scope"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-source-scope",
+          "eval-srcpkg-campaign16-energy_mining-source-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-source-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-source-scope",
+        "statement_type": "factual",
+        "text": "The Campaign 16 source evidence package is scoped to World Bank WDI annual-scalar Energy & Mining evidence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-source-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:2b9f2c93ea1af5e748a2005875ba89b95b453dc0ef2f3df438b28d1ea51c2069",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-source-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-source-scope",
+        "pkg-object-srcpkg-campaign16-energy_mining-source-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-source-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-source-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-source-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-source-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-source-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "source scope"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-topic-inventory"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b8a834c863bf46694f7671d4ec8429204c3c43cb8ea982b059c9ec92b8549def"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-topic-inventory",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:b8a834c863bf46694f7671d4ec8429204c3c43cb8ea982b059c9ec92b8549def",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:ad90e002b360ac456fbaa0a728f4c803e815cc8d2cfa3204c871758d1de4efae",
+      "generated_statements": "sha256:e5764f180fccda5c177eb7b7502799f15e179f1a9222cfe0fa79f12ad65c8bec",
+      "input_set": "sha256:e27d69a60dd749dac92c7247d744bd52eb050f85114943f08e3fcef0a271d0d6",
+      "package_manifest": "sha256:fa918c75cf5d26166d14da5ea795ac565829dc39374a22bad550a5a9c6c2c3a7",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "indicator coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-topic-inventory",
+          "eval-srcpkg-campaign16-energy_mining-topic-inventory"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-topic-inventory"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-topic-inventory",
+        "statement_type": "coverage",
+        "text": "The audited WDI Energy & Mining topic inventory records 138 annual-scalar indicators."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-topic-inventory"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:1aa2e9a6755144bf735ce91dd6072c5d82f4e37f4f532b2c08f83d860c3a3736",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-topic-inventory",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-topic-inventory",
+        "pkg-object-srcpkg-campaign16-energy_mining-topic-inventory"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-topic-inventory",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-topic-inventory",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-topic-inventory"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-topic-inventory"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-topic-inventory",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "indicator coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-territory-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a4a42a3006e8590d6ddeb77d1bfba4554b94159c884a81857dc63154f9c5071a"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-territory-scope",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:a4a42a3006e8590d6ddeb77d1bfba4554b94159c884a81857dc63154f9c5071a",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c7d2013f508851c59c8ebac1c78e2b409d818adcab50112eb3ac00179ef947d7",
+      "generated_statements": "sha256:cae7a2375d6d395247693b927cbe5b2d243ba5c8a421c558bd8a8d2a62e7c36c",
+      "input_set": "sha256:c81063fd257eb187ed33b323c554005c0c0fa9880d8e14b02db677ad1efc873f",
+      "package_manifest": "sha256:d2736445f0d6d3a04828aa2fb09d5266083321b3e16593d028f1de797225c925",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "territory coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-territory-scope",
+          "eval-srcpkg-campaign16-energy_mining-territory-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-territory-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-territory-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 16 uses the same audited WDI territory scope count of 217 non-aggregate or country-like territories."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-territory-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:7c093209af8b0670b072b036d29f126cbc739ac84c598973e024d55fc95b30a2",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-territory-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-territory-scope",
+        "pkg-object-srcpkg-campaign16-energy_mining-territory-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-territory-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-territory-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-territory-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-territory-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-territory-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "territory coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-period-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:82748e5ce1f1731de803db3009c84b5030d55809189c21a92da6612d83a42cb6"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-period-scope",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:82748e5ce1f1731de803db3009c84b5030d55809189c21a92da6612d83a42cb6",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:0a6d76c20b472d541696536d46e95f68bc4b3932de903a8c3d8ac35b84356144",
+      "generated_statements": "sha256:5b792e92f3e3b96374ff221af540ba6a05b3036afc9f7e00eed13216c3696bf0",
+      "input_set": "sha256:094fbba62ded73a5398814d3434bb3fbc07f25984328d9be593894ba806d331a",
+      "package_manifest": "sha256:47e6750b424ec9d52d6134c7366243ea9f57fd20aeaa5570de2aefb332b613ef",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "temporal coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-period-scope",
+          "eval-srcpkg-campaign16-energy_mining-period-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-period-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-period-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 16 uses 35 annual periods from 1990 through 2024 for Energy & Mining evidence coverage."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-period-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b067705be5ba1df6668f989f8e2dad46126109c77a77d225ae3dc0457fc4c3a8",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-period-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-period-scope",
+        "pkg-object-srcpkg-campaign16-energy_mining-period-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-period-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-period-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-period-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-period-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-period-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "temporal coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-observed-missing"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:b0e9a81674f2b3ea9fed37aa9e014044171ff42922a1383550695af50ddb7f4a"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-observed-missing",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:b0e9a81674f2b3ea9fed37aa9e014044171ff42922a1383550695af50ddb7f4a",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:7b791c393922e6fa0474370553704f0dc1a2c42ee0ba642c448b66af7cc112fd",
+      "generated_statements": "sha256:a92127e5159d47466385f958c3c7a5dd307f6e8d70d95f0cbb3115a792b755cf",
+      "input_set": "sha256:8de383be8fde3fa32d72f6b2ebc84672a8d2b5c47a46d8d5ad1e693102e0e1b0",
+      "package_manifest": "sha256:640304cc8dd295e7ba7e1f5b912c2e1a1fe7801357f2b8a4ab5bdf77094e9555",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed missing coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-observed-missing",
+          "eval-srcpkg-campaign16-energy_mining-observed-missing"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-observed-missing"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-observed-missing",
+        "statement_type": "coverage",
+        "text": "The Campaign 16 Energy & Mining snapshot records 652240 observed cells and 183760 explicit missing cells."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-observed-missing"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b01c5851aca18ddbe139c866e8d1ca0ceead9ce9fe06f7af7fbecc9370c39aaf",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-observed-missing",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-observed-missing",
+        "pkg-object-srcpkg-campaign16-energy_mining-observed-missing"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-observed-missing",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-observed-missing",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-observed-missing"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-observed-missing"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-observed-missing",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed missing coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-observed-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6a880b46e73f7b7eef5a48c19e5ed1becdcbf47a64b4a71139bb6eec00504131"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-observed-share",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:6a880b46e73f7b7eef5a48c19e5ed1becdcbf47a64b4a71139bb6eec00504131",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:6318ba008e13df168f0eeaec8bb7a1b1f1f423db5df2ccbf919888f2285792e6",
+      "generated_statements": "sha256:a96cc46dbc61931c44a853366bb78d233a4fd5b2b15c641c80b4c264b73be244",
+      "input_set": "sha256:a4f67567464982474e0ae6eec9c7d8f2a84e77cb3d9911454624b772bdccba6d",
+      "package_manifest": "sha256:05d17d5779aced55fea0ff0f9450f9be2c236b0d54c67511794995e3b4b419be",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-observed-share",
+          "eval-srcpkg-campaign16-energy_mining-observed-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-observed-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-observed-share",
+        "statement_type": "derived",
+        "text": "The Campaign 16 Energy & Mining snapshot has observed cell share 0.780191 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-observed-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:63ea0dcca96f15bafce0b36caef684a51bec5355cf5deb6cf3b4b9b38707f49b",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-observed-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-observed-share",
+        "pkg-object-srcpkg-campaign16-energy_mining-observed-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-observed-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-observed-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-observed-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-observed-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-observed-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-missing-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:3b9f9542c40694b3ce0c5eaf4a1bf8bc2cd4e3127e8bab60f2406f6b5cc72620"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-missing-share",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:3b9f9542c40694b3ce0c5eaf4a1bf8bc2cd4e3127e8bab60f2406f6b5cc72620",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:4c5ee5495a2869d3beab8e6da600db412a0c98e264a5c8dc68c048b6c2bfa892",
+      "generated_statements": "sha256:dfb5ed9ec3ed413c7415584dba38fefe1488e41edec3d3ff2f1cc03866bdadaa",
+      "input_set": "sha256:1f9b5229be9a8553862e9699fa37d9e99a724a12eeec3089edd0937223cd7970",
+      "package_manifest": "sha256:46dbc123812bb9a330122a134ea46dca49459202b3666d400fed69d71fcc3330",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "missing share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-missing-share",
+          "eval-srcpkg-campaign16-energy_mining-missing-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-missing-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-missing-share",
+        "statement_type": "negative",
+        "text": "The Campaign 16 Energy & Mining snapshot has explicit missing cell share 0.219809 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-missing-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:9733284565f1f161ba8099e731f394752599de8dc714cb263beed7e0979265b3",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-missing-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-missing-share",
+        "pkg-object-srcpkg-campaign16-energy_mining-missing-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-missing-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-missing-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-missing-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-missing-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-missing-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "missing share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-family-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:2e125778259134f8fd5102c8a0abca39bdb0ce978ef729b42f01f51aae39175c"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-family-count",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:2e125778259134f8fd5102c8a0abca39bdb0ce978ef729b42f01f51aae39175c",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:ba71dafeec243231e0f370ac0bc95617ab2b994a6940c6f02939731676f25cb4",
+      "generated_statements": "sha256:a6fb08ba777de3298944996f510d6d16fbc2bfe42e934f63c3158aae17d7ae4f",
+      "input_set": "sha256:b0d7c9701bd9b3342ea67754b2438e488a6f8b859089cb96249090245e30f18c",
+      "package_manifest": "sha256:0cbfc2d4c7dc110a39715015a6a91d143a18768128654bf8fd1769cab6016e2d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-family-count",
+          "eval-srcpkg-campaign16-energy_mining-family-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-family-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-family-count",
+        "statement_type": "classified",
+        "text": "The Campaign 16 Energy & Mining inventory groups the selected indicators into 5 deterministic metadata families."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-family-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:4ffacc9fe19f208efb58be180bb40a7af74b44375d5492554ecfdd6e26bb3a20",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-family-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-family-count",
+        "pkg-object-srcpkg-campaign16-energy_mining-family-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-family-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-family-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-family-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-family-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-family-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-partial-families"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e9624001adfcb8c323e02c0a4c8b048bd89803589f05b79b27d23eaefb01fc5b"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-partial-families",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:e9624001adfcb8c323e02c0a4c8b048bd89803589f05b79b27d23eaefb01fc5b",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:8bc2558ec0be4b2359eb70cc22dc6fd7e784c5cd1fb74f31b90129dc334eb8ae",
+      "generated_statements": "sha256:15d925c7546012d345503b2c6299c5126064687d4c96fdf8c2305d63c3e1bd73",
+      "input_set": "sha256:b41402ba878abf4003c300e3baf47d3ce193e021aaae1caf2d9c90881a99ac0d",
+      "package_manifest": "sha256:7b606bd11140ee0f89b86ad3808fca03f0c53c91722f86d444c6b1670c53a335",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "partial family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-partial-families",
+          "eval-srcpkg-campaign16-energy_mining-partial-families"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-partial-families"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-partial-families",
+        "statement_type": "negative",
+        "text": "Campaign 16 records 5 Energy & Mining metadata families with explicit missing cells in the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-partial-families"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:31f8935b799891e495ff8064dbc9ea8d49f9638158ea700cf2bcee22eaea380e",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-partial-families",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-partial-families",
+        "pkg-object-srcpkg-campaign16-energy_mining-partial-families"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-partial-families",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-partial-families",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-partial-families"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-partial-families"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-partial-families",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "partial family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-provenance-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:3ef3e8383fd67081ab538e62cf38c3487da58112d5e919f381cdfb900ca5dd54"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-provenance-state",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:3ef3e8383fd67081ab538e62cf38c3487da58112d5e919f381cdfb900ca5dd54",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:f74dfcfc6aef7d8545def9e5b3bafcc9988243ff1fa7f65c8aaf610093728f2e",
+      "generated_statements": "sha256:addeb84da910277a9a12393015980689f706ee8a05f7d2eb27a9cc93fbd59488",
+      "input_set": "sha256:e6c496b56ab81798cbb220a6c504ac627fbde6189b43c443b3f7c5c9dfdd576e",
+      "package_manifest": "sha256:a9ca577a54b5a76b722e14d654517620ba039811181e75a98365209dee73dcda",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "provenance state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-provenance-state",
+          "eval-srcpkg-campaign16-energy_mining-provenance-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-provenance-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-provenance-state",
+        "statement_type": "provenance",
+        "text": "Campaign 16 records WDI Energy & Mining source URLs, raw artifact URLs, raw artifact hashes, release keys, license notes, and WDI last-updated metadata as available in the evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-provenance-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:3c7f66644dcb18881518497c0adf464fc8bdbd11e2394c14894e2583216602c0",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-provenance-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-provenance-state",
+        "pkg-object-srcpkg-campaign16-energy_mining-provenance-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-provenance-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-provenance-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-provenance-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-provenance-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-provenance-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "provenance state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-evidence-quality-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:20deb0f1aeecfc1adf87111340917158df1276e1b3c9fc8fd3aa8080a10ab502"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-evidence-quality-state",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:20deb0f1aeecfc1adf87111340917158df1276e1b3c9fc8fd3aa8080a10ab502",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:68c2000898e5dd64130ca6e6a8d1fb96e04a7e3231974bcebfd820b7c277c37f",
+      "generated_statements": "sha256:6ff24e9904009f3025d93af32110df6de352172819aec7c508160f53c0c72913",
+      "input_set": "sha256:1b8305734a4da5cea3c436079e3bc5cd9e9e07350a419426aa625e0e17c434b9",
+      "package_manifest": "sha256:84055784326f5aeca01772f443a21ff3716c1924e69c65215a018d166e49674d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "evidence quality state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-evidence-quality-state",
+          "eval-srcpkg-campaign16-energy_mining-evidence-quality-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-evidence-quality-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-evidence-quality-state",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 16 records explicit observation status, observed and missing status, WDI-only source scope, and annual-scalar evidence shape for the Energy & Mining family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-evidence-quality-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:fa453d76a0c9b644eb5232dd67eee0b73ab8e8839b55d935e769c6a32bc3ea9f",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-evidence-quality-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-evidence-quality-state",
+        "pkg-object-srcpkg-campaign16-energy_mining-evidence-quality-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-evidence-quality-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-evidence-quality-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-evidence-quality-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-evidence-quality-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-evidence-quality-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "evidence quality state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-energy_mining-unsupported-dimensions"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:66410b8ed6e69df40893c85b3af38c8b2fc9cf62e8c2c7959bfec54a166f9a7f"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-energy_mining-unsupported-dimensions",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:66410b8ed6e69df40893c85b3af38c8b2fc9cf62e8c2c7959bfec54a166f9a7f",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:2765202ab3641476c098198c2479335ea358c22683709629b0789de7cb002dbd",
+      "generated_statements": "sha256:88b1914f8ea5859d7dc54f9eb0ab117b9666a4cfd839c8c8403b9eef9917ed0d",
+      "input_set": "sha256:827cb32e8d6842bab831aa4557f41869abb07ea1da39a2eec2645767844af58b",
+      "package_manifest": "sha256:8666709a2e914100592fd33b666ee24f9b8a7b05dd30ba8cb26eb724046d7303",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "unsupported dimensions"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-energy_mining-unsupported-dimensions",
+          "eval-srcpkg-campaign16-energy_mining-unsupported-dimensions"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-energy_mining-unsupported-dimensions"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-energy_mining-unsupported-dimensions",
+        "statement_type": "negative",
+        "text": "The Campaign 16 Energy & Mining annual-scalar evidence snapshot does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the accepted production scope."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-energy_mining-unsupported-dimensions"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:fb6cadbec865004e5d82bb286c58dfd8a763a1e0b92888ef7f3542af283296c8",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-unsupported-dimensions",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-energy_mining-unsupported-dimensions",
+        "pkg-object-srcpkg-campaign16-energy_mining-unsupported-dimensions"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-energy_mining-unsupported-dimensions",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-energy_mining-unsupported-dimensions",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-energy_mining-unsupported-dimensions"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-energy_mining-unsupported-dimensions"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-energy_mining-unsupported-dimensions",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-replication-contract"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:7b4477d6398a166539ca24d4b17873449a9402c8d5e6b37d390da60228be054d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-replication-contract",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:7b4477d6398a166539ca24d4b17873449a9402c8d5e6b37d390da60228be054d",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:a242cce91b1bd73eef8483b2150ef9182b54852fc366c59183eb196b879d765f",
+      "generated_statements": "sha256:0136477c2d97b1f7dbfce6010e693f2bbaa067ac3c965ad43a7214ce301a9304",
+      "input_set": "sha256:120a8fb3256243f11b3623dab6d18f1f0827edc10c03bbd854a1f00ee0635816",
+      "package_manifest": "sha256:ce7807e87e9adaecf1bbea4b2720afc944851e08619e8980a34a6bcff965c901",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "replication contract"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-replication-contract",
+          "eval-srcpkg-campaign16-replication-contract"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-replication-contract"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-replication-contract",
+        "statement_type": "methodological",
+        "text": "Campaign 16 uses unchanged production workflow, package construction, validator behaviour, Production Support, provenance handling, fingerprinting, reporting, metrics, and Production Evolution Log workflow from the mature WDI demographic production method."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-replication-contract"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:2ed0f6e4612dd3dfa67f792bc2b513e2eba51d386f9ae53b3f0b3aff4497609f",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-replication-contract",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-replication-contract",
+        "pkg-object-srcpkg-campaign16-replication-contract"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-replication-contract",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-replication-contract",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-replication-contract"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-replication-contract"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-replication-contract",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "replication contract"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-deterministic-transfer-method"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:8a76296fb794726c19fa66b0b3b267ce2ae0550ad56d40be998c4832c3fb6fbf"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-deterministic-transfer-method",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:8a76296fb794726c19fa66b0b3b267ce2ae0550ad56d40be998c4832c3fb6fbf",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:68658e7130c5be80d64b33c0f0902e50d77aebbc9aac7c6c26a128ab0fe40b65",
+      "generated_statements": "sha256:9d2fd86ed49e7664e5d553d5531db12d65988c3387ca6b29334c92448c8ce645",
+      "input_set": "sha256:486f18f22ee5f4d9bf8d75d5c6b89b0a9a21f188830aaeb641fecbcad710d07b",
+      "package_manifest": "sha256:808174c53f2bb080ea95238bb312901de08b6d21715bd51febedaf9545711d37",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "deterministic transfer method"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-deterministic-transfer-method",
+          "eval-srcpkg-campaign16-deterministic-transfer-method"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-deterministic-transfer-method"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-deterministic-transfer-method",
+        "statement_type": "methodological",
+        "text": "Campaign 16 derives Energy & Mining evidence-quality and coverage objects deterministically from the immutable Energy & Mining evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-deterministic-transfer-method"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:539b03d75f4d32ea6ca7289382e5b52a967a63dfd87021f023ec63a8697b6296",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-deterministic-transfer-method",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-deterministic-transfer-method",
+        "pkg-object-srcpkg-campaign16-deterministic-transfer-method"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-deterministic-transfer-method",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-deterministic-transfer-method",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-deterministic-transfer-method"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-deterministic-transfer-method"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-deterministic-transfer-method",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "deterministic transfer method"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-family-energy-access-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:c9fe88c48294f01a1c72129ab10684499283dd7babde0ff59700f160241a9fce"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-family-energy-access-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:c9fe88c48294f01a1c72129ab10684499283dd7babde0ff59700f160241a9fce",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:47cdb1b31d959c6921f6b1add433c9015d2a1f810fd423b56e181c5939d6f15c",
+      "generated_statements": "sha256:d3bd00998d65a8ef35d141e0c00c097eb93b1d8278e08fe632b8ac1cd04cc398",
+      "input_set": "sha256:df029bd7320034d5c6a24ebbb4946f92088e9beeef0fe3321431b59b1de72179",
+      "package_manifest": "sha256:f23b06a83cfcdd5358d29dcba134cf26ce6ff6645aba3650d6a5bb0998a6082e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "energy and mining metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-family-energy-access-metadata",
+          "eval-srcpkg-campaign16-family-energy-access-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-family-energy-access-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-family-energy-access-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 16 records 31 annual-scalar indicators for the energy_access_metadata Energy & Mining metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-family-energy-access-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c30ba7d3474226e9ac6db5d08683b7a86279df2986ebadcf12ee0fc91dea33ad",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-family-energy-access-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-family-energy-access-metadata",
+        "pkg-object-srcpkg-campaign16-family-energy-access-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-family-energy-access-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-family-energy-access-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-family-energy-access-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-family-energy-access-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-family-energy-access-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "energy and mining metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-family-energy-production-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:7d1d5e3c40284f0b5433c7ef9a2d9eeef527647bf6ea58c5c5992564e0d81b64"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-family-energy-production-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:7d1d5e3c40284f0b5433c7ef9a2d9eeef527647bf6ea58c5c5992564e0d81b64",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:f66688bb37b05e98b6479c5f82a586e77465d92910f6062ef59b15051e9f1dbf",
+      "generated_statements": "sha256:3969e6c228f371e973c6df6dd65c660431a5dd8ed7766e63e1e29eebb10d5485",
+      "input_set": "sha256:f285653822ee70a47b173229f70218b15f9f216bf3263e164cd7254fe4a22edc",
+      "package_manifest": "sha256:56778ceca8f57d483afedd8a108b3edc014633acc8e6911a75b5c5059d33e9d9",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "energy and mining metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-family-energy-production-metadata",
+          "eval-srcpkg-campaign16-family-energy-production-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-family-energy-production-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-family-energy-production-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 16 records 28 annual-scalar indicators for the energy_production_metadata Energy & Mining metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-family-energy-production-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:5f2efae0d1232310b4a6d1be5c3d0260d92502d53feb02a999bfe95eb8439153",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-family-energy-production-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-family-energy-production-metadata",
+        "pkg-object-srcpkg-campaign16-family-energy-production-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-family-energy-production-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-family-energy-production-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-family-energy-production-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-family-energy-production-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-family-energy-production-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "energy and mining metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-family-energy-use-efficiency-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e62bedcf06c26155991e3ba94e0f161ddd7856adeefc7b0ff4de4a8294b9fcb9"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-family-energy-use-efficiency-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:e62bedcf06c26155991e3ba94e0f161ddd7856adeefc7b0ff4de4a8294b9fcb9",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c7a229a265d30102853a4a834387396cbae15c83961353ab3399863cf80636ef",
+      "generated_statements": "sha256:c8c75089a7369230c7a0eaf6befb3d764f2fd866fe10a727445b1fbf8186367d",
+      "input_set": "sha256:48eea8ed9a56efa24e806e2f75238be692ccee7f903ab918c665b7426128a0e8",
+      "package_manifest": "sha256:6c6cb8cc55bba68fcd177da20e1fd887fe7910a304183825d2a6c20db6054076",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "energy and mining metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-family-energy-use-efficiency-metadata",
+          "eval-srcpkg-campaign16-family-energy-use-efficiency-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-family-energy-use-efficiency-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-family-energy-use-efficiency-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 16 records 27 annual-scalar indicators for the energy_use_efficiency_metadata Energy & Mining metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-family-energy-use-efficiency-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:34248ab4d61dab51e865809bcfe69001a74c564bfb46aeded397f1a97b553964",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-family-energy-use-efficiency-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-family-energy-use-efficiency-metadata",
+        "pkg-object-srcpkg-campaign16-family-energy-use-efficiency-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-family-energy-use-efficiency-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-family-energy-use-efficiency-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-family-energy-use-efficiency-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-family-energy-use-efficiency-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-family-energy-use-efficiency-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "energy and mining metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-family-mining-and-extractives-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:85aa53f0f51ba3f2870d087a844ad11f5feecf6626a01c82b27919666149cbc3"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-family-mining-and-extractives-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:85aa53f0f51ba3f2870d087a844ad11f5feecf6626a01c82b27919666149cbc3",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:3d096f8427f0aac9f386af2c58f6269a839c51742fb8c8eb46979a83e77363ef",
+      "generated_statements": "sha256:d9d3fc73d42dc23def125afa2fbbc73112a8bb91190a9f022f23108993e507d3",
+      "input_set": "sha256:a42389c71258a9f697f2a5a95d241f9038dfb2067fc187095d2ae8dd07e7b5b7",
+      "package_manifest": "sha256:e1e1c6cf3f7cf798eebea07407be0e3faf1999e60098114d68af756b13b128c6",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "energy and mining metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-family-mining-and-extractives-metadata",
+          "eval-srcpkg-campaign16-family-mining-and-extractives-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-family-mining-and-extractives-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-family-mining-and-extractives-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 16 records 26 annual-scalar indicators for the mining_and_extractives_metadata Energy & Mining metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-family-mining-and-extractives-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:15326b1b1068666587bf92d5877889ac035e8c3b046423dee2989189d75f3a00",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-family-mining-and-extractives-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-family-mining-and-extractives-metadata",
+        "pkg-object-srcpkg-campaign16-family-mining-and-extractives-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-family-mining-and-extractives-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-family-mining-and-extractives-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-family-mining-and-extractives-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-family-mining-and-extractives-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-family-mining-and-extractives-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "energy and mining metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign16-family-emissions-energy-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6431a8628033290cb638bdfcc3474bbd2ecfac74f3f6d7de58a820da976f7e78"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign16-family-emissions-energy-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign16_wdi_energy_mining_transfer.py --output artifacts/production/campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:6431a8628033290cb638bdfcc3474bbd2ecfac74f3f6d7de58a820da976f7e78",
+        "source_family": "external_wdi_annual_scalar_energy_mining",
+        "source_identity": "World Bank World Development Indicators audited Energy & Mining evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:5f149fd9c0da2a04290f0fa615f15f469d58350fe6c568fe9ef41a7499348264",
+      "generated_statements": "sha256:04fbc6db59c6a826da2077e70467010ae43ae3d7e0669670cc1baca80af2874a",
+      "input_set": "sha256:0d34a4b0bc804398d1e6d9b0e87ead784eacb8a427ef16cb83c3e605b1c4f9bd",
+      "package_manifest": "sha256:bcc71e67e244dc9cc39d6db772d3e065780d33a25aac65158f2c31b4c6659077",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "energy and mining metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign16-family-emissions-energy-metadata",
+          "eval-srcpkg-campaign16-family-emissions-energy-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign16-family-emissions-energy-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign16-family-emissions-energy-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 16 records 26 annual-scalar indicators for the emissions_energy_metadata Energy & Mining metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign16-family-emissions-energy-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:4ee3e56d6f2db081804290f0e428ff3ab500d0954a0ff2a58eca591a1a6b3d1f",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign16-family-emissions-energy-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign16-family-emissions-energy-metadata",
+        "pkg-object-srcpkg-campaign16-family-emissions-energy-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign16-family-emissions-energy-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign16-family-emissions-energy-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign16-family-emissions-energy-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign16-family-emissions-energy-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign16-family-emissions-energy-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-16-wdi-energy-mining-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar energy and mining evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "energy and mining metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

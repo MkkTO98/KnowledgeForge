@@ -1,0 +1,147 @@
+{
+  "combined_fixture_fingerprint": "sha256:05ec15d09892d5054e5107ff98c3960cc939580752af589fddb4fac1e7ca3775",
+  "fixture_kind": "Campaign38FrozenDualSeriesWDIFixture",
+  "scope": {
+    "campaign_name": "Campaign 38 — Semantically Distinct WDI Pearson Correlation Pilot",
+    "construction_risk_findings": {
+      "algebraic_identity": "not_present",
+      "common_administrative_reporting_process": "not_present",
+      "common_modeled_estimation_procedure": "material_limitation",
+      "definitional_overlap": "not_present",
+      "direct_component_total_construction": "not_present",
+      "frequency_mismatch": "not_present",
+      "one_series_embedded_in_other": "not_present",
+      "shared_denominator": "not_present",
+      "transformation_mismatch": "not_present",
+      "unit_mismatch": "ordinary_contextual_limitation_different_units_expected"
+    },
+    "coverage_threshold": "0.85",
+    "entity_id": "DNK",
+    "entity_name": "Denmark",
+    "evidence_family": "external_wdi_annual_scalar_demographic_pearson_correlation",
+    "expected_aligned_pairs": 35,
+    "expected_package_count": 1,
+    "expected_slots": 70,
+    "frequency": "annual",
+    "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+    "method_identity": "wdi_annual_scalar_pearson_correlation_v1@1.0",
+    "minimum_aligned_pairs": 30,
+    "period": {
+      "end": 2024,
+      "start": 1990
+    },
+    "series_a": {
+      "code": "SP.DYN.LE00.IN",
+      "definition": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+      "name": "Life expectancy at birth, total (years)",
+      "unit": "years"
+    },
+    "series_b": {
+      "code": "SP.DYN.TFRT.IN",
+      "definition": "Total fertility rate represents the number of children that would be born to a woman if she were to live to the end of her childbearing years and bear children in accordance with age-specific fertility rates of the specified year.",
+      "name": "Fertility rate, total (births per woman)",
+      "unit": "births per woman"
+    },
+    "transformation_state": "raw",
+    "validation_rejection_rules": [
+      "aligned pairs < 30",
+      "coverage < 0.85",
+      "duplicate keys",
+      "unresolved unit",
+      "constant series",
+      "zero variance",
+      "scope mismatch",
+      "fingerprint/provenance failure",
+      "nondeterministic normalization/alignment"
+    ]
+  },
+  "selection_decision_fingerprint": "sha256:673084540acbd2fad36964951d3f9f2a0c26328af596867572c2b662770f8930",
+  "series": {
+    "a": {
+      "code": "SP.DYN.LE00.IN",
+      "expected_unit": "years",
+      "lastupdated": "2026-07-01",
+      "metadata": {
+        "id": "SP.DYN.LE00.IN",
+        "name": "Life expectancy at birth, total (years)",
+        "source": {
+          "id": "2",
+          "value": "World Development Indicators"
+        },
+        "sourceNote": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+        "sourceOrganization": "World Population Prospects, United Nations (UN), uri: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs), note: Derived from male and female life expectancy at birth from sources such as statistical databases and publications from national statistical offices.;\nDemographic Statistics, Eurostat (ESTAT), note: Derived from male and female life expectancy at birth from sources such as Eurostat: Demographic Statistics.",
+        "topics": [
+          {
+            "id": "8",
+            "value": "Health "
+          }
+        ],
+        "unit": ""
+      },
+      "metadata_final_url": "https://api.worldbank.org/v2/indicator/SP.DYN.LE00.IN?format=json&per_page=1",
+      "metadata_raw_fingerprint": "sha256:fe93a3e40f941546ba47fa7e7134f165b212d95e498868560d4c1c18f9ed0210",
+      "metadata_requested_url": "https://api.worldbank.org/v2/indicator/SP.DYN.LE00.IN?format=json&per_page=1",
+      "observation_final_url": "https://api.worldbank.org/v2/country/DNK/indicator/SP.DYN.LE00.IN?format=json&date=1990:2024&per_page=20000",
+      "observation_raw_fingerprint": "sha256:1c3e635dabc11159ce61b5f14489e526de15275f6644dd6958ac275b72635329",
+      "observation_requested_url": "https://api.worldbank.org/v2/country/DNK/indicator/SP.DYN.LE00.IN?format=json&date=1990:2024&per_page=20000",
+      "pagination": {
+        "lastupdated": "2026-07-01",
+        "page": 1,
+        "pages": 1,
+        "per_page": 20000,
+        "sourceid": "2",
+        "total": 35
+      },
+      "provider_source": {
+        "source": "World Development Indicators",
+        "sourceid": "2"
+      },
+      "role": "series_a"
+    },
+    "b": {
+      "code": "SP.DYN.TFRT.IN",
+      "expected_unit": "births per woman",
+      "lastupdated": "2026-07-01",
+      "metadata": {
+        "id": "SP.DYN.TFRT.IN",
+        "name": "Fertility rate, total (births per woman)",
+        "source": {
+          "id": "2",
+          "value": "World Development Indicators"
+        },
+        "sourceNote": "Total fertility rate represents the number of children that would be born to a woman if she were to live to the end of her childbearing years and bear children in accordance with age-specific fertility rates of the specified year.",
+        "sourceOrganization": "World Population Prospects, United Nations (UN), publisher: UN Population Division;\nStatistical databases and publications from national statistical offices, National Statistical Offices (NSOs);\nDemographic Statistics, Eurostat (ESTAT)",
+        "topics": [
+          {
+            "id": "8",
+            "value": "Health "
+          },
+          {
+            "id": "17",
+            "value": "Gender"
+          }
+        ],
+        "unit": ""
+      },
+      "metadata_final_url": "https://api.worldbank.org/v2/indicator/SP.DYN.TFRT.IN?format=json&per_page=1",
+      "metadata_raw_fingerprint": "sha256:44d46aa90ab6733447d7da9c1363a5f9b0e4b81a637f5a5d6451bb767249242c",
+      "metadata_requested_url": "https://api.worldbank.org/v2/indicator/SP.DYN.TFRT.IN?format=json&per_page=1",
+      "observation_final_url": "https://api.worldbank.org/v2/country/DNK/indicator/SP.DYN.TFRT.IN?format=json&date=1990:2024&per_page=20000",
+      "observation_raw_fingerprint": "sha256:247a8f8a34b1f0847a573d80878f36f4caa2ad1d41ede58c97444079cc9a26f3",
+      "observation_requested_url": "https://api.worldbank.org/v2/country/DNK/indicator/SP.DYN.TFRT.IN?format=json&date=1990:2024&per_page=20000",
+      "pagination": {
+        "lastupdated": "2026-07-01",
+        "page": 1,
+        "pages": 1,
+        "per_page": 20000,
+        "sourceid": "2",
+        "total": 35
+      },
+      "provider_source": {
+        "source": "World Development Indicators",
+        "sourceid": "2"
+      },
+      "role": "series_b"
+    }
+  }
+}

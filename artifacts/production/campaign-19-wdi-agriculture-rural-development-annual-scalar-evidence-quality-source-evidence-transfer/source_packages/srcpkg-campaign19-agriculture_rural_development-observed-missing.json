@@ -1,0 +1,81 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_agriculture_rural_development_snapshot_characteristic",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+      "source_snapshot_fingerprint": "sha256:ff98a122c36379580ea052c86b4598947cc6f143b237a9ff05f521a759b5a48a",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "The Campaign 19 Agriculture & Rural Development snapshot records 610840 observed cells and 143310 explicit missing cells.",
+    "knowledge_category": "coverage",
+    "payload_metadata": {
+      "explicit_missing_cells": 143310,
+      "observed_cells": 610840,
+      "topic": "observed missing coverage"
+    },
+    "scope": {
+      "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "observed missing coverage"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:7646895bbfcd4da977c5ae9db0a917bd77b48d1a0b68cf2d7667f3e778fc2110",
+    "provenance": "sha256:30b3a1bc677bab3c0ab4b21faa7d2d394cc22eb8b6de69d9ce45886a7e7da5cc",
+    "reproducibility": "sha256:58fde778f206ecb666bf26bba6b8aff80b58c20b909399b815ebdb9b5936f7f2",
+    "source_payload": "sha256:cc4dd5d7b6b7a825094d7c0030a63f77acfc4bb12cb46dd6ea009e1d07bedecd"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md",
+      "artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md",
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-18-wdi-energy-mining-provenance-lineage-closeout/production_quality_report.json",
+      "artifacts/production/campaign-18-wdi-energy-mining-provenance-lineage-closeout/reports/family_closeout_report.md"
+    ],
+    "selection_rule": "Phase 2 Production Roadmap selected WDI Agriculture & Rural Development annual-scalar evidence as the next production family after WDI Energy & Mining reached Mature",
+    "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:ff98a122c36379580ea052c86b4598947cc6f143b237a9ff05f521a759b5a48a"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI Agriculture & Rural Development evidence snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign19-agriculture_rural_development-observed-missing",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+    "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+    "source_version": "sha256:ff98a122c36379580ea052c86b4598947cc6f143b237a9ff05f521a759b5a48a"
+  }
+}

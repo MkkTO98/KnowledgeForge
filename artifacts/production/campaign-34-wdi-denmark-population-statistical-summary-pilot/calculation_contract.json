@@ -1,0 +1,28 @@
+{
+  "arithmetic_mean_formula": "sum(observed_values) / observed_count",
+  "calculation_contract_fingerprint": "sha256:31c994804e55f124778e201c5f76ea50adcce4af147dfe4c7073e21de5b7afce",
+  "contract_id": "campaign34-statistical-calculation-contract-v1",
+  "decimal_parsing_method": "Decimal from canonical base-10 strings",
+  "deterministic_serialization": "JSON sort_keys=True separators=(',', ':') for fingerprints; pretty JSON for artifacts",
+  "excluded_measures": [
+    "selected distribution cutpoints"
+  ],
+  "input_normalized_fingerprint": "sha256:cce0367fc05bf8ad974a14593eec8e2d4f8fdf7fafced1976d9001c9c1eaeb93",
+  "internal_precision": "Python Decimal default context precision observed by this toolchain",
+  "median_rule": "sort observed values ascending; for odd N use middle value; for even N average the two middle values",
+  "method_id": "wdi_denmark_population_statistical_summary_v1",
+  "method_version": "1.0",
+  "minimum_coverage_share": "0.85",
+  "minimum_observed_count": 30,
+  "missing_observation_treatment": "preserve missing rows; compute numerical measures over observed values only; report missing count/share separately",
+  "output_precision": "canonical Decimal engineering string without binary floating point",
+  "rounding_mode": "ROUND_HALF_EVEN",
+  "stable_ordering": [
+    "entity_id",
+    "indicator_code",
+    "period"
+  ],
+  "standard_deviation": "population standard deviation, denominator N",
+  "standard_deviation_formula": "sqrt(sum((x - mean)^2) / N)",
+  "summation_method": "deterministic left-to-right Decimal summation after canonical period ordering"
+}

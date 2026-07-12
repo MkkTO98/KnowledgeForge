@@ -1,0 +1,146 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign7-license-note-coverage"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign7-license-note-coverage",
+      "reproducibility_handle": "python3 tools/run_campaign7_wdi_provenance_lineage.py --output artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+      "snapshot_fingerprint": "sha256:588162ee32d1a8a5e15597fd2240553c8abe18330d6624e9bb4a486551ed246a",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_provenance_lineage",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure provenance lineage snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:c9eff69a27ebf17683e821a8e2541d0e8d06812555659e35e4fc6db7f2218bab",
+    "generated_statements": "sha256:857bc22ea17eda11f066ad119b3f8fffd2fdb2978011fe3ffd6bd85e2bbe8562",
+    "input_set": "sha256:e06fe86769a92755f14498116a9f5ac8c3178513130c7ea1b61c0291dac6a3d0",
+    "package_manifest": "sha256:bffc7b150cf5c61d73599d7f1a1b5feeee7a890bf8ac37d4a239e4c2821af106",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+        "domain": "WDI annual-scalar demographic-structure provenance lineage completeness",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_provenance_lineage_metadata",
+        "topic": "license note coverage"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign7-license-note-coverage",
+        "eval-srcpkg-campaign7-license-note-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign7-license-note-coverage"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign7-license-note-coverage",
+      "statement_type": "coverage",
+      "text": "Campaign 7 records license notes for 4 audited WDI demographic artifacts."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign7-license-note-coverage"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign7-license-note-coverage",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign7-license-note-coverage"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign7-license-note-coverage"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign7-license-note-coverage",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure provenance lineage completeness",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_provenance_lineage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+      "domain": "WDI annual-scalar demographic-structure provenance lineage completeness",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_provenance_lineage_metadata",
+      "topic": "license note coverage"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

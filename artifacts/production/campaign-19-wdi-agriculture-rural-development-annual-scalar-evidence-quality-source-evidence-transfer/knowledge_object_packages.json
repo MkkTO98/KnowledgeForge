@@ -1,0 +1,3422 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-source-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:bde9ac9a0ba359805b95380fb4676c29bdb170861c3945d03e4e26f56d698cbf"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-source-scope",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:bde9ac9a0ba359805b95380fb4676c29bdb170861c3945d03e4e26f56d698cbf",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:cc42feb2efcf64f705918eb7697504954de68498a1000d3dfe28eb6b54790d7e",
+      "generated_statements": "sha256:b085ec0b0987b13256091023f79212187e39f729c7095657e3061ab76344795b",
+      "input_set": "sha256:9456c9b30e9f71eaefc35470e05392bad4401536cf5e4f6baff07b458c6c33dc",
+      "package_manifest": "sha256:8375d49ccfacaaad50023b3efe36bfca2f968da23647bc4f39c9fc675c717f59",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "source scope"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-source-scope",
+          "eval-srcpkg-campaign19-agriculture_rural_development-source-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-source-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-source-scope",
+        "statement_type": "factual",
+        "text": "The Campaign 19 source evidence package is scoped to World Bank WDI annual-scalar Agriculture & Rural Development evidence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-source-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c6c653b4d7f22e0aaefa25ec031d3e8f7a0d3da706efe47611d12af34122e5b5",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-source-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-source-scope",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-source-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-source-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-source-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-source-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-source-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-source-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "source scope"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-topic-inventory"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:1fefe325a8ad49e43f0b860ebdb70843f2d3d77476ac8a5147d30b3d1971987d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-topic-inventory",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:1fefe325a8ad49e43f0b860ebdb70843f2d3d77476ac8a5147d30b3d1971987d",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:98505847e6319b0fa7cebef21bfe079819991d98807aa49a7f72b0f3d83b167a",
+      "generated_statements": "sha256:1ce118c518f86a33cf8c7391bb56fd6168087e6900e1d8a9002e2f193109ca64",
+      "input_set": "sha256:96f6b77fe60b882f8501398256079c5d46b8a47e5aceab1791c28526327ee2fa",
+      "package_manifest": "sha256:4f4b64d0f64108b749b7816a1fdfadca2f10ef5f825319f8453eec91da130c34",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "indicator coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-topic-inventory",
+          "eval-srcpkg-campaign19-agriculture_rural_development-topic-inventory"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-topic-inventory"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-topic-inventory",
+        "statement_type": "coverage",
+        "text": "The audited WDI Agriculture & Rural Development topic inventory records 126 annual-scalar indicators."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-topic-inventory"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:18a4ea417b6bb61280a8302b1e87ab067541de6aec6e2f0158b4369699fbed38",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-topic-inventory",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-topic-inventory",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-topic-inventory"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-topic-inventory",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-topic-inventory",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-topic-inventory"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-topic-inventory"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-topic-inventory",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "indicator coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-territory-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:8d5fd5f9db4e65e589c935639035b71d1298d688e88d1e15a5137f277291ff7c"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-territory-scope",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:8d5fd5f9db4e65e589c935639035b71d1298d688e88d1e15a5137f277291ff7c",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:ab71593f32c30a4eee5128f94280a56b944932da4f92c2374768f09e1fcfd066",
+      "generated_statements": "sha256:029e5f39a7696d7d692157840f69fcafebbe7d5f69e2d5f84c89e736217621cb",
+      "input_set": "sha256:28496180575db1aa73d7dcf72b3c6391ef1e68369cbbaca9a9047fea996342f7",
+      "package_manifest": "sha256:7b91ec946e74d32651450d7468677a6fce7966574a0310238166a99fa9b91437",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "territory coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-territory-scope",
+          "eval-srcpkg-campaign19-agriculture_rural_development-territory-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-territory-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-territory-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 19 uses the same audited WDI territory scope count of 217 non-aggregate or country-like territories."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-territory-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:dd6df83f9d64d73a31b010e469454be5c8643eaa6b7ccd802063dcf736901705",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-territory-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-territory-scope",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-territory-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-territory-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-territory-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-territory-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-territory-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-territory-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "territory coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-period-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:ba0a89b7eb3f7341078c3885f75b1deb08260b9914b1ecb31c4aefea48450e6d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-period-scope",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:ba0a89b7eb3f7341078c3885f75b1deb08260b9914b1ecb31c4aefea48450e6d",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:d0e916a45d06936f8be7642d0aa2b45d59de176523a05f83d52cb326c840d307",
+      "generated_statements": "sha256:7ac715bff015600879b536c171311a812f3c73709d1c7737792200b033996880",
+      "input_set": "sha256:299fc98c45859b14b7257bb719ff919e679b494259fb4d33d61e8dd6079e906f",
+      "package_manifest": "sha256:c4494bdaa3c6cb0af944ab095f9bca08226cc6e06de9c3c643310550839a9fb2",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "temporal coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-period-scope",
+          "eval-srcpkg-campaign19-agriculture_rural_development-period-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-period-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-period-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 19 uses 35 annual periods from 1990 through 2024 for Agriculture & Rural Development evidence coverage."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-period-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:14320fc95712ea25c35948a9e79cf0961368b06b0098dafc09136b04cabe17a5",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-period-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-period-scope",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-period-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-period-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-period-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-period-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-period-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-period-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "temporal coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-observed-missing"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:7646895bbfcd4da977c5ae9db0a917bd77b48d1a0b68cf2d7667f3e778fc2110"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-observed-missing",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:7646895bbfcd4da977c5ae9db0a917bd77b48d1a0b68cf2d7667f3e778fc2110",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:99b8a01003e5c9fa90c0d6d7ea15accd526f0487cfa0a58528aaf1d13977ee50",
+      "generated_statements": "sha256:8ff4f716d4900e7f194faa58ced6cde31f7ab2909d7ebc24493f068108d915af",
+      "input_set": "sha256:53f638fde8e792eb135ec62ec28c0fbcb070132200b73bfea17c35a113ffcecf",
+      "package_manifest": "sha256:14a8fdafb840014aa79f06b38a6745880c3f1672cb1b7587de9b88b292fdb338",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed missing coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-observed-missing",
+          "eval-srcpkg-campaign19-agriculture_rural_development-observed-missing"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-observed-missing"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-observed-missing",
+        "statement_type": "coverage",
+        "text": "The Campaign 19 Agriculture & Rural Development snapshot records 610840 observed cells and 143310 explicit missing cells."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-observed-missing"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:76ce1e2584d91971d888e1a059b3978a0d859982013203b4a2f11025804e75ff",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-observed-missing",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-observed-missing",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-observed-missing"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-observed-missing",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-observed-missing",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-observed-missing"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-observed-missing"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-observed-missing",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed missing coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-observed-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6d561f1fce01c3d0f5cdcabc81ebd567b1117386b1d2cb2902c65bf952380948"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-observed-share",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:6d561f1fce01c3d0f5cdcabc81ebd567b1117386b1d2cb2902c65bf952380948",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:159b6d4f37207e3f257941031f90e0df7af9b4f73b36be5a606cc35a984a0615",
+      "generated_statements": "sha256:2867da14172e4a62dd654d07bc509a650e47c169dce55cb7cddfa13ab90e7cb0",
+      "input_set": "sha256:8868ce2b7c1e775590a5e037077109838f0bc4a9fe2d576eebdd72a26866e682",
+      "package_manifest": "sha256:9702a9e3b5429327dab96c1153bb5a7f46e522a0a3fb68005d5924479a9b641d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-observed-share",
+          "eval-srcpkg-campaign19-agriculture_rural_development-observed-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-observed-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-observed-share",
+        "statement_type": "derived",
+        "text": "The Campaign 19 Agriculture & Rural Development snapshot has observed cell share 0.809971 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-observed-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:87ac3d1487639d7ac0594a7e66301a4d9a125b9f55c9e45dc882f17e0c3c7a4f",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-observed-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-observed-share",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-observed-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-observed-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-observed-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-observed-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-observed-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-observed-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-missing-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:305668bd2924d166314ce69939916898a07bc081373aa286c5f619833b08e1dc"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-missing-share",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:305668bd2924d166314ce69939916898a07bc081373aa286c5f619833b08e1dc",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:2f8312b95afe600ea3fe940d69080fd1c38622add1334d131b412a789f21eb02",
+      "generated_statements": "sha256:0b7418552f36a883985853cbe902e27d958df8fd5122f1a25c8351576bccacbf",
+      "input_set": "sha256:5e193d746daa7f458b0d5840a2414901e4a9f3c6f62a6d32adff1775863a300e",
+      "package_manifest": "sha256:91301faceccd8241fd63948189c0d7d9be9b0d75f6233db2b42e6a59db6b791f",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "missing share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-missing-share",
+          "eval-srcpkg-campaign19-agriculture_rural_development-missing-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-missing-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-missing-share",
+        "statement_type": "negative",
+        "text": "The Campaign 19 Agriculture & Rural Development snapshot has explicit missing cell share 0.190029 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-missing-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:f66cc99824d826c5ac39d9ba5ca8fbf1a43e5f6b33b8345d7fca79e26ea296db",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-missing-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-missing-share",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-missing-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-missing-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-missing-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-missing-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-missing-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-missing-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "missing share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-family-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:38c2f76f917a5a746c46dc82d989a99efae7d4497dbc1b8f2c7ee7e31021ad3c"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-family-count",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:38c2f76f917a5a746c46dc82d989a99efae7d4497dbc1b8f2c7ee7e31021ad3c",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:7445b0fb38da98abb39653972723aeddbde556df4546fd42d870c1e7168a02c8",
+      "generated_statements": "sha256:c511ac0b4b42d6f4913eb50b4a8c4eec88dda6697cb3aed7b1b665649368e03c",
+      "input_set": "sha256:f778eed2b964114277add4e1c4fe272afaea05fb3ad7ebd1657be44d4e0978ee",
+      "package_manifest": "sha256:8dc5099efab9f650651581d61377e5e7816e7bdbc1a1fd496fcaa9295e4ef650",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-family-count",
+          "eval-srcpkg-campaign19-agriculture_rural_development-family-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-family-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-family-count",
+        "statement_type": "classified",
+        "text": "The Campaign 19 Agriculture & Rural Development inventory groups the selected indicators into 5 deterministic metadata families."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-family-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:aa1775c3631ec93b58b8422fd2c5e2003e7cb2a4d2c0823e515404a2a0815102",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-family-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-family-count",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-family-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-family-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-family-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-family-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-family-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-family-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-partial-families"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:011f569c49f077d89f2fb4fd5f41c7af4ce044ffe25ce9c456a909f70167d507"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-partial-families",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:011f569c49f077d89f2fb4fd5f41c7af4ce044ffe25ce9c456a909f70167d507",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:26205aee05c0802449b3393f389ad0f05037c880263b596c3169f039bcbf413d",
+      "generated_statements": "sha256:7cbcbff9924a54cf236e75542f01e728610af84d55a23009c99d6908fe36f8a2",
+      "input_set": "sha256:cad6030d52f1e100dad7d385ed5c0522176e41d8b4541e6d858fc28be27adf21",
+      "package_manifest": "sha256:6986309586a18fd3926c4c40b9ec8ba9f3a129c70336ff4b5abad69b61e5e322",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "partial family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-partial-families",
+          "eval-srcpkg-campaign19-agriculture_rural_development-partial-families"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-partial-families"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-partial-families",
+        "statement_type": "negative",
+        "text": "Campaign 19 records 5 Agriculture & Rural Development metadata families with explicit missing cells in the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-partial-families"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:4919f56ac742ddb2611234e668f27c26ab39a4fd0c5743f4f3ab19e7099460c4",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-partial-families",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-partial-families",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-partial-families"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-partial-families",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-partial-families",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-partial-families"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-partial-families"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-partial-families",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "partial family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-provenance-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:94c496e3563c4444daec7387f134e6754260dd6b43299bfa6028b1e50935aa0f"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-provenance-state",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:94c496e3563c4444daec7387f134e6754260dd6b43299bfa6028b1e50935aa0f",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:04503a96e063f182c12fd4882c57a33a120720a3d02b14f38e95575f187855d7",
+      "generated_statements": "sha256:4c7ae5ae8533c2bd433ffe176e70477187d68296a5d6990166baa2dc488cbf54",
+      "input_set": "sha256:162fb302004e1d37370ebae1bfa4d5e83d55c83a6e95654cdf5d8a5be95d23d5",
+      "package_manifest": "sha256:342512f478feeab41d2513f860956a087d955969cedef378d750625dcc4318f8",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "provenance state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-provenance-state",
+          "eval-srcpkg-campaign19-agriculture_rural_development-provenance-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-provenance-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-provenance-state",
+        "statement_type": "provenance",
+        "text": "Campaign 19 records WDI Agriculture & Rural Development source URLs, raw artifact URLs, raw artifact hashes, release keys, license notes, and WDI last-updated metadata as available in the evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-provenance-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b90a7d5d610cc9a585eb7353571f8ad43eb9405d4675e3553ba810e4e5e8691a",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-provenance-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-provenance-state",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-provenance-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-provenance-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-provenance-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-provenance-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-provenance-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-provenance-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "provenance state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:5310e2efbaee8685f18ff8cbbdc7954999e3d711e71c1b3e498c6abde8e88309"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:5310e2efbaee8685f18ff8cbbdc7954999e3d711e71c1b3e498c6abde8e88309",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:acd9144d59be14a2e97e6571752972bed7e3374a3c86307a0842ad1e93cafd07",
+      "generated_statements": "sha256:b33f9516ee028a6a8d7faca663a729152b3b6c3dd5d67c10ef0030183a18e95c",
+      "input_set": "sha256:5f2bdc542cd66800c5c0147fa9e224841f5726826f3f26ac130651bd8ca38fd7",
+      "package_manifest": "sha256:3c56cc0472e47ff6904746ded1b10743386a93de53bcc3d00409087ab6478292",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "evidence quality state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state",
+          "eval-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 19 records explicit observation status, observed and missing status, WDI-only source scope, and annual-scalar evidence shape for the Agriculture & Rural Development family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-evidence-quality-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:08f6a38467f164efe6b7c3ee6ee29ee52ebe3951805f1003491903b87bf53ed7",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-evidence-quality-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "evidence quality state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:012a25d9f0bbdcec60a7af1548e6096e4e19ac465dba997ec0d31d0d5ee2a0b9"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:012a25d9f0bbdcec60a7af1548e6096e4e19ac465dba997ec0d31d0d5ee2a0b9",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:9a47e159b2a829d518acc8ce4d44c49594ed30145f417d6d633164c06b5c59ed",
+      "generated_statements": "sha256:60966e287d8c72045eea19d9924bc132cfab4acd8da5409167d98a579ea10d6d",
+      "input_set": "sha256:c7943bb3e257f0f84bb37441b71dfb94ce53b15548f9106792bff0e7202d8aec",
+      "package_manifest": "sha256:fd3762544b4e42519ba3055f4652ddba7ffac1f0f603dc857430f1363d0bf685",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "unsupported dimensions"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions",
+          "eval-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions",
+        "statement_type": "negative",
+        "text": "The Campaign 19 Agriculture & Rural Development annual-scalar evidence snapshot does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the accepted production scope."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:eba9c7e2589509b2787fe917ad80722e1434afcd1e302ae3afe33c1dc9f87101",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions",
+        "pkg-object-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-agriculture_rural_development-unsupported-dimensions",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-replication-contract"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e82e7fccea613bf6c58d84c3d100526be6fb36fc2bf535fd8bf10b702c57ac38"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-replication-contract",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:e82e7fccea613bf6c58d84c3d100526be6fb36fc2bf535fd8bf10b702c57ac38",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:7099276b170c868350896143104112baf13e23d7babe9d3b1de040465769e3ec",
+      "generated_statements": "sha256:713d14acfaa3951479d4d2f2e5aebc52e782723945ac4dca6f2fd8d4d7248429",
+      "input_set": "sha256:8980ffbfbb22ec581b710cb67051004c2e2d8055b9e6ae45bf0e67367a3a2297",
+      "package_manifest": "sha256:93ae1dfe714779d0a6d94419ba85eab1a4f5b2eee9c6ec4c82c82b72987e5756",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "replication contract"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-replication-contract",
+          "eval-srcpkg-campaign19-replication-contract"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-replication-contract"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-replication-contract",
+        "statement_type": "methodological",
+        "text": "Campaign 19 uses unchanged production workflow, package construction, validator behaviour, Production Support, provenance handling, fingerprinting, reporting, metrics, and Production Evolution Log workflow from the mature WDI demographic production method."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-replication-contract"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:352b23ca8b9ce3965e1798e62cd78d468ffa47b2cfcccf4881a2e910532b7dbe",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-replication-contract",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-replication-contract",
+        "pkg-object-srcpkg-campaign19-replication-contract"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-replication-contract",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-replication-contract",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-replication-contract"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-replication-contract"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-replication-contract",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "replication contract"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-deterministic-transfer-method"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6166635d2cdaf42c50db282c3db57fec9a427941f9575d243a7a6da7855a88ae"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-deterministic-transfer-method",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:6166635d2cdaf42c50db282c3db57fec9a427941f9575d243a7a6da7855a88ae",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:9ae0ad0e8f50c892e7d7eb118e1685681e1f25dad76fc6ff9e14c3f44c21b429",
+      "generated_statements": "sha256:58dc0e985055b82fa44b4d5a3fadf7ff08b1004b5a55974758e7fd1159ce6263",
+      "input_set": "sha256:27a72ae5edab9f80653672d2e2f168a7f60580a139a510a21a18666491dae24b",
+      "package_manifest": "sha256:1e05737a4d043f533c3eed8863b6d7c3d295a3bf106cfa56fae4ad5408075642",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "deterministic transfer method"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-deterministic-transfer-method",
+          "eval-srcpkg-campaign19-deterministic-transfer-method"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-deterministic-transfer-method"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-deterministic-transfer-method",
+        "statement_type": "methodological",
+        "text": "Campaign 19 derives Agriculture & Rural Development evidence-quality and coverage objects deterministically from the immutable Agriculture & Rural Development evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-deterministic-transfer-method"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:337169acf09d105bbd55e9dd43c3b9b88752e3e2e5bf1a1ecb307de04675f2a9",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-deterministic-transfer-method",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-deterministic-transfer-method",
+        "pkg-object-srcpkg-campaign19-deterministic-transfer-method"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-deterministic-transfer-method",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-deterministic-transfer-method",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-deterministic-transfer-method"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-deterministic-transfer-method"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-deterministic-transfer-method",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "deterministic transfer method"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-family-agricultural-land-use-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a5fe02aef188710910c5428082852b3d5f37ccb59f9364c5e2f63a97f23fd65d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-family-agricultural-land-use-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:a5fe02aef188710910c5428082852b3d5f37ccb59f9364c5e2f63a97f23fd65d",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:24714c16f7f7f57e2c30bef1fe170ccd510d644ba2dd25ae68b5317438eef918",
+      "generated_statements": "sha256:7e368d6ed9d6325202e3a3af54b9265bd2a62816715afb357bb591d459c8fb32",
+      "input_set": "sha256:f8d9d73686ad6a2bcb9369082d732d8389ee997a18492ae364369f7a10fbb63c",
+      "package_manifest": "sha256:6fe019582464432584ec30aea1b9e9cbd2f1d4de8f5db81a6c8ca3091a861f4c",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "agriculture and rural development metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-family-agricultural-land-use-metadata",
+          "eval-srcpkg-campaign19-family-agricultural-land-use-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-family-agricultural-land-use-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-family-agricultural-land-use-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 19 records 29 annual-scalar indicators for the agricultural_land_use_metadata Agriculture & Rural Development metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-family-agricultural-land-use-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:901e324d91f81b7700b9cfd11d5a6b15b9b8b4cc44d489b24a76e9a29a1b83fb",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-family-agricultural-land-use-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-family-agricultural-land-use-metadata",
+        "pkg-object-srcpkg-campaign19-family-agricultural-land-use-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-family-agricultural-land-use-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-family-agricultural-land-use-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-family-agricultural-land-use-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-family-agricultural-land-use-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-family-agricultural-land-use-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "agriculture and rural development metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-family-crop-and-livestock-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:9f26d81b5858386b70e081c0404a60c03fcc0007804cb843a1ca1cc6f664e4bc"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-family-crop-and-livestock-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:9f26d81b5858386b70e081c0404a60c03fcc0007804cb843a1ca1cc6f664e4bc",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:fddde1aea746c284185769d1296b4dc34a06bc85ccf225d71757981850dc8430",
+      "generated_statements": "sha256:26611ef090cfb63dd2a9bc96fb7d2eee9c420fe078adb6e90c8b2faa0f55fb1e",
+      "input_set": "sha256:76462a702d8dfbe92b6c3259b6b7b7917df1348acc78b58bb40f624caf16edb5",
+      "package_manifest": "sha256:4216e20cf505b14e53d1bbdb26142774b6710fa273e8d0cfe0dcd0c5ba5eca8e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "agriculture and rural development metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-family-crop-and-livestock-metadata",
+          "eval-srcpkg-campaign19-family-crop-and-livestock-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-family-crop-and-livestock-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-family-crop-and-livestock-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 19 records 27 annual-scalar indicators for the crop_and_livestock_metadata Agriculture & Rural Development metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-family-crop-and-livestock-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:0018dd4052ce7023051b58f4974d78e3db0ea6624b053709f2131f1752ef6234",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-family-crop-and-livestock-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-family-crop-and-livestock-metadata",
+        "pkg-object-srcpkg-campaign19-family-crop-and-livestock-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-family-crop-and-livestock-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-family-crop-and-livestock-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-family-crop-and-livestock-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-family-crop-and-livestock-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-family-crop-and-livestock-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "agriculture and rural development metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-family-rural-population-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:8d97db4a536164c2f44c5527ebc80c6ae6c9093241ed893408e035b877f60397"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-family-rural-population-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:8d97db4a536164c2f44c5527ebc80c6ae6c9093241ed893408e035b877f60397",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:98a958e543632b3cf63b813dee25589ef7d37288dc624465fd312eb89c1d94d5",
+      "generated_statements": "sha256:9bcb61d3c83c485498f77127797f3e256d9ac60bd8a6ed331e2835ab584dffca",
+      "input_set": "sha256:6456fbf3ba340b935dd6f30e2ab2b2c95e0e182681b49c1103cd7ad329b1cab0",
+      "package_manifest": "sha256:f1395f3196e258960afccef1f433030e3d32c2e04eef7b76e16a3b62905ae69d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "agriculture and rural development metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-family-rural-population-metadata",
+          "eval-srcpkg-campaign19-family-rural-population-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-family-rural-population-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-family-rural-population-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 19 records 24 annual-scalar indicators for the rural_population_metadata Agriculture & Rural Development metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-family-rural-population-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:46c8732f42d4e4b6732f140c32b1df6832f07f69bf4ef53d5b281170d3f402da",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-family-rural-population-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-family-rural-population-metadata",
+        "pkg-object-srcpkg-campaign19-family-rural-population-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-family-rural-population-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-family-rural-population-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-family-rural-population-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-family-rural-population-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-family-rural-population-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "agriculture and rural development metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-family-agricultural-inputs-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a55c8df9b2fa7355da784d4e83dd05922be9d449c1e2ef50d415c0cd7ba155f8"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-family-agricultural-inputs-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:a55c8df9b2fa7355da784d4e83dd05922be9d449c1e2ef50d415c0cd7ba155f8",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:6558b4c78e51ddbd9111b6a377bac3f9afaac949e85fc4e9861000bc9f2fbf75",
+      "generated_statements": "sha256:cd3ecfd3d1fa441960367d785146f5f713a44433f445abd2150f5b3e17fe44ad",
+      "input_set": "sha256:2e84206e7b5e3d4f4b9925d458d7aaef00e93ad24e047d5d83f7d97bc30d0562",
+      "package_manifest": "sha256:cc914d15e33a8bccba6214b5c2532afca4ccf956db30936bf8f3ba0f57b4aead",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "agriculture and rural development metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-family-agricultural-inputs-metadata",
+          "eval-srcpkg-campaign19-family-agricultural-inputs-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-family-agricultural-inputs-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-family-agricultural-inputs-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 19 records 23 annual-scalar indicators for the agricultural_inputs_metadata Agriculture & Rural Development metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-family-agricultural-inputs-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c3c159be8ce9396f35959714842e64baf06acdedc6fe091d9e23042ea32ec92b",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-family-agricultural-inputs-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-family-agricultural-inputs-metadata",
+        "pkg-object-srcpkg-campaign19-family-agricultural-inputs-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-family-agricultural-inputs-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-family-agricultural-inputs-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-family-agricultural-inputs-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-family-agricultural-inputs-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-family-agricultural-inputs-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "agriculture and rural development metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign19-family-food-security-and-productivity-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:99e30950c4945dc60b5e521ca23e09cf8398e2322df3dcfef356036718760ff5"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign19-family-food-security-and-productivity-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign19_wdi_agriculture_rural_development_transfer.py --output artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:99e30950c4945dc60b5e521ca23e09cf8398e2322df3dcfef356036718760ff5",
+        "source_family": "external_wdi_annual_scalar_agriculture_rural_development",
+        "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:1a09513c9d5904fcabb392c9cc8e6e5df74e78964eff5cb93566505492f98094",
+      "generated_statements": "sha256:8531b5253b0d93ffaabd46657b39f156b97c9c11121bcd2e95532b1996c039b3",
+      "input_set": "sha256:f7b07889280912e8f7a78a76b0936c985f82cb0d64605c7c6154eb6e23284674",
+      "package_manifest": "sha256:34ab09df616f89fab4afed7336b2d163edfaf6049852aa53c0228a5c2405fa6a",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "agriculture and rural development metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign19-family-food-security-and-productivity-metadata",
+          "eval-srcpkg-campaign19-family-food-security-and-productivity-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign19-family-food-security-and-productivity-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign19-family-food-security-and-productivity-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 19 records 23 annual-scalar indicators for the food_security_and_productivity_metadata Agriculture & Rural Development metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign19-family-food-security-and-productivity-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:eb977bbd99e8b0e622b0846bd63b5732c375b16e97ffd22a138bb685215549da",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign19-family-food-security-and-productivity-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign19-family-food-security-and-productivity-metadata",
+        "pkg-object-srcpkg-campaign19-family-food-security-and-productivity-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign19-family-food-security-and-productivity-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign19-family-food-security-and-productivity-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign19-family-food-security-and-productivity-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign19-family-food-security-and-productivity-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign19-family-food-security-and-productivity-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar agriculture and rural development evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "agriculture and rural development metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

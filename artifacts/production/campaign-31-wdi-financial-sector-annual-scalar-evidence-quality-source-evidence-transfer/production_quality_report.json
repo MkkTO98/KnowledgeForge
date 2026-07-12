@@ -1,0 +1,345 @@
+{
+  "acceptance_rate": 0.826087,
+  "architectural_continuity_classification": "preserves agreed architecture",
+  "architectural_observations": [
+    "Campaign 31 replicated the mature WDI demographic production methodology for WDI Financial Sector evidence without architecture change.",
+    "The existing package hierarchy, validators, Production Support layer, provenance handling, fingerprinting, reporting, and PEL workflow transferred unchanged.",
+    "Campaign 31 does not exercise multi-reference accepted objects; Financial Sector maturation remains the appropriate continuation."
+  ],
+  "average_evidence_references_per_knowledge_object": 1.0,
+  "campaign_id": "campaign-31-wdi-financial-sector-annual-scalar-evidence-quality-source-evidence-transfer",
+  "candidate_improvements_discovered": [
+    "No validator, taxonomy, helper extraction, or architecture change is justified by Campaign 31.",
+    "PEL-012 remains monitor because accepted Campaign 31 objects still use one evidence reference each.",
+    "PEL-017 gains cross-family transfer evidence but still requires multi-reference comparison and partial-disagreement tests."
+  ],
+  "cross_campaign_metric_comparison": {
+    "campaign_0": {
+      "accepted": 10,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 3
+    },
+    "campaign_1": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_2": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_3": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_31": {
+      "accepted": 19,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_4": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_5": {
+      "accepted": 20,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_6": {
+      "accepted": 18,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_7": {
+      "accepted": 16,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    }
+  },
+  "cross_family_transfer_assessment": {
+    "campaign1_accepted": 12,
+    "campaign1_rejected": 4,
+    "campaign31_accepted": 19,
+    "campaign31_rejected": 4,
+    "fingerprinting": "unchanged",
+    "knowledge_candidate_package_construction": "unchanged",
+    "knowledge_object_package_construction": "unchanged",
+    "methodology_transfer": "successful",
+    "observed_differences": [
+      {
+        "classification": "Financial Sector-specific",
+        "difference": "Financial Sector source family replaces demographic source family while preserving WDI annual-scalar shape."
+      },
+      {
+        "classification": "evidence-family-specific",
+        "difference": "Financial Sector accepted object count differs from Campaign 1 because Campaign 31 includes metadata-family coverage rows."
+      },
+      {
+        "classification": "KnowledgeForge-wide",
+        "difference": "Determinism, fingerprint stability, provenance completeness, and rejected-candidate preservation recur."
+      },
+      {
+        "classification": "architectural",
+        "difference": "No package, taxonomy, validator, or architecture modification was required."
+      }
+    ],
+    "pel_workflow": "unchanged",
+    "production_metrics": "unchanged",
+    "production_support_layer": "unchanged",
+    "production_workflow": "unchanged",
+    "provenance_handling": "unchanged",
+    "reporting": "unchanged",
+    "source_evidence_package_construction": "unchanged",
+    "validator_behaviour": "unchanged"
+  },
+  "determinism_verification": true,
+  "duplicate_knowledge_objects_detected": false,
+  "final_recommendation": "Continue maturing the WDI Financial Sector annual-scalar family under Operational Expansion; preserve the existing KnowledgeForge production methodology unchanged and populate the Knowledge Repository after validation.",
+  "final_snapshot_fingerprint": "sha256:8a472af3cbad6b0363941f061ae2f1dbf3938df0d6b51b1d12b074ebaac54f4f",
+  "fingerprint_stability": true,
+  "knowledge_candidate_packages_generated": 19,
+  "knowledge_categories_produced": {
+    "classified": 1,
+    "coverage": 9,
+    "derived": 1,
+    "evidence_quality": 1,
+    "factual": 1,
+    "methodological": 2,
+    "negative": 3,
+    "provenance": 1
+  },
+  "knowledge_categories_rejected": {
+    "coverage": 1,
+    "financial_sector_rating": 1,
+    "provenance": 2
+  },
+  "knowledge_object_packages_accepted": 19,
+  "knowledge_repository_impact_assessment": {
+    "confidence_gained_through_additional_evidence": [
+      "deterministic replay remained true for a fourth WDI annual-scalar family entry campaign",
+      "fingerprint stability remained true after repository population",
+      "no duplicate Knowledge Objects were detected",
+      "validator rejections remained active for unsupported inference and malformed provenance/fingerprint cases"
+    ],
+    "evidence_family_coverage_expanded": [
+      "external_wdi_annual_scalar_financial_sector"
+    ],
+    "future_recomputation_avoided_for_downstream_projects": [
+      "downstream projects can reuse Financial Sector source-scope and indicator-count facts without rerunning the campaign snapshot",
+      "downstream projects can reuse Financial Sector observed/missing evidence-grid totals and shares",
+      "downstream projects can reuse Financial Sector unsupported-dimension and provenance-state facts",
+      "future Financial Sector maturation campaigns can build on this family-entry baseline"
+    ],
+    "knowledge_categories_expanded": [
+      "classified",
+      "coverage",
+      "derived",
+      "evidence_quality",
+      "factual",
+      "methodological",
+      "negative",
+      "provenance"
+    ],
+    "new_knowledge_object_package_ids": [
+      "pkg-object-srcpkg-campaign31-deterministic-transfer-method",
+      "pkg-object-srcpkg-campaign31-family-completion-and-attainment-metadata",
+      "pkg-object-srcpkg-campaign31-family-enrollment-metadata",
+      "pkg-object-srcpkg-campaign31-family-equity-and-gender-parity-metadata",
+      "pkg-object-srcpkg-campaign31-family-financial-sector-resources-metadata",
+      "pkg-object-srcpkg-campaign31-family-literacy-and-learning-metadata",
+      "pkg-object-srcpkg-campaign31-financial_sector-evidence-quality-state",
+      "pkg-object-srcpkg-campaign31-financial_sector-family-count",
+      "pkg-object-srcpkg-campaign31-financial_sector-missing-share",
+      "pkg-object-srcpkg-campaign31-financial_sector-observed-missing",
+      "pkg-object-srcpkg-campaign31-financial_sector-observed-share",
+      "pkg-object-srcpkg-campaign31-financial_sector-partial-families",
+      "pkg-object-srcpkg-campaign31-financial_sector-period-scope",
+      "pkg-object-srcpkg-campaign31-financial_sector-provenance-state",
+      "pkg-object-srcpkg-campaign31-financial_sector-source-scope",
+      "pkg-object-srcpkg-campaign31-financial_sector-territory-scope",
+      "pkg-object-srcpkg-campaign31-financial_sector-topic-inventory",
+      "pkg-object-srcpkg-campaign31-financial_sector-unsupported-dimensions",
+      "pkg-object-srcpkg-campaign31-replication-contract"
+    ],
+    "new_knowledge_objects_added": 19,
+    "new_reusable_knowledge_introduced": [
+      "Financial Sector source scope and WDI annual-scalar evidence-shape confirmation",
+      "Financial Sector indicator inventory and metadata-family counts",
+      "Financial Sector observed/missing evidence-grid totals and shares",
+      "Financial Sector provenance-state and validation-state facts",
+      "Financial Sector unsupported-dimension negative knowledge"
+    ],
+    "repository_breadth_gained": [
+      "opened WDI Financial Sector as the next Phase 2 production family",
+      "added five Financial Sector metadata-family coverage slices",
+      "expanded WDI annual-scalar family breadth beyond demographic, Environment, and Infrastructure"
+    ],
+    "repository_composition_changes": {
+      "objects_by_evidence_family_after": {
+        "external_wdi_annual_scalar_agriculture_rural_development": 19,
+        "external_wdi_annual_scalar_agriculture_rural_development_maturation": 36,
+        "external_wdi_annual_scalar_agriculture_rural_development_provenance_lineage": 17,
+        "external_wdi_annual_scalar_education": 19,
+        "external_wdi_annual_scalar_education_maturation": 36,
+        "external_wdi_annual_scalar_education_provenance_lineage": 17,
+        "external_wdi_annual_scalar_energy_mining": 19,
+        "external_wdi_annual_scalar_energy_mining_maturation": 36,
+        "external_wdi_annual_scalar_energy_mining_provenance_lineage": 17,
+        "external_wdi_annual_scalar_environment_provenance_lineage": 17,
+        "external_wdi_annual_scalar_financial_sector": 19,
+        "external_wdi_annual_scalar_health": 19,
+        "external_wdi_annual_scalar_health_maturation": 36,
+        "external_wdi_annual_scalar_health_provenance_lineage": 17,
+        "external_wdi_annual_scalar_infrastructure": 19,
+        "external_wdi_annual_scalar_infrastructure_maturation": 36,
+        "external_wdi_annual_scalar_infrastructure_provenance_lineage": 17,
+        "external_wdi_annual_scalar_trade": 19,
+        "external_wdi_annual_scalar_trade_maturation": 36,
+        "external_wdi_annual_scalar_trade_provenance_lineage": 17
+      },
+      "objects_by_knowledge_category_after": {
+        "classified": 62,
+        "coverage": 183,
+        "derived": 38,
+        "evidence_quality": 20,
+        "factual": 26,
+        "methodological": 67,
+        "negative": 52,
+        "provenance": 20
+      },
+      "objects_by_lifecycle_state_after": {
+        "accepted": 468
+      }
+    },
+    "repository_depth_gained": [
+      "added family-entry evidence-quality/source-evidence baseline for Financial Sector maturation",
+      "preserved source/provenance/validation evidence needed for later Financial Sector inventory and provenance-lineage closeout",
+      "added deterministic transfer evidence after three Mature WDI annual-scalar families"
+    ],
+    "repository_object_count_after": 468,
+    "repository_object_count_before": 449,
+    "repository_quality_concerns_discovered": [],
+    "repository_quality_improvements_achieved": [
+      "repository financial_sector now tracks Financial Sector family-entry objects in indexes",
+      "provenance completeness remained true after campaign population",
+      "fingerprint stability remained true after campaign population",
+      "repository object count increased with no unresolved repository-quality concerns"
+    ]
+  },
+  "knowledge_repository_population": {
+    "manifest_path": "knowledge_repository/manifest.json",
+    "persisted_count": 19,
+    "rejected_count": 0,
+    "repository_fingerprint": "sha256:27b536578bf674777abaf2bc1951d5645ac99e293eb9f1fd6bcd87abf089405a",
+    "repository_root": "knowledge_repository",
+    "total_object_count": 468
+  },
+  "processing_statistics": {
+    "accepted_object_fingerprints": [
+      "sha256:e43128657b45606115008dec391ad6630c2ce2d431b28f22fa98611a1b2e9b62",
+      "sha256:1ff285f4913df1565f35a4c9b987685dec65e804494516c66cd3b0ec4320b074",
+      "sha256:b797e694aaa95e99b3b6513032ccbd3fcaedb4388669d6653773e54b09307df3",
+      "sha256:95fa68dd79bf37fbf6f0d1fa7e2e098e3838ea519e832aaa87bf29193577ee8d",
+      "sha256:45e80a549390518407d7182d6a834938cd2893923472c09bf7c3eb614dd2494b",
+      "sha256:7d43a77abb76e0eaed7fe8f717e7770a9d66638125b8d4a580442727c3d687be",
+      "sha256:09e565f79fab46ac5b19f53dc973bc02902e413e57d0da1882d906949ff56961",
+      "sha256:699f5abb7034a6456bfba80cce7dacab24ecef0f8c746886e1d6f511a65a48bd",
+      "sha256:76ad7ba51bfca4b76113820a316e3d20f54a6945a56cc08aefc740379dff282a",
+      "sha256:eae93e8dbb199ea1d6d4ad669ff5eb180337130d11bb2807311001f004831346",
+      "sha256:ccf03eb3077f0a3753c4a9bbdc95fa86ea4c9779139a09b2f2505194d622d9a6",
+      "sha256:2b29bc782fe07a0a3131689ebfedded3cdc550ea67f4c7c7bd406bc0d58cad03",
+      "sha256:49d597eb90f3d5e47112d1c350b8efe403e6888026fa4e7bf62fa201c31a934a",
+      "sha256:c5592f7eaa78500d57c6aa907046060f5e98415db3559a7beacf5e6dfe9cc8b0",
+      "sha256:6311bcd79a654cf6d2bf61b21c8d46a63f5e6ad31e0c49bf06e13f3372162ddb",
+      "sha256:42d06e3bb1254be13a8db6eb9413647201a997df3cdec4a8f3c62dd7407b7c6d",
+      "sha256:5019ad0a801071ddc6c54bea4c538b975c0700fc3a3f40bea61d189a6a836442",
+      "sha256:1800a70411a016dc97069f5188e75e57d9aa37f63ed5311be1be6b77d0484519",
+      "sha256:07ed7b254c36b1807902aef2892d434877fdea16058344b3044e981548a007ca"
+    ],
+    "financial_sector_family_count": 5,
+    "financial_sector_indicator_count": 112,
+    "missing_share": 0.184252,
+    "observed_share": 0.815748,
+    "snapshot_fingerprint": "sha256:e8fbc93d901e8ebf37186071b8543909cca584be534617ead6c7b3f13007d538"
+  },
+  "provenance_completeness": true,
+  "rejected_candidates": 4,
+  "rejection_rate": 0.173913,
+  "repository_financial_sector_summary": {
+    "fingerprint_stability": true,
+    "manifest_object_count": 468,
+    "manifest_path": "knowledge_repository/manifest.json",
+    "objects_added_this_campaign": 19,
+    "objects_by_evidence_family": {
+      "external_wdi_annual_scalar_agriculture_rural_development": 19,
+      "external_wdi_annual_scalar_agriculture_rural_development_maturation": 36,
+      "external_wdi_annual_scalar_agriculture_rural_development_provenance_lineage": 17,
+      "external_wdi_annual_scalar_education": 19,
+      "external_wdi_annual_scalar_education_maturation": 36,
+      "external_wdi_annual_scalar_education_provenance_lineage": 17,
+      "external_wdi_annual_scalar_energy_mining": 19,
+      "external_wdi_annual_scalar_energy_mining_maturation": 36,
+      "external_wdi_annual_scalar_energy_mining_provenance_lineage": 17,
+      "external_wdi_annual_scalar_environment_provenance_lineage": 17,
+      "external_wdi_annual_scalar_financial_sector": 19,
+      "external_wdi_annual_scalar_health": 19,
+      "external_wdi_annual_scalar_health_maturation": 36,
+      "external_wdi_annual_scalar_health_provenance_lineage": 17,
+      "external_wdi_annual_scalar_infrastructure": 19,
+      "external_wdi_annual_scalar_infrastructure_maturation": 36,
+      "external_wdi_annual_scalar_infrastructure_provenance_lineage": 17,
+      "external_wdi_annual_scalar_trade": 19,
+      "external_wdi_annual_scalar_trade_maturation": 36,
+      "external_wdi_annual_scalar_trade_provenance_lineage": 17
+    },
+    "objects_by_knowledge_category": {
+      "classified": 62,
+      "coverage": 183,
+      "derived": 38,
+      "evidence_quality": 20,
+      "factual": 26,
+      "methodological": 67,
+      "negative": 52,
+      "provenance": 20
+    },
+    "objects_by_lifecycle_state": {
+      "accepted": 468
+    },
+    "previous_repository_object_count": 449,
+    "provenance_completeness": true,
+    "repository_fingerprint": "sha256:27b536578bf674777abaf2bc1951d5645ac99e293eb9f1fd6bcd87abf089405a",
+    "repository_growth_since_previous_campaign": 19,
+    "total_knowledge_objects": 468,
+    "unresolved_repository_quality_concerns": []
+  },
+  "source_evidence_packages_processed": 19,
+  "validator_failures_by_category": {
+    "constitutional_boundary": 1,
+    "evidence_contract": 2,
+    "lineage_fingerprint": 2,
+    "provenance": 1,
+    "unsupported_inference": 1
+  }
+}

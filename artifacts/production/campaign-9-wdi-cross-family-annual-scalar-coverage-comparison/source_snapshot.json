@@ -1,0 +1,93 @@
+{
+  "campaign_id": "campaign-9-wdi-cross-family-annual-scalar-coverage-comparison",
+  "comparison": {
+    "indicator_count_difference_environment_minus_demographic": 6,
+    "missing_cell_difference_environment_minus_demographic": -5550,
+    "missing_share_difference_environment_minus_demographic": -0.017037,
+    "observed_cell_difference_environment_minus_demographic": 62440,
+    "observed_share_difference_environment_minus_demographic": 0.017037
+  },
+  "evidence_basis": [
+    "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+    "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md"
+  ],
+  "falsification_focus": {
+    "cross_family_comparison_without_interpretation": true,
+    "duplicate_pressure": true,
+    "evidence_family_transfer_after_campaign8": true,
+    "multi_reference_accepted_objects": true,
+    "overlapping_valid_objects": true,
+    "partial_provenance_disagreement_where_naturally_present": true,
+    "unsupported_comparative_wording": true
+  },
+  "families": {
+    "demographic": {
+      "campaign_id": "campaign-1-wdi-demographic-structure-evidence-quality-coverage",
+      "curated_cells": 1089490,
+      "evidence_family": "external_wdi_annual_scalar_demographic_structure",
+      "explicit_missing_cells": 267760,
+      "indicator_count": 182,
+      "label": "demographic",
+      "license_note_available": true,
+      "lineage_event_checksum_null_in_audited_rows": true,
+      "missing_share": 0.245766,
+      "observed_cells": 821730,
+      "observed_share": 0.754234,
+      "period_count": 35,
+      "period_end": 2024,
+      "period_start": 1990,
+      "raw_artifact_hashes_available": true,
+      "raw_artifact_urls_available": true,
+      "release_keys_available": true,
+      "snapshot_fingerprint": "sha256:d2aa2a909c60556109473ca7e18e76d857a66de94a026d676eac428197886fad",
+      "source_url_available": true,
+      "territory_count": 217,
+      "topic_name": "Demographic structure",
+      "wdi_lastupdated_metadata_available": true
+    },
+    "environment": {
+      "campaign_id": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+      "curated_cells": 1146380,
+      "evidence_family": "external_wdi_annual_scalar_environment",
+      "explicit_missing_cells": 262210,
+      "indicator_count": 188,
+      "label": "environment",
+      "license_note_available": true,
+      "lineage_event_checksum_null_in_audited_rows": false,
+      "missing_share": 0.228729,
+      "observed_cells": 884170,
+      "observed_share": 0.771271,
+      "period_count": 35,
+      "period_end": 2024,
+      "period_start": 1990,
+      "raw_artifact_hashes_available": true,
+      "raw_artifact_urls_available": true,
+      "release_keys_available": true,
+      "snapshot_fingerprint": "sha256:45e49cdae4af8a738bbe8df674c9fd6ca9b7b11ec0df572d2dc46b682525f1d2",
+      "source_url_available": true,
+      "territory_count": 217,
+      "topic_name": "Environment",
+      "wdi_lastupdated_metadata_available": true
+    }
+  },
+  "overlap": {
+    "frequency": "annual",
+    "overlapping_family_count": 2,
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990,
+    "shape": "scalar observations",
+    "source": "World Bank World Development Indicators",
+    "territory_count": 217
+  },
+  "partial_provenance_difference": {
+    "classification": "naturally_present_metadata_difference",
+    "demographic_value": true,
+    "environment_value": false,
+    "field": "lineage_event_checksum_null_in_audited_rows"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:d69ab637c56edf6bd35bfc9804e0b5ba608c179cb9487b80c2c31e507a6a759c"
+}

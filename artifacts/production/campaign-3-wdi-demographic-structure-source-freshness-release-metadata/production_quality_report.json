@@ -1,0 +1,97 @@
+{
+  "acceptance_rate": 0.75,
+  "architectural_observations": [
+    "Existing package and validator contracts handled Campaign 3 freshness and release metadata objects without modification.",
+    "Existing knowledge categories covered source freshness, release metadata, provenance, evidence quality, and scoped negative knowledge.",
+    "Rejected candidates were preserved with validator evidence."
+  ],
+  "average_evidence_references_per_knowledge_object": 1.0,
+  "campaign_id": "campaign-3-wdi-demographic-structure-source-freshness-release-metadata",
+  "candidate_improvements_discovered": [
+    "SourceEvidencePackage field construction pressure recurred in Campaign 3 under freshness/provenance metadata scope.",
+    "Production-quality metric aggregation pressure recurred in Campaign 3 with cross-campaign comparison across Campaigns 0-3.",
+    "No duplicate pressure was observed in Campaign 3."
+  ],
+  "cross_campaign_metric_comparison": {
+    "campaign_0": {
+      "accepted": 10,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 3
+    },
+    "campaign_1": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_2": {
+      "accepted": 14,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    },
+    "campaign_3": {
+      "accepted": 12,
+      "determinism": true,
+      "duplicates": false,
+      "fingerprint_stability": true,
+      "rejected": 4
+    }
+  },
+  "determinism_verification": true,
+  "duplicate_knowledge_objects_detected": false,
+  "fingerprint_stability": true,
+  "knowledge_candidate_packages_generated": 12,
+  "knowledge_categories_produced": {
+    "classified": 1,
+    "coverage": 1,
+    "evidence_quality": 2,
+    "methodological": 5,
+    "negative": 2,
+    "provenance": 1
+  },
+  "knowledge_categories_rejected": {
+    "coverage": 1,
+    "evidence_quality": 1,
+    "freshness_rating": 1,
+    "provenance": 1
+  },
+  "knowledge_object_packages_accepted": 12,
+  "processing_statistics": {
+    "accepted_object_fingerprints": [
+      "sha256:ada2c3d5e529f90a35b13c49a782be832ce6f68f717b3d97b2667d8a1f2c8b6a",
+      "sha256:fc3629540f320e68db2ba9cca47bafefb893fb369edcf53b4d09c18df12a38ec",
+      "sha256:6b6973c1fcc52bd29e44861d6c64959aae4687f3b2b8a1d188037a97fd91767b",
+      "sha256:02d5c6c57e2ecbf3a0429049f2e92ea93f34eda4ba2a35ccc704609f7191718e",
+      "sha256:cd40928fd590ee683ba135a4fcd59115abc4128af8917e327608936bce0c74c0",
+      "sha256:2651944475cdade8a37d0856f7bba8127855d7de67eaf93d732923f8b3a0ee15",
+      "sha256:ed181bbb850ce61d3bb161b7f6d2d7c7dc0b00c523abc624eba3527e95de0328",
+      "sha256:ff08cd3cf600aeb32a581518c5cd823b9dba97daa445840635ff6a5ed0e1f924",
+      "sha256:bb33a109942f7e9a662b868e5b0e5c081d38720c3b556cfee409b38e998a7268",
+      "sha256:bda7bffe10955d42b97d1e0803b8df8a139207aba5d777774399979d34a88303",
+      "sha256:276dff9c84b65972a78cca0d3d68b74d548047dffb56c6907f21a5990837907d",
+      "sha256:27a6124fcc8989922744c4250757b19f4bfd87f11b2941f8cf658eeecbdbc1a0"
+    ],
+    "dataset_release_count": 3,
+    "last_updated_coverage": 1.0,
+    "pipeline_run_count": 8,
+    "release_date_coverage": 0.0,
+    "release_key_coverage": 1.0,
+    "snapshot_fingerprint": "sha256:5dd9a78d8e23d9585e5e2036c8dbc1d37e41e6f9b846b9f5442d631683bae91b"
+  },
+  "provenance_completeness": true,
+  "rejected_candidates": 4,
+  "rejection_rate": 0.25,
+  "source_evidence_packages_processed": 12,
+  "validator_failures_by_category": {
+    "constitutional_boundary": 1,
+    "evidence_contract": 2,
+    "lineage_fingerprint": 2,
+    "provenance": 1,
+    "unsupported_inference": 1
+  }
+}

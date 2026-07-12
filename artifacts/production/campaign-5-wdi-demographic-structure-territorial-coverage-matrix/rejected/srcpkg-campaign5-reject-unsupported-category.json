@@ -1,0 +1,104 @@
+{
+  "reason_categories": [
+    "constitutional_boundary"
+  ],
+  "source_evidence_package": {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_demographic_structure_territorial_coverage_matrix",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+        "source_snapshot_fingerprint": "sha256:9508f42fb4790e543a734b04763ad6689475e6152073955f879638f1f6e01c10",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "A malformed Campaign 5 candidate uses an unsupported territorial-rating category.",
+      "knowledge_category": "territorial_rating",
+      "payload_metadata": {
+        "topic": "unsupported category"
+      },
+      "scope": {
+        "campaign_id": "campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+        "domain": "WDI annual-scalar demographic-structure territorial coverage matrix",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_territorial_coverage_metadata",
+        "topic": "unsupported category"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:08d3abdd307181d5d24781cff4d2d61e528f37a32265b2084f1aa9a90d7d2b26",
+      "provenance": "sha256:f69f688b3b130e9828abd6959eda137c95c7164d174ee634884d7cf7740c7993",
+      "reproducibility": "sha256:83116d4977e4498e33f5fea9e9790bf7cc67f563d59a609ba3e9dcb5e8ef99c5",
+      "source_payload": "sha256:0122377b86862477ced7431846af755f7419fe89160b3c83dca5ccb519d38680"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+        "artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets/production_quality_report.json",
+        "artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 5 WDI annual-scalar demographic-structure territorial coverage matrix scope",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_territorial_coverage",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:9508f42fb4790e543a734b04763ad6689475e6152073955f879638f1f6e01c10"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign5_wdi_territorial_coverage.py --output artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic embedded immutable WDI territorial coverage matrix snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign5-reject-unsupported-category",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_demographic_structure_territorial_coverage",
+      "source_name": "World Bank World Development Indicators audited demographic-structure territorial coverage matrix snapshot",
+      "source_version": "sha256:9508f42fb4790e543a734b04763ad6689475e6152073955f879638f1f6e01c10"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "stage_reports": {
+      "source": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "constitutional_boundary",
+            "location": "evidence_payload.knowledge_category",
+            "message": "unsupported knowledge category: territorial_rating",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+}

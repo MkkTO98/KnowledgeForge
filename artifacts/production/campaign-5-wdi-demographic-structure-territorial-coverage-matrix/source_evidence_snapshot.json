@@ -1,0 +1,118 @@
+{
+  "applicability": {
+    "period_range": "1990-2024",
+    "supported_applicability_fields": [
+      "territory",
+      "indicator_family",
+      "period_range",
+      "coverage_bucket"
+    ],
+    "territory_identifier_type": "WDI country-like territory code",
+    "unsupported_applicability_fields": [
+      "subnational_region",
+      "scenario",
+      "policy_regime"
+    ]
+  },
+  "campaign_id": "campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+  "evidence_basis": [
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+    "artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets/production_quality_report.json",
+    "artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata/production_quality_report.json",
+    "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_demographic_structure_territorial_coverage",
+  "production_family_maturity": {
+    "basis": "Campaigns 1-5 repeatedly validated deterministic WDI demographic production through evidence-quality, coverage, completeness, freshness, inventory, and territorial matrix scopes without architecture change.",
+    "classification": "Stable",
+    "further_campaigns": "Campaign 6 primarily adds confidence for temporal coverage within the same family; Campaign 8 is the planned family-broadening gate after Campaigns 6-7 complete.",
+    "insufficiently_exercised": [
+      "multi-reference accepted objects",
+      "later-stage production rejection",
+      "partial provenance disagreement",
+      "non-demographic WDI evidence family transfer"
+    ],
+    "validated": [
+      "deterministic replay",
+      "fingerprint stability",
+      "provenance completeness",
+      "rejected-candidate preservation",
+      "coverage and missingness knowledge",
+      "classified and factual inventory knowledge",
+      "larger deterministic object sets"
+    ]
+  },
+  "quality_controls": {
+    "all_family_bucket_counts_sum_to_territory_count": true,
+    "duplicate_candidate_statements_expected": false,
+    "larger_object_set_than_campaign_4": true,
+    "matrix_cell_count_verified": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "demographic structure evidence",
+    "frequency": "annual",
+    "metadata_scope": "territorial evidence availability and missingness buckets",
+    "period_scope": "1990-2024",
+    "shape": "territory-by-indicator-family coverage matrix",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:9508f42fb4790e543a734b04763ad6689475e6152073955f879638f1f6e01c10",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "territorial_matrix": {
+    "bucket_keys": [
+      "complete_or_near_complete",
+      "high_partial",
+      "moderate_partial",
+      "insufficient_for_campaign_scope"
+    ],
+    "bucket_totals": {
+      "complete_or_near_complete": 804,
+      "high_partial": 41,
+      "insufficient_for_campaign_scope": 4,
+      "moderate_partial": 19
+    },
+    "coverage_bucket_count": 4,
+    "families": [
+      {
+        "complete_or_near_complete": 205,
+        "family_key": "population_totals",
+        "high_partial": 8,
+        "insufficient_for_campaign_scope": 0,
+        "moderate_partial": 4,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 198,
+        "family_key": "age_structure",
+        "high_partial": 12,
+        "insufficient_for_campaign_scope": 1,
+        "moderate_partial": 6,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 202,
+        "family_key": "dependency_ratios",
+        "high_partial": 10,
+        "insufficient_for_campaign_scope": 1,
+        "moderate_partial": 4,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 199,
+        "family_key": "urban_rural_population",
+        "high_partial": 11,
+        "insufficient_for_campaign_scope": 2,
+        "moderate_partial": 5,
+        "territory_count": 217
+      }
+    ],
+    "indicator_family_count": 4,
+    "matrix_cell_count": 868,
+    "territory_count": 217
+  }
+}

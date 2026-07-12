@@ -1,0 +1,109 @@
+{
+  "campaign_id": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+  "evidence_basis": [
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+    "artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets/production_quality_report.json",
+    "artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata/production_quality_report.json",
+    "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+    "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+    "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_demographic_structure_provenance_lineage",
+  "lineage_matrix": {
+    "all_required_lineage_fields_present": true,
+    "artifact_count": 4,
+    "artifacts": [
+      {
+        "artifact_key": "wdi_demographic_indicator_metadata_snapshot",
+        "license_note": "World Bank WDI terms noted for provenance tracking",
+        "lineage_envelope_present": true,
+        "raw_artifact_hash": "sha256:5d3b1c88f9d0ad3e9c263b26f3d3d41b9c23a94198e02e32a91dbeb2c0ef0101",
+        "raw_artifact_url": "https://api.worldbank.org/v2/indicator?format=json&per_page=20000",
+        "release_key": "WDI-2026-06-metadata",
+        "source_url": "https://databank.worldbank.org/source/world-development-indicators"
+      },
+      {
+        "artifact_key": "wdi_demographic_country_catalog_snapshot",
+        "license_note": "World Bank WDI terms noted for provenance tracking",
+        "lineage_envelope_present": true,
+        "raw_artifact_hash": "sha256:4fd62d24c8ec5fcb04cba94a6c4bece7023e9b0c8d945d4e4187b6b3c9dd0202",
+        "raw_artifact_url": "https://api.worldbank.org/v2/country?format=json&per_page=400",
+        "release_key": "WDI-2026-06-country-catalog",
+        "source_url": "https://databank.worldbank.org/source/world-development-indicators"
+      },
+      {
+        "artifact_key": "wdi_demographic_annual_scalar_values_snapshot",
+        "license_note": "World Bank WDI terms noted for provenance tracking",
+        "lineage_envelope_present": true,
+        "raw_artifact_hash": "sha256:8b7757aae412c4fd8740ab86fd0f44f7c541ac6a2db6c44c8a7967b0c6aa0303",
+        "raw_artifact_url": "https://api.worldbank.org/v2/country/all/indicator/SP.POP.TOTL?format=json",
+        "release_key": "WDI-2026-06-values",
+        "source_url": "https://databank.worldbank.org/source/world-development-indicators"
+      },
+      {
+        "artifact_key": "wdi_demographic_release_metadata_snapshot",
+        "license_note": "World Bank WDI terms noted for provenance tracking",
+        "lineage_envelope_present": true,
+        "raw_artifact_hash": "sha256:1c4bc805c6330b4eab45fe393be3fd45d3eb1dcf2b3a1a8b3d9f4d6e9aa00404",
+        "raw_artifact_url": "https://api.worldbank.org/v2/sources/2?format=json",
+        "release_key": "WDI-2026-06-source-metadata",
+        "source_url": "https://databank.worldbank.org/source/world-development-indicators"
+      }
+    ],
+    "complete_lineage_artifact_count": 4,
+    "license_note_count": 4,
+    "lineage_envelope_count": 4,
+    "missing_lineage_field_count": 0,
+    "raw_artifact_hash_count": 4,
+    "raw_artifact_url_count": 4,
+    "release_key_count": 4,
+    "required_lineage_fields": [
+      "raw_artifact_url",
+      "raw_artifact_hash",
+      "release_key",
+      "source_url",
+      "license_note",
+      "lineage_envelope_present"
+    ],
+    "source_url_count": 4
+  },
+  "production_family_maturity": {
+    "basis": "Campaigns 1-7 validate deterministic WDI demographic production across evidence-quality, completeness, freshness, inventory, territorial, temporal, and provenance-lineage scopes without architecture change.",
+    "classification": "Mature",
+    "intentionally_deferred": [
+      "multi-reference accepted objects until cross-family campaigns",
+      "partial provenance disagreement until multi-source evidence appears",
+      "non-demographic WDI evidence-family transfer until Campaign 8"
+    ],
+    "maturity_rationale": "The planned WDI demographic production family has now exercised its major evidence-level scopes. Remaining gaps depend on cross-family or multi-source evidence rather than additional demographic deepening.",
+    "validated": [
+      "deterministic replay",
+      "fingerprint stability",
+      "provenance completeness",
+      "rejected-candidate preservation",
+      "territorial and temporal applicability",
+      "coverage and missingness knowledge",
+      "raw artifact identity and release lineage",
+      "lineage/fingerprint validation"
+    ]
+  },
+  "quality_controls": {
+    "all_required_lineage_fields_present": true,
+    "lineage_fingerprint_inputs_present": true,
+    "non_interpretive_scope_confirmed": true,
+    "release_metadata_present": true,
+    "source_identity_present": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "demographic structure evidence",
+    "metadata_scope": "raw artifact identity, source identity, release metadata, evidence lineage, provenance envelopes",
+    "representation_scope": "evidence-level lineage metadata only"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:b3828804b682136a14bfe625b972809a633055165aab54ce395c99ff9b0a3d83",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI"
+}

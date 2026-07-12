@@ -1,0 +1,146 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign5-territorial-completeness-aggregate"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign5-territorial-completeness-aggregate",
+      "reproducibility_handle": "python3 tools/run_campaign5_wdi_territorial_coverage.py --output artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+      "snapshot_fingerprint": "sha256:5a473a4cbcb4b21c51bf9eab456ba8fd0d1995e382f5e579a2f19b3b37543391",
+      "source_family": "external_wdi_annual_scalar_demographic_structure_territorial_coverage",
+      "source_identity": "World Bank World Development Indicators audited demographic-structure territorial coverage matrix snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:cc86bf78088b9a35e72e9272304046921a16f165a56ba25305189b1ce353c26b",
+    "generated_statements": "sha256:0a91372fad1c90e800c191789ccf5c4f2814d9efed8e870121b2e3928759a6d6",
+    "input_set": "sha256:1d34579ae19bf7b706fe27c65297d00a9b578da45d91cc8db327ef94ad9cebcf",
+    "package_manifest": "sha256:4d0567c14dfade471d09f75edecdc4b3d403d282f5240c6133ad8932403f8c6d",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+        "domain": "WDI annual-scalar demographic-structure territorial coverage matrix",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_territorial_coverage_metadata",
+        "topic": "territorial completeness aggregate"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign5-territorial-completeness-aggregate",
+        "eval-srcpkg-campaign5-territorial-completeness-aggregate"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign5-territorial-completeness-aggregate"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign5-territorial-completeness-aggregate",
+      "statement_type": "derived",
+      "text": "The Campaign 5 matrix has 845 family-territory cells in the two highest coverage buckets."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign5-territorial-completeness-aggregate"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign5-territorial-completeness-aggregate",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign5-territorial-completeness-aggregate"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign5-territorial-completeness-aggregate"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign5-territorial-completeness-aggregate",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar demographic-structure territorial coverage matrix",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_territorial_coverage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-5-wdi-demographic-structure-territorial-coverage-matrix",
+      "domain": "WDI annual-scalar demographic-structure territorial coverage matrix",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_territorial_coverage_metadata",
+      "topic": "territorial completeness aggregate"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

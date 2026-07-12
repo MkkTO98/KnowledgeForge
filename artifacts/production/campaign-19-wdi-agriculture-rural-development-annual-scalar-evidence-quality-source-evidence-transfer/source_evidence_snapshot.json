@@ -1,0 +1,125 @@
+{
+  "agriculture_rural_development_family_inventory": {
+    "common_frequency": "annual",
+    "common_shape": "scalar observations",
+    "families": [
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "agricultural_land_use_metadata",
+        "indicator_count": 29,
+        "missing_series_cells": 31540,
+        "observed_series_cells": 137460
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "crop_and_livestock_metadata",
+        "indicator_count": 27,
+        "missing_series_cells": 28420,
+        "observed_series_cells": 129880
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "rural_population_metadata",
+        "indicator_count": 24,
+        "missing_series_cells": 19160,
+        "observed_series_cells": 121720
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "agricultural_inputs_metadata",
+        "indicator_count": 23,
+        "missing_series_cells": 33570,
+        "observed_series_cells": 109330
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "food_security_and_productivity_metadata",
+        "indicator_count": 23,
+        "missing_series_cells": 30620,
+        "observed_series_cells": 112450
+      }
+    ],
+    "family_count": 5,
+    "unsupported_dimensions": [
+      "subnational-region",
+      "scenario",
+      "model-projection",
+      "narrative-assessment"
+    ]
+  },
+  "audited_inventory": {
+    "curated_cells": 754150,
+    "dataset_releases": 3,
+    "explicit_missing_cells": 143310,
+    "indicators_total": 126,
+    "observed_cells": 610840,
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990,
+    "pipeline_runs": 8,
+    "selection_source": "Campaign 19 planning gate and Phase 2 Production Roadmap",
+    "source": "World Bank World Development Indicators (WDI)",
+    "territories_total": 217,
+    "wdi_topic_id": 1,
+    "wdi_topic_name": "Agriculture & Rural Development"
+  },
+  "campaign_id": "campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer",
+  "coverage_metrics": {
+    "complete_family_count": 0,
+    "family_count": 5,
+    "missing_share": 0.190029,
+    "observed_share": 0.809971,
+    "partial_family_count": 5
+  },
+  "evidence_basis": [
+    "artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md",
+    "artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md",
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/production/campaign-18-wdi-energy-mining-provenance-lineage-closeout/production_quality_report.json",
+    "artifacts/production/campaign-18-wdi-energy-mining-provenance-lineage-closeout/reports/family_closeout_report.md"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development",
+  "provenance_observations": {
+    "license_note_available": true,
+    "lineage_event_checksum_null_in_audited_rows": false,
+    "raw_artifact_hashes_available": true,
+    "raw_artifact_urls_available": true,
+    "release_keys_available": true,
+    "source_url_available": true,
+    "wdi_lastupdated_metadata_available": true
+  },
+  "replication_contract": {
+    "fingerprinting_unchanged": true,
+    "knowledge_candidate_package_construction_unchanged": true,
+    "knowledge_object_package_construction_unchanged": true,
+    "pel_workflow_unchanged": true,
+    "production_metrics_unchanged": true,
+    "production_support_layer_unchanged": true,
+    "production_workflow_unchanged": true,
+    "provenance_handling_unchanged": true,
+    "reporting_unchanged": true,
+    "source_evidence_package_construction_unchanged": true,
+    "validator_behaviour_unchanged": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "agriculture and rural development evidence",
+    "frequency": "annual",
+    "indicator_scope": "WDI Agriculture & Rural Development topic annual-scalar indicators selected by the Phase 2 Production Roadmap",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:ff98a122c36379580ea052c86b4598947cc6f143b237a9ff05f521a759b5a48a",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "validation_observations": {
+    "current_audited_evidence_shape": "annual-scalar",
+    "current_audited_repository_source_scope": "WDI-only",
+    "methodology_transfer_target": "Campaign 1 WDI demographic evidence-quality and coverage workflow",
+    "observation_status_explicit": true,
+    "observed_and_missing_status_available": true
+  }
+}

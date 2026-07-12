@@ -1,0 +1,125 @@
+{
+  "audited_inventory": {
+    "curated_cells": 1146380,
+    "dataset_releases": 3,
+    "explicit_missing_cells": 262210,
+    "indicators_total": 188,
+    "observed_cells": 884170,
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990,
+    "pipeline_runs": 8,
+    "selection_source": "Campaign 8 planning gate and WDI Topic API bounded planning count",
+    "source": "World Bank World Development Indicators (WDI)",
+    "territories_total": 217,
+    "wdi_topic_id": 6,
+    "wdi_topic_name": "Environment"
+  },
+  "campaign_id": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+  "coverage_metrics": {
+    "complete_family_count": 0,
+    "family_count": 5,
+    "missing_share": 0.228729,
+    "observed_share": 0.771271,
+    "partial_family_count": 5
+  },
+  "environment_family_inventory": {
+    "common_frequency": "annual",
+    "common_shape": "scalar observations",
+    "families": [
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "air_and_climate_metadata",
+        "indicator_count": 44,
+        "missing_series_cells": 58420,
+        "observed_series_cells": 211240
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "land_and_forest_metadata",
+        "indicator_count": 38,
+        "missing_series_cells": 44430,
+        "observed_series_cells": 184610
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "water_and_sanitation_metadata",
+        "indicator_count": 36,
+        "missing_series_cells": 48020,
+        "observed_series_cells": 176140
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "biodiversity_and_protected_area_metadata",
+        "indicator_count": 28,
+        "missing_series_cells": 47240,
+        "observed_series_cells": 121880
+      },
+      {
+        "applicability": "annual scalar indicator metadata",
+        "family": "resource_use_metadata",
+        "indicator_count": 42,
+        "missing_series_cells": 64100,
+        "observed_series_cells": 190300
+      }
+    ],
+    "family_count": 5,
+    "unsupported_dimensions": [
+      "subnational-region",
+      "scenario",
+      "model-projection",
+      "narrative-assessment"
+    ]
+  },
+  "evidence_basis": [
+    "artifacts/reports/R-20260709-second-production-family-evaluation.md",
+    "artifacts/reports/R-20260709-second-production-family-initial-roadmap.md",
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+    "artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness/reports/family_closeout_report.md"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_environment",
+  "provenance_observations": {
+    "license_note_available": true,
+    "lineage_event_checksum_null_in_audited_rows": false,
+    "raw_artifact_hashes_available": true,
+    "raw_artifact_urls_available": true,
+    "release_keys_available": true,
+    "source_url_available": true,
+    "wdi_lastupdated_metadata_available": true
+  },
+  "replication_contract": {
+    "fingerprinting_unchanged": true,
+    "knowledge_candidate_package_construction_unchanged": true,
+    "knowledge_object_package_construction_unchanged": true,
+    "pel_workflow_unchanged": true,
+    "production_metrics_unchanged": true,
+    "production_support_layer_unchanged": true,
+    "production_workflow_unchanged": true,
+    "provenance_handling_unchanged": true,
+    "reporting_unchanged": true,
+    "source_evidence_package_construction_unchanged": true,
+    "validator_behaviour_unchanged": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "environment evidence",
+    "frequency": "annual",
+    "indicator_scope": "WDI Environment topic annual-scalar indicators selected by the Campaign 8 planning gate",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:45e49cdae4af8a738bbe8df674c9fd6ca9b7b11ec0df572d2dc46b682525f1d2",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "validation_observations": {
+    "current_audited_evidence_shape": "annual-scalar",
+    "current_audited_repository_source_scope": "WDI-only",
+    "methodology_transfer_target": "Campaign 1 WDI demographic evidence-quality and coverage workflow",
+    "observation_status_explicit": true,
+    "observed_and_missing_status_available": true
+  }
+}

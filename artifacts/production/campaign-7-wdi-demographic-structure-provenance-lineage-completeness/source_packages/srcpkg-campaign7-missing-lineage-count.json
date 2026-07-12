@@ -1,0 +1,82 @@
+{
+  "created_at": "2026-07-09",
+  "evidence_metadata": {
+    "classification": {
+      "campaign_id": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+      "contains_observational_values": false,
+      "direct_evidence": true,
+      "evidence_kind": "audited_wdi_demographic_structure_provenance_lineage",
+      "generated_by_llm": false
+    },
+    "evidence_class": "external_observational_metadata",
+    "validation_metadata": {
+      "campaign": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+      "source_snapshot_fingerprint": "sha256:b3828804b682136a14bfe625b972809a633055165aab54ce395c99ff9b0a3d83",
+      "validator": "construct_knowledge_package_v1"
+    }
+  },
+  "evidence_payload": {
+    "factual_statement": "Campaign 7 records 0 missing required lineage fields in the audited lineage snapshot.",
+    "knowledge_category": "negative",
+    "payload_metadata": {
+      "missing_lineage_field_count": 0,
+      "topic": "missing lineage count"
+    },
+    "scope": {
+      "campaign_id": "campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+      "domain": "WDI annual-scalar demographic-structure provenance lineage completeness",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_provenance_lineage_metadata",
+      "topic": "missing lineage count"
+    }
+  },
+  "fingerprints": {
+    "package_manifest": "sha256:f2b11b1a646942c6b8688b0c009e062348f9d8f1f5091c18c50aea1d4e138af0",
+    "provenance": "sha256:a6765885b334c9975e4f521bff5e74f132433dfde307f7643712e1919b87922f",
+    "reproducibility": "sha256:570321928b92bcd6bbdc1b9d4691d5e4296f0c4c1e03aea4aa32105b2d963173",
+    "source_payload": "sha256:2a21a4b0683a5cf029c65f68dd1eca269ae56463d39b71cb3b4bd7c89405e860"
+  },
+  "immutability": {
+    "mutation_policy": "read_only",
+    "state": "immutable_fixture"
+  },
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "provenance": {
+    "evidence_basis": [
+      "docs/production_campaign_roadmap.md",
+      "docs/production_evolution_log.md",
+      "artifacts/production/campaign-1-wdi-demographic-structure-evidence-quality-coverage/production_quality_report.json",
+      "artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets/production_quality_report.json",
+      "artifacts/production/campaign-3-wdi-demographic-structure-source-freshness-release-metadata/production_quality_report.json",
+      "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+      "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+      "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+    ],
+    "selection_rule": "approved Campaign 7 WDI annual-scalar demographic-structure provenance lineage completeness scope",
+    "source_family": "external_wdi_annual_scalar_demographic_structure_provenance_lineage",
+    "source_snapshot_date": "2026-07-09",
+    "source_snapshot_id": "sha256:b3828804b682136a14bfe625b972809a633055165aab54ce395c99ff9b0a3d83"
+  },
+  "reproducibility": {
+    "handle": "python3 tools/run_campaign7_wdi_provenance_lineage.py --output artifacts/production/campaign-7-wdi-demographic-structure-provenance-lineage-completeness",
+    "nondeterminism": "none",
+    "rerun_method": "deterministic embedded immutable WDI provenance lineage snapshot and canonical JSON construction",
+    "state": "reproducible"
+  },
+  "source_evidence_package_id": "srcpkg-campaign7-missing-lineage-count",
+  "source_identity": {
+    "source_family": "external_wdi_annual_scalar_demographic_structure_provenance_lineage",
+    "source_name": "World Bank World Development Indicators audited demographic-structure provenance lineage snapshot",
+    "source_version": "sha256:b3828804b682136a14bfe625b972809a633055165aab54ce395c99ff9b0a3d83"
+  }
+}

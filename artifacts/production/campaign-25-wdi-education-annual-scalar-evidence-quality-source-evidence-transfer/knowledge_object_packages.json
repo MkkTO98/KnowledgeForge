@@ -1,0 +1,3422 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-source-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:87946cdec1809312f4544bcfb839c03a60194456f7f86df3d94307d0a413c853"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-source-scope",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:87946cdec1809312f4544bcfb839c03a60194456f7f86df3d94307d0a413c853",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:ae48e9adffe4ddb2b3b531340a0b6da14cbd7e6cd62c862c878993d79953b87f",
+      "generated_statements": "sha256:ffcad1a1d5bc4794147f9ec94f17cb47a65b29ca51c463dadcf9522c0541d6d6",
+      "input_set": "sha256:96d59b18e22b666221def36de50876d14f24aff39a4a1f5b6e68865889f40d95",
+      "package_manifest": "sha256:ba5560643ca5a1b082a2f9b950b708ca12b8d772e549e1ab1109f787e81b8e3d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "source scope"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-source-scope",
+          "eval-srcpkg-campaign25-education-source-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-source-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-source-scope",
+        "statement_type": "factual",
+        "text": "The Campaign 25 source evidence package is scoped to World Bank WDI annual-scalar Education evidence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-source-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:2d4653d88e8831d2f1c798b23c31b806792e19f4ce89aebc52e2ed55fdc9d835",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-source-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-source-scope",
+        "pkg-object-srcpkg-campaign25-education-source-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-source-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-source-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-source-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-source-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-source-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "source scope"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-topic-inventory"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:0749083abf7d118bdb266a42d4ecee51335729d89182c406f80488df41113c16"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-topic-inventory",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:0749083abf7d118bdb266a42d4ecee51335729d89182c406f80488df41113c16",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:a1939158b9dcdb8dd65ec614caa9b5c9b66969d30bbac01673e7762a6bcc9e3b",
+      "generated_statements": "sha256:2ecc2536fb6a2eefc284e88f2a74f520fba37e87289c9f9d09c464fc47c79461",
+      "input_set": "sha256:0d0d2d07020bdd4b8b333e09ca6c07426a68ea8f3f4c015dc28911c211c73873",
+      "package_manifest": "sha256:518df6441048d4b691b3817061f1bc2d5b80a7ba6d17bbdaa53412d6a386ace4",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "indicator coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-topic-inventory",
+          "eval-srcpkg-campaign25-education-topic-inventory"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-topic-inventory"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-topic-inventory",
+        "statement_type": "coverage",
+        "text": "The audited WDI Education topic inventory records 112 annual-scalar indicators."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-topic-inventory"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:acc41f7b33344bbc37f530ecffe9d233e27653cbe9a9cafe23c96f11da55cc10",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-topic-inventory",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-topic-inventory",
+        "pkg-object-srcpkg-campaign25-education-topic-inventory"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-topic-inventory",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-topic-inventory",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-topic-inventory"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-topic-inventory"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-topic-inventory",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "indicator coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-territory-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:96c74748fe13b3aa170d12e05c5a75c4591e024c978ca509da026e197620465a"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-territory-scope",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:96c74748fe13b3aa170d12e05c5a75c4591e024c978ca509da026e197620465a",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:5e8cf5cb0d6507bfd11bef4023299939431a08e5887a90e474684d84feda7e87",
+      "generated_statements": "sha256:d8eefc6a4035e106a3690255ea2f67c5e9893fa0269c6538ed89f2a117f4722d",
+      "input_set": "sha256:8ab9be0ffe1824263111e6438fe76e20812d4905c62114c0789517b070355ba4",
+      "package_manifest": "sha256:b0131626141edc3d83d71e28cb62a57513b58f7186c228153887a2e8083b3d40",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "territory coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-territory-scope",
+          "eval-srcpkg-campaign25-education-territory-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-territory-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-territory-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 25 uses the same audited WDI territory scope count of 217 non-aggregate or country-like territories."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-territory-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:050f4ce00a721e1dbde5efc556d01ce0f22ff77c22e6425d52ed7d5413703fdf",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-territory-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-territory-scope",
+        "pkg-object-srcpkg-campaign25-education-territory-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-territory-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-territory-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-territory-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-territory-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-territory-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "territory coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-period-scope"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:56fc5c602a9e6f77444318ec06ff52021d42076b25283ae4ced93c730c8e75ec"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-period-scope",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:56fc5c602a9e6f77444318ec06ff52021d42076b25283ae4ced93c730c8e75ec",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:a4333bb04438e71d0be7aee4fafff65f2fb4628d4648e1cb4999594b1566d9d7",
+      "generated_statements": "sha256:b6f73eb0af1cb4985cf7f1aeb551957b5444b3aefcfbd5719dce4b22240ee03d",
+      "input_set": "sha256:db76bbe8cfae48b90505b9fc241f525eda403c7c0960d9de9b5522af8fdaaa37",
+      "package_manifest": "sha256:9eb27686d59ade12d55ecf702bd754a405c240f06b73588dcfa366603c79ea09",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "temporal coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-period-scope",
+          "eval-srcpkg-campaign25-education-period-scope"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-period-scope"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-period-scope",
+        "statement_type": "coverage",
+        "text": "Campaign 25 uses 35 annual periods from 1990 through 2024 for Education evidence coverage."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-period-scope"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:1b5acf71c649b96c6ade54f5f5875e7d891590a44c14db40b55e1cc8399e2449",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-period-scope",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-period-scope",
+        "pkg-object-srcpkg-campaign25-education-period-scope"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-period-scope",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-period-scope",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-period-scope"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-period-scope"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-period-scope",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "temporal coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-observed-missing"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:cd7962e9964a92db3069dcf0adc19916b452cd1b407d8781bfa81482adf9379e"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-observed-missing",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:cd7962e9964a92db3069dcf0adc19916b452cd1b407d8781bfa81482adf9379e",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:b21b4ad03aa4778895700f915df6606339c47703ad6115e389cf4a265ebdf73f",
+      "generated_statements": "sha256:69961ddc0ac11196ead5d2f710a92250112e3b9dc05af7ab447adc61456b00f5",
+      "input_set": "sha256:324ad386f8e16269a2bc2c9f8671afe063a189691015a9ed41f44d1086efdec6",
+      "package_manifest": "sha256:e6a9dc7cf5bbf4c1317740aa9a022e1aeea5a6113a957e84890fac37405e1a3b",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed missing coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-observed-missing",
+          "eval-srcpkg-campaign25-education-observed-missing"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-observed-missing"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-observed-missing",
+        "statement_type": "coverage",
+        "text": "The Campaign 25 Education snapshot records 543900 observed cells and 122850 explicit missing cells."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-observed-missing"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:4cef08b8aea87584fadd03d4cb7c8a8eb842b1b02afaaf6d6e11acb18c0859e9",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-observed-missing",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-observed-missing",
+        "pkg-object-srcpkg-campaign25-education-observed-missing"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-observed-missing",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-observed-missing",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-observed-missing"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-observed-missing"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-observed-missing",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed missing coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-observed-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:667cd5d135c963626eece5da2d2d14cac5a11ed41eb0905dffc579747222ad90"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-observed-share",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:667cd5d135c963626eece5da2d2d14cac5a11ed41eb0905dffc579747222ad90",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:7c0efb23246decef500c014840b064350322900dc802bc5b341d6ae723816ff1",
+      "generated_statements": "sha256:a090d58c9c4d3c397250d6d2c299be5daa8e264c6d58f47c32e81548526737af",
+      "input_set": "sha256:b2c30c0a79bc5edfcdfa4d0bd7c86a30b48fc971a762efaa4edcbdaf28397fd0",
+      "package_manifest": "sha256:2743f2f1777c9ad49da6064be326b2d7c37dd426bdbc21e2eb652b71cfd9de3d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "observed share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-observed-share",
+          "eval-srcpkg-campaign25-education-observed-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-observed-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-observed-share",
+        "statement_type": "derived",
+        "text": "The Campaign 25 Education snapshot has observed cell share 0.815748 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-observed-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:094fa3214856614cfbd96d951794139d6019d717a6494a1b90db8bb3aa8ba18f",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-observed-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-observed-share",
+        "pkg-object-srcpkg-campaign25-education-observed-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-observed-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-observed-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-observed-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-observed-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-observed-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "observed share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-missing-share"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:856bcb561809e73a3687342568dae9073551ed212444124ae8d9841d4d57b374"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-missing-share",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:856bcb561809e73a3687342568dae9073551ed212444124ae8d9841d4d57b374",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:1d73082a90669072a1e1363bd1021d01a8b9872fbc73629d2b280a30f0c54b6c",
+      "generated_statements": "sha256:ff3ef0d468bacf033b83daff878a95f72fa5502635c1c8ceceb7a81c4cae8607",
+      "input_set": "sha256:f01882849aec652feb0b9ddfb8c8ee5597941b619eb48d75d8b08ab902b1ecbb",
+      "package_manifest": "sha256:58a13c7cb0952aa6bf22b8edd476bbdb1b7dfd6301468d0bd7bab63ea6d163cd",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "missing share"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-missing-share",
+          "eval-srcpkg-campaign25-education-missing-share"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-missing-share"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-missing-share",
+        "statement_type": "negative",
+        "text": "The Campaign 25 Education snapshot has explicit missing cell share 0.184252 within the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-missing-share"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:2e2bbd123b8c2e9a88a322f7495cdfdb3d2a8015c9e7d6773b668f80e6abf4a3",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-missing-share",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-missing-share",
+        "pkg-object-srcpkg-campaign25-education-missing-share"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-missing-share",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-missing-share",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-missing-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-missing-share"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-missing-share",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "missing share"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-family-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a2dbde138579516e085fab4c716ce6fd4dfa968a425086c8b08b1ce2985cb4b2"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-family-count",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:a2dbde138579516e085fab4c716ce6fd4dfa968a425086c8b08b1ce2985cb4b2",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:e751bac8a86af7010839192e79c90df94273cd3e886586c7e8c0b88e580b7e5d",
+      "generated_statements": "sha256:7d34d91abc26b795452b80a3bf3a7730658b35293f18b1eeef3d39a80e175a2e",
+      "input_set": "sha256:f215754f3b7be22568945c6b83b8b46e466ef69777314ae9431db37e124700fc",
+      "package_manifest": "sha256:f82c6cf70cea200c06fa7b0d355672c4c707c23d43d4e6d6fc65bfc6c3f0b53e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-family-count",
+          "eval-srcpkg-campaign25-education-family-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-family-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-family-count",
+        "statement_type": "classified",
+        "text": "The Campaign 25 Education inventory groups the selected indicators into 5 deterministic metadata families."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-family-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:f0070efecfcdeb6d86221412d26c64d7c512abfa003e5240d692187ed4476372",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-family-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-family-count",
+        "pkg-object-srcpkg-campaign25-education-family-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-family-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-family-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-family-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-family-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-family-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-partial-families"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e7084328ff96b0ee9c41a655332505b4001118161d268d6804d93e5d9a7fe819"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-partial-families",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:e7084328ff96b0ee9c41a655332505b4001118161d268d6804d93e5d9a7fe819",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:348c44c5b3c7fd2804196d568db0e5a54e4eb53dd0ffe23085d37649985041e2",
+      "generated_statements": "sha256:cca06220405540e9f52cc1ab27e893408e635370446ef4fbe15abcdc1dd2ca41",
+      "input_set": "sha256:8e19530e58d02ae7585b1346fe494e696e658f37c992b67c219359a99c684c1e",
+      "package_manifest": "sha256:812f9e7a61abb89fb5eb3a22ccb839676911c781a1074af6c37cf19bbdaae89e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "partial family count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-partial-families",
+          "eval-srcpkg-campaign25-education-partial-families"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-partial-families"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-partial-families",
+        "statement_type": "negative",
+        "text": "Campaign 25 records 5 Education metadata families with explicit missing cells in the audited evidence grid."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-partial-families"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b732dea2b5b0da2b696412d4a684186767839e9eef6da77c85dd3226a6faae28",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-partial-families",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-partial-families",
+        "pkg-object-srcpkg-campaign25-education-partial-families"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-partial-families",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-partial-families",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-partial-families"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-partial-families"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-partial-families",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "partial family count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-provenance-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:7e35a9c5bb2ddfccae6240378204c61572bb3245bf09173a71a464b46c51a1af"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-provenance-state",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:7e35a9c5bb2ddfccae6240378204c61572bb3245bf09173a71a464b46c51a1af",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:f3fbbb487f7ef30d20dedccdd6cc702ec692a103e1da8908f40341cf1ec74c1e",
+      "generated_statements": "sha256:3e83c1818e0858053afcf066647f52fa2e939f25001bbaa2879c47768a9896be",
+      "input_set": "sha256:343c999ac05b2eb06d4c8551fafa7e3e773136b489f94d29d9a6dbcd26f457b0",
+      "package_manifest": "sha256:4a07d0029824eb6c53653d88890ae24cec611d4b9973234eeae684c4bcb74165",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "provenance state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-provenance-state",
+          "eval-srcpkg-campaign25-education-provenance-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-provenance-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-provenance-state",
+        "statement_type": "provenance",
+        "text": "Campaign 25 records WDI Education source URLs, raw artifact URLs, raw artifact hashes, release keys, license notes, and WDI last-updated metadata as available in the evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-provenance-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:f94b1437ef43924b8ba0b0427b03e9528e7554ee9648b991fa3ff4f6f627d87c",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-provenance-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-provenance-state",
+        "pkg-object-srcpkg-campaign25-education-provenance-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-provenance-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-provenance-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-provenance-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-provenance-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-provenance-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "provenance state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-evidence-quality-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:9a4a3bc2aa501396bae3cceb5f35929b5231128bc58abd7a65de8357f7367788"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-evidence-quality-state",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:9a4a3bc2aa501396bae3cceb5f35929b5231128bc58abd7a65de8357f7367788",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:9669c7f2133527f0aeecde9db2d02ca1cacfca129c6e3d4f6f501a1f4af4b656",
+      "generated_statements": "sha256:1f6f5303ebe7524bc422c40efdfd5186f896b7d3805e638121ccc3d6fe57b550",
+      "input_set": "sha256:25796d3c2082c1e8d4b109eda39a7dc32009691ad432cbfd6a5fe3f222c1daf7",
+      "package_manifest": "sha256:92cc81446b1ed1bc6755bb3565343bdb5a7c73005417bd810cc2e2830df66d3d",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "evidence quality state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-evidence-quality-state",
+          "eval-srcpkg-campaign25-education-evidence-quality-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-evidence-quality-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-evidence-quality-state",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 25 records explicit observation status, observed and missing status, WDI-only source scope, and annual-scalar evidence shape for the Education family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-evidence-quality-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:55224d56cb3371d96ccc45744d12f2fe0e084ed111a2b99575f8a451b1f5232e",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-evidence-quality-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-evidence-quality-state",
+        "pkg-object-srcpkg-campaign25-education-evidence-quality-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-evidence-quality-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-evidence-quality-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-evidence-quality-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-evidence-quality-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-evidence-quality-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "evidence quality state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-education-unsupported-dimensions"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e5907b14b785ff00c0fa16b202532211f02feb78d778d16fa29a23563d413b55"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-education-unsupported-dimensions",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:e5907b14b785ff00c0fa16b202532211f02feb78d778d16fa29a23563d413b55",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:d6a3f05793cd8e56e970423b1a1a5f67c34aa33803ff2b42c70dcda09d21e25a",
+      "generated_statements": "sha256:0507f968b01934e0aecd7b9e07c2a82a154adf98865ff7b969cdcfbbf19c7ceb",
+      "input_set": "sha256:22dcb27288dfe964df37e4a3fbd2c66f2fde46e32eb11dcb27a3747deeeac879",
+      "package_manifest": "sha256:e942022fb3aab09de11bd02b081a6d7119ba0310f7615ffc6afbd81dbfed629e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "unsupported dimensions"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-education-unsupported-dimensions",
+          "eval-srcpkg-campaign25-education-unsupported-dimensions"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-education-unsupported-dimensions"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-education-unsupported-dimensions",
+        "statement_type": "negative",
+        "text": "The Campaign 25 Education annual-scalar evidence snapshot does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the accepted production scope."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-education-unsupported-dimensions"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:d7c6b2325ae798a3efc3896210f11c65f33e751ff8d32c2a2539cc7006026629",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-education-unsupported-dimensions",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-education-unsupported-dimensions",
+        "pkg-object-srcpkg-campaign25-education-unsupported-dimensions"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-education-unsupported-dimensions",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-education-unsupported-dimensions",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-education-unsupported-dimensions"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-education-unsupported-dimensions"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-education-unsupported-dimensions",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-replication-contract"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:891fbf2b473287b37b4a064096d3ab81f784c8946bddc50bfabd8206eb74c64e"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-replication-contract",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:891fbf2b473287b37b4a064096d3ab81f784c8946bddc50bfabd8206eb74c64e",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:8f1b1d4790a8dc1398d08f741efb82cb77e8eb972f047ffdd9bfc2a13d91d24f",
+      "generated_statements": "sha256:807a33572cbf66c8f1ec6344aeb830d6059206546ef96ef7e55a8e6ff1aefdc3",
+      "input_set": "sha256:9bbd27b6edafbc8bbbb70376ebb5bfc4d5ef8ed4511a360e0082c9e7cd14cbe6",
+      "package_manifest": "sha256:3a9a6505da050e1638786de1490133adaea0e6e2a92afe217ef8028600c9e628",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "replication contract"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-replication-contract",
+          "eval-srcpkg-campaign25-replication-contract"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-replication-contract"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-replication-contract",
+        "statement_type": "methodological",
+        "text": "Campaign 25 uses unchanged production workflow, package construction, validator behaviour, Production Support, provenance handling, fingerprinting, reporting, metrics, and Production Evolution Log workflow from the mature WDI demographic production method."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-replication-contract"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:a70a07f4b7c62735ad59e1e691c8c2761aba1ee9ef81dfa976c97de0c1c14dc1",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-replication-contract",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-replication-contract",
+        "pkg-object-srcpkg-campaign25-replication-contract"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-replication-contract",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-replication-contract",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-replication-contract"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-replication-contract"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-replication-contract",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "replication contract"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-deterministic-transfer-method"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a54d495dae5e8bca51df013cc27939d54ac2c9430b08754fa877bfe12eeebdd7"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-deterministic-transfer-method",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:a54d495dae5e8bca51df013cc27939d54ac2c9430b08754fa877bfe12eeebdd7",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:0ca162c3b14718507517353ccbdc95d264357e3dc6fe62755435c5cd6d507eb2",
+      "generated_statements": "sha256:55fd35f2e7213e1890306ec44e92dc04a8d93941a27bcaf299672a7ca21362c6",
+      "input_set": "sha256:0a2fc9091bf92fc513ce8255c56f4cab128ef31f640f6ab17df7375d0a3fc918",
+      "package_manifest": "sha256:6954836ce3bc74e82b26892a37a1c1a4aed06c601fd977b66e805455c70a9c19",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "deterministic transfer method"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-deterministic-transfer-method",
+          "eval-srcpkg-campaign25-deterministic-transfer-method"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-deterministic-transfer-method"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-deterministic-transfer-method",
+        "statement_type": "methodological",
+        "text": "Campaign 25 derives Education evidence-quality and coverage objects deterministically from the immutable Education evidence snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-deterministic-transfer-method"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:92218cd05ae9229bb3bd52b09328a3fd9f538c4b351dd43a8e8afffc60e9df9e",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-deterministic-transfer-method",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-deterministic-transfer-method",
+        "pkg-object-srcpkg-campaign25-deterministic-transfer-method"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-deterministic-transfer-method",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-deterministic-transfer-method",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-deterministic-transfer-method"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-deterministic-transfer-method"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-deterministic-transfer-method",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "deterministic transfer method"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-family-enrollment-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:1b0fa37ddcdfd4ad31549543983d164b4435566a35a7aa4b6f50fa4b260bbd54"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-family-enrollment-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:1b0fa37ddcdfd4ad31549543983d164b4435566a35a7aa4b6f50fa4b260bbd54",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c5546e3d876b46ecf1d9a1a21871eb6c600d27aa7513e019043fe8c981a1ee3b",
+      "generated_statements": "sha256:4bd47f894bca75293fd9fb5745a51dc23f4ba4c5c37d6be59bc8e93c08104595",
+      "input_set": "sha256:c60541617b2d834e7b0e3412aa189f06451d41d2bce390bcd307633cd4febfeb",
+      "package_manifest": "sha256:d7afacd7f4921ba556331b7140ccf86fc17aa9e86b16a5901c1c75831951d14e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "education metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-family-enrollment-metadata",
+          "eval-srcpkg-campaign25-family-enrollment-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-family-enrollment-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-family-enrollment-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 25 records 28 annual-scalar indicators for the enrollment_metadata Education metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-family-enrollment-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:6bbd4f8b555a8ce9b3dd69c8a680807c440825a1ba681ddf07e34dbe4497f3f7",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-family-enrollment-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-family-enrollment-metadata",
+        "pkg-object-srcpkg-campaign25-family-enrollment-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-family-enrollment-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-family-enrollment-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-family-enrollment-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-family-enrollment-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-family-enrollment-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "education metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-family-completion-and-attainment-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:23b09edc51941cdf644d4886f72489ec2f3a09c5db0cf4ff635e2a7eeffaf008"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-family-completion-and-attainment-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:23b09edc51941cdf644d4886f72489ec2f3a09c5db0cf4ff635e2a7eeffaf008",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:861d0be32cfd11c1d782ed53f2b514092032eba59f3ab40c8ce3f99b16eac896",
+      "generated_statements": "sha256:ac7985556c042c47bbdbf10ae17662ec886f5fd6ba868c5f8c8dfe7e8660311f",
+      "input_set": "sha256:bb4865821fa98f4da354fd39b70676f7c93cdb98dd9f37e9603295381418a05a",
+      "package_manifest": "sha256:59d16bac770a739dc46aeccb5c2666a3c80571c59ace0a4239621416a660d2c6",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "education metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-family-completion-and-attainment-metadata",
+          "eval-srcpkg-campaign25-family-completion-and-attainment-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-family-completion-and-attainment-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-family-completion-and-attainment-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 25 records 24 annual-scalar indicators for the completion_and_attainment_metadata Education metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-family-completion-and-attainment-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b8898282acc3fcbcb2909b3113c756542344d0de1a7291858d5fb92213c7b279",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-family-completion-and-attainment-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-family-completion-and-attainment-metadata",
+        "pkg-object-srcpkg-campaign25-family-completion-and-attainment-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-family-completion-and-attainment-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-family-completion-and-attainment-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-family-completion-and-attainment-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-family-completion-and-attainment-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-family-completion-and-attainment-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "education metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-family-education-resources-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e61f0525f7b20eb113f56a43ea5577ebffbe366963efbdd310681f08aaa6f328"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-family-education-resources-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:e61f0525f7b20eb113f56a43ea5577ebffbe366963efbdd310681f08aaa6f328",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:6e72d8c0fa9107df28512ed9c8e1b94326e2636c68e7f89fab53c4a3c25347fa",
+      "generated_statements": "sha256:bc49301ae416b60bf839e01575c8c94a62c175bc8a038966525e2e626a49b076",
+      "input_set": "sha256:30b6b95d64be30651e62c2d073247836e3316ec2f23b7a124410c40f996dc155",
+      "package_manifest": "sha256:7f2e513d323cbf5b1080c1f00237ebb15b23b0a8a584466cb93ef1d495112abb",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "education metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-family-education-resources-metadata",
+          "eval-srcpkg-campaign25-family-education-resources-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-family-education-resources-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-family-education-resources-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 25 records 20 annual-scalar indicators for the education_resources_metadata Education metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-family-education-resources-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:d0efea720ffd736e8a6d701ce842119ed96de5cc740b503cc7d8a56a344c17e6",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-family-education-resources-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-family-education-resources-metadata",
+        "pkg-object-srcpkg-campaign25-family-education-resources-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-family-education-resources-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-family-education-resources-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-family-education-resources-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-family-education-resources-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-family-education-resources-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "education metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-family-literacy-and-learning-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6cf349eb86a9de1b457c270009e640f0f461ee7adf9a40ab5a420595fc4dc6c3"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-family-literacy-and-learning-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:6cf349eb86a9de1b457c270009e640f0f461ee7adf9a40ab5a420595fc4dc6c3",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:5d4633520e7a3e93bc4eb90c2b90d3526454d5f2d37723ad4d180458133d3135",
+      "generated_statements": "sha256:4e98364a90d3ced2dafdaa367a21b1bffc143de653662465f60608963dee3972",
+      "input_set": "sha256:29493451d595b97a5662aaebfaf52b9f21f43fc0c489e9bd9fbfe49be1b852a7",
+      "package_manifest": "sha256:4cf9cdfa421940a802ab8e6869886ca2b738450669b0549be4c9b78cd6e03d87",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "education metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-family-literacy-and-learning-metadata",
+          "eval-srcpkg-campaign25-family-literacy-and-learning-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-family-literacy-and-learning-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-family-literacy-and-learning-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 25 records 22 annual-scalar indicators for the literacy_and_learning_metadata Education metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-family-literacy-and-learning-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:715b60a2884b62a4344b5f4a20afefa1d55534694a0a557903ce182d8d3e59d1",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-family-literacy-and-learning-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-family-literacy-and-learning-metadata",
+        "pkg-object-srcpkg-campaign25-family-literacy-and-learning-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-family-literacy-and-learning-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-family-literacy-and-learning-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-family-literacy-and-learning-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-family-literacy-and-learning-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-family-literacy-and-learning-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "education metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign25-family-equity-and-gender-parity-metadata"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:5b7a356c0b371f3158ce128bc57131eb4e30c8a6877bf1ce68819d62ad3f6888"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign25-family-equity-and-gender-parity-metadata",
+        "reproducibility_handle": "python3 tools/run_campaign25_wdi_education_transfer.py --output artifacts/production/campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "snapshot_fingerprint": "sha256:5b7a356c0b371f3158ce128bc57131eb4e30c8a6877bf1ce68819d62ad3f6888",
+        "source_family": "external_wdi_annual_scalar_education",
+        "source_identity": "World Bank World Development Indicators audited Education evidence snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:9d8e9da1e5da45d95bf6739ec651fbe17d67b1e4571efd541d1b9f8e6b63bd5f",
+      "generated_statements": "sha256:5f705b29255184e367f509bb8af2cab0df0e8e3465e85b0fc274c2c77630b57c",
+      "input_set": "sha256:98be1f544505eaec89dbc3346b193e1903a8ddf407af7f0bd8d01206ebd6b0a8",
+      "package_manifest": "sha256:a449657bfa1c838b9d3435bf7e4d63113824acfe148b1392102b9991950fa4e7",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+          "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_evidence_quality_and_coverage",
+          "topic": "education metadata family"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign25-family-equity-and-gender-parity-metadata",
+          "eval-srcpkg-campaign25-family-equity-and-gender-parity-metadata"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign25-family-equity-and-gender-parity-metadata"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign25-family-equity-and-gender-parity-metadata",
+        "statement_type": "coverage",
+        "text": "Campaign 25 records 18 annual-scalar indicators for the equity_and_gender_parity_metadata Education metadata family."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign25-family-equity-and-gender-parity-metadata"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:131f1b0ff4fb765af25efc13c6f2fd4f1b66f72fb7d89e2cffcc8ab12644c9e3",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign25-family-equity-and-gender-parity-metadata",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign25-family-equity-and-gender-parity-metadata",
+        "pkg-object-srcpkg-campaign25-family-equity-and-gender-parity-metadata"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign25-family-equity-and-gender-parity-metadata",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign25-family-equity-and-gender-parity-metadata",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign25-family-equity-and-gender-parity-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign25-family-equity-and-gender-parity-metadata"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign25-family-equity-and-gender-parity-metadata",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+      "evidence_family": "external_wdi_annual_scalar_education",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-25-wdi-education-annual-scalar-evidence-quality-source-evidence-transfer",
+        "domain": "WDI annual-scalar education evidence-quality and source-evidence transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "education metadata family"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

@@ -1,0 +1,3205 @@
+[
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 WDI Agriculture & Rural Development maturation snapshot contains 138 indicators grouped into 5 Agriculture & Rural Development indicator families.",
+      "knowledge_category": "factual",
+      "payload_metadata": {
+        "indicator_families_total": 5,
+        "indicators_total": 138,
+        "topic": "indicator inventory total"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "indicator inventory total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:43d16bfea9a7d5e2a0f466196ab9999123cbcce73b9b4e376b9d7c5f9820af2a",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:22d75429982832595d0f82600ebb809eda775e7ec359c93171deceb611d1ac76"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-inventory-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 classifies the audited WDI Agriculture & Rural Development inventory into agricultural land use metadata, crop and livestock metadata, rural population metadata, food security and productivity metadata, and agricultural inputs metadata families.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "family_keys": [
+          "agricultural_land_use_metadata",
+          "crop_and_livestock_metadata",
+          "rural_population_metadata",
+          "food_security_and_productivity_metadata",
+          "agricultural_inputs_metadata"
+        ],
+        "topic": "family classification set"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family classification set"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:7366b74b82c7473f4cf6e7d4c9ca76f868cc8afce134665d9ff9c976985bf725",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:1a3ed53091a7044e3c094975016a63719eddf652dfb9d63519442fbbcabe5526"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-classification-set",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 WDI Agriculture & Rural Development inventory assigns 31 indicators to the agricultural land use metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 174,
+        "complete_period_coverage": false,
+        "family_key": "agricultural_land_use_metadata",
+        "high_partial": 29,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 4,
+        "label": "agricultural land use metadata",
+        "missing_periods": 2,
+        "moderate_partial": 10,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership agricultural_land_use_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family membership agricultural_land_use_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:f102e34911c9eee355ca075427b0be4f9621d02717caff902311d4d7aa19e6a8",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:bd2e8b8edcc2dcb07aa601f4682f58a24eda31ebfaad7d88422133fbdb9a87b8"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-membership-agricultural_land_use_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 WDI Agriculture & Rural Development inventory assigns 34 indicators to the crop and livestock metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 166,
+        "complete_period_coverage": false,
+        "family_key": "crop_and_livestock_metadata",
+        "high_partial": 32,
+        "indicator_count": 34,
+        "insufficient_for_campaign_scope": 5,
+        "label": "crop and livestock metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership crop_and_livestock_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family membership crop_and_livestock_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:9116a84941b51915c70d4a39b5a505332d2ef22ecbc3d2e36506c4854a00a088",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:cece0b335ee40ebfdc9aab4e0f3fe73dbe06de97627bf4582ee0294144918982"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-membership-crop_and_livestock_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 WDI Agriculture & Rural Development inventory assigns 29 indicators to the rural population metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 169,
+        "complete_period_coverage": false,
+        "family_key": "rural_population_metadata",
+        "high_partial": 30,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 5,
+        "label": "rural population metadata",
+        "missing_periods": 3,
+        "moderate_partial": 13,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership rural_population_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family membership rural_population_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:85bce7525e69acf822caf70d8e2a432a7ef678ba4ee4057a58c831b7097f4168",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:53764dfdce44b0b9bd519f9ff17da247ae9513e45abc3972cff693b42a578b83"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-membership-rural_population_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 WDI Agriculture & Rural Development inventory assigns 27 indicators to the food security and productivity metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 158,
+        "complete_period_coverage": false,
+        "family_key": "food_security_and_productivity_metadata",
+        "high_partial": 36,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 6,
+        "label": "food security and productivity metadata",
+        "missing_periods": 4,
+        "moderate_partial": 17,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership food_security_and_productivity_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family membership food_security_and_productivity_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:af3e542b4413cdc1ba13296a4a3aaa0d6919a6ba15df87357ff18af40568b0a8",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:e021bf30fed1d2096db7aa7d37fee800cdf268799050c615602bd2581787acdb"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-membership-food_security_and_productivity_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 WDI Agriculture & Rural Development inventory assigns 17 indicators to the agricultural inputs metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 143,
+        "complete_period_coverage": false,
+        "family_key": "agricultural_inputs_metadata",
+        "high_partial": 42,
+        "indicator_count": 17,
+        "insufficient_for_campaign_scope": 10,
+        "label": "agricultural inputs metadata",
+        "missing_periods": 5,
+        "moderate_partial": 22,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership agricultural_inputs_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family membership agricultural_inputs_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:9ee4cc4c96c0a5813fa1150601d513f030981f7737fa3ce9de771cf57835102c",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:7eb5212f4101a646488fa0d4f2a332e5060096e20fab56a0fd2a0985036729aa"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-membership-agricultural_inputs_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 records indicator, territory, period, and indicator-family as supported dimensions for audited Agriculture & Rural Development maturation objects.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "supported_dimensions": [
+          "indicator",
+          "territory",
+          "period",
+          "indicator_family"
+        ],
+        "topic": "supported dimensions"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "supported dimensions"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:7f5cc7455ef819a59c5a3701c5d338197c8e0d86912113b490a8a3a6e5aea7ad",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:c888b4b658168ceb5b9dff8e850a26f2fa568ce52bfbfa4aa1c939ee9884430d"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-supported-dimensions",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the audited Agriculture & Rural Development maturation scope.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "topic": "unsupported dimensions",
+        "unsupported_dimensions": [
+          "subnational_region",
+          "scenario",
+          "model_projection",
+          "narrative_assessment"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:45c3be107c17e305afd113fdedb81f8eee0ddfb1e4c71b81d9462fcfb266ec5b",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:597b8cf153ee2a2d50e1cc4e669f3d3dbada908264fa77b864bcbc1789273fad"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-unsupported-dimensions",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial coverage matrix has 1085 territory-by-family cells across 5 indicator families.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "indicator_family_count": 5,
+        "matrix_cell_count": 1085,
+        "topic": "territorial matrix shape"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "territorial matrix shape"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:fb20cb5143a51eb420865c8ca4453bec1bf0ba9883aa5209e687a33f5605b985",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:dc8b9fa4ec53ffa20ca4139801352bd612e2c84909cbc13f43ba95a11cbc5d8e"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-territorial-matrix-shape",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 classifies Agriculture & Rural Development territorial coverage cells into complete-or-near-complete, high-partial, moderate-partial, and insufficient-for-campaign-scope buckets.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "bucket_keys": [
+          "complete_or_near_complete",
+          "high_partial",
+          "moderate_partial",
+          "insufficient_for_campaign_scope"
+        ],
+        "topic": "territorial bucket taxonomy"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "territorial bucket taxonomy"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:134f722704ae161aa5f879e0267035f2e0a7980f94074fa7069b341a6b63923f",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:6207e2412067720602e1c4b028220602af01be560eca3d7c1d7e090dd1d3a269"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-territorial-bucket-taxonomy",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial matrix assigns 810 family-territory cells to the complete-or-near-complete bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 810,
+        "topic": "territorial complete total"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "territorial complete total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:5a52b441c0e44860da6cde8163ab1fd3e3d02fe2b0d9c1747cc1c092c6abf2b3",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:bec081b5c45391aa3436ae5854bf6e9d6c07f6bc2ca00d44e1f8c47c44da4ee7"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-territorial-complete-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial matrix assigns 169 family-territory cells to the high-partial bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 169,
+        "topic": "territorial high partial total"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "territorial high partial total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:29843e553313bacb161c111ef74937ccdefecbe464edcc8b4240331d306a4e3b",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:23ead910396c2bfcefb2699a4ed5cb8d83d2aa249a0e4b08819cbeb756aa8702"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-territorial-high-partial-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial matrix assigns 76 family-territory cells to the moderate-partial bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 76,
+        "topic": "territorial moderate partial total"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "territorial moderate partial total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:9c8d05dc452c11d848253b683e1ccf447c3b0d72585ef38c5dbf3a01d5b63261",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:d60d86d3d3ffa48506e7085265cc679cf9f7707d36eb1b38a25aa4086fbae881"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-territorial-moderate-partial-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial matrix assigns 30 family-territory cells to the insufficient-for-campaign-scope bucket.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "bucket_total": 30,
+        "topic": "territorial insufficient total"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "territorial insufficient total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:f51f9ced5c37b5bc895c550bb54fa2daa6cc31c0fce1e10a83ef373f34dabf68",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:3c2ccdb2bcb01a09d637df2c1873a91797e1568c4a9e562fa5eec1ef554a5aef"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-territorial-insufficient-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial matrix records coverage buckets for 217 audited territories in the agricultural-land-use-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 174,
+        "complete_period_coverage": false,
+        "family_key": "agricultural_land_use_metadata",
+        "high_partial": 29,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 4,
+        "label": "agricultural land use metadata",
+        "missing_periods": 2,
+        "moderate_partial": 10,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage agricultural_land_use_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage agricultural_land_use_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:3a6b692f604f722a93f015f7c68f9bf69a20602d752383bfabe7ce779db800cf",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:37d0d7718017e614d2d11936aff597275fc174ecc6bff5202369d3be6e936532"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-territorial-coverage-agricultural_land_use_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial matrix records coverage buckets for 217 audited territories in the crop-and-livestock-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 166,
+        "complete_period_coverage": false,
+        "family_key": "crop_and_livestock_metadata",
+        "high_partial": 32,
+        "indicator_count": 34,
+        "insufficient_for_campaign_scope": 5,
+        "label": "crop and livestock metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage crop_and_livestock_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage crop_and_livestock_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:58cb7fb2e9ce5abf23ee0a24da17926d29e607c3aed74b24391bbe7f152d2688",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:8a9edd8bcca36f05cfc792130d03e6f6cff779e6367b969a3c2795596d731b55"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-territorial-coverage-crop_and_livestock_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial matrix records coverage buckets for 217 audited territories in the rural-population-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 169,
+        "complete_period_coverage": false,
+        "family_key": "rural_population_metadata",
+        "high_partial": 30,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 5,
+        "label": "rural population metadata",
+        "missing_periods": 3,
+        "moderate_partial": 13,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage rural_population_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage rural_population_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:fd1554300b1e33a34d4db4a4e10d201b741cc1aa9606546716cbfe8cfd4cf6e0",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:0133ef6d1553470cc67f574cf71b4374e13eb5e46170e81056df56ddc8192795"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-territorial-coverage-rural_population_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial matrix records coverage buckets for 217 audited territories in the food-security-and-productivity-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 158,
+        "complete_period_coverage": false,
+        "family_key": "food_security_and_productivity_metadata",
+        "high_partial": 36,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 6,
+        "label": "food security and productivity metadata",
+        "missing_periods": 4,
+        "moderate_partial": 17,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage food_security_and_productivity_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage food_security_and_productivity_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:ca972725003a4a15a85bff3776950571a84144adf1a0960a88c1d6bab1cd047c",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:fe6b5d400cb5e5d0d0455972e1e394735eccbd5d816a7b70ed4c632962bfd982"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-territorial-coverage-food_security_and_productivity_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development territorial matrix records coverage buckets for 217 audited territories in the agricultural-inputs-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 143,
+        "complete_period_coverage": false,
+        "family_key": "agricultural_inputs_metadata",
+        "high_partial": 42,
+        "indicator_count": 17,
+        "insufficient_for_campaign_scope": 10,
+        "label": "agricultural inputs metadata",
+        "missing_periods": 5,
+        "moderate_partial": 22,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage agricultural_inputs_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage agricultural_inputs_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:c25e011e62af483cb7332ea119632d4bfb3e42a1f2bd3bc517a1f6b193ec7b8f",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:a3006ece723bfe09e40fd5e2151cf6c27c61c13718fa7350de448cf4be9ff567"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-territorial-coverage-agricultural_inputs_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development temporal coverage matrix covers annual periods from 1990 through 2024.",
+      "knowledge_category": "factual",
+      "payload_metadata": {
+        "period_end": 2024,
+        "period_start": 1990,
+        "topic": "temporal period range"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "temporal period range"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:573e22ea008bec6431c7a534fcfb1744eee9b1b43486b4caf809a973b94c9bb3",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:ef024e0846d9e8ef177c37c7f8f0c9c0c4f3535e4bba24b414b30650ec64ebeb"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-temporal-period-range",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development temporal coverage matrix has 175 period-by-family cells across 5 indicator families.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "matrix_cell_count": 175,
+        "topic": "temporal matrix shape"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "temporal matrix shape"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:66f0e0c853134b7ab8d9eb7d28ec1190515142a7fc67ff33d10ccec2d98e72ab",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:27772a16cf98e4c9b10e498183679634379ec7a5bb411add470e4f01c9281a33"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-temporal-matrix-shape",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development temporal matrix records 158 observed period-family cells.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "observed_period_cells": 158,
+        "topic": "temporal observed total"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "temporal observed total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:20147dc9ad07f7b8823904cd29fd330a7c97ec105e49c5d5dd91dd6ea6c9bfd3",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:6faec0bdfcaa183bc1d20177fe9bd404f59dc565ffce5be0e55c39f609a61d31"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-temporal-observed-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development temporal matrix records 17 missing period-family cells.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "missing_period_cells": 17,
+        "topic": "temporal missing total"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "temporal missing total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:9be01bacccd1a426fa7b42840ab04be9ce7cfb317e24a2638d1e749f9793d598",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:7a0317d99e8589dcfa1d329f5297cd98dd0ef7f9d1fd89e638b85e6fffcadf63"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-temporal-missing-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development temporal matrix records 33 observed periods and 2 missing periods for the agricultural-land-use-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 174,
+        "complete_period_coverage": false,
+        "family_key": "agricultural_land_use_metadata",
+        "high_partial": 29,
+        "indicator_count": 31,
+        "insufficient_for_campaign_scope": 4,
+        "label": "agricultural land use metadata",
+        "missing_periods": 2,
+        "moderate_partial": 10,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage agricultural_land_use_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage agricultural_land_use_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:6d7b6c9fdf05f1bda642320d698c03d9542c56a98241e554b2bd9e1f92547001",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:6309d972a531b074a44aec36dab78f8586c8227251db0bde78931272b6b0e61d"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-temporal-coverage-agricultural_land_use_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development temporal matrix records 32 observed periods and 3 missing periods for the crop-and-livestock-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 166,
+        "complete_period_coverage": false,
+        "family_key": "crop_and_livestock_metadata",
+        "high_partial": 32,
+        "indicator_count": 34,
+        "insufficient_for_campaign_scope": 5,
+        "label": "crop and livestock metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage crop_and_livestock_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage crop_and_livestock_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:595283ec5edc42e284483b044f8240295dd897b597e53cb65635811856f4ce13",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:02ab51dc10d6e1818de4d63cb000292573add43f6d3a944d1ea6f902dfea727d"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-temporal-coverage-crop_and_livestock_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development temporal matrix records 32 observed periods and 3 missing periods for the rural-population-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 169,
+        "complete_period_coverage": false,
+        "family_key": "rural_population_metadata",
+        "high_partial": 30,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 5,
+        "label": "rural population metadata",
+        "missing_periods": 3,
+        "moderate_partial": 13,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage rural_population_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage rural_population_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:c04ecec7c11fb00aaf5f7c38d734501065cf82e93a9b68780dc9c5f2a0531b80",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:fbcd26a979b4663b9636d692b78bf543ed3854ffe97d5a61aaf348568d8f974f"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-temporal-coverage-rural_population_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development temporal matrix records 31 observed periods and 4 missing periods for the food-security-and-productivity-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 158,
+        "complete_period_coverage": false,
+        "family_key": "food_security_and_productivity_metadata",
+        "high_partial": 36,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 6,
+        "label": "food security and productivity metadata",
+        "missing_periods": 4,
+        "moderate_partial": 17,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage food_security_and_productivity_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage food_security_and_productivity_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:6160357f5bffe34a6c51eb9121babbc87c1171d6325b926f11b98e40885ee4e5",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:103d6a1bb3c8934e3fc676dfb8d39fb4f2a031010baead26d531bbb2e117bb13"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-temporal-coverage-food_security_and_productivity_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development temporal matrix records 30 observed periods and 5 missing periods for the agricultural-inputs-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 143,
+        "complete_period_coverage": false,
+        "family_key": "agricultural_inputs_metadata",
+        "high_partial": 42,
+        "indicator_count": 17,
+        "insufficient_for_campaign_scope": 10,
+        "label": "agricultural inputs metadata",
+        "missing_periods": 5,
+        "moderate_partial": 22,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage agricultural_inputs_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage agricultural_inputs_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:e816f6aa9a11bfb619c1535af3f31a6878df347ee467e1de0a27d6f7f927a071",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:64afb61a05eb67ab1f92ed5ccc1c7f9746b6d866c0a676dea13be8129ab0ae44"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-family-temporal-coverage-agricultural_inputs_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 quality control verifies territory-bucket denominators, period denominators, and matrix cell counts for the Agriculture & Rural Development maturation snapshot.",
+      "knowledge_category": "evidence_quality",
+      "payload_metadata": {
+        "ambiguous_family_assignments": 0,
+        "duplicate_candidate_statements_expected": false,
+        "matrix_cell_counts_verified": true,
+        "period_denominators_verified": true,
+        "territory_bucket_denominators_verified": true,
+        "topic": "denominator quality"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "denominator quality"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:084ebff1fc5485d106aa541297eb073a6e37d30ab52d443d205f0e932aa31695",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:ab3df133cad9cfc22a9335fb60c33f2882c420b2b4144958fe720357a6b402fc"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-denominator-quality",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 Agriculture & Rural Development maturation packages record source snapshot fingerprint, source family, selection rule, evidence basis, and deterministic rerun handle.",
+      "knowledge_category": "provenance",
+      "payload_metadata": {
+        "deterministic_rerun_handle_available": true,
+        "evidence_basis_available": true,
+        "selection_rule_available": true,
+        "source_family_available": true,
+        "source_snapshot_fingerprint_available": true,
+        "topic": "provenance state"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "provenance state"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:c8331e4c95e3b09198d63bb3dedf0bf71c33fe8c6432153e6ff45d2e6bf9aba3",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:0d07b8937cb83b9e323b5a1d8e3fc34fd1bca74e92d96bafca60b676cd10a6f4"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-provenance-state",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 routes Agriculture & Rural Development maturation packages through the existing validation pipeline without validator, taxonomy, package-model, or workflow modification.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "taxonomy_modified": false,
+        "topic": "validation state",
+        "validator_modified": false,
+        "workflow_modified": false
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "validation state"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:8e79926a03be9a813afec4c3c654706a710aacbd126c632cdab13768b5e23915",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:90e2b6579225982b4615eee473d42e54076855bda12ec97d2c166db8bf3bdd8f"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-validation-state",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 derives Agriculture & Rural Development inventory totals, territorial bucket totals, and temporal cell totals deterministically from the immutable maturation snapshot.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "temporal_observed_period_cells": 158,
+        "territorial_bucket_totals": {
+          "complete_or_near_complete": 810,
+          "high_partial": 169,
+          "insufficient_for_campaign_scope": 30,
+          "moderate_partial": 76
+        },
+        "topic": "deterministic transform"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "deterministic transform"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:bdfd92f961118946627f4e75e642c15020f778b6f6c003b5a03cb0df7f6cc4dd",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:aa547d073fed2b83f950fefa7e436ae52c638e557520d952d4a5552fa8ace20d"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-deterministic-transform",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 classifies the WDI Agriculture & Rural Development production family as Stable using Agriculture & Rural Development-family production evidence from Campaigns 16 and 17.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "basis": "Campaigns 16 and 17 validate WDI Agriculture & Rural Development production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+        "classification": "Stable",
+        "insufficient_for_mature": [
+          "dedicated Agriculture & Rural Development provenance-lineage completeness",
+          "Agriculture & Rural Development family closeout"
+        ],
+        "topic": "Agriculture & Rural Development family maturity",
+        "validated": [
+          "deterministic replay",
+          "fingerprint stability",
+          "provenance completeness",
+          "rejected-candidate preservation",
+          "indicator-family inventory",
+          "territorial coverage",
+          "temporal coverage"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "Agriculture & Rural Development family maturity"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:0e8a012ee2d9761c4333978390e839166e64dc50d2869847c3d9d8e6d23731c5",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:c0ad9dfd6b97bfd9ee207983c963a096c66f0a4e741206b60b8f79ced5543552"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-agriculture_rural_development-family-stable",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 20 Agriculture & Rural Development maturity assessment does not classify the WDI Agriculture & Rural Development production family as Mature because dedicated Agriculture & Rural Development provenance-lineage completeness has not yet been executed.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "basis": "Campaigns 16 and 17 validate WDI Agriculture & Rural Development production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+        "classification": "Stable",
+        "insufficient_for_mature": [
+          "dedicated Agriculture & Rural Development provenance-lineage completeness",
+          "Agriculture & Rural Development family closeout"
+        ],
+        "topic": "Agriculture & Rural Development family not Mature",
+        "validated": [
+          "deterministic replay",
+          "fingerprint stability",
+          "provenance completeness",
+          "rejected-candidate preservation",
+          "indicator-family inventory",
+          "territorial coverage",
+          "temporal coverage"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "Agriculture & Rural Development family not Mature"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:cde6d505a58731e1479cbae563790f516c621abc0d153c99958b31a72783e060",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:b2c76819652a0c89b6b0c67250190ba6a073857acd67c7a0337fca76dd87dcac"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-agriculture_rural_development-not-mature",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_agriculture_rural_development_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 20 records unchanged workflow, validator behaviour, package construction, provenance handling, fingerprint stability, and PEL behaviour compared with the demographic inventory and coverage-matrix maturation stage.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "equivalent_demographic_stage": "Campaigns 4-6",
+        "family_specific_assumptions": [
+          "Agriculture & Rural Development indicator family names",
+          "Agriculture & Rural Development coverage bucket counts"
+        ],
+        "fingerprint_stability": "unchanged",
+        "knowledge_category_coverage": "same categories, different family counts",
+        "knowledgeforge_wide_assumptions": [
+          "deterministic replay",
+          "fingerprint stability",
+          "rejected-candidate preservation",
+          "provenance completeness"
+        ],
+        "package_construction": "unchanged",
+        "pel_behaviour": "unchanged",
+        "production_pressures": "no new pressure",
+        "production_workflow_transfer": "unchanged",
+        "provenance_handling": "unchanged",
+        "topic": "maturation methodology comparison",
+        "validator_behaviour": "unchanged"
+      },
+      "scope": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "maturation methodology comparison"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:bac29b96e5d2c1daf29c7d28b52ab67cfdb7c84ddcedeb7347adca49f69413f0",
+      "provenance": "sha256:bf0f7260c6b72081ad8cbd3f319a9c35726e7686470ff89a970566803028ced8",
+      "reproducibility": "sha256:39f236ff1f7f0752fe09e0f983a1739e11e70a35ecf0075e2d8c14fe3899a84a",
+      "source_payload": "sha256:0b668288e9f3b77c9d57b64dbaf62b747a828a102ea069bf9f4ecd9ab484e426"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-19-wdi-agriculture-rural-development-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 20 WDI Agriculture & Rural Development maturation scope",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Agriculture & Rural Development maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign20-maturation-methodology-comparison",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_name": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_version": "sha256:b2c1dab9bed6d6de09e28677863df773d8601f3a2df8f41042548e10fe67b1d3"
+    }
+  }
+]

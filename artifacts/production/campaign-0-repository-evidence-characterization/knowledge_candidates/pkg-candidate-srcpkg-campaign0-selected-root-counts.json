@@ -1,0 +1,144 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign0-selected-root-counts"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "source_evidence_package",
+      "evidence_ref_id": "ev-srcpkg-campaign0-selected-root-counts",
+      "reproducibility_handle": "python3 tools/run_campaign0_repository_evidence.py --output artifacts/production/campaign-0-repository-evidence-characterization",
+      "snapshot_fingerprint": "sha256:6c0c8e789b1f55972aeee6c45478574d62932fe14ad58840817c19ce142125a8",
+      "source_family": "repository_evidence",
+      "source_identity": "KnowledgeForge repository selected evidence snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:959a73d78f568bd3b4d47a770e936286d77c09ecacb9b69d2f18680384743dd8",
+    "generated_statements": "sha256:a385fc331b83e439ecfdec3e4bf805d8b698e0f50fc801afa9b20f530bb2bbd5",
+    "input_set": "sha256:dffdd480199ef19bffc9f86b2e801dafb58f149ad6006f8f9cf2105ad2a7bf67",
+    "package_manifest": "sha256:407c07d6dfeca4fd2311c5c09d00627294d35826f06e109c8a23dc171f200cd3",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-0-repository-evidence-characterization",
+        "domain": "repository evidence characterization",
+        "exclusions": [
+          "interpretive claims",
+          "unsupported explanatory claims",
+          "future-oriented claims",
+          "cause-effect claims",
+          "action-selection claims",
+          "audience-facing prose",
+          "financial-meaning claims",
+          "government-action-meaning claims"
+        ],
+        "scope_type": "repository_evidence_characterization"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign0-selected-root-counts",
+        "eval-srcpkg-campaign0-selected-root-counts"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign0-selected-root-counts"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign0-selected-root-counts",
+      "statement_type": "derived",
+      "text": "The Campaign 0 selected repository evidence snapshot records deterministic file counts for each selected root."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign0-selected-root-counts"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign0-selected-root-counts",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign0-selected-root-counts"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign0-selected-root-counts"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign0-selected-root-counts",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "repository evidence characterization",
+    "evidence_family": "repository_evidence",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-0-repository-evidence-characterization",
+      "domain": "repository evidence characterization",
+      "exclusions": [
+        "interpretive claims",
+        "unsupported explanatory claims",
+        "future-oriented claims",
+        "cause-effect claims",
+        "action-selection claims",
+        "audience-facing prose",
+        "financial-meaning claims",
+        "government-action-meaning claims"
+      ],
+      "scope_type": "repository_evidence_characterization"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

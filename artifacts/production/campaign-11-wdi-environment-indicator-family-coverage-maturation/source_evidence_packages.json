@@ -1,0 +1,3205 @@
+[
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 WDI Environment maturation snapshot contains 188 indicators grouped into 5 Environment indicator families.",
+      "knowledge_category": "factual",
+      "payload_metadata": {
+        "indicator_families_total": 5,
+        "indicators_total": 188,
+        "topic": "indicator inventory total"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "indicator inventory total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:65a9efb8932a10aad2d716ecebf0a673e1c28ab23334f8ff8b56fca9b838744f",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:0ef9c5234bf74825b33e4e9cccf04beffcb47d415e60ebbb93e2f7cdb374c793"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-inventory-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 classifies the audited WDI Environment inventory into air-and-climate metadata, land-and-forest metadata, water-and-sanitation metadata, biodiversity-and-protected-area metadata, and resource-use metadata families.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "family_keys": [
+          "air_and_climate_metadata",
+          "land_and_forest_metadata",
+          "water_and_sanitation_metadata",
+          "biodiversity_and_protected_area_metadata",
+          "resource_use_metadata"
+        ],
+        "topic": "family classification set"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family classification set"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:b09e5e5ca2fcee5aa6679536a83411a6ce3c03e05dc2262984f5456eb68bc7bf",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:be85a1f83e0ed2e95a7717d47e684bfa92098c61fbeb217e77a7b2ad506185a1"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-classification-set",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 WDI Environment inventory assigns 44 indicators to the air and climate metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 184,
+        "complete_period_coverage": false,
+        "family_key": "air_and_climate_metadata",
+        "high_partial": 22,
+        "indicator_count": 44,
+        "insufficient_for_campaign_scope": 2,
+        "label": "air and climate metadata",
+        "missing_periods": 1,
+        "moderate_partial": 9,
+        "observed_periods": 34,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership air_and_climate_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family membership air_and_climate_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:e0c2363a5389df185135bc0e2b4aa242cffd59fa043c7e5569369e8c36816437",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:d2cbdd19701ea368bcb0b7efbcd457bd0ab443c909410fd0d68cbf0c805cea4b"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-membership-air_and_climate_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 WDI Environment inventory assigns 38 indicators to the land and forest metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 176,
+        "complete_period_coverage": true,
+        "family_key": "land_and_forest_metadata",
+        "high_partial": 26,
+        "indicator_count": 38,
+        "insufficient_for_campaign_scope": 3,
+        "label": "land and forest metadata",
+        "missing_periods": 0,
+        "moderate_partial": 12,
+        "observed_periods": 35,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership land_and_forest_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family membership land_and_forest_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:322c7eba8ccc49a575466c537398ab38901eb590122073168001991e35d936c7",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:635fadba2afdbaaf282d761a1c59b54b711012fd1752dfd849e312a8c81f7bcb"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-membership-land_and_forest_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 WDI Environment inventory assigns 36 indicators to the water and sanitation metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 181,
+        "complete_period_coverage": false,
+        "family_key": "water_and_sanitation_metadata",
+        "high_partial": 21,
+        "indicator_count": 36,
+        "insufficient_for_campaign_scope": 4,
+        "label": "water and sanitation metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership water_and_sanitation_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family membership water_and_sanitation_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:8b8ee3da42a7c4fbf8c05374a77bda146cd905355493b40b01306ad4c5cdc6fe",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:6f843dfbaf026f310c680f4571d68fe457c0776c0074309d0a2617d7656ad9f4"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-membership-water_and_sanitation_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 WDI Environment inventory assigns 28 indicators to the biodiversity and protected area metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 152,
+        "complete_period_coverage": false,
+        "family_key": "biodiversity_and_protected_area_metadata",
+        "high_partial": 34,
+        "indicator_count": 28,
+        "insufficient_for_campaign_scope": 7,
+        "label": "biodiversity and protected area metadata",
+        "missing_periods": 4,
+        "moderate_partial": 24,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership biodiversity_and_protected_area_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family membership biodiversity_and_protected_area_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:f3a69672be0d2434b244cbb08890c83d5dd62ca1e6d772b76d0878dc21446625",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:bfc6f046fad7e0a61fa356dce05d18266b50361399007c438627375b7f732d61"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-membership-biodiversity_and_protected_area_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 WDI Environment inventory assigns 42 indicators to the resource use metadata family.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "complete_or_near_complete": 169,
+        "complete_period_coverage": false,
+        "family_key": "resource_use_metadata",
+        "high_partial": 29,
+        "indicator_count": 42,
+        "insufficient_for_campaign_scope": 4,
+        "label": "resource use metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family membership resource_use_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family membership resource_use_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:9c1ba3d76e242b20d0bfc88b2a64b65f8cc0544e605553f7f0d1227e4c4aa184",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:f45060a5ef6197f7444a72e9f1f94e547fa40df6ef6a71d22e8d472723f302d2"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-membership-resource_use_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 records indicator, territory, period, and indicator-family as supported dimensions for audited Environment maturation objects.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "supported_dimensions": [
+          "indicator",
+          "territory",
+          "period",
+          "indicator_family"
+        ],
+        "topic": "supported dimensions"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "supported dimensions"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:5c62a59058d50084c7555ad3124c404d2d8debc6d13adf37d284ae35519d37f2",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:8bb275830adf0f01e96d3f2c5edd3587e5c136894275495404bbb1d6f6b1421b"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-supported-dimensions",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 does not include subnational-region, scenario, model-projection, or narrative-assessment dimensions in the audited Environment maturation scope.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "topic": "unsupported dimensions",
+        "unsupported_dimensions": [
+          "subnational_region",
+          "scenario",
+          "model_projection",
+          "narrative_assessment"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "unsupported dimensions"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:ff3c5f8c35b7fae74304070600890bfb714b9f9f2d5d1f40be5b658e8f1ab252",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:11e39d9b56bd4b2f4cb7a11ce4c24ccb1e282eaa0c369771fde86c2e12253ec6"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-unsupported-dimensions",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial coverage matrix has 1085 territory-by-family cells across 5 indicator families.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "indicator_family_count": 5,
+        "matrix_cell_count": 1085,
+        "topic": "territorial matrix shape"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "territorial matrix shape"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:352eef964fda78fdb1939b4a3e3ec4881f38422351fa9f4dbce205e86db0e0a3",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:8ee6c833d35f4c557b3874e444efa9e71fe96aaca5a681667a4b4b79399db05b"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-territorial-matrix-shape",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 classifies Environment territorial coverage cells into complete-or-near-complete, high-partial, moderate-partial, and insufficient-for-campaign-scope buckets.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "bucket_keys": [
+          "complete_or_near_complete",
+          "high_partial",
+          "moderate_partial",
+          "insufficient_for_campaign_scope"
+        ],
+        "topic": "territorial bucket taxonomy"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "territorial bucket taxonomy"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:99dac89ae66533a87426b8b70c5337c0d69252fa85cbecc75ec0f56fb6f774d7",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:a23bed5d3d7dba66dd4cb593896e5b9f199209e9121aff634f73635ea0cefd45"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-territorial-bucket-taxonomy",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial matrix assigns 862 family-territory cells to the complete-or-near-complete bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 862,
+        "topic": "territorial complete total"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "territorial complete total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:8694494f5fe99f52f79eca4f76dbabbf3f0b03f92ec91464945dcb2552b8b375",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:b16ebd7bc6e7250e20cbce1b4f712db5700c09ce813b598f6c94073aaf69d282"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-territorial-complete-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial matrix assigns 132 family-territory cells to the high-partial bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 132,
+        "topic": "territorial high partial total"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "territorial high partial total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:4654448c3fab914b79f50aec6a422c5bfee3a0749663ee07c7d7af9ba8cefcb3",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:4dad5a3f638998f1bcc0c713c11d036a6c2669d609959b2882a2127dad753af6"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-territorial-high-partial-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial matrix assigns 71 family-territory cells to the moderate-partial bucket.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "bucket_total": 71,
+        "topic": "territorial moderate partial total"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "territorial moderate partial total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:ee4b5258a70d9dceb77828dd987c0c077444be2502f04b35ea72ecdd6f518965",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:355393338296c794013a0b64a6fc0f9b05f55ab04c97ad5565cd313463928b49"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-territorial-moderate-partial-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial matrix assigns 20 family-territory cells to the insufficient-for-campaign-scope bucket.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "bucket_total": 20,
+        "topic": "territorial insufficient total"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "territorial insufficient total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:14aa331b7c695ad43fec27f389f0260ae1d507614781bbe403a5385a0f41759c",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:07c5e57cc072be61187ddeaa32436ca1702eec176d63c0673314febb9cecbf10"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-territorial-insufficient-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial matrix records coverage buckets for 217 audited territories in the air-and-climate-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 184,
+        "complete_period_coverage": false,
+        "family_key": "air_and_climate_metadata",
+        "high_partial": 22,
+        "indicator_count": 44,
+        "insufficient_for_campaign_scope": 2,
+        "label": "air and climate metadata",
+        "missing_periods": 1,
+        "moderate_partial": 9,
+        "observed_periods": 34,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage air_and_climate_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage air_and_climate_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:760a0179464a967a42ae2ff974a8fde46b30ad5e99b170c2dd835c0db7accf75",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:7d585729c5ae08ec01bb57d19faf1a87f9ca28b7945ed158e0cab1467e0905f2"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-territorial-coverage-air_and_climate_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial matrix records coverage buckets for 217 audited territories in the land-and-forest-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 176,
+        "complete_period_coverage": true,
+        "family_key": "land_and_forest_metadata",
+        "high_partial": 26,
+        "indicator_count": 38,
+        "insufficient_for_campaign_scope": 3,
+        "label": "land and forest metadata",
+        "missing_periods": 0,
+        "moderate_partial": 12,
+        "observed_periods": 35,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage land_and_forest_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage land_and_forest_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:f7003b5b5edbeb673f5ebe71a4ad79c045863ff9fdb37c1a3bc35d301862e332",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:ac16af430443f21a5f421fe728e84285f75ffd22cefd3aadde30470557e48e5e"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-territorial-coverage-land_and_forest_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial matrix records coverage buckets for 217 audited territories in the water-and-sanitation-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 181,
+        "complete_period_coverage": false,
+        "family_key": "water_and_sanitation_metadata",
+        "high_partial": 21,
+        "indicator_count": 36,
+        "insufficient_for_campaign_scope": 4,
+        "label": "water and sanitation metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage water_and_sanitation_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage water_and_sanitation_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:01523143cc3a4404cbf474cbac027aa1da299051e907101fa5dfcbd1e7e6350a",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:8ecab0ca22a0a29f7ba56d771b8f13a061ec3eb29f75891ddc94f80896d5d3ea"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-territorial-coverage-water_and_sanitation_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial matrix records coverage buckets for 217 audited territories in the biodiversity-and-protected-area-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 152,
+        "complete_period_coverage": false,
+        "family_key": "biodiversity_and_protected_area_metadata",
+        "high_partial": 34,
+        "indicator_count": 28,
+        "insufficient_for_campaign_scope": 7,
+        "label": "biodiversity and protected area metadata",
+        "missing_periods": 4,
+        "moderate_partial": 24,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage biodiversity_and_protected_area_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage biodiversity_and_protected_area_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:d2d803a906034e4c3b82c86d571bd5ae5f8eb8e45d67380d3b7504ba225230f8",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:f877f2f4a7e50d62ca5b112893f6912953f032876058301efd55ba87d8f4311f"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-territorial-coverage-biodiversity_and_protected_area_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment territorial matrix records coverage buckets for 217 audited territories in the resource-use-metadata family.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 169,
+        "complete_period_coverage": false,
+        "family_key": "resource_use_metadata",
+        "high_partial": 29,
+        "indicator_count": 42,
+        "insufficient_for_campaign_scope": 4,
+        "label": "resource use metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family territorial coverage resource_use_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage resource_use_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:e44e1e93ca41b0535af8c3416b24952cfa4d270ac8cdc1474986a5aa5f4ccf43",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:ec36d25dabc540c893e78590700d5a0219c08f9d550b701d8ad20eb99f2041a8"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-territorial-coverage-resource_use_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment temporal coverage matrix covers annual periods from 1990 through 2024.",
+      "knowledge_category": "factual",
+      "payload_metadata": {
+        "period_end": 2024,
+        "period_start": 1990,
+        "topic": "temporal period range"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "temporal period range"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:b87ce7503fb63dcd4fa2bfd5e018ae0800232d5e92d73835295f4032afb11a2c",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:c89c9aa68a90d1d8f16df4ef6cac9d63b363b8b0f2be1420ce22d808f55d20ab"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-temporal-period-range",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment temporal coverage matrix has 175 period-by-family cells across 5 indicator families.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "matrix_cell_count": 175,
+        "topic": "temporal matrix shape"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "temporal matrix shape"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:059fa098fe55f7b85d5a1da041cd50e1dd596e9e68e808c392de6aba118d76bb",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:654d46bf8e21f1df4f9542eb1caab871ef5916c738a42e4afdf25c799e98c0ba"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-temporal-matrix-shape",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment temporal matrix records 165 observed period-family cells.",
+      "knowledge_category": "derived",
+      "payload_metadata": {
+        "observed_period_cells": 165,
+        "topic": "temporal observed total"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "temporal observed total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:3248272ee3868f8f2af0edc75077cbfcaf9efe212dd652760dda4e9cee7c6322",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:febeb5a50034f8eb3e8f5c79b94142f4087d24cdd3f567bdd8e2ab3b67535ec3"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-temporal-observed-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment temporal matrix records 10 missing period-family cells.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "missing_period_cells": 10,
+        "topic": "temporal missing total"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "temporal missing total"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:1ef7a7622b42ede437a87b49d1da4c276b40d7b144ae89edb5a89735c95bbd6e",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:f29ebf19319b0ffdbdefa515efccb8a769a58053c7ed4ba9703ddf43366c2c58"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-temporal-missing-total",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment temporal matrix records 34 observed periods and 1 missing periods for the air-and-climate-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 184,
+        "complete_period_coverage": false,
+        "family_key": "air_and_climate_metadata",
+        "high_partial": 22,
+        "indicator_count": 44,
+        "insufficient_for_campaign_scope": 2,
+        "label": "air and climate metadata",
+        "missing_periods": 1,
+        "moderate_partial": 9,
+        "observed_periods": 34,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage air_and_climate_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage air_and_climate_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:af11c6cb8c02aa5efa7b76cbdfc937b62e09a9acdf0d0c0d30bbba5c57309e35",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:e9412fe6ee53dd210df74caf2970119ca868c9b2a35a35f5e5c7c4c9f7ce7813"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-temporal-coverage-air_and_climate_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment temporal matrix records 35 observed periods and 0 missing periods for the land-and-forest-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 176,
+        "complete_period_coverage": true,
+        "family_key": "land_and_forest_metadata",
+        "high_partial": 26,
+        "indicator_count": 38,
+        "insufficient_for_campaign_scope": 3,
+        "label": "land and forest metadata",
+        "missing_periods": 0,
+        "moderate_partial": 12,
+        "observed_periods": 35,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage land_and_forest_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage land_and_forest_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:885660300c5e3cdf904dd62571c8bc364a1bc23ca016f5b16a0dbb32f71c1fca",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:964e22fb8338ffb5c69ed84ff98a2086091ce698ebf0e342ab2553236a249116"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-temporal-coverage-land_and_forest_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment temporal matrix records 33 observed periods and 2 missing periods for the water-and-sanitation-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 181,
+        "complete_period_coverage": false,
+        "family_key": "water_and_sanitation_metadata",
+        "high_partial": 21,
+        "indicator_count": 36,
+        "insufficient_for_campaign_scope": 4,
+        "label": "water and sanitation metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage water_and_sanitation_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage water_and_sanitation_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:6fd70a9d74d4365e2ec143c1f27d1601924d630dc91d2340fceeb3590724ecbf",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:1a7fa9d5ef294777c8bdd182060dfb7de7eba0c4ebdd9009fe036ddbcc84b489"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-temporal-coverage-water_and_sanitation_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment temporal matrix records 31 observed periods and 4 missing periods for the biodiversity-and-protected-area-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 152,
+        "complete_period_coverage": false,
+        "family_key": "biodiversity_and_protected_area_metadata",
+        "high_partial": 34,
+        "indicator_count": 28,
+        "insufficient_for_campaign_scope": 7,
+        "label": "biodiversity and protected area metadata",
+        "missing_periods": 4,
+        "moderate_partial": 24,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage biodiversity_and_protected_area_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage biodiversity_and_protected_area_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:dfbdb0482beb93f6a18cd5704af60fe09503bec7a59d26902f7b8c0951ebbc80",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:c384f9001c76540d96caefadee284441a94c6cb2b5eadfcf2314960f8f0d6069"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-temporal-coverage-biodiversity_and_protected_area_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment temporal matrix records 32 observed periods and 3 missing periods for the resource-use-metadata family over 1990-2024.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "complete_or_near_complete": 169,
+        "complete_period_coverage": false,
+        "family_key": "resource_use_metadata",
+        "high_partial": 29,
+        "indicator_count": 42,
+        "insufficient_for_campaign_scope": 4,
+        "label": "resource use metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217,
+        "topic": "family temporal coverage resource_use_metadata"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "family temporal coverage resource_use_metadata"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:23977175e2d649f24d765d3f29ce7d56d83dcbf39afe969a28d9088da1ca041e",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:a1546adecae955ee86adeae9dd250326edf04653171c89b9db9af62e474037b0"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-family-temporal-coverage-resource_use_metadata",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 quality control verifies territory-bucket denominators, period denominators, and matrix cell counts for the Environment maturation snapshot.",
+      "knowledge_category": "evidence_quality",
+      "payload_metadata": {
+        "ambiguous_family_assignments": 0,
+        "duplicate_candidate_statements_expected": false,
+        "matrix_cell_counts_verified": true,
+        "period_denominators_verified": true,
+        "territory_bucket_denominators_verified": true,
+        "topic": "denominator quality"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "denominator quality"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:51453097cb6f5e064bd88561e24ce98c108081fe3f621387d5330c27c72c0b34",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:a4da6e7c3ab9b04ca8eaaf07aa1a5fecd6609bcfda79ff91c2ecf54805c13497"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-denominator-quality",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 Environment maturation packages record source snapshot fingerprint, source family, selection rule, evidence basis, and deterministic rerun handle.",
+      "knowledge_category": "provenance",
+      "payload_metadata": {
+        "deterministic_rerun_handle_available": true,
+        "evidence_basis_available": true,
+        "selection_rule_available": true,
+        "source_family_available": true,
+        "source_snapshot_fingerprint_available": true,
+        "topic": "provenance state"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "provenance state"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:d2fab413ce00234ee036f0a3aded036dc7252aa7a044081717ec440e57c6ccf0",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:4d6f89e7b0afbe2abdccdfec419a4920b937a45d43e5082e1fab02925022d8f1"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-provenance-state",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 routes Environment maturation packages through the existing validation pipeline without validator, taxonomy, package-model, or workflow modification.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "taxonomy_modified": false,
+        "topic": "validation state",
+        "validator_modified": false,
+        "workflow_modified": false
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "validation state"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:9a1e9e56c6cb648b32a137e34fd6d3db680a7a207ccd529c562b69753c5da6ec",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:c28721a581010390fb6e6568f30ff4765dc875b326bb1c0da0e9afd8b7baf01e"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-validation-state",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 derives Environment inventory totals, territorial bucket totals, and temporal cell totals deterministically from the immutable maturation snapshot.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "temporal_observed_period_cells": 165,
+        "territorial_bucket_totals": {
+          "complete_or_near_complete": 862,
+          "high_partial": 132,
+          "insufficient_for_campaign_scope": 20,
+          "moderate_partial": 71
+        },
+        "topic": "deterministic transform"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "deterministic transform"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:86f00705cd751769a399c70be8f8aacc45a216e9bc7b9de69c60dbfe67c0de0d",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:0b5fc11b2965fa1ca9c9d4bd0154bb197e66cbd1b31f0d972b180d78b9d5d049"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-deterministic-transform",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 classifies the WDI Environment production family as Stable using Environment-family production evidence from Campaigns 8, 9, 10, and 11.",
+      "knowledge_category": "classified",
+      "payload_metadata": {
+        "basis": "Campaigns 8, 9, 10, and 11 validate WDI Environment production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+        "classification": "Stable",
+        "insufficient_for_mature": [
+          "dedicated Environment provenance-lineage completeness",
+          "Environment family closeout"
+        ],
+        "topic": "Environment family maturity",
+        "validated": [
+          "deterministic replay",
+          "fingerprint stability",
+          "provenance completeness",
+          "rejected-candidate preservation",
+          "indicator-family inventory",
+          "territorial coverage",
+          "temporal coverage"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "Environment family maturity"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:b70b3aefe414915d5022c1c4e8a5514ef2df1a18f8e60dcdef5b9e8f3f5a504a",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:fa70bf4479f3806cb54ad6ed421ba115574ad75f494d1257ec77b969cb48a259"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-environment-family-stable",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "The Campaign 11 Environment maturity assessment does not classify the WDI Environment production family as Mature because dedicated Environment provenance-lineage completeness has not yet been executed.",
+      "knowledge_category": "negative",
+      "payload_metadata": {
+        "basis": "Campaigns 8, 9, 10, and 11 validate WDI Environment production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+        "classification": "Stable",
+        "insufficient_for_mature": [
+          "dedicated Environment provenance-lineage completeness",
+          "Environment family closeout"
+        ],
+        "topic": "Environment family not Mature",
+        "validated": [
+          "deterministic replay",
+          "fingerprint stability",
+          "provenance completeness",
+          "rejected-candidate preservation",
+          "indicator-family inventory",
+          "territorial coverage",
+          "temporal coverage"
+        ]
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "Environment family not Mature"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:12eea608b7cb22beb5cd54d1822aeb8cd13f5188eafada007879a4a2e7cba6e1",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:3fcbe90469fb496d90558df5525c20ba381e47a278c83f0871809dcd61d1daf2"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-environment-not-mature",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  },
+  {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_environment_maturation_metadata",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "source_snapshot_fingerprint": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "Campaign 11 records unchanged workflow, validator behaviour, package construction, provenance handling, fingerprint stability, and PEL behaviour compared with the demographic inventory and coverage-matrix maturation stage.",
+      "knowledge_category": "methodological",
+      "payload_metadata": {
+        "equivalent_demographic_stage": "Campaigns 4-6",
+        "family_specific_assumptions": [
+          "environment indicator family names",
+          "environment coverage bucket counts"
+        ],
+        "fingerprint_stability": "unchanged",
+        "knowledge_category_coverage": "same categories, different family counts",
+        "knowledgeforge_wide_assumptions": [
+          "deterministic replay",
+          "fingerprint stability",
+          "rejected-candidate preservation",
+          "provenance completeness"
+        ],
+        "package_construction": "unchanged",
+        "pel_behaviour": "unchanged",
+        "production_pressures": "no new pressure",
+        "production_workflow_transfer": "unchanged",
+        "provenance_handling": "unchanged",
+        "topic": "maturation methodology comparison",
+        "validator_behaviour": "unchanged"
+      },
+      "scope": {
+        "campaign_id": "campaign-11-wdi-environment-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar environment indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_inventory_and_coverage_metadata",
+        "topic": "maturation methodology comparison"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:a1837f3805aa1ede9b75e6727fb2e222eb0c222285d2099a2c6da7c130954b25",
+      "provenance": "sha256:f479e00463d4cccdf2291bbab94319cdf60d67ff538af28075e2fe4c09b82375",
+      "reproducibility": "sha256:4cd9ac179026017d89e08af7c67ab18a8a9b3f290a5808208ade711df351e805",
+      "source_payload": "sha256:90402366ef94d6b7ad347bca988fc9c8cf4c8b7da32b15134fde72d03989cbdd"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "provenance": {
+      "evidence_basis": [
+        "docs/production_campaign_roadmap.md",
+        "docs/production_evolution_log.md",
+        "artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/production_quality_report.json",
+        "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+        "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+        "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+        "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+        "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+      ],
+      "selection_rule": "approved Campaign 11 WDI Environment maturation scope",
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_snapshot_date": "2026-07-09",
+      "source_snapshot_id": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    },
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign11_wdi_environment_maturation.py --output artifacts/production/campaign-11-wdi-environment-indicator-family-coverage-maturation",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic replay uses an embedded immutable WDI Environment maturation snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign11-maturation-methodology-comparison",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_environment_maturation",
+      "source_name": "World Bank World Development Indicators audited Environment maturation snapshot",
+      "source_version": "sha256:4d5bab2533be4de897baf5263902a89dd059904c41a03b409683044e98f6ef38"
+    }
+  }
+]

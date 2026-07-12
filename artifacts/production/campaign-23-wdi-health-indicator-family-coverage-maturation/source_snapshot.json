@@ -1,0 +1,351 @@
+{
+  "architecture_change_authorized": false,
+  "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+  "evidence_basis": [
+    "docs/production_campaign_roadmap.md",
+    "docs/production_evolution_log.md",
+    "artifacts/production/campaign-22-wdi-health-annual-scalar-evidence-quality-source-evidence-transfer/production_quality_report.json",
+    "artifacts/production/campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/production_quality_report.json",
+    "artifacts/production/campaign-10-cross-campaign-duplicate-recurrence-audit/production_quality_report.json",
+    "artifacts/production/campaign-4-wdi-demographic-structure-indicator-family-inventory/production_quality_report.json",
+    "artifacts/production/campaign-5-wdi-demographic-structure-territorial-coverage-matrix/production_quality_report.json",
+    "artifacts/production/campaign-6-wdi-demographic-structure-temporal-coverage-matrix/production_quality_report.json"
+  ],
+  "evidence_family": "external_wdi_annual_scalar_health_maturation",
+  "external_data_accessed": false,
+  "indicator_inventory": {
+    "families": [
+      {
+        "complete_or_near_complete": 171,
+        "complete_period_coverage": false,
+        "family_key": "mortality_metadata",
+        "high_partial": 31,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 4,
+        "label": "mortality metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 164,
+        "complete_period_coverage": false,
+        "family_key": "health_systems_metadata",
+        "high_partial": 34,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "health systems metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 162,
+        "complete_period_coverage": false,
+        "family_key": "nutrition_metadata",
+        "high_partial": 34,
+        "indicator_count": 23,
+        "insufficient_for_campaign_scope": 6,
+        "label": "nutrition metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 160,
+        "complete_period_coverage": false,
+        "family_key": "disease_and_immunization_metadata",
+        "high_partial": 35,
+        "indicator_count": 25,
+        "insufficient_for_campaign_scope": 6,
+        "label": "disease and immunization metadata",
+        "missing_periods": 4,
+        "moderate_partial": 16,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 151,
+        "complete_period_coverage": false,
+        "family_key": "reproductive_and_child_health_metadata",
+        "high_partial": 39,
+        "indicator_count": 18,
+        "insufficient_for_campaign_scope": 7,
+        "label": "reproductive and child health metadata",
+        "missing_periods": 5,
+        "moderate_partial": 20,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217
+      }
+    ],
+    "family_keys": [
+      "mortality_metadata",
+      "health_systems_metadata",
+      "nutrition_metadata",
+      "disease_and_immunization_metadata",
+      "reproductive_and_child_health_metadata"
+    ],
+    "indicator_families_total": 5,
+    "indicators_total": 122,
+    "supported_dimensions": [
+      "indicator",
+      "territory",
+      "period",
+      "indicator_family"
+    ],
+    "unsupported_dimensions": [
+      "subnational_region",
+      "scenario",
+      "model_projection",
+      "narrative_assessment"
+    ]
+  },
+  "maturation_methodology_comparison": {
+    "equivalent_demographic_stage": "Campaigns 4-6",
+    "family_specific_assumptions": [
+      "Health indicator family names",
+      "Health coverage bucket counts"
+    ],
+    "fingerprint_stability": "unchanged",
+    "knowledge_category_coverage": "same categories, different family counts",
+    "knowledgeforge_wide_assumptions": [
+      "deterministic replay",
+      "fingerprint stability",
+      "rejected-candidate preservation",
+      "provenance completeness"
+    ],
+    "package_construction": "unchanged",
+    "pel_behaviour": "unchanged",
+    "production_pressures": "no new pressure",
+    "production_workflow_transfer": "unchanged",
+    "provenance_handling": "unchanged",
+    "validator_behaviour": "unchanged"
+  },
+  "maturity_assessment": {
+    "basis": "Campaigns 16 and 17 validate WDI Health production across evidence-quality transfer, cross-family comparison, recurrence audit participation, indicator-family inventory, territorial coverage, and temporal coverage without architecture change.",
+    "classification": "Stable",
+    "insufficient_for_mature": [
+      "dedicated Health provenance-lineage completeness",
+      "Health family closeout"
+    ],
+    "validated": [
+      "deterministic replay",
+      "fingerprint stability",
+      "provenance completeness",
+      "rejected-candidate preservation",
+      "indicator-family inventory",
+      "territorial coverage",
+      "temporal coverage"
+    ]
+  },
+  "provenance_observations": {
+    "deterministic_rerun_handle_available": true,
+    "evidence_basis_available": true,
+    "selection_rule_available": true,
+    "source_family_available": true,
+    "source_snapshot_fingerprint_available": true
+  },
+  "quality_controls": {
+    "ambiguous_family_assignments": 0,
+    "duplicate_candidate_statements_expected": false,
+    "matrix_cell_counts_verified": true,
+    "period_denominators_verified": true,
+    "territory_bucket_denominators_verified": true
+  },
+  "scope": {
+    "dataset": "World Development Indicators",
+    "domain_family": "health evidence",
+    "frequency": "annual",
+    "period_scope": "1990-2024",
+    "shape": "scalar observations and coverage matrices",
+    "territory_scope": "audited non-aggregate/country-like WDI territories"
+  },
+  "snapshot_date": "2026-07-09",
+  "snapshot_fingerprint": "sha256:b4c60f9f3c4f298d592b422233b8a30647c3887f50517a9263d7d625e9796bd7",
+  "source_name": "World Bank World Development Indicators",
+  "source_short_name": "WDI",
+  "temporal_matrix": {
+    "complete_family_count": 0,
+    "families": [
+      {
+        "complete_or_near_complete": 171,
+        "complete_period_coverage": false,
+        "family_key": "mortality_metadata",
+        "high_partial": 31,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 4,
+        "label": "mortality metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 164,
+        "complete_period_coverage": false,
+        "family_key": "health_systems_metadata",
+        "high_partial": 34,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "health systems metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 162,
+        "complete_period_coverage": false,
+        "family_key": "nutrition_metadata",
+        "high_partial": 34,
+        "indicator_count": 23,
+        "insufficient_for_campaign_scope": 6,
+        "label": "nutrition metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 160,
+        "complete_period_coverage": false,
+        "family_key": "disease_and_immunization_metadata",
+        "high_partial": 35,
+        "indicator_count": 25,
+        "insufficient_for_campaign_scope": 6,
+        "label": "disease and immunization metadata",
+        "missing_periods": 4,
+        "moderate_partial": 16,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 151,
+        "complete_period_coverage": false,
+        "family_key": "reproductive_and_child_health_metadata",
+        "high_partial": 39,
+        "indicator_count": 18,
+        "insufficient_for_campaign_scope": 7,
+        "label": "reproductive and child health metadata",
+        "missing_periods": 5,
+        "moderate_partial": 20,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217
+      }
+    ],
+    "indicator_family_count": 5,
+    "matrix_cell_count": 175,
+    "missing_period_cells": 17,
+    "observed_period_cells": 158,
+    "period_bucket_keys": [
+      "observed_period",
+      "missing_period"
+    ],
+    "period_count": 35,
+    "period_end": 2024,
+    "period_start": 1990
+  },
+  "territorial_matrix": {
+    "bucket_keys": [
+      "complete_or_near_complete",
+      "high_partial",
+      "moderate_partial",
+      "insufficient_for_campaign_scope"
+    ],
+    "bucket_totals": {
+      "complete_or_near_complete": 808,
+      "high_partial": 173,
+      "insufficient_for_campaign_scope": 28,
+      "moderate_partial": 76
+    },
+    "coverage_bucket_count": 4,
+    "families": [
+      {
+        "complete_or_near_complete": 171,
+        "complete_period_coverage": false,
+        "family_key": "mortality_metadata",
+        "high_partial": 31,
+        "indicator_count": 29,
+        "insufficient_for_campaign_scope": 4,
+        "label": "mortality metadata",
+        "missing_periods": 2,
+        "moderate_partial": 11,
+        "observed_periods": 33,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 164,
+        "complete_period_coverage": false,
+        "family_key": "health_systems_metadata",
+        "high_partial": 34,
+        "indicator_count": 27,
+        "insufficient_for_campaign_scope": 5,
+        "label": "health systems metadata",
+        "missing_periods": 3,
+        "moderate_partial": 14,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 162,
+        "complete_period_coverage": false,
+        "family_key": "nutrition_metadata",
+        "high_partial": 34,
+        "indicator_count": 23,
+        "insufficient_for_campaign_scope": 6,
+        "label": "nutrition metadata",
+        "missing_periods": 3,
+        "moderate_partial": 15,
+        "observed_periods": 32,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 160,
+        "complete_period_coverage": false,
+        "family_key": "disease_and_immunization_metadata",
+        "high_partial": 35,
+        "indicator_count": 25,
+        "insufficient_for_campaign_scope": 6,
+        "label": "disease and immunization metadata",
+        "missing_periods": 4,
+        "moderate_partial": 16,
+        "observed_periods": 31,
+        "period_count": 35,
+        "territory_count": 217
+      },
+      {
+        "complete_or_near_complete": 151,
+        "complete_period_coverage": false,
+        "family_key": "reproductive_and_child_health_metadata",
+        "high_partial": 39,
+        "indicator_count": 18,
+        "insufficient_for_campaign_scope": 7,
+        "label": "reproductive and child health metadata",
+        "missing_periods": 5,
+        "moderate_partial": 20,
+        "observed_periods": 30,
+        "period_count": 35,
+        "territory_count": 217
+      }
+    ],
+    "indicator_family_count": 5,
+    "matrix_cell_count": 1085,
+    "territory_count": 217
+  }
+}

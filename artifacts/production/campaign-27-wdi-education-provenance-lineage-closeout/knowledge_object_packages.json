@@ -1,0 +1,3062 @@
+[
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-artifact-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6ec9d24985e167e5fcbb3582c1e149626af23b86e21d6f12a5893db10060af52"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-artifact-count",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:6ec9d24985e167e5fcbb3582c1e149626af23b86e21d6f12a5893db10060af52",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:d2c0beaef49f994332bef5c04de1e32bb15f99920a3decebb3d939442b68dd47",
+      "generated_statements": "sha256:2d40e2f06e0def2f2eda70e8b2e4042f26a0f23483245528efd82179c4accf17",
+      "input_set": "sha256:487605ac41a45e5cfdc20992dd5118b66887d076ad8f3434049fb13081d9ec23",
+      "package_manifest": "sha256:95f65f72f8088fc470e3fe2815b0bb3a3ca3854eb21027c5f8add5a292d342bf",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "artifact count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-artifact-count",
+          "eval-srcpkg-campaign27-artifact-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-artifact-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-artifact-count",
+        "statement_type": "factual",
+        "text": "The Campaign 27 WDI Education provenance-lineage snapshot contains 5 raw artifact identity records."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-artifact-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:498160dd3f392cdf6a99ff9696f607453ac114b9130b3a73771302472f942479",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-artifact-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-artifact-count",
+        "pkg-object-srcpkg-campaign27-artifact-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-artifact-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-artifact-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-artifact-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-artifact-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-artifact-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "artifact count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-required-lineage-fields"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:01f439ba882609433cf2e4983920082aed81f5c47f76a4713b32e1c8400d6507"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-required-lineage-fields",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:01f439ba882609433cf2e4983920082aed81f5c47f76a4713b32e1c8400d6507",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:8d73a79c3ba25d8230182790cf24f23f867b26539d95f6f93374f8cf4eabc3ba",
+      "generated_statements": "sha256:57f86c9825cdb3a0d9aedffa1ae01ddcde523eeed9f5ae264dd5530a3e8b56af",
+      "input_set": "sha256:a0b752bfb76e87acbfe5032015ef0d022e3f598844a8f4503a976e45d0ab11ae",
+      "package_manifest": "sha256:95a8319896ad0fcabd614a44fac80aeaa7a1510da9932655d8dafd97e3d8664e",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "required lineage fields"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-required-lineage-fields",
+          "eval-srcpkg-campaign27-required-lineage-fields"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-required-lineage-fields"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-required-lineage-fields",
+        "statement_type": "provenance",
+        "text": "Campaign 27 required lineage fields are raw artifact URL, raw artifact hash, release key, source URL, license note, and provenance envelope presence."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-required-lineage-fields"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:545ba9504f8777a2b271e4b83f20fc51f6677d847c421f3b401acc1e630f0614",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-required-lineage-fields",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-required-lineage-fields",
+        "pkg-object-srcpkg-campaign27-required-lineage-fields"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-required-lineage-fields",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-required-lineage-fields",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-required-lineage-fields"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-required-lineage-fields"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-required-lineage-fields",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "required lineage fields"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-complete-lineage-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:980d19b2aa32d37c557c01ef6c11a87e088100e5f1eece2c7cae77f577bbed62"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-complete-lineage-count",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:980d19b2aa32d37c557c01ef6c11a87e088100e5f1eece2c7cae77f577bbed62",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:c6044cc0ae82cfeb5160455d36c8d8b880ebe93037fe559a26f790976079b29d",
+      "generated_statements": "sha256:92c55908202e656c6aef969f70c27eeb2647ad09b332321ba2e48a33f33976c1",
+      "input_set": "sha256:5524821ccc2559f01766028f0727e2ec6830c10548dcc855ecaf52dfddbc2c56",
+      "package_manifest": "sha256:caa5d0796f9668eb9397593758888514d1c15951349811e52f5a40ad73713682",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "complete lineage count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-complete-lineage-count",
+          "eval-srcpkg-campaign27-complete-lineage-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-complete-lineage-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-complete-lineage-count",
+        "statement_type": "derived",
+        "text": "Campaign 27 records 5 Education artifacts with all required provenance-lineage fields present."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-complete-lineage-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:5e726c522e5b117a5d6744ec1799151646fec16149a26947256553de33eb7dbb",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-complete-lineage-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-complete-lineage-count",
+        "pkg-object-srcpkg-campaign27-complete-lineage-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-complete-lineage-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-complete-lineage-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-complete-lineage-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-complete-lineage-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-complete-lineage-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "complete lineage count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-missing-lineage-count"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:0eebeeccbece0f9336b63ed14a93bcece2bf9452d5d21efed1c3055f3cc12bcb"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-missing-lineage-count",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:0eebeeccbece0f9336b63ed14a93bcece2bf9452d5d21efed1c3055f3cc12bcb",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:f492f22eb6869a458d5ff67474366af59d7838bd844847c88aea1331687ed941",
+      "generated_statements": "sha256:e2d2a446182897dca3004351bf2dbb409307ff24931d9596c4858fbf25ed6748",
+      "input_set": "sha256:2315b197b50838505d4b1f2ad92ddee324d92aa99f2db73af6c9b02682109db2",
+      "package_manifest": "sha256:400aa6a49c912063da5f31b87f8a437eca1d30df15caf7cacda295f5760654bc",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "missing lineage count"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-missing-lineage-count",
+          "eval-srcpkg-campaign27-missing-lineage-count"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-missing-lineage-count"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-missing-lineage-count",
+        "statement_type": "negative",
+        "text": "Campaign 27 records 0 missing required lineage fields in the audited Education lineage snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-missing-lineage-count"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:9db00487294253c4e9fd1128de4459167789b2f973204110320974c64a14bddb",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-missing-lineage-count",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-missing-lineage-count",
+        "pkg-object-srcpkg-campaign27-missing-lineage-count"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-missing-lineage-count",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-missing-lineage-count",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-missing-lineage-count"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-missing-lineage-count"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-missing-lineage-count",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "missing lineage count"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-lineage-completeness-classification"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:e395b87e4ef4b3037cf6172449992436cdc1e867e1db3fe21c38d8990a71f2ee"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-lineage-completeness-classification",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:e395b87e4ef4b3037cf6172449992436cdc1e867e1db3fe21c38d8990a71f2ee",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:13267d9f56f735df24501ba03b2f1c8d87aa6e68ed0ba2e62a005fb535b038ff",
+      "generated_statements": "sha256:ce018f3b3a524b2f1f79dab669d693cebebb7564c032349fd6062b24a77e4763",
+      "input_set": "sha256:ef3751bbd782efdff3407f5b8709c2fb68fa85985641ffa717fa09f62524f273",
+      "package_manifest": "sha256:2c27f451cfd572fe3f8b21e90fb1c95170843d5d1b71861d4629ab50bcee24ad",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "lineage completeness classification"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-lineage-completeness-classification",
+          "eval-srcpkg-campaign27-lineage-completeness-classification"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-lineage-completeness-classification"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-lineage-completeness-classification",
+        "statement_type": "classified",
+        "text": "Campaign 27 classifies the audited WDI Education provenance-lineage snapshot as complete for the required lineage field set."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-lineage-completeness-classification"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:d857b2f39b528146e9468443d24dae8c2a8623a323d9f187b11400a0bb9ae917",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-lineage-completeness-classification",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-lineage-completeness-classification",
+        "pkg-object-srcpkg-campaign27-lineage-completeness-classification"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-lineage-completeness-classification",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-lineage-completeness-classification",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-lineage-completeness-classification"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-lineage-completeness-classification"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-lineage-completeness-classification",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "lineage completeness classification"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-raw-artifact-hash-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:88d99ae08485d48f46a5f54085796db0d7bf0ad9aeeb378402919794302b9171"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-raw-artifact-hash-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:88d99ae08485d48f46a5f54085796db0d7bf0ad9aeeb378402919794302b9171",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:6f7bf13142b0899ededebacb1f32b2a34c03d71036c42ab1d9897299e09a072e",
+      "generated_statements": "sha256:1d514ac355059b887d2b153950f283c80599d06ad2bda4769a81991fb9466b40",
+      "input_set": "sha256:8b339e8cf35c1bd23c88d960048b7b6232568fba00dc449b81404c9a889c7aab",
+      "package_manifest": "sha256:2a6c7b9090b35b9b7bfc6250607836a478ac22b31ffac77a07a942228b8ecf24",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "raw artifact hash coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-raw-artifact-hash-coverage",
+          "eval-srcpkg-campaign27-raw-artifact-hash-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-raw-artifact-hash-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-raw-artifact-hash-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 27 records raw artifact hashes for 5 audited WDI Education artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-raw-artifact-hash-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:21fb3087fd8371d8bde870ac4e7b7b2911c05b036511be58c45dd7e1c3cdc60e",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-raw-artifact-hash-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-raw-artifact-hash-coverage",
+        "pkg-object-srcpkg-campaign27-raw-artifact-hash-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-raw-artifact-hash-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-raw-artifact-hash-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-raw-artifact-hash-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-raw-artifact-hash-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-raw-artifact-hash-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "raw artifact hash coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-raw-artifact-url-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:6be15e41bff5b14cfc4d2ac9af8bbb6aa3e44bba75cfe8d061f9704fc8b869da"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-raw-artifact-url-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:6be15e41bff5b14cfc4d2ac9af8bbb6aa3e44bba75cfe8d061f9704fc8b869da",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:13180977f706f6f35c4c94c2a6f58458941d1cb5d699a2d117453f4b1cb8a0e2",
+      "generated_statements": "sha256:3b7f9c1e7e92c2a3c1e20b6aa8411012caa32e9895b7dc73456a6fa7baecb933",
+      "input_set": "sha256:65dc8bcb05ef239f12e84c973c0efa4dae8ba8ae16ccb08e954fd32ae34016cb",
+      "package_manifest": "sha256:cf93c9e79b93c771e4f345988e2e326d56461469c14f551615061cbd3772aa58",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "raw artifact url coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-raw-artifact-url-coverage",
+          "eval-srcpkg-campaign27-raw-artifact-url-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-raw-artifact-url-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-raw-artifact-url-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 27 records raw artifact URLs for 5 audited WDI Education artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-raw-artifact-url-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:ea2750b238aa61ed13a5bbdd5bb0ee732d47e2d5062426f21d9f1d2aef58743c",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-raw-artifact-url-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-raw-artifact-url-coverage",
+        "pkg-object-srcpkg-campaign27-raw-artifact-url-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-raw-artifact-url-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-raw-artifact-url-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-raw-artifact-url-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-raw-artifact-url-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-raw-artifact-url-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "raw artifact url coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-release-key-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a66e8beeb5e895e0b71720348141badee2bace45b5c37159d9e9d6c991e039ca"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-release-key-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:a66e8beeb5e895e0b71720348141badee2bace45b5c37159d9e9d6c991e039ca",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:6e5613e9491e4df16cb8e7eaec99b2b8dc061a1a0d79dfb94a9a9dd7f643546a",
+      "generated_statements": "sha256:598dd8a2cb1a1251f0af0ee11045a7795d60ce5011ba1ef962e95a1982e81ee3",
+      "input_set": "sha256:45455094d18da906516c498c14fd1820944e3c525cd2f39328170e2bf387d784",
+      "package_manifest": "sha256:b14cb265a77fb5b33a24fd4c88cca9dc6ebcb823b6df326ae3ad6cebb50ba137",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "release key coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-release-key-coverage",
+          "eval-srcpkg-campaign27-release-key-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-release-key-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-release-key-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 27 records release keys for 5 audited WDI Education artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-release-key-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:dae73be5b2afbe3bd64339ad6375091deb8374c386ec4c2f2801f80fa214cd00",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-release-key-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-release-key-coverage",
+        "pkg-object-srcpkg-campaign27-release-key-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-release-key-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-release-key-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-release-key-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-release-key-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-release-key-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "release key coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-source-url-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:32b060aa198debd0d3770661a77906d2e3f25593ec8b48e23a3b3afa387dfb22"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-source-url-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:32b060aa198debd0d3770661a77906d2e3f25593ec8b48e23a3b3afa387dfb22",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:52a02a55db2dbecaf8dacff2cbc63bd0bf49f475f870ad1bff6997280f013d3f",
+      "generated_statements": "sha256:ec987837d98d71dd78b956b7971cb97ee9150170a9ceb0863cc8ebb6f5a43f1d",
+      "input_set": "sha256:003625eb0125f1276974246e38ce51dbbd358ba10dfe922583ea09f7265c3af9",
+      "package_manifest": "sha256:0223b9abfd69cf14067a7f3e4ef17bd921b73bb0498640166fcd31f3001895fc",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "source url coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-source-url-coverage",
+          "eval-srcpkg-campaign27-source-url-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-source-url-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-source-url-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 27 records source URLs for 5 audited WDI Education artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-source-url-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:7dffc5ab2343698f406b240fa7c149be3241ce2c1e0ccf3df09e8e2ab94dbb66",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-source-url-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-source-url-coverage",
+        "pkg-object-srcpkg-campaign27-source-url-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-source-url-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-source-url-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-source-url-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-source-url-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-source-url-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "source url coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-license-note-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:aa7dc031004137c86b2bbc88bebf84a5abdff317043c28421a7935bc10e962b6"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-license-note-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:aa7dc031004137c86b2bbc88bebf84a5abdff317043c28421a7935bc10e962b6",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:f3e7e3b4b17a1f9119a2cbb7acbbf492008bee26e77221d3b4052c79a848ad37",
+      "generated_statements": "sha256:f558013f1f8f29af401840751acb1689ee186b9e4892335962bb35d75f0d6789",
+      "input_set": "sha256:f775927e1d8b8e31e26bc7811c351d09102133a36b339a0ee88d29ca2270ab3d",
+      "package_manifest": "sha256:0e32e8d61f154c016e2331ab967a0c29a2c03775b6d437d7b5ab619b31f09359",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "license note coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-license-note-coverage",
+          "eval-srcpkg-campaign27-license-note-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-license-note-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-license-note-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 27 records license notes for 5 audited WDI Education artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-license-note-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:5b002465a70b020d86f5a7c344ca7678c3ee06639eab9258fad8ac1296f51c72",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-license-note-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-license-note-coverage",
+        "pkg-object-srcpkg-campaign27-license-note-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-license-note-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-license-note-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-license-note-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-license-note-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-license-note-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "license note coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-lineage-envelope-coverage"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:8c1e66d03bd82010bece894b235cacdfb91fbc34c7fa605e6eb56ea5f358cdd0"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-lineage-envelope-coverage",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:8c1e66d03bd82010bece894b235cacdfb91fbc34c7fa605e6eb56ea5f358cdd0",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:b9d65412c8b4c3ec1f0aef1526612ef4dcbf22de9ee7306dea304805984a3c65",
+      "generated_statements": "sha256:c6e4c3ae4a3d71f6ba781e51e561a193caa81b09e1a505745bfbde02007de5c7",
+      "input_set": "sha256:44e6c872fbec622f6f6537b26d5dc674ff83abe112000dea2f897721ce5ffa68",
+      "package_manifest": "sha256:d3682dc4ec9068351d4a0ec50b4c859a9f1f031923e3390000450baeb52b2167",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "lineage envelope coverage"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-lineage-envelope-coverage",
+          "eval-srcpkg-campaign27-lineage-envelope-coverage"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-lineage-envelope-coverage"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-lineage-envelope-coverage",
+        "statement_type": "coverage",
+        "text": "Campaign 27 records provenance envelope presence for 5 audited WDI Education artifacts."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-lineage-envelope-coverage"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:f87ad1cc320d438e8e7e9977f0d9b69a6a5fc26871fb34174b581f7a219571ca",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-lineage-envelope-coverage",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-lineage-envelope-coverage",
+        "pkg-object-srcpkg-campaign27-lineage-envelope-coverage"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-lineage-envelope-coverage",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-lineage-envelope-coverage",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-lineage-envelope-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-lineage-envelope-coverage"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-lineage-envelope-coverage",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "lineage envelope coverage"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-quality-control-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:8100339c5440552a90b5331e37ab0bf26d8d5bf871ff4ebf4706d4af78b49fc9"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-quality-control-state",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:8100339c5440552a90b5331e37ab0bf26d8d5bf871ff4ebf4706d4af78b49fc9",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:3c0b978cf0cc70b0dcc8138b6a9074c2e1366b5ca0f29e5e836449e6302d8c7a",
+      "generated_statements": "sha256:61ed154746817ef0fae10c8d40392b29128dd5e51a994acb447e56c1385357be",
+      "input_set": "sha256:ed9cf8920908700e62d5e8ca8f75d5763314af18b3f751ac3add5cc679736bad",
+      "package_manifest": "sha256:4e23707e6c6e76bb8bdaabb9f6708dbedf5134262854e685833dc8b7e327dd33",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "quality control state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-quality-control-state",
+          "eval-srcpkg-campaign27-quality-control-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-quality-control-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-quality-control-state",
+        "statement_type": "evidence_quality",
+        "text": "Campaign 27 quality control confirms required lineage fields, lineage fingerprint inputs, source identity, release metadata, and non-interpretive scope for Education provenance-lineage closeout."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-quality-control-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:b7809dc2f7dbaccc8089a785f41123301db2114a436626064183da077967c367",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-quality-control-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-quality-control-state",
+        "pkg-object-srcpkg-campaign27-quality-control-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-quality-control-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-quality-control-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-quality-control-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-quality-control-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-quality-control-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "quality control state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-validation-state"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:ca7bb1afa2a2b7f039d193c0a0514427a12657c0a68785025c38aaa958b41a73"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-validation-state",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:ca7bb1afa2a2b7f039d193c0a0514427a12657c0a68785025c38aaa958b41a73",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:1387fab0dee1448c457193db7bd97a11704fc8b9b52ecd845de6ddc01cc81ab0",
+      "generated_statements": "sha256:ca06e92e275d94ea1310c6fa88d962270f0ccac157fe165238e0c577e92b25a3",
+      "input_set": "sha256:4881a074f2d2667af81279e7e8904ba53112d15bb77914cf6dcc90c7fafb4f2e",
+      "package_manifest": "sha256:e6f9cead7181182d6a7858d6f4a10e3529c62f1b0a2b7dac1bea3a567065c5a2",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "validation state"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-validation-state",
+          "eval-srcpkg-campaign27-validation-state"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-validation-state"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-validation-state",
+        "statement_type": "methodological",
+        "text": "Campaign 27 routes Education provenance-lineage packages through the existing validation pipeline without validator, taxonomy, package-model, Production Support, provenance, fingerprint, or reporting modification."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-validation-state"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:0ad10c323414b459e2df9f68567fdbac43a96206945c87dad8c72e3625577abf",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-validation-state",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-validation-state",
+        "pkg-object-srcpkg-campaign27-validation-state"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-validation-state",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-validation-state",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-validation-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-validation-state"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-validation-state",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "validation state"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-deterministic-lineage-transform"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:fe68ff9df1e446c38dca73ba37ce96475702b894dcf0468227b96b9a018e9875"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-deterministic-lineage-transform",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:fe68ff9df1e446c38dca73ba37ce96475702b894dcf0468227b96b9a018e9875",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:f86892e24c4fb8ddc371e26c5bc7ba0851fb3983e74dd8a8384d1588dfaa79a4",
+      "generated_statements": "sha256:c469f9ad20fdc2ade8e867c1e5971f9c5a584c6c31237c6b71e6bb8e939e6b06",
+      "input_set": "sha256:6fb180451d871fb83f969cfca605069e40859be515e5e945700145045f69ffa7",
+      "package_manifest": "sha256:a26981ac75719acd6de4440dac1a5faef5edede0e447320141df3ba62897efa4",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "deterministic lineage transform"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-deterministic-lineage-transform",
+          "eval-srcpkg-campaign27-deterministic-lineage-transform"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-deterministic-lineage-transform"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-deterministic-lineage-transform",
+        "statement_type": "methodological",
+        "text": "Campaign 27 derives Education lineage completeness counts deterministically from the immutable artifact lineage snapshot."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-deterministic-lineage-transform"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:dd7fde98c14f3593f7eda6ef47713326f3e24bec59499e07bc5bb030db1f98ca",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-deterministic-lineage-transform",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-deterministic-lineage-transform",
+        "pkg-object-srcpkg-campaign27-deterministic-lineage-transform"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-deterministic-lineage-transform",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-deterministic-lineage-transform",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-deterministic-lineage-transform"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-deterministic-lineage-transform"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-deterministic-lineage-transform",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "deterministic lineage transform"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-education-family-maturity-assessment"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:ad50c61534c856b8868f9b2a78a3881b1b5cc2507ed0520968c179f1500dea1d"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-education-family-maturity-assessment",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:ad50c61534c856b8868f9b2a78a3881b1b5cc2507ed0520968c179f1500dea1d",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:33a32b4c37f6c7ae4235f82e960d593bcab899e248e47bd1606ddb11f48503a8",
+      "generated_statements": "sha256:01c8db6c0be3a7ea3b7521c57f29c382b21c2aa6f9fce46bf019a53a3a3b7230",
+      "input_set": "sha256:5c139de1f4b17ad8069cc4262a2da35ba217df2f305f20e38f6111305bd32afd",
+      "package_manifest": "sha256:d19e87efdd0243ef465a17af89417784d744beb7a9301996fcbf7e3b32bde5b8",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "Education family maturity"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-education-family-maturity-assessment",
+          "eval-srcpkg-campaign27-education-family-maturity-assessment"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-education-family-maturity-assessment"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-education-family-maturity-assessment",
+        "statement_type": "methodological",
+        "text": "Campaigns 25-27 support Mature status for the WDI Education production family using the established Family Closeout methodology unchanged."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-education-family-maturity-assessment"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:c05b144ada29ea04e708ee50e2a0ea977e4deb4ca3000d4fd2db1e1eac965f2b",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-education-family-maturity-assessment",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-education-family-maturity-assessment",
+        "pkg-object-srcpkg-campaign27-education-family-maturity-assessment"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-education-family-maturity-assessment",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-education-family-maturity-assessment",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-education-family-maturity-assessment"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-education-family-maturity-assessment"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-education-family-maturity-assessment",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "Education family maturity"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-production-methodology-assessment"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:5d1b2fce943328f178aeb58f8322b5f5a4a76b5c36669d5933630b652012ce30"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-production-methodology-assessment",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:5d1b2fce943328f178aeb58f8322b5f5a4a76b5c36669d5933630b652012ce30",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:3ef3fcbe6b77e0649afdc112d3b381e9e598cc335fa2f2747ceb561e4b603fde",
+      "generated_statements": "sha256:93a35af1a7d4b9cdd7ba592dfc85d9041db0bc90c0ae14b63124a4d372ce1310",
+      "input_set": "sha256:57ef165701f038e5cc1fb37b4d3db3bea01ecbb7854fd78608772dcfa917100c",
+      "package_manifest": "sha256:738af4140a8f92883452e1f25c8dfc8c2984a986036460df6aab77b8610f9baf",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "production methodology assessment"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-production-methodology-assessment",
+          "eval-srcpkg-campaign27-production-methodology-assessment"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-production-methodology-assessment"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-production-methodology-assessment",
+        "statement_type": "methodological",
+        "text": "Campaign 27 records the KnowledgeForge production methodology as preserved across seven Mature WDI annual-scalar production families without architecture refinement."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-production-methodology-assessment"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:9bfc3e389fc6534f4dec661ce52fcee831d36878fdb56b1d05092d0d440c1e06",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-production-methodology-assessment",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-production-methodology-assessment",
+        "pkg-object-srcpkg-campaign27-production-methodology-assessment"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-production-methodology-assessment",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-production-methodology-assessment",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-production-methodology-assessment"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-production-methodology-assessment"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-production-methodology-assessment",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "production methodology assessment"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  },
+  {
+    "computation_method": {
+      "name": "source_evidence_package_to_knowledge_package_v1",
+      "nondeterminism": "none",
+      "parameters": {},
+      "query_definitions": [],
+      "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+      "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "fixture-supported",
+      "evidence_sufficiency": "sufficient for deterministic construction validation",
+      "governance_review_state": "pre-production validation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "none declared for fixture scope",
+      "reproducibility_state": "reproducible",
+      "uncertainty_dimensions": [
+        "fixture_scope"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-srcpkg-campaign27-architectural-continuity-review"
+      }
+    ],
+    "created_at": "2026-07-09",
+    "created_by": "construct_knowledge_package_v1",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:0557c48a2655df41aca878e09cce627714f18d2e5f0aa4e4308a0183bb3acf8e"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-09",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observational_metadata",
+        "evidence_ref_id": "ev-srcpkg-campaign27-architectural-continuity-review",
+        "reproducibility_handle": "python3 tools/run_campaign27_wdi_education_provenance_lineage_closeout.py --output artifacts/production/campaign-27-wdi-education-provenance-lineage-closeout",
+        "snapshot_fingerprint": "sha256:0557c48a2655df41aca878e09cce627714f18d2e5f0aa4e4308a0183bb3acf8e",
+        "source_family": "external_wdi_annual_scalar_education_provenance_lineage",
+        "source_identity": "World Bank World Development Indicators audited Education provenance lineage snapshot",
+        "source_owner": "source package fixture",
+        "source_version": "1.0"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "initial deterministic construction validation",
+      "changed_inputs_methods_templates_models_validators": [],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+      "evidence_references": "sha256:a3972b4e23fe85347851b9f95fda886d161d30a676cb5509f5ab5b9fd67232d2",
+      "generated_statements": "sha256:1a5d61c67c00afe57a8858596d6aaa10b1af8db0f2ed4b8da72cfea3253fa0c2",
+      "input_set": "sha256:d8ea636705b1862dc4be46820cf024d107f017acdb3fda592b2aeb3df6e632ad",
+      "package_manifest": "sha256:3a48ddf1866e1e2b47fe593c0159fac4f8f0042018b80ddd4a0f3884646afd6a",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+          "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+          "exclusions": [
+            "interpretive statements",
+            "unsupported explanatory statements",
+            "prospective statements",
+            "cause-effect statements",
+            "action-selection statements",
+            "audience-facing prose",
+            "financial-meaning statements",
+            "government-action-meaning statements"
+          ],
+          "scope_type": "external_education_provenance_lineage_metadata",
+          "topic": "architectural continuity review"
+        },
+        "dependencies": [
+          "ev-srcpkg-campaign27-architectural-continuity-review",
+          "eval-srcpkg-campaign27-architectural-continuity-review"
+        ],
+        "evidence_refs": [
+          "ev-srcpkg-campaign27-architectural-continuity-review"
+        ],
+        "origin": "constructed_from_source_evidence_package",
+        "statement_id": "stmt-srcpkg-campaign27-architectural-continuity-review",
+        "statement_type": "methodological",
+        "text": "Campaign 27 architectural continuity review classifies the next-phase path as preserving the agreed architecture and identifies no refinement, duplicate concept, contradiction, or architectural drift."
+      }
+    ],
+    "input_references": [
+      "srcpkg-campaign27-architectural-continuity-review"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:307b28a91fc0eb4afe3de56b49cea53773533ab8d6a84d1c8127ec6ec51f0715",
+      "previous_package_id": "pkg-candidate-srcpkg-campaign27-architectural-continuity-review",
+      "version_lineage": [
+        "pkg-candidate-srcpkg-campaign27-architectural-continuity-review",
+        "pkg-object-srcpkg-campaign27-architectural-continuity-review"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign27-architectural-continuity-review",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-srcpkg-campaign27-architectural-continuity-review",
+      "maturity_state": "M4 controlled-readiness validated fixture",
+      "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+      "validation_history": [
+        {
+          "blockers": [],
+          "human_review_required": true,
+          "validation_result": "pending",
+          "validator_version": "v1",
+          "warnings": []
+        },
+        {
+          "blockers": [],
+          "human_review_required": false,
+          "validation_result": "pass",
+          "validator_version": "v1",
+          "warnings": []
+        }
+      ]
+    },
+    "provenance_envelope": {
+      "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+      "creator": "construct_knowledge_package_v1",
+      "evaluation_refs": [
+        "eval-srcpkg-campaign27-architectural-continuity-review"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign27-architectural-continuity-review"
+      ],
+      "generation_date": "2026-07-09",
+      "package_identity": "pkg-object-srcpkg-campaign27-architectural-continuity-review",
+      "reproducibility_state": "reproducible",
+      "source_systems": [
+        "immutable SourceEvidencePackage fixture"
+      ],
+      "validation_tool": "validate_knowledge_pipeline_v1"
+    },
+    "scope": {
+      "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+      "evidence_family": "external_wdi_annual_scalar_education_provenance_lineage",
+      "intended_use": "pre-production validation only",
+      "method_scope": "deterministic construction validation",
+      "source_scope": {
+        "campaign_id": "campaign-27-wdi-education-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Education provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_provenance_lineage_metadata",
+        "topic": "architectural continuity review"
+      }
+    },
+    "status": "accepted-for-controlled-production-readiness",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "v1",
+      "warnings": []
+    }
+  }
+]

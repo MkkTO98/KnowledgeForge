@@ -1,0 +1,113 @@
+{
+  "reason_categories": [
+    "evidence_contract",
+    "lineage_fingerprint",
+    "provenance"
+  ],
+  "source_evidence_package": {
+    "created_at": "2026-07-09",
+    "evidence_metadata": {
+      "classification": {
+        "campaign_id": "campaign-2-wdi-demographic-structure-completeness-buckets",
+        "contains_observational_values": false,
+        "direct_evidence": true,
+        "evidence_kind": "audited_wdi_demographic_structure_completeness_bucket",
+        "generated_by_llm": false
+      },
+      "evidence_class": "external_observational_metadata",
+      "validation_metadata": {
+        "campaign": "campaign-2-wdi-demographic-structure-completeness-buckets",
+        "source_snapshot_fingerprint": "sha256:02a45f6fc6435dc981cda409363be7224edb1dd8bfe7ef9622dba2893001a665",
+        "validator": "construct_knowledge_package_v1"
+      }
+    },
+    "evidence_payload": {
+      "factual_statement": "A malformed Campaign 2 candidate omits provenance fields.",
+      "knowledge_category": "coverage",
+      "payload_metadata": {
+        "topic": "malformed provenance"
+      },
+      "scope": {
+        "campaign_id": "campaign-2-wdi-demographic-structure-completeness-buckets",
+        "domain": "WDI annual-scalar demographic-structure completeness buckets",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "malformed provenance"
+      }
+    },
+    "fingerprints": {
+      "package_manifest": "sha256:828086c57926d94bab9761759ae25b24e011cafda33fd17965d3447b24f5e6ae",
+      "provenance": "sha256:c423e4fbe48285b98fd63aefdba6d07d7b13ac48e84a31f1ec6c7ef920ec7efc",
+      "reproducibility": "sha256:19bf061fb4b72ff90cee74fd3246e85569755b9cc1bf5e4020a5e97168ddaed8",
+      "source_payload": "sha256:eb0f7632c4983d20a73378024b06406e53ed1862dec5e4ccd73f49cb7ac1467f"
+    },
+    "immutability": {
+      "mutation_policy": "read_only",
+      "state": "immutable_fixture"
+    },
+    "package_kind": "SourceEvidencePackage",
+    "package_version": "1.0",
+    "reproducibility": {
+      "handle": "python3 tools/run_campaign2_wdi_completeness_buckets.py --output artifacts/production/campaign-2-wdi-demographic-structure-completeness-buckets",
+      "nondeterminism": "none",
+      "rerun_method": "deterministic embedded immutable WDI completeness snapshot and canonical JSON construction",
+      "state": "reproducible"
+    },
+    "source_evidence_package_id": "srcpkg-campaign2-reject-missing-provenance",
+    "source_identity": {
+      "source_family": "external_wdi_annual_scalar_demographic_structure",
+      "source_name": "World Bank World Development Indicators audited demographic-structure completeness snapshot",
+      "source_version": "sha256:02a45f6fc6435dc981cda409363be7224edb1dd8bfe7ef9622dba2893001a665"
+    }
+  },
+  "validation": {
+    "ok": false,
+    "stage_reports": {
+      "source": {
+        "blockers": [
+          {
+            "blocks_acceptance": true,
+            "category": "evidence_contract",
+            "location": "provenance",
+            "message": "missing required field: provenance",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "provenance",
+            "location": "provenance",
+            "message": "provenance must include a source_snapshot_id",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.provenance",
+            "message": "provenance fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          },
+          {
+            "blocks_acceptance": true,
+            "category": "lineage_fingerprint",
+            "location": "fingerprints.package_manifest",
+            "message": "package_manifest fingerprint does not match canonical source package content",
+            "severity": "blocker"
+          }
+        ],
+        "ok": false,
+        "stage": "source_evidence_package",
+        "validator_version": "construction-v1",
+        "warnings": []
+      }
+    }
+  }
+}

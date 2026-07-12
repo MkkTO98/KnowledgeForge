@@ -1,0 +1,146 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "validated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata",
+      "reproducibility_handle": "python3 tools/run_campaign8_wdi_environment_transfer.py --output artifacts/production/campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+      "snapshot_fingerprint": "sha256:e96f49d5869e7d44d8d0a1deda4be53387b0a6249349e481e17cd8766882f685",
+      "source_family": "external_wdi_annual_scalar_environment",
+      "source_identity": "World Bank World Development Indicators audited Environment evidence snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:d90b86356f356a88b14d73e99599acfa6496932dcdbb2201b7315974733c491d",
+    "generated_statements": "sha256:741c5b4030fe3d713d9c8dd81bec88c5d21f3c02f09a7bf72314b91d9edcb419",
+    "input_set": "sha256:2c2e2874198648765ce90bb89a2b43d33e918ace61bcee6ed0692f7778a384c8",
+    "package_manifest": "sha256:eb913239f7126679b88bbebd7fe2559871366493574dfdc8cd50e475f7690a2c",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+        "domain": "WDI annual-scalar environment evidence-quality and coverage transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "environment metadata family"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata",
+        "eval-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata",
+      "statement_type": "coverage",
+      "text": "Campaign 8 records 28 annual-scalar indicators for the biodiversity_and_protected_area_metadata Environment metadata family."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign8-family-biodiversity-and-protected-area-metadata"
+  ],
+  "package_id": "pkg-candidate-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-srcpkg-campaign8-family-biodiversity-and-protected-area-metadata",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar environment evidence-quality and coverage transfer",
+    "evidence_family": "external_wdi_annual_scalar_environment",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer",
+      "domain": "WDI annual-scalar environment evidence-quality and coverage transfer",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "environment metadata family"
+    }
+  },
+  "status": "validated",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}
