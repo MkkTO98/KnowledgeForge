@@ -1,0 +1,200 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign40-agriculture-agricultural-forest-land-dnk-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-11",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:13af9b28dd718d2dd4c590700261111d5183e32b5729f5a1b70675095035faad"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-11",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign40-agriculture_agricultural_forest_land_dnk-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:13af9b28dd718d2dd4c590700261111d5183e32b5729f5a1b70675095035faad",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI AG.LND.AGRI.ZS and AG.LND.FRST.ZS DNK annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 40 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:c3772ead9a0aa5f5efaa0efc3439e00493833cc183acebfad1a3772b232ca8c9",
+    "evidence_references": "sha256:eb1d093b596b33d26c70ffba88e8c9b3e185c414a69aacdc00a490625f7d2ed6",
+    "generated_statements": "sha256:cb19ddb2e5c5d3b2022d2385919e6ff14dafc101a08bf49c6dc7a95fc167b366",
+    "input_set": "sha256:9a4d01da5016083880c70eb47a01f243642f05300689be27b347901b2e421128",
+    "package_manifest": "sha256:281d3f74bfea4289553395058f3871e64c5c08ba3e1188b8c584c8b040932792",
+    "query_definitions": "sha256:3502269dade1589f8ec8746dc0e2578757e3cb5c4ae94bbb94742016d2dd78b6"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "DNK",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign40-agriculture_agricultural_forest_land_dnk-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign40-agriculture_agricultural_forest_land_dnk-fixture"
+      ],
+      "origin": "computed_from_campaign40_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign40-agriculture-agricultural-forest-land-dnk-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "0.971428571429",
+        "aligned_pair_count": 34,
+        "calculation_evidence_fingerprint": "sha256:02a90488ddb7d5812ad6be9d7136d457d285069b7931a8ec320eb2dc3a4eb24b",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "ordinary limitation",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "material limitation",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "-0.017407835395",
+          "promoted_as_knowledge_object": false,
+          "series_a_vs_time_index": "-0.828711001501",
+          "series_b_vs_time_index": "0.986386181457"
+        },
+        "entity_id": "DNK",
+        "family": "Agriculture & Rural Development",
+        "fixture_fingerprint": "sha256:13af9b28dd718d2dd4c590700261111d5183e32b5729f5a1b70675095035faad",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [
+            2024
+          ],
+          "series_b": [
+            2024
+          ]
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:d1b56d4b5b64fa68390052e122b16cf88198044fd0fead7f7d176d83e943eb69",
+        "pearson_coefficient": {
+          "canonical": "-0.841257509606",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "AG.LND.AGRI.ZS",
+          "definition": "Agricultural land refers to the share of land area that is arable, under permanent crops, and under permanent pastures. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded. Land under permanent crops is land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber. This category includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber. Permanent pasture is land used for five or more years for forage, including natural and cultivated crops.",
+          "frequency": "annual",
+          "name": "Agricultural land (% of land area)",
+          "source_identity": "World Bank WDI",
+          "unit": "% of land area"
+        },
+        "series_b": {
+          "code": "AG.LND.FRST.ZS",
+          "definition": "Forest area (% of land area) is the share of total land area that is under natural or planted stands of trees of at least 5 meters in situ, whether productive or not, and excludes tree stands in agricultural production systems (for example, in fruit plantations and agroforestry systems) and trees in urban parks and gardens.",
+          "frequency": "annual",
+          "name": "Forest area (% of land area)",
+          "source_identity": "World Bank WDI",
+          "unit": "% of land area"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign40_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual DNK observations from 1990 through 2024, the Pearson correlation between Agricultural land (% of land area) and Forest area (% of land area) is -0.841257509606, using 34 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign40_first_end_to_end_spec_driven_pearson_batch",
+    "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 40",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+      "sha256:02a90488ddb7d5812ad6be9d7136d457d285069b7931a8ec320eb2dc3a4eb24b"
+    ],
+    "evidence_refs": [
+      "ev-campaign40-agriculture_agricultural_forest_land_dnk-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "DNK"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "definitional_overlap",
+      "shared_denominator",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

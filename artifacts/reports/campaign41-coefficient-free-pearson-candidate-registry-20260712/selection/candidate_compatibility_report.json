@@ -1,0 +1,456 @@
+{
+  "batch_spec_fingerprint": "sha256:a94d020dfedeb2f069366756e2b28fc20906fef5609df823eccae11ad59cdfa2",
+  "campaign_id": "campaign41_coefficient_free_pearson_batch",
+  "candidate_count": 8,
+  "candidates": [
+    {
+      "aligned_coverage": "0.9714285714285714",
+      "aligned_pair_count": 34,
+      "candidate_id": "dnk_agricultural_land_broad_money",
+      "compatible": true,
+      "construction_risk": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "entity": "DNK",
+      "expected_package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
+      "method_contract": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "identity": "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      },
+      "semantic_limitations": [
+        "Pearson relationship is contemporaneous and descriptive only.",
+        "No causation, explanation, mechanism, forecast, prediction, recommendation, statistical-significance, stationarity, trend, or investment claim is authorized.",
+        "Different units are acceptable for Pearson calculation but make the coefficient dimensionless and limited to the retained finite window.",
+        "WDI source data are mutable; retained raw fixture bytes and normalized fingerprints are the reproducibility anchor."
+      ],
+      "series_a": {
+        "code": "AG.LND.AGRI.ZS",
+        "definition": "Agricultural land refers to the share of land area that is arable, under permanent crops, and under permanent pastures. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded. Land under permanent crops is land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber. This category includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber. Permanent pasture is land used for five or more years for forage, including natural and cultivated crops.",
+        "frequency": "annual",
+        "name": "Agricultural land (% of land area)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "% of land area"
+      },
+      "series_b": {
+        "code": "FM.LBL.BMNY.GD.ZS",
+        "definition": "Broad money is the sum of all liquid financial instruments held by money-holding sectors that are widely accepted in an economy as a medium of exchange, plus those that can be converted into a medium of exchange at short notice at, or close to, their full nominal value. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+        "frequency": "annual",
+        "name": "Broad money (% of GDP)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "percent of GDP"
+      },
+      "transformation_state": {
+        "series_a": "raw",
+        "series_b": "raw"
+      },
+      "units": {
+        "series_a": "% of land area",
+        "series_b": "percent of GDP"
+      }
+    },
+    {
+      "aligned_coverage": "0.9714285714285714",
+      "aligned_pair_count": 34,
+      "candidate_id": "nor_fossil_electricity_under5_mortality",
+      "compatible": true,
+      "construction_risk": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "entity": "NOR",
+      "expected_package_id": "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+      "method_contract": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "identity": "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      },
+      "semantic_limitations": [
+        "Pearson relationship is contemporaneous and descriptive only.",
+        "No causation, explanation, mechanism, forecast, prediction, recommendation, statistical-significance, stationarity, trend, or investment claim is authorized.",
+        "Different units are acceptable for Pearson calculation but make the coefficient dimensionless and limited to the retained finite window.",
+        "WDI source data are mutable; retained raw fixture bytes and normalized fingerprints are the reproducibility anchor."
+      ],
+      "series_a": {
+        "code": "EG.ELC.FOSL.ZS",
+        "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+        "frequency": "annual",
+        "name": "Electricity production from oil, gas and coal sources (% of total)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "% of total"
+      },
+      "series_b": {
+        "code": "SH.DYN.MORT",
+        "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+        "frequency": "annual",
+        "name": "Mortality rate, under-5 (per 1,000 live births)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "per 1,000 live births"
+      },
+      "transformation_state": {
+        "series_a": "raw",
+        "series_b": "raw"
+      },
+      "units": {
+        "series_a": "% of total",
+        "series_b": "per 1,000 live births"
+      }
+    },
+    {
+      "aligned_coverage": "1",
+      "aligned_pair_count": 35,
+      "candidate_id": "swe_private_credit_mobile_cellular",
+      "compatible": true,
+      "construction_risk": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "entity": "SWE",
+      "expected_package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+      "method_contract": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "identity": "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      },
+      "semantic_limitations": [
+        "Pearson relationship is contemporaneous and descriptive only.",
+        "No causation, explanation, mechanism, forecast, prediction, recommendation, statistical-significance, stationarity, trend, or investment claim is authorized.",
+        "Different units are acceptable for Pearson calculation but make the coefficient dimensionless and limited to the retained finite window.",
+        "WDI source data are mutable; retained raw fixture bytes and normalized fingerprints are the reproducibility anchor."
+      ],
+      "series_a": {
+        "code": "FS.AST.PRVT.GD.ZS",
+        "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+        "frequency": "annual",
+        "name": "Domestic credit to private sector (% of GDP)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "percent of GDP"
+      },
+      "series_b": {
+        "code": "IT.CEL.SETS.P2",
+        "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+        "frequency": "annual",
+        "name": "Mobile cellular subscriptions (per 100 people)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "per 100 people"
+      },
+      "transformation_state": {
+        "series_a": "raw",
+        "series_b": "raw"
+      },
+      "units": {
+        "series_a": "percent of GDP",
+        "series_b": "per 100 people"
+      }
+    },
+    {
+      "aligned_coverage": "0.9714285714285714",
+      "aligned_pair_count": 34,
+      "candidate_id": "dnk_agricultural_land_private_credit",
+      "compatible": true,
+      "construction_risk": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "entity": "DNK",
+      "expected_package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+      "method_contract": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "identity": "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      },
+      "semantic_limitations": [
+        "Pearson relationship is contemporaneous and descriptive only.",
+        "No causation, explanation, mechanism, forecast, prediction, recommendation, statistical-significance, stationarity, trend, or investment claim is authorized.",
+        "Different units are acceptable for Pearson calculation but make the coefficient dimensionless and limited to the retained finite window.",
+        "WDI source data are mutable; retained raw fixture bytes and normalized fingerprints are the reproducibility anchor."
+      ],
+      "series_a": {
+        "code": "AG.LND.AGRI.ZS",
+        "definition": "Agricultural land refers to the share of land area that is arable, under permanent crops, and under permanent pastures. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded. Land under permanent crops is land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber. This category includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber. Permanent pasture is land used for five or more years for forage, including natural and cultivated crops.",
+        "frequency": "annual",
+        "name": "Agricultural land (% of land area)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "% of land area"
+      },
+      "series_b": {
+        "code": "FS.AST.PRVT.GD.ZS",
+        "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+        "frequency": "annual",
+        "name": "Domestic credit to private sector (% of GDP)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "percent of GDP"
+      },
+      "transformation_state": {
+        "series_a": "raw",
+        "series_b": "raw"
+      },
+      "units": {
+        "series_a": "% of land area",
+        "series_b": "percent of GDP"
+      }
+    },
+    {
+      "aligned_coverage": "0.9142857142857143",
+      "aligned_pair_count": 32,
+      "candidate_id": "nor_nonhydro_renewable_electricity_under5_mortality",
+      "compatible": true,
+      "construction_risk": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "entity": "NOR",
+      "expected_package_id": "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+      "method_contract": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "identity": "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      },
+      "semantic_limitations": [
+        "Pearson relationship is contemporaneous and descriptive only.",
+        "No causation, explanation, mechanism, forecast, prediction, recommendation, statistical-significance, stationarity, trend, or investment claim is authorized.",
+        "Different units are acceptable for Pearson calculation but make the coefficient dimensionless and limited to the retained finite window.",
+        "WDI source data are mutable; retained raw fixture bytes and normalized fingerprints are the reproducibility anchor."
+      ],
+      "series_a": {
+        "code": "EG.ELC.RNWX.ZS",
+        "definition": "The share of electricity production from renewable sources of total electricity production. Electricity production from renewable sources, excluding hydroelectric, includes geothermal, solar, tides, wind, biomass, and biofuels.",
+        "frequency": "annual",
+        "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "% of total"
+      },
+      "series_b": {
+        "code": "SH.DYN.MORT",
+        "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+        "frequency": "annual",
+        "name": "Mortality rate, under-5 (per 1,000 live births)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "per 1,000 live births"
+      },
+      "transformation_state": {
+        "series_a": "raw",
+        "series_b": "raw"
+      },
+      "units": {
+        "series_a": "% of total",
+        "series_b": "per 1,000 live births"
+      }
+    },
+    {
+      "aligned_coverage": "1",
+      "aligned_pair_count": 35,
+      "candidate_id": "swe_private_credit_internet_users",
+      "compatible": true,
+      "construction_risk": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "entity": "SWE",
+      "expected_package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+      "method_contract": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "identity": "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      },
+      "semantic_limitations": [
+        "Pearson relationship is contemporaneous and descriptive only.",
+        "No causation, explanation, mechanism, forecast, prediction, recommendation, statistical-significance, stationarity, trend, or investment claim is authorized.",
+        "Different units are acceptable for Pearson calculation but make the coefficient dimensionless and limited to the retained finite window.",
+        "WDI source data are mutable; retained raw fixture bytes and normalized fingerprints are the reproducibility anchor."
+      ],
+      "series_a": {
+        "code": "FS.AST.PRVT.GD.ZS",
+        "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+        "frequency": "annual",
+        "name": "Domestic credit to private sector (% of GDP)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "percent of GDP"
+      },
+      "series_b": {
+        "code": "IT.NET.USER.ZS",
+        "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+        "frequency": "annual",
+        "name": "Individuals using the Internet (% of population)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "% of population"
+      },
+      "transformation_state": {
+        "series_a": "raw",
+        "series_b": "raw"
+      },
+      "units": {
+        "series_a": "percent of GDP",
+        "series_b": "% of population"
+      }
+    },
+    {
+      "aligned_coverage": "0.9714285714285714",
+      "aligned_pair_count": 34,
+      "candidate_id": "dnk_forest_area_broad_money",
+      "compatible": true,
+      "construction_risk": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "entity": "DNK",
+      "expected_package_id": "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1",
+      "method_contract": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "identity": "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      },
+      "semantic_limitations": [
+        "Pearson relationship is contemporaneous and descriptive only.",
+        "No causation, explanation, mechanism, forecast, prediction, recommendation, statistical-significance, stationarity, trend, or investment claim is authorized.",
+        "Different units are acceptable for Pearson calculation but make the coefficient dimensionless and limited to the retained finite window.",
+        "WDI source data are mutable; retained raw fixture bytes and normalized fingerprints are the reproducibility anchor."
+      ],
+      "series_a": {
+        "code": "AG.LND.FRST.ZS",
+        "definition": "Forest area (% of land area) is the share of total land area that is under natural or planted stands of trees of at least 5 meters in situ, whether productive or not, and excludes tree stands in agricultural production systems (for example, in fruit plantations and agroforestry systems) and trees in urban parks and gardens.",
+        "frequency": "annual",
+        "name": "Forest area (% of land area)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "% of land area"
+      },
+      "series_b": {
+        "code": "FM.LBL.BMNY.GD.ZS",
+        "definition": "Broad money is the sum of all liquid financial instruments held by money-holding sectors that are widely accepted in an economy as a medium of exchange, plus those that can be converted into a medium of exchange at short notice at, or close to, their full nominal value. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+        "frequency": "annual",
+        "name": "Broad money (% of GDP)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "percent of GDP"
+      },
+      "transformation_state": {
+        "series_a": "raw",
+        "series_b": "raw"
+      },
+      "units": {
+        "series_a": "% of land area",
+        "series_b": "percent of GDP"
+      }
+    },
+    {
+      "aligned_coverage": "0.9714285714285714",
+      "aligned_pair_count": 34,
+      "candidate_id": "nor_crude_birth_rate_fossil_electricity",
+      "compatible": true,
+      "construction_risk": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "entity": "NOR",
+      "expected_package_id": "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1",
+      "method_contract": {
+        "contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "identity": "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      },
+      "semantic_limitations": [
+        "Pearson relationship is contemporaneous and descriptive only.",
+        "No causation, explanation, mechanism, forecast, prediction, recommendation, statistical-significance, stationarity, trend, or investment claim is authorized.",
+        "Different units are acceptable for Pearson calculation but make the coefficient dimensionless and limited to the retained finite window.",
+        "WDI source data are mutable; retained raw fixture bytes and normalized fingerprints are the reproducibility anchor."
+      ],
+      "series_a": {
+        "code": "SP.DYN.CBRT.IN",
+        "definition": "Crude birth rate indicates the number of live births occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+        "frequency": "annual",
+        "name": "Birth rate, crude (per 1,000 people)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "per 1,000 people"
+      },
+      "series_b": {
+        "code": "EG.ELC.FOSL.ZS",
+        "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+        "frequency": "annual",
+        "name": "Electricity production from oil, gas and coal sources (% of total)",
+        "source_identity": "World Bank WDI",
+        "transformation": "raw",
+        "unit": "% of total"
+      },
+      "transformation_state": {
+        "series_a": "raw",
+        "series_b": "raw"
+      },
+      "units": {
+        "series_a": "per 1,000 people",
+        "series_b": "% of total"
+      }
+    }
+  ],
+  "registry_fingerprint": "sha256:e5ff891bdcf3d02eaa028f58538e4c9c00968f8ec74e8871e65bd4160ddc34dc"
+}

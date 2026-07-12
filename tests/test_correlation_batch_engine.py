@@ -90,7 +90,10 @@ class CorrelationBatchEngineTest(unittest.TestCase):
             self.assertTrue(json.loads((out / "postgresql_stale_marker.json").read_text())["stale_if_failed"])
             self.assertEqual(spec["campaign_id"], "campaign40_first_end_to_end_spec_driven_pearson_batch")
     def test_corrected_campaign40_diagnostics_have_no_time_index_error(self):
-        package_paths = sorted((ROOT / "knowledge_repository/objects").glob("*campaign40*.json"))
+        package_paths = [
+            path for path in sorted((ROOT / "knowledge_repository/objects").glob("*campaign40*.json"))
+            if "first-difference-pearson-companion" not in path.name
+        ]
         self.assertEqual(len(package_paths), 6)
         for path in package_paths:
             package = json.loads(path.read_text())

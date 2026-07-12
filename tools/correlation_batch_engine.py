@@ -18,6 +18,8 @@ import argparse
 import hashlib
 import importlib.util
 import json
+import re
+import string
 import shutil
 import subprocess
 import tempfile
@@ -29,6 +31,138 @@ from typing import Any
 PROJECT_ROOT = Path(__file__).resolve().parents[1]
 CONTRACT_FINGERPRINT = "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
 ENGINE_CONTRACT = "correlation_batch_engine_v1"
+
+SAFE_ID_RE = re.compile(r"^[a-z0-9][a-z0-9_-]*$")
+SAFE_LABEL_RE = re.compile(r"^[A-Za-z0-9][A-Za-z0-9 _.,:;@+()/'-]*$")
+PROVENANCE_TEMPLATE_FIELDS = {"campaign_id", "identity_namespace", "candidate_id", "candidate_id_dash"}
+PROVENANCE_REQUIRED_FIELDS = {
+    "identity_namespace",
+    "statement_id_template",
+    "calculation_id_template",
+    "evidence_ref_id_template",
+    "validation_judgment",
+    "statement_origin",
+    "lineage_basis",
+}
+
+
+def _contains_path_like(value: str) -> bool:
+    text = str(value)
+    lowered = text.lower()
+    if any(marker in lowered for marker in ("/home/", "\\\\", "../", "./", "file://")):
+        return True
+    if re.search(r"(^|\s)[A-Za-z]:[\\/]", text):
+        return True
+    return False
+
+
+def _validate_safe_identifier(value: str, *, field: str) -> None:
+    if not isinstance(value, str) or not SAFE_ID_RE.fullmatch(value):
+        raise ValueError(f"unsafe or malformed provenance identifier {field}: {value!r}")
+    if _contains_path_like(value):
+        raise ValueError(f"path-like provenance identifier {field}: {value!r}")
+    if value in {"macroforge", "insightforge"}:
+        raise ValueError(f"consumer-project terminology not allowed in provenance identifier {field}: {value!r}")
+
+
+def _validate_safe_label(value: str, *, field: str) -> None:
+    if not isinstance(value, str) or not value.strip() or not SAFE_LABEL_RE.fullmatch(value):
+        raise ValueError(f"unsafe or malformed provenance label {field}: {value!r}")
+    if _contains_path_like(value):
+        raise ValueError(f"path-like provenance label {field}: {value!r}")
+    if re.search(r"\b(MacroForge|InsightForge)\b", value):
+        raise ValueError(f"consumer-project terminology not allowed in provenance label {field}: {value!r}")
+    lowered = value.lower()
+    if any(token in lowered for token in ("{coefficient", "{correlation", "{p_value", "{significance")):
+        raise ValueError(f"outcome-derived template field not allowed in provenance label {field}: {value!r}")
+
+
+def _template_fields(template: str) -> set[str]:
+    fields: set[str] = set()
+    for _, field_name, _, _ in string.Formatter().parse(template):
+        if field_name is not None:
+            fields.add(field_name)
+    return fields
+
+
+def _render_template(template: str, context: dict[str, str], *, field: str) -> str:
+    fields = _template_fields(template)
+    unknown = sorted(fields - PROVENANCE_TEMPLATE_FIELDS)
+    if unknown:
+        raise ValueError(f"unknown template field(s) in {field}: {unknown}")
+    rendered = template.format(**context)
+    _validate_safe_identifier(rendered, field=field)
+    return rendered
+
+
+def provenance_metadata(spec: dict[str, Any]) -> dict[str, Any]:
+    metadata = spec.get("package_provenance")
+    if not isinstance(metadata, dict):
+        raise ValueError("missing required package_provenance metadata")
+    missing = sorted(PROVENANCE_REQUIRED_FIELDS - set(metadata))
+    if missing:
+        raise ValueError(f"missing required package_provenance field(s): {missing}")
+    extra = sorted(set(metadata) - (PROVENANCE_REQUIRED_FIELDS | {"production_family_identity"}))
+    if extra:
+        raise ValueError(f"unsupported package_provenance field(s): {extra}")
+    _validate_safe_identifier(str(metadata["identity_namespace"]), field="identity_namespace")
+    for field in ("statement_id_template", "calculation_id_template", "evidence_ref_id_template"):
+        if not isinstance(metadata[field], str) or not metadata[field].strip():
+            raise ValueError(f"missing provenance template {field}")
+        unknown = sorted(_template_fields(metadata[field]) - PROVENANCE_TEMPLATE_FIELDS)
+        if unknown:
+            raise ValueError(f"unknown template field(s) in {field}: {unknown}")
+    for field in ("validation_judgment", "statement_origin"):
+        _validate_safe_identifier(str(metadata[field]), field=field)
+    _validate_safe_label(str(metadata["lineage_basis"]), field="lineage_basis")
+    if metadata.get("production_family_identity") is not None:
+        _validate_safe_identifier(str(metadata["production_family_identity"]), field="production_family_identity")
+    return metadata
+
+
+def candidate_provenance_ids(spec: dict[str, Any], candidate: dict[str, Any]) -> dict[str, str]:
+    metadata = provenance_metadata(spec)
+    cid = candidate["candidate_id"]
+    _validate_safe_identifier(cid, field="candidate_id")
+    context = {
+        "campaign_id": str(spec["campaign_id"]),
+        "identity_namespace": str(metadata["identity_namespace"]),
+        "candidate_id": cid,
+        "candidate_id_dash": cid.replace("_", "-"),
+    }
+    ids = {
+        "statement_id": _render_template(metadata["statement_id_template"], context, field="statement_id_template"),
+        "calculation_id": _render_template(metadata["calculation_id_template"], context, field="calculation_id_template"),
+        "evidence_ref_id": _render_template(metadata["evidence_ref_id_template"], context, field="evidence_ref_id_template"),
+        "validation_judgment": str(metadata["validation_judgment"]),
+        "statement_origin": str(metadata["statement_origin"]),
+        "lineage_basis": str(metadata["lineage_basis"]),
+    }
+    expected_package_id = candidate.get("expected_package_id", "")
+    namespace = str(metadata["identity_namespace"])
+    if f"srcpkg-{namespace}-" not in expected_package_id:
+        raise ValueError(f"campaign/package identity inconsistency for {cid}: expected package id does not contain srcpkg-{namespace}-")
+    if namespace not in ids["statement_id"] or namespace not in ids["calculation_id"] or namespace not in ids["evidence_ref_id"]:
+        raise ValueError(f"provenance IDs for {cid} do not include identity namespace {namespace}")
+    return ids
+
+
+def validate_provenance_metadata(spec: dict[str, Any]) -> dict[str, Any]:
+    if not spec.get("candidates"):
+        return {"valid": True, "checked": False, "reason": "historical pair-only spec"}
+    provenance_metadata(spec)
+    seen: dict[str, str] = {}
+    generated: list[dict[str, str]] = []
+    for candidate in spec["candidates"]:
+        ids = candidate_provenance_ids(spec, candidate)
+        generated.append({"candidate_id": candidate["candidate_id"], **ids})
+        for field in ("statement_id", "calculation_id", "evidence_ref_id"):
+            value = ids[field]
+            if value in seen:
+                raise ValueError(f"duplicate generated provenance id {value!r} for {candidate['candidate_id']} and {seen[value]}")
+            seen[value] = candidate["candidate_id"]
+    return {"valid": True, "checked": True, "generated_count": len(generated), "generated_ids": generated}
+
 
 
 def canonical_json(value: Any) -> str:
@@ -109,7 +243,8 @@ def validate_spec(spec: dict[str, Any]) -> dict[str, Any]:
     candidates = spec.get("candidates") or spec.get("pairs") or []
     if not candidates:
         raise ValueError("spec contains no candidates")
-    return {"valid": True, "candidate_count": len(candidates), "spec_fingerprint": sha256_value(spec)}
+    provenance_validation = validate_provenance_metadata(spec) if spec.get("candidates") else {"valid": True, "checked": False}
+    return {"valid": True, "candidate_count": len(candidates), "spec_fingerprint": sha256_value(spec), "provenance_validation": provenance_validation}
 
 
 def _series_from_normalized(path: str, pointer: str | None = None) -> dict[str, Any]:
@@ -353,6 +488,14 @@ def _package_fingerprint_fields(package: dict[str, Any]) -> dict[str, str]:
     return {"input_set": sha256_value(package.get("input_references", [])), "query_definitions": sha256_value(package.get("scope", {})), "evidence_references": sha256_value(package.get("evidence_references", [])), "generated_statements": sha256_value(package.get("generated_statements", [])), "computation_recipe": sha256_value(package.get("provenance_envelope", {})), "package_manifest": sha256_value({k: v for k, v in package.items() if k != "fingerprints"})}
 
 
+def _campaign_label(spec: dict[str, Any]) -> str:
+    namespace = str(provenance_metadata(spec).get("identity_namespace", spec.get("campaign_id", "campaign")))
+    match = re.fullmatch(r"campaign([0-9]+)", namespace)
+    if match:
+        return f"Campaign {match.group(1)}"
+    return namespace.replace("_", " ").title()
+
+
 def build_package(spec: dict[str, Any], candidate: dict[str, Any], result: dict[str, Any], diagnostics: dict[str, Any], fixture_fp: str) -> dict[str, Any]:
     today = spec.get("publication_date", "2026-07-11")
     cid = candidate["candidate_id"]
@@ -360,9 +503,11 @@ def build_package(spec: dict[str, Any], candidate: dict[str, Any], result: dict[
     entity = candidate["entity"]
     period = candidate["period"]
     family = candidate["family"]
-    stmt_id = f"stmt-campaign40-{cid.replace('_','-')}-pearson-v1"
-    calc_id = f"calc-campaign40-{cid}-pearson-v1"
-    ev_id = f"ev-campaign40-{cid}-fixture"
+    ids = candidate_provenance_ids(spec, candidate)
+    campaign_label = _campaign_label(spec)
+    stmt_id = ids["statement_id"]
+    calc_id = ids["calculation_id"]
+    ev_id = ids["evidence_ref_id"]
     payload = {
         "family": family,
         "entity_id": entity,
@@ -382,11 +527,11 @@ def build_package(spec: dict[str, Any], candidate: dict[str, Any], result: dict[
         "construction_risk_assessment": result["construction_risk"],
         "diagnostic_limitations": diagnostics,
         "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
-        "validation_judgment": "accepted_campaign40_spec_driven_correlation_object",
+        "validation_judgment": ids["validation_judgment"],
     }
-    statement = {"statement_id": stmt_id, "statement_type": "derived_relationship", "text": f"Across aligned annual {entity} observations from {period['start']} through {period['end']}, the Pearson correlation between {candidate['series_a']['identity']['name']} and {candidate['series_b']['identity']['name']} is {result['coefficient']['canonical']}, using {result['aligned_pair_count']} aligned observations.", "structured_payload": payload, "applicability": {"entity_id": entity, "frequency": "annual", "method_id": "wdi_annual_scalar_pearson_correlation_v1", "method_version": "1.0", "period_start": period["start"], "period_end": period["end"]}, "dependencies": [calc_id], "evidence_refs": [ev_id], "origin": "computed_from_campaign40_declarative_spec_wdi_fixture"}
+    statement = {"statement_id": stmt_id, "statement_type": "derived_relationship", "text": f"Across aligned annual {entity} observations from {period['start']} through {period['end']}, the Pearson correlation between {candidate['series_a']['identity']['name']} and {candidate['series_b']['identity']['name']} is {result['coefficient']['canonical']}, using {result['aligned_pair_count']} aligned observations.", "structured_payload": payload, "applicability": {"entity_id": entity, "frequency": "annual", "method_id": "wdi_annual_scalar_pearson_correlation_v1", "method_version": "1.0", "period_start": period["start"], "period_end": period["end"]}, "dependencies": [calc_id], "evidence_refs": [ev_id], "origin": ids["statement_origin"]}
     warnings = [k for k, v in result["construction_risk"].get("assessment", {}).items() if v in {"material limitation", "ordinary limitation"}] + ["no causal/predictive/significance interpretation"]
-    package = {"package_id": package_id, "package_kind": "KnowledgeObjectPackage", "package_version": "1.0", "created_at": today, "created_by": "correlation_batch_engine", "status": "accepted", "scope": {"domain": "world_development_indicators", "entity_scope": [entity], "evidence_family": f"external_wdi_annual_scalar_{family.lower().replace(' & ', '_').replace(' ', '_')}_pearson_correlation", "period_scope": period}, "input_references": [spec["campaign_id"], spec["selection"]["frozen_selection_fingerprint"], CONTRACT_FINGERPRINT], "evidence_references": [{"evidence_ref_id": ev_id, "source_family": "official_statistical_source_data", "source_owner": "World Bank WDI API retained local fixture", "source_identity": f"World Bank WDI {candidate['series_a']['identity']['code']} and {candidate['series_b']['identity']['code']} {entity} annual {period['start']}-{period['end']} fixture", "source_version": result.get("provider_lastupdated"), "snapshot_fingerprint": fixture_fp, "evaluation_status": "evaluated", "evidence_class": "external_dual_series_observation_level_numerical_fixture", "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence", "accessed_at": today}], "generated_statements": [statement], "provenance_envelope": {"method_refs": ["wdi_annual_scalar_pearson_correlation_v1@1.0"], "evidence_refs": [ev_id], "evaluation_refs": [spec["selection"]["frozen_selection_fingerprint"], result["output_fingerprint"]], "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation"}, "confidence_quality": {"confidence_label": "fixture-supported-deterministic", "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object", "validation_state": "pass", "lifecycle_state": "accepted", "reproducibility_state": "reproducible_offline_from_retained_fixture", "uncertainty_dimensions": ["non-causality", "non-prediction", "absence of significance testing", "transformation sensitivity", "common time-ordering risk"]}, "validation_state": {"validation_result": "pass", "blockers": [], "warnings": warnings}, "contradiction_records": [{"contradiction_id": "none-recorded", "contradiction_type": "none", "target_statement": stmt_id, "contradicting_evidence": None, "disposition": "not_applicable"}], "evidence_integrity": {"evidence_refs_verified": True, "fingerprints_verified": True, "source_package_fingerprint": fixture_fp}, "evolution_metadata": {"change_reason": "Campaign 40 end-to-end specification-driven Pearson production batch", "previous_revision": None, "version_lineage": [], "dependent_object_review_posture": "not_applicable"}, "lineage": {"source_campaign": "Campaign 40", "previous_package_id": None, "version_lineage": []}}
+    package = {"package_id": package_id, "package_kind": "KnowledgeObjectPackage", "package_version": "1.0", "created_at": today, "created_by": "correlation_batch_engine", "status": "accepted", "scope": {"domain": "world_development_indicators", "entity_scope": [entity], "evidence_family": f"external_wdi_annual_scalar_{family.lower().replace(' & ', '_').replace(' ', '_')}_pearson_correlation", "period_scope": period}, "input_references": [spec["campaign_id"], spec["selection"]["frozen_selection_fingerprint"], CONTRACT_FINGERPRINT], "evidence_references": [{"evidence_ref_id": ev_id, "source_family": "official_statistical_source_data", "source_owner": "World Bank WDI API retained local fixture", "source_identity": f"World Bank WDI {candidate['series_a']['identity']['code']} and {candidate['series_b']['identity']['code']} {entity} annual {period['start']}-{period['end']} fixture", "source_version": result.get("provider_lastupdated"), "snapshot_fingerprint": fixture_fp, "evaluation_status": "evaluated", "evidence_class": "external_dual_series_observation_level_numerical_fixture", "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence", "accessed_at": today}], "generated_statements": [statement], "provenance_envelope": {"method_refs": ["wdi_annual_scalar_pearson_correlation_v1@1.0"], "evidence_refs": [ev_id], "evaluation_refs": [spec["selection"]["frozen_selection_fingerprint"], result["output_fingerprint"]], "lineage_basis": ids["lineage_basis"]}, "confidence_quality": {"confidence_label": "fixture-supported-deterministic", "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object", "validation_state": "pass", "lifecycle_state": "accepted", "reproducibility_state": "reproducible_offline_from_retained_fixture", "uncertainty_dimensions": ["non-causality", "non-prediction", "absence of significance testing", "transformation sensitivity", "common time-ordering risk"]}, "validation_state": {"validation_result": "pass", "blockers": [], "warnings": warnings}, "contradiction_records": [{"contradiction_id": "none-recorded", "contradiction_type": "none", "target_statement": stmt_id, "contradicting_evidence": None, "disposition": "not_applicable"}], "evidence_integrity": {"evidence_refs_verified": True, "fingerprints_verified": True, "source_package_fingerprint": fixture_fp}, "evolution_metadata": {"change_reason": f"{campaign_label} end-to-end specification-driven Pearson production batch", "previous_revision": None, "version_lineage": [], "dependent_object_review_posture": "not_applicable"}, "lineage": {"source_campaign": campaign_label, "previous_package_id": None, "version_lineage": []}}
     package["fingerprints"] = _package_fingerprint_fields(package)
     package["generated_statements"][0]["structured_payload"]["package_fingerprint"] = package["fingerprints"]["package_manifest"]
     package["fingerprints"] = _package_fingerprint_fields(package)

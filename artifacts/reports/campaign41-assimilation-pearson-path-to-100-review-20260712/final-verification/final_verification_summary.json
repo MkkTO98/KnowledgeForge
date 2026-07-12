@@ -1,0 +1,40 @@
+{
+  "architecture_to_reality_audit": {
+    "blocks": [],
+    "report_path": "/home/mkkto/srv/EIP/projects/KnowledgeForge/artifacts/reports/R-20260712-architecture-reality-audit.md",
+    "warnings": []
+  },
+  "canonical_repository_validation": true,
+  "coherence_check": {
+    "blocks": [],
+    "warnings": [
+      "context health: context/active_context.md is 316.3 hours old; generated bundles are task-specific and should be regenerated when needed"
+    ]
+  },
+  "complete_test_suite": "289 passed in 19.00s",
+  "context_health_check": {
+    "blocks": [],
+    "warnings": [
+      "context/active_context.md is 316.3 hours old; generated bundles are task-specific and should be regenerated when needed"
+    ]
+  },
+  "git_diff_check": "passed",
+  "notes": [
+    "context-health/coherence retain a pre-existing stale generated active_context.md warning only",
+    "durability validator decision D reflects preserved unrelated untracked/durability residue and zero actual secret blockers"
+  ],
+  "python_compilation": "passed",
+  "read_only_postgresql_retrieval_checks": true,
+  "relationship_export_contract_checks": true,
+  "repository_fingerprint_verification": true,
+  "sensitive_material_scan": {
+    "actual_secret_blockers": 0,
+    "durability_decision": "D",
+    "durability_existing_residue_reasons": [
+      "untracked_canonical_state_not_durable",
+      "untracked_recovery_critical_implementation_not_durable",
+      "operational_state_checkpoint_not_machine_loss_durable"
+    ],
+    "passed": true
+  }
+}

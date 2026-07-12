@@ -1,0 +1,68 @@
+{
+  "batch_spec_fingerprint": "sha256:a94d020dfedeb2f069366756e2b28fc20906fef5609df823eccae11ad59cdfa2",
+  "candidate_count": 8,
+  "engine_reuse_assessment": {
+    "calculation_gate_decision": "bounded reusable engine extension required before Campaign 41 calculation",
+    "campaign40_hardcoded_package_internals_found": true,
+    "engine_path": "tools/correlation_batch_engine.py",
+    "snippets": [
+      {
+        "line": 363,
+        "text": "stmt_id = f\"stmt-campaign40-{cid.replace('_','-')}-pearson-v1\""
+      },
+      {
+        "line": 364,
+        "text": "calc_id = f\"calc-campaign40-{cid}-pearson-v1\""
+      },
+      {
+        "line": 365,
+        "text": "ev_id = f\"ev-campaign40-{cid}-fixture\""
+      },
+      {
+        "line": 385,
+        "text": "\"validation_judgment\": \"accepted_campaign40_spec_driven_correlation_object\","
+      },
+      {
+        "line": 387,
+        "text": "statement = {\"statement_id\": stmt_id, \"statement_type\": \"derived_relationship\", \"text\": f\"Across aligned annual {entity} observations from {period['start']} through {period['end']}, the Pearson correlation between {candidate['series_a']['identity']['name']} and {candidate['series_b']['identity']['name']} is {result['coefficient']['canonical']}, using {result['aligned_pair_count']} aligned observations.\", \"structured_payload\": payload, \"applicability\": {\"entity_id\": entity, \"frequency\": \"annual\", \"method_id\": \"wdi_annual_scalar_pearson_correlation_v1\", \"method_version\": \"1.0\", \"period_start\": period[\"start\"], \"period_end\": period[\"end\"]}, \"dependencies\": [calc_id], \"evidence_refs\": [ev_id], \"origin\": \"computed_from_campaign40_declarative_spec_wdi_fixture\"}"
+      }
+    ]
+  },
+  "expected_package_ids": [
+    "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
+    "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+    "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+    "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+    "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+    "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+    "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1",
+    "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1"
+  ],
+  "registry_fingerprint": "sha256:e5ff891bdcf3d02eaa028f58538e4c9c00968f8ec74e8871e65bd4160ddc34dc",
+  "valid": true,
+  "validation": {
+    "candidate_count": 8,
+    "errors": [],
+    "expected_package_ids": [
+      "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1"
+    ],
+    "valid": true
+  },
+  "written": {
+    "batch_spec_fingerprint": "sha256:a94d020dfedeb2f069366756e2b28fc20906fef5609df823eccae11ad59cdfa2",
+    "compatibility_path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/selection/candidate_compatibility_report.json",
+    "expected_package_manifest_path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/selection/expected_package_id_manifest.json",
+    "registry_fingerprint": "sha256:e5ff891bdcf3d02eaa028f58538e4c9c00968f8ec74e8871e65bd4160ddc34dc",
+    "registry_path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/selection/candidate_registry.json",
+    "spec_path": "specs/correlation_batches/campaign41_coefficient_free_pearson_batch_spec.json",
+    "valid": true,
+    "validation_path": "artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712/selection/coefficient_free_validation_result.json"
+  }
+}

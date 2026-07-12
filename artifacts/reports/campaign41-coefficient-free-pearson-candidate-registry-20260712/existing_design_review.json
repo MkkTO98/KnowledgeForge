@@ -1,0 +1,23 @@
+{
+  "campaigns_36_40_inspected": [
+    "specs/correlation_batches/campaign36_dnk_trade_correlation_compatibility.json",
+    "specs/correlation_batches/campaign37_swe_nor_trade_correlation_compatibility.json",
+    "specs/correlation_batches/campaign38_dnk_life_expectancy_fertility_compatibility.json",
+    "specs/correlation_batches/campaign39_heterogeneous_batch_compatibility.json",
+    "specs/correlation_batches/campaign40_first_end_to_end_spec_driven_pearson_batch.json",
+    "artifacts/reports/campaign40-spec-driven-pearson-production-20260711/selection/candidate_registry.json",
+    "artifacts/reports/campaign40-spec-driven-pearson-production-20260711/path_to_100_update.md",
+    "docs/pearson_correlation_method_v1.md",
+    "specs/release_automation/real_derivation_applicability_registry_v1.json",
+    "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/*"
+  ],
+  "design_reused": [
+    "correlation_batch_engine_v1 spec schema",
+    "Pearson v1 method contract fingerprint",
+    "Campaign 40 candidate metadata pattern",
+    "retained WDI normalized fixture/fingerprint structure",
+    "expected package ID pattern",
+    "coefficient-free frozen selection convention"
+  ],
+  "new_tooling_reason": "Existing engine validates coefficient-free specs but no reusable helper existed to enumerate retained eligible series, exclude prior relationships, freeze deterministic candidates, emit registry fingerprints, and prove coefficient-free construction without calculation."
+}

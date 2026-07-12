@@ -1,0 +1,130 @@
+{
+  "actual_secret_blockers": 0,
+  "architecture_audit": {
+    "audit_categories": [
+      "architecture_vs_implementation",
+      "state_files_vs_reality",
+      "agent_instructions_vs_behavior",
+      "logging_systems",
+      "context_management_systems",
+      "governance_processes",
+      "automation_workflows",
+      "templates_vs_generated_projects"
+    ],
+    "blocks": [],
+    "completed_tasks_since_latest_audit": 1,
+    "drift_types": [
+      "drift",
+      "obsolete_documentation",
+      "duplicated_systems",
+      "unused_systems",
+      "missing_implementation",
+      "implementation_without_documentation",
+      "documentation_without_implementation"
+    ],
+    "latest_architecture_reality_audit": "artifacts/reports/R-20260712-architecture-reality-audit.md",
+    "mode": "generated",
+    "project": "/home/mkkto/srv/EIP/projects/KnowledgeForge",
+    "report_path": "/home/mkkto/srv/EIP/projects/KnowledgeForge/artifacts/reports/R-20260712-architecture-reality-audit.md",
+    "timestamp": "2026-07-12T15:41:39+00:00",
+    "warnings": []
+  },
+  "coherence_final": {
+    "blocks": [],
+    "mode": "generated",
+    "warnings": [
+      "context health: context/active_context.md is 316.8 hours old; generated bundles are task-specific and should be regenerated when needed"
+    ]
+  },
+  "context_health_final": {
+    "blocks": [],
+    "measured": [
+      {
+        "chars": 1218,
+        "estimated_tokens": 305,
+        "limit_chars": 6000,
+        "path": "state/active_goal.md"
+      },
+      {
+        "chars": 3123,
+        "estimated_tokens": 781,
+        "limit_chars": 12000,
+        "path": "state/project_state.md"
+      },
+      {
+        "chars": 6945,
+        "estimated_tokens": 1737,
+        "limit_chars": 12000,
+        "path": "state/architecture.md"
+      },
+      {
+        "chars": 3917,
+        "estimated_tokens": 980,
+        "limit_chars": 6000,
+        "path": "state/recent_changes.md"
+      },
+      {
+        "block_chars": 9000,
+        "chars": 2393,
+        "estimated_tokens": 599,
+        "path": "context/latest_handoff.md",
+        "warn_chars": 3000
+      },
+      {
+        "block_chars": 256000,
+        "chars": 434,
+        "estimated_tokens": 109,
+        "generated_artifact": true,
+        "path": "context/active_context.md",
+        "warn_chars": 40000
+      }
+    ],
+    "policy": {
+      "active_context_block_chars": 256000,
+      "active_context_warn_chars": 40000,
+      "active_goal_chars": 6000,
+      "architecture_chars": 12000,
+      "generated_context_stale_hours": 168,
+      "handoff_block_chars": 9000,
+      "handoff_warn_chars": 3000,
+      "project_state_chars": 12000,
+      "recent_changes_chars": 6000
+    },
+    "project": "/home/mkkto/srv/EIP/projects/KnowledgeForge",
+    "warnings": [
+      "context/active_context.md is 316.8 hours old; generated bundles are task-specific and should be regenerated when needed"
+    ]
+  },
+  "full_test_suite": "293 passed in 18.74s",
+  "git_diff_check": "passed",
+  "policy_validation": {
+    "batch_composition_validation": true,
+    "campaign41_backward_compatibility_registry": true,
+    "campaign41_backward_compatibility_spec": true,
+    "campaign41_batch_spec_fingerprint": "sha256:a94d020dfedeb2f069366756e2b28fc20906fef5609df823eccae11ad59cdfa2",
+    "campaign41_registry_fingerprint": "sha256:e5ff891bdcf3d02eaa028f58538e4c9c00968f8ec74e8871e65bd4160ddc34dc",
+    "candidate_purpose_and_semantic_validation": true,
+    "candidate_purpose_distribution": {
+      "baseline_relationship_knowledge": 2,
+      "cautionary_relationship_knowledge": 2,
+      "transformation_companion_candidate": 3
+    },
+    "coefficient_free_source_and_artifact_validation": true,
+    "deterministic_dry_run_regeneration": true,
+    "dry_run_fingerprint": "sha256:6d330e347b57993ebc4456685c4b3655813e47e0725798c9285dca44fa6c3282",
+    "negative_hidden_outcome_fields_rejected": true,
+    "policy_schema_validation": true,
+    "selected_candidate_count": 7,
+    "semantic_proximity_distribution": {
+      "close": 3,
+      "moderate": 2,
+      "remote": 2
+    },
+    "time_risk_distribution": {
+      "high": 7
+    },
+    "valid": true
+  },
+  "targeted_tests": "10 passed in 0.48s",
+  "valid": true
+}

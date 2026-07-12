@@ -1,0 +1,126 @@
+{
+  "failed": [],
+  "steps": {
+    "architecture_reality_audit": {
+      "command": [
+        "python3",
+        "tools/architecture_reality_audit.py",
+        "--project",
+        "."
+      ],
+      "name": "architecture_reality_audit",
+      "returncode": 0
+    },
+    "cached_diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--cached",
+        "--check"
+      ],
+      "name": "cached_diff_check",
+      "returncode": 0
+    },
+    "campaign41_production_absence": {
+      "command": [
+        "python3",
+        "-"
+      ],
+      "name": "campaign41_production_absence",
+      "returncode": 0
+    },
+    "canonical_repository_validation": {
+      "command": [
+        "python3",
+        "-"
+      ],
+      "name": "canonical_repository_validation",
+      "returncode": 0
+    },
+    "coherence": {
+      "command": [
+        "python3",
+        "tools/check_coherence.py",
+        "--project",
+        ".",
+        "--json"
+      ],
+      "name": "coherence",
+      "returncode": 0
+    },
+    "context_health": {
+      "command": [
+        "python3",
+        "tools/context_health.py",
+        "--project",
+        ".",
+        "--json"
+      ],
+      "name": "context_health",
+      "returncode": 0
+    },
+    "existing_package_immutability": {
+      "command": [
+        "git",
+        "diff",
+        "--exit-code",
+        "--",
+        "knowledge_repository"
+      ],
+      "name": "existing_package_immutability",
+      "returncode": 0
+    },
+    "final_git_status": {
+      "command": [
+        "git",
+        "status",
+        "--short"
+      ],
+      "name": "final_git_status",
+      "returncode": 0
+    },
+    "full_test_suite": {
+      "command": [
+        "uvx",
+        "--from",
+        "pytest",
+        "pytest",
+        "tests",
+        "-q"
+      ],
+      "name": "full_test_suite",
+      "returncode": 0
+    },
+    "git_diff_check": {
+      "command": [
+        "git",
+        "diff",
+        "--check"
+      ],
+      "name": "git_diff_check",
+      "returncode": 0
+    },
+    "python_compile": {
+      "command": [
+        "python3",
+        "-m",
+        "compileall",
+        "-q",
+        "tools",
+        "tests"
+      ],
+      "name": "python_compile",
+      "returncode": 0
+    },
+    "sensitive_material_scan": {
+      "command": [
+        "python3",
+        "tools/repository_wide_durability_validator.py",
+        "--report",
+        "artifacts/reports/campaign41-doctrine-preserving-deterministic-knowledge-expansion-20260712/final-verification/sensitive-and-durability"
+      ],
+      "name": "sensitive_material_scan",
+      "returncode": 0
+    }
+  }
+}
