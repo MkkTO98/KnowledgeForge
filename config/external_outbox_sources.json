@@ -1,0 +1,22 @@
+{
+  "configuration_identity": "knowledgeforge.external_outbox_sources.v1",
+  "configuration_version": "1.0",
+  "sources": [
+    {
+      "source_identity": "macroforge-neutral-evidence-release-outbox-local-v1",
+      "root_location": "${EIP_PROJECTS_ROOT}/MacroForge/artifacts/exports/neutral-evidence-release/outbox/macroforge-wdi-trade-share-dnk-swe-nor-annual-v1",
+      "supported_contracts": [
+        {
+          "contract_identity": "macroforge.neutral_evidence_release_export.v1",
+          "contract_version": "1.0"
+        }
+      ],
+      "discovery_pattern": "**/manifest.json",
+      "enabled": true,
+      "polling_mode": "manual_once",
+      "transfer_destination": "artifacts/external-outbox-transport-v1/inbound",
+      "max_files_per_scan": 20,
+      "max_bytes_per_scan": 1000000
+    }
+  ]
+}

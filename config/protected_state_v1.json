@@ -1,0 +1,71 @@
+{
+  "contract_version": "knowledgeforge.protected_state.v1",
+  "description": "Declarative protected operational state for KnowledgeForge checkpoint/restore durability gate. Canonical packages remain excluded because ordinary Git is their durability destination; PostgreSQL remains a rebuildable operational projection.",
+  "protected_paths": [
+    {
+      "path": "artifacts/release-inbox-v1",
+      "class": "seen_release_registry_and_accepted_sources",
+      "required": false
+    },
+    {
+      "path": "artifacts/release-inbox-unified-v1",
+      "class": "seen_release_registry_and_current_state",
+      "required": false
+    },
+    {
+      "path": "artifacts/release-inbox-macroforge-real-handoff-v1",
+      "class": "accepted_source_copies",
+      "required": false
+    },
+    {
+      "path": "artifacts/release-inbox-v1-failure-resume-scenario",
+      "class": "failure_resume_operational_state_evidence",
+      "required": false
+    },
+    {
+      "path": "artifacts/external-outbox-transport-v1",
+      "class": "outbox_transport_state",
+      "required": false
+    },
+    {
+      "path": "artifacts/external-outbox-failure-recovery-v1",
+      "class": "outbox_transport_failure_recovery_state",
+      "required": false
+    },
+    {
+      "path": "artifacts/external-release-handoffs",
+      "class": "accepted_external_release_handoff_copies",
+      "required": false
+    }
+  ],
+  "sensitive_exclusions": {
+    "path_globs": [
+      ".env",
+      "**/.env",
+      "workspace_config.yaml",
+      "**/credentials/**",
+      "**/*credential*",
+      "**/*secret*",
+      "**/*private*key*"
+    ],
+    "content_regexes": [
+      "-----BEGIN [A-Z ]*PRIVATE KEY-----",
+      "postgres(?:ql)?://[^\\s'\\\"]+"
+    ]
+  },
+  "postgresql_operational_recovery": {
+    "mode": "reconstruction_evidence",
+    "projection_tool": "tools/postgresql_operational_projection.py",
+    "projection_config_example": "docs/postgresql_projection_config.example",
+    "canonical_source": "knowledge_repository",
+    "production_database_write_allowed": false,
+    "backup_dump_destination_configured": false,
+    "machine_loss_durable": false
+  },
+  "durability_destination": {
+    "type": "same_host_local_checkpoint",
+    "tested_local_only": true,
+    "machine_loss_durable": false,
+    "external_destination_configured": false
+  }
+}
