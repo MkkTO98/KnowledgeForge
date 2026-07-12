@@ -1,0 +1,53 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 42 first-difference Pearson companion production",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:f0800b4e359c17bd51ab586f3a5a236b13b56197a18a0348ab12d0a188195d5b",
+    "evidence_references": "sha256:c846f4f2c3386c18661378c11340e6ac353f95d9a570ca0c36201e4a1c47cb02",
+    "generated_statements": "sha256:7eff838030ababfd607cf425b6ce258b7f85ceaa365eeae8a4a1109a00443de8",
+    "input_set": "sha256:176edab36c3e8d5e244382be87eef1c6325182653092029dbc967de0e37af117",
+    "package_manifest": "sha256:0b09ca3e2c290c98be2096bd9b6420ecf78a67c92538bfe1e30bc696909ff16d",
+    "query_definitions": "sha256:90e0d5d5a3e932384a261df456d5bbf678b99aa650b3f6d9a1804da3ec940a0e"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 40",
+    "source_campaign": "Campaign 42",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:5208de18a28b83fc45fb5a2e1d90e08b4b36d27437d8f46af75effb120d7cfdc"
+    ],
+    "evidence_refs": [
+      "ev-campaign42-fd-pearson-companion-06"
+    ],
+    "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1 from Campaign 40 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

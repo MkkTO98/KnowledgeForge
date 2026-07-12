@@ -1,0 +1,53 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 42 first-difference Pearson companion production",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:e9ed1b1c67aade59e719bbef899f5d77a0fd1506898d9b99ae0210e28a3037d1",
+    "evidence_references": "sha256:306054166bbc3841b092b2a0312bbb76538fe8491986e7a9bf3841e54cb97b22",
+    "generated_statements": "sha256:b170c663e14705c1b60878464d8a3d425ed0c4617e6e1c09e639d8b101fbfa15",
+    "input_set": "sha256:bb4a77847fed9ccafc7ac0e4feacd4b86a5fb32281283eb952d8ac718471309d",
+    "package_manifest": "sha256:de392b810557a68a948a37b61b81ca6a155a5ce0af9e94c32f4b3aef78be83d8",
+    "query_definitions": "sha256:efe4cdcb782b0d729ef7e975a6e93150f4ec472ac48d3928b1d5d64425de3ca6"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 40",
+    "source_campaign": "Campaign 42",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:e67563f89beba40a333293f90def6461142d127f6bbf30e84f0730dd78646a62"
+    ],
+    "evidence_refs": [
+      "ev-campaign42-fd-pearson-companion-05"
+    ],
+    "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1 from Campaign 40 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

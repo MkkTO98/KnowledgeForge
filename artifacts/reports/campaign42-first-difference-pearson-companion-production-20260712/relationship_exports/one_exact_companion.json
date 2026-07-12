@@ -1,0 +1,374 @@
+{
+  "deterministic_content": {
+    "contract": {
+      "identity": "knowledgeforge_relationship_export_v1@1.0",
+      "name": "knowledgeforge_relationship_export_v1",
+      "version": "1.0"
+    },
+    "freshness": {
+      "logical_projection_fingerprint": "sha256:6699bcb0dcf5f439a715885c281f3c744a0c4f8ed7a6edc66a953006618b4b4e",
+      "projection_id": "sha256:e971da4bb8e65dba1580908a68b1e836001e5f5f885f615ce0a89e50662f2b54",
+      "projection_tool_version": "postgresql_operational_projection_v1",
+      "repository_fingerprint": "sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b",
+      "repository_object_count": 554
+    },
+    "package_identities": [
+      "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1"
+    ],
+    "query": {
+      "controls": {
+        "include_full_package_payload": true,
+        "include_provenance": true,
+        "limit": 100,
+        "max_result_count": 100,
+        "offset": 0,
+        "only_current_valid_projection": true,
+        "sort": "package_id"
+      },
+      "filters": {
+        "package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1"
+      },
+      "query_contract": "knowledgeforge_relationship_query_v1@1.0"
+    },
+    "query_fingerprint": "sha256:1b01927ae495970cf297b481fe51c7732cc05d98a84db25569425063c128fc05",
+    "result_count": 1,
+    "result_set_fingerprint": "sha256:00edb5c8a9607424112787f4fc7a51a663e53598e49c279d47f9007023b1b211",
+    "results": [
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+            "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "first-difference stationarity not proven",
+              "noise amplification",
+              "window and revision dependence"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1"
+            }
+          ],
+          "created_at": "2026-07-12",
+          "created_by": "campaign42_first_difference_companion_production",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-12",
+              "evaluation_status": "evaluated",
+              "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+              "evidence_ref_id": "ev-campaign42-fd-pearson-companion-01",
+              "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+              "snapshot_fingerprint": "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "Retained raw evidence for AG.LND.AGRI.ZS and AG.LND.FRST.ZS DNK transformed by Campaign 42 first-difference contract",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "retained_fixture"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 42 first-difference Pearson companion production",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:d7cd14dd280300c3d7571c23a9706ca57e2a2760581f0f674f15580156eae8ec",
+            "evidence_references": "sha256:c3995c1ea85b39e89f2c0822a72848c7a6e04e150737ebbf9f8552f717a1070f",
+            "generated_statements": "sha256:acd3c79fed9ad7735b5b102cc6b0e7bbcd87692e9eb082af8ad58e39cb7af38c",
+            "input_set": "sha256:dc00ee5c9a4ee4122ef40f999ad55c85a41fff413f874581731fa1fa3e4617ad",
+            "package_manifest": "sha256:4aeb7776f59f69fb3eec2efca2bf7c1497be75fe83327bf1214e70fe00d20c55",
+            "query_definitions": "sha256:ea8bc6ef9350b3ffda9affb1d4a71d090f44cb3ccc2403445cabf4feddb0958f"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "DNK",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+                "method_version": "1.0",
+                "period_end": 2023,
+                "period_start": 1991
+              },
+              "dependencies": [
+                "calc-campaign42-fd-pearson-companion-01",
+                "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign42-fd-pearson-companion-01"
+              ],
+              "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+              "statement_id": "stmt-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_observation_fingerprint": "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf",
+                "aligned_transformed_count": 33,
+                "answers_change_co_movement_not_level_co_movement": true,
+                "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+                "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+                "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+                "does_not_supersede_raw_package": true,
+                "entity_id": "DNK",
+                "family": "Agriculture & Rural Development",
+                "first_difference_pearson_coefficient": {
+                  "canonical": "-0.017407835395",
+                  "unit": "dimensionless"
+                },
+                "frequency": "annual",
+                "independent_recompute_coefficient": "-0.017407835395",
+                "limitations": [
+                  "First differencing does not prove stationarity.",
+                  "Correlation does not imply causation.",
+                  "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+                  "Differencing may amplify noise.",
+                  "Results remain window- and revision-dependent.",
+                  "This companion does not supersede or correct the raw Pearson package."
+                ],
+                "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+                "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+                "method_version": "1.0",
+                "missing_and_excluded_periods": {
+                  "series_a_missing_or_excluded": [],
+                  "series_b_missing_or_excluded": []
+                },
+                "package_fingerprint": "sha256:295bc27d25c3ae1a077d0e5983b160970c18a7cabe615d3a0635e7fd080e5d14",
+                "pearson_coefficient": {
+                  "canonical": "-0.017407835395",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2023,
+                  "start": 1991
+                },
+                "prior_embedded_diagnostic_reconciliation": {
+                  "aligned_count_matches": true,
+                  "coefficient_matches": true,
+                  "new_companion_coefficient": "-0.017407835395",
+                  "prior_embedded_diagnostic_present": true,
+                  "prior_embedded_first_difference_coefficient": "-0.017407835395",
+                  "transformation_semantics_matches": true
+                },
+                "raw_evidence_fixtures": {
+                  "series_a": {
+                    "identity": "AG.LND.AGRI.ZS__DNK__1990-2024",
+                    "normalized_fingerprint": "sha256:bd5f8ecbdcddeabfd572d3575f5b8d5f816f3526a9bbbce29675291fa32b6b0a",
+                    "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/AG.LND.AGRI.ZS__DNK__1990-2024/normalized_observations.json",
+                    "selection_fingerprint": "sha256:8764b9f8a237f6b2f26ee743c57388e4c3f1b3b501ac46315a59965ca390966c",
+                    "source_raw_fixture_fingerprint": "sha256:096ca90ca993a707617a7218a87fb1ff597a10951366e11edd9ad623eb93e8e9"
+                  },
+                  "series_b": {
+                    "identity": "AG.LND.FRST.ZS__DNK__1990-2024",
+                    "normalized_fingerprint": "sha256:6ca9fabae5d3d89339f82e86df39947f0997276c44044464f0b2b5d09538379c",
+                    "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/AG.LND.FRST.ZS__DNK__1990-2024/normalized_observations.json",
+                    "selection_fingerprint": "sha256:3fead4f2c1a04e34b79f133342da0edf8294a58eb2f6fe5c8fe4ca7ca2f66cdb",
+                    "source_raw_fixture_fingerprint": "sha256:1a42ca934e6c44e3be4f31097191b4011207ea26ac068a0f44da7274f44ceaf3"
+                  }
+                },
+                "raw_observation_count": {
+                  "series_a": 34,
+                  "series_b": 34
+                },
+                "raw_package_reference": {
+                  "package_fingerprint": "sha256:d1b56d4b5b64fa68390052e122b16cf88198044fd0fead7f7d176d83e943eb69",
+                  "package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+                  "source_campaign": "Campaign 40"
+                },
+                "raw_period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "raw_units": {
+                  "series_a": "% of land area",
+                  "series_b": "% of land area"
+                },
+                "series_a": {
+                  "code": "AG.LND.AGRI.ZS",
+                  "name": "Agricultural land (% of land area)",
+                  "transformation": "raw",
+                  "transformed_unit": "year-to-year percentage-point change in % of land area",
+                  "unit": "% of land area"
+                },
+                "series_b": {
+                  "code": "AG.LND.FRST.ZS",
+                  "name": "Forest area (% of land area)",
+                  "transformation": "raw",
+                  "transformed_unit": "year-to-year percentage-point change in % of land area",
+                  "unit": "% of land area"
+                },
+                "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+                "transformation_id": "wdi_annual_scalar_first_difference_v1",
+                "transformation_state": "first_difference",
+                "transformation_version": "1.0",
+                "transformed_coverage": "1.000000000000",
+                "transformed_observation_count": {
+                  "series_a": 33,
+                  "series_b": 33
+                },
+                "transformed_series_fingerprints": {
+                  "series_a": "sha256:b2727c9cedca3b6f3e1bc70c840734f3125e8c5189385a3dc4e24d76bdead432",
+                  "series_b": "sha256:7d604dd1896d6a6cc11536125d2f31f68678fe431628fbed8d9c3b4963704a05"
+                },
+                "transformed_unit_semantics": {
+                  "series_a": "year-to-year percentage-point change in % of land area",
+                  "series_b": "year-to-year percentage-point change in % of land area"
+                },
+                "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+                "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+              },
+              "text": "Across aligned annual first differences for DNK from 1991 through 2023, the Pearson correlation between annual changes in Agricultural land (% of land area) and annual changes in Forest area (% of land area) is -0.017407835395, using 33 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1 and does not supersede it."
+            }
+          ],
+          "input_references": [
+            "campaign42_first_difference_pearson_companion_production",
+            "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+            "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+            "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+            "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+            "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+            "referenced_raw_source_campaign": "Campaign 40",
+            "source_campaign": "Campaign 42",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+              "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+              "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf"
+            ],
+            "evidence_refs": [
+              "ev-campaign42-fd-pearson-companion-01"
+            ],
+            "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1 from Campaign 40 without supersession",
+            "method_refs": [
+              "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+              "wdi_annual_scalar_first_difference_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "DNK"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+            "period_scope": {
+              "end": 2023,
+              "start": 1991
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "first_difference_does_not_prove_stationarity",
+              "correlation_not_causation",
+              "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+              "does_not_supersede_raw_package"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:ee564cefd4fda3bd80218591859914ff78c7ae12f0e2c55ffbc4493a8d3c2bec",
+        "package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1",
+        "package_manifest_fingerprint": "sha256:4aeb7776f59f69fb3eec2efca2bf7c1497be75fe83327bf1214e70fe00d20c55",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "-0.017407835395",
+            "unit": "dimensionless"
+          },
+          "entity": "DNK",
+          "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": [
+            "First differencing does not prove stationarity.",
+            "Correlation does not imply causation.",
+            "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+            "Differencing may amplify noise.",
+            "Results remain window- and revision-dependent.",
+            "This companion does not supersede or correct the raw Pearson package."
+          ],
+          "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+          "method_identifier": "wdi_annual_scalar_first_difference_pearson_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2023,
+            "start": 1991
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+              "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+              "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf"
+            ],
+            "evidence_refs": [
+              "ev-campaign42-fd-pearson-companion-01"
+            ],
+            "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1 from Campaign 40 without supersession",
+            "method_refs": [
+              "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+              "wdi_annual_scalar_first_difference_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "AG.LND.AGRI.ZS",
+              "name": "Agricultural land (% of land area)",
+              "transformation": "raw",
+              "transformed_unit": "year-to-year percentage-point change in % of land area",
+              "unit": "% of land area"
+            },
+            {
+              "code": "AG.LND.FRST.ZS",
+              "name": "Forest area (% of land area)",
+              "transformation": "raw",
+              "transformed_unit": "year-to-year percentage-point change in % of land area",
+              "unit": "% of land area"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "first_difference"
+        }
+      }
+    ],
+    "stable_order": "package_id_ascending"
+  },
+  "deterministic_content_fingerprint": "sha256:43924a4cbfe11e3feb885fa79e66caa7e38ba19911b501159d06d343f4634a6b",
+  "operational_metadata": {
+    "created_at": "2026-07-12T18:30:11.591253+00:00",
+    "performance_seconds": {
+      "freshness_validation": 0.056636,
+      "payload_validation": 0.00017,
+      "query_execution": 0.028072,
+      "serialization": 0.000531
+    },
+    "query_shape": {
+      "indexed_generic_filters": 1,
+      "jsonb_payload_scans": 0
+    },
+    "sql_shape_evidence": "internal; table and schema details intentionally excluded from contract",
+    "tool": "relationship_export_v1"
+  }
+}

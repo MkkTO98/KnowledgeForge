@@ -1,0 +1,856 @@
+{
+  "deterministic_content": {
+    "contract": {
+      "identity": "knowledgeforge_relationship_export_v1@1.0",
+      "name": "knowledgeforge_relationship_export_v1",
+      "version": "1.0"
+    },
+    "freshness": {
+      "logical_projection_fingerprint": "sha256:2f0821ea5bd6ca30ed5d1e37dfa6a39663b1802b6286901fad995514eeadbd26",
+      "projection_id": "sha256:2d778b7fd63f8deb6365b7fbc88397897e8818fcd80fa62ad1cd86abbc7e5c40",
+      "projection_tool_version": "postgresql_operational_projection_v1",
+      "repository_fingerprint": "sha256:c89c25ede69ec88a12f4791dba94b6199f2927721d0028420a65a74dd6ee735c",
+      "repository_object_count": 546
+    },
+    "package_identities": [
+      "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1"
+    ],
+    "query": {
+      "controls": {
+        "include_full_package_payload": true,
+        "include_provenance": true,
+        "limit": 100,
+        "max_result_count": 100,
+        "offset": 0,
+        "only_current_valid_projection": true,
+        "sort": "package_id"
+      },
+      "filters": {
+        "entity": "NOR",
+        "package_id": [
+          "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
+          "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+          "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+          "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+          "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+          "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+          "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1",
+          "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1"
+        ]
+      },
+      "query_contract": "knowledgeforge_relationship_query_v1@1.0"
+    },
+    "query_fingerprint": "sha256:c794425949fbf85facf24e1b8cff42fc94ffbcf0ce99f34c1e6378686683e389",
+    "result_count": 3,
+    "result_set_fingerprint": "sha256:89e6d4120767ed3a717d0d88de1cec539757d7e1d7f39200fcdf3004847953f2",
+    "results": [
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-12",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:e9d481c575a3df07ae2cd845273e80eee966285fa3c52e0602884c35c6a7983d"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-12",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign41-nor_crude_birth_rate_fossil_electricity-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:e9d481c575a3df07ae2cd845273e80eee966285fa3c52e0602884c35c6a7983d",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI SP.DYN.CBRT.IN and EG.ELC.FOSL.ZS NOR annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:3b868f53e7ef78c2cda5bcbf9f162172902bd273482089aa66884225756e195b",
+            "evidence_references": "sha256:9c23ad7a4df7280586e1c18e0ce1e6ce85e23e67372d45d2df8920e3b2f7d8cb",
+            "generated_statements": "sha256:de9d9e08a962a239acfb58dba6050e5d9d10fc35b4f1a1e7630a63ca39402364",
+            "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+            "package_manifest": "sha256:34a47624a077e33e447c0efb62583da04204cccbe19e933ea38ad158b0ab3162",
+            "query_definitions": "sha256:fa9b1cb89b07a82c0b09a966f31f1c6a20d3561d8cc71aec842b21d5d4757d59"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "NOR",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign41-nor_crude_birth_rate_fossil_electricity-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign41-nor_crude_birth_rate_fossil_electricity-fixture"
+              ],
+              "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "0.971428571429",
+                "aligned_pair_count": 34,
+                "calculation_evidence_fingerprint": "sha256:299ee730326a16e84f6a0071baa797400291fdd03884dc445d251c7f173f1f62",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "not present",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "0.03778166456",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "-0.958912026892",
+                  "series_b_vs_time_index": "0.593544221201"
+                },
+                "entity_id": "NOR",
+                "family": "Demographic x Energy & Mining",
+                "fixture_fingerprint": "sha256:e9d481c575a3df07ae2cd845273e80eee966285fa3c52e0602884c35c6a7983d",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [],
+                  "series_b": [
+                    2024
+                  ]
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:b956faa186fcf38f9b5878982f8bd77ad1f9e15a93937558506476125fb84ac8",
+                "pearson_coefficient": {
+                  "canonical": "-0.416716498351",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "SP.DYN.CBRT.IN",
+                  "definition": "Crude birth rate indicates the number of live births occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+                  "frequency": "annual",
+                  "name": "Birth rate, crude (per 1,000 people)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "per 1,000 people"
+                },
+                "series_b": {
+                  "code": "EG.ELC.FOSL.ZS",
+                  "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+                  "frequency": "annual",
+                  "name": "Electricity production from oil, gas and coal sources (% of total)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "% of total"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Birth rate, crude (per 1,000 people) and Electricity production from oil, gas and coal sources (% of total) is -0.416716498351, using 34 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign41_coefficient_free_pearson_batch",
+            "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 41",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:299ee730326a16e84f6a0071baa797400291fdd03884dc445d251c7f173f1f62"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-nor_crude_birth_rate_fossil_electricity-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "NOR"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_demographic_x_energy_mining_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:f8093739ea999d16f8755f99d5d8480b7052d0559f19daba1a48f6410c55809c",
+        "package_id": "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:34a47624a077e33e447c0efb62583da04204cccbe19e933ea38ad158b0ab3162",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "-0.416716498351",
+            "unit": "dimensionless"
+          },
+          "entity": "NOR",
+          "evidence_family": "external_wdi_annual_scalar_demographic_x_energy_mining_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "0.03778166456",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "-0.958912026892",
+            "series_b_vs_time_index": "0.593544221201"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:299ee730326a16e84f6a0071baa797400291fdd03884dc445d251c7f173f1f62"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-nor_crude_birth_rate_fossil_electricity-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "SP.DYN.CBRT.IN",
+              "definition": "Crude birth rate indicates the number of live births occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+              "frequency": "annual",
+              "name": "Birth rate, crude (per 1,000 people)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "per 1,000 people"
+            },
+            {
+              "code": "EG.ELC.FOSL.ZS",
+              "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+              "frequency": "annual",
+              "name": "Electricity production from oil, gas and coal sources (% of total)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "% of total"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign41-nor-fossil-electricity-under5-mortality-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-12",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:5d622514384aa4911663141f12a5635d1169743db7b11c365317d14a72718378"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-12",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign41-nor_fossil_electricity_under5_mortality-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:5d622514384aa4911663141f12a5635d1169743db7b11c365317d14a72718378",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI EG.ELC.FOSL.ZS and SH.DYN.MORT NOR annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:d092cbcdff48645bfa473d7bb3ce68348fb048284f0d51571561d0f6c3a92de5",
+            "evidence_references": "sha256:1664f2db0a9be6a4fb860d740d632c11d06dd27fa401de98614a22bf062a0d41",
+            "generated_statements": "sha256:36778cba1d7994dc8155a6df4f6f07c88178325d7a1c4422e7fc25a303cc54cb",
+            "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+            "package_manifest": "sha256:a575cdd3c88a276f7d2dd5fef543a7db905b1f47e98aff0629c07aeb2fa9f88e",
+            "query_definitions": "sha256:2499efae268aa3a14bb294c8428b566d50c845e8468a7678269a8279cd499d6a"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "NOR",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign41-nor_fossil_electricity_under5_mortality-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign41-nor_fossil_electricity_under5_mortality-fixture"
+              ],
+              "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign41-nor-fossil-electricity-under5-mortality-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "0.971428571429",
+                "aligned_pair_count": 34,
+                "calculation_evidence_fingerprint": "sha256:d01320c6ba50b6c7d0878558de656be866ae6ac8280053701717b9fb1569af79",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "not present",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "-0.083376899169",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "0.593544221201",
+                  "series_b_vs_time_index": "-0.945052164704"
+                },
+                "entity_id": "NOR",
+                "family": "Energy & Mining x Health",
+                "fixture_fingerprint": "sha256:5d622514384aa4911663141f12a5635d1169743db7b11c365317d14a72718378",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [
+                    2024
+                  ],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:69666d40e3f34fd90c40ec557d7be06ca0262ea958c8b9112d5b097d45ba7853",
+                "pearson_coefficient": {
+                  "canonical": "-0.618717118858",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "EG.ELC.FOSL.ZS",
+                  "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+                  "frequency": "annual",
+                  "name": "Electricity production from oil, gas and coal sources (% of total)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "% of total"
+                },
+                "series_b": {
+                  "code": "SH.DYN.MORT",
+                  "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+                  "frequency": "annual",
+                  "name": "Mortality rate, under-5 (per 1,000 live births)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "per 1,000 live births"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Electricity production from oil, gas and coal sources (% of total) and Mortality rate, under-5 (per 1,000 live births) is -0.618717118858, using 34 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign41_coefficient_free_pearson_batch",
+            "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 41",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:d01320c6ba50b6c7d0878558de656be866ae6ac8280053701717b9fb1569af79"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-nor_fossil_electricity_under5_mortality-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "NOR"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_energy_mining_x_health_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:789e0bb0267e158ed1f2ee75c39894dfcc99df6a7d3acebbb509b232ab91c0d0",
+        "package_id": "pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:a575cdd3c88a276f7d2dd5fef543a7db905b1f47e98aff0629c07aeb2fa9f88e",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "-0.618717118858",
+            "unit": "dimensionless"
+          },
+          "entity": "NOR",
+          "evidence_family": "external_wdi_annual_scalar_energy_mining_x_health_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "-0.083376899169",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "0.593544221201",
+            "series_b_vs_time_index": "-0.945052164704"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:d01320c6ba50b6c7d0878558de656be866ae6ac8280053701717b9fb1569af79"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-nor_fossil_electricity_under5_mortality-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "EG.ELC.FOSL.ZS",
+              "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+              "frequency": "annual",
+              "name": "Electricity production from oil, gas and coal sources (% of total)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "% of total"
+            },
+            {
+              "code": "SH.DYN.MORT",
+              "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+              "frequency": "annual",
+              "name": "Mortality rate, under-5 (per 1,000 live births)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "per 1,000 live births"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-12",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:0d5cea031133761883532f46814b3d20f4d1fef27038398a95090f3d648eb57b"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-12",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign41-nor_nonhydro_renewable_electricity_under5_mortality-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:0d5cea031133761883532f46814b3d20f4d1fef27038398a95090f3d648eb57b",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI EG.ELC.RNWX.ZS and SH.DYN.MORT NOR annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:13df0b5814893202881254707dd5b98a95746db2b659aab3814e72ceb0d8e6e2",
+            "evidence_references": "sha256:8f0ccf71796155ac9c8048b3d4a38925b6b6a4ed2b0b853a3f11339a06045555",
+            "generated_statements": "sha256:46f86781ac21183f5fbe52c02181a0bebe9cb56978eb2bfa02d727bc470ae460",
+            "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+            "package_manifest": "sha256:79461212ae1829adc1e3cab9a0e52f51a253e476fbd40b02126cfc390caea8a5",
+            "query_definitions": "sha256:2499efae268aa3a14bb294c8428b566d50c845e8468a7678269a8279cd499d6a"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "NOR",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign41-nor_nonhydro_renewable_electricity_under5_mortality-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign41-nor_nonhydro_renewable_electricity_under5_mortality-fixture"
+              ],
+              "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "0.914285714286",
+                "aligned_pair_count": 32,
+                "calculation_evidence_fingerprint": "sha256:980255159344d681819fbe41dde33f9bb79339b9de3467061c3e640c2220a7a4",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "not present",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "0.3855860099",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "0.804092533899",
+                  "series_b_vs_time_index": "-0.950781137267"
+                },
+                "entity_id": "NOR",
+                "family": "Energy & Mining x Health",
+                "fixture_fingerprint": "sha256:0d5cea031133761883532f46814b3d20f4d1fef27038398a95090f3d648eb57b",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [
+                    2022,
+                    2023,
+                    2024
+                  ],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:4e7a91e5196367b9da2a5ef975717dfdc91ac5dada2ad6b58ba8ed830a3919f2",
+                "pearson_coefficient": {
+                  "canonical": "-0.652623909096",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "EG.ELC.RNWX.ZS",
+                  "definition": "The share of electricity production from renewable sources of total electricity production. Electricity production from renewable sources, excluding hydroelectric, includes geothermal, solar, tides, wind, biomass, and biofuels.",
+                  "frequency": "annual",
+                  "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "% of total"
+                },
+                "series_b": {
+                  "code": "SH.DYN.MORT",
+                  "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+                  "frequency": "annual",
+                  "name": "Mortality rate, under-5 (per 1,000 live births)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "per 1,000 live births"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Electricity production from renewable sources, excluding hydroelectric (% of total) and Mortality rate, under-5 (per 1,000 live births) is -0.652623909096, using 32 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign41_coefficient_free_pearson_batch",
+            "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 41",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:980255159344d681819fbe41dde33f9bb79339b9de3467061c3e640c2220a7a4"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-nor_nonhydro_renewable_electricity_under5_mortality-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "NOR"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_energy_mining_x_health_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:3a99cf7b2f567a7c130309cd2393da3a835917cfc77d38d6eb99f56404bae0d0",
+        "package_id": "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:79461212ae1829adc1e3cab9a0e52f51a253e476fbd40b02126cfc390caea8a5",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "-0.652623909096",
+            "unit": "dimensionless"
+          },
+          "entity": "NOR",
+          "evidence_family": "external_wdi_annual_scalar_energy_mining_x_health_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "0.3855860099",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "0.804092533899",
+            "series_b_vs_time_index": "-0.950781137267"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:980255159344d681819fbe41dde33f9bb79339b9de3467061c3e640c2220a7a4"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-nor_nonhydro_renewable_electricity_under5_mortality-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "EG.ELC.RNWX.ZS",
+              "definition": "The share of electricity production from renewable sources of total electricity production. Electricity production from renewable sources, excluding hydroelectric, includes geothermal, solar, tides, wind, biomass, and biofuels.",
+              "frequency": "annual",
+              "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "% of total"
+            },
+            {
+              "code": "SH.DYN.MORT",
+              "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+              "frequency": "annual",
+              "name": "Mortality rate, under-5 (per 1,000 live births)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "per 1,000 live births"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      }
+    ],
+    "stable_order": "package_id_ascending"
+  },
+  "deterministic_content_fingerprint": "sha256:f5f40407c6ab20b2dc8456529979e39e410ce3c92c58d13b9fe29f6ad6950719",
+  "operational_metadata": {
+    "created_at": "2026-07-12T14:05:10.145554+00:00",
+    "performance_seconds": {
+      "freshness_validation": 0.063284,
+      "payload_validation": 0.000361,
+      "query_execution": 0.030878,
+      "serialization": 0.001096
+    },
+    "query_shape": {
+      "indexed_generic_filters": 1,
+      "jsonb_payload_scans": 1
+    },
+    "sql_shape_evidence": "internal; table and schema details intentionally excluded from contract",
+    "tool": "relationship_export_v1"
+  }
+}

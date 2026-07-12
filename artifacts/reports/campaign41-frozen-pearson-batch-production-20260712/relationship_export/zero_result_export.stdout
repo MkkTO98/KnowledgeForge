@@ -1,0 +1,53 @@
+{
+  "deterministic_content": {
+    "contract": {
+      "identity": "knowledgeforge_relationship_export_v1@1.0",
+      "name": "knowledgeforge_relationship_export_v1",
+      "version": "1.0"
+    },
+    "freshness": {
+      "logical_projection_fingerprint": "sha256:2f0821ea5bd6ca30ed5d1e37dfa6a39663b1802b6286901fad995514eeadbd26",
+      "projection_id": "sha256:2d778b7fd63f8deb6365b7fbc88397897e8818fcd80fa62ad1cd86abbc7e5c40",
+      "projection_tool_version": "postgresql_operational_projection_v1",
+      "repository_fingerprint": "sha256:c89c25ede69ec88a12f4791dba94b6199f2927721d0028420a65a74dd6ee735c",
+      "repository_object_count": 546
+    },
+    "package_identities": [],
+    "query": {
+      "controls": {
+        "include_full_package_payload": true,
+        "include_provenance": true,
+        "limit": 100,
+        "max_result_count": 100,
+        "offset": 0,
+        "only_current_valid_projection": true,
+        "sort": "package_id"
+      },
+      "filters": {
+        "entity": "XXX"
+      },
+      "query_contract": "knowledgeforge_relationship_query_v1@1.0"
+    },
+    "query_fingerprint": "sha256:202fee9f504c2bef757ed5b83232d913b4f9fba5d8439f99ea92be5a4dbaf8bc",
+    "result_count": 0,
+    "result_set_fingerprint": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "results": [],
+    "stable_order": "package_id_ascending"
+  },
+  "deterministic_content_fingerprint": "sha256:682ddeb1c524661416a3efade097def90e614b81a3c5aeeb6205dbe3c653f2ce",
+  "operational_metadata": {
+    "created_at": "2026-07-12T14:04:43.814441+00:00",
+    "performance_seconds": {
+      "freshness_validation": 0.063041,
+      "payload_validation": 0.0,
+      "query_execution": 0.038984,
+      "serialization": 0.000298
+    },
+    "query_shape": {
+      "indexed_generic_filters": 0,
+      "jsonb_payload_scans": 1
+    },
+    "sql_shape_evidence": "internal; table and schema details intentionally excluded from contract",
+    "tool": "relationship_export_v1"
+  }
+}

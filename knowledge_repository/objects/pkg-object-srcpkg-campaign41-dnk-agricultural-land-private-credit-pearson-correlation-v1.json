@@ -1,0 +1,198 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign41-dnk-agricultural-land-private-credit-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:bf45f5731a384d80496def16afcdf6aa8fdf1e49f708f720fbad63a12a057827"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign41-dnk_agricultural_land_private_credit-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:bf45f5731a384d80496def16afcdf6aa8fdf1e49f708f720fbad63a12a057827",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI AG.LND.AGRI.ZS and FS.AST.PRVT.GD.ZS DNK annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:6b602f350170d7d3d28f57a9b07526c49a53d64565ce62b725aa3ce57d17c306",
+    "evidence_references": "sha256:eb6e0c1e5106a7cf8e036a291e0e7e1cc75b6edca0e7e730e203fc236fe040af",
+    "generated_statements": "sha256:9e2214d43e1fb235f3ff6ad67621132d9baf7f146826139b1bfd69ffb0434bb2",
+    "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+    "package_manifest": "sha256:1d6577ec481d8c118fb18b7188a5c7748b8d025d63ca7dfe3f216547e42fbd52",
+    "query_definitions": "sha256:98bfe608a968bad65ea43de824a07810d09d0ea491ca7fc16cbd767fe0a7ac0d"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "DNK",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign41-dnk_agricultural_land_private_credit-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign41-dnk_agricultural_land_private_credit-fixture"
+      ],
+      "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign41-dnk-agricultural-land-private-credit-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "0.971428571429",
+        "aligned_pair_count": 34,
+        "calculation_evidence_fingerprint": "sha256:b2135eb70a0d6ff12dc580ff5b4c02159a5055f15bf5a94c8e549479a5f68092",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "not present",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "not present",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "0.058190335423",
+          "promoted_as_knowledge_object": false,
+          "series_a_vs_time_index": "-0.828711001501",
+          "series_b_vs_time_index": "0.777005621284"
+        },
+        "entity_id": "DNK",
+        "family": "Agriculture & Rural Development x Financial Sector",
+        "fixture_fingerprint": "sha256:bf45f5731a384d80496def16afcdf6aa8fdf1e49f708f720fbad63a12a057827",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [
+            2024
+          ],
+          "series_b": []
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:7962d29f1773e1c0af4071e6df70ca938680ab92859f5d3cfbf55ac4264c1ec3",
+        "pearson_coefficient": {
+          "canonical": "-0.667417505516",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "AG.LND.AGRI.ZS",
+          "definition": "Agricultural land refers to the share of land area that is arable, under permanent crops, and under permanent pastures. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded. Land under permanent crops is land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber. This category includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber. Permanent pasture is land used for five or more years for forage, including natural and cultivated crops.",
+          "frequency": "annual",
+          "name": "Agricultural land (% of land area)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "% of land area"
+        },
+        "series_b": {
+          "code": "FS.AST.PRVT.GD.ZS",
+          "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+          "frequency": "annual",
+          "name": "Domestic credit to private sector (% of GDP)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "percent of GDP"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual DNK observations from 1990 through 2024, the Pearson correlation between Agricultural land (% of land area) and Domestic credit to private sector (% of GDP) is -0.667417505516, using 34 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign41_coefficient_free_pearson_batch",
+    "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 41",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+      "sha256:b2135eb70a0d6ff12dc580ff5b4c02159a5055f15bf5a94c8e549479a5f68092"
+    ],
+    "evidence_refs": [
+      "ev-campaign41-dnk_agricultural_land_private_credit-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "DNK"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development_x_financial_sector_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

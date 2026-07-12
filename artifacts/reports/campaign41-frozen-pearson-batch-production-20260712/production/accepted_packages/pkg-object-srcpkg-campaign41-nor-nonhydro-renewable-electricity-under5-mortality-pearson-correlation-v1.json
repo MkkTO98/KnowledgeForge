@@ -1,0 +1,200 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:0d5cea031133761883532f46814b3d20f4d1fef27038398a95090f3d648eb57b"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign41-nor_nonhydro_renewable_electricity_under5_mortality-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:0d5cea031133761883532f46814b3d20f4d1fef27038398a95090f3d648eb57b",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI EG.ELC.RNWX.ZS and SH.DYN.MORT NOR annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:13df0b5814893202881254707dd5b98a95746db2b659aab3814e72ceb0d8e6e2",
+    "evidence_references": "sha256:8f0ccf71796155ac9c8048b3d4a38925b6b6a4ed2b0b853a3f11339a06045555",
+    "generated_statements": "sha256:46f86781ac21183f5fbe52c02181a0bebe9cb56978eb2bfa02d727bc470ae460",
+    "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+    "package_manifest": "sha256:79461212ae1829adc1e3cab9a0e52f51a253e476fbd40b02126cfc390caea8a5",
+    "query_definitions": "sha256:2499efae268aa3a14bb294c8428b566d50c845e8468a7678269a8279cd499d6a"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "NOR",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign41-nor_nonhydro_renewable_electricity_under5_mortality-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign41-nor_nonhydro_renewable_electricity_under5_mortality-fixture"
+      ],
+      "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "0.914285714286",
+        "aligned_pair_count": 32,
+        "calculation_evidence_fingerprint": "sha256:980255159344d681819fbe41dde33f9bb79339b9de3467061c3e640c2220a7a4",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "not present",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "not present",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "0.3855860099",
+          "promoted_as_knowledge_object": false,
+          "series_a_vs_time_index": "0.804092533899",
+          "series_b_vs_time_index": "-0.950781137267"
+        },
+        "entity_id": "NOR",
+        "family": "Energy & Mining x Health",
+        "fixture_fingerprint": "sha256:0d5cea031133761883532f46814b3d20f4d1fef27038398a95090f3d648eb57b",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [
+            2022,
+            2023,
+            2024
+          ],
+          "series_b": []
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:4e7a91e5196367b9da2a5ef975717dfdc91ac5dada2ad6b58ba8ed830a3919f2",
+        "pearson_coefficient": {
+          "canonical": "-0.652623909096",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "EG.ELC.RNWX.ZS",
+          "definition": "The share of electricity production from renewable sources of total electricity production. Electricity production from renewable sources, excluding hydroelectric, includes geothermal, solar, tides, wind, biomass, and biofuels.",
+          "frequency": "annual",
+          "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "% of total"
+        },
+        "series_b": {
+          "code": "SH.DYN.MORT",
+          "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+          "frequency": "annual",
+          "name": "Mortality rate, under-5 (per 1,000 live births)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "per 1,000 live births"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Electricity production from renewable sources, excluding hydroelectric (% of total) and Mortality rate, under-5 (per 1,000 live births) is -0.652623909096, using 32 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign41_coefficient_free_pearson_batch",
+    "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 41",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+      "sha256:980255159344d681819fbe41dde33f9bb79339b9de3467061c3e640c2220a7a4"
+    ],
+    "evidence_refs": [
+      "ev-campaign41-nor_nonhydro_renewable_electricity_under5_mortality-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "NOR"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_energy_mining_x_health_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

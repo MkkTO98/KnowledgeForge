@@ -1,0 +1,348 @@
+{
+  "generic_runtime_hits": [
+    {
+      "classification": "generic_runtime_code",
+      "line": 96,
+      "path": "tools/relationship_export_v1.py",
+      "text": "# Handles Campaign 36-39 object-shaped transformation_state and Campaign 40 scalar raw."
+    },
+    {
+      "classification": "generic_runtime_code",
+      "line": 238,
+      "path": "tools/repository_wide_durability_validator.py",
+      "text": "campaign40 = [p for p in packages if \"campaign40\" in p.get(\"package_id\", \"\")]"
+    },
+    {
+      "classification": "generic_runtime_code",
+      "line": 239,
+      "path": "tools/repository_wide_durability_validator.py",
+      "text": "return {\"all_packages\": len(packages), \"pearson_objects\": len(pearson), \"statistical_summary_objects\": len(stat), \"campaign40_packages\": len(campaign40), \"pearson_package_ids\": [p.get(\"package_id\") for p in pearson], \"st"
+    },
+    {
+      "classification": "generic_runtime_code",
+      "line": 299,
+      "path": "tools/repository_wide_durability_validator.py",
+      "text": "\"campaign40_six_packages\": {\"recoverable_from_remote\": counts[\"campaign40_packages\"] == 6 and all(any(r[\"path\"] == p[\"__path\"] and r[\"remote_tracked\"] for r in inv[\"files\"]) for p in load_packages()[1] if p.get(\"package_"
+    },
+    {
+      "classification": "generic_runtime_code",
+      "line": 449,
+      "path": "tools/repository_wide_durability_validator.py",
+      "text": "(\"07-specification-driven-batch-engine-campaign40\", [\"tools/correlation_batch_engine.py\", \"tests/test_correlation_batch_engine.py\", \"artifacts/reports/campaign40\", \"specs/\"]),"
+    }
+  ],
+  "hits": [
+    {
+      "classification": "generic_runtime_code",
+      "line": 96,
+      "path": "tools/relationship_export_v1.py",
+      "text": "# Handles Campaign 36-39 object-shaped transformation_state and Campaign 40 scalar raw."
+    },
+    {
+      "classification": "generic_runtime_code",
+      "line": 238,
+      "path": "tools/repository_wide_durability_validator.py",
+      "text": "campaign40 = [p for p in packages if \"campaign40\" in p.get(\"package_id\", \"\")]"
+    },
+    {
+      "classification": "generic_runtime_code",
+      "line": 239,
+      "path": "tools/repository_wide_durability_validator.py",
+      "text": "return {\"all_packages\": len(packages), \"pearson_objects\": len(pearson), \"statistical_summary_objects\": len(stat), \"campaign40_packages\": len(campaign40), \"pearson_package_ids\": [p.get(\"package_id\") for p in pearson], \"st"
+    },
+    {
+      "classification": "generic_runtime_code",
+      "line": 299,
+      "path": "tools/repository_wide_durability_validator.py",
+      "text": "\"campaign40_six_packages\": {\"recoverable_from_remote\": counts[\"campaign40_packages\"] == 6 and all(any(r[\"path\"] == p[\"__path\"] and r[\"remote_tracked\"] for r in inv[\"files\"]) for p in load_packages()[1] if p.get(\"package_"
+    },
+    {
+      "classification": "generic_runtime_code",
+      "line": 449,
+      "path": "tools/repository_wide_durability_validator.py",
+      "text": "(\"07-specification-driven-batch-engine-campaign40\", [\"tools/correlation_batch_engine.py\", \"tests/test_correlation_batch_engine.py\", \"artifacts/reports/campaign40\", \"specs/\"]),"
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 23,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "DEFAULT_FIXTURE_ROOT = Path(\"artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https\")"
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 24,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "DEFAULT_REPORT_ROOT = Path(\"artifacts/reports/campaign41-coefficient-free-pearson-candidate-registry-20260712\")"
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 25,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "DEFAULT_SPEC_PATH = Path(\"specs/correlation_batches/campaign41_coefficient_free_pearson_batch_spec.json\")"
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 59,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "(\"DNK\", \"AG.LND.AGRI.ZS\", \"AG.LND.FRST.ZS\"): \"campaign40 canonicalized agriculture/agricultural-forest land relationship\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 60,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "(\"DNK\", \"FM.LBL.BMNY.GD.ZS\", \"FS.AST.PRVT.GD.ZS\"): \"campaign40 canonicalized finance credit/broad money relationship\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 62,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "(\"NOR\", \"EG.ELC.FOSL.ZS\", \"EG.ELC.RNWX.ZS\"): \"campaign40 canonicalized fossil/nonhydro renewables relationship\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 63,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "(\"NOR\", \"SE.PRM.ENRR\", \"SE.SEC.ENRR\"): \"campaign40 frozen/rejected primary/secondary enrollment relationship\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 64,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "(\"NOR\", \"SH.DYN.MORT\", \"SP.DYN.LE00.IN\"): \"campaign40 canonicalized health life-expectancy/under-5 mortality relationship\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 65,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "(\"NOR\", \"SP.DYN.CBRT.IN\", \"SP.DYN.CDRT.IN\"): \"campaign40 canonicalized birth/death rates relationship\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 67,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "(\"SWE\", \"FB.ATM.TOTL.P5\", \"FS.AST.PRVT.GD.ZS\"): \"campaign40 frozen/rejected ATM/private credit relationship\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 68,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "(\"SWE\", \"IT.CEL.SETS.P2\", \"IT.NET.USER.ZS\"): \"campaign40 canonicalized internet/mobile relationship\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 219,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "return f\"pkg-object-srcpkg-campaign41-{entity.lower()}-{SLUGS[a.code]}-{SLUGS[b.code]}-pearson-correlation-v1\""
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 555,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"pool_rule\": \"retained validated Campaign 40 WDI annual-scalar individual-series fixtures only\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 571,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"registry_id\": \"campaign41_coefficient_free_pearson_candidate_registry_v1\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 572,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"campaign_id\": \"campaign41_coefficient_free_pearson_batch\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 573,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"created_for_task\": \"Campaign 41 \u2014 Coefficient-Free Pearson Candidate Registry and Batch Specification\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 588,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"no_campaign41_coefficient_calculated\": True,"
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 599,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"campaign_id\": \"campaign41_coefficient_free_pearson_batch\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 608,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"campaign_id\": \"campaign41_coefficient_free_pearson_batch\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 620,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"Campaign 41 calculation\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 706,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "def detect_campaign40_engine_hardcoding() -> dict[str, Any]:"
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 711,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "if \"campaign40\" in line:"
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 715,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"campaign40_hardcoded_package_internals_found\": bool(snippets),"
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 717,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"calculation_gate_decision\": \"bounded reusable engine extension required before Campaign 41 calculation\" if snippets else \"existing engine sufficient for calculation\","
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 722,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "parser = argparse.ArgumentParser(description=\"Build/validate Campaign 41 coefficient-free Pearson candidate registry\")"
+    },
+    {
+      "classification": "campaign41_registry_helper_not_generic_runtime",
+      "line": 738,
+      "path": "tools/coefficient_free_pearson_candidate_registry.py",
+      "text": "\"engine_reuse_assessment\": detect_campaign40_engine_hardcoding(),"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 45,
+      "path": "tests/test_coefficient_free_pearson_candidate_registry.py",
+      "text": "self.assertTrue(registry[\"coefficient_free_proof\"][\"no_campaign41_coefficient_calculated\"])"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 69,
+      "path": "tests/test_coefficient_free_pearson_candidate_registry.py",
+      "text": "spec_path = Path(td) / \"campaign41.json\""
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 77,
+      "path": "tests/test_coefficient_free_pearson_candidate_registry.py",
+      "text": "assessment = self.helper.detect_campaign40_engine_hardcoding()"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 78,
+      "path": "tests/test_coefficient_free_pearson_candidate_registry.py",
+      "text": "self.assertFalse(assessment[\"campaign40_hardcoded_package_internals_found\"])"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 14,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "CAMPAIGN40_SPEC = SPEC_DIR / \"campaign40_first_end_to_end_spec_driven_pearson_batch.json\""
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 15,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "CAMPAIGN41_READY_SPEC = SPEC_DIR / \"campaign41_ready_pearson_batch_spec.json\""
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 16,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "CAMPAIGN41_ORIGINAL_SPEC = SPEC_DIR / \"campaign41_coefficient_free_pearson_batch_spec.json\""
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 34,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "def test_campaign40_exact_backward_compatibility_payloads_and_fingerprints(self):"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 39,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "fixture_dir=ROOT / \"artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https\","
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 54,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "def test_campaign41_spec_readiness_validates_without_calculating_coefficients(self):"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 61,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "def test_campaign41_original_frozen_candidate_set_preserved_in_ready_spec(self):"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 69,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "def test_deterministic_unique_ids_across_campaign41_candidates(self):"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 86,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "spec[\"package_provenance\"][\"identity_namespace\"] = \"campaign41/../../bad\""
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 104,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "spec[\"candidates\"][0][\"expected_package_id\"] = spec[\"candidates\"][0][\"expected_package_id\"].replace(\"campaign41\", \"campaign99\")"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 115,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "self.assertNotIn(\"campaign40\", source)"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 116,
+      "path": "tests/test_correlation_engine_provenance_parameterization.py",
+      "text": "self.assertNotIn(\"campaign41\", source)"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 12,
+      "path": "tests/test_correlation_batch_engine.py",
+      "text": "CAMPAIGN40_SPEC = SPEC_DIR / \"campaign40_first_end_to_end_spec_driven_pearson_batch.json\""
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 35,
+      "path": "tests/test_correlation_batch_engine.py",
+      "text": "def test_campaign40_spec_is_coefficient_free_and_fingerprinted(self):"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 91,
+      "path": "tests/test_correlation_batch_engine.py",
+      "text": "self.assertEqual(spec[\"campaign_id\"], \"campaign40_first_end_to_end_spec_driven_pearson_batch\")"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 92,
+      "path": "tests/test_correlation_batch_engine.py",
+      "text": "def test_corrected_campaign40_diagnostics_have_no_time_index_error(self):"
+    },
+    {
+      "classification": "test_or_versioned_spec_helper",
+      "line": 93,
+      "path": "tests/test_correlation_batch_engine.py",
+      "text": "package_paths = sorted((ROOT / \"knowledge_repository/objects\").glob(\"*campaign40*.json\"))"
+    }
+  ]
+}

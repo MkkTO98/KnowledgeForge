@@ -1,0 +1,198 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign41-dnk-forest-area-broad-money-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:978dd9b3e06738cad37e766f7562a8504e805c2404e834283297ef1e9eab8490"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign41-dnk_forest_area_broad_money-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:978dd9b3e06738cad37e766f7562a8504e805c2404e834283297ef1e9eab8490",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI AG.LND.FRST.ZS and FM.LBL.BMNY.GD.ZS DNK annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:89930526b1c57ec43d268b4bccb015b1b3a7113320180306d3f01a8015a1097c",
+    "evidence_references": "sha256:85936edc61f981192c30cd43902fa9b6688cac29354716925cde8b2dba4be964",
+    "generated_statements": "sha256:c3434b3723b04f29f7117962971a6d8f3296d00b74519ddc5f1e953643d9601f",
+    "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+    "package_manifest": "sha256:d8719416ec59b40ab84df2e8c6019a86070c05eadb33df16a9da15ad7410df3e",
+    "query_definitions": "sha256:98bfe608a968bad65ea43de824a07810d09d0ea491ca7fc16cbd767fe0a7ac0d"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "DNK",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign41-dnk_forest_area_broad_money-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign41-dnk_forest_area_broad_money-fixture"
+      ],
+      "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign41-dnk-forest-area-broad-money-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "0.971428571429",
+        "aligned_pair_count": 34,
+        "calculation_evidence_fingerprint": "sha256:d005da110e34f7e4d54c10717ea52c012ba044411ba4badc8cf7da38af492de0",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "not present",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "not present",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "-0.101990610667",
+          "promoted_as_knowledge_object": false,
+          "series_a_vs_time_index": "0.986386181457",
+          "series_b_vs_time_index": "0.514955242"
+        },
+        "entity_id": "DNK",
+        "family": "Agriculture & Rural Development x Financial Sector",
+        "fixture_fingerprint": "sha256:978dd9b3e06738cad37e766f7562a8504e805c2404e834283297ef1e9eab8490",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [
+            2024
+          ],
+          "series_b": []
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:4b4f804f00da85fa3d599b7b59c9bb4f3f2728cf3d9b3ee163c576644b1e21cf",
+        "pearson_coefficient": {
+          "canonical": "0.473272303276",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "AG.LND.FRST.ZS",
+          "definition": "Forest area (% of land area) is the share of total land area that is under natural or planted stands of trees of at least 5 meters in situ, whether productive or not, and excludes tree stands in agricultural production systems (for example, in fruit plantations and agroforestry systems) and trees in urban parks and gardens.",
+          "frequency": "annual",
+          "name": "Forest area (% of land area)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "% of land area"
+        },
+        "series_b": {
+          "code": "FM.LBL.BMNY.GD.ZS",
+          "definition": "Broad money is the sum of all liquid financial instruments held by money-holding sectors that are widely accepted in an economy as a medium of exchange, plus those that can be converted into a medium of exchange at short notice at, or close to, their full nominal value. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+          "frequency": "annual",
+          "name": "Broad money (% of GDP)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "percent of GDP"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual DNK observations from 1990 through 2024, the Pearson correlation between Forest area (% of land area) and Broad money (% of GDP) is 0.473272303276, using 34 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign41_coefficient_free_pearson_batch",
+    "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 41",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+      "sha256:d005da110e34f7e4d54c10717ea52c012ba044411ba4badc8cf7da38af492de0"
+    ],
+    "evidence_refs": [
+      "ev-campaign41-dnk_forest_area_broad_money-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "DNK"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development_x_financial_sector_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

@@ -1,0 +1,53 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 42 first-difference Pearson companion production",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:9b0b8089ede7bd93abf3f2f4ad1f56bd9e416a1880f84338da13b021509293e0",
+    "evidence_references": "sha256:edd77c816db0bc71c8b12eed987b01e62c5e2399575c2f7643b0041708fbf759",
+    "generated_statements": "sha256:85bfbfcfa407b1ecda403349a19ae40add7edebf7cc5f34dbbacaad97bdc0642",
+    "input_set": "sha256:b433f68f89e10af5c2e804eb5acabe65966574cc885fa3900b4eeedc8b5a156d",
+    "package_manifest": "sha256:c3a6b619dfdea2f06cf59201bb2e0e5a50e6a2365b922f0f93b3a23c91e3dce9",
+    "query_definitions": "sha256:fb4dba34683f18085fe5a6a718e1376e3ed99b9c8bbfd215541ebdd3a5ab2bce"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 40",
+    "source_campaign": "Campaign 42",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:9f73c09343f684795343cd0c3a17a2e67bfe55bf932c8bd84be521069608e44e"
+    ],
+    "evidence_refs": [
+      "ev-campaign42-fd-pearson-companion-02"
+    ],
+    "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1 from Campaign 40 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

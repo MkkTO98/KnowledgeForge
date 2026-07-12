@@ -1,0 +1,196 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign41-swe-private-credit-internet-users-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:b98bf1668ed7d22d88e0de23f07ea06cee0322e531d33b7bf718b43ceffba3fa"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign41-swe_private_credit_internet_users-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:b98bf1668ed7d22d88e0de23f07ea06cee0322e531d33b7bf718b43ceffba3fa",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI FS.AST.PRVT.GD.ZS and IT.NET.USER.ZS SWE annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:7929b7013390502cca1976c065a45e4a658ddd8f2a01daa03cfdb8088ad0de00",
+    "evidence_references": "sha256:df990665d694d4fdb604fa4614127a94d26154a714b4de978fa907e6cc6bcff5",
+    "generated_statements": "sha256:53f4fb418e1c5ea18f028122b16fd91db5c3e07f7174c4fbdedabfb19ba2933f",
+    "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+    "package_manifest": "sha256:eb010ea35b53865aa48930fcc9f151afe97bbd676316f4c8a1e0089b6bea006f",
+    "query_definitions": "sha256:731b7fbe5520b5742b9b6be695d6caea1eeaad69be5597ea6b44ce8ebf9ad969"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "SWE",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign41-swe_private_credit_internet_users-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign41-swe_private_credit_internet_users-fixture"
+      ],
+      "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign41-swe-private-credit-internet-users-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "1",
+        "aligned_pair_count": 35,
+        "calculation_evidence_fingerprint": "sha256:3ff924d4d2dff0910b983d91bf3ffe22adddbb251cf8d77d60b9c555e6e286d1",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "not present",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "not present",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "0.141137912446",
+          "promoted_as_knowledge_object": false,
+          "series_a_vs_time_index": "0.910525305233",
+          "series_b_vs_time_index": "0.890139366438"
+        },
+        "entity_id": "SWE",
+        "family": "Financial Sector x Infrastructure",
+        "fixture_fingerprint": "sha256:b98bf1668ed7d22d88e0de23f07ea06cee0322e531d33b7bf718b43ceffba3fa",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [],
+          "series_b": []
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:859d99406235a784afad50ec2275aede1a67665b114044af4f5d6d71eb9582e3",
+        "pearson_coefficient": {
+          "canonical": "0.933818372664",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "FS.AST.PRVT.GD.ZS",
+          "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+          "frequency": "annual",
+          "name": "Domestic credit to private sector (% of GDP)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "percent of GDP"
+        },
+        "series_b": {
+          "code": "IT.NET.USER.ZS",
+          "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+          "frequency": "annual",
+          "name": "Individuals using the Internet (% of population)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "% of population"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual SWE observations from 1990 through 2024, the Pearson correlation between Domestic credit to private sector (% of GDP) and Individuals using the Internet (% of population) is 0.933818372664, using 35 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign41_coefficient_free_pearson_batch",
+    "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 41",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+      "sha256:3ff924d4d2dff0910b983d91bf3ffe22adddbb251cf8d77d60b9c555e6e286d1"
+    ],
+    "evidence_refs": [
+      "ev-campaign41-swe_private_credit_internet_users-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "SWE"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_financial_sector_x_infrastructure_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

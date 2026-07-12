@@ -1,0 +1,53 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 42 first-difference Pearson companion production",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:aa71c86b29f843a15361d8cfa149a7499b5eaf58966421a2071090759d6c3f45",
+    "evidence_references": "sha256:86d9bd20854a560374ae421bd99abdb128a88e36f2ebafbf048376eb05074788",
+    "generated_statements": "sha256:6f4ad68858a915a9185af5b0e543fb2f4775c5d443f588124f9969ac59affdf1",
+    "input_set": "sha256:142b7651f1dbdac33aaabbd15911c890785c7078515ff51b1c6302371241cfbb",
+    "package_manifest": "sha256:210f01be2a171e40108602a51f76f6aec758e3ae3eb2cfbf9721ed5938c610b9",
+    "query_definitions": "sha256:90e0d5d5a3e932384a261df456d5bbf678b99aa650b3f6d9a1804da3ec940a0e"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 41",
+    "source_campaign": "Campaign 42",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:032782cfd304ceb475e3863aa26257f1941fd2ad2e77bc6a1e35d6fe823b8668"
+    ],
+    "evidence_refs": [
+      "ev-campaign42-fd-pearson-companion-08"
+    ],
+    "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1 from Campaign 41 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

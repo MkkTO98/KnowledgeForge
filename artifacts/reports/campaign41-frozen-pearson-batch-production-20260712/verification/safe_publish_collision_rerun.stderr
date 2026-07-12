@@ -1,0 +1,14 @@
+Traceback (most recent call last):
+  File "/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/correlation_batch_engine.py", line 663, in <module>
+    raise SystemExit(main())
+                     ^^^^^^
+  File "/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/correlation_batch_engine.py", line 652, in main
+    result = run_production_spec(args.spec, output_dir=args.output_dir, fixture_dir=args.fixture_dir, publish=args.publish, offline_reuse=args.offline_reuse, rebuild_postgres=args.rebuild_postgres, database=args.database)
+             ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/correlation_batch_engine.py", line 617, in run_production_spec
+    publication = atomic_publish_to_repository(accepted, PROJECT_ROOT / "knowledge_repository")
+                  ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/correlation_batch_engine.py", line 555, in atomic_publish_to_repository
+    if collisions: raise ValueError(f"package-ID collisions: {collisions}")
+                   ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+ValueError: package-ID collisions: ['pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1', 'pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1', 'pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1', 'pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1', 'pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1', 'pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1', 'pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1', 'pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1']

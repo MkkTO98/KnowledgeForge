@@ -1,0 +1,198 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:e9d481c575a3df07ae2cd845273e80eee966285fa3c52e0602884c35c6a7983d"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign41-nor_crude_birth_rate_fossil_electricity-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:e9d481c575a3df07ae2cd845273e80eee966285fa3c52e0602884c35c6a7983d",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI SP.DYN.CBRT.IN and EG.ELC.FOSL.ZS NOR annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:3b868f53e7ef78c2cda5bcbf9f162172902bd273482089aa66884225756e195b",
+    "evidence_references": "sha256:9c23ad7a4df7280586e1c18e0ce1e6ce85e23e67372d45d2df8920e3b2f7d8cb",
+    "generated_statements": "sha256:de9d9e08a962a239acfb58dba6050e5d9d10fc35b4f1a1e7630a63ca39402364",
+    "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+    "package_manifest": "sha256:34a47624a077e33e447c0efb62583da04204cccbe19e933ea38ad158b0ab3162",
+    "query_definitions": "sha256:fa9b1cb89b07a82c0b09a966f31f1c6a20d3561d8cc71aec842b21d5d4757d59"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "NOR",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign41-nor_crude_birth_rate_fossil_electricity-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign41-nor_crude_birth_rate_fossil_electricity-fixture"
+      ],
+      "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "0.971428571429",
+        "aligned_pair_count": 34,
+        "calculation_evidence_fingerprint": "sha256:299ee730326a16e84f6a0071baa797400291fdd03884dc445d251c7f173f1f62",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "not present",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "not present",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "0.03778166456",
+          "promoted_as_knowledge_object": false,
+          "series_a_vs_time_index": "-0.958912026892",
+          "series_b_vs_time_index": "0.593544221201"
+        },
+        "entity_id": "NOR",
+        "family": "Demographic x Energy & Mining",
+        "fixture_fingerprint": "sha256:e9d481c575a3df07ae2cd845273e80eee966285fa3c52e0602884c35c6a7983d",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [],
+          "series_b": [
+            2024
+          ]
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:b956faa186fcf38f9b5878982f8bd77ad1f9e15a93937558506476125fb84ac8",
+        "pearson_coefficient": {
+          "canonical": "-0.416716498351",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "SP.DYN.CBRT.IN",
+          "definition": "Crude birth rate indicates the number of live births occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+          "frequency": "annual",
+          "name": "Birth rate, crude (per 1,000 people)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "per 1,000 people"
+        },
+        "series_b": {
+          "code": "EG.ELC.FOSL.ZS",
+          "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+          "frequency": "annual",
+          "name": "Electricity production from oil, gas and coal sources (% of total)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "% of total"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Birth rate, crude (per 1,000 people) and Electricity production from oil, gas and coal sources (% of total) is -0.416716498351, using 34 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign41_coefficient_free_pearson_batch",
+    "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 41",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+      "sha256:299ee730326a16e84f6a0071baa797400291fdd03884dc445d251c7f173f1f62"
+    ],
+    "evidence_refs": [
+      "ev-campaign41-nor_crude_birth_rate_fossil_electricity-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "NOR"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_demographic_x_energy_mining_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

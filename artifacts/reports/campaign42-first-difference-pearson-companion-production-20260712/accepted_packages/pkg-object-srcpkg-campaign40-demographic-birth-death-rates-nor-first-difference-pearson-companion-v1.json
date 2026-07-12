@@ -1,0 +1,254 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic-first-difference-companion",
+    "evidence_sufficiency": "sufficient for bounded deterministic first-difference Pearson companion object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "first-difference stationarity not proven",
+      "noise amplification",
+      "window and revision dependence"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "campaign42_first_difference_companion_production",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:f49d0809e4eba7036050fa78b0ddca35e1a0f8465d78755db456ab7f08e5cb32"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "derived_first_difference_dual_series_observation_fixture",
+      "evidence_ref_id": "ev-campaign42-fd-pearson-companion-03",
+      "reproducibility_handle": "canonical raw package reference plus retained evidence fixture fingerprints, transformed-series fingerprints, and aligned-observation fingerprint",
+      "snapshot_fingerprint": "sha256:f49d0809e4eba7036050fa78b0ddca35e1a0f8465d78755db456ab7f08e5cb32",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "Retained raw evidence for SP.DYN.CBRT.IN and SP.DYN.CDRT.IN NOR transformed by Campaign 42 first-difference contract",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "retained_fixture"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 42 first-difference Pearson companion production",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:8245a4ef44fc9b6f77c0204e17137243764fcb1547590ffabf7c8deefbc327d1",
+    "evidence_references": "sha256:14cae3b7ada0ea9c32d3773964890fbd5bc3eb5f5aba5aa1b46a6d89032454b8",
+    "generated_statements": "sha256:56e2be0c9ae7b00facb8e4ea0208fb124393139800ac0c0084af1660d66bb9e7",
+    "input_set": "sha256:38731782e81ab79888d6402bf593e8406d84a116bd1bc8fa7a9d49f9f5d5a70e",
+    "package_manifest": "sha256:cbfda58034bcd6adfaba9449329f456db50ff2bcca69c50777e9832e690bd363",
+    "query_definitions": "sha256:efe4cdcb782b0d729ef7e975a6e93150f4ec472ac48d3928b1d5d64425de3ca6"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "NOR",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1991
+      },
+      "dependencies": [
+        "calc-campaign42-fd-pearson-companion-03",
+        "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign42-fd-pearson-companion-03"
+      ],
+      "origin": "computed_from_campaign42_frozen_first_difference_companion_registry",
+      "statement_id": "stmt-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_observation_fingerprint": "sha256:f49d0809e4eba7036050fa78b0ddca35e1a0f8465d78755db456ab7f08e5cb32",
+        "aligned_transformed_count": 34,
+        "answers_change_co_movement_not_level_co_movement": true,
+        "campaign42_registry_fingerprint": "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+        "campaign42_specification_fingerprint": "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+        "companion_identity": "independently reproducible first-difference companion; independently retrievable; does not supersede or mutate the raw package",
+        "does_not_supersede_raw_package": true,
+        "entity_id": "NOR",
+        "family": "Demographic",
+        "first_difference_pearson_coefficient": {
+          "canonical": "-0.289912537517",
+          "unit": "dimensionless"
+        },
+        "frequency": "annual",
+        "independent_recompute_coefficient": "-0.289912537517",
+        "limitations": [
+          "First differencing does not prove stationarity.",
+          "Correlation does not imply causation.",
+          "No significance, forecast, mechanism, lead-lag, recommendation, or investment signal is implied.",
+          "Differencing may amplify noise.",
+          "Results remain window- and revision-dependent.",
+          "This companion does not supersede or correct the raw Pearson package."
+        ],
+        "method_contract_fingerprint": "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+        "method_id": "wdi_annual_scalar_first_difference_pearson_v1",
+        "method_version": "1.0",
+        "missing_and_excluded_periods": {
+          "series_a_missing_or_excluded": [],
+          "series_b_missing_or_excluded": []
+        },
+        "package_fingerprint": "sha256:d9f8000fad2d29c130827a9316580d32b73d231459b064fd21296fd0af9d019d",
+        "pearson_coefficient": {
+          "canonical": "-0.289912537517",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1991
+        },
+        "prior_embedded_diagnostic_reconciliation": {
+          "aligned_count_matches": true,
+          "coefficient_matches": true,
+          "new_companion_coefficient": "-0.289912537517",
+          "prior_embedded_diagnostic_present": true,
+          "prior_embedded_first_difference_coefficient": "-0.289912537517",
+          "transformation_semantics_matches": true
+        },
+        "raw_evidence_fixtures": {
+          "series_a": {
+            "identity": "SP.DYN.CBRT.IN__NOR__1990-2024",
+            "normalized_fingerprint": "sha256:c88ad96127bffbabb9520129631fd769d16686edc64d92835c33e20734fc9c86",
+            "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.CBRT.IN__NOR__1990-2024/normalized_observations.json",
+            "selection_fingerprint": "sha256:9eacb153f48a31c4e20287c12ad7213e8b2ea1af303dc0bf7e386c4baf3f4624",
+            "source_raw_fixture_fingerprint": "sha256:df2c4ae734b1219e90566b2f95b57541698ccad7a143b3ee2ffcf2ba7038e7f5"
+          },
+          "series_b": {
+            "identity": "SP.DYN.CDRT.IN__NOR__1990-2024",
+            "normalized_fingerprint": "sha256:a6425c8b37eaccea0e52d85bc464cdd6be9877c80ed3e72d14353d60c39005d4",
+            "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.CDRT.IN__NOR__1990-2024/normalized_observations.json",
+            "selection_fingerprint": "sha256:e329f552411fd7783a8077634ca85be601ce2d2e983f3f0890329e3f8f60241c",
+            "source_raw_fixture_fingerprint": "sha256:985a1b249028c873eef1730209ffb1243d8079e91774d6e59e22518bf3d9d0d3"
+          }
+        },
+        "raw_observation_count": {
+          "series_a": 35,
+          "series_b": 35
+        },
+        "raw_package_reference": {
+          "package_fingerprint": "sha256:ea6c12defa33aed2395b035889350e993e66bdcc86f3429374a03bd59be0a896",
+          "package_id": "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+          "source_campaign": "Campaign 40"
+        },
+        "raw_period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "raw_units": {
+          "series_a": "per 1,000 people",
+          "series_b": "per 1,000 people"
+        },
+        "series_a": {
+          "code": "SP.DYN.CBRT.IN",
+          "name": "Birth rate, crude (per 1,000 people)",
+          "transformation": "raw",
+          "transformed_unit": "absolute year-to-year change in per 1,000 people",
+          "unit": "per 1,000 people"
+        },
+        "series_b": {
+          "code": "SP.DYN.CDRT.IN",
+          "name": "Death rate, crude (per 1,000 people)",
+          "transformation": "raw",
+          "transformed_unit": "absolute year-to-year change in per 1,000 people",
+          "unit": "per 1,000 people"
+        },
+        "transformation_contract_fingerprint": "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+        "transformation_id": "wdi_annual_scalar_first_difference_v1",
+        "transformation_state": "first_difference",
+        "transformation_version": "1.0",
+        "transformed_coverage": "1.000000000000",
+        "transformed_observation_count": {
+          "series_a": 34,
+          "series_b": 34
+        },
+        "transformed_series_fingerprints": {
+          "series_a": "sha256:44c3674c7c77167888afacae0a77b31d499bd474e28f92ca4038036db230902d",
+          "series_b": "sha256:7fcdbb4cc8acf1f7a0d4caa1fa0e54e60bf657a5197226ecae6e0cef9204b635"
+        },
+        "transformed_unit_semantics": {
+          "series_a": "absolute year-to-year change in per 1,000 people",
+          "series_b": "absolute year-to-year change in per 1,000 people"
+        },
+        "validation_judgment": "accepted_campaign42_first_difference_pearson_companion",
+        "validation_registry_fingerprint": "sha256:5954ecc7b6322efe42a0246d3023b5ab28caa05ee76d8258773391f846188657"
+      },
+      "text": "Across aligned annual first differences for NOR from 1991 through 2024, the Pearson correlation between annual changes in Birth rate, crude (per 1,000 people) and annual changes in Death rate, crude (per 1,000 people) is -0.289912537517, using 34 aligned transformed observations. This is a Campaign 42 companion to raw package pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1 and does not supersede it."
+    }
+  ],
+  "input_references": [
+    "campaign42_first_difference_pearson_companion_production",
+    "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+    "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+    "sha256:71573c15a70a0694b6bca3b3fc1c712ef7720ef7f1c30f4c50186cc7c44bbc5f",
+    "sha256:e7de3a78473ca97e0cdb427118a5d5e48b6777b51592f55e2ed50ed5d78a3ade",
+    "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 40",
+    "source_campaign": "Campaign 42",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:f49d0809e4eba7036050fa78b0ddca35e1a0f8465d78755db456ab7f08e5cb32"
+    ],
+    "evidence_refs": [
+      "ev-campaign42-fd-pearson-companion-03"
+    ],
+    "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1 from Campaign 40 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "NOR"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_first_difference_pearson_companion",
+    "period_scope": {
+      "end": 2024,
+      "start": 1991
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

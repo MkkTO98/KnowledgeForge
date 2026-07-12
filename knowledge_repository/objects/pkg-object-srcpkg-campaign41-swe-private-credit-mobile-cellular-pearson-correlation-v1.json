@@ -1,0 +1,196 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign41-swe-private-credit-mobile-cellular-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:f793af561f47ea95b24f12b0ea0fece3d8f99bdc4f18ffe109513ac44412cd66"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign41-swe_private_credit_mobile_cellular-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:f793af561f47ea95b24f12b0ea0fece3d8f99bdc4f18ffe109513ac44412cd66",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI FS.AST.PRVT.GD.ZS and IT.CEL.SETS.P2 SWE annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:ead738bbc782f9ab16f848ded7ca090f3c92990afeefc0b588414279872c9659",
+    "evidence_references": "sha256:cfd623f222d7cc488c5678815a87b117c8bdc611589ac37b0428b92b5f70d292",
+    "generated_statements": "sha256:22601b8e53738acdba22d6d72e438108db1db590ce4e285633b5fa556e1fccba",
+    "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+    "package_manifest": "sha256:523f08874e363df09f3c7d738f1cc3d1e5bcea38eddd3422b4de79f28e557500",
+    "query_definitions": "sha256:731b7fbe5520b5742b9b6be695d6caea1eeaad69be5597ea6b44ce8ebf9ad969"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "SWE",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign41-swe_private_credit_mobile_cellular-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign41-swe_private_credit_mobile_cellular-fixture"
+      ],
+      "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign41-swe-private-credit-mobile-cellular-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "1",
+        "aligned_pair_count": 35,
+        "calculation_evidence_fingerprint": "sha256:d804d7d8f514ea7725d22471a4c0947c6693535a3b705407be2cb49eb501118c",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "not present",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "not present",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "0.161115218727",
+          "promoted_as_knowledge_object": false,
+          "series_a_vs_time_index": "0.910525305233",
+          "series_b_vs_time_index": "0.935643810072"
+        },
+        "entity_id": "SWE",
+        "family": "Financial Sector x Infrastructure",
+        "fixture_fingerprint": "sha256:f793af561f47ea95b24f12b0ea0fece3d8f99bdc4f18ffe109513ac44412cd66",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [],
+          "series_b": []
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:148edc14151f053c79283af86b5a3385a566dd8426f9d3dd2ce6b7bdcde35922",
+        "pearson_coefficient": {
+          "canonical": "0.937758474347",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "FS.AST.PRVT.GD.ZS",
+          "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+          "frequency": "annual",
+          "name": "Domestic credit to private sector (% of GDP)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "percent of GDP"
+        },
+        "series_b": {
+          "code": "IT.CEL.SETS.P2",
+          "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+          "frequency": "annual",
+          "name": "Mobile cellular subscriptions (per 100 people)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "per 100 people"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual SWE observations from 1990 through 2024, the Pearson correlation between Domestic credit to private sector (% of GDP) and Mobile cellular subscriptions (per 100 people) is 0.937758474347, using 35 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign41_coefficient_free_pearson_batch",
+    "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 41",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+      "sha256:d804d7d8f514ea7725d22471a4c0947c6693535a3b705407be2cb49eb501118c"
+    ],
+    "evidence_refs": [
+      "ev-campaign41-swe_private_credit_mobile_cellular-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "SWE"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_financial_sector_x_infrastructure_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

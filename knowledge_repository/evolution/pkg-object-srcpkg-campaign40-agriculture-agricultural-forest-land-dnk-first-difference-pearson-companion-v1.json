@@ -1,0 +1,53 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 42 first-difference Pearson companion production",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:d7cd14dd280300c3d7571c23a9706ca57e2a2760581f0f674f15580156eae8ec",
+    "evidence_references": "sha256:c3995c1ea85b39e89f2c0822a72848c7a6e04e150737ebbf9f8552f717a1070f",
+    "generated_statements": "sha256:acd3c79fed9ad7735b5b102cc6b0e7bbcd87692e9eb082af8ad58e39cb7af38c",
+    "input_set": "sha256:dc00ee5c9a4ee4122ef40f999ad55c85a41fff413f874581731fa1fa3e4617ad",
+    "package_manifest": "sha256:4aeb7776f59f69fb3eec2efca2bf7c1497be75fe83327bf1214e70fe00d20c55",
+    "query_definitions": "sha256:ea8bc6ef9350b3ffda9affb1d4a71d090f44cb3ccc2403445cabf4feddb0958f"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 40",
+    "source_campaign": "Campaign 42",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:0c899b19f042d7f161fec0f8e84d0daa95c929462946bbb82099f2236ecfddbf"
+    ],
+    "evidence_refs": [
+      "ev-campaign42-fd-pearson-companion-01"
+    ],
+    "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1 from Campaign 40 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

@@ -1,0 +1,198 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign41-dnk-agricultural-land-broad-money-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-12",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:83a9e753d6717946e81b72ff12f48cb2c00f45956e4ce9e4bc4a4e362bb67bd0"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-12",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign41-dnk_agricultural_land_broad_money-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:83a9e753d6717946e81b72ff12f48cb2c00f45956e4ce9e4bc4a4e362bb67bd0",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI AG.LND.AGRI.ZS and FM.LBL.BMNY.GD.ZS DNK annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:bd2f3b42adcbad407d2f03945c8b7efc9a5b04efa419136491419ca626f8d23d",
+    "evidence_references": "sha256:9e8db202c52a1a39288616347666fd64947959277d5b87afaf09043fb55d0616",
+    "generated_statements": "sha256:ff38ad6bebb7df25d88d6358cb49609ffc9cdfc1599862150a6a7580275b4f86",
+    "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+    "package_manifest": "sha256:b74efa65ccfd9ee609916d21872c1692fac0a6bdc818f7a89a9f3393215a140a",
+    "query_definitions": "sha256:98bfe608a968bad65ea43de824a07810d09d0ea491ca7fc16cbd767fe0a7ac0d"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "DNK",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign41-dnk_agricultural_land_broad_money-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign41-dnk_agricultural_land_broad_money-fixture"
+      ],
+      "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign41-dnk-agricultural-land-broad-money-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "0.971428571429",
+        "aligned_pair_count": 34,
+        "calculation_evidence_fingerprint": "sha256:2ef5ab28b91a75dc085ac95c249503fe58605d99f85ec2284910c941325eca9f",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "not present",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "not present",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "-0.018892915467",
+          "promoted_as_knowledge_object": false,
+          "series_a_vs_time_index": "-0.828711001501",
+          "series_b_vs_time_index": "0.514955242"
+        },
+        "entity_id": "DNK",
+        "family": "Agriculture & Rural Development x Financial Sector",
+        "fixture_fingerprint": "sha256:83a9e753d6717946e81b72ff12f48cb2c00f45956e4ce9e4bc4a4e362bb67bd0",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [
+            2024
+          ],
+          "series_b": []
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:45927ad80b30f984acababea69746b53a32e6048e6fd6315cce92ea8cd2502a2",
+        "pearson_coefficient": {
+          "canonical": "-0.328261524184",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "AG.LND.AGRI.ZS",
+          "definition": "Agricultural land refers to the share of land area that is arable, under permanent crops, and under permanent pastures. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded. Land under permanent crops is land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber. This category includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber. Permanent pasture is land used for five or more years for forage, including natural and cultivated crops.",
+          "frequency": "annual",
+          "name": "Agricultural land (% of land area)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "% of land area"
+        },
+        "series_b": {
+          "code": "FM.LBL.BMNY.GD.ZS",
+          "definition": "Broad money is the sum of all liquid financial instruments held by money-holding sectors that are widely accepted in an economy as a medium of exchange, plus those that can be converted into a medium of exchange at short notice at, or close to, their full nominal value. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+          "frequency": "annual",
+          "name": "Broad money (% of GDP)",
+          "source_identity": "World Bank WDI",
+          "transformation": "raw",
+          "unit": "percent of GDP"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual DNK observations from 1990 through 2024, the Pearson correlation between Agricultural land (% of land area) and Broad money (% of GDP) is -0.328261524184, using 34 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign41_coefficient_free_pearson_batch",
+    "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 41",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+      "sha256:2ef5ab28b91a75dc085ac95c249503fe58605d99f85ec2284910c941325eca9f"
+    ],
+    "evidence_refs": [
+      "ev-campaign41-dnk_agricultural_land_broad_money-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "DNK"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development_x_financial_sector_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

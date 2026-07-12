@@ -1,0 +1,53 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 42 first-difference Pearson companion production",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:e29bc0c345cbb7f0518454ffab2d601c693b5e24f06c475951ef4fb2992b8e76",
+    "evidence_references": "sha256:fdea8927e03e78776a556b30d99bc7016d376de58103a231689e34ac885d8f84",
+    "generated_statements": "sha256:0975753b69e6ccbae8157220d351933ce1ed422c5abc1689313e898c3284444e",
+    "input_set": "sha256:7b04237c3a9f630ad09a87509a0598df00043c204515fb29c86a5e2170ac25be",
+    "package_manifest": "sha256:6ae0f4a51759ff352d9823f336f17ad769652e78ddff9b91d81ce48110fa62d1",
+    "query_definitions": "sha256:0c0646ee6a743c1f426810702fd01c4568353c2d32f2babd616fbe037e1e85c3"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "referenced_raw_package_id": "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+    "referenced_raw_source_campaign": "Campaign 40",
+    "source_campaign": "Campaign 42",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-first-difference-pearson-companion-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15",
+      "sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00",
+      "sha256:4106e2bbdae4ad49d1d45ffd9706a7ccf8befd63ddc0a3e6ad9fd13db366066b"
+    ],
+    "evidence_refs": [
+      "ev-campaign42-fd-pearson-companion-04"
+    ],
+    "lineage_basis": "Campaign 42 companion production from frozen registry/specification; references raw package pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1 from Campaign 40 without supersession",
+    "method_refs": [
+      "wdi_annual_scalar_first_difference_pearson_v1@1.0",
+      "wdi_annual_scalar_first_difference_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture_and_raw_package_reference",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "first_difference_does_not_prove_stationarity",
+      "correlation_not_causation",
+      "no_significance_forecast_mechanism_lead_lag_recommendation_or_investment_signal",
+      "does_not_supersede_raw_package"
+    ]
+  }
+}

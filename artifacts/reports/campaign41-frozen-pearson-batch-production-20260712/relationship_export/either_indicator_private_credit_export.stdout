@@ -1,0 +1,1099 @@
+{
+  "deterministic_content": {
+    "contract": {
+      "identity": "knowledgeforge_relationship_export_v1@1.0",
+      "name": "knowledgeforge_relationship_export_v1",
+      "version": "1.0"
+    },
+    "freshness": {
+      "logical_projection_fingerprint": "sha256:2f0821ea5bd6ca30ed5d1e37dfa6a39663b1802b6286901fad995514eeadbd26",
+      "projection_id": "sha256:2d778b7fd63f8deb6365b7fbc88397897e8818fcd80fa62ad1cd86abbc7e5c40",
+      "projection_tool_version": "postgresql_operational_projection_v1",
+      "repository_fingerprint": "sha256:c89c25ede69ec88a12f4791dba94b6199f2927721d0028420a65a74dd6ee735c",
+      "repository_object_count": 546
+    },
+    "package_identities": [
+      "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1"
+    ],
+    "query": {
+      "controls": {
+        "include_full_package_payload": true,
+        "include_provenance": true,
+        "limit": 100,
+        "max_result_count": 100,
+        "offset": 0,
+        "only_current_valid_projection": true,
+        "sort": "package_id"
+      },
+      "filters": {
+        "series_code_involvement": "FS.AST.PRVT.GD.ZS"
+      },
+      "query_contract": "knowledgeforge_relationship_query_v1@1.0"
+    },
+    "query_fingerprint": "sha256:c725f175dea2a748a3c00bfcc1977d6c77beb7c6dbdddaa0e12ecf1a38ae303d",
+    "result_count": 4,
+    "result_set_fingerprint": "sha256:6c051826750cf81059e53d9e61f0ea1fc0e9670e053f1112db85acf2a5268842",
+    "results": [
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign40-finance-credit-broad-money-dnk-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-11",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:ca96eb7735de5d23e5c86254c7c707c67e9bba3d4db7af210efeed5ad0f45d65"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-11",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign40-finance_credit_broad_money_dnk-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:ca96eb7735de5d23e5c86254c7c707c67e9bba3d4db7af210efeed5ad0f45d65",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI FS.AST.PRVT.GD.ZS and FM.LBL.BMNY.GD.ZS DNK annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 40 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:79a4632fee1e4e95bb12ea84b5855784e9864e5f192e4e1589468f640ae5b059",
+            "evidence_references": "sha256:f808bfe2a9e58b179cdaff968ff60c58312f44ef607124200d3b2514649bc78e",
+            "generated_statements": "sha256:dbe0d1c3510bc30c4f91ee1bc2b5c2c7fdcba3a9b8229abf75971e20b873ca3d",
+            "input_set": "sha256:9a4d01da5016083880c70eb47a01f243642f05300689be27b347901b2e421128",
+            "package_manifest": "sha256:b2f8a65f564da5ca4b46a510e1fc59b74e0c3b3c8d71ee8c470ccf6879f1327f",
+            "query_definitions": "sha256:e3ab0b3f1caa9c3f8944d07bb78540de1a0d6ef28e2e4b5bd40f29f8e7a130ba"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "DNK",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign40-finance_credit_broad_money_dnk-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign40-finance_credit_broad_money_dnk-fixture"
+              ],
+              "origin": "computed_from_campaign40_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign40-finance-credit-broad-money-dnk-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "calculation_evidence_fingerprint": "sha256:efc76c5891adfb273b9689aed813a0d414856b4596005b4ca68b8b2df09fea19",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "ordinary limitation",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "material limitation",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "-0.083567273412",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "0.757137531509",
+                  "series_b_vs_time_index": "0.521453951784"
+                },
+                "entity_id": "DNK",
+                "family": "Financial Sector",
+                "fixture_fingerprint": "sha256:ca96eb7735de5d23e5c86254c7c707c67e9bba3d4db7af210efeed5ad0f45d65",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:d3dec5a7240ac208361d309817b7414a1803294ffbb9bf3309cc7b12ca5625fe",
+                "pearson_coefficient": {
+                  "canonical": "0.316082156476",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "FS.AST.PRVT.GD.ZS",
+                  "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "frequency": "annual",
+                  "name": "Domestic credit to private sector (% of GDP)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "percent of GDP"
+                },
+                "series_b": {
+                  "code": "FM.LBL.BMNY.GD.ZS",
+                  "definition": "Broad money is the sum of all liquid financial instruments held by money-holding sectors that are widely accepted in an economy as a medium of exchange, plus those that can be converted into a medium of exchange at short notice at, or close to, their full nominal value. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "frequency": "annual",
+                  "name": "Broad money (% of GDP)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "percent of GDP"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign40_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual DNK observations from 1990 through 2024, the Pearson correlation between Domestic credit to private sector (% of GDP) and Broad money (% of GDP) is 0.316082156476, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign40_first_end_to_end_spec_driven_pearson_batch",
+            "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 40",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:efc76c5891adfb273b9689aed813a0d414856b4596005b4ca68b8b2df09fea19"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-finance_credit_broad_money_dnk-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "DNK"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_financial_sector_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "definitional_overlap",
+              "shared_denominator",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:0e58c5e0f15b3700cf816c4d1dc1381967d91c064cdda322df4ac7d6fa88e2e1",
+        "package_id": "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:b2f8a65f564da5ca4b46a510e1fc59b74e0c3b3c8d71ee8c470ccf6879f1327f",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "0.316082156476",
+            "unit": "dimensionless"
+          },
+          "entity": "DNK",
+          "evidence_family": "external_wdi_annual_scalar_financial_sector_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "-0.083567273412",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "0.757137531509",
+            "series_b_vs_time_index": "0.521453951784"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:efc76c5891adfb273b9689aed813a0d414856b4596005b4ca68b8b2df09fea19"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-finance_credit_broad_money_dnk-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "FS.AST.PRVT.GD.ZS",
+              "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "frequency": "annual",
+              "name": "Domestic credit to private sector (% of GDP)",
+              "source_identity": "World Bank WDI",
+              "unit": "percent of GDP"
+            },
+            {
+              "code": "FM.LBL.BMNY.GD.ZS",
+              "definition": "Broad money is the sum of all liquid financial instruments held by money-holding sectors that are widely accepted in an economy as a medium of exchange, plus those that can be converted into a medium of exchange at short notice at, or close to, their full nominal value. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "frequency": "annual",
+              "name": "Broad money (% of GDP)",
+              "source_identity": "World Bank WDI",
+              "unit": "percent of GDP"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign41-dnk-agricultural-land-private-credit-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-12",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:bf45f5731a384d80496def16afcdf6aa8fdf1e49f708f720fbad63a12a057827"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-12",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign41-dnk_agricultural_land_private_credit-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:bf45f5731a384d80496def16afcdf6aa8fdf1e49f708f720fbad63a12a057827",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI AG.LND.AGRI.ZS and FS.AST.PRVT.GD.ZS DNK annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:6b602f350170d7d3d28f57a9b07526c49a53d64565ce62b725aa3ce57d17c306",
+            "evidence_references": "sha256:eb6e0c1e5106a7cf8e036a291e0e7e1cc75b6edca0e7e730e203fc236fe040af",
+            "generated_statements": "sha256:9e2214d43e1fb235f3ff6ad67621132d9baf7f146826139b1bfd69ffb0434bb2",
+            "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+            "package_manifest": "sha256:1d6577ec481d8c118fb18b7188a5c7748b8d025d63ca7dfe3f216547e42fbd52",
+            "query_definitions": "sha256:98bfe608a968bad65ea43de824a07810d09d0ea491ca7fc16cbd767fe0a7ac0d"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "DNK",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign41-dnk_agricultural_land_private_credit-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign41-dnk_agricultural_land_private_credit-fixture"
+              ],
+              "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign41-dnk-agricultural-land-private-credit-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "0.971428571429",
+                "aligned_pair_count": 34,
+                "calculation_evidence_fingerprint": "sha256:b2135eb70a0d6ff12dc580ff5b4c02159a5055f15bf5a94c8e549479a5f68092",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "not present",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "0.058190335423",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "-0.828711001501",
+                  "series_b_vs_time_index": "0.777005621284"
+                },
+                "entity_id": "DNK",
+                "family": "Agriculture & Rural Development x Financial Sector",
+                "fixture_fingerprint": "sha256:bf45f5731a384d80496def16afcdf6aa8fdf1e49f708f720fbad63a12a057827",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [
+                    2024
+                  ],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:7962d29f1773e1c0af4071e6df70ca938680ab92859f5d3cfbf55ac4264c1ec3",
+                "pearson_coefficient": {
+                  "canonical": "-0.667417505516",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "AG.LND.AGRI.ZS",
+                  "definition": "Agricultural land refers to the share of land area that is arable, under permanent crops, and under permanent pastures. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded. Land under permanent crops is land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber. This category includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber. Permanent pasture is land used for five or more years for forage, including natural and cultivated crops.",
+                  "frequency": "annual",
+                  "name": "Agricultural land (% of land area)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "% of land area"
+                },
+                "series_b": {
+                  "code": "FS.AST.PRVT.GD.ZS",
+                  "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "frequency": "annual",
+                  "name": "Domestic credit to private sector (% of GDP)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "percent of GDP"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual DNK observations from 1990 through 2024, the Pearson correlation between Agricultural land (% of land area) and Domestic credit to private sector (% of GDP) is -0.667417505516, using 34 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign41_coefficient_free_pearson_batch",
+            "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 41",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:b2135eb70a0d6ff12dc580ff5b4c02159a5055f15bf5a94c8e549479a5f68092"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-dnk_agricultural_land_private_credit-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "DNK"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development_x_financial_sector_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:59554f9bc9d3e51174cbb8388ba95c73d786263f029a8a1adadf4c08fd5abc17",
+        "package_id": "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:1d6577ec481d8c118fb18b7188a5c7748b8d025d63ca7dfe3f216547e42fbd52",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "-0.667417505516",
+            "unit": "dimensionless"
+          },
+          "entity": "DNK",
+          "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development_x_financial_sector_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "0.058190335423",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "-0.828711001501",
+            "series_b_vs_time_index": "0.777005621284"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:b2135eb70a0d6ff12dc580ff5b4c02159a5055f15bf5a94c8e549479a5f68092"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-dnk_agricultural_land_private_credit-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "AG.LND.AGRI.ZS",
+              "definition": "Agricultural land refers to the share of land area that is arable, under permanent crops, and under permanent pastures. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded. Land under permanent crops is land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber. This category includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber. Permanent pasture is land used for five or more years for forage, including natural and cultivated crops.",
+              "frequency": "annual",
+              "name": "Agricultural land (% of land area)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "% of land area"
+            },
+            {
+              "code": "FS.AST.PRVT.GD.ZS",
+              "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "frequency": "annual",
+              "name": "Domestic credit to private sector (% of GDP)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "percent of GDP"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign41-swe-private-credit-internet-users-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-12",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:b98bf1668ed7d22d88e0de23f07ea06cee0322e531d33b7bf718b43ceffba3fa"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-12",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign41-swe_private_credit_internet_users-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:b98bf1668ed7d22d88e0de23f07ea06cee0322e531d33b7bf718b43ceffba3fa",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI FS.AST.PRVT.GD.ZS and IT.NET.USER.ZS SWE annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:7929b7013390502cca1976c065a45e4a658ddd8f2a01daa03cfdb8088ad0de00",
+            "evidence_references": "sha256:df990665d694d4fdb604fa4614127a94d26154a714b4de978fa907e6cc6bcff5",
+            "generated_statements": "sha256:53f4fb418e1c5ea18f028122b16fd91db5c3e07f7174c4fbdedabfb19ba2933f",
+            "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+            "package_manifest": "sha256:eb010ea35b53865aa48930fcc9f151afe97bbd676316f4c8a1e0089b6bea006f",
+            "query_definitions": "sha256:731b7fbe5520b5742b9b6be695d6caea1eeaad69be5597ea6b44ce8ebf9ad969"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "SWE",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign41-swe_private_credit_internet_users-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign41-swe_private_credit_internet_users-fixture"
+              ],
+              "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign41-swe-private-credit-internet-users-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "calculation_evidence_fingerprint": "sha256:3ff924d4d2dff0910b983d91bf3ffe22adddbb251cf8d77d60b9c555e6e286d1",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "not present",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "0.141137912446",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "0.910525305233",
+                  "series_b_vs_time_index": "0.890139366438"
+                },
+                "entity_id": "SWE",
+                "family": "Financial Sector x Infrastructure",
+                "fixture_fingerprint": "sha256:b98bf1668ed7d22d88e0de23f07ea06cee0322e531d33b7bf718b43ceffba3fa",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:859d99406235a784afad50ec2275aede1a67665b114044af4f5d6d71eb9582e3",
+                "pearson_coefficient": {
+                  "canonical": "0.933818372664",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "FS.AST.PRVT.GD.ZS",
+                  "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "frequency": "annual",
+                  "name": "Domestic credit to private sector (% of GDP)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "percent of GDP"
+                },
+                "series_b": {
+                  "code": "IT.NET.USER.ZS",
+                  "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+                  "frequency": "annual",
+                  "name": "Individuals using the Internet (% of population)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "% of population"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual SWE observations from 1990 through 2024, the Pearson correlation between Domestic credit to private sector (% of GDP) and Individuals using the Internet (% of population) is 0.933818372664, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign41_coefficient_free_pearson_batch",
+            "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 41",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:3ff924d4d2dff0910b983d91bf3ffe22adddbb251cf8d77d60b9c555e6e286d1"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-swe_private_credit_internet_users-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "SWE"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_financial_sector_x_infrastructure_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:423da964ca5be2cd5868a70819d4dfbfcfe7f8482804027177a2bd3f98bfccf2",
+        "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:eb010ea35b53865aa48930fcc9f151afe97bbd676316f4c8a1e0089b6bea006f",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "0.933818372664",
+            "unit": "dimensionless"
+          },
+          "entity": "SWE",
+          "evidence_family": "external_wdi_annual_scalar_financial_sector_x_infrastructure_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "0.141137912446",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "0.910525305233",
+            "series_b_vs_time_index": "0.890139366438"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:3ff924d4d2dff0910b983d91bf3ffe22adddbb251cf8d77d60b9c555e6e286d1"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-swe_private_credit_internet_users-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "FS.AST.PRVT.GD.ZS",
+              "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "frequency": "annual",
+              "name": "Domestic credit to private sector (% of GDP)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "percent of GDP"
+            },
+            {
+              "code": "IT.NET.USER.ZS",
+              "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+              "frequency": "annual",
+              "name": "Individuals using the Internet (% of population)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "% of population"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign41-swe-private-credit-mobile-cellular-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-12",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:f793af561f47ea95b24f12b0ea0fece3d8f99bdc4f18ffe109513ac44412cd66"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-12",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign41-swe_private_credit_mobile_cellular-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:f793af561f47ea95b24f12b0ea0fece3d8f99bdc4f18ffe109513ac44412cd66",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI FS.AST.PRVT.GD.ZS and IT.CEL.SETS.P2 SWE annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 41 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:ead738bbc782f9ab16f848ded7ca090f3c92990afeefc0b588414279872c9659",
+            "evidence_references": "sha256:cfd623f222d7cc488c5678815a87b117c8bdc611589ac37b0428b92b5f70d292",
+            "generated_statements": "sha256:22601b8e53738acdba22d6d72e438108db1db590ce4e285633b5fa556e1fccba",
+            "input_set": "sha256:9baa8aa21eafe9bce406ea6550cd4b225b109349cabfc0911bea03a554939856",
+            "package_manifest": "sha256:523f08874e363df09f3c7d738f1cc3d1e5bcea38eddd3422b4de79f28e557500",
+            "query_definitions": "sha256:731b7fbe5520b5742b9b6be695d6caea1eeaad69be5597ea6b44ce8ebf9ad969"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "SWE",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign41-swe_private_credit_mobile_cellular-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign41-swe_private_credit_mobile_cellular-fixture"
+              ],
+              "origin": "computed_from_campaign41_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign41-swe-private-credit-mobile-cellular-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "calculation_evidence_fingerprint": "sha256:d804d7d8f514ea7725d22471a4c0947c6693535a3b705407be2cb49eb501118c",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "not present",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "0.161115218727",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "0.910525305233",
+                  "series_b_vs_time_index": "0.935643810072"
+                },
+                "entity_id": "SWE",
+                "family": "Financial Sector x Infrastructure",
+                "fixture_fingerprint": "sha256:f793af561f47ea95b24f12b0ea0fece3d8f99bdc4f18ffe109513ac44412cd66",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:148edc14151f053c79283af86b5a3385a566dd8426f9d3dd2ce6b7bdcde35922",
+                "pearson_coefficient": {
+                  "canonical": "0.937758474347",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "FS.AST.PRVT.GD.ZS",
+                  "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "frequency": "annual",
+                  "name": "Domestic credit to private sector (% of GDP)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "percent of GDP"
+                },
+                "series_b": {
+                  "code": "IT.CEL.SETS.P2",
+                  "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+                  "frequency": "annual",
+                  "name": "Mobile cellular subscriptions (per 100 people)",
+                  "source_identity": "World Bank WDI",
+                  "transformation": "raw",
+                  "unit": "per 100 people"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign41_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual SWE observations from 1990 through 2024, the Pearson correlation between Domestic credit to private sector (% of GDP) and Mobile cellular subscriptions (per 100 people) is 0.937758474347, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign41_coefficient_free_pearson_batch",
+            "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 41",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:d804d7d8f514ea7725d22471a4c0947c6693535a3b705407be2cb49eb501118c"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-swe_private_credit_mobile_cellular-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "SWE"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_financial_sector_x_infrastructure_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:7107faefeb68a5bb18d198f7343605ec26b0186baf8bfcdfeee16d75db103b18",
+        "package_id": "pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:523f08874e363df09f3c7d738f1cc3d1e5bcea38eddd3422b4de79f28e557500",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "0.937758474347",
+            "unit": "dimensionless"
+          },
+          "entity": "SWE",
+          "evidence_family": "external_wdi_annual_scalar_financial_sector_x_infrastructure_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "0.161115218727",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "0.910525305233",
+            "series_b_vs_time_index": "0.935643810072"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:b1c4ea19e15b9981f8d04bb9bedc3c8f5c7656252beab1464065b010bf17db6c",
+              "sha256:d804d7d8f514ea7725d22471a4c0947c6693535a3b705407be2cb49eb501118c"
+            ],
+            "evidence_refs": [
+              "ev-campaign41-swe_private_credit_mobile_cellular-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 41 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "FS.AST.PRVT.GD.ZS",
+              "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "frequency": "annual",
+              "name": "Domestic credit to private sector (% of GDP)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "percent of GDP"
+            },
+            {
+              "code": "IT.CEL.SETS.P2",
+              "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+              "frequency": "annual",
+              "name": "Mobile cellular subscriptions (per 100 people)",
+              "source_identity": "World Bank WDI",
+              "transformation": "raw",
+              "unit": "per 100 people"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      }
+    ],
+    "stable_order": "package_id_ascending"
+  },
+  "deterministic_content_fingerprint": "sha256:aea03364de10a8e306e7fd7759b2c2d61731d25dfa0cb91e96972b391ccb6d11",
+  "operational_metadata": {
+    "created_at": "2026-07-12T14:04:42.817720+00:00",
+    "performance_seconds": {
+      "freshness_validation": 0.063325,
+      "payload_validation": 0.00048,
+      "query_execution": 0.04573,
+      "serialization": 0.001342
+    },
+    "query_shape": {
+      "indexed_generic_filters": 0,
+      "jsonb_payload_scans": 1
+    },
+    "sql_shape_evidence": "internal; table and schema details intentionally excluded from contract",
+    "tool": "relationship_export_v1"
+  }
+}
