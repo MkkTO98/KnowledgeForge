@@ -1,0 +1,69 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 35 bounded statistical-summary v2 replication",
+    "changed_inputs_methods_templates_models_validators": [
+      "wdi_annual_scalar_statistical_summary_v2"
+    ],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:62f342efea3561ad74b1c8ce426659f79e74198292628a00c5072e244faa7dcc",
+    "evidence_references": "sha256:0632b921244baa8c368949a3a7f550950327ccb09a391288c3455f457871ae0c",
+    "generated_statements": "sha256:6ee1bcc65d4c9e5a58d9940c2e2f03584bd800a2c394b1048d4bad28b306ce91",
+    "input_set": "sha256:4bd790470deca6edb4034a0053449cc58e47f028725ad79a8d8d53d56843d3d1",
+    "package_manifest": "sha256:7f001d0431aabbc788341ae841a093f9622ce049bf197fac587c70ee8a09648c",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "lineage_fingerprint": "sha256:26b6a8e76448de475e2163fd0f6e3b5ad961286acc328831f110e39361db767e",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign35-swe-exports-share-statistical-summary-v2",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign35-swe-exports-share-statistical-summary-v2",
+      "pkg-object-srcpkg-campaign35-swe-exports-share-statistical-summary-v2"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign35-swe-exports-share-statistical-summary-v2",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "calculation_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+    "computation_recipe": "wdi_annual_scalar_statistical_summary_v2@2.0",
+    "creator": "run_campaign35_wdi_nordic_exports_statistical_summary",
+    "evaluation_refs": [
+      "validation-campaign35-statistical-summary-v2"
+    ],
+    "evidence_refs": [
+      "ev-campaign35-wdi-nordic-exports-share-https-fixture"
+    ],
+    "generation_date": "2026-07-10",
+    "lineage": [
+      "raw_https_fixture",
+      "normalized_observations",
+      "statistical_summary_v2_package"
+    ],
+    "mutable_source_vintage_limitation": {
+      "exact_reproducibility_basis": "retained local raw response bytes and normalized fixture",
+      "source_identity_basis": "World Bank WDI API URL, request parameters, source id, and lastupdated metadata",
+      "vintage_limitation": "WDI API response is mutable; no true immutable historical vintage identifier was observed in the API response, so reacquiring identical bytes later is not claimed."
+    },
+    "normalized_evidence_fingerprint": "sha256:7a08f2f505a95a4a901dae2b02baead92b1069171ddccd66d640d17d488f2607",
+    "package_identity": "pkg-object-srcpkg-campaign35-swe-exports-share-statistical-summary-v2",
+    "raw_evidence_fingerprint": "sha256:1fda94bbab635a13ee82d64ec44fabe5c912335289eb523e93a14d335fab093f",
+    "reproducibility_state": "reproducible_offline",
+    "selection_fingerprint": "sha256:ef2227e67f93b1a248c7f93a0b984337043892aa0eb476fb77a4c7b5abed6aba",
+    "source_systems": [
+      "World Bank WDI retained HTTPS fixture"
+    ],
+    "validation_tool": "run_campaign35_wdi_nordic_exports_statistical_summary",
+    "wdi_lastupdated": "2026-07-01"
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture",
+  "status": "accepted-for-controlled-production",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "validator_version": "campaign35-v1",
+    "warnings": []
+  }
+}

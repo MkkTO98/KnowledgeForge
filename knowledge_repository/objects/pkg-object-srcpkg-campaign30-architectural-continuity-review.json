@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign30-architectural-continuity-review"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:eeaa29002da98d10b2340bd8392d2f4fe9be25223ef9153c61d5f00c4af38098"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign30-architectural-continuity-review",
+      "reproducibility_handle": "python3 tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py --output artifacts/production/campaign-30-wdi-trade-provenance-lineage-closeout",
+      "snapshot_fingerprint": "sha256:eeaa29002da98d10b2340bd8392d2f4fe9be25223ef9153c61d5f00c4af38098",
+      "source_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+      "source_identity": "World Bank World Development Indicators audited Trade provenance lineage snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:66dee0a3e377075bc15a60b0814663fb3d8785028654a6318f5cfce2cda85880",
+    "generated_statements": "sha256:b8eb69305b33577dd68147c58fd89c78d218daf55bd752c2bcbe6c9d0a87cf5b",
+    "input_set": "sha256:9be46f626f0fcc02e47023d9a6e2d337878b0c9a790a1b3234ca04a166af55cf",
+    "package_manifest": "sha256:a7983b41c36dfd82ef1a172c62324c63740f96e029ac8c4035aa6bfa2137e4df",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_provenance_lineage_metadata",
+        "topic": "architectural continuity review"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign30-architectural-continuity-review",
+        "eval-srcpkg-campaign30-architectural-continuity-review"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign30-architectural-continuity-review"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign30-architectural-continuity-review",
+      "statement_type": "methodological",
+      "text": "Campaign 30 architectural continuity review classifies the next-phase path as preserving the agreed architecture and identifies no refinement, duplicate concept, contradiction, or architectural drift."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign30-architectural-continuity-review"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:5537e905e141777bc2322922ce942894cdb8895d5add54fd332c90e62522cb72",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign30-architectural-continuity-review",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign30-architectural-continuity-review",
+      "pkg-object-srcpkg-campaign30-architectural-continuity-review"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign30-architectural-continuity-review",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign30-architectural-continuity-review",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign30-architectural-continuity-review"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign30-architectural-continuity-review"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign30-architectural-continuity-review",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+    "evidence_family": "external_wdi_annual_scalar_trade_provenance_lineage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-30-wdi-trade-provenance-lineage-closeout",
+      "domain": "WDI annual-scalar Trade provenance-lineage completeness and family closeout",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_trade_provenance_lineage_metadata",
+      "topic": "architectural continuity review"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

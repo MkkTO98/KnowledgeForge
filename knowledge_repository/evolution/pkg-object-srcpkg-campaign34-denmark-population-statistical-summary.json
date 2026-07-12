@@ -1,0 +1,70 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 34 bounded statistical-summary pilot",
+    "changed_inputs_methods_templates_models_validators": [
+      "wdi_denmark_population_statistical_summary_v1"
+    ],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:2c8c4d2665e34844a40468c5aeae4dacba880531cf3e7adeb190074118a28a0d",
+    "evidence_references": "sha256:a910c05fe7b5a7db08c1118947f001138f51c6a3f20945b710b36914a1017190",
+    "generated_statements": "sha256:6358e5c1c65e6711d01818c800fcdacc37e096754c3d5db27b6a45da685faf1b",
+    "input_set": "sha256:19116f94ba8b682c16a8456c27dd24ce8febc8b512ec8b1de1d87a9df9290f50",
+    "package_manifest": "sha256:833d840e69796e1a01bbcafca36b10502c682b6191419e8b3ac2d588a347a070",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "lineage_fingerprint": "sha256:b1e8a1f2fabf3f6a0911ef9a45608d3296ded095f7a5cf0a9b0ccbfadd98ea24",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign34-denmark-population-statistical-summary",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign34-denmark-population-statistical-summary",
+      "pkg-object-srcpkg-campaign34-denmark-population-statistical-summary"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign34-denmark-population-statistical-summary",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "calculation_contract_fingerprint": "sha256:31c994804e55f124778e201c5f76ea50adcce4af147dfe4c7073e21de5b7afce",
+    "computation_recipe": "wdi_denmark_population_statistical_summary_v1@1.0",
+    "corrected_normalized_evidence_fingerprint": "sha256:cce0367fc05bf8ad974a14593eec8e2d4f8fdf7fafced1976d9001c9c1eaeb93",
+    "corrected_raw_evidence_fingerprint": "sha256:034e8f4da6afdbdddf54a7a553f16483af4339f5348e0427f1706dfd9141a258",
+    "creator": "run_campaign34_wdi_denmark_population_statistical_summary",
+    "evaluation_refs": [
+      "validation-campaign34-statistical-summary"
+    ],
+    "evidence_refs": [
+      "ev-campaign34-https-corrected-wdi-observation-fixture"
+    ],
+    "generation_date": "2026-07-10",
+    "lineage": [
+      "raw_https_fixture",
+      "normalized_observations",
+      "statistical_summary_package"
+    ],
+    "mutable_source_vintage_limitation": {
+      "exact_reproducibility_basis": "retained local raw response bytes and normalized fixture",
+      "source_identity_basis": "World Bank WDI API URL, request parameters, source id, and lastupdated metadata",
+      "vintage_limitation": "WDI API response is mutable; no true immutable historical vintage identifier was observed in the API response, so reacquiring identical bytes later is not claimed."
+    },
+    "package_identity": "pkg-object-srcpkg-campaign34-denmark-population-statistical-summary",
+    "reproducibility_state": "reproducible_offline",
+    "selection_fingerprint": "sha256:16fe627795e31ec9aab2c49a6c8e0f6a3ee2d5271235c06d46dfbd55cfc038ee",
+    "source_systems": [
+      "World Bank WDI retained HTTPS fixture"
+    ],
+    "validation_tool": "run_campaign34_wdi_denmark_population_statistical_summary",
+    "wdi_lastupdated": "2026-07-01"
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture",
+  "status": "accepted-for-controlled-production",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "campaign34-v1",
+    "warnings": []
+  }
+}

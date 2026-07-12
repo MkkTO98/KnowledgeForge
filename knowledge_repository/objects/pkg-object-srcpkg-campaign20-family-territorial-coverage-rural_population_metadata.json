@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:fd1554300b1e33a34d4db4a4e10d201b741cc1aa9606546716cbfe8cfd4cf6e0"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata",
+      "reproducibility_handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "snapshot_fingerprint": "sha256:fd1554300b1e33a34d4db4a4e10d201b741cc1aa9606546716cbfe8cfd4cf6e0",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:2b55cd74d94a741f6307f78b6243717440f9dacbb31278ce869fb06996bcd9da",
+    "generated_statements": "sha256:45c1cd531fe93228ec49a171c935ad50987683f3a8a1b73d48c12ad87e52b8b4",
+    "input_set": "sha256:c02e7b2a493ba8eabe157d20a97a61ff7d5846d88cf4b1cae91b819e4d092044",
+    "package_manifest": "sha256:50533afe3729bd4eeb0cb16979029fb1f063fe68fe6839ba328546c77178f61e",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage rural_population_metadata"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata",
+        "eval-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata",
+      "statement_type": "coverage",
+      "text": "The Campaign 20 Agriculture & Rural Development territorial matrix records coverage buckets for 217 audited territories in the rural-population-metadata family."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign20-family-territorial-coverage-rural_population_metadata"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:926333cf2031696c3e288bf1650a7a3cb1a95275249938049328dfa1e81a16e2",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata",
+      "pkg-object-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign20-family-territorial-coverage-rural_population_metadata",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+    "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+      "topic": "family territorial coverage rural_population_metadata"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

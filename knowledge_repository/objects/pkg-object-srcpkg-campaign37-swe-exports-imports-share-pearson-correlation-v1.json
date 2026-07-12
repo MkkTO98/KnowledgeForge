@@ -1,0 +1,245 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation replication",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "0 missing/excluded pairs of 35 expected periods",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "mutable_source_reacquisition_limit",
+      "shared_gdp_denominator",
+      "time_ordering_autocorrelation",
+      "structural_breaks",
+      "no_significance_or_causal_claim"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign37-swe-exports-imports-share-pearson-correlation-v1"
+    }
+  ],
+  "created_at": "2026-07-10",
+  "created_by": "run_campaign37_swe_nor_exports_imports_correlation",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:700202f5aa2c70e35967fb487edcfa5b8f0f185ca2752c9b4a8a8a151231f4bf"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-10",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign37-wdi-swe-nor-exports-imports-share-dual-series-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment contract, and calculation evidence",
+      "snapshot_fingerprint": "sha256:700202f5aa2c70e35967fb487edcfa5b8f0f185ca2752c9b4a8a8a151231f4bf",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI NE.EXP.GNFS.ZS and NE.IMP.GNFS.ZS SWE annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 37 controlled entity replication",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+    "evidence_references": "sha256:f409a6db6a290b0e6a3b35f9d0f8c3d45eb32e1731704720bbe31674ab4b324b",
+    "generated_statements": "sha256:9c898c1d2d4c1b52fed4dbfb33005eac284988e8dcb74378cb748c9383ac5c23",
+    "input_set": "sha256:1f5978b3f905f9b0f55e531a8f6e6cc0c809dcf7cb0ea437c46cf5e65cb603a7",
+    "package_manifest": "sha256:bbd635777d337087d1ba5addd5ac716e0c72635c0b65c0a1914326121b871097",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "SWE",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign37-swe-pearson-correlation-v1",
+        "align-campaign37-swe-exports-imports-share"
+      ],
+      "evidence_refs": [
+        "ev-campaign37-wdi-swe-nor-exports-imports-share-dual-series-fixture"
+      ],
+      "origin": "computed_from_retained_dual_entity_dual_series_wdi_fixture",
+      "statement_id": "stmt-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "1",
+        "aligned_pair_count": 35,
+        "aligned_periods": [
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2004,
+          2005,
+          2006,
+          2007,
+          2008,
+          2009,
+          2010,
+          2011,
+          2012,
+          2013,
+          2014,
+          2015,
+          2016,
+          2017,
+          2018,
+          2019,
+          2020,
+          2021,
+          2022,
+          2023,
+          2024
+        ],
+        "calculation_evidence_fingerprint": "sha256:846fd54e7f8f6d95e65b93c2afdab0307d47ebe7e6ecf899052970a98499b307",
+        "canonical_pair_identity": "sha256:31c1f31d3d84108dd21655098988ec6bef0b6309ec98afc9120fdcec1e606b86",
+        "combined_aligned_evidence_fingerprint": "sha256:700202f5aa2c70e35967fb487edcfa5b8f0f185ca2752c9b4a8a8a151231f4bf",
+        "combined_fixture_fingerprint": "sha256:72264fb528f0452ed9570b870ae55c0dbe597e780b87c34bcf03511ad086d81f",
+        "entity_id": "SWE",
+        "entity_name": "Sweden",
+        "excluded_periods": [],
+        "frequency": "annual",
+        "limitations": {
+          "non_causality_non_prediction": "The coefficient is a deterministic contemporaneous mathematical relationship only and is not causal, not predictive, not statistical-significance, not economic-significance, not investment, not trend, and not mechanism evidence.",
+          "shared_gdp_denominator": "Both indicators use GDP as denominator; the coefficient may partly reflect shared-denominator movement.",
+          "structural_breaks": "The coefficient is scoped only to the retained 1990-2024 aligned window and may not hold across structural breaks.",
+          "time_ordering_autocorrelation": "Annual macroeconomic series can exhibit time ordering/autocorrelation; no stationarity or independence claim is made."
+        },
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "missing_pair_count": 0,
+        "mutable_source_limitation": "Retained bytes, not mutable WDI API reacquisition, provide exact historical reproducibility.",
+        "package_fingerprint": "sha256:bbd635777d337087d1ba5addd5ac716e0c72635c0b65c0a1914326121b871097",
+        "pearson_coefficient": {
+          "canonical": "0.968490740983",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "provider_metadata": {
+          "exports": {
+            "dataset": "World Development Indicators",
+            "provider": "World Bank",
+            "source": "World Development Indicators",
+            "sourceid": "2",
+            "wdi_lastupdated": "2026-07-01"
+          },
+          "imports": {
+            "dataset": "World Development Indicators",
+            "provider": "World Bank",
+            "source": "World Development Indicators",
+            "sourceid": "2",
+            "wdi_lastupdated": "2026-07-01"
+          }
+        },
+        "selection_fingerprint": "sha256:22be48410c30c085afaa09c00e6dd71b6de254314e05e5fb75b6d9212022a494",
+        "series_a": {
+          "code": "NE.EXP.GNFS.ZS",
+          "definition": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+          "name": "Exports of goods and services (% of GDP)",
+          "normalized_fingerprint": "sha256:ba38d2256d34de9704d5896f61c90b4b2d8ac91642ee5653d7589b11f3d7c306",
+          "raw_fingerprints": {
+            "metadata": "sha256:57dae5fa8dbd577b2cff50f9cfe581b3273ecdaa1125c4188164ef9a3cdddff4",
+            "observations": "sha256:2a8627127e0093a6aa0ee801aab1c447aadd35970b3cad98c896741963cd053d"
+          },
+          "unit": "percent of GDP"
+        },
+        "series_b": {
+          "code": "NE.IMP.GNFS.ZS",
+          "definition": "Imports of goods includes change in the economic ownership of goods from non-residents to\n\n\n\n\nresidents of the compiling economy, irrespective of physical movement of goods across national borders. Imports of services includes services provided by non-residents to residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+          "name": "Imports of goods and services (% of GDP)",
+          "normalized_fingerprint": "sha256:28ea7d8ea2bffb942db366b5ac9bf23847011577992942808ad92f1c0a1b62c1",
+          "raw_fingerprints": {
+            "metadata": "sha256:a6e803f45b0ecfabb89dfa448350c47e4994f543f62f46d2060362b91853eb75",
+            "observations": "sha256:41ed299171735ae0de82caeaddd0bf7e409bda55c858fb6dd94876b07768d24e"
+          },
+          "unit": "percent of GDP"
+        },
+        "transformation_state": {
+          "series_a": "raw",
+          "series_b": "raw"
+        },
+        "validation_judgment": "accepted_bounded_correlation_replication_object"
+      },
+      "text": "Across the aligned annual SWE observations from 1990 through 2024, the Pearson correlation between exports of goods and services as a percentage of GDP and imports of goods and services as a percentage of GDP is 0.968490740983, using 35 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign37_dual_entity_dual_series_wdi_https_fixture",
+    "pearson_correlation_calculation_contract_v1"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "replicates_method_from": "Campaign 36",
+    "source_campaign": "Campaign 37",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "campaign37_swe_alignment_validation",
+      "campaign37_swe_calculation_evidence",
+      "campaign37_swe_non_promoted_diagnostics"
+    ],
+    "evidence_refs": [
+      "ev-campaign37-wdi-swe-nor-exports-imports-share-dual-series-fixture"
+    ],
+    "lineage_basis": "fresh Campaign 37 HTTPS acquisition; Campaign 35 exports evidence inspected but not reused",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "SWE"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "shared GDP denominator",
+      "economic flow co-movement possible",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign23-validation-state"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:cb089d40f590042e4ac932a527058722094db8ca8b759f4dd9b8a3abab610b3e"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign23-validation-state",
+      "reproducibility_handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "snapshot_fingerprint": "sha256:cb089d40f590042e4ac932a527058722094db8ca8b759f4dd9b8a3abab610b3e",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_identity": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:b7677a98713b5b08a4b32d60360da330562f7600d597523ce1d0f4df42feefb9",
+    "generated_statements": "sha256:03e3befd852ac87f629efe8c85351e12439960d9a78846ab33362744cd7ddc5c",
+    "input_set": "sha256:ec20217e43b7727136b1f497da8fa8b174c8db2edf833275287d6cb7b31e67e3",
+    "package_manifest": "sha256:623549796a7ec40cf7b3cfecc916ce7480bc7d6fcdcc3770823508186555ccab",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "validation state"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign23-validation-state",
+        "eval-srcpkg-campaign23-validation-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign23-validation-state"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign23-validation-state",
+      "statement_type": "methodological",
+      "text": "Campaign 23 routes Health maturation packages through the existing validation pipeline without validator, taxonomy, package-model, or workflow modification."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign23-validation-state"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:89dd426f7b095fe1f4f11f68973e4846e5dd4f68f015236382e717f25d776998",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign23-validation-state",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign23-validation-state",
+      "pkg-object-srcpkg-campaign23-validation-state"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign23-validation-state",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign23-validation-state",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign23-validation-state"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign23-validation-state"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign23-validation-state",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+    "evidence_family": "external_wdi_annual_scalar_health_maturation",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_health_inventory_and_coverage_metadata",
+      "topic": "validation state"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

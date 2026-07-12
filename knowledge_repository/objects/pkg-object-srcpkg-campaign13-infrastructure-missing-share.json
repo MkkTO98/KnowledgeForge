@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign13-infrastructure-missing-share"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:29d0d055e2e7fca8430f1298d6cb93600c0671637d1a7251ca0b9e6df1871f2c"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign13-infrastructure-missing-share",
+      "reproducibility_handle": "python3 tools/run_campaign13_wdi_infrastructure_transfer.py --output artifacts/production/campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer",
+      "snapshot_fingerprint": "sha256:29d0d055e2e7fca8430f1298d6cb93600c0671637d1a7251ca0b9e6df1871f2c",
+      "source_family": "external_wdi_annual_scalar_infrastructure",
+      "source_identity": "World Bank World Development Indicators audited Infrastructure evidence snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:75c4e3e5fcd6d34abaa7835f59be81c122dc9a4e4d4968f1b0f791ecda6cefa9",
+    "generated_statements": "sha256:ceb5bb72153a30eaca575a10b9f7d13171123012b6fecfe73c5d2f89c7d72ec4",
+    "input_set": "sha256:bac010666b237cac4352c972090d3a922eaf6a19921e24662a2fdedf91b78792",
+    "package_manifest": "sha256:c6fd23852abe8c393bbd057e0a7fbeb27a8d5a1a33b7f6d3e0df7ca845c8e9d2",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer",
+        "domain": "WDI annual-scalar infrastructure evidence-quality and coverage transfer",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_evidence_quality_and_coverage",
+        "topic": "missing share"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign13-infrastructure-missing-share",
+        "eval-srcpkg-campaign13-infrastructure-missing-share"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign13-infrastructure-missing-share"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign13-infrastructure-missing-share",
+      "statement_type": "negative",
+      "text": "The Campaign 13 Infrastructure snapshot has explicit missing cell share 0.219383 within the audited evidence grid."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign13-infrastructure-missing-share"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:5379749dd9386f50ccfb549e527e50246999339acc06566abcfea29082565a7d",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign13-infrastructure-missing-share",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign13-infrastructure-missing-share",
+      "pkg-object-srcpkg-campaign13-infrastructure-missing-share"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign13-infrastructure-missing-share",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign13-infrastructure-missing-share",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign13-infrastructure-missing-share"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign13-infrastructure-missing-share"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign13-infrastructure-missing-share",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar infrastructure evidence-quality and coverage transfer",
+    "evidence_family": "external_wdi_annual_scalar_infrastructure",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-13-wdi-infrastructure-annual-scalar-evidence-quality-coverage-transfer",
+      "domain": "WDI annual-scalar infrastructure evidence-quality and coverage transfer",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_evidence_quality_and_coverage",
+      "topic": "missing share"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign32-financial_sector-not-mature"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:9c275f26fb053958c670c282186c949e99dbbc7d6af7628360e6857d42039d32"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign32-financial_sector-not-mature",
+      "reproducibility_handle": "python3 tools/run_campaign32_wdi_financial_sector_maturation.py --output artifacts/production/campaign-32-wdi-financial-sector-indicator-family-coverage-maturation",
+      "snapshot_fingerprint": "sha256:9c275f26fb053958c670c282186c949e99dbbc7d6af7628360e6857d42039d32",
+      "source_family": "external_wdi_annual_scalar_financial_sector_maturation",
+      "source_identity": "World Bank World Development Indicators audited Financial Sector maturation snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:dfb4b2c630f65d0b19e8938c04048424d76f7642f0c3fe13ed055442f2d77de5",
+    "generated_statements": "sha256:6cb8b86f2138af3f0f1c4ef7c3befd730c107be17734b9a20374f4e42b6aa126",
+    "input_set": "sha256:38edac4d68b00bb4d4d4c173dbf5ce3eb6358fcb3063e31b675099bbd9044488",
+    "package_manifest": "sha256:39fbafbe30e15da4152b8d152af7b53f5cafdd825d9c1ce0a514c7a13af3d354",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-32-wdi-financial-sector-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Financial Sector indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_financial_sector_inventory_and_coverage_metadata",
+        "topic": "Financial Sector family not Mature"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign32-financial_sector-not-mature",
+        "eval-srcpkg-campaign32-financial_sector-not-mature"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign32-financial_sector-not-mature"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign32-financial_sector-not-mature",
+      "statement_type": "negative",
+      "text": "The Campaign 32 Financial Sector maturity assessment does not classify the WDI Financial Sector production family as Mature because dedicated Financial Sector provenance-lineage completeness has not yet been executed."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign32-financial_sector-not-mature"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:ad954b8eb9bd61b7638d7e3da43f4e2b49441e09d580172f6b4846d49f60fc21",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign32-financial_sector-not-mature",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign32-financial_sector-not-mature",
+      "pkg-object-srcpkg-campaign32-financial_sector-not-mature"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign32-financial_sector-not-mature",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign32-financial_sector-not-mature",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign32-financial_sector-not-mature"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign32-financial_sector-not-mature"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign32-financial_sector-not-mature",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Financial Sector indicator-family inventory and coverage matrix maturation",
+    "evidence_family": "external_wdi_annual_scalar_financial_sector_maturation",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-32-wdi-financial-sector-indicator-family-coverage-maturation",
+      "domain": "WDI annual-scalar Financial Sector indicator-family inventory and coverage matrix maturation",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_financial_sector_inventory_and_coverage_metadata",
+      "topic": "Financial Sector family not Mature"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

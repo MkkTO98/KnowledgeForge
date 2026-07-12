@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign24-quality-control-state"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:fe6aef1cf3b1f8bf56253e6529db4b5e393d3e0f2d6ea5f1105274c0ae9ae58c"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign24-quality-control-state",
+      "reproducibility_handle": "python3 tools/run_campaign24_wdi_health_provenance_lineage_closeout.py --output artifacts/production/campaign-24-wdi-health-provenance-lineage-closeout",
+      "snapshot_fingerprint": "sha256:fe6aef1cf3b1f8bf56253e6529db4b5e393d3e0f2d6ea5f1105274c0ae9ae58c",
+      "source_family": "external_wdi_annual_scalar_health_provenance_lineage",
+      "source_identity": "World Bank World Development Indicators audited Health provenance lineage snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:c4419b96e3ba0ab71f6b66d44e4619b59beb9182b6899447ce097f738dad5ef4",
+    "generated_statements": "sha256:c95e82bd5f85cb70118e224b01d2e1db9f79705bda74d6eeeca1d68495a4cf71",
+    "input_set": "sha256:0074212bd3736b1d0d04db2d371d59b4cd613fb68d5e5ff3e6700e155bb5ae7b",
+    "package_manifest": "sha256:b8a124b3ecc765678d969f13c189dd070ce1fb022d2d3aab9fa27ac50d0ee4e8",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-24-wdi-health-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Health provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_provenance_lineage_metadata",
+        "topic": "quality control state"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign24-quality-control-state",
+        "eval-srcpkg-campaign24-quality-control-state"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign24-quality-control-state"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign24-quality-control-state",
+      "statement_type": "evidence_quality",
+      "text": "Campaign 24 quality control confirms required lineage fields, lineage fingerprint inputs, source identity, release metadata, and non-interpretive scope for Health provenance-lineage closeout."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign24-quality-control-state"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:bfa32c198670b2612f3ed3a7563cb581ff27027ec134d7e3b3afa4a1481846b2",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign24-quality-control-state",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign24-quality-control-state",
+      "pkg-object-srcpkg-campaign24-quality-control-state"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign24-quality-control-state",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign24-quality-control-state",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign24-quality-control-state"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign24-quality-control-state"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign24-quality-control-state",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Health provenance-lineage completeness and family closeout",
+    "evidence_family": "external_wdi_annual_scalar_health_provenance_lineage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-24-wdi-health-provenance-lineage-closeout",
+      "domain": "WDI annual-scalar Health provenance-lineage completeness and family closeout",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_health_provenance_lineage_metadata",
+      "topic": "quality control state"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

@@ -1,0 +1,54 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 38 semantically distinct correlation pilot",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+    "evidence_references": "sha256:8bff04092240e8a8cc4a5f5e5f815e2d0424b4b72e44c030983d10a3c900ddb8",
+    "generated_statements": "sha256:0c47283ba2b376d7d70de9df4c1999daaa08bcf8b6953acc61adb0400525ed02",
+    "input_set": "sha256:48f4b9df0acb7941c6b192dee43b6c218e6fafe2d0bf0ef7a2c102beb622f1ae",
+    "package_manifest": "sha256:73700b32f3cc0014fac70dbf7e2d16b7066373018ca2a3f4786988e521df27de",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "generalizes_from": [
+      "Campaign 36",
+      "Campaign 37"
+    ],
+    "previous_package_id": null,
+    "source_campaign": "Campaign 38",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "campaign38_frozen_selection_decision",
+      "campaign38_alignment_validation",
+      "campaign38_calculation_evidence",
+      "campaign38_non_promoted_diagnostics"
+    ],
+    "evidence_refs": [
+      "ev-campaign38-wdi-dnk-life-expectancy-fertility-fixture"
+    ],
+    "lineage_basis": "frozen metadata/coverage-only selection followed by fresh Campaign 38 HTTPS acquisition",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common modeled/statistical-estimation methodology limitation",
+      "time-ordering/autocorrelation limitation",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

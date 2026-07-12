@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign23-territorial-high-partial-total"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:9b086991b82717d49115230aa75f330ad58fb55abb354c4c8a2bb4f6d57628c7"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign23-territorial-high-partial-total",
+      "reproducibility_handle": "python3 tools/run_campaign23_wdi_health_maturation.py --output artifacts/production/campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "snapshot_fingerprint": "sha256:9b086991b82717d49115230aa75f330ad58fb55abb354c4c8a2bb4f6d57628c7",
+      "source_family": "external_wdi_annual_scalar_health_maturation",
+      "source_identity": "World Bank World Development Indicators audited Health maturation snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:5b56f91762ce9da2c17cd937419c3bae0b239f7f4afea5fd6bcad98ee82db601",
+    "generated_statements": "sha256:9da5cfb83f2990910cae18dce0766975cdc003a76d40c2950122ff8567ccfe31",
+    "input_set": "sha256:c850b608043356e7e54f1adf547a1fbb86e25c2e08e5b204fd35cd94f1526598",
+    "package_manifest": "sha256:599d89cdef90d10c65a45e0ce7952a0029d2b7794320bb8b87f65ac2a780b904",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_inventory_and_coverage_metadata",
+        "topic": "territorial high partial total"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign23-territorial-high-partial-total",
+        "eval-srcpkg-campaign23-territorial-high-partial-total"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign23-territorial-high-partial-total"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign23-territorial-high-partial-total",
+      "statement_type": "derived",
+      "text": "The Campaign 23 Health territorial matrix assigns 173 family-territory cells to the high-partial bucket."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign23-territorial-high-partial-total"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:ba7f3aaa4f2eeb993d5c8eed64ec53dc8c704ced163005a76b123348ed96e7aa",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign23-territorial-high-partial-total",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign23-territorial-high-partial-total",
+      "pkg-object-srcpkg-campaign23-territorial-high-partial-total"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign23-territorial-high-partial-total",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign23-territorial-high-partial-total",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign23-territorial-high-partial-total"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign23-territorial-high-partial-total"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign23-territorial-high-partial-total",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+    "evidence_family": "external_wdi_annual_scalar_health_maturation",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-23-wdi-health-indicator-family-coverage-maturation",
+      "domain": "WDI annual-scalar Health indicator-family inventory and coverage matrix maturation",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_health_inventory_and_coverage_metadata",
+      "topic": "territorial high partial total"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

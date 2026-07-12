@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign20-territorial-bucket-taxonomy"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:134f722704ae161aa5f879e0267035f2e0a7980f94074fa7069b341a6b63923f"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign20-territorial-bucket-taxonomy",
+      "reproducibility_handle": "python3 tools/run_campaign20_wdi_agriculture_rural_development_maturation.py --output artifacts/production/campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "snapshot_fingerprint": "sha256:134f722704ae161aa5f879e0267035f2e0a7980f94074fa7069b341a6b63923f",
+      "source_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+      "source_identity": "World Bank World Development Indicators audited Agriculture & Rural Development maturation snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:d6593f2034c8264772b3c68a9fb81f4fcb4b534e03dac066a3091d4b60ccc9be",
+    "generated_statements": "sha256:af4e197bad5bd84f97cd74ef8e5e703d8ea59d4efdf6be8eb115e4e2c54cdaff",
+    "input_set": "sha256:63cdf19ff4fa0e3e3433c55c1fe20c8b2dd9024d2565138ef60b7e072e33630d",
+    "package_manifest": "sha256:7f9a41a909b2d9206b2ab6769eced9f2e9f84c7030983d820bb3ad481c0f7316",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+        "topic": "territorial bucket taxonomy"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign20-territorial-bucket-taxonomy",
+        "eval-srcpkg-campaign20-territorial-bucket-taxonomy"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign20-territorial-bucket-taxonomy"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign20-territorial-bucket-taxonomy",
+      "statement_type": "classified",
+      "text": "Campaign 20 classifies Agriculture & Rural Development territorial coverage cells into complete-or-near-complete, high-partial, moderate-partial, and insufficient-for-campaign-scope buckets."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign20-territorial-bucket-taxonomy"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:2ad49c963d26e56df4669b58ee875a946793ce46d2dc0c9e61581f0453380d1a",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign20-territorial-bucket-taxonomy",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign20-territorial-bucket-taxonomy",
+      "pkg-object-srcpkg-campaign20-territorial-bucket-taxonomy"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign20-territorial-bucket-taxonomy",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign20-territorial-bucket-taxonomy",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign20-territorial-bucket-taxonomy"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign20-territorial-bucket-taxonomy"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign20-territorial-bucket-taxonomy",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+    "evidence_family": "external_wdi_annual_scalar_agriculture_rural_development_maturation",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-20-wdi-agriculture-rural-development-indicator-family-coverage-maturation",
+      "domain": "WDI annual-scalar Agriculture & Rural Development indicator-family inventory and coverage matrix maturation",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_agriculture_rural_development_inventory_and_coverage_metadata",
+      "topic": "territorial bucket taxonomy"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

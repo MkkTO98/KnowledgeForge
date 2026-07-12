@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign17-family-membership-mining_and_extractives_metadata"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:8157bcc6778d2c42248526b390ebe380d4bc07c28bf12920fe45778f6a2b2047"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign17-family-membership-mining_and_extractives_metadata",
+      "reproducibility_handle": "python3 tools/run_campaign17_wdi_energy_mining_maturation.py --output artifacts/production/campaign-17-wdi-energy-mining-indicator-family-coverage-maturation",
+      "snapshot_fingerprint": "sha256:8157bcc6778d2c42248526b390ebe380d4bc07c28bf12920fe45778f6a2b2047",
+      "source_family": "external_wdi_annual_scalar_energy_mining_maturation",
+      "source_identity": "World Bank World Development Indicators audited Energy & Mining maturation snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:bb37c288bb5ee72f2a4037924cd2f097ce6f4e3861002f87fa1bf704f297a0d2",
+    "generated_statements": "sha256:821de289eee5565ed43f170e58382553b8ec9b10ab0a0470fcc94e3dcd20b35d",
+    "input_set": "sha256:c58f76a7ae5b2b35baf26b142d95f4d0cafef9638af1c7e63a1aef8f1ca00b3b",
+    "package_manifest": "sha256:8c1c0c956587f5a94e80e99330b39ce80df4d741f3b3282fb450414820fe98d1",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-17-wdi-energy-mining-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Energy & Mining indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_energy_mining_inventory_and_coverage_metadata",
+        "topic": "family membership mining_and_extractives_metadata"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign17-family-membership-mining_and_extractives_metadata",
+        "eval-srcpkg-campaign17-family-membership-mining_and_extractives_metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign17-family-membership-mining_and_extractives_metadata"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign17-family-membership-mining_and_extractives_metadata",
+      "statement_type": "classified",
+      "text": "The Campaign 17 WDI Energy & Mining inventory assigns 17 indicators to the mining and extractives metadata family."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign17-family-membership-mining_and_extractives_metadata"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:ade43dd0b6357f55ed295b907417a6f47a242734c56fd096feda544f24e7bc0b",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign17-family-membership-mining_and_extractives_metadata",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign17-family-membership-mining_and_extractives_metadata",
+      "pkg-object-srcpkg-campaign17-family-membership-mining_and_extractives_metadata"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign17-family-membership-mining_and_extractives_metadata",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign17-family-membership-mining_and_extractives_metadata",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign17-family-membership-mining_and_extractives_metadata"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign17-family-membership-mining_and_extractives_metadata"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign17-family-membership-mining_and_extractives_metadata",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Energy & Mining indicator-family inventory and coverage matrix maturation",
+    "evidence_family": "external_wdi_annual_scalar_energy_mining_maturation",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-17-wdi-energy-mining-indicator-family-coverage-maturation",
+      "domain": "WDI annual-scalar Energy & Mining indicator-family inventory and coverage matrix maturation",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_energy_mining_inventory_and_coverage_metadata",
+      "topic": "family membership mining_and_extractives_metadata"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

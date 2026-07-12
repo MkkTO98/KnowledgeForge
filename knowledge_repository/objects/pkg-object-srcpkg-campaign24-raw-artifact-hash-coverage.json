@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign24-raw-artifact-hash-coverage"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:9304fee1a624d4d9335c2aa78a62de801461b58d3a2ac53269a9390412d65ea8"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign24-raw-artifact-hash-coverage",
+      "reproducibility_handle": "python3 tools/run_campaign24_wdi_health_provenance_lineage_closeout.py --output artifacts/production/campaign-24-wdi-health-provenance-lineage-closeout",
+      "snapshot_fingerprint": "sha256:9304fee1a624d4d9335c2aa78a62de801461b58d3a2ac53269a9390412d65ea8",
+      "source_family": "external_wdi_annual_scalar_health_provenance_lineage",
+      "source_identity": "World Bank World Development Indicators audited Health provenance lineage snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:bc3bcffd2b3e09f315426be4ed223ae59962bdfdba1a4cea377027aa44d3d0d9",
+    "generated_statements": "sha256:8c6e8709d66bdd5c1c2c2db9bbc63f5ba202fbedb88db5cfde5691e60cc1fd8b",
+    "input_set": "sha256:bbc718046a99bf94ae63a226e03ca1572e77c1d7064b1cc22dadd7a9f11a25e3",
+    "package_manifest": "sha256:7cdccbfb281e8e8e01f0dc8b740c0652c3c0cc34fbc603875e7b15993cac14f7",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-24-wdi-health-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Health provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_health_provenance_lineage_metadata",
+        "topic": "raw artifact hash coverage"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign24-raw-artifact-hash-coverage",
+        "eval-srcpkg-campaign24-raw-artifact-hash-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign24-raw-artifact-hash-coverage"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign24-raw-artifact-hash-coverage",
+      "statement_type": "coverage",
+      "text": "Campaign 24 records raw artifact hashes for 5 audited WDI Health artifacts."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign24-raw-artifact-hash-coverage"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:2e6b08d5311e75e9d9945456121ff758d4e7fd6f0e72744b035d42831653711e",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign24-raw-artifact-hash-coverage",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign24-raw-artifact-hash-coverage",
+      "pkg-object-srcpkg-campaign24-raw-artifact-hash-coverage"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign24-raw-artifact-hash-coverage",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign24-raw-artifact-hash-coverage",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign24-raw-artifact-hash-coverage"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign24-raw-artifact-hash-coverage"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign24-raw-artifact-hash-coverage",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Health provenance-lineage completeness and family closeout",
+    "evidence_family": "external_wdi_annual_scalar_health_provenance_lineage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-24-wdi-health-provenance-lineage-closeout",
+      "domain": "WDI annual-scalar Health provenance-lineage completeness and family closeout",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_health_provenance_lineage_metadata",
+      "topic": "raw artifact hash coverage"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

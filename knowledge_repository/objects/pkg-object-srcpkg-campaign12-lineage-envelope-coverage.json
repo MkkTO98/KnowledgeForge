@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign12-lineage-envelope-coverage"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:91a378def625da433d90f519da05b39575952b80e4c3162c306aad30fe1166e7"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign12-lineage-envelope-coverage",
+      "reproducibility_handle": "python3 tools/run_campaign12_wdi_environment_provenance_lineage_closeout.py --output artifacts/production/campaign-12-wdi-environment-provenance-lineage-closeout",
+      "snapshot_fingerprint": "sha256:91a378def625da433d90f519da05b39575952b80e4c3162c306aad30fe1166e7",
+      "source_family": "external_wdi_annual_scalar_environment_provenance_lineage",
+      "source_identity": "World Bank World Development Indicators audited Environment provenance lineage snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:9c1e38140a3a85716f41f82d74faabcada393e45f0cc8a76806b420c8f1d7068",
+    "generated_statements": "sha256:9a1b4dfb14460e5e600579b15731ef3629524957c6656f1ad205fb932647543e",
+    "input_set": "sha256:25c86c302797ed38c70409d0bed4910e6eda933b270d55d051d389d51890aed2",
+    "package_manifest": "sha256:69b42d2b73dc0c43f9c801a3f7b2f250b35cddb1a7febc707d3912286f80bd7b",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-12-wdi-environment-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Environment provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_environment_provenance_lineage_metadata",
+        "topic": "lineage envelope coverage"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign12-lineage-envelope-coverage",
+        "eval-srcpkg-campaign12-lineage-envelope-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign12-lineage-envelope-coverage"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign12-lineage-envelope-coverage",
+      "statement_type": "coverage",
+      "text": "Campaign 12 records provenance envelope presence for 5 audited WDI Environment artifacts."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign12-lineage-envelope-coverage"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:b6115897a8570b4fb44ed626a23ee205f67f07e7bfc4da5a3c98a2a74b886157",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign12-lineage-envelope-coverage",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign12-lineage-envelope-coverage",
+      "pkg-object-srcpkg-campaign12-lineage-envelope-coverage"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign12-lineage-envelope-coverage",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign12-lineage-envelope-coverage",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign12-lineage-envelope-coverage"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign12-lineage-envelope-coverage"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign12-lineage-envelope-coverage",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Environment provenance-lineage completeness and family closeout",
+    "evidence_family": "external_wdi_annual_scalar_environment_provenance_lineage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-12-wdi-environment-provenance-lineage-closeout",
+      "domain": "WDI annual-scalar Environment provenance-lineage completeness and family closeout",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_environment_provenance_lineage_metadata",
+      "topic": "lineage envelope coverage"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

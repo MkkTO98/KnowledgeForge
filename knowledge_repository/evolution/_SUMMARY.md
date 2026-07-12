@@ -1,0 +1,134 @@
+# Folder Summary: knowledge_repository/evolution
+
+## Purpose
+This folder is part of the ProjectForge file-backed operating system for `knowledge_repository/evolution`.
+
+## Contains
+<!-- PROJECTFORGE:BEGIN-CONTAINS -->
+- `pkg-object-srcpkg-campaign12-architectural-continuity-review.json`
+- `pkg-object-srcpkg-campaign12-artifact-count.json`
+- `pkg-object-srcpkg-campaign12-complete-lineage-count.json`
+- `pkg-object-srcpkg-campaign12-deterministic-lineage-transform.json`
+- `pkg-object-srcpkg-campaign12-environment-family-maturity-assessment.json`
+- `pkg-object-srcpkg-campaign12-license-note-coverage.json`
+- `pkg-object-srcpkg-campaign12-lineage-completeness-classification.json`
+- `pkg-object-srcpkg-campaign12-lineage-envelope-coverage.json`
+- `pkg-object-srcpkg-campaign12-missing-lineage-count.json`
+- `pkg-object-srcpkg-campaign12-production-methodology-assessment.json`
+- `pkg-object-srcpkg-campaign12-quality-control-state.json`
+- `pkg-object-srcpkg-campaign12-raw-artifact-hash-coverage.json`
+- `pkg-object-srcpkg-campaign12-raw-artifact-url-coverage.json`
+- `pkg-object-srcpkg-campaign12-release-key-coverage.json`
+- `pkg-object-srcpkg-campaign12-required-lineage-fields.json`
+- `pkg-object-srcpkg-campaign12-source-url-coverage.json`
+- `pkg-object-srcpkg-campaign12-validation-state.json`
+- `pkg-object-srcpkg-campaign13-deterministic-transfer-method.json`
+- `pkg-object-srcpkg-campaign13-family-communications-access-metadata.json`
+- `pkg-object-srcpkg-campaign13-family-digital-connectivity-metadata.json`
+- `pkg-object-srcpkg-campaign13-family-energy-access-infrastructure-metadata.json`
+- `pkg-object-srcpkg-campaign13-family-logistics-and-trade-facilitation-metadata.json`
+- `pkg-object-srcpkg-campaign13-family-transport-services-metadata.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-evidence-quality-state.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-family-count.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-missing-share.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-observed-missing.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-observed-share.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-partial-families.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-period-scope.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-provenance-state.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-source-scope.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-territory-scope.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-topic-inventory.json`
+- `pkg-object-srcpkg-campaign13-infrastructure-unsupported-dimensions.json`
+- `pkg-object-srcpkg-campaign13-replication-contract.json`
+- `pkg-object-srcpkg-campaign14-denominator-quality.json`
+- `pkg-object-srcpkg-campaign14-deterministic-transform.json`
+- `pkg-object-srcpkg-campaign14-family-classification-set.json`
+- `pkg-object-srcpkg-campaign14-family-membership-communications_access_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-membership-digital_connectivity_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-membership-energy_access_infrastructure_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-membership-logistics_and_trade_facilitation_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-membership-transport_services_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-temporal-coverage-communications_access_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-temporal-coverage-digital_connectivity_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-temporal-coverage-energy_access_infrastructure_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-temporal-coverage-logistics_and_trade_facilitation_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-temporal-coverage-transport_services_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-territorial-coverage-communications_access_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-territorial-coverage-digital_connectivity_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-territorial-coverage-energy_access_infrastructure_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-territorial-coverage-logistics_and_trade_facilitation_metadata.json`
+- `pkg-object-srcpkg-campaign14-family-territorial-coverage-transport_services_metadata.json`
+- `pkg-object-srcpkg-campaign14-infrastructure-family-stable.json`
+- `pkg-object-srcpkg-campaign14-infrastructure-not-mature.json`
+- `pkg-object-srcpkg-campaign14-inventory-total.json`
+- `pkg-object-srcpkg-campaign14-maturation-methodology-comparison.json`
+- `pkg-object-srcpkg-campaign14-provenance-state.json`
+- `pkg-object-srcpkg-campaign14-supported-dimensions.json`
+- `pkg-object-srcpkg-campaign14-temporal-matrix-shape.json`
+- `pkg-object-srcpkg-campaign14-temporal-missing-total.json`
+- `pkg-object-srcpkg-campaign14-temporal-observed-total.json`
+- `pkg-object-srcpkg-campaign14-temporal-period-range.json`
+- `pkg-object-srcpkg-campaign14-territorial-bucket-taxonomy.json`
+- `pkg-object-srcpkg-campaign14-territorial-complete-total.json`
+- `pkg-object-srcpkg-campaign14-territorial-high-partial-total.json`
+- `pkg-object-srcpkg-campaign14-territorial-insufficient-total.json`
+- `pkg-object-srcpkg-campaign14-territorial-matrix-shape.json`
+- `pkg-object-srcpkg-campaign14-territorial-moderate-partial-total.json`
+- `pkg-object-srcpkg-campaign14-unsupported-dimensions.json`
+- `pkg-object-srcpkg-campaign14-validation-state.json`
+- `pkg-object-srcpkg-campaign15-architectural-continuity-review.json`
+- `pkg-object-srcpkg-campaign15-artifact-count.json`
+- `pkg-object-srcpkg-campaign15-complete-lineage-count.json`
+- `pkg-object-srcpkg-campaign15-deterministic-lineage-transform.json`
+- `pkg-object-srcpkg-campaign15-infrastructure-family-maturity-assessment.json`
+- `pkg-object-srcpkg-campaign15-license-note-coverage.json`
+- `pkg-object-srcpkg-campaign15-lineage-completeness-classification.json`
+- `pkg-object-srcpkg-campaign15-lineage-envelope-coverage.json`
+- `pkg-object-srcpkg-campaign15-missing-lineage-count.json`
+- `pkg-object-srcpkg-campaign15-production-methodology-assessment.json`
+- `pkg-object-srcpkg-campaign15-quality-control-state.json`
+- `pkg-object-srcpkg-campaign15-raw-artifact-hash-coverage.json`
+- `pkg-object-srcpkg-campaign15-raw-artifact-url-coverage.json`
+- `pkg-object-srcpkg-campaign15-release-key-coverage.json`
+- `pkg-object-srcpkg-campaign15-required-lineage-fields.json`
+- `pkg-object-srcpkg-campaign15-source-url-coverage.json`
+- `pkg-object-srcpkg-campaign15-validation-state.json`
+- `pkg-object-srcpkg-campaign16-deterministic-transfer-method.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-evidence-quality-state.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-family-count.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-missing-share.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-observed-missing.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-observed-share.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-partial-families.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-period-scope.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-provenance-state.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-source-scope.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-territory-scope.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-topic-inventory.json`
+- `pkg-object-srcpkg-campaign16-energy_mining-unsupported-dimensions.json`
+- `pkg-object-srcpkg-campaign16-family-emissions-energy-metadata.json`
+- `pkg-object-srcpkg-campaign16-family-energy-access-metadata.json`
+- `pkg-object-srcpkg-campaign16-family-energy-production-metadata.json`
+- `pkg-object-srcpkg-campaign16-family-energy-use-efficiency-metadata.json`
+- `pkg-object-srcpkg-campaign16-family-mining-and-extractives-metadata.json`
+- `pkg-object-srcpkg-campaign16-replication-contract.json`
+- `pkg-object-srcpkg-campaign17-denominator-quality.json`
+- `pkg-object-srcpkg-campaign17-deterministic-transform.json`
+- `pkg-object-srcpkg-campaign17-energy_mining-family-stable.json`
+- `pkg-object-srcpkg-campaign17-energy_mining-not-mature.json`
+- `pkg-object-srcpkg-campaign17-family-classification-set.json`
+- `pkg-object-srcpkg-campaign17-family-membership-emissions_energy_metadata.json`
+- `pkg-object-srcpkg-campaign17-family-membership-energy_access_metadata.json`
+- `pkg-object-srcpkg-campaign17-family-membership-energy_production_metadata.json`
+- `pkg-object-srcpkg-campaign17-family-membership-energy_use_efficiency_metadata.json`
+- `pkg-object-srcpkg-campaign17-family-membership-mining_and_extractives_metadata.json`
+- `pkg-object-srcpkg-campaign17-family-temporal-coverage-emissions_energy_metadata.json`
+- `pkg-object-srcpkg-campaign17-family-temporal-coverage-energy_access_metadata.json`
+<!-- PROJECTFORGE:END-CONTAINS -->
+
+## Active Work
+- No folder-specific active work recorded.
+
+## Needs Attention
+- No folder-specific issues recorded.

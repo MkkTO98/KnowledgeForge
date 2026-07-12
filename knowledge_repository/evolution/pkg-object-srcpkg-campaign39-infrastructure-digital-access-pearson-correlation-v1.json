@@ -1,0 +1,51 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 39 heterogeneous correlation batch",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+    "evidence_references": "sha256:d0e6679b5676e91d9010f6da7c4419b0e9c134bfdf9da900742f8d17cf76650b",
+    "generated_statements": "sha256:3656115185ac9d1e5ef6b90dc0d14b360fb34a6b90b7ab09a9e457b9c4152548",
+    "input_set": "sha256:13fe96384f5d96c73d52d77e03a1163ac799028edf26fd4abbb41b9756fcbff8",
+    "package_manifest": "sha256:23dbffa610e9b829b4ec014a7cd0e4daec498fcea91e2ad4571379d576412a82",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 39",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "campaign39_frozen_batch_selection_decision",
+      "campaign39_infrastructure_digital_access_alignment",
+      "campaign39_infrastructure_digital_access_calculation",
+      "campaign39_infrastructure_digital_access_diagnostics"
+    ],
+    "evidence_refs": [
+      "ev-campaign39-infrastructure_digital_access-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free batch selection followed by Campaign 39 HTTPS acquisition",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "shared_denominator",
+      "common_modeled_estimation_process",
+      "common_administrative_reporting",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

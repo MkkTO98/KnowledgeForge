@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign33-source-url-coverage"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:b15fa398ad6da5510e7e0ceeea0e39de006c8d966f2ca34eed47e4b7c947a75d"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign33-source-url-coverage",
+      "reproducibility_handle": "python3 tools/run_campaign33_wdi_financial_sector_provenance_lineage_closeout.py --output artifacts/production/campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+      "snapshot_fingerprint": "sha256:b15fa398ad6da5510e7e0ceeea0e39de006c8d966f2ca34eed47e4b7c947a75d",
+      "source_family": "external_wdi_annual_scalar_financial_sector_provenance_lineage",
+      "source_identity": "World Bank World Development Indicators audited Financial Sector provenance lineage snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:fe483ceca35c964397a01cd885253ca4a232371e571d4d401372a79b5a056417",
+    "generated_statements": "sha256:202e1af46e12c29ed4724793921307ef018583b255f3953cdc5136b041898201",
+    "input_set": "sha256:d3f428a59f0d7ba479531db56e3c6064ed95c3378fc2238ec0a4d44afc8b68ca",
+    "package_manifest": "sha256:27a88019a5f2cf145d943a14624fc18c7178288cb3ce6c41412c4e467697f0ca",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Financial Sector provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_financial_sector_provenance_lineage_metadata",
+        "topic": "source url coverage"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign33-source-url-coverage",
+        "eval-srcpkg-campaign33-source-url-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign33-source-url-coverage"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign33-source-url-coverage",
+      "statement_type": "coverage",
+      "text": "Campaign 33 records source URLs for 5 audited WDI Financial Sector artifacts."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign33-source-url-coverage"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:e38f4c906c1c38a31a8186cd12b1e9d68a2489c473d81e08d57872183aab4561",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign33-source-url-coverage",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign33-source-url-coverage",
+      "pkg-object-srcpkg-campaign33-source-url-coverage"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign33-source-url-coverage",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign33-source-url-coverage",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign33-source-url-coverage"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign33-source-url-coverage"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign33-source-url-coverage",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Financial Sector provenance-lineage completeness and family closeout",
+    "evidence_family": "external_wdi_annual_scalar_financial_sector_provenance_lineage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-33-wdi-financial-sector-provenance-lineage-closeout",
+      "domain": "WDI annual-scalar Financial Sector provenance-lineage completeness and family closeout",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_financial_sector_provenance_lineage_metadata",
+      "topic": "source url coverage"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

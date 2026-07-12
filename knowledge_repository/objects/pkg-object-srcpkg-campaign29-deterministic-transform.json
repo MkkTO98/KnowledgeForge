@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign29-deterministic-transform"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:f8b5c66d3a4ba46d1c38e7ed0c12e4d13d48d774e0f25fdb195f48e468ec921e"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign29-deterministic-transform",
+      "reproducibility_handle": "python3 tools/run_campaign29_wdi_trade_maturation.py --output artifacts/production/campaign-29-wdi-trade-indicator-family-coverage-maturation",
+      "snapshot_fingerprint": "sha256:f8b5c66d3a4ba46d1c38e7ed0c12e4d13d48d774e0f25fdb195f48e468ec921e",
+      "source_family": "external_wdi_annual_scalar_trade_maturation",
+      "source_identity": "World Bank World Development Indicators audited Trade maturation snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:377ca5e13237864d5feab55af69ec790bc1239e8c2890284f520045cfe248f32",
+    "generated_statements": "sha256:cfb51c9336d8e7f231136ab0f7f8853c2b52bae1cb4a0c57f0dbae57fe7bfa2f",
+    "input_set": "sha256:1d9252f802dfa7b19a14b9db38a21e90542e2f410277755da3c18918ca05a2f8",
+    "package_manifest": "sha256:43ee23ff1b70e3255e0a8609b5569dd7e70ccc7cab2ede6af6bd8f3aa4906ed9",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-29-wdi-trade-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Trade indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_trade_inventory_and_coverage_metadata",
+        "topic": "deterministic transform"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign29-deterministic-transform",
+        "eval-srcpkg-campaign29-deterministic-transform"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign29-deterministic-transform"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign29-deterministic-transform",
+      "statement_type": "methodological",
+      "text": "Campaign 29 derives Trade inventory totals, territorial bucket totals, and temporal cell totals deterministically from the immutable maturation snapshot."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign29-deterministic-transform"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:eca3ad349bfa91f76dc376e77b19562558ce74b01f61023b6c9746f9a8e0b2c1",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign29-deterministic-transform",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign29-deterministic-transform",
+      "pkg-object-srcpkg-campaign29-deterministic-transform"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign29-deterministic-transform",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign29-deterministic-transform",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign29-deterministic-transform"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign29-deterministic-transform"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign29-deterministic-transform",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Trade indicator-family inventory and coverage matrix maturation",
+    "evidence_family": "external_wdi_annual_scalar_trade_maturation",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-29-wdi-trade-indicator-family-coverage-maturation",
+      "domain": "WDI annual-scalar Trade indicator-family inventory and coverage matrix maturation",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_trade_inventory_and_coverage_metadata",
+      "topic": "deterministic transform"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign15-license-note-coverage"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:bcce28fef440e71844a8c4f5fec32112836ac4dc1c422fab70d857835c6b3877"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign15-license-note-coverage",
+      "reproducibility_handle": "python3 tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py --output artifacts/production/campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+      "snapshot_fingerprint": "sha256:bcce28fef440e71844a8c4f5fec32112836ac4dc1c422fab70d857835c6b3877",
+      "source_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+      "source_identity": "World Bank World Development Indicators audited Infrastructure provenance lineage snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:8d06d405cf483a9f5fc36cdba0f70fef945a3ac095ccef9700f94a2967aba764",
+    "generated_statements": "sha256:b4110e1428d8a14430bf94c40488d1ff71fd390e30c26c43be088e680c4f6877",
+    "input_set": "sha256:0d50231be65a2303118e6d9b1390dd23389def2229455375dfb08b7530f67250",
+    "package_manifest": "sha256:90325ca567a40861b59e1d2da48c94b9eb6f648bc145b73a27f2570be19c5eb8",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+        "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_infrastructure_provenance_lineage_metadata",
+        "topic": "license note coverage"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign15-license-note-coverage",
+        "eval-srcpkg-campaign15-license-note-coverage"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign15-license-note-coverage"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign15-license-note-coverage",
+      "statement_type": "coverage",
+      "text": "Campaign 15 records license notes for 5 audited WDI Infrastructure artifacts."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign15-license-note-coverage"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:95bd3d2ecfca1a5a32123e55becc34d1e8323001297323bd767bc9ae460cabd0",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign15-license-note-coverage",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign15-license-note-coverage",
+      "pkg-object-srcpkg-campaign15-license-note-coverage"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign15-license-note-coverage",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign15-license-note-coverage",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign15-license-note-coverage"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign15-license-note-coverage"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign15-license-note-coverage",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+    "evidence_family": "external_wdi_annual_scalar_infrastructure_provenance_lineage",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-15-wdi-infrastructure-provenance-lineage-closeout",
+      "domain": "WDI annual-scalar Infrastructure provenance-lineage completeness and family closeout",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_infrastructure_provenance_lineage_metadata",
+      "topic": "license note coverage"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

@@ -1,0 +1,180 @@
+{
+  "computation_method": {
+    "name": "source_evidence_package_to_knowledge_package_v1",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve constitutionally permitted factual statement and provenance",
+    "rerun": "python3 tools/construct_knowledge_package_v1.py tests/fixtures/package_construction_v1/valid_source_evidence_package.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-supported",
+    "evidence_sufficiency": "sufficient for deterministic construction validation",
+    "governance_review_state": "pre-production validation",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "none declared for fixture scope",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "fixture_scope"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "construct_knowledge_package_v1",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:75149e89e7adef37d22b0f9513d4aa5a8da66a58fbc480016bfa9598b51d7b18"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observational_metadata",
+      "evidence_ref_id": "ev-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata",
+      "reproducibility_handle": "python3 tools/run_campaign26_wdi_education_maturation.py --output artifacts/production/campaign-26-wdi-education-indicator-family-coverage-maturation",
+      "snapshot_fingerprint": "sha256:75149e89e7adef37d22b0f9513d4aa5a8da66a58fbc480016bfa9598b51d7b18",
+      "source_family": "external_wdi_annual_scalar_education_maturation",
+      "source_identity": "World Bank World Development Indicators audited Education maturation snapshot",
+      "source_owner": "source package fixture",
+      "source_version": "1.0"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial deterministic construction validation",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:21531d8f9aeea38152edda0036e54c420363deaddfc87b4beef3d2104fdd92a9",
+    "evidence_references": "sha256:3181fc75e564d1c8b16a82aa0f09f5d552a285b81cee99b11d32405a1e6b699e",
+    "generated_statements": "sha256:a38d3af57487fc1d7a35b052a79fe8174adf28114265b15807cd7388f88b70db",
+    "input_set": "sha256:edd4ed0a5bb87c282711ea676ee9640cade00d243519e5e8c087e487f7e0e0a2",
+    "package_manifest": "sha256:3f5c3ee8e7f955e6f1f81fdde1b90d47f67fe6b7d3f4ea2b1c729d53741cbdd5",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "campaign_id": "campaign-26-wdi-education-indicator-family-coverage-maturation",
+        "domain": "WDI annual-scalar Education indicator-family inventory and coverage matrix maturation",
+        "exclusions": [
+          "interpretive statements",
+          "unsupported explanatory statements",
+          "prospective statements",
+          "cause-effect statements",
+          "action-selection statements",
+          "audience-facing prose",
+          "financial-meaning statements",
+          "government-action-meaning statements"
+        ],
+        "scope_type": "external_education_inventory_and_coverage_metadata",
+        "topic": "family territorial coverage literacy_and_learning_metadata"
+      },
+      "dependencies": [
+        "ev-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata",
+        "eval-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata"
+      ],
+      "evidence_refs": [
+        "ev-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata"
+      ],
+      "origin": "constructed_from_source_evidence_package",
+      "statement_id": "stmt-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata",
+      "statement_type": "coverage",
+      "text": "The Campaign 26 Education territorial matrix records coverage buckets for 217 audited territories in the literacy-and-learning-metadata family."
+    }
+  ],
+  "input_references": [
+    "srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:a96227794fa450b4c72edd31b40b02053da8172f9ab1a228f74f575591a6a7d0",
+    "previous_package_id": "pkg-candidate-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata",
+    "version_lineage": [
+      "pkg-candidate-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata",
+      "pkg-object-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata"
+    ]
+  },
+  "package_id": "pkg-object-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata",
+    "maturity_state": "M4 controlled-readiness validated fixture",
+    "promotion_justification": "Candidate passed deterministic construction validation for pre-production readiness.",
+    "validation_history": [
+      {
+        "blockers": [],
+        "human_review_required": true,
+        "validation_result": "pending",
+        "validator_version": "v1",
+        "warnings": []
+      },
+      {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "v1",
+        "warnings": []
+      }
+    ]
+  },
+  "provenance_envelope": {
+    "computation_recipe": "source_evidence_package_to_knowledge_package_v1@1.0",
+    "creator": "construct_knowledge_package_v1",
+    "evaluation_refs": [
+      "eval-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata"
+    ],
+    "evidence_refs": [
+      "ev-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-object-srcpkg-campaign26-family-territorial-coverage-literacy_and_learning_metadata",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "immutable SourceEvidencePackage fixture"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "WDI annual-scalar Education indicator-family inventory and coverage matrix maturation",
+    "evidence_family": "external_wdi_annual_scalar_education_maturation",
+    "intended_use": "pre-production validation only",
+    "method_scope": "deterministic construction validation",
+    "source_scope": {
+      "campaign_id": "campaign-26-wdi-education-indicator-family-coverage-maturation",
+      "domain": "WDI annual-scalar Education indicator-family inventory and coverage matrix maturation",
+      "exclusions": [
+        "interpretive statements",
+        "unsupported explanatory statements",
+        "prospective statements",
+        "cause-effect statements",
+        "action-selection statements",
+        "audience-facing prose",
+        "financial-meaning statements",
+        "government-action-meaning statements"
+      ],
+      "scope_type": "external_education_inventory_and_coverage_metadata",
+      "topic": "family territorial coverage literacy_and_learning_metadata"
+    }
+  },
+  "status": "accepted-for-controlled-production-readiness",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}
