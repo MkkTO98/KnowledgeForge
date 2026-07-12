@@ -1,0 +1,114 @@
+{
+  "computation_method": {
+    "name": "source_preservation_template",
+    "nondeterminism": "none",
+    "parameters": {},
+    "query_definitions": [],
+    "recipe": "deterministically preserve scoped source statement",
+    "rerun": "python3 tools/validate_knowledge_pipeline_v1.py tests/fixtures/validation_framework_v1/positive_candidate.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "fixture-only",
+    "evidence_sufficiency": "sufficient for fixture candidate",
+    "governance_review_state": "not_reviewed",
+    "lifecycle_state": "candidate",
+    "missingness_summary": "none for fixture",
+    "reproducibility_state": "reproducible",
+    "uncertainty_dimensions": [
+      "methodological"
+    ],
+    "validation_state": "unvalidated"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-known",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-synth-gdp-definition"
+    }
+  ],
+  "created_at": "2026-07-09",
+  "created_by": "fixture",
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-09",
+      "evaluation_status": "evaluated",
+      "evidence_class": "official_source_documentation",
+      "evidence_ref_id": "ev-synth-gdp-methodology-001",
+      "reproducibility_handle": "fixture://evidence/synth-gdp-methodology-001",
+      "snapshot_fingerprint": "sha256:fixture-evidence-snapshot",
+      "source_family": "official_statistical_metadata_methodology",
+      "source_identity": "SYN-GDP-METHOD",
+      "source_owner": "Synthetic Statistical Office",
+      "source_version": "2026-fixture"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "initial fixture candidate",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:fixture-recipe",
+    "evidence_references": "sha256:fixture-evidence-refs",
+    "generated_statements": "sha256:fixture-statements",
+    "input_set": "sha256:fixture-input-set",
+    "package_manifest": "sha256:fixture-package-manifest",
+    "query_definitions": "sha256:fixture-empty-query-definitions"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "scope": "synthetic fixture only"
+      },
+      "dependencies": [
+        "ev-synth-gdp-methodology-001"
+      ],
+      "evidence_refs": [
+        "ev-synth-gdp-methodology-001"
+      ],
+      "origin": "preserved_from_source",
+      "statement_id": "stmt-synth-gdp-definition",
+      "statement_type": "factual",
+      "text": "This implies the economy is likely to accelerate and investors should act."
+    }
+  ],
+  "input_references": [
+    "ev-synth-gdp-methodology-001"
+  ],
+  "package_id": "pkg-candidate-synth-gdp-definition-001",
+  "package_kind": "KnowledgeCandidatePackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "computation_recipe": "source_preservation_template@1.0",
+    "creator": "fixture",
+    "evidence_refs": [
+      "ev-synth-gdp-methodology-001"
+    ],
+    "generation_date": "2026-07-09",
+    "package_identity": "pkg-candidate-synth-gdp-definition-001",
+    "reproducibility_state": "reproducible",
+    "source_systems": [
+      "synthetic-fixtures"
+    ],
+    "validation_tool": "validate_knowledge_pipeline_v1"
+  },
+  "scope": {
+    "domain": "economics",
+    "evidence_family": "official_statistical_metadata_methodology",
+    "intended_use": "validator fixture only",
+    "method_scope": "source preservation",
+    "source_scope": "synthetic fixture"
+  },
+  "status": "candidate",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": true,
+    "validation_result": "pending",
+    "validator_version": "v1",
+    "warnings": []
+  }
+}

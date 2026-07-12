@@ -1,0 +1,70 @@
+{
+  "source_evidence_package_id": "srcpkg-demographic-coverage-fixture-v1",
+  "package_kind": "SourceEvidencePackage",
+  "package_version": "1.0",
+  "created_at": "2026-07-09",
+  "immutability": {
+    "state": "immutable_fixture",
+    "mutation_policy": "read_only",
+    "content_addressed": true
+  },
+  "source_identity": {
+    "source_family": "official_statistical_metadata_methodology",
+    "source_name": "Synthetic Demographic Coverage Fixture",
+    "source_version": "2026-fixture",
+    "origin_note": "Origin intentionally irrelevant; this package is treated only as immutable input evidence."
+  },
+  "evidence_payload": {
+    "subject": "synthetic demographic coverage fixture",
+    "metric": "coverage completeness",
+    "value": "complete for the fixture scope",
+    "scope": {
+      "domain": "economics",
+      "territories": [
+        "Fictionland"
+      ],
+      "periods": [
+        "2020"
+      ],
+      "indicator_family": "age-sex cohort coverage"
+    },
+    "factual_statement": "The immutable fixture records complete source coverage for the synthetic age-sex cohort scope in Fictionland for 2020.",
+    "knowledge_category": "factual",
+    "permitted_use": "pre-production deterministic validation only"
+  },
+  "evidence_metadata": {
+    "evidence_class": "source_evidence_package",
+    "classification": {
+      "direct_evidence": true,
+      "generated_by_llm": false,
+      "contains_observational_values": false
+    },
+    "validation_metadata": {
+      "validation_state": "fixture_validated",
+      "validator": "manual_fixture_contract_v1",
+      "blockers": []
+    }
+  },
+  "provenance": {
+    "source_snapshot_id": "snapshot-synthetic-demographic-coverage-2026-fixture",
+    "source_snapshot_date": "2026-07-09",
+    "retained_inputs": [
+      "evidence_payload",
+      "evidence_metadata",
+      "reproducibility"
+    ],
+    "audit_note": "Tiny immutable fixture for KnowledgeForge pre-production construction validation."
+  },
+  "reproducibility": {
+    "state": "reproducible",
+    "handle": "fixture://knowledgeforge/source-evidence/srcpkg-demographic-coverage-fixture-v1",
+    "rerun_method": "deterministic canonical JSON construction with SHA-256 fingerprints",
+    "nondeterminism": "none"
+  },
+  "fingerprints": {
+    "source_payload": "sha256:c6270163fb42547a224d3803fc85cf75851d7ce506847f8e5e2c86281e8041fe",
+    "provenance": "sha256:62bade879fc10e3a7854af6c6e1d8b373df46282c9ac0aa1b2f2c7e4260d5569",
+    "reproducibility": "sha256:b512663f69037fde8921201b3128dc48e52e1b28f0e273752887b39a2762fc5d",
+    "package_manifest": "sha256:69f081d026497556a0e160602aa81f317f44b4544d1be8315b9c3596b2fea617"
+  }
+}
