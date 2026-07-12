@@ -1,0 +1,42 @@
+{
+  "NE.EXP.GNFS.ZS_rate_percentage_trade_multi_entity": {
+    "assessment": "selected",
+    "definition": "Exports of goods and services (% of GDP)",
+    "family": "external_wdi_annual_scalar_trade",
+    "indicator": "NE.EXP.GNFS.ZS",
+    "reason": "existing Mature trade family, percentage/rate unit, fractional likely non-monotonic values, multiple entities, and dispersion has clearer bounded-window descriptive meaning.",
+    "scope": "DNK/SWE/NOR 1990-2024"
+  },
+  "NY.GDP.PCAP.KD_second_dnk_indicator": {
+    "assessment": "defer",
+    "definition": "GDP per capita (constant 2015 US$)",
+    "family": "external_wdi_annual_scalar_economy_growth candidate",
+    "indicator": "NY.GDP.PCAP.KD",
+    "reason": "more substantive than population, but still level series and may invite growth/trend interpretations.",
+    "scope": "DNK 1990-2024"
+  },
+  "SE.XPD.TOTL.GD.ZS_missingness_candidate": {
+    "assessment": "defer",
+    "definition": "Government expenditure on education, total (% of GDP)",
+    "family": "external_wdi_annual_scalar_education",
+    "indicator": "SE.XPD.TOTL.GD.ZS",
+    "reason": "good missingness test candidate but likely higher missingness may obscure v2 method replication with evidence availability questions.",
+    "scope": "DNK 1990-2024"
+  },
+  "SL.UEM.TOTL.ZS_fractional_rate_candidate": {
+    "assessment": "reject for Campaign 35",
+    "definition": "Unemployment, total (% of total labor force) (modeled ILO estimate)",
+    "family": "social/labor WDI; not yet selected as existing Mature family here",
+    "indicator": "SL.UEM.TOTL.ZS",
+    "reason": "fractional rate and dispersion are meaningful, but modeled estimates and family maturity fit are weaker than trade exports share.",
+    "scope": "DNK/SWE/NOR 1991-2024"
+  },
+  "SP.POP.TOTL_multi_entity_population_levels": {
+    "assessment": "reject for Campaign 35",
+    "definition": "Population, total",
+    "family": "external_wdi_annual_scalar_demographic_structure",
+    "indicator": "SP.POP.TOTL",
+    "reason": "mechanically easy but repeats Campaign 34 level-series weakness; raw population means across countries add low reusable value.",
+    "scope": "DNK/SWE/NOR 1990-2024"
+  }
+}

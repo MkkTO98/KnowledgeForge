@@ -1,0 +1,334 @@
+{
+  "change_semantics": {
+    "changed_query_count": 4,
+    "changed_query_query_fp_changed": true,
+    "changed_query_result_fp_changed": true,
+    "identical_rerun_same_deterministic_content": true,
+    "identical_rerun_same_result_set": true,
+    "operational_timestamps_differ": true
+  },
+  "consumer_all_pearson": {
+    "independence": {
+      "imported_knowledgeforge_runtime": false,
+      "mutated_knowledgeforge": false,
+      "read_canonical_repository": false,
+      "used_postgresql": false
+    },
+    "indexes": {
+      "entity_index": [
+        "DNK",
+        "NOR",
+        "SWE"
+      ],
+      "mechanical_answers": [
+        "absolute_coefficient_at_least_0_8",
+        "methods"
+      ],
+      "method_index": [
+        "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      ],
+      "series_index": [
+        "AG.LND.AGRI.ZS",
+        "AG.LND.FRST.ZS",
+        "EG.ELC.FOSL.ZS",
+        "EG.ELC.RNWX.ZS",
+        "FM.LBL.BMNY.GD.ZS",
+        "FS.AST.PRVT.GD.ZS",
+        "IT.CEL.SETS.P2",
+        "IT.NET.USER.ZS",
+        "NE.EXP.GNFS.ZS",
+        "NE.IMP.GNFS.ZS"
+      ]
+    },
+    "result_count": 13,
+    "valid": true
+  },
+  "scenarios": {
+    "absolute_coefficient_at_least_0_8": {
+      "deterministic_content_fingerprint": "sha256:404ab9c08600c7f800272da1966ce04c324484a3d829f2c254cc9af38aa7f111",
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "package_ids": [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1"
+      ],
+      "performance_seconds": {
+        "freshness_validation": 0.064559,
+        "payload_validation": 0.00114,
+        "query_execution": 0.033898,
+        "serialization": 0.002511
+      },
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "query_fingerprint": "sha256:34b465a75d61a0a9a39881660815ea0b6447554a5ab3fd26bbe79eec13345795",
+      "query_shape": {
+        "indexed_generic_filters": 1,
+        "jsonb_payload_scans": 1
+      },
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "result_count": 7,
+      "result_set_fingerprint": "sha256:74bbf9bd373289d3426e56620cc9bf60a64213e478e9812ae22ba8f6cdd33ac4"
+    },
+    "all_pearson_relationships": {
+      "deterministic_content_fingerprint": "sha256:fb28dba88d9715db1db85dcdd0aa535f923164faca6112b5b28acf2e7ea69cc3",
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "package_ids": [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-demographic-rates-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-health-system-coverage-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1"
+      ],
+      "performance_seconds": {
+        "freshness_validation": 0.057561,
+        "payload_validation": 0.002142,
+        "query_execution": 0.041062,
+        "serialization": 0.011664
+      },
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "query_fingerprint": "sha256:7ee0faa2b7951d3680b3e4a963c864365c92eb208fdeb87bc1ee4f4e2314a324",
+      "query_shape": {
+        "indexed_generic_filters": 1,
+        "jsonb_payload_scans": 1
+      },
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "result_count": 13,
+      "result_set_fingerprint": "sha256:7cafe3558ecad1230c110f590642ed12b900f0cf6ae3e30a6c13b02f7cd8a377"
+    },
+    "entity_nor": {
+      "deterministic_content_fingerprint": "sha256:af5eb6032536286a4783707898735780bf507f6b4f75eb553b7ce80803d9f96e",
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "package_ids": [
+        "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+      ],
+      "performance_seconds": {
+        "freshness_validation": 0.057886,
+        "payload_validation": 0.000581,
+        "query_execution": 0.038357,
+        "serialization": 0.001658
+      },
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "query_fingerprint": "sha256:aa9c9c4d054962e615ff4eb9d4505253c5457db9510dd31e3af0aeff6d55c495",
+      "query_shape": {
+        "indexed_generic_filters": 1,
+        "jsonb_payload_scans": 1
+      },
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "result_count": 5,
+      "result_set_fingerprint": "sha256:e4e6a1e5708091026509bdc8784f43e48e46e49e81612214efebfb342a4c4e25"
+    },
+    "exact_package_id": {
+      "deterministic_content_fingerprint": "sha256:bbbf319995420d540a953c1aff2064af6afaf69976589174532a5e1d99437bc6",
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "package_ids": [
+        "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+      ],
+      "performance_seconds": {
+        "freshness_validation": 0.072746,
+        "payload_validation": 0.000141,
+        "query_execution": 0.037844,
+        "serialization": 0.000509
+      },
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "query_fingerprint": "sha256:637ef064f0aaa0e9d917b43674fc810fc1bd20f885fa3dd6e841dfaa3a5b5fef",
+      "query_shape": {
+        "indexed_generic_filters": 1,
+        "jsonb_payload_scans": 0
+      },
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "result_count": 1,
+      "result_set_fingerprint": "sha256:bb32bc112647095808e0239fe6c9ac3dac3f8de60ae13154954465e4fe67a847"
+    },
+    "involving_ne_exp_gnfs_zs": {
+      "deterministic_content_fingerprint": "sha256:eca8a6dafceda7400cb8d04b2dc89c38ee761590aa7b657ae626ebbee76b42ac",
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "package_ids": [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1"
+      ],
+      "performance_seconds": {
+        "freshness_validation": 0.057049,
+        "payload_validation": 0.000391,
+        "query_execution": 0.04481,
+        "serialization": 0.001207
+      },
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "query_fingerprint": "sha256:a91d1b9643cae59436f9431b6c0c93573021c9970ee94dc0e2bbdeb3ab585f1a",
+      "query_shape": {
+        "indexed_generic_filters": 1,
+        "jsonb_payload_scans": 1
+      },
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "result_count": 3,
+      "result_set_fingerprint": "sha256:2b7a5df256fa08d56113fa10ed6229ec642dd523301d0507645c9421e0fa7f0b"
+    },
+    "method_wdi_annual_scalar_pearson_v1": {
+      "deterministic_content_fingerprint": "sha256:e7e6c9d33f1028a2b97fb3abf33f460031221bf1666202198d0ba2038918a548",
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "package_ids": [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-demographic-rates-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-health-system-coverage-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1"
+      ],
+      "performance_seconds": {
+        "freshness_validation": 0.058616,
+        "payload_validation": 0.001607,
+        "query_execution": 0.045321,
+        "serialization": 0.004095
+      },
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "query_fingerprint": "sha256:343e9eb5403dc988d51095722e6d55d62fb8d18e415787886a97c2fce770e6cf",
+      "query_shape": {
+        "indexed_generic_filters": 1,
+        "jsonb_payload_scans": 2
+      },
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "result_count": 13,
+      "result_set_fingerprint": "sha256:7cafe3558ecad1230c110f590642ed12b900f0cf6ae3e30a6c13b02f7cd8a377"
+    },
+    "raw_transformation_pearson": {
+      "deterministic_content_fingerprint": "sha256:1970e0950c0ed82a5baef7f77b2cceea9aa8a4e2c03887bbd05d040cc46babac",
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "package_ids": [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-demographic-rates-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-health-system-coverage-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1"
+      ],
+      "performance_seconds": {
+        "freshness_validation": 0.058323,
+        "payload_validation": 0.001377,
+        "query_execution": 0.039332,
+        "serialization": 0.004132
+      },
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "query_fingerprint": "sha256:21eb908be20410b46da8a47797a1acb63684f62d206d086e842e92fbeebdd9e6",
+      "query_shape": {
+        "indexed_generic_filters": 1,
+        "jsonb_payload_scans": 2
+      },
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "result_count": 13,
+      "result_set_fingerprint": "sha256:7cafe3558ecad1230c110f590642ed12b900f0cf6ae3e30a6c13b02f7cd8a377"
+    },
+    "sql_injection_probe": {
+      "deterministic_content_fingerprint": "sha256:24b8e60e7de9f6d211d4354848abcfb125ef4b5f2978721b53bee603b119a5f6",
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "package_ids": [],
+      "performance_seconds": {
+        "freshness_validation": 0.057616,
+        "payload_validation": 0.0,
+        "query_execution": 0.042274,
+        "serialization": 0.000245
+      },
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "query_fingerprint": "sha256:d57009cd64bed4548d8880ac74294578c0ed4de0ded72cbf790d2209e5854c6c",
+      "query_shape": {
+        "indexed_generic_filters": 1,
+        "jsonb_payload_scans": 1
+      },
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "result_count": 0,
+      "result_set_fingerprint": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "zero_results": {
+      "deterministic_content_fingerprint": "sha256:dd5a772132de7e4eecd76aa2ff6f2cdda29dcece391b94e545e4da1feea4ecb6",
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "package_ids": [],
+      "performance_seconds": {
+        "freshness_validation": 0.057346,
+        "payload_validation": 0.0,
+        "query_execution": 0.043072,
+        "serialization": 0.000239
+      },
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "query_fingerprint": "sha256:3cbf9d1f1f1f3f5c8ca7581c37e2e1c45a91214c2584e0fa3e50bc8f975256ef",
+      "query_shape": {
+        "indexed_generic_filters": 1,
+        "jsonb_payload_scans": 1
+      },
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "result_count": 0,
+      "result_set_fingerprint": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    }
+  },
+  "usefulness": {
+    "absolute_coefficient_at_least_0_8": [
+      "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1"
+    ],
+    "eliminates_need_to_access_postgresql_internals": true,
+    "eliminates_need_to_query_WDI": true,
+    "eliminates_need_to_recompute_correlations": true,
+    "eliminates_need_to_understand_filesystem_layout": true,
+    "methods": {
+      "wdi_annual_scalar_pearson_correlation_v1@1.0": [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-demographic-rates-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-health-system-coverage-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1"
+      ]
+    },
+    "relationships_for_NOR": [
+      "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+    ],
+    "relationships_involving_NE.EXP.GNFS.ZS": [
+      "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1"
+    ]
+  }
+}

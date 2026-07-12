@@ -1,0 +1,32 @@
+{
+  "byte_identical_predecessor_in_flawed_prototype": false,
+  "changed_packages_meaning": "previous prototype counted one affected derivation/successor scope, but it also mutated predecessor lifecycle bytes; corrected model counts one new successor package while current/superseded state is external",
+  "corrected_predecessor_byte_identical": true,
+  "corrected_predecessor_post_sha256": "8330693f4aa639f4bc8e38a6409679b44f41c40ac6a5e11a0c07a1ab61e8467e",
+  "current_state_identity": "artifacts/reports/canonical-supersession-immutability-durability-gate-20260711/corrected_isolated_model/state/current_state_registry.json",
+  "decision": "A. Immutability flaw found in prior isolated prototype; corrected isolated model validates immutable predecessor plus external supersession/current-state records and durability gate is ready for reviewed staging authorization.",
+  "durability_inventory": "artifacts/reports/canonical-supersession-immutability-durability-gate-20260711/durability_inventory.json",
+  "exactly_one_current": true,
+  "flawed_prototype_preserved": "artifacts/reports/canonical-supersession-immutability-durability-gate-20260711/evidence/flawed_mutated_predecessor_package.json",
+  "full_incremental_decision": "retain full rebuild for production; corrected incremental is admissible only after current-state table and transaction/rollback guarantees are adopted",
+  "instruction_present": true,
+  "isolated_postgresql": {
+    "attempted": true,
+    "database": "knowledgeforge_immutability_gate_20260711",
+    "database_preexisted": true,
+    "precheck_exit": 0,
+    "precheck_stderr": "",
+    "status": "skipped_existing_isolated_database_to_honor_no_deletion_boundary"
+  },
+  "predecessor_post_supersession_sha256": "8edcbb63c45b96a747ab851d1e9806a1687f4e31f206bc36ab13bcdde1dff46f",
+  "predecessor_pre_supersession_sha256": "8330693f4aa639f4bc8e38a6409679b44f41c40ac6a5e11a0c07a1ab61e8467e",
+  "rollback_idempotence": {
+    "rerun_would_select_existing_successor": true,
+    "state_hash_after_failed_validation": "180fd3f4931b16b18ee3b7a765d9d0b4d391bfa38d54254862a82e6e611b3b3f",
+    "state_hash_before": "180fd3f4931b16b18ee3b7a765d9d0b4d391bfa38d54254862a82e6e611b3b3f",
+    "state_unchanged_after_failed_validation": true
+  },
+  "sensitive_material_clean": false,
+  "supersession_record": "artifacts/reports/canonical-supersession-immutability-durability-gate-20260711/corrected_isolated_model/evolution/supersession_records.jsonl",
+  "task_executed": true
+}

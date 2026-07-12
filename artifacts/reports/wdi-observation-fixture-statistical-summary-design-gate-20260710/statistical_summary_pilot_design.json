@@ -1,0 +1,120 @@
+{
+  "algorithm_version": "statistical_summary_pilot_design_v1",
+  "boundary_exclusions": [
+    "causal explanation",
+    "good/bad assessment",
+    "forecast",
+    "recommendation",
+    "investment implication",
+    "narrative conclusion",
+    "trend claim"
+  ],
+  "candidate_measures": [
+    {
+      "include": true,
+      "measure": "observation_count",
+      "reason": "required evidence sufficiency and audit field"
+    },
+    {
+      "include": true,
+      "measure": "missing_count_and_share",
+      "reason": "required by doctrine for statistical characterization"
+    },
+    {
+      "include": true,
+      "measure": "minimum_and_maximum",
+      "reason": "descriptive extrema are valid for count-valued population observations"
+    },
+    {
+      "include": true,
+      "measure": "arithmetic_mean",
+      "reason": "valid descriptive measure for single unit count series when labeled non-interpretively"
+    },
+    {
+      "include": true,
+      "measure": "median",
+      "reason": "robust central tendency descriptor"
+    },
+    {
+      "include": true,
+      "measure": "population_standard_deviation",
+      "reason": "valid dispersion descriptor if population formula is explicit"
+    },
+    {
+      "include": false,
+      "measure": "selected_quantiles",
+      "reason": "defer from first pilot unless quantile algorithm and sample-size value are explicitly needed"
+    },
+    {
+      "include": true,
+      "measure": "first_and_last_valid_observation",
+      "reason": "descriptive endpoint values, not trend claim"
+    },
+    {
+      "include": true,
+      "measure": "period_coverage",
+      "reason": "states observed period coverage and missingness"
+    }
+  ],
+  "design_status": "ready_for_separate_execution_authorization_not_executed",
+  "deterministic_calculation_order": [
+    "load normalized fixture",
+    "verify normalized fingerprint",
+    "filter observed values",
+    "sort by entity_id, indicator_code, period",
+    "compute approved measures",
+    "serialize canonical summary payload",
+    "fingerprint output"
+  ],
+  "entity_scope": [
+    "DNK"
+  ],
+  "future_knowledge_type": "statistical_characterization",
+  "grouping_dimensions": [
+    "indicator_code",
+    "entity_id"
+  ],
+  "minimum_observation_requirements": {
+    "minimum_coverage_share": 0.85,
+    "minimum_observed_values": 30
+  },
+  "missing_data_treatment": "Retain explicit missing observations. Compute numeric summaries over observed values only; report missing count and share separately. Reject if observed count falls below minimum.",
+  "not_executed_summary_values": {
+    "missing_count": 0,
+    "note": "The production pilot was not executed. The following fixture shape facts are validation facts, not a promoted statistical summary Knowledge Object.",
+    "observed_count": 35
+  },
+  "population_being_summarized": "Denmark annual WDI Population, total observations for 1990-2024 as retained in the fixture",
+  "postgresql_v1_compatibility": {
+    "canonical_json": true,
+    "existing_lookup_facilities": [
+      "identity",
+      "family",
+      "statement-type",
+      "lifecycle",
+      "fingerprint",
+      "provenance"
+    ],
+    "lossless_jsonb_projection": true,
+    "schema_expansion_required": false
+  },
+  "precision_and_rounding": "Use decimal arithmetic over canonical base-10 numeric strings. Integer count measures remain integers. Mean/median/std/quantiles rounded only according to explicitly declared method; default display can use two decimals while fingerprint uses exact decimal strings.",
+  "rejection_conditions": [
+    "normalized fixture fingerprint mismatch",
+    "indicator/entity/period outside scope",
+    "observed count below 30",
+    "coverage share below 0.85",
+    "missingness not represented",
+    "non-numeric observed value",
+    "boundary/InsightForge language present"
+  ],
+  "source_fixture_fingerprint": "sha256:01f10c90228540c31f2f873ee5b4930006c99bf430c7cb741f41a0e8157734b6",
+  "standard_deviation": "If included, use population standard deviation for the selected finite fixture population; label method explicitly. Sample standard deviation not selected for first pilot unless separately justified.",
+  "time_window": {
+    "end_year": 2024,
+    "frequency": "annual",
+    "start_year": 1990
+  },
+  "unit_preservation": "persons",
+  "validation_tolerances": "Exact for integer counts/min/max/first/last/counts. Decimal outputs compare by canonical Decimal strings after declared rounding."
+}

@@ -1,0 +1,194 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign40-infrastructure-internet-mobile-swe-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-11",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:7af58aefaea6555d8fe6596463fb1e59aa3909c030c9beaf63a0154d6374d9b1"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-11",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign40-infrastructure_internet_mobile_swe-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:7af58aefaea6555d8fe6596463fb1e59aa3909c030c9beaf63a0154d6374d9b1",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI IT.NET.USER.ZS and IT.CEL.SETS.P2 SWE annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 40 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:d0de4b2e81dc84936613a3cb96897c4b0dc5dfd2c33f7be9847e6c0a7c67562f",
+    "evidence_references": "sha256:721f5b4b9bfc419ca4b52aaaea9dcb199e3f758275cc297de850e215a873a741",
+    "generated_statements": "sha256:fa646f363201c2ff870188c281fbbf5f825552016c02d0e94031af16c3b5cd72",
+    "input_set": "sha256:9a4d01da5016083880c70eb47a01f243642f05300689be27b347901b2e421128",
+    "package_manifest": "sha256:4889f39f7a595d5f643ac77a6c79a05450b793811d059bb2a8f79383cf6493c7",
+    "query_definitions": "sha256:279a2346df1a3eb103d3bdb38a5b91357e10f4d68d008596a8d5094946ea00bb"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "SWE",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign40-infrastructure_internet_mobile_swe-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign40-infrastructure_internet_mobile_swe-fixture"
+      ],
+      "origin": "computed_from_campaign40_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign40-infrastructure-internet-mobile-swe-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "1",
+        "aligned_pair_count": 35,
+        "calculation_evidence_fingerprint": "sha256:3a7803768cbb83cd016d59cf49f5fe6672cc95d740eba1b5e5af1d2b7efe85ba",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "not present",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "ordinary limitation",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "0.402109713928",
+          "promoted_as_knowledge_object": false,
+          "time_index_error": "mismatched entities"
+        },
+        "entity_id": "SWE",
+        "family": "Infrastructure",
+        "fixture_fingerprint": "sha256:7af58aefaea6555d8fe6596463fb1e59aa3909c030c9beaf63a0154d6374d9b1",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [],
+          "series_b": []
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:f2338e6e6b7c84b2e3c70bd6316ba04ecd8ee664540f81c92460249fb5b11cdc",
+        "pearson_coefficient": {
+          "canonical": "0.98654957106",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "IT.NET.USER.ZS",
+          "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+          "frequency": "annual",
+          "name": "Individuals using the Internet (% of population)",
+          "source_identity": "World Bank WDI",
+          "unit": "% of population"
+        },
+        "series_b": {
+          "code": "IT.CEL.SETS.P2",
+          "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+          "frequency": "annual",
+          "name": "Mobile cellular subscriptions (per 100 people)",
+          "source_identity": "World Bank WDI",
+          "unit": "per 100 people"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign40_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual SWE observations from 1990 through 2024, the Pearson correlation between Individuals using the Internet (% of population) and Mobile cellular subscriptions (per 100 people) is 0.98654957106, using 35 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign40_first_end_to_end_spec_driven_pearson_batch",
+    "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 40",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+      "sha256:3a7803768cbb83cd016d59cf49f5fe6672cc95d740eba1b5e5af1d2b7efe85ba"
+    ],
+    "evidence_refs": [
+      "ev-campaign40-infrastructure_internet_mobile_swe-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "SWE"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_infrastructure_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "shared_denominator",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

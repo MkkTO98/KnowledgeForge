@@ -1,0 +1,312 @@
+{
+  "deterministic_content": {
+    "contract": {
+      "identity": "knowledgeforge_relationship_export_v1@1.0",
+      "name": "knowledgeforge_relationship_export_v1",
+      "version": "1.0"
+    },
+    "freshness": {
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "projection_tool_version": "postgresql_operational_projection_v1",
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "repository_object_count": 538
+    },
+    "package_identities": [
+      "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+    ],
+    "query": {
+      "controls": {
+        "include_full_package_payload": true,
+        "include_provenance": true,
+        "limit": 200,
+        "max_result_count": 200,
+        "offset": 0,
+        "only_current_valid_projection": true,
+        "sort": "package_id"
+      },
+      "filters": {
+        "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+      },
+      "query_contract": "knowledgeforge_relationship_query_v1@1.0"
+    },
+    "query_fingerprint": "sha256:637ef064f0aaa0e9d917b43674fc810fc1bd20f885fa3dd6e841dfaa3a5b5fef",
+    "result_count": 999,
+    "result_set_fingerprint": "sha256:bb32bc112647095808e0239fe6c9ac3dac3f8de60ae13154954465e4fe67a847",
+    "results": [
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign40-health-life-expectancy-under5-mortality-nor-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-11",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:210fa5b3b1e739d10fa3e1081b61547a0465c1d0010a5237ec5b24a834fee9ac"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-11",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign40-health_life_expectancy_under5_mortality_nor-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:210fa5b3b1e739d10fa3e1081b61547a0465c1d0010a5237ec5b24a834fee9ac",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI SP.DYN.LE00.IN and SH.DYN.MORT NOR annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 40 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:ba1f21daa39649593cdeff0e53a44c123996d2e6ad411cb544e4b6de06c10db4",
+            "evidence_references": "sha256:04da8e6d52548dbcdd97e3e97353f2218434135c1bfda1381b035af017072076",
+            "generated_statements": "sha256:926c9d12ee47e45d8236aa14e3f0411ab8d03859f595dddeddfcc91231c2f764",
+            "input_set": "sha256:9a4d01da5016083880c70eb47a01f243642f05300689be27b347901b2e421128",
+            "package_manifest": "sha256:5bfcb7ac2b5ee01fc2bf2b5055f0298253998c08a4c39e37ec185cf513216ad5",
+            "query_definitions": "sha256:ca511ba8390e1586e7a2c238f93e682ee03ddd1b9a671826c07441355f4e17fb"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "NOR",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign40-health_life_expectancy_under5_mortality_nor-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign40-health_life_expectancy_under5_mortality_nor-fixture"
+              ],
+              "origin": "computed_from_campaign40_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign40-health-life-expectancy-under5-mortality-nor-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "calculation_evidence_fingerprint": "sha256:9940d3ad553c0933c066f59f2dc00e477eb8ed918f6fd89266df56ce323754e6",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "material limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "not present",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "-0.207863151096",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "0.991026536994",
+                  "series_b_vs_time_index": "-0.940259226282"
+                },
+                "entity_id": "NOR",
+                "family": "Health",
+                "fixture_fingerprint": "sha256:210fa5b3b1e739d10fa3e1081b61547a0465c1d0010a5237ec5b24a834fee9ac",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:6b1699ab64cf79cd89d0e0436c1b015e63629565a9cf7dee67b172b67c0c6feb",
+                "pearson_coefficient": {
+                  "canonical": "-0.951151571489",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "SP.DYN.LE00.IN",
+                  "definition": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+                  "frequency": "annual",
+                  "name": "Life expectancy at birth, total (years)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "years"
+                },
+                "series_b": {
+                  "code": "SH.DYN.MORT",
+                  "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+                  "frequency": "annual",
+                  "name": "Mortality rate, under-5 (per 1,000 live births)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "per 1,000 live births"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign40_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Life expectancy at birth, total (years) and Mortality rate, under-5 (per 1,000 live births) is -0.951151571489, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign40_first_end_to_end_spec_driven_pearson_batch",
+            "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 40",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:9940d3ad553c0933c066f59f2dc00e477eb8ed918f6fd89266df56ce323754e6"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-health_life_expectancy_under5_mortality_nor-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "NOR"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_health_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:f84032acffae0a2144f361f926afe20bd2413b7261b7ae26565a6f22f19ca2bd",
+        "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:5bfcb7ac2b5ee01fc2bf2b5055f0298253998c08a4c39e37ec185cf513216ad5",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "-0.951151571489",
+            "unit": "dimensionless"
+          },
+          "entity": "NOR",
+          "evidence_family": "external_wdi_annual_scalar_health_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "-0.207863151096",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "0.991026536994",
+            "series_b_vs_time_index": "-0.940259226282"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:9940d3ad553c0933c066f59f2dc00e477eb8ed918f6fd89266df56ce323754e6"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-health_life_expectancy_under5_mortality_nor-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "SP.DYN.LE00.IN",
+              "definition": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+              "frequency": "annual",
+              "name": "Life expectancy at birth, total (years)",
+              "source_identity": "World Bank WDI",
+              "unit": "years"
+            },
+            {
+              "code": "SH.DYN.MORT",
+              "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+              "frequency": "annual",
+              "name": "Mortality rate, under-5 (per 1,000 live births)",
+              "source_identity": "World Bank WDI",
+              "unit": "per 1,000 live births"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      }
+    ],
+    "stable_order": "package_id_ascending"
+  },
+  "deterministic_content_fingerprint": "sha256:bbbf319995420d540a953c1aff2064af6afaf69976589174532a5e1d99437bc6",
+  "operational_metadata": {
+    "created_at": "2026-07-11T13:09:42.558600+00:00",
+    "performance_seconds": {
+      "freshness_validation": 0.072746,
+      "payload_validation": 0.000141,
+      "query_execution": 0.037844,
+      "serialization": 0.000509
+    },
+    "query_shape": {
+      "indexed_generic_filters": 1,
+      "jsonb_payload_scans": 0
+    },
+    "sql_shape_evidence": "internal; table and schema details intentionally excluded from contract",
+    "tool": "relationship_export_v1"
+  }
+}

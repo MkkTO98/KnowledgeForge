@@ -1,0 +1,20 @@
+{
+  "note": "The adapter contains postgresql:// only as a forbidden leakage-scan literal, not as a client dependency. AST scan found no MacroForge imports, PostgreSQL client imports, or subprocess database calls.",
+  "results": {
+    "tests/test_macroforge_neutral_release_adapter_v1.py": {
+      "contains_postgresql_url_literal_for_leakage_scan_only": false,
+      "contains_psql_command_call": false,
+      "macroforge_imports": [],
+      "postgres_client_imports": [],
+      "subprocess_calls": []
+    },
+    "tools/macroforge_neutral_release_adapter_v1.py": {
+      "contains_postgresql_url_literal_for_leakage_scan_only": true,
+      "contains_psql_command_call": false,
+      "macroforge_imports": [],
+      "postgres_client_imports": [],
+      "subprocess_calls": []
+    }
+  },
+  "runtime_dependency_violation": false
+}

@@ -1,0 +1,41 @@
+{
+  "contract_identity": "knowledgeforge_neutral_evidence_release_contract_v1@1.0",
+  "controlled_invalid_examples": [
+    "fingerprint_mismatch.json",
+    "missing_provider.json",
+    "wrong_contract_version.json"
+  ],
+  "fingerprint_rules": "sha256 over canonical JSON excluding the fingerprint field itself; operational timestamps excluded from deterministic release identity",
+  "forbidden_dependencies": [
+    "producer-specific storage identifiers",
+    "producer runtime classes",
+    "credential material",
+    "consumer-private relational schema"
+  ],
+  "minimal_valid_example": "real_wdi_exports_imports_release_v1.json",
+  "neutral_release_contract_specification": {
+    "required_item_fields": [
+      "item_id",
+      "entity_id",
+      "indicator_code",
+      "period",
+      "value_canonical",
+      "unit",
+      "item_fingerprint"
+    ],
+    "required_release_fields": [
+      "contract_id",
+      "contract_version",
+      "release_id",
+      "provider",
+      "dataset",
+      "source_release_vintage",
+      "evidence_items",
+      "release_content_fingerprint"
+    ]
+  },
+  "package_id": "knowledgeforge-provider-neutral-release-conformance-v1",
+  "predecessor_supersession_rules": "successor releases must name prior_release_id; missing predecessors fail closed",
+  "unit_missingness_requirements": "unit required for every item; observed false requires missing_reason and null value",
+  "validation_command": "python3 tools/release_inbox_v1.py validate-release <path>"
+}

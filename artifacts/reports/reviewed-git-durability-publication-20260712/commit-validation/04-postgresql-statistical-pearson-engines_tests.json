@@ -1,0 +1,36 @@
+[
+  {
+    "cmd": [
+      "python3",
+      "-m",
+      "compileall",
+      "-q",
+      "tools",
+      "tests"
+    ],
+    "returncode": 0,
+    "stdout": "",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "uvx",
+      "--from",
+      "pytest",
+      "pytest",
+      "tests/test_postgresql_operational_projection.py",
+      "tests/test_statistical_summary_v2.py",
+      "tests/test_pearson_correlation_v1.py",
+      "tests/test_campaign34_wdi_denmark_population_statistical_summary.py",
+      "tests/test_campaign35_wdi_nordic_exports_statistical_summary.py",
+      "tests/test_campaign36_dnk_exports_imports_correlation.py",
+      "tests/test_campaign37_swe_nor_exports_imports_correlation.py",
+      "tests/test_campaign38_semantically_distinct_correlation.py",
+      "tests/test_campaign39_heterogeneous_correlation_batch.py",
+      "-q"
+    ],
+    "returncode": 0,
+    "stdout": "................................................                         [100%]\n48 passed in 31.54s\n",
+    "stderr": ""
+  }
+]

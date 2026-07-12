@@ -1,0 +1,483 @@
+{
+  "authoritative_mature_family_source": "tools/wdi_family_maturity_registry.py",
+  "forbidden_fields": [
+    "pearson_coefficient",
+    "coefficient_magnitude",
+    "coefficient_sign",
+    "p_value",
+    "significance",
+    "investment_relevance",
+    "narrative_interest"
+  ],
+  "records": [
+    {
+      "candidate_id": "health_life_expectancy_under5_mortality_nor",
+      "construction_risk_tags": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "material limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "contains_pearson_coefficient": false,
+      "coverage_probe": {
+        "aligned_coverage": "1",
+        "expected_aligned_pairs": 35,
+        "expected_slots": 35,
+        "missing_series_a": [],
+        "missing_series_b": [],
+        "series_a_observed": 35,
+        "series_b_observed": 35
+      },
+      "entity": "NOR",
+      "family": "Health",
+      "period": {
+        "end": 2024,
+        "start": 1990
+      },
+      "series_a": {
+        "code": "SP.DYN.LE00.IN",
+        "definition": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+        "frequency": "annual",
+        "name": "Life expectancy at birth, total (years)",
+        "source_identity": "World Bank WDI",
+        "unit": "years"
+      },
+      "series_b": {
+        "code": "SH.DYN.MORT",
+        "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+        "frequency": "annual",
+        "name": "Mortality rate, under-5 (per 1,000 live births)",
+        "source_identity": "World Bank WDI",
+        "unit": "per 1,000 live births"
+      },
+      "transformation_compatibility": "raw annual scalar/raw annual scalar",
+      "variance_probe": {
+        "series_a_nonconstant": true,
+        "series_b_nonconstant": true
+      }
+    },
+    {
+      "candidate_id": "finance_credit_broad_money_dnk",
+      "construction_risk_tags": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "ordinary limitation",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "material limitation",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "contains_pearson_coefficient": false,
+      "coverage_probe": {
+        "aligned_coverage": "1",
+        "expected_aligned_pairs": 35,
+        "expected_slots": 35,
+        "missing_series_a": [],
+        "missing_series_b": [],
+        "series_a_observed": 35,
+        "series_b_observed": 35
+      },
+      "entity": "DNK",
+      "family": "Financial Sector",
+      "period": {
+        "end": 2024,
+        "start": 1990
+      },
+      "series_a": {
+        "code": "FS.AST.PRVT.GD.ZS",
+        "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+        "frequency": "annual",
+        "name": "Domestic credit to private sector (% of GDP)",
+        "source_identity": "World Bank WDI",
+        "unit": "percent of GDP"
+      },
+      "series_b": {
+        "code": "FM.LBL.BMNY.GD.ZS",
+        "definition": "Broad money is the sum of all liquid financial instruments held by money-holding sectors that are widely accepted in an economy as a medium of exchange, plus those that can be converted into a medium of exchange at short notice at, or close to, their full nominal value. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+        "frequency": "annual",
+        "name": "Broad money (% of GDP)",
+        "source_identity": "World Bank WDI",
+        "unit": "percent of GDP"
+      },
+      "transformation_compatibility": "raw annual scalar/raw annual scalar",
+      "variance_probe": {
+        "series_a_nonconstant": true,
+        "series_b_nonconstant": true
+      }
+    },
+    {
+      "candidate_id": "infrastructure_internet_mobile_swe",
+      "construction_risk_tags": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "ordinary limitation",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "contains_pearson_coefficient": false,
+      "coverage_probe": {
+        "aligned_coverage": "1",
+        "expected_aligned_pairs": 35,
+        "expected_slots": 35,
+        "missing_series_a": [],
+        "missing_series_b": [],
+        "series_a_observed": 35,
+        "series_b_observed": 35
+      },
+      "entity": "SWE",
+      "family": "Infrastructure",
+      "period": {
+        "end": 2024,
+        "start": 1990
+      },
+      "series_a": {
+        "code": "IT.NET.USER.ZS",
+        "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+        "frequency": "annual",
+        "name": "Individuals using the Internet (% of population)",
+        "source_identity": "World Bank WDI",
+        "unit": "% of population"
+      },
+      "series_b": {
+        "code": "IT.CEL.SETS.P2",
+        "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+        "frequency": "annual",
+        "name": "Mobile cellular subscriptions (per 100 people)",
+        "source_identity": "World Bank WDI",
+        "unit": "per 100 people"
+      },
+      "transformation_compatibility": "raw annual scalar/raw annual scalar",
+      "variance_probe": {
+        "series_a_nonconstant": true,
+        "series_b_nonconstant": true
+      }
+    },
+    {
+      "candidate_id": "energy_fossil_nonhydro_renewables_nor",
+      "construction_risk_tags": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "ordinary limitation",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "material limitation",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "contains_pearson_coefficient": false,
+      "coverage_probe": {
+        "aligned_coverage": "0.9142857142857142857142857143",
+        "expected_aligned_pairs": 32,
+        "expected_slots": 35,
+        "missing_series_a": [
+          2024
+        ],
+        "missing_series_b": [
+          2022,
+          2023,
+          2024
+        ],
+        "series_a_observed": 34,
+        "series_b_observed": 32
+      },
+      "entity": "NOR",
+      "family": "Energy & Mining",
+      "period": {
+        "end": 2024,
+        "start": 1990
+      },
+      "series_a": {
+        "code": "EG.ELC.FOSL.ZS",
+        "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+        "frequency": "annual",
+        "name": "Electricity production from oil, gas and coal sources (% of total)",
+        "source_identity": "World Bank WDI",
+        "unit": "% of total"
+      },
+      "series_b": {
+        "code": "EG.ELC.RNWX.ZS",
+        "definition": "The share of electricity production from renewable sources of total electricity production. Electricity production from renewable sources, excluding hydroelectric, includes geothermal, solar, tides, wind, biomass, and biofuels.",
+        "frequency": "annual",
+        "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+        "source_identity": "World Bank WDI",
+        "unit": "% of total"
+      },
+      "transformation_compatibility": "raw annual scalar/raw annual scalar",
+      "variance_probe": {
+        "series_a_nonconstant": true,
+        "series_b_nonconstant": true
+      }
+    },
+    {
+      "candidate_id": "agriculture_agricultural_forest_land_dnk",
+      "construction_risk_tags": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "ordinary limitation",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "material limitation",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "contains_pearson_coefficient": false,
+      "coverage_probe": {
+        "aligned_coverage": "0.9714285714285714285714285714",
+        "expected_aligned_pairs": 34,
+        "expected_slots": 35,
+        "missing_series_a": [
+          2024
+        ],
+        "missing_series_b": [
+          2024
+        ],
+        "series_a_observed": 34,
+        "series_b_observed": 34
+      },
+      "entity": "DNK",
+      "family": "Agriculture & Rural Development",
+      "period": {
+        "end": 2024,
+        "start": 1990
+      },
+      "series_a": {
+        "code": "AG.LND.AGRI.ZS",
+        "definition": "Agricultural land refers to the share of land area that is arable, under permanent crops, and under permanent pastures. Arable land includes land defined by the FAO as land under temporary crops (double-cropped areas are counted once), temporary meadows for mowing or for pasture, land under market or kitchen gardens, and land temporarily fallow. Land abandoned as a result of shifting cultivation is excluded. Land under permanent crops is land cultivated with crops that occupy the land for long periods and need not be replanted after each harvest, such as cocoa, coffee, and rubber. This category includes land under flowering shrubs, fruit trees, nut trees, and vines, but excludes land under trees grown for wood or timber. Permanent pasture is land used for five or more years for forage, including natural and cultivated crops.",
+        "frequency": "annual",
+        "name": "Agricultural land (% of land area)",
+        "source_identity": "World Bank WDI",
+        "unit": "% of land area"
+      },
+      "series_b": {
+        "code": "AG.LND.FRST.ZS",
+        "definition": "Forest area (% of land area) is the share of total land area that is under natural or planted stands of trees of at least 5 meters in situ, whether productive or not, and excludes tree stands in agricultural production systems (for example, in fruit plantations and agroforestry systems) and trees in urban parks and gardens.",
+        "frequency": "annual",
+        "name": "Forest area (% of land area)",
+        "source_identity": "World Bank WDI",
+        "unit": "% of land area"
+      },
+      "transformation_compatibility": "raw annual scalar/raw annual scalar",
+      "variance_probe": {
+        "series_a_nonconstant": true,
+        "series_b_nonconstant": true
+      }
+    },
+    {
+      "candidate_id": "demographic_birth_death_rates_nor",
+      "construction_risk_tags": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "material limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "material limitation",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "contains_pearson_coefficient": false,
+      "coverage_probe": {
+        "aligned_coverage": "1",
+        "expected_aligned_pairs": 35,
+        "expected_slots": 35,
+        "missing_series_a": [],
+        "missing_series_b": [],
+        "series_a_observed": 35,
+        "series_b_observed": 35
+      },
+      "entity": "NOR",
+      "family": "Demographic",
+      "period": {
+        "end": 2024,
+        "start": 1990
+      },
+      "series_a": {
+        "code": "SP.DYN.CBRT.IN",
+        "definition": "Crude birth rate indicates the number of live births occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+        "frequency": "annual",
+        "name": "Birth rate, crude (per 1,000 people)",
+        "source_identity": "World Bank WDI",
+        "unit": "per 1,000 people"
+      },
+      "series_b": {
+        "code": "SP.DYN.CDRT.IN",
+        "definition": "Crude death rate indicates the number of deaths occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+        "frequency": "annual",
+        "name": "Death rate, crude (per 1,000 people)",
+        "source_identity": "World Bank WDI",
+        "unit": "per 1,000 people"
+      },
+      "transformation_compatibility": "raw annual scalar/raw annual scalar",
+      "variance_probe": {
+        "series_a_nonconstant": true,
+        "series_b_nonconstant": true
+      }
+    },
+    {
+      "candidate_id": "education_primary_secondary_enrollment_nor",
+      "construction_risk_tags": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "ordinary limitation",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "material limitation",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "not present"
+      },
+      "contains_pearson_coefficient": false,
+      "coverage_probe": {
+        "aligned_coverage": "0.6857142857142857142857142857",
+        "expected_aligned_pairs": 24,
+        "expected_slots": 35,
+        "missing_series_a": [
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000
+        ],
+        "missing_series_b": [
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000
+        ],
+        "series_a_observed": 24,
+        "series_b_observed": 24
+      },
+      "entity": "NOR",
+      "family": "Education",
+      "period": {
+        "end": 2024,
+        "start": 1990
+      },
+      "series_a": {
+        "code": "SE.PRM.ENRR",
+        "definition": "Gross enrollment ratio is the ratio of total enrollment, regardless of age, to the population of the age group that officially corresponds to the level of education shown. Primary education provides children with basic reading, writing, and mathematics skills along with an elementary understanding of such subjects as history, geography, natural science, social science, art, and music.",
+        "frequency": "annual",
+        "name": "School enrollment, primary (% gross)",
+        "source_identity": "World Bank WDI",
+        "unit": "% gross"
+      },
+      "series_b": {
+        "code": "SE.SEC.ENRR",
+        "definition": "Gross enrollment ratio is the ratio of total enrollment, regardless of age, to the population of the age group that officially corresponds to the level of education shown. Secondary education completes the provision of basic education that began at the primary level, and aims at laying the foundations for lifelong learning and human development, by offering more subject- or skill-oriented instruction using more specialized teachers.",
+        "frequency": "annual",
+        "name": "School enrollment, secondary (% gross)",
+        "source_identity": "World Bank WDI",
+        "unit": "% gross"
+      },
+      "transformation_compatibility": "raw annual scalar/raw annual scalar",
+      "variance_probe": {
+        "series_a_nonconstant": true,
+        "series_b_nonconstant": true
+      }
+    },
+    {
+      "candidate_id": "finance_atm_credit_swe",
+      "construction_risk_tags": {
+        "algebraic_identity": "not present",
+        "common_administrative_reporting": "ordinary limitation",
+        "common_modeled_estimation_process": "ordinary limitation",
+        "definitional_overlap": "not present",
+        "direct_component_total_construction": "not present",
+        "embedded_series_construction": "not present",
+        "frequency_mismatch": "not present",
+        "shared_denominator": "not present",
+        "transformation_mismatch": "not present",
+        "unit_incompatibility": "ordinary limitation"
+      },
+      "contains_pearson_coefficient": false,
+      "coverage_probe": {
+        "aligned_coverage": "0.5714285714285714285714285714",
+        "expected_aligned_pairs": 20,
+        "expected_slots": 35,
+        "missing_series_a": [
+          1990,
+          1991,
+          1992,
+          1993,
+          1994,
+          1995,
+          1996,
+          1997,
+          1998,
+          1999,
+          2000,
+          2001,
+          2002,
+          2003,
+          2024
+        ],
+        "missing_series_b": [],
+        "series_a_observed": 20,
+        "series_b_observed": 35
+      },
+      "entity": "SWE",
+      "family": "Financial Sector",
+      "period": {
+        "end": 2024,
+        "start": 1990
+      },
+      "series_a": {
+        "code": "FB.ATM.TOTL.P5",
+        "definition": "Automated teller machines (ATMs) are electromechanical devices which enable customers of financial institutions to perform financial transactions such as cash withdrawals, balance inquiries, deposits, transfer of funds, and obtaining account information, using an electronic card.",
+        "frequency": "annual",
+        "name": "Automated teller machines (ATMs) (per 100,000 adults)",
+        "source_identity": "World Bank WDI",
+        "unit": "per 100,000 adults"
+      },
+      "series_b": {
+        "code": "FS.AST.PRVT.GD.ZS",
+        "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+        "frequency": "annual",
+        "name": "Domestic credit to private sector (% of GDP)",
+        "source_identity": "World Bank WDI",
+        "unit": "percent of GDP"
+      },
+      "transformation_compatibility": "raw annual scalar/raw annual scalar",
+      "variance_probe": {
+        "series_a_nonconstant": true,
+        "series_b_nonconstant": true
+      }
+    }
+  ],
+  "registry_fingerprint": "sha256:c1a99bada3e936739f0573eada4d3494a72baf10c66c8bd6236bd2c9dde80d18",
+  "registry_id": "campaign40_coefficient_free_candidate_registry_v1",
+  "version": "1.0"
+}

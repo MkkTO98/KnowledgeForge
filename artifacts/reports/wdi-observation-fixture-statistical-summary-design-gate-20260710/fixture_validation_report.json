@@ -1,0 +1,77 @@
+{
+  "acquisition_manifest": "artifacts/evidence-fixtures/wdi-demographic-population-total-denmark-1990-2024/acquisition_manifest.json",
+  "decision": "A",
+  "decision_label": "Evidence fixture validated; statistical-summary pilot is ready for separate execution authorization.",
+  "fingerprints": {
+    "combined_raw_artifact_fingerprint": "sha256:fd0be51504e4cf811a0e20e2858fdbafd567bbc4c9eaed5252f059282cc7153f",
+    "normalized_fingerprint": "sha256:01f10c90228540c31f2f873ee5b4930006c99bf430c7cb741f41a0e8157734b6",
+    "raw_fixture_fingerprint": "sha256:39fd3decdfe4a78b7678104a5cdd97b2a487819dce587650405e8059f08a4e4e",
+    "selection_fingerprint": "sha256:e5ec35208a8fcaa7561f19843b401b9751fb9246ef2e78185ea17bd5fef80d04"
+  },
+  "fixture_dir": "artifacts/evidence-fixtures/wdi-demographic-population-total-denmark-1990-2024",
+  "mutable_source_vintage_limitations": {
+    "exact_reproducibility": "retained local raw response bytes plus normalized fixture",
+    "limitation": "WDI API response is mutable; no true immutable historical vintage identifier was exposed, so future reacquisition of identical bytes is not claimed.",
+    "source_identity": "World Bank WDI API URLs, source id, request parameters, indicator metadata, and lastupdated metadata"
+  },
+  "normalized_fixture": "artifacts/evidence-fixtures/wdi-demographic-population-total-denmark-1990-2024/normalized_observations.json",
+  "observations": {
+    "first_period": 1990,
+    "last_period": 2024,
+    "missing": 0,
+    "missing_share": 0.0,
+    "observed": 35,
+    "total": 35
+  },
+  "provider_metadata": {
+    "indicator_metadata_page": {
+      "page": 1,
+      "pages": 1,
+      "per_page": "1",
+      "total": 1
+    },
+    "observation_page": {
+      "lastupdated": "2026-07-01",
+      "page": 1,
+      "pages": 1,
+      "per_page": 100,
+      "sourceid": "2",
+      "total": 35
+    },
+    "pagination": {
+      "page": 1,
+      "pages": 1,
+      "per_page": 100,
+      "total": 35
+    },
+    "sourceid": "2",
+    "wdi_lastupdated": "2026-07-01"
+  },
+  "raw_fixture": "artifacts/evidence-fixtures/wdi-demographic-population-total-denmark-1990-2024/raw_fixture.json",
+  "raw_indicator_metadata_response": "artifacts/evidence-fixtures/wdi-demographic-population-total-denmark-1990-2024/raw_indicator_metadata_response.json",
+  "raw_observation_response": "artifacts/evidence-fixtures/wdi-demographic-population-total-denmark-1990-2024/raw_observations_response.json",
+  "selection_contract": "artifacts/evidence-fixtures/wdi-demographic-population-total-denmark-1990-2024/selection_contract.json",
+  "selection_scope": {
+    "entity_set": [
+      "DNK"
+    ],
+    "expected_slots": 35,
+    "frequency": "annual",
+    "period_end": 2024,
+    "period_start": 1990
+  },
+  "validation_results": {
+    "duplicates_absent": true,
+    "entities_and_periods_satisfy_selection_contract": true,
+    "missingness_preserved": true,
+    "no_macroforge_access": true,
+    "numeric_values_deterministically_parsed": true,
+    "offline_regeneration_from_retained_raw_passed": true,
+    "ordering_independent_fingerprint_tested": true,
+    "provider_response_structurally_valid": true,
+    "raw_artifact_exists_and_fingerprint_matches": true,
+    "raw_to_normalized_provenance_complete": true,
+    "repeated_normalization_identical_fingerprint": true,
+    "requested_indicator_matches_returned_identity": true
+  }
+}

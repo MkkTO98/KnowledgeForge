@@ -1,0 +1,29 @@
+{
+  "arithmetic_mean_algorithm": "stable-order Decimal sum divided by observed_count inside the pinned local context",
+  "calculation_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+  "canonical_rounding_policy": "ROUND_HALF_EVEN",
+  "canonical_stored_decimal_places": 12,
+  "deterministic_serialization_rules": "canonical JSON sort_keys=True separators=(',', ':') ensure_ascii=False encoded as UTF-8 for fingerprints",
+  "human_display_decimal_places": 4,
+  "input_numerical_canonicalization": "base-10 plain decimal strings only; scientific notation, commas, locale formatting, NaN, and infinity rejected",
+  "internal_decimal_precision": 50,
+  "internal_rounding_mode": "ROUND_HALF_EVEN",
+  "median_algorithm": "sort observed Decimal values ascending; odd N uses middle value; even N averages two middle values inside pinned context",
+  "method_id": "wdi_annual_scalar_statistical_summary_v2",
+  "method_version": "2.0",
+  "minimum_coverage_share": "0.85",
+  "minimum_observed_count": 30,
+  "missing_value_treatment": "preserve missing rows; missing rows must have value_canonical null; numerical measures use observed rows only",
+  "negative_zero_handling": "canonicalize_to_zero",
+  "observation_ordering": [
+    "entity_id",
+    "indicator_code",
+    "period"
+  ],
+  "population_standard_deviation_denominator": "N observed values",
+  "population_standard_deviation_formula": "sqrt(sum((x - mean)^2) / N)",
+  "scientific_notation_policy": "forbidden_in_canonical_values",
+  "square_root_method": "Decimal.sqrt(context=pinned Context(prec=50, rounding=ROUND_HALF_EVEN))",
+  "summation_algorithm": "stable-order left-to-right Decimal addition inside local Context(prec=50, rounding=ROUND_HALF_EVEN)",
+  "trailing_zero_normalization": "strip_fractional_trailing_zeros"
+}

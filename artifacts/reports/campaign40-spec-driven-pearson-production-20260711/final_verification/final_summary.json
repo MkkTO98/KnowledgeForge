@@ -1,0 +1,140 @@
+{
+  "architecture_reality_audit_tail": "Report: /home/mkkto/srv/EIP/projects/KnowledgeForge/artifacts/reports/R-20260711-architecture-reality-audit.md\narchitecture-reality-audit: 0 block(s), 0 warning(s)",
+  "coherence": {
+    "blocks": [],
+    "mode": "generated",
+    "warnings": [
+      "context health: context/active_context.md is 289.6 hours old; generated bundles are task-specific and should be regenerated when needed"
+    ]
+  },
+  "context_health": {
+    "blocks": [],
+    "measured": [
+      {
+        "chars": 239,
+        "estimated_tokens": 60,
+        "limit_chars": 6000,
+        "path": "state/active_goal.md"
+      },
+      {
+        "chars": 548,
+        "estimated_tokens": 137,
+        "limit_chars": 12000,
+        "path": "state/project_state.md"
+      },
+      {
+        "chars": 1623,
+        "estimated_tokens": 406,
+        "limit_chars": 12000,
+        "path": "state/architecture.md"
+      },
+      {
+        "chars": 3714,
+        "estimated_tokens": 929,
+        "limit_chars": 6000,
+        "path": "state/recent_changes.md"
+      },
+      {
+        "block_chars": 9000,
+        "chars": 980,
+        "estimated_tokens": 245,
+        "path": "context/latest_handoff.md",
+        "warn_chars": 3000
+      },
+      {
+        "block_chars": 256000,
+        "chars": 434,
+        "estimated_tokens": 109,
+        "generated_artifact": true,
+        "path": "context/active_context.md",
+        "warn_chars": 40000
+      }
+    ],
+    "policy": {
+      "active_context_block_chars": 256000,
+      "active_context_warn_chars": 40000,
+      "active_goal_chars": 6000,
+      "architecture_chars": 12000,
+      "generated_context_stale_hours": 168,
+      "handoff_block_chars": 9000,
+      "handoff_warn_chars": 3000,
+      "project_state_chars": 12000,
+      "recent_changes_chars": 6000
+    },
+    "project": "/home/mkkto/srv/EIP/projects/KnowledgeForge",
+    "warnings": [
+      "context/active_context.md is 289.6 hours old; generated bundles are task-specific and should be regenerated when needed"
+    ]
+  },
+  "full_test_suite": {
+    "ok": true,
+    "tail": "test_historical_campaign34_and_campaign35_packages_remain_unchanged (test_wdi_unit_resolution.WDIUnitResolutionTest.test_historical_campaign34_and_campaign35_packages_remain_unchanged) ... ok\ntest_metadata_change_changes_unit_resolution_fingerprint (test_wdi_unit_resolution.WDIUnitResolutionTest.test_metadata_change_changes_unit_resolution_fingerprint) ... ok\ntest_missing_ambiguous_unit_cannot_inherit_persons (test_wdi_unit_resolution.WDIUnitResolutionTest.test_missing_ambiguous_unit_cannot_inherit_persons) ... ok\ntest_population_persons_is_definition_derived_not_generic_fallback (test_wdi_unit_resolution.WDIUnitResolutionTest.test_population_persons_is_definition_derived_not_generic_fallback) ... ok\ntest_unknown_indicator_fails_closed (test_wdi_unit_resolution.WDIUnitResolutionTest.test_unknown_indicator_fails_closed) ... ok\n\n----------------------------------------------------------------------\nRan 236 tests in 17.497s\n\nOK",
+    "test_count": 236
+  },
+  "git_diff_check_empty": true,
+  "historical_immutability": {
+    "changed_pre_existing_packages": [],
+    "checked_count": 532,
+    "valid": true
+  },
+  "postgresql_verify": {
+    "canonical_object_count": 538,
+    "extra_package_ids": [],
+    "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+    "missing_package_ids": [],
+    "package_fingerprint_failure_ids": [],
+    "package_fingerprint_failures": 0,
+    "payload_fidelity_failure_ids": [],
+    "payload_fidelity_failures": 0,
+    "projected_object_count": 538,
+    "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+    "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+    "state_repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+    "valid": true
+  },
+  "python_compile_tail": "Listing 'tools'...\nListing 'tests'...\nListing 'tests/fixtures'...\nListing 'tests/fixtures/package_construction_v1'...\nListing 'tests/fixtures/validation_framework_v1'...\nListing 'tests/invariants'...",
+  "repository_validation": {
+    "actual_object_count": 538,
+    "manifest_object_count": 538,
+    "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+    "unique_ids": 538,
+    "valid": true
+  },
+  "search_guards": {
+    "campaign40_macroforge_insightforge_dependency": {
+      "pass": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "campaign41_mentions_only_exclusions_no_artifact": {
+      "pass": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": "context/latest_handoff.md:12:Resume command: inspect `artifacts/reports/campaign40-spec-driven-pearson-production-20260711/campaign40_consolidated_report.md` and final verification outputs. Do not launch Campaign 41 without explicit instruction.\nspecs/correlation_batches/campaign40_first_end_to_end_spec_driven_pearson_batch.json:898:    \"Campaign 41\","
+    },
+    "campaign41_no_runner_or_spec_or_package": {
+      "pass": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "no_campaign40_runner": {
+      "pass": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    },
+    "stale_time_index_error_canonical": {
+      "pass": true,
+      "returncode": 0,
+      "stderr": "",
+      "stdout": ""
+    }
+  },
+  "targeted_engine_tests": {
+    "ok": true,
+    "tail": "test_candidate_failure_isolated_inside_batch (tests.test_correlation_batch_engine.CorrelationBatchEngineTest.test_candidate_failure_isolated_inside_batch) ... ok\ntest_corrected_campaign40_diagnostics_have_no_time_index_error (tests.test_correlation_batch_engine.CorrelationBatchEngineTest.test_corrected_campaign40_diagnostics_have_no_time_index_error) ... ok\ntest_downgrade_rejection_uses_existing_fixture_component (tests.test_correlation_batch_engine.CorrelationBatchEngineTest.test_downgrade_rejection_uses_existing_fixture_component) ... ok\ntest_historical_specs_reproduce_campaign36_39_without_promotion (tests.test_correlation_batch_engine.CorrelationBatchEngineTest.test_historical_specs_reproduce_campaign36_39_without_promotion) ... ok\ntest_stale_postgresql_marker_on_rebuild_failure (tests.test_correlation_batch_engine.CorrelationBatchEngineTest.test_stale_postgresql_marker_on_rebuild_failure) ... ok\n\n----------------------------------------------------------------------\nRan 7 tests in 0.042s\n\nOK",
+    "test_count": 7
+  }
+}

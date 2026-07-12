@@ -1,0 +1,106 @@
+{
+  "criteria": {
+    "campaign34_absent": {
+      "evidence": "separate search_files check total_count=0",
+      "passed": true
+    },
+    "canonical_and_projected_package_ids_match": {
+      "evidence": {
+        "extra": [],
+        "missing": []
+      },
+      "passed": true
+    },
+    "canonical_packages_remain_unchanged": {
+      "evidence": {
+        "added": [],
+        "changed": [],
+        "current_count": 521,
+        "missing": [],
+        "prior_count": 521,
+        "prior_reference": "artifacts/reports/postgresql-projection-implementation-20260710/canonical_object_byte_hashes_before.json",
+        "unchanged": true
+      },
+      "passed": true
+    },
+    "knowledgeforge_owned_database_exists": {
+      "evidence": [
+        "knowledgeforge|mkkto",
+        "macroforge|mkkto"
+      ],
+      "passed": true
+    },
+    "macroforge_schema_remains_unmodified": {
+      "evidence": {
+        "macroforge_knowledgeforge_projection_schema_count": "0"
+      },
+      "passed": true
+    },
+    "package_fingerprints_match": {
+      "evidence": [],
+      "passed": true
+    },
+    "payload_fidelity_passes": {
+      "evidence": [],
+      "passed": true
+    },
+    "projection_contains_521_packages": {
+      "evidence": {
+        "canonical": 521,
+        "projected": 521
+      },
+      "passed": true
+    },
+    "projection_freshness_passes": {
+      "evidence": {
+        "logical_projection_fingerprint": "sha256:b0e7f2f80c1dc22ab04d556eed834b05e94fb9bdc1b3b96e249ecd51e474e2c7",
+        "valid": true
+      },
+      "passed": true
+    },
+    "represented_repository_fingerprint_matches": {
+      "evidence": {
+        "repository": "sha256:9c7ebb9cc47f3dc58a06828fa334e53473b59f563845b1c64343840ee7a9479c",
+        "state": "sha256:9c7ebb9cc47f3dc58a06828fa334e53473b59f563845b1c64343840ee7a9479c"
+      },
+      "passed": true
+    },
+    "stale_projection_detection_fails_closed": {
+      "evidence": {
+        "error": "stale_or_invalid_projection",
+        "reasons": [
+          "repository_fingerprint_mismatch"
+        ],
+        "state": {
+          "active": true,
+          "logical_projection_fingerprint": "sha256:b0e7f2f80c1dc22ab04d556eed834b05e94fb9bdc1b3b96e249ecd51e474e2c7",
+          "object_count": 521,
+          "projection_id": "sha256:6162f0ace3282a392bf7bbc1fcfd2b122a4168d5bf9b218d1acabbe925d116aa",
+          "repository_fingerprint": "sha256:acceptance-gate-mismatch",
+          "status": "valid",
+          "tool_version": "postgresql_operational_projection_v1",
+          "validity_message": "full rebuild complete and verified"
+        },
+        "valid": false
+      },
+      "passed": true
+    },
+    "supported_discovery_operations_work": {
+      "evidence_files": [
+        "acceptance_filter_evidence_family.json",
+        "acceptance_filter_statement_type.json",
+        "acceptance_lookup.json"
+      ],
+      "passed": true
+    }
+  },
+  "result": "A. Accept the PostgreSQL operational projection as v1-complete",
+  "security_classification": {
+    "blocker": false,
+    "knowledgeforge_database_owner": "mkkto",
+    "local_single_user_database_level_isolation_sufficient": true,
+    "macroforge_database_owner": "mkkto",
+    "rationale": "Future deployment/security concern unless actual unauthorized cross-database behaviour is discovered.",
+    "strong_role_level_isolation": false
+  }
+}

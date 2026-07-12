@@ -1,0 +1,15 @@
+{
+  "campaign36_artifacts_per_object": 13,
+  "campaign37_artifacts_per_object": 9,
+  "campaign38_artifacts_per_object": 15,
+  "campaign39_artifacts_per_object": 7.67,
+  "operationalized_path_expected_artifacts_per_batch": [
+    "one spec",
+    "one retained fixture pointer set",
+    "one no-promote reproduction report",
+    "one consolidated selection decision",
+    "one consolidated verification report",
+    "one PostgreSQL retrieval report"
+  ],
+  "verdict": "Campaign 39 met batch amortization but still used a campaign-specific runner; this task corrects that by adding reusable specs and engine-level tests. Future batches should not create new bespoke runners unless method semantics change."
+}

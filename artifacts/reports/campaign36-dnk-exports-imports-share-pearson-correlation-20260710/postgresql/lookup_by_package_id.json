@@ -1,0 +1,257 @@
+{
+  "package": {
+    "canonical_path": "objects/pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1.json",
+    "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+    "lifecycle_state": "accepted",
+    "package_fingerprint": "sha256:59adc03ff8eb04ad3f230f46cb1336c2e729d747121b76528c5095c151c50d66",
+    "package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+    "package_manifest_fingerprint": "sha256:6a42d69696af4682113f790a065aa9bed22b181f21fbf728e40a0d5285d45842",
+    "payload": {
+      "confidence_quality": {
+        "confidence_label": "fixture-supported-deterministic",
+        "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation",
+        "lifecycle_state": "accepted",
+        "missingness_summary": "0 missing/excluded pairs of 35 expected periods",
+        "reproducibility_state": "reproducible_offline_from_retained_fixture",
+        "uncertainty_dimensions": [
+          "mutable_source_reacquisition_limit",
+          "shared_gdp_denominator",
+          "time_ordering_autocorrelation",
+          "structural_breaks",
+          "no_significance_or_causal_claim"
+        ],
+        "validation_state": "pass"
+      },
+      "contradiction_records": [
+        {
+          "contradicting_evidence": null,
+          "contradiction_id": "none-recorded",
+          "contradiction_type": "none",
+          "disposition": "not_applicable",
+          "target_statement": "stmt-campaign36-dnk-exports-imports-share-pearson-correlation-v1"
+        }
+      ],
+      "created_at": "2026-07-10",
+      "created_by": "run_campaign36_dnk_exports_imports_correlation",
+      "evidence_integrity": {
+        "evidence_refs_verified": true,
+        "fingerprints_verified": true,
+        "source_package_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f"
+      },
+      "evidence_references": [
+        {
+          "accessed_at": "2026-07-10",
+          "evaluation_status": "evaluated",
+          "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+          "evidence_ref_id": "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture",
+          "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment contract, and calculation evidence",
+          "snapshot_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f",
+          "source_family": "official_statistical_source_data",
+          "source_identity": "World Bank WDI NE.EXP.GNFS.ZS and NE.IMP.GNFS.ZS DNK annual 1990-2024 fixture",
+          "source_owner": "World Bank WDI API retained local fixture",
+          "source_version": "2026-07-01"
+        }
+      ],
+      "evolution_metadata": {
+        "change_reason": "Campaign 36 first bounded production correlation pilot",
+        "changed_inputs_methods_templates_models_validators": [
+          "wdi_annual_scalar_pearson_correlation_v1"
+        ],
+        "dependent_object_review_posture": "not_applicable",
+        "previous_revision": null
+      },
+      "fingerprints": {
+        "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+        "evidence_references": "sha256:51d3ae190d5facc9a6006d7038b3d4722517632f64c55937abe9a32f6369aff5",
+        "generated_statements": "sha256:cb13eafc26ab41643a306fbc3e8d1e7e4dfe20314dc7a3f01258d7785ab1b63c",
+        "input_set": "sha256:dd9a2ab5863ae2a70ec411e7e0e0cb012748524e705f5e4d7e507436397055bf",
+        "package_manifest": "sha256:6a42d69696af4682113f790a065aa9bed22b181f21fbf728e40a0d5285d45842",
+        "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "generated_statements": [
+        {
+          "applicability": {
+            "entity_id": "DNK",
+            "frequency": "annual",
+            "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+            "method_version": "1.0",
+            "period_end": 2024,
+            "period_start": 1990
+          },
+          "dependencies": [
+            "calc-campaign36-pearson-correlation-v1",
+            "align-campaign36-dnk-exports-imports-share"
+          ],
+          "evidence_refs": [
+            "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+          ],
+          "origin": "computed_from_retained_dual_series_wdi_fixture",
+          "statement_id": "stmt-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+          "statement_type": "derived_relationship",
+          "structured_payload": {
+            "aligned_coverage": "1",
+            "aligned_pair_count": 35,
+            "aligned_periods": [
+              1990,
+              1991,
+              1992,
+              1993,
+              1994,
+              1995,
+              1996,
+              1997,
+              1998,
+              1999,
+              2000,
+              2001,
+              2002,
+              2003,
+              2004,
+              2005,
+              2006,
+              2007,
+              2008,
+              2009,
+              2010,
+              2011,
+              2012,
+              2013,
+              2014,
+              2015,
+              2016,
+              2017,
+              2018,
+              2019,
+              2020,
+              2021,
+              2022,
+              2023,
+              2024
+            ],
+            "calculation_evidence_fingerprint": "sha256:e43f4350e99e73e0557cba370bcd35e4ea3d22d88211d125a37695dafac67033",
+            "canonical_pair_identity": "sha256:4f132f3e9cbe36737d994c12257610b20b4e1b13b7da2d9bc1fae8da4ffee6d5",
+            "combined_aligned_evidence_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f",
+            "combined_raw_evidence_fingerprint": "sha256:bd1fffa81ce48a306ea3ed0a0493ae08ce0a41064e21397241beefe1d7b9a560",
+            "entity_id": "DNK",
+            "entity_name": "Denmark",
+            "excluded_periods": [],
+            "frequency": "annual",
+            "limitations": {
+              "non_causality": "The coefficient is a deterministic contemporaneous mathematical relationship only and is not a causal, predictive, statistical-significance, economic-significance, investment, trend, stationarity, or mechanism claim.",
+              "shared_gdp_denominator": "Both indicators use GDP as denominator, so correlation may partly reflect shared-denominator movement.",
+              "structural_breaks": "The coefficient is scoped only to the retained 1990-2024 aligned window and may not hold across structural breaks.",
+              "time_ordering_autocorrelation": "Annual macroeconomic series can exhibit time ordering/autocorrelation; no stationarity or independence claim is made."
+            },
+            "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+            "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+            "method_version": "1.0",
+            "missing_pair_count": 0,
+            "mutable_source_limitation": "Retained bytes, not mutable WDI API reacquisition, provide exact historical reproducibility.",
+            "package_fingerprint": "sha256:d717f394fe4998adb3b0abd3639c6d6ae9fafc6c3fbe850b8f1719d71d81f8b5",
+            "pearson_coefficient": {
+              "canonical": "0.988873850642",
+              "unit": "dimensionless"
+            },
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            },
+            "provider_metadata": {
+              "exports": {
+                "dataset": "World Development Indicators",
+                "provider": "World Bank",
+                "source": "World Development Indicators",
+                "sourceid": "2",
+                "wdi_lastupdated": "2026-07-01"
+              },
+              "imports": {
+                "dataset": "World Development Indicators",
+                "provider": "World Bank",
+                "source": "World Development Indicators",
+                "sourceid": "2",
+                "wdi_lastupdated": "2026-07-01"
+              }
+            },
+            "selection_fingerprint": "sha256:83b19470d2c7dfde5a17d66ce32f6867285539afeae9bd4bf30fe9d9ec5648a4",
+            "series_a": {
+              "code": "NE.EXP.GNFS.ZS",
+              "definition": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "name": "Exports of goods and services (% of GDP)",
+              "normalized_fingerprint": "sha256:afbc4de1619498ee6716c48f1d53b4591971c54f9cd9b7b0162dee951ac9986b",
+              "raw_fingerprints": {
+                "metadata": "sha256:57dae5fa8dbd577b2cff50f9cfe581b3273ecdaa1125c4188164ef9a3cdddff4",
+                "observations": "sha256:1217c3b6dbd7656137cf76cf7f39746e8fffd293315e4cf42ee5554214d76f3a"
+              },
+              "unit": "percent of GDP"
+            },
+            "series_b": {
+              "code": "NE.IMP.GNFS.ZS",
+              "definition": "Imports of goods includes change in the economic ownership of goods from non-residents to\n\n\n\n\nresidents of the compiling economy, irrespective of physical movement of goods across national borders. Imports of services includes services provided by non-residents to residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "name": "Imports of goods and services (% of GDP)",
+              "normalized_fingerprint": "sha256:aa45c162c20c317dd183018ff190fab402270c5b41b3f38dfad7dc953d54a0a3",
+              "raw_fingerprints": {
+                "metadata": "sha256:a6e803f45b0ecfabb89dfa448350c47e4994f543f62f46d2060362b91853eb75",
+                "observations": "sha256:e5700dd43c368020283a03b72146e998303e1111d71441b4610a815619ed4a67"
+              },
+              "unit": "percent of GDP"
+            },
+            "transformation_state": {
+              "series_a": "raw",
+              "series_b": "raw"
+            },
+            "validation_judgment": "accepted_one_bounded_correlation_object"
+          },
+          "text": "Across the aligned annual DNK observations from 1990 through 2024, the Pearson correlation between exports of goods and services as a percentage of GDP and imports of goods and services as a percentage of GDP is 0.988873850642, using 35 aligned observations."
+        }
+      ],
+      "input_references": [
+        "campaign36_dual_series_wdi_https_fixture",
+        "pearson_correlation_calculation_contract_v1"
+      ],
+      "lineage": {
+        "previous_package_id": null,
+        "source_campaign": "Campaign 36",
+        "version_lineage": []
+      },
+      "package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+      "package_kind": "KnowledgeObjectPackage",
+      "package_version": "1.0",
+      "provenance_envelope": {
+        "evaluation_refs": [
+          "campaign36_alignment_validation",
+          "campaign36_calculation_evidence",
+          "campaign36_non_promoted_diagnostics"
+        ],
+        "evidence_refs": [
+          "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+        ],
+        "lineage_basis": "fresh Campaign 36 HTTPS acquisition; Campaign 35 observations not reused as substitute",
+        "method_refs": [
+          "wdi_annual_scalar_pearson_correlation_v1@1.0"
+        ]
+      },
+      "scope": {
+        "domain": "world_development_indicators",
+        "entity_scope": [
+          "DNK"
+        ],
+        "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        }
+      },
+      "status": "accepted",
+      "validation_state": {
+        "blockers": [],
+        "validation_result": "pass",
+        "warnings": [
+          "shared GDP denominator",
+          "economic flow co-movement possible",
+          "no causal/predictive/significance interpretation"
+        ]
+      }
+    }
+  },
+  "valid": true
+}

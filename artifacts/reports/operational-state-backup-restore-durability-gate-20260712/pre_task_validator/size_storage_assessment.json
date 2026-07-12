@@ -1,0 +1,44 @@
+{
+  "current_avg_package_bytes": 7849.566914498141,
+  "current_canonical_bytes": 4223067,
+  "current_evidence_fixture_bytes": 1583384,
+  "decision": {
+    "database_backups": [
+      "operational PostgreSQL projections, not canonical source of truth"
+    ],
+    "git_lfs_or_artifact_store": [
+      "raw evidence fixtures as they grow",
+      "large release exports",
+      "large logs/reports"
+    ],
+    "ordinary_git_suitable": [
+      "canonical JSON packages",
+      "specifications",
+      "method contracts",
+      "small registries"
+    ],
+    "recommended_model": "hybrid: ordinary Git for canonical small text/state; immutable external artifact storage for large/raw evidence and release histories; database backups for operational projections only"
+  },
+  "projections": {
+    "100": {
+      "canonical_json_bytes_estimate": 784956,
+      "evidence_fixture_bytes_linear_estimate": 294309,
+      "release_history_bytes_rough_estimate": 1618898
+    },
+    "1000": {
+      "canonical_json_bytes_estimate": 7849566,
+      "evidence_fixture_bytes_linear_estimate": 2943092,
+      "release_history_bytes_rough_estimate": 16188989
+    },
+    "10000": {
+      "canonical_json_bytes_estimate": 78495669,
+      "evidence_fixture_bytes_linear_estimate": 29430929,
+      "release_history_bytes_rough_estimate": 161889897
+    },
+    "100000": {
+      "canonical_json_bytes_estimate": 784956691,
+      "evidence_fixture_bytes_linear_estimate": 294309293,
+      "release_history_bytes_rough_estimate": 1618898977
+    }
+  }
+}

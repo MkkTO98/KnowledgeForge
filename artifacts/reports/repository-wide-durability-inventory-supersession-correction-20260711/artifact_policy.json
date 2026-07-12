@@ -1,0 +1,48 @@
+{
+  "ephemeral_untracked": [
+    "__pycache__",
+    ".pytest_cache",
+    "generated active_context bundles",
+    "temporary isolated database runtime state"
+  ],
+  "external_artifact_storage": [
+    "large raw provider responses",
+    "large release exports",
+    "large verification logs",
+    "large historical report bundles",
+    "isolated database dumps when too large for ordinary Git"
+  ],
+  "historical_evidence_optional_main_git": [
+    "large raw provider snapshots and full release histories after an immutable external artifact store exists"
+  ],
+  "must_track_git": [
+    "canonical JSON packages",
+    "repository manifest/indexes/evolution records",
+    "specifications",
+    "method contracts",
+    "small deterministic evidence fixtures",
+    "source code",
+    "tests",
+    "governance decisions/tasks/state/handoff",
+    "release registry schema/configuration"
+  ],
+  "operational_backup_checkpoint": [
+    "release seen registries",
+    "external outbox transport registry",
+    "accepted source copies",
+    "current-state registries",
+    "durability inventories before staging"
+  ],
+  "regenerate_from_tracked_inputs": [
+    "derived indexes",
+    "PostgreSQL projections",
+    "relationship export payloads when canonical packages and query contracts are tracked"
+  ],
+  "sensitive_ignored": [
+    "workspace_config.yaml",
+    ".env",
+    "credentials",
+    "private keys",
+    "local connection files"
+  ]
+}

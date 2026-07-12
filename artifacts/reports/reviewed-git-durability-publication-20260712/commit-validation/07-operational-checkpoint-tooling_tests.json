@@ -1,0 +1,28 @@
+[
+  {
+    "cmd": [
+      "python3",
+      "tools/operational_state_checkpoint.py",
+      "validate",
+      "--checkpoint",
+      "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate"
+    ],
+    "returncode": 0,
+    "stdout": "{\n  \"checkpoint_id\": \"20260712-local-operational-state-gate\",\n  \"contract_version\": \"knowledgeforge.operational_state_checkpoint.v1\",\n  \"errors\": [],\n  \"file_count\": 79,\n  \"machine_loss_durable\": false,\n  \"postgresql_reconstruction_evidence_present\": true,\n  \"tested_local_only\": true,\n  \"total_bytes\": 4918310,\n  \"valid\": true\n}\n",
+    "stderr": ""
+  },
+  {
+    "cmd": [
+      "uvx",
+      "--from",
+      "pytest",
+      "pytest",
+      "tests/test_operational_state_checkpoint.py",
+      "tests/test_external_outbox_polling_supersession_v1.py",
+      "-q"
+    ],
+    "returncode": 0,
+    "stdout": "............                                                             [100%]\n12 passed in 1.74s\n",
+    "stderr": ""
+  }
+]

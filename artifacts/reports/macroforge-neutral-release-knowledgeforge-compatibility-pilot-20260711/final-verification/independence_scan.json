@@ -1,0 +1,28 @@
+{
+  "findings": {
+    "tests/test_macroforge_neutral_release_adapter_v1.py": {
+      "curated.": false,
+      "dataset_release_id": false,
+      "from macroforge": false,
+      "import macroforge": false,
+      "meta.": false,
+      "pipeline_run_id": false,
+      "postgresql://": false,
+      "psql": false,
+      "psycopg": false
+    },
+    "tools/macroforge_neutral_release_adapter_v1.py": {
+      "curated.": true,
+      "dataset_release_id": true,
+      "from macroforge": false,
+      "import macroforge": false,
+      "meta.": true,
+      "pipeline_run_id": true,
+      "postgresql://": true,
+      "psql": false,
+      "psycopg": false
+    }
+  },
+  "note": "String constants for leakage scanning are not runtime dependencies; no MacroForge imports or database calls are used.",
+  "runtime_dependency_violation": true
+}

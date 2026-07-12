@@ -1,0 +1,362 @@
+ M AGENTS.md
+ M CONSTITUTION.md
+ M README.md
+ M _SUMMARY.md
+ M architecture/_SUMMARY.md
+ M architecture/architecture_reviews/architecture_review.template.md
+ M architecture/architecture_state.md
+ D architecture/architectureharvest/_SUMMARY.md
+ D architecture/architectureharvest/adoption_candidates.md
+ D architecture/architectureharvest/adoption_outcome.template.yaml
+ D architecture/architectureharvest/rejected_candidates.md
+ D architecture/architectureharvest/relevance_map.yaml
+ D architecture/architectureharvest/review_history.md
+ M artifacts/_SUMMARY.md
+ M artifacts/decisions/D-20260629-knowledgeforge-provisional-specification-freeze.md
+ M artifacts/decisions/_SUMMARY.md
+ M artifacts/reports/_SUMMARY.md
+ M artifacts/tasks/_SUMMARY.md
+ M context/_SUMMARY.md
+ M context/context_policy.yaml
+ M context/latest_handoff.md
+ M docs/_SUMMARY.md
+ M docs/architecture.md
+ M docs/interfaces.md
+ M docs/invariants.md
+ M docs/open_questions.md
+ M docs/principles.md
+ M docs/roadmap.md
+ M docs/vertical_slice_0_implementation_design.md
+ M instructions/GENERAL_INSTRUCTIONS.md
+ M state/_SUMMARY.md
+ M state/active_goal.md
+ M state/architecture.md
+ M state/project_state.md
+ M state/recent_changes.md
+ M tests/_SUMMARY.md
+ M tools/_SUMMARY.md
+ M tools/check_coherence.py
+?? architecture/metaharvest/
+?? artifacts/decisions/D-20260710-bounded-postgresql-knowledge-repository-realization.md
+?? artifacts/decisions/D-20260710-campaign34-wdi-denmark-population-statistical-summary-pilot.md
+?? artifacts/decisions/D-20260710-campaign35-wdi-nordic-exports-share-statistical-summary-replication.md
+?? artifacts/decisions/D-20260710-campaign36-dnk-exports-imports-share-pearson-correlation.md
+?? artifacts/decisions/D-20260710-campaign37-swe-nor-exports-imports-share-correlation-replication.md
+?? artifacts/decisions/D-20260710-neutral-wdi-observation-evidence-fixture-statistical-summary-design-gate.md
+?? artifacts/decisions/D-20260710-postgresql-operational-projection-acceptance-and-production-sequencing.md
+?? artifacts/decisions/D-20260710-repository-scale-doctrine-review-500-object-gate.md
+?? artifacts/decisions/D-20260710-statistical-summary-method-v2-and-campaign35-preparation.md
+?? artifacts/decisions/D-20260710-statistical-summary-pilot-evaluation-and-bounded-replication-gate.md
+?? artifacts/decisions/D-20260710-unit-remediation-correlation-method-v1-campaign36-gate.md
+?? artifacts/decisions/D-20260711-campaign38-semantically-distinct-correlation-pilot.md
+?? artifacts/decisions/D-20260711-campaign39-heterogeneous-correlation-batch.md
+?? artifacts/decisions/D-20260711-campaign40-pearson-stable-with-limitations.md
+?? artifacts/decisions/D-20260711-pearson-family-stable-not-mature.md
+?? artifacts/decisions/D-20260711-relationship-export-contract-v1.md
+?? artifacts/evidence-fixtures/
+?? artifacts/methods/
+?? artifacts/production/
+?? artifacts/reports/R-20260709-architectural-assimilation-candidate-matrix.md
+?? artifacts/reports/R-20260709-architectural-assimilation-decisions.md
+?? artifacts/reports/R-20260709-architectural-assimilation-review.md
+?? artifacts/reports/R-20260709-architectural-assimilation-risks-prerequisites.md
+?? artifacts/reports/R-20260709-architectural-assimilation-roadmap.md
+?? artifacts/reports/R-20260709-architectural-sovereignty-correction-report.md
+?? artifacts/reports/R-20260709-architectural-sovereignty-occurrence-catalogue.md
+?? artifacts/reports/R-20260709-architectural-sovereignty-review.md
+?? artifacts/reports/R-20260709-architecture-reality-audit.md
+?? artifacts/reports/R-20260709-assimilation-consolidation-architecture-spec.md
+?? artifacts/reports/R-20260709-campaign-0-evidence-assessment.md
+?? artifacts/reports/R-20260709-campaign-1-gap-analysis.md
+?? artifacts/reports/R-20260709-campaign-1-production-design.md
+?? artifacts/reports/R-20260709-construction-validation-coverage-report.md
+?? artifacts/reports/R-20260709-construction-validation-report.md
+?? artifacts/reports/R-20260709-cross-family-production-assessment.md
+?? artifacts/reports/R-20260709-determinism-verification-report.md
+?? artifacts/reports/R-20260709-doctrine-inheritance-specification.md
+?? artifacts/reports/R-20260709-existing-card-output-architecture-review.md
+?? artifacts/reports/R-20260709-existing-knowledge-taxonomy-review.md
+?? artifacts/reports/R-20260709-final-production-readiness-assessment.md
+?? artifacts/reports/R-20260709-first-production-campaign-recommendation.md
+?? artifacts/reports/R-20260709-foundation-era-timeline.md
+?? artifacts/reports/R-20260709-historical-preservation-report.md
+?? artifacts/reports/R-20260709-implementation-readiness-assessment.md
+?? artifacts/reports/R-20260709-intelligence-routing-assessment.md
+?? artifacts/reports/R-20260709-knowledge-capability-inventory.md
+?? artifacts/reports/R-20260709-knowledge-opportunity-catalogue.md
+?? artifacts/reports/R-20260709-knowledge-repository-operational-report.md
+?? artifacts/reports/R-20260709-macroforge-compatibility-audit.md
+?? artifacts/reports/R-20260709-operational-expansion-declaration.md
+?? artifacts/reports/R-20260709-pel-008-source-evidence-package-authoring-investigation.md
+?? artifacts/reports/R-20260709-pel-009-production-quality-metric-aggregation-investigation.md
+?? artifacts/reports/R-20260709-phase-1-closeout-report.md
+?? artifacts/reports/R-20260709-phase-2-dependency-map.md
+?? artifacts/reports/R-20260709-phase-2-evidence-family-prioritization.md
+?? artifacts/reports/R-20260709-phase-2-long-term-production-roadmap.md
+?? artifacts/reports/R-20260709-phase-2-operational-guidance.md
+?? artifacts/reports/R-20260709-phase-2-production-evolution-strategy.md
+?? artifacts/reports/R-20260709-phase-2-production-expansion-strategy.md
+?? artifacts/reports/R-20260709-phase-2-production-methodology-scalability-assessment.md
+?? artifacts/reports/R-20260709-phase-2-remaining-falsification-roadmap.md
+?? artifacts/reports/R-20260709-production-coverage-analysis.md
+?? artifacts/reports/R-20260709-production-doctrine-freeze-report.md
+?? artifacts/reports/R-20260709-production-evolution-decision-report-pel-008-009.md
+?? artifacts/reports/R-20260709-production-falsification-review.md
+?? artifacts/reports/R-20260709-production-gap-analysis.md
+?? artifacts/reports/R-20260709-production-readiness-sovereignty-assessment.md
+?? artifacts/reports/R-20260709-production-roadmap-assessment-after-pel-008-009.md
+?? artifacts/reports/R-20260709-production-support-implementation-decision.md
+?? artifacts/reports/R-20260709-production-support-investigation.md
+?? artifacts/reports/R-20260709-production-support-regression-verification.md
+?? artifacts/reports/R-20260709-remaining-production-risks.md
+?? artifacts/reports/R-20260709-roadmap-coverage-assessment-before-campaign-4.md
+?? artifacts/reports/R-20260709-second-production-family-candidate-comparison.md
+?? artifacts/reports/R-20260709-second-production-family-evaluation.md
+?? artifacts/reports/R-20260709-second-production-family-initial-roadmap.md
+?? artifacts/reports/R-20260709-selected-second-family-justification.md
+?? artifacts/reports/R-20260709-validation-fixture-catalogue.md
+?? artifacts/reports/R-20260709-validation-framework-v1-architecture.md
+?? artifacts/reports/R-20260709-validation-framework-v1-gaps.md
+?? artifacts/reports/R-20260709-validator-coverage-analysis-before-campaign-4.md
+?? artifacts/reports/R-20260709-validator-coverage-report.md
+?? artifacts/reports/R-20260710-architecture-reality-audit.md
+?? artifacts/reports/R-20260711-architecture-reality-audit.md
+?? artifacts/reports/campaign33_pre_existing_object_hashes.json
+?? artifacts/reports/campaign34-statistical-summary-pilot-evaluation-gate-20260710/
+?? artifacts/reports/campaign34-wdi-denmark-population-statistical-summary-20260710/
+?? artifacts/reports/campaign35-wdi-nordic-exports-share-statistical-summary-20260710/
+?? artifacts/reports/campaign36-dnk-exports-imports-share-pearson-correlation-20260710/
+?? artifacts/reports/campaign37-swe-nor-exports-imports-share-pearson-correlation-20260710/
+?? artifacts/reports/campaign38-semantically-distinct-wdi-pearson-correlation-20260711/
+?? artifacts/reports/campaign39-heterogeneous-wdi-pearson-batch-20260711/
+?? artifacts/reports/campaign40-spec-driven-pearson-production-20260711/
+?? artifacts/reports/correlation-method-v1-and-campaign36-design-20260710/
+?? artifacts/reports/correlation-production-operationalization-20260711/
+?? artifacts/reports/postgresql-acceptance-sequencing-20260710/
+?? artifacts/reports/postgresql-projection-implementation-20260710/
+?? artifacts/reports/postgresql-realization-decision-20260710/
+?? artifacts/reports/relationship-export-contract-v1-20260711/
+?? artifacts/reports/relationship-export-existing-commitments-grep.txt
+?? artifacts/reports/repository-scale-doctrine-review-20260710/
+?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/
+?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/
+?? artifacts/tasks/T-20260709-architectural-assimilation-campaign.md
+?? artifacts/tasks/T-20260709-architectural-sovereignty-correction-production-readiness.md
+?? artifacts/tasks/T-20260709-assimilation-consolidation-specification.md
+?? artifacts/tasks/T-20260709-campaign-0-repository-evidence-characterization.md
+?? artifacts/tasks/T-20260709-campaign-1-planning-taxonomy-verification.md
+?? artifacts/tasks/T-20260709-campaign-1-wdi-demographic-evidence-quality-coverage.md
+?? artifacts/tasks/T-20260709-campaign-10-cross-campaign-recurrence-audit.md
+?? artifacts/tasks/T-20260709-campaign-11-wdi-environment-maturation.md
+?? artifacts/tasks/T-20260709-campaign-12-wdi-environment-provenance-lineage-closeout.md
+?? artifacts/tasks/T-20260709-campaign-13-wdi-infrastructure-transfer.md
+?? artifacts/tasks/T-20260709-campaign-14-wdi-infrastructure-maturation.md
+?? artifacts/tasks/T-20260709-campaign-15-wdi-infrastructure-provenance-lineage-closeout.md
+?? artifacts/tasks/T-20260709-campaign-16-wdi-energy-mining-transfer.md
+?? artifacts/tasks/T-20260709-campaign-17-wdi-energy-mining-maturation.md
+?? artifacts/tasks/T-20260709-campaign-18-wdi-energy-mining-provenance-lineage-closeout.md
+?? artifacts/tasks/T-20260709-campaign-19-wdi-agriculture-rural-development-transfer.md
+?? artifacts/tasks/T-20260709-campaign-2-wdi-completeness-buckets.md
+?? artifacts/tasks/T-20260709-campaign-20-wdi-agriculture-rural-development-maturation.md
+?? artifacts/tasks/T-20260709-campaign-21-wdi-agriculture-rural-development-provenance-lineage-closeout.md
+?? artifacts/tasks/T-20260709-campaign-22-wdi-health-transfer.md
+?? artifacts/tasks/T-20260709-campaign-23-wdi-health-maturation.md
+?? artifacts/tasks/T-20260709-campaign-24-wdi-health-provenance-lineage-closeout.md
+?? artifacts/tasks/T-20260709-campaign-3-wdi-freshness-release-metadata.md
+?? artifacts/tasks/T-20260709-campaign-4-wdi-indicator-family-inventory.md
+?? artifacts/tasks/T-20260709-campaign-5-wdi-territorial-coverage-matrix.md
+?? artifacts/tasks/T-20260709-campaign-6-wdi-temporal-coverage-matrix.md
+?? artifacts/tasks/T-20260709-campaign-7-wdi-provenance-lineage-completeness.md
+?? artifacts/tasks/T-20260709-campaign-8-second-family-planning-gate.md
+?? artifacts/tasks/T-20260709-campaign-8-wdi-environment-transfer.md
+?? artifacts/tasks/T-20260709-campaign-9-wdi-cross-family-comparison.md
+?? artifacts/tasks/T-20260709-knowledge-package-construction-validation-slice.md
+?? artifacts/tasks/T-20260709-knowledge-repository-operationalization.md
+?? artifacts/tasks/T-20260709-macroforge-knowledgeforge-capability-production-readiness-audit.md
+?? artifacts/tasks/T-20260709-operational-autonomy-transition.md
+?? artifacts/tasks/T-20260709-phase-1-closeout-operational-expansion-transition.md
+?? artifacts/tasks/T-20260709-phase-2-production-expansion-strategy.md
+?? artifacts/tasks/T-20260709-production-campaign-roadmap-evolution-log.md
+?? artifacts/tasks/T-20260709-production-doctrine-freeze.md
+?? artifacts/tasks/T-20260709-production-evolution-investigation-1-pel-008-009.md
+?? artifacts/tasks/T-20260709-production-falsification-review-before-campaign-4.md
+?? artifacts/tasks/T-20260709-production-support-layer-proof.md
+?? artifacts/tasks/T-20260709-repository-impact-assessment-addendum.md
+?? artifacts/tasks/T-20260709-validation-framework-v1.md
+?? artifacts/tasks/T-20260710-bounded-postgresql-realization-decision.md
+?? artifacts/tasks/T-20260710-campaign-25-education-transfer.md
+?? artifacts/tasks/T-20260710-campaign-26-education-maturation.md
+?? artifacts/tasks/T-20260710-campaign-27-education-provenance-lineage-closeout.md
+?? artifacts/tasks/T-20260710-campaign-28-trade-transfer.md
+?? artifacts/tasks/T-20260710-campaign-29-trade-maturation.md
+?? artifacts/tasks/T-20260710-campaign-30-trade-provenance-lineage-closeout.md
+?? artifacts/tasks/T-20260710-campaign-31-financial-sector-transfer.md
+?? artifacts/tasks/T-20260710-campaign-32-financial-sector-maturation.md
+?? artifacts/tasks/T-20260710-campaign-33-financial-sector-provenance-lineage-closeout.md
+?? artifacts/tasks/T-20260710-campaign34-wdi-denmark-population-statistical-summary-pilot.md
+?? artifacts/tasks/T-20260710-campaign35-wdi-nordic-exports-share-statistical-summary-replication.md
+?? artifacts/tasks/T-20260710-campaign36-dnk-exports-imports-share-pearson-correlation.md
+?? artifacts/tasks/T-20260710-campaign37-swe-nor-exports-imports-share-correlation-replication.md
+?? artifacts/tasks/T-20260710-neutral-wdi-observation-evidence-fixture-statistical-summary-design-gate.md
+?? artifacts/tasks/T-20260710-postgresql-acceptance-production-sequencing.md
+?? artifacts/tasks/T-20260710-postgresql-operational-projection-implementation.md
+?? artifacts/tasks/T-20260710-repository-scale-doctrine-review.md
+?? artifacts/tasks/T-20260710-statistical-summary-method-v2-campaign35-preparation.md
+?? artifacts/tasks/T-20260710-statistical-summary-pilot-evaluation-bounded-replication-gate.md
+?? artifacts/tasks/T-20260710-unit-remediation-correlation-method-v1-campaign36-gate.md
+?? artifacts/tasks/T-20260711-campaign38-semantically-distinct-correlation-pilot.md
+?? artifacts/tasks/T-20260711-campaign39-heterogeneous-correlation-batch.md
+?? artifacts/tasks/T-20260711-campaign40-spec-driven-pearson-production.md
+?? artifacts/tasks/T-20260711-correlation-production-operationalization.md
+?? artifacts/tasks/T-20260711-relationship-export-contract-v1.md
+?? artifacts/tasks/backlog.md
+?? docs/campaign34_wdi_denmark_population_statistical_summary.md
+?? docs/campaign35_bounded_replication_spec.md
+?? docs/campaign35_production_value_assessment.md
+?? docs/campaign35_wdi_nordic_exports_statistical_summary.md
+?? docs/campaign36_bounded_correlation_spec.md
+?? docs/campaign36_production_value_assessment.md
+?? docs/campaign37_production_value_assessment.md
+?? docs/campaign38_production_value_assessment.md
+?? docs/campaign39_production_value_assessment.md
+?? docs/correlation_knowledge_boundary.md
+?? docs/doctrine_review_triggers.md
+?? docs/evidence_source_evaluation_specification.md
+?? docs/knowledge_acceptance_criteria.md
+?? docs/knowledge_evolution_change_report_contract.md
+?? docs/knowledge_package_contract.md
+?? docs/knowledge_repository_architecture.md
+?? docs/knowledge_repository_persistence_specification.md
+?? docs/local_ai_role_boundary.md
+?? docs/model_routing_policy.md
+?? docs/operational_autonomy_declaration.md
+?? docs/pearson_correlation_method_v1.md
+?? docs/postgresql_operational_repository.md
+?? docs/postgresql_projection_config.example
+?? docs/production_campaign_roadmap.md
+?? docs/production_doctrine.md
+?? docs/production_evolution_log.md
+?? docs/production_quality_assessment.md
+?? docs/production_value_scorecard.md
+?? docs/provenance_fingerprinting.md
+?? docs/reproducible_knowledge_generation_architecture.md
+?? docs/standard_operational_loop.md
+?? docs/statistical_summary_measure_utility_rules.md
+?? docs/statistical_summary_method_v2.md
+?? docs/statistical_summary_pilot_evaluation_gate.md
+?? docs/validation_framework_v1.md
+?? docs/validator_taxonomy.md
+?? docs/wdi_observation_evidence_fixture.md
+?? docs/wdi_unit_resolution.md
+?? knowledge_repository/
+?? specs/
+?? tests/fixtures/
+?? tests/test_campaign0_repository_evidence.py
+?? tests/test_campaign10_cross_campaign_recurrence_audit.py
+?? tests/test_campaign11_wdi_environment_maturation.py
+?? tests/test_campaign12_wdi_environment_provenance_lineage_closeout.py
+?? tests/test_campaign13_wdi_infrastructure_transfer.py
+?? tests/test_campaign14_wdi_infrastructure_maturation.py
+?? tests/test_campaign15_wdi_infrastructure_provenance_lineage_closeout.py
+?? tests/test_campaign16_wdi_energy_mining_transfer.py
+?? tests/test_campaign17_wdi_energy_mining_maturation.py
+?? tests/test_campaign18_wdi_energy_mining_provenance_lineage_closeout.py
+?? tests/test_campaign19_wdi_agriculture_rural_development_transfer.py
+?? tests/test_campaign1_wdi_demographic_evidence.py
+?? tests/test_campaign20_wdi_agriculture_rural_development_maturation.py
+?? tests/test_campaign21_wdi_agriculture_rural_development_provenance_lineage_closeout.py
+?? tests/test_campaign22_wdi_health_transfer.py
+?? tests/test_campaign23_wdi_health_maturation.py
+?? tests/test_campaign24_wdi_health_provenance_lineage_closeout.py
+?? tests/test_campaign25_wdi_education_transfer.py
+?? tests/test_campaign26_wdi_education_maturation.py
+?? tests/test_campaign27_wdi_education_provenance_lineage_closeout.py
+?? tests/test_campaign28_wdi_trade_transfer.py
+?? tests/test_campaign29_wdi_trade_maturation.py
+?? tests/test_campaign2_wdi_completeness_buckets.py
+?? tests/test_campaign30_wdi_trade_provenance_lineage_closeout.py
+?? tests/test_campaign31_wdi_financial_sector_transfer.py
+?? tests/test_campaign32_wdi_financial_sector_maturation.py
+?? tests/test_campaign33_wdi_financial_sector_provenance_lineage_closeout.py
+?? tests/test_campaign34_decimal_context_evaluation.py
+?? tests/test_campaign34_wdi_denmark_population_statistical_summary.py
+?? tests/test_campaign35_wdi_nordic_exports_statistical_summary.py
+?? tests/test_campaign36_dnk_exports_imports_correlation.py
+?? tests/test_campaign37_swe_nor_exports_imports_correlation.py
+?? tests/test_campaign38_semantically_distinct_correlation.py
+?? tests/test_campaign39_heterogeneous_correlation_batch.py
+?? tests/test_campaign3_wdi_freshness_metadata.py
+?? tests/test_campaign4_wdi_indicator_inventory.py
+?? tests/test_campaign5_wdi_territorial_coverage.py
+?? tests/test_campaign6_wdi_temporal_coverage.py
+?? tests/test_campaign7_wdi_provenance_lineage.py
+?? tests/test_campaign8_wdi_environment_transfer.py
+?? tests/test_campaign9_wdi_cross_family_comparison.py
+?? tests/test_correlation_batch_engine.py
+?? tests/test_knowledge_repository.py
+?? tests/test_package_construction_validation_v1.py
+?? tests/test_pearson_correlation_v1.py
+?? tests/test_postgresql_operational_projection.py
+?? tests/test_postgresql_realization_decision.py
+?? tests/test_production_support.py
+?? tests/test_relationship_export_v1.py
+?? tests/test_repository_scale_doctrine_review.py
+?? tests/test_statistical_summary_v2.py
+?? tests/test_validation_framework_v1.py
+?? tests/test_wdi_family_maturity_registry.py
+?? tests/test_wdi_observation_evidence_fixture.py
+?? tests/test_wdi_unit_resolution.py
+?? tools/construct_knowledge_package_v1.py
+?? tools/correlation_batch_engine.py
+?? tools/deterministic_pearson_correlation_v1.py
+?? tools/deterministic_statistical_summary_v2.py
+?? tools/knowledge_repository.py
+?? tools/postgresql_operational_projection.py
+?? tools/postgresql_realization_decision.py
+?? tools/production_support.py
+?? tools/relationship_export_consumer_simulator_v1.py
+?? tools/relationship_export_v1.py
+?? tools/repository_scale_doctrine_review.py
+?? tools/run_campaign0_repository_evidence.py
+?? tools/run_campaign10_cross_campaign_recurrence_audit.py
+?? tools/run_campaign11_wdi_environment_maturation.py
+?? tools/run_campaign12_wdi_environment_provenance_lineage_closeout.py
+?? tools/run_campaign13_wdi_infrastructure_transfer.py
+?? tools/run_campaign14_wdi_infrastructure_maturation.py
+?? tools/run_campaign15_wdi_infrastructure_provenance_lineage_closeout.py
+?? tools/run_campaign16_wdi_energy_mining_transfer.py
+?? tools/run_campaign17_wdi_energy_mining_maturation.py
+?? tools/run_campaign18_wdi_energy_mining_provenance_lineage_closeout.py
+?? tools/run_campaign19_wdi_agriculture_rural_development_transfer.py
+?? tools/run_campaign1_wdi_demographic_evidence.py
+?? tools/run_campaign20_wdi_agriculture_rural_development_maturation.py
+?? tools/run_campaign21_wdi_agriculture_rural_development_provenance_lineage_closeout.py
+?? tools/run_campaign22_wdi_health_transfer.py
+?? tools/run_campaign23_wdi_health_maturation.py
+?? tools/run_campaign24_wdi_health_provenance_lineage_closeout.py
+?? tools/run_campaign25_wdi_education_transfer.py
+?? tools/run_campaign26_wdi_education_maturation.py
+?? tools/run_campaign27_wdi_education_provenance_lineage_closeout.py
+?? tools/run_campaign28_wdi_trade_transfer.py
+?? tools/run_campaign29_wdi_trade_maturation.py
+?? tools/run_campaign2_wdi_completeness_buckets.py
+?? tools/run_campaign30_wdi_trade_provenance_lineage_closeout.py
+?? tools/run_campaign31_wdi_financial_sector_transfer.py
+?? tools/run_campaign32_wdi_financial_sector_maturation.py
+?? tools/run_campaign33_wdi_financial_sector_provenance_lineage_closeout.py
+?? tools/run_campaign34_wdi_denmark_population_statistical_summary.py
+?? tools/run_campaign35_wdi_nordic_exports_statistical_summary.py
+?? tools/run_campaign36_dnk_exports_imports_correlation.py
+?? tools/run_campaign37_swe_nor_exports_imports_correlation.py
+?? tools/run_campaign38_semantically_distinct_correlation.py
+?? tools/run_campaign39_heterogeneous_correlation_batch.py
+?? tools/run_campaign3_wdi_freshness_metadata.py
+?? tools/run_campaign4_wdi_indicator_inventory.py
+?? tools/run_campaign5_wdi_territorial_coverage.py
+?? tools/run_campaign6_wdi_temporal_coverage.py
+?? tools/run_campaign7_wdi_provenance_lineage.py
+?? tools/run_campaign8_wdi_environment_transfer.py
+?? tools/run_campaign9_wdi_cross_family_comparison.py
+?? tools/validate_knowledge_pipeline_v1.py
+?? tools/wdi_family_maturity_registry.py
+?? tools/wdi_observation_evidence_fixture.py

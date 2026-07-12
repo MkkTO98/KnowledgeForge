@@ -1,0 +1,19 @@
+{
+  "acceptance_criteria_without_design": [
+    "projection is fully rebuildable from canonical packages",
+    "canonical packages remain byte-preserved and authoritative",
+    "projection count and fingerprints match canonical repository inputs",
+    "divergence is detected and treated as projection invalidity",
+    "read-only retrieval works for the currently supported query dimensions",
+    "no PostgreSQL-originated canonical knowledge is possible",
+    "no cross-project runtime dependency or shared ownership is introduced",
+    "full test suite, compile, coherence, context health, architecture audit, and diff checks pass"
+  ],
+  "future_expansion_gates": [
+    "consumer-facing access requires a separate downstream consumption contract decision",
+    "rich statistical relationship projection requires successful deeper deterministic-knowledge campaigns first or an explicit design gate",
+    "incremental synchronization requires full-rebuild proof first and a separate consistency decision",
+    "direct InsightForge access requires an explicit read-only boundary decision after local KnowledgeForge projection proves stable"
+  ],
+  "smallest_later_implementation_slice": "If separately authorized, build a KnowledgeForge-owned, local, deterministic PostgreSQL projection of existing canonical KnowledgeObjectPackages sufficient for package-id lookup, evidence-family/statement-type/lifecycle/fingerprint filtering, provenance-lineage discovery, repository snapshot verification, and canonical-package retrieval pointers. No consumer access contract, no shared schema, no writes from PostgreSQL to canonical packages, no Campaign 34, and no rich statistical schema expansion in that first slice."
+}

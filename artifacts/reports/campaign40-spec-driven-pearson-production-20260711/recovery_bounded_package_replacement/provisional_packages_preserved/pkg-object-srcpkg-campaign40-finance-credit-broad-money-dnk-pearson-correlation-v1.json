@@ -1,0 +1,195 @@
+{
+  "confidence_quality": {
+    "confidence_label": "fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+    "lifecycle_state": "accepted",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "non-causality",
+      "non-prediction",
+      "absence of significance testing",
+      "transformation sensitivity",
+      "common time-ordering risk"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-campaign40-finance-credit-broad-money-dnk-pearson-v1"
+    }
+  ],
+  "created_at": "2026-07-11",
+  "created_by": "correlation_batch_engine",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:ca96eb7735de5d23e5c86254c7c707c67e9bba3d4db7af210efeed5ad0f45d65"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-11",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-campaign40-finance_credit_broad_money_dnk-fixture",
+      "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+      "snapshot_fingerprint": "sha256:ca96eb7735de5d23e5c86254c7c707c67e9bba3d4db7af210efeed5ad0f45d65",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI FS.AST.PRVT.GD.ZS and FM.LBL.BMNY.GD.ZS DNK annual 1990-2024 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "Campaign 40 end-to-end specification-driven Pearson production batch",
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null,
+    "version_lineage": []
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:79a4632fee1e4e95bb12ea84b5855784e9864e5f192e4e1589468f640ae5b059",
+    "evidence_references": "sha256:f808bfe2a9e58b179cdaff968ff60c58312f44ef607124200d3b2514649bc78e",
+    "generated_statements": "sha256:900892383d09fad47e605a90c575d81647b249c57ae62f87d6b5df45107fe032",
+    "input_set": "sha256:9a4d01da5016083880c70eb47a01f243642f05300689be27b347901b2e421128",
+    "package_manifest": "sha256:7952d844eff87a61a742a3bf28e1dd8bfdd2f4d5a1184fd6580416afbb464084",
+    "query_definitions": "sha256:e3ab0b3f1caa9c3f8944d07bb78540de1a0d6ef28e2e4b5bd40f29f8e7a130ba"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "entity_id": "DNK",
+        "frequency": "annual",
+        "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990
+      },
+      "dependencies": [
+        "calc-campaign40-finance_credit_broad_money_dnk-pearson-v1"
+      ],
+      "evidence_refs": [
+        "ev-campaign40-finance_credit_broad_money_dnk-fixture"
+      ],
+      "origin": "computed_from_campaign40_declarative_spec_wdi_fixture",
+      "statement_id": "stmt-campaign40-finance-credit-broad-money-dnk-pearson-v1",
+      "statement_type": "derived_relationship",
+      "structured_payload": {
+        "aligned_coverage": "1",
+        "aligned_pair_count": 35,
+        "calculation_evidence_fingerprint": "sha256:efc76c5891adfb273b9689aed813a0d414856b4596005b4ca68b8b2df09fea19",
+        "construction_risk_assessment": {
+          "assessment": {
+            "algebraic_identity": "not present",
+            "common_administrative_reporting": "ordinary limitation",
+            "common_modeled_estimation_process": "ordinary limitation",
+            "definitional_overlap": "ordinary limitation",
+            "direct_component_total_construction": "not present",
+            "embedded_series_construction": "not present",
+            "frequency_mismatch": "not present",
+            "shared_denominator": "material limitation",
+            "transformation_mismatch": "not present",
+            "unit_incompatibility": "not present"
+          },
+          "promotion_blocker_present": false,
+          "promotion_blockers": []
+        },
+        "diagnostic_limitations": {
+          "first_difference_pearson": "-0.083567273412",
+          "promoted_as_knowledge_object": false,
+          "time_index_error": "mismatched entities"
+        },
+        "entity_id": "DNK",
+        "family": "Financial Sector",
+        "fixture_fingerprint": "sha256:ca96eb7735de5d23e5c86254c7c707c67e9bba3d4db7af210efeed5ad0f45d65",
+        "frequency": "annual",
+        "frozen_batch_selection_fingerprint": "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+        "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+        "missing_periods": {
+          "series_a": [],
+          "series_b": []
+        },
+        "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+        "package_fingerprint": "sha256:2897eb363fae6967bbf59445bfa312bef6756094372244cc1fc41acb18038d44",
+        "pearson_coefficient": {
+          "canonical": "0.316082156476",
+          "unit": "dimensionless"
+        },
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        },
+        "series_a": {
+          "code": "FS.AST.PRVT.GD.ZS",
+          "definition": "Domestic credit to private sector refers to financial resources provided to the private sector by financial corporations, such as through loans, purchases of nonequity securities, and trade credits and other accounts receivable, that establish a claim for repayment. For some countries these claims include credit to public enterprises. The financial corporations include monetary authorities and deposit money banks, as well as other financial corporations where data are available (including corporations that do not accept transferable deposits but do incur such liabilities as time and savings deposits). Examples of other financial corporations are finance and leasing companies, money lenders, insurance corporations, pension funds, and foreign exchange companies. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+          "frequency": "annual",
+          "name": "Domestic credit to private sector (% of GDP)",
+          "source_identity": "World Bank WDI",
+          "unit": "percent of GDP"
+        },
+        "series_b": {
+          "code": "FM.LBL.BMNY.GD.ZS",
+          "definition": "Broad money is the sum of all liquid financial instruments held by money-holding sectors that are widely accepted in an economy as a medium of exchange, plus those that can be converted into a medium of exchange at short notice at, or close to, their full nominal value. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+          "frequency": "annual",
+          "name": "Broad money (% of GDP)",
+          "source_identity": "World Bank WDI",
+          "unit": "percent of GDP"
+        },
+        "transformation_state": "raw",
+        "validation_judgment": "accepted_campaign40_spec_driven_correlation_object"
+      },
+      "text": "Across aligned annual DNK observations from 1990 through 2024, the Pearson correlation between Domestic credit to private sector (% of GDP) and Broad money (% of GDP) is 0.316082156476, using 35 aligned observations."
+    }
+  ],
+  "input_references": [
+    "campaign40_first_end_to_end_spec_driven_pearson_batch",
+    "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+    "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+  ],
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 40",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+      "sha256:efc76c5891adfb273b9689aed813a0d414856b4596005b4ca68b8b2df09fea19"
+    ],
+    "evidence_refs": [
+      "ev-campaign40-finance_credit_broad_money_dnk-fixture"
+    ],
+    "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "scope": {
+    "domain": "world_development_indicators",
+    "entity_scope": [
+      "DNK"
+    ],
+    "evidence_family": "external_wdi_annual_scalar_financial_sector_pearson_correlation",
+    "period_scope": {
+      "end": 2024,
+      "start": 1990
+    }
+  },
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "common_administrative_reporting",
+      "common_modeled_estimation_process",
+      "definitional_overlap",
+      "shared_denominator",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

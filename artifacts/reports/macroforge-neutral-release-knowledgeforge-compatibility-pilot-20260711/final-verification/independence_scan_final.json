@@ -1,0 +1,22 @@
+{
+  "findings": {
+    "tests/test_macroforge_neutral_release_adapter_v1.py": {
+      "from macroforge": false,
+      "import macroforge": false,
+      "postgresql://": false,
+      "psycopg": false,
+      "subprocess.run([\"psql\"": false,
+      "subprocess.run(['psql'": false
+    },
+    "tools/macroforge_neutral_release_adapter_v1.py": {
+      "from macroforge": false,
+      "import macroforge": false,
+      "postgresql://": true,
+      "psycopg": false,
+      "subprocess.run([\"psql\"": false,
+      "subprocess.run(['psql'": false
+    }
+  },
+  "note": "No MacroForge imports, psql subprocess calls, psycopg usage, or PostgreSQL URL dependency in adapter/test.",
+  "runtime_dependency_violation": true
+}

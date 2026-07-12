@@ -1,0 +1,116 @@
+{
+  "adapter_identity": "knowledgeforge_macroforge_neutral_release_adapter_v1@1.0",
+  "baseline_errors": [
+    "missing_release_field:contract_id",
+    "missing_release_field:release_id",
+    "missing_release_field:provider",
+    "missing_release_field:dataset",
+    "missing_release_field:source_release_vintage",
+    "missing_release_field:evidence_items",
+    "missing_release_field:release_content_fingerprint",
+    "wrong_contract_version",
+    "release_fingerprint_mismatch"
+  ],
+  "baseline_exit_code": "0",
+  "baseline_valid": false,
+  "compatibility_rows": 22,
+  "delta_status": {
+    "canonical_knowledge_status": "canonical_equivalent_no_promotion",
+    "downstream_delta_fingerprint": "sha256:deaa8bc1628b1138f6996d588cc28fe40006c9a4b9d8a9f3454ebafaead38cbd",
+    "external_release_accepted": true,
+    "later_supersession_required": false,
+    "promotion_status": "not_promoted"
+  },
+  "derivation_all_exact": true,
+  "derivation_comparisons": [
+    {
+      "aligned_pair_count": 35,
+      "candidate_coefficient": "0.988873850642",
+      "candidate_result_fingerprint": "sha256:a13d17d826fdde5af379bf29f6fc5c2fa06acde0af38c2d42362a4a82feb1920",
+      "classification": "exact_deterministic_match",
+      "derivation_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+      "entity": "DNK",
+      "expected_existing_coefficient": "0.988873850642",
+      "promotion_status": "not_promoted"
+    },
+    {
+      "aligned_pair_count": 35,
+      "candidate_coefficient": "-0.477418804478",
+      "candidate_result_fingerprint": "sha256:1cf901a68d0442ceb93132c0ccdbc695d36dde3e833ccf1dc38bd29ef60d9365",
+      "classification": "exact_deterministic_match",
+      "derivation_id": "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+      "entity": "NOR",
+      "expected_existing_coefficient": "-0.477418804478",
+      "promotion_status": "not_promoted"
+    },
+    {
+      "aligned_pair_count": 35,
+      "candidate_coefficient": "0.968490740983",
+      "candidate_result_fingerprint": "sha256:090c7fef492916171ef92aa40e3b5a67285d3fb6f66f3186d63a6f1f5c2e38c2",
+      "classification": "exact_deterministic_match",
+      "derivation_id": "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+      "entity": "SWE",
+      "expected_existing_coefficient": "0.968490740983",
+      "promotion_status": "not_promoted"
+    }
+  ],
+  "durability_file_count": 61,
+  "durability_status": "not durable until committed/pushed or externally backed up; untracked files and modified tracked files are at risk until a reviewed commit/backup exists",
+  "equivalence": {
+    "calculation_observation_equivalent": true,
+    "definition_mismatch_classification": "representation_granularity_difference_macroforge_short_indicator_label_vs_knowledgeforge_retained_full_wdi_definition; nonblocking for no-promote Pearson recomputation because indicator code/unit/value/frequency/entity/period match",
+    "definition_mismatch_count": 210,
+    "knowledgeforge_retained_item_count": 210,
+    "macroforge_item_count": 210,
+    "matching_keys": 210,
+    "report_fingerprint": "sha256:af3dd06de856762352ea990187474856dd8d00836cd32bf1d6e7d257cf1b7715",
+    "semantically_equivalent_for_no_promote_derivation_comparison": true
+  },
+  "integration_decision": "B. KnowledgeForge adapter validated; real handoff operationally compatible.",
+  "next_operational_step": "1. Ask MacroForge to connect exporter execution to successful canonical release closeout.",
+  "normalized_release_fingerprint": "sha256:75a2b2a586df56523e3a5f81435b159f078af767d67de5adbda667e47c755060",
+  "ownership_decision": "B. KnowledgeForge-owned bounded adapter: MacroForge semantics are sufficient; KnowledgeForge maps the documented external contract into its own internal release representation while preserving producer fingerprints.",
+  "process_first": {
+    "acceptance_status": null,
+    "applicable_derivations": null,
+    "downstream_delta_path": "artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/downstream_delta.json",
+    "incremental_recompute_count": 3,
+    "initial_release": null,
+    "processing_status": "successfully_processed_no_promote",
+    "received_status": "unseen"
+  },
+  "process_second": {
+    "acceptance_status": null,
+    "applicable_derivations": null,
+    "downstream_delta_path": null,
+    "incremental_recompute_count": 0,
+    "initial_release": null,
+    "processing_status": "successfully_processed_no_promote",
+    "received_status": "already_processed_identical_release"
+  },
+  "producer_export_sha256": "1906821add91de87538f29bbbc254c8d52d5f6734ba7f00aced45fe2c5358f86",
+  "producer_item_count": 210,
+  "producer_leaks": [],
+  "producer_release_fingerprint": "sha256:def8c318100cf14526cbdac87335e6b1646681b2176fd684c66ac7cc9d7add67",
+  "producer_selection_fingerprint": "sha256:2b1a1c3d9e65b182f073e0171c59627c8298740ee9cb7c1418dfbae3ae196e0a",
+  "producer_valid": true,
+  "transfer_all_equal": true,
+  "transfer_files": [
+    {
+      "byte_for_byte_equal": true,
+      "destination_sha256": "1906821add91de87538f29bbbc254c8d52d5f6734ba7f00aced45fe2c5358f86",
+      "destination_size_bytes": 207509,
+      "file_name": "macroforge-wdi-trade-share-dnk-swe-nor-1990-2024.neutral-release.json",
+      "source_sha256": "1906821add91de87538f29bbbc254c8d52d5f6734ba7f00aced45fe2c5358f86",
+      "source_size_bytes": 207509
+    },
+    {
+      "byte_for_byte_equal": true,
+      "destination_sha256": "a8e18d97bf9ff84ce341de648897117a289e14158d6b6d2409ee557b8cfc961b",
+      "destination_size_bytes": 862,
+      "file_name": "manifest.json",
+      "source_sha256": "a8e18d97bf9ff84ce341de648897117a289e14158d6b6d2409ee557b8cfc961b",
+      "source_size_bytes": 862
+    }
+  ]
+}

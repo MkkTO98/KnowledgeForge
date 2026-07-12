@@ -1,0 +1,255 @@
+{
+  "package": {
+    "canonical_path": "objects/pkg-object-srcpkg-campaign34-denmark-population-statistical-summary.json",
+    "evidence_family": "external_wdi_annual_scalar_demographic_structure_statistical_summary",
+    "lifecycle_state": "accepted",
+    "package_fingerprint": "sha256:8c78055b9fd4467a8ef19ea48b876109813eb40305936a690ef220e72c3c8125",
+    "package_id": "pkg-object-srcpkg-campaign34-denmark-population-statistical-summary",
+    "package_manifest_fingerprint": "sha256:833d840e69796e1a01bbcafca36b10502c682b6191419e8b3ac2d588a347a070",
+    "payload": {
+      "computation_method": {
+        "name": "wdi_denmark_population_statistical_summary_v1",
+        "nondeterminism": "none",
+        "parameters": {
+          "arithmetic_mean_formula": "sum(observed_values) / observed_count",
+          "calculation_contract_fingerprint": "sha256:31c994804e55f124778e201c5f76ea50adcce4af147dfe4c7073e21de5b7afce",
+          "contract_id": "campaign34-statistical-calculation-contract-v1",
+          "decimal_parsing_method": "Decimal from canonical base-10 strings",
+          "deterministic_serialization": "JSON sort_keys=True separators=(',', ':') for fingerprints; pretty JSON for artifacts",
+          "excluded_measures": [
+            "selected distribution cutpoints"
+          ],
+          "input_normalized_fingerprint": "sha256:cce0367fc05bf8ad974a14593eec8e2d4f8fdf7fafced1976d9001c9c1eaeb93",
+          "internal_precision": "Python Decimal default context precision observed by this toolchain",
+          "median_rule": "sort observed values ascending; for odd N use middle value; for even N average the two middle values",
+          "method_id": "wdi_denmark_population_statistical_summary_v1",
+          "method_version": "1.0",
+          "minimum_coverage_share": "0.85",
+          "minimum_observed_count": 30,
+          "missing_observation_treatment": "preserve missing rows; compute numerical measures over observed values only; report missing count/share separately",
+          "output_precision": "canonical Decimal engineering string without binary floating point",
+          "rounding_mode": "ROUND_HALF_EVEN",
+          "stable_ordering": [
+            "entity_id",
+            "indicator_code",
+            "period"
+          ],
+          "standard_deviation": "population standard deviation, denominator N",
+          "standard_deviation_formula": "sqrt(sum((x - mean)^2) / N)",
+          "summation_method": "deterministic left-to-right Decimal summation after canonical period ordering"
+        },
+        "query_definitions": [],
+        "recipe": "offline deterministic Decimal statistical summary over retained normalized observations",
+        "rerun": "python3 tools/run_campaign34_wdi_denmark_population_statistical_summary.py --fixture artifacts/evidence-fixtures/wdi-demographic-population-total-denmark-1990-2024-https-corrected/normalized_observations.json",
+        "version": "1.0"
+      },
+      "confidence_quality": {
+        "confidence_label": "fixture-supported-deterministic",
+        "evidence_sufficiency": "sufficient for bounded deterministic descriptive statistical summary",
+        "governance_review_state": "Campaign 34 accepted bounded pilot",
+        "lifecycle_state": "accepted",
+        "missingness_summary": "0 missing of 35 expected slots",
+        "reproducibility_state": "reproducible_offline_from_retained_fixture",
+        "uncertainty_dimensions": [
+          "mutable_source_reacquisition_limit",
+          "single_entity_single_indicator_scope"
+        ],
+        "validation_state": "pass"
+      },
+      "contradiction_records": [
+        {
+          "contradicting_evidence": null,
+          "contradiction_id": "none-recorded",
+          "contradiction_type": "none",
+          "disposition": "not_applicable",
+          "target_statement": "stmt-campaign34-denmark-population-statistical-summary"
+        }
+      ],
+      "created_at": "2026-07-10",
+      "created_by": "run_campaign34_wdi_denmark_population_statistical_summary",
+      "evidence_integrity": {
+        "evidence_refs_verified": true,
+        "fingerprints_verified": true,
+        "source_package_fingerprint": "sha256:034e8f4da6afdbdddf54a7a553f16483af4339f5348e0427f1706dfd9141a258"
+      },
+      "evidence_references": [
+        {
+          "accessed_at": "2026-07-10",
+          "evaluation_status": "evaluated",
+          "evidence_class": "external_observation_level_numerical_fixture",
+          "evidence_ref_id": "ev-campaign34-https-corrected-wdi-observation-fixture",
+          "reproducibility_handle": "retained HTTPS-corrected raw fixture and normalized observations",
+          "snapshot_fingerprint": "sha256:034e8f4da6afdbdddf54a7a553f16483af4339f5348e0427f1706dfd9141a258",
+          "source_family": "official_statistical_source_data",
+          "source_identity": "World Bank World Development Indicators SP.POP.TOTL DNK annual fixture",
+          "source_owner": "World Bank WDI API retained local fixture",
+          "source_version": "2026-07-01"
+        }
+      ],
+      "evolution_metadata": {
+        "change_reason": "Campaign 34 bounded statistical-summary pilot",
+        "changed_inputs_methods_templates_models_validators": [
+          "wdi_denmark_population_statistical_summary_v1"
+        ],
+        "dependent_object_review_posture": "not_applicable",
+        "previous_revision": null
+      },
+      "fingerprints": {
+        "computation_recipe": "sha256:2c8c4d2665e34844a40468c5aeae4dacba880531cf3e7adeb190074118a28a0d",
+        "evidence_references": "sha256:a910c05fe7b5a7db08c1118947f001138f51c6a3f20945b710b36914a1017190",
+        "generated_statements": "sha256:6358e5c1c65e6711d01818c800fcdacc37e096754c3d5db27b6a45da685faf1b",
+        "input_set": "sha256:19116f94ba8b682c16a8456c27dd24ce8febc8b512ec8b1de1d87a9df9290f50",
+        "package_manifest": "sha256:833d840e69796e1a01bbcafca36b10502c682b6191419e8b3ac2d588a347a070",
+        "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "generated_statements": [
+        {
+          "applicability": {
+            "entity_id": "DNK",
+            "indicator_code": "SP.POP.TOTL",
+            "method_id": "wdi_denmark_population_statistical_summary_v1",
+            "period_end": 2024,
+            "period_start": 1990
+          },
+          "dependencies": [
+            "ev-campaign34-https-corrected-wdi-observation-fixture",
+            "calc-campaign34-statistical-summary"
+          ],
+          "evidence_refs": [
+            "ev-campaign34-https-corrected-wdi-observation-fixture"
+          ],
+          "origin": "computed_from_retained_normalized_evidence_fixture",
+          "statement_id": "stmt-campaign34-denmark-population-statistical-summary",
+          "statement_type": "derived",
+          "structured_payload": {
+            "arithmetic_mean": "5506886.828571428571428571429",
+            "calculation_notes": [
+              "Values are deterministic descriptive measures over retained observed annual levels only.",
+              "Population standard deviation uses denominator N and is a dispersion descriptor for this retained finite evidence set."
+            ],
+            "coverage_share": "1",
+            "expected_observation_slot_count": 35,
+            "first_valid_observation": {
+              "period": 1990,
+              "unit": "persons",
+              "value": "5140939"
+            },
+            "last_valid_observation": {
+              "period": 2024,
+              "unit": "persons",
+              "value": "5976992"
+            },
+            "maximum": {
+              "periods": [
+                2024
+              ],
+              "unit": "persons",
+              "value": "5976992"
+            },
+            "median": "5461438",
+            "method_id": "wdi_denmark_population_statistical_summary_v1",
+            "minimum": {
+              "periods": [
+                1990
+              ],
+              "unit": "persons",
+              "value": "5140939"
+            },
+            "missing_count": 0,
+            "missing_share": "0",
+            "observed_count": 35,
+            "period_coverage": {
+              "end_period": 2024,
+              "frequency": "annual",
+              "start_period": 1990
+            },
+            "population_standard_deviation": "244565.4198270283104925028932",
+            "unit": "persons"
+          },
+          "text": "For retained World Bank WDI SP.POP.TOTL observations for Denmark (DNK), annual 1990-2024, the fixture has 35 expected slots, 35 observed values, 0 missing values, coverage share 1, first valid value 5140939 persons in 1990, last valid value 5976992 persons in 2024, minimum 5140939 persons in [1990], maximum 5976992 persons in [2024], arithmetic mean 5506886.828571428571428571429 persons, median 5461438 persons, and population standard deviation 244565.4198270283104925028932 persons under wdi_denmark_population_statistical_summary_v1."
+        }
+      ],
+      "input_references": [
+        "srcpkg-campaign34-https-corrected-wdi-observation-fixture"
+      ],
+      "lineage": {
+        "lineage_fingerprint": "sha256:b1e8a1f2fabf3f6a0911ef9a45608d3296ded095f7a5cf0a9b0ccbfadd98ea24",
+        "previous_package_id": "pkg-candidate-srcpkg-campaign34-denmark-population-statistical-summary",
+        "version_lineage": [
+          "pkg-candidate-srcpkg-campaign34-denmark-population-statistical-summary",
+          "pkg-object-srcpkg-campaign34-denmark-population-statistical-summary"
+        ]
+      },
+      "package_id": "pkg-object-srcpkg-campaign34-denmark-population-statistical-summary",
+      "package_kind": "KnowledgeObjectPackage",
+      "package_version": "1.0",
+      "promotion": {
+        "from_candidate_package_id": "pkg-candidate-srcpkg-campaign34-denmark-population-statistical-summary",
+        "maturity_state": "bounded pilot accepted",
+        "promotion_justification": "Candidate passed deterministic Campaign 34 validation and preserves KnowledgeForge boundaries.",
+        "validation_history": []
+      },
+      "provenance_envelope": {
+        "calculation_contract_fingerprint": "sha256:31c994804e55f124778e201c5f76ea50adcce4af147dfe4c7073e21de5b7afce",
+        "computation_recipe": "wdi_denmark_population_statistical_summary_v1@1.0",
+        "corrected_normalized_evidence_fingerprint": "sha256:cce0367fc05bf8ad974a14593eec8e2d4f8fdf7fafced1976d9001c9c1eaeb93",
+        "corrected_raw_evidence_fingerprint": "sha256:034e8f4da6afdbdddf54a7a553f16483af4339f5348e0427f1706dfd9141a258",
+        "creator": "run_campaign34_wdi_denmark_population_statistical_summary",
+        "evaluation_refs": [
+          "validation-campaign34-statistical-summary"
+        ],
+        "evidence_refs": [
+          "ev-campaign34-https-corrected-wdi-observation-fixture"
+        ],
+        "generation_date": "2026-07-10",
+        "lineage": [
+          "raw_https_fixture",
+          "normalized_observations",
+          "statistical_summary_package"
+        ],
+        "mutable_source_vintage_limitation": {
+          "exact_reproducibility_basis": "retained local raw response bytes and normalized fixture",
+          "source_identity_basis": "World Bank WDI API URL, request parameters, source id, and lastupdated metadata",
+          "vintage_limitation": "WDI API response is mutable; no true immutable historical vintage identifier was observed in the API response, so reacquiring identical bytes later is not claimed."
+        },
+        "package_identity": "pkg-object-srcpkg-campaign34-denmark-population-statistical-summary",
+        "reproducibility_state": "reproducible_offline",
+        "selection_fingerprint": "sha256:16fe627795e31ec9aab2c49a6c8e0f6a3ee2d5271235c06d46dfbd55cfc038ee",
+        "source_systems": [
+          "World Bank WDI retained HTTPS fixture"
+        ],
+        "validation_tool": "run_campaign34_wdi_denmark_population_statistical_summary",
+        "wdi_lastupdated": "2026-07-01"
+      },
+      "scope": {
+        "domain": "WDI Denmark population statistical summary",
+        "evidence_family": "external_wdi_annual_scalar_demographic_structure_statistical_summary",
+        "intended_use": "deterministic descriptive knowledge only",
+        "method_scope": "wdi_denmark_population_statistical_summary_v1",
+        "source_scope": {
+          "campaign_id": "campaign-34-wdi-denmark-population-statistical-summary-pilot",
+          "dataset": "World Development Indicators",
+          "entity_id": "DNK",
+          "frequency": "annual",
+          "indicator_code": "SP.POP.TOTL",
+          "indicator_name": "Population, total",
+          "period_end": 2024,
+          "period_start": 1990,
+          "provider": "World Bank",
+          "scope_type": "bounded_statistical_summary",
+          "source_id": "2",
+          "unit": "persons"
+        }
+      },
+      "status": "accepted-for-controlled-production",
+      "validation_state": {
+        "blockers": [],
+        "human_review_required": false,
+        "validation_result": "pass",
+        "validator_version": "campaign34-v1",
+        "warnings": []
+      }
+    }
+  },
+  "valid": true
+}

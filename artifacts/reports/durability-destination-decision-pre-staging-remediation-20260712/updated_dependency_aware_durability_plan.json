@@ -1,0 +1,648 @@
+{
+  "alignment": {
+    "canonical_packages_covered_by_policy": true,
+    "operational_backup_mechanism_implemented": false,
+    "postgresql_reconstructable_from_policy": true,
+    "substantive_calculation_capability_covered_by_policy": true
+  },
+  "artifact_class_policy": {
+    "accepted_source_copies": "D operational backup/checkpointing",
+    "canonical_knowledge_object_package_json": "A ordinary Git",
+    "correlation_batch_specifications": "A ordinary Git",
+    "current_state_registries": "D operational backup/checkpointing",
+    "derivation_registries": "A ordinary Git when append-only canonical provenance; D operational backup/checkpointing when mutable operational registry",
+    "large_raw_provider_responses": "C immutable external artifact storage",
+    "manifest_indexes_fingerprints_evolution_records": "A ordinary Git",
+    "method_and_calculation_contracts": "A ordinary Git",
+    "outbox_transport_state": "D operational backup/checkpointing",
+    "postgresql_projection_and_backups": "E projection deterministically rebuildable from durable canonical inputs; D backups for operational recovery only",
+    "release_exports_and_histories": "A ordinary Git while small text/audit artifacts fit current repository scale; C immutable external artifact storage when measured size stops being reviewable in ordinary Git",
+    "reports_logs_generated_context": "E for generated context/caches; A for decision-bearing compact reports; C for large raw logs/report bundles",
+    "seen_release_registries": "D operational backup/checkpointing",
+    "sensitive_local_configuration": "F sensitive/local-only and excluded",
+    "small_evidence_fixtures": "A ordinary Git",
+    "source_code_and_tests": "A ordinary Git",
+    "task_decision_doctrine_roadmap_architecture_state_handoff_records": "A ordinary Git"
+  },
+  "groups": [
+    {
+      "bytes": 404906,
+      "depends_on": [],
+      "destination_counts": {
+        "A ordinary Git": 52,
+        "E deterministically rebuildable/excluded": 16
+      },
+      "essential_for_reconstruction_sample": [],
+      "file_count": 68,
+      "group": "01-foundational-doctrine-state-architecture",
+      "pathspecs": [
+        "AGENTS.md",
+        "CONSTITUTION.md",
+        "README.md",
+        "_SUMMARY.md",
+        "architecture/",
+        "docs/",
+        "state/",
+        "context/",
+        "instructions/"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 1,
+      "status_counts": {
+        "modified_tracked": 24,
+        "untracked": 44
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 5855550,
+      "depends_on": [
+        "01-foundational-doctrine-state-architecture"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 1083
+      },
+      "essential_for_reconstruction_sample": [
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-architectural-continuity-review.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-artifact-count.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-complete-lineage-count.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-deterministic-lineage-transform.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-environment-family-maturity-assessment.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-license-note-coverage.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-lineage-completeness-classification.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-lineage-envelope-coverage.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-missing-lineage-count.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-production-methodology-assessment.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-quality-control-state.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-raw-artifact-hash-coverage.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-raw-artifact-url-coverage.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-release-key-coverage.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-required-lineage-fields.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-source-url-coverage.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign12-validation-state.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign13-deterministic-transfer-method.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign13-family-communications-access-metadata.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign13-family-digital-connectivity-metadata.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign13-family-energy-access-infrastructure-metadata.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign13-family-logistics-and-trade-facilitation-metadata.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign13-family-transport-services-metadata.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign13-infrastructure-evidence-quality-state.json",
+        "knowledge_repository/evolution/pkg-object-srcpkg-campaign13-infrastructure-family-count.json"
+      ],
+      "file_count": 1083,
+      "group": "02-canonical-knowledge-repository",
+      "pathspecs": [
+        "knowledge_repository/"
+      ],
+      "primary_destination": "A ordinary Git",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 2,
+      "status_counts": {
+        "untracked": 1083
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 19029000,
+      "depends_on": [
+        "02-canonical-knowledge-repository"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 1629
+      },
+      "essential_for_reconstruction_sample": [
+        "artifacts/methods/pearson_correlation_calculation_contract_v1.json",
+        "artifacts/methods/statistical_summary_calculation_contract_v2.json"
+      ],
+      "file_count": 1629,
+      "group": "03-mature-wdi-production-evidence",
+      "pathspecs": [
+        "artifacts/evidence-fixtures/",
+        "artifacts/production/",
+        "artifacts/methods/"
+      ],
+      "primary_destination": "A ordinary Git",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 3,
+      "status_counts": {
+        "untracked": 1629
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 93869,
+      "depends_on": [
+        "03-mature-wdi-production-evidence"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 6
+      },
+      "essential_for_reconstruction_sample": [
+        "tools/postgresql_operational_projection.py",
+        "tools/postgresql_realization_decision.py"
+      ],
+      "file_count": 6,
+      "group": "04-postgresql-projection",
+      "pathspecs": [
+        "tools/postgresql_operational_projection.py",
+        "tools/postgresql_realization_decision.py",
+        "tests/test_postgresql",
+        "docs/postgresql"
+      ],
+      "primary_destination": "A ordinary Git",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 4,
+      "status_counts": {
+        "untracked": 6
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 415863,
+      "depends_on": [
+        "04-postgresql-projection"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 5,
+        "A ordinary Git for compact decision-bearing reports; C only if too large to review": 65,
+        "C immutable external artifact storage for large logs, or E excluded if reproducible and not decision-bearing": 18
+      },
+      "essential_for_reconstruction_sample": [
+        "tools/deterministic_statistical_summary_v2.py"
+      ],
+      "file_count": 88,
+      "group": "05-statistical-summary-methods-objects",
+      "pathspecs": [
+        "tools/deterministic_statistical_summary_v2.py",
+        "tests/test_statistical_summary",
+        "docs/statistical_summary",
+        "artifacts/reports/campaign34",
+        "artifacts/reports/campaign35"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 5,
+      "status_counts": {
+        "untracked": 88
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 941428,
+      "depends_on": [
+        "05-statistical-summary-methods-objects"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 11,
+        "A ordinary Git for compact decision-bearing reports; C only if too large to review": 144,
+        "C immutable external artifact storage for large logs, or E excluded if reproducible and not decision-bearing": 37
+      },
+      "essential_for_reconstruction_sample": [
+        "tools/deterministic_pearson_correlation_v1.py",
+        "tools/run_campaign36_dnk_exports_imports_correlation.py",
+        "tools/run_campaign37_swe_nor_exports_imports_correlation.py",
+        "tools/run_campaign38_semantically_distinct_correlation.py",
+        "tools/run_campaign39_heterogeneous_correlation_batch.py"
+      ],
+      "file_count": 192,
+      "group": "06-pearson-correlation-method-objects",
+      "pathspecs": [
+        "tools/deterministic_pearson_correlation_v1.py",
+        "tools/run_campaign36",
+        "tools/run_campaign37",
+        "tools/run_campaign38",
+        "tools/run_campaign39",
+        "tests/test_campaign36",
+        "tests/test_campaign37",
+        "tests/test_campaign38",
+        "tests/test_campaign39",
+        "docs/pearson",
+        "docs/correlation",
+        "artifacts/reports/campaign36",
+        "artifacts/reports/campaign37",
+        "artifacts/reports/campaign38",
+        "artifacts/reports/campaign39"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 6,
+      "status_counts": {
+        "untracked": 192
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 1308168,
+      "depends_on": [
+        "06-pearson-correlation-method-objects"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 24,
+        "A ordinary Git for compact decision-bearing reports; C only if too large to review": 47,
+        "C immutable external artifact storage for large logs, or E excluded if reproducible and not decision-bearing": 27
+      },
+      "essential_for_reconstruction_sample": [
+        "specs/correlation_batches/campaign36_dnk_trade_correlation_compatibility.json",
+        "specs/correlation_batches/campaign37_swe_nor_trade_correlation_compatibility.json",
+        "specs/correlation_batches/campaign38_dnk_life_expectancy_fertility_compatibility.json",
+        "specs/correlation_batches/campaign39_heterogeneous_batch_compatibility.json",
+        "specs/correlation_batches/campaign40_first_end_to_end_spec_driven_pearson_batch.json",
+        "specs/relationship_exports/queries/absolute_coefficient_at_least_0_8.json",
+        "specs/relationship_exports/queries/all_pearson_relationships.json",
+        "specs/relationship_exports/queries/changed_query_period_overlap.json",
+        "specs/relationship_exports/queries/entity_nor.json",
+        "specs/relationship_exports/queries/exact_package_id.json",
+        "specs/relationship_exports/queries/involving_ne_exp_gnfs_zs.json",
+        "specs/relationship_exports/queries/malformed_unsupported_filter.json",
+        "specs/relationship_exports/queries/method_wdi_annual_scalar_pearson_v1.json",
+        "specs/relationship_exports/queries/raw_transformation_pearson.json",
+        "specs/relationship_exports/queries/sql_injection_probe.json",
+        "specs/relationship_exports/queries/unbounded_result_probe.json",
+        "specs/relationship_exports/queries/zero_results.json",
+        "specs/relationship_exports/relationship_export_contract_v1.json",
+        "specs/relationship_exports/relationship_query_contract_v1.json",
+        "specs/release_automation/derivation_applicability_registry_v1.schema.json",
+        "specs/release_automation/neutral_evidence_release_contract_v1.json",
+        "specs/release_automation/real_derivation_applicability_registry_v1.json",
+        "tools/correlation_batch_engine.py"
+      ],
+      "file_count": 98,
+      "group": "07-specification-driven-batch-engine-campaign40",
+      "pathspecs": [
+        "tools/correlation_batch_engine.py",
+        "tests/test_correlation_batch_engine.py",
+        "artifacts/reports/campaign40",
+        "specs/"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 7,
+      "status_counts": {
+        "untracked": 98
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 2599209,
+      "depends_on": [
+        "07-specification-driven-batch-engine-campaign40"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 4,
+        "A ordinary Git for compact decision-bearing reports; C only if too large to review": 77,
+        "C immutable external artifact storage for large logs, or E excluded if reproducible and not decision-bearing": 24
+      },
+      "essential_for_reconstruction_sample": [
+        "tools/relationship_export_consumer_simulator_v1.py",
+        "tools/relationship_export_v1.py"
+      ],
+      "file_count": 105,
+      "group": "08-relationship-export-contract",
+      "pathspecs": [
+        "tools/relationship_export",
+        "tests/test_relationship_export",
+        "artifacts/reports/relationship-export",
+        "docs/interfaces.md"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 8,
+      "status_counts": {
+        "modified_tracked": 1,
+        "untracked": 104
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 3579739,
+      "depends_on": [
+        "08-relationship-export-contract"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 4,
+        "D operational backup/checkpointing": 31
+      },
+      "essential_for_reconstruction_sample": [
+        "tools/release_automation_alignment_v1.py",
+        "tools/release_inbox_v1.py"
+      ],
+      "file_count": 35,
+      "group": "09-release-automation-inbox-registries",
+      "pathspecs": [
+        "tools/release_inbox_v1.py",
+        "tools/release_automation_alignment_v1.py",
+        "tests/test_release",
+        "artifacts/release-inbox"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 9,
+      "status_counts": {
+        "untracked": 35
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 2195380,
+      "depends_on": [
+        "09-release-automation-inbox-registries"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 2,
+        "A ordinary Git for compact decision-bearing reports; C only if too large to review": 33,
+        "C immutable external artifact storage for large logs, or E excluded if reproducible and not decision-bearing": 26,
+        "D operational backup/checkpointing": 9
+      },
+      "essential_for_reconstruction_sample": [
+        "tools/macroforge_neutral_release_adapter_v1.py"
+      ],
+      "file_count": 70,
+      "group": "10-macroforge-adapter-real-handoff-evidence",
+      "pathspecs": [
+        "tools/macroforge_neutral_release_adapter_v1.py",
+        "tests/test_macroforge",
+        "artifacts/external-release-handoffs/",
+        "artifacts/release-inbox-macroforge-real-handoff-v1/",
+        "artifacts/reports/macroforge"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 10,
+      "status_counts": {
+        "untracked": 70
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 2690481,
+      "depends_on": [
+        "10-macroforge-adapter-real-handoff-evidence"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 3,
+        "A ordinary Git for compact decision-bearing reports; C only if too large to review": 52,
+        "C immutable external artifact storage for large logs, or E excluded if reproducible and not decision-bearing": 11,
+        "D operational backup/checkpointing": 9,
+        "E deterministically rebuildable/excluded": 5
+      },
+      "essential_for_reconstruction_sample": [
+        "tools/external_outbox_poller_v1.py"
+      ],
+      "file_count": 80,
+      "group": "11-outbox-polling",
+      "pathspecs": [
+        "tools/external_outbox_poller_v1.py",
+        "tests/test_external_outbox",
+        "config/external_outbox_sources.json",
+        "artifacts/external-outbox",
+        "artifacts/release-inbox-unified-v1",
+        "artifacts/reports/provider-neutral-outbox"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 11,
+      "status_counts": {
+        "untracked": 80
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 237143,
+      "depends_on": [
+        "11-outbox-polling"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 3,
+        "A ordinary Git for compact decision-bearing reports; C only if too large to review": 27,
+        "C immutable external artifact storage for large logs, or E excluded if reproducible and not decision-bearing": 11
+      },
+      "essential_for_reconstruction_sample": [
+        "tools/canonical_supersession_immutability_validator.py"
+      ],
+      "file_count": 41,
+      "group": "12-corrected-supersession-model",
+      "pathspecs": [
+        "tools/canonical_supersession_immutability_validator.py",
+        "tests/test_canonical_supersession",
+        "artifacts/reports/canonical-supersession",
+        "artifacts/decisions/D-20260711-canonical-supersession"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 12,
+      "status_counts": {
+        "untracked": 41
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 3583597,
+      "depends_on": [
+        "12-corrected-supersession-model"
+      ],
+      "destination_counts": {
+        "A ordinary Git": 102,
+        "A ordinary Git for compact decision-bearing reports; C only if too large to review": 14,
+        "C immutable external artifact storage for large logs, or E excluded if reproducible and not decision-bearing": 4
+      },
+      "essential_for_reconstruction_sample": [
+        "tools/repository_wide_durability_validator.py"
+      ],
+      "file_count": 120,
+      "group": "13-documentation-final-handoff-and-durability",
+      "pathspecs": [
+        "artifacts/tasks/",
+        "artifacts/decisions/",
+        "artifacts/reports/repository-wide-durability",
+        "tools/repository_wide_durability_validator.py"
+      ],
+      "primary_destination": "mixed",
+      "rollback_recovery_implications": "No reset/clean. If authorized commit is wrong, use reviewed inverse patch or corrective commit; canonical package files must not be rewritten for lifecycle changes.",
+      "sequence": 13,
+      "status_counts": {
+        "modified_tracked": 3,
+        "untracked": 117
+      },
+      "validation_after": [
+        "uvx --from pytest pytest tests -q",
+        "python3 -m compileall -q tools tests",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ],
+      "validation_before": [
+        "git diff --check",
+        "python3 tools/repository_wide_durability_validator.py --report <review-dir>"
+      ]
+    },
+    {
+      "bytes": 4419402,
+      "depends_on": [
+        "09-release-automation-inbox-registries",
+        "11-outbox-polling"
+      ],
+      "essential_for_reconstruction_sample": [
+        "artifacts/external-outbox-transport-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json",
+        "artifacts/external-outbox-transport-v1/inbound/macroforge-neutral-evidence-release-outbox-local-v1/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.neutral-release.json",
+        "artifacts/external-outbox-transport-v1/inbound/macroforge-neutral-evidence-release-outbox-local-v1/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/manifest.json",
+        "artifacts/external-outbox-transport-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json",
+        "artifacts/external-outbox-transport-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json",
+        "artifacts/external-outbox-transport-v1/seen-release-registry.jsonl",
+        "artifacts/external-outbox-transport-v1/transport-registry.jsonl",
+        "artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/macroforge-wdi-trade-share-dnk-swe-nor-1990-2024.neutral-release.json",
+        "artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/manifest.json",
+        "artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/transfer_integrity_record.json",
+        "artifacts/release-inbox-macroforge-real-handoff-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json",
+        "artifacts/release-inbox-macroforge-real-handoff-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json",
+        "artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json",
+        "artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/downstream_delta.json",
+        "artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/processing_result.json",
+        "artifacts/release-inbox-macroforge-real-handoff-v1/seen-release-registry.jsonl",
+        "artifacts/release-inbox-unified-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json",
+        "artifacts/release-inbox-unified-v1/seen-release-registry.jsonl",
+        "artifacts/release-inbox-v1/accepted-releases/wdi-trade-exports-imports-controlled-test-v2.json",
+        "artifacts/release-inbox-v1/accepted-releases/wdi-trade-exports-imports-retained-evidence-v1.json",
+        "artifacts/release-inbox-v1/inbox/controlled_successor_release_v2.json",
+        "artifacts/release-inbox-v1/inbox/real_wdi_exports_imports_release_v1.json",
+        "artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/downstream_delta.json",
+        "artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/processing_result.json",
+        "artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/downstream_delta.json",
+        "artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/processing_result.json",
+        "artifacts/release-inbox-v1/quarantined-releases/conflicting_reuse_v1.json",
+        "artifacts/release-inbox-v1/quarantined-releases/fingerprint_mismatch_release.json",
+        "artifacts/release-inbox-v1/quarantined-releases/malformed-410aed2fbd870bd0.json",
+        "artifacts/release-inbox-v1/quarantined-releases/missing_predecessor_release.json",
+        "artifacts/release-inbox-v1/quarantined-releases/real_wdi_exports_imports_release_v1.json",
+        "artifacts/release-inbox-v1/quarantined-releases/wrong_contract_release.json",
+        "artifacts/release-inbox-v1/seen-release-registry.jsonl",
+        "artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/wdi-trade-exports-imports-controlled-test-v2.json",
+        "artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/wdi-trade-exports-imports-retained-evidence-v1.json",
+        "artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/downstream_delta.json",
+        "artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/failure.json",
+        "artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/processing_result.json",
+        "artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/downstream_delta.json",
+        "artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/processing_result.json",
+        "artifacts/release-inbox-v1-failure-resume-scenario/seen-release-registry.jsonl"
+      ],
+      "file_count": 41,
+      "group": "14-operational-backup-checkpointing-mechanism",
+      "pathspecs": [
+        "artifacts/release-inbox*/",
+        "artifacts/external-outbox-transport-v1/",
+        "PostgreSQL operational backup job/config (future, not implemented here)"
+      ],
+      "primary_destination": "D operational backup/checkpointing",
+      "rollback_recovery_implications": "Backup/checkpoint config should be reversible without mutating canonical package bytes.",
+      "sequence": 14,
+      "status_counts": {
+        "mixed_local_operational_state": 41
+      },
+      "validation_after": [
+        "restore-drill in a temporary directory/database before trusting backup"
+      ],
+      "validation_before": [
+        "choose checkpoint destination; do not treat PostgreSQL as canonical authority"
+      ]
+    }
+  ],
+  "sensitive_material_result": {
+    "actual_secret_blockers": 0,
+    "reviewed_false_positives": 128,
+    "unsafe_absolute_path_dependencies": 0
+  }
+}

@@ -1,0 +1,146 @@
+{
+  "after_generic_engine_core": {
+    "duplicated_normalized_line_instances": 7,
+    "duplication_ratio": 0.044,
+    "top_duplicates": [
+      [
+        "}",
+        3
+      ],
+      [
+        "return {",
+        2
+      ],
+      [
+        "if target.exists():",
+        2
+      ],
+      [
+        "This engine operationalizes the CAMPAIGN-39 Pearson family without acquiring new",
+        1
+      ],
+      [
+        "evidence, modifying historical packages, or expanding repository/PostgreSQL schema.",
+        1
+      ],
+      [
+        "Specs point at retained normalized evidence artifacts and expected historical package",
+        1
+      ],
+      [
+        "identities. Promotion is disabled by default and tests use temporary repositories.",
+        1
+      ],
+      [
+        "from __future__ import annotations",
+        1
+      ],
+      [
+        "import argparse",
+        1
+      ],
+      [
+        "import hashlib",
+        1
+      ],
+      [
+        "import importlib.util",
+        1
+      ],
+      [
+        "import json",
+        1
+      ],
+      [
+        "import shutil",
+        1
+      ],
+      [
+        "import tempfile",
+        1
+      ],
+      [
+        "from pathlib import Path",
+        1
+      ]
+    ],
+    "total_nonblank_noncomment_lines": 159,
+    "unique_normalized_lines": 155
+  },
+  "before_campaign_specific_runners": {
+    "duplicated_normalized_line_instances": 703,
+    "duplication_ratio": 0.4656,
+    "top_duplicates": [
+      [
+        "}",
+        23
+      ],
+      [
+        "return result",
+        15
+      ],
+      [
+        "},",
+        14
+      ],
+      [
+        "else:",
+        9
+      ],
+      [
+        "\"frequency\": \"annual\",",
+        6
+      ],
+      [
+        "from __future__ import annotations",
+        4
+      ],
+      [
+        "import argparse",
+        4
+      ],
+      [
+        "import hashlib",
+        4
+      ],
+      [
+        "import importlib.util",
+        4
+      ],
+      [
+        "import json",
+        4
+      ],
+      [
+        "import urllib.request",
+        4
+      ],
+      [
+        "from datetime import datetime, timezone",
+        4
+      ],
+      [
+        "from decimal import Decimal, ROUND_HALF_EVEN, Context, localcontext",
+        4
+      ],
+      [
+        "from pathlib import Path",
+        4
+      ],
+      [
+        "from typing import Any",
+        4
+      ]
+    ],
+    "total_nonblank_noncomment_lines": 1510,
+    "unique_normalized_lines": 1048
+  },
+  "generic_engine": "tools/correlation_batch_engine.py",
+  "historical_runner_files": [
+    "tools/run_campaign36_dnk_exports_imports_correlation.py",
+    "tools/run_campaign37_swe_nor_exports_imports_correlation.py",
+    "tools/run_campaign38_semantically_distinct_correlation.py",
+    "tools/run_campaign39_heterogeneous_correlation_batch.py"
+  ],
+  "interpretation": "Generic engine centralizes offline reproduction/failure isolation/atomic publication; campaign-specific runners remain historical compatibility evidence and were not rewritten."
+}

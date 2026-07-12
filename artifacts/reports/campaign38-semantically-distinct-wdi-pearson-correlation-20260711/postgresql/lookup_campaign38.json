@@ -1,0 +1,252 @@
+{
+  "package": {
+    "canonical_path": "objects/pkg-object-srcpkg-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1.json",
+    "evidence_family": "external_wdi_annual_scalar_demographic_pearson_correlation",
+    "lifecycle_state": "accepted",
+    "package_fingerprint": "sha256:35da97f7079bdc836a0a27a339376a2b6d2f485967c9178e9d377eb18ca05f88",
+    "package_id": "pkg-object-srcpkg-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1",
+    "package_manifest_fingerprint": "sha256:73700b32f3cc0014fac70dbf7e2d16b7066373018ca2a3f4786988e521df27de",
+    "payload": {
+      "confidence_quality": {
+        "confidence_label": "fixture-supported-deterministic",
+        "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation pilot",
+        "lifecycle_state": "accepted",
+        "missingness_summary": "0 missing/excluded pairs of 35 expected periods",
+        "reproducibility_state": "reproducible_offline_from_retained_fixture",
+        "uncertainty_dimensions": [
+          "mutable_source_reacquisition_limit",
+          "modeled_estimation_methodology",
+          "time_ordering_autocorrelation",
+          "structural_breaks",
+          "no_significance_or_causal_claim"
+        ],
+        "validation_state": "pass"
+      },
+      "contradiction_records": [
+        {
+          "contradicting_evidence": null,
+          "contradiction_id": "none-recorded",
+          "contradiction_type": "none",
+          "disposition": "not_applicable",
+          "target_statement": "stmt-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1"
+        }
+      ],
+      "created_at": "2026-07-11",
+      "created_by": "run_campaign38_semantically_distinct_correlation",
+      "evidence_integrity": {
+        "evidence_refs_verified": true,
+        "fingerprints_verified": true,
+        "source_package_fingerprint": "sha256:94e8a27db76b281e546623277422406e89e61c7003da5d6bdd8adfe201232a95"
+      },
+      "evidence_references": [
+        {
+          "accessed_at": "2026-07-11",
+          "evaluation_status": "evaluated",
+          "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+          "evidence_ref_id": "ev-campaign38-wdi-dnk-life-expectancy-fertility-fixture",
+          "reproducibility_handle": "retained HTTPS raw fixture, frozen selection decision, normalized series, alignment contract, and calculation evidence",
+          "snapshot_fingerprint": "sha256:94e8a27db76b281e546623277422406e89e61c7003da5d6bdd8adfe201232a95",
+          "source_family": "official_statistical_source_data",
+          "source_identity": "World Bank WDI SP.DYN.LE00.IN and SP.DYN.TFRT.IN DNK annual 1990-2024 fixture",
+          "source_owner": "World Bank WDI API retained local fixture",
+          "source_version": "2026-07-01"
+        }
+      ],
+      "evolution_metadata": {
+        "change_reason": "Campaign 38 semantically distinct correlation pilot",
+        "changed_inputs_methods_templates_models_validators": [],
+        "dependent_object_review_posture": "not_applicable",
+        "previous_revision": null
+      },
+      "fingerprints": {
+        "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+        "evidence_references": "sha256:8bff04092240e8a8cc4a5f5e5f815e2d0424b4b72e44c030983d10a3c900ddb8",
+        "generated_statements": "sha256:0c47283ba2b376d7d70de9df4c1999daaa08bcf8b6953acc61adb0400525ed02",
+        "input_set": "sha256:48f4b9df0acb7941c6b192dee43b6c218e6fafe2d0bf0ef7a2c102beb622f1ae",
+        "package_manifest": "sha256:73700b32f3cc0014fac70dbf7e2d16b7066373018ca2a3f4786988e521df27de",
+        "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "generated_statements": [
+        {
+          "applicability": {
+            "entity_id": "DNK",
+            "frequency": "annual",
+            "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+            "method_version": "1.0",
+            "period_end": 2024,
+            "period_start": 1990
+          },
+          "dependencies": [
+            "calc-campaign38-dnk-life-expectancy-fertility-pearson-v1",
+            "align-campaign38-dnk-life-expectancy-fertility"
+          ],
+          "evidence_refs": [
+            "ev-campaign38-wdi-dnk-life-expectancy-fertility-fixture"
+          ],
+          "origin": "computed_from_retained_frozen_selection_wdi_fixture",
+          "statement_id": "stmt-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1",
+          "statement_type": "derived_relationship",
+          "structured_payload": {
+            "aligned_coverage": "1",
+            "aligned_pair_count": 35,
+            "calculation_evidence_fingerprint": "sha256:28cea25d6557a0e90484ceba81d1e8f235dd59d3f36f976329f55910dd2cea75",
+            "combined_aligned_evidence_fingerprint": "sha256:94e8a27db76b281e546623277422406e89e61c7003da5d6bdd8adfe201232a95",
+            "combined_fixture_fingerprint": "sha256:05ec15d09892d5054e5107ff98c3960cc939580752af589fddb4fac1e7ca3775",
+            "construction_risk_assessment": {
+              "assessment": {
+                "algebraic_identity": "not_present",
+                "common_administrative_reporting_process": "not_present",
+                "common_modeled_estimation_procedure": "material_limitation",
+                "definitional_overlap": "not_present",
+                "direct_component_total_construction": "not_present",
+                "frequency_mismatch": "not_present",
+                "one_series_embedded_in_other": "not_present",
+                "shared_denominator": "not_present",
+                "transformation_mismatch": "not_present",
+                "unit_mismatch": "ordinary_contextual_limitation_different_units_expected"
+              },
+              "material_limitations": [
+                "common_modeled_estimation_procedure"
+              ],
+              "ordinary_contextual_limitations": [
+                "unit_mismatch"
+              ],
+              "promotion_blocker_present": false,
+              "summary": "Life expectancy and fertility are distinct demographic measures with different units; no algebraic identity, direct component-total construction, shared denominator, or definitional embedding was found. Both are demographic model/statistical estimates, retained as a material methodology limitation."
+            },
+            "diagnostic_limitations": [
+              "transformation sensitivity",
+              "common time-ordering risk",
+              "autocorrelation limitation",
+              "structural-break limitation",
+              "measurement-methodology limitation",
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing"
+            ],
+            "entity_id": "DNK",
+            "entity_name": "Denmark",
+            "excluded_periods": [],
+            "frequency": "annual",
+            "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+            "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+            "method_version": "1.0",
+            "missing_periods": {
+              "series_a": [],
+              "series_b": []
+            },
+            "mutable_source_limitation": "Retained bytes, not mutable WDI API reacquisition, provide exact historical reproducibility.",
+            "package_fingerprint": "sha256:9938f452a80a8d682d6610e2ea00d231044d949039880e368c0dcbf53d488183",
+            "pearson_coefficient": {
+              "canonical": "-0.40932912178",
+              "unit": "dimensionless"
+            },
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            },
+            "provider_metadata": {
+              "series_a": {
+                "dataset": "World Development Indicators",
+                "provider": "World Bank",
+                "source": "World Development Indicators",
+                "sourceid": "2",
+                "wdi_lastupdated": "2026-07-01"
+              },
+              "series_b": {
+                "dataset": "World Development Indicators",
+                "provider": "World Bank",
+                "source": "World Development Indicators",
+                "sourceid": "2",
+                "wdi_lastupdated": "2026-07-01"
+              }
+            },
+            "selection_decision_fingerprint": "sha256:673084540acbd2fad36964951d3f9f2a0c26328af596867572c2b662770f8930",
+            "series_a": {
+              "code": "SP.DYN.LE00.IN",
+              "definition": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+              "name": "Life expectancy at birth, total (years)",
+              "normalized_fingerprint": "sha256:2c87ba0eb462282d0bb92d3ae5a1a5cebeb2b4fc849e3277de3c60ad8d85a59b",
+              "raw_fingerprints": {
+                "metadata": "sha256:fe93a3e40f941546ba47fa7e7134f165b212d95e498868560d4c1c18f9ed0210",
+                "observations": "sha256:1c3e635dabc11159ce61b5f14489e526de15275f6644dd6958ac275b72635329"
+              },
+              "unit": "years"
+            },
+            "series_b": {
+              "code": "SP.DYN.TFRT.IN",
+              "definition": "Total fertility rate represents the number of children that would be born to a woman if she were to live to the end of her childbearing years and bear children in accordance with age-specific fertility rates of the specified year.",
+              "name": "Fertility rate, total (births per woman)",
+              "normalized_fingerprint": "sha256:5c73c466bf7eaec2e219830dc4d49c96a7c5daf11b5ff4472cf1fce3206fc4f1",
+              "raw_fingerprints": {
+                "metadata": "sha256:44d46aa90ab6733447d7da9c1363a5f9b0e4b81a637f5a5d6451bb767249242c",
+                "observations": "sha256:247a8f8a34b1f0847a573d80878f36f4caa2ad1d41ede58c97444079cc9a26f3"
+              },
+              "unit": "births per woman"
+            },
+            "transformation_state": {
+              "series_a": "raw",
+              "series_b": "raw"
+            },
+            "validation_judgment": "accepted_semantically_distinct_correlation_object"
+          },
+          "text": "Across the aligned annual DNK observations from 1990 through 2024, the Pearson correlation between life expectancy at birth, total (years) and fertility rate, total (births per woman) is -0.40932912178, using 35 aligned observations."
+        }
+      ],
+      "input_references": [
+        "campaign38_frozen_selection_decision",
+        "campaign38_dual_series_wdi_https_fixture",
+        "pearson_correlation_calculation_contract_v1"
+      ],
+      "lineage": {
+        "generalizes_from": [
+          "Campaign 36",
+          "Campaign 37"
+        ],
+        "previous_package_id": null,
+        "source_campaign": "Campaign 38",
+        "version_lineage": []
+      },
+      "package_id": "pkg-object-srcpkg-campaign38-dnk-life-expectancy-fertility-pearson-correlation-v1",
+      "package_kind": "KnowledgeObjectPackage",
+      "package_version": "1.0",
+      "provenance_envelope": {
+        "evaluation_refs": [
+          "campaign38_frozen_selection_decision",
+          "campaign38_alignment_validation",
+          "campaign38_calculation_evidence",
+          "campaign38_non_promoted_diagnostics"
+        ],
+        "evidence_refs": [
+          "ev-campaign38-wdi-dnk-life-expectancy-fertility-fixture"
+        ],
+        "lineage_basis": "frozen metadata/coverage-only selection followed by fresh Campaign 38 HTTPS acquisition",
+        "method_refs": [
+          "wdi_annual_scalar_pearson_correlation_v1@1.0"
+        ]
+      },
+      "scope": {
+        "domain": "world_development_indicators",
+        "entity_scope": [
+          "DNK"
+        ],
+        "evidence_family": "external_wdi_annual_scalar_demographic_pearson_correlation",
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        }
+      },
+      "status": "accepted",
+      "validation_state": {
+        "blockers": [],
+        "validation_result": "pass",
+        "warnings": [
+          "common modeled/statistical-estimation methodology limitation",
+          "time-ordering/autocorrelation limitation",
+          "no causal/predictive/significance interpretation"
+        ]
+      }
+    }
+  },
+  "valid": true
+}

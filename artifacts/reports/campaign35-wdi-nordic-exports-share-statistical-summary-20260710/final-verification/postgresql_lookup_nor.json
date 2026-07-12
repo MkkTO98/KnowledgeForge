@@ -1,0 +1,324 @@
+{
+  "package": {
+    "canonical_path": "objects/pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2.json",
+    "evidence_family": "external_wdi_annual_scalar_trade_statistical_summary",
+    "lifecycle_state": "accepted",
+    "package_fingerprint": "sha256:d14942732dcb1df86234e152bc64dd521ab83606cdad2a1021248831495a2073",
+    "package_id": "pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2",
+    "package_manifest_fingerprint": "sha256:9b55eaa72979a83756e5845f4c58951239044f13cb8f9c2ec9384d8762976dfa",
+    "payload": {
+      "computation_method": {
+        "name": "wdi_annual_scalar_statistical_summary_v2",
+        "nondeterminism": "none",
+        "parameters": {
+          "arithmetic_mean_algorithm": "stable-order Decimal sum divided by observed_count inside the pinned local context",
+          "calculation_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+          "canonical_rounding_policy": "ROUND_HALF_EVEN",
+          "canonical_stored_decimal_places": 12,
+          "deterministic_serialization_rules": "canonical JSON sort_keys=True separators=(',', ':') ensure_ascii=False encoded as UTF-8 for fingerprints",
+          "human_display_decimal_places": 4,
+          "input_numerical_canonicalization": "base-10 plain decimal strings only; scientific notation, commas, locale formatting, NaN, and infinity rejected",
+          "internal_decimal_precision": 50,
+          "internal_rounding_mode": "ROUND_HALF_EVEN",
+          "median_algorithm": "sort observed Decimal values ascending; odd N uses middle value; even N averages two middle values inside pinned context",
+          "method_id": "wdi_annual_scalar_statistical_summary_v2",
+          "method_version": "2.0",
+          "minimum_coverage_share": "0.85",
+          "minimum_observed_count": 30,
+          "missing_value_treatment": "preserve missing rows; missing rows must have value_canonical null; numerical measures use observed rows only",
+          "negative_zero_handling": "canonicalize_to_zero",
+          "observation_ordering": [
+            "entity_id",
+            "indicator_code",
+            "period"
+          ],
+          "population_standard_deviation_denominator": "N observed values",
+          "population_standard_deviation_formula": "sqrt(sum((x - mean)^2) / N)",
+          "scientific_notation_policy": "forbidden_in_canonical_values",
+          "square_root_method": "Decimal.sqrt(context=pinned Context(prec=50, rounding=ROUND_HALF_EVEN))",
+          "summation_algorithm": "stable-order left-to-right Decimal addition inside local Context(prec=50, rounding=ROUND_HALF_EVEN)",
+          "trailing_zero_normalization": "strip_fractional_trailing_zeros"
+        },
+        "query_definitions": [],
+        "recipe": "offline deterministic Decimal statistical summary v2 over retained normalized observations",
+        "rerun": "python3 tools/run_campaign35_wdi_nordic_exports_statistical_summary.py --reuse-fixture",
+        "version": "2.0"
+      },
+      "confidence_quality": {
+        "confidence_label": "fixture-supported-deterministic",
+        "evidence_sufficiency": "sufficient for bounded deterministic descriptive statistical summary",
+        "governance_review_state": "Campaign 35 bounded replication accepted",
+        "lifecycle_state": "accepted",
+        "missingness_summary": "0 missing of 35 expected slots for NOR",
+        "reproducibility_state": "reproducible_offline_from_retained_fixture",
+        "uncertainty_dimensions": [
+          "mutable_source_reacquisition_limit",
+          "bounded_three_entity_single_indicator_scope"
+        ],
+        "validation_state": "pass"
+      },
+      "contradiction_records": [
+        {
+          "contradicting_evidence": null,
+          "contradiction_id": "none-recorded",
+          "contradiction_type": "none",
+          "disposition": "not_applicable",
+          "target_statement": "stmt-campaign35-nor-exports-share-statistical-summary-v2"
+        }
+      ],
+      "created_at": "2026-07-10",
+      "created_by": "run_campaign35_wdi_nordic_exports_statistical_summary",
+      "evidence_integrity": {
+        "evidence_refs_verified": true,
+        "fingerprints_verified": true,
+        "source_package_fingerprint": "sha256:1fda94bbab635a13ee82d64ec44fabe5c912335289eb523e93a14d335fab093f"
+      },
+      "evidence_references": [
+        {
+          "accessed_at": "2026-07-10",
+          "evaluation_status": "evaluated",
+          "evidence_class": "external_observation_level_numerical_fixture",
+          "evidence_ref_id": "ev-campaign35-wdi-nordic-exports-share-https-fixture",
+          "reproducibility_handle": "retained HTTPS raw fixture and normalized observations",
+          "snapshot_fingerprint": "sha256:1fda94bbab635a13ee82d64ec44fabe5c912335289eb523e93a14d335fab093f",
+          "source_family": "official_statistical_source_data",
+          "source_identity": "World Bank WDI NE.EXP.GNFS.ZS NOR annual fixture",
+          "source_owner": "World Bank WDI API retained local fixture",
+          "source_version": "2026-07-01"
+        }
+      ],
+      "evolution_metadata": {
+        "change_reason": "Campaign 35 bounded statistical-summary v2 replication",
+        "changed_inputs_methods_templates_models_validators": [
+          "wdi_annual_scalar_statistical_summary_v2"
+        ],
+        "dependent_object_review_posture": "not_applicable",
+        "previous_revision": null
+      },
+      "fingerprints": {
+        "computation_recipe": "sha256:62f342efea3561ad74b1c8ce426659f79e74198292628a00c5072e244faa7dcc",
+        "evidence_references": "sha256:efd2c5d277b6c963ccbd8150e2fd139b020cdf62060210a308de74e4350e29d4",
+        "generated_statements": "sha256:bfeffff2d4bdd322c135ad494215a7df7a543593d2a65f3c24eea0dee9152117",
+        "input_set": "sha256:4bd790470deca6edb4034a0053449cc58e47f028725ad79a8d8d53d56843d3d1",
+        "package_manifest": "sha256:9b55eaa72979a83756e5845f4c58951239044f13cb8f9c2ec9384d8762976dfa",
+        "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "generated_statements": [
+        {
+          "applicability": {
+            "entity_id": "NOR",
+            "indicator_code": "NE.EXP.GNFS.ZS",
+            "method_id": "wdi_annual_scalar_statistical_summary_v2",
+            "method_version": "2.0",
+            "period_end": 2024,
+            "period_start": 1990
+          },
+          "dependencies": [
+            "ev-campaign35-wdi-nordic-exports-share-https-fixture",
+            "calc-campaign35-statistical-summary-v2"
+          ],
+          "evidence_refs": [
+            "ev-campaign35-wdi-nordic-exports-share-https-fixture"
+          ],
+          "origin": "computed_from_retained_normalized_evidence_fixture",
+          "statement_id": "stmt-campaign35-nor-exports-share-statistical-summary-v2",
+          "statement_type": "derived",
+          "structured_payload": {
+            "arithmetic_mean": {
+              "canonical": "40.248198696371",
+              "display": "40.2482",
+              "unit": "percent of GDP"
+            },
+            "calculation_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+            "coverage_share": {
+              "canonical": "1",
+              "display": "1"
+            },
+            "entity_id": "NOR",
+            "entity_name": "Norway",
+            "expected_observation_slot_count": 35,
+            "first_valid_observation": {
+              "period": 1990,
+              "unit": "percent of GDP",
+              "value": "38.873182876877"
+            },
+            "included_measures": [
+              "expected_slot_count",
+              "observed_count",
+              "missing_count",
+              "missing_share",
+              "coverage_share",
+              "first_valid_observation",
+              "last_valid_observation",
+              "minimum",
+              "maximum",
+              "period_coverage",
+              "unit",
+              "arithmetic_mean",
+              "median",
+              "population_standard_deviation"
+            ],
+            "indicator_code": "NE.EXP.GNFS.ZS",
+            "indicator_name": "Exports of goods and services (% of GDP)",
+            "last_valid_observation": {
+              "period": 2024,
+              "unit": "percent of GDP",
+              "value": "46.379495845844"
+            },
+            "maximum": {
+              "canonical": "53.57954923602",
+              "display": "53.5795",
+              "periods": [
+                2022
+              ],
+              "unit": "percent of GDP"
+            },
+            "median": {
+              "canonical": "39.570345744281",
+              "display": "39.5703",
+              "unit": "percent of GDP"
+            },
+            "method_id": "wdi_annual_scalar_statistical_summary_v2",
+            "method_version": "2.0",
+            "minimum": {
+              "canonical": "31.346350576485",
+              "display": "31.3464",
+              "periods": [
+                2020
+              ],
+              "unit": "percent of GDP"
+            },
+            "missing_count": 0,
+            "missing_share": {
+              "canonical": "0",
+              "display": "0"
+            },
+            "mutable_source_limitation": {
+              "exact_reproducibility_basis": "retained local raw response bytes and normalized fixture",
+              "source_identity_basis": "World Bank WDI API URL, request parameters, source id, and lastupdated metadata",
+              "vintage_limitation": "WDI API response is mutable; no true immutable historical vintage identifier was observed in the API response, so reacquiring identical bytes later is not claimed."
+            },
+            "normalized_evidence_fingerprint": "sha256:7a08f2f505a95a4a901dae2b02baead92b1069171ddccd66d640d17d488f2607",
+            "observed_count": 35,
+            "omitted_measures": [],
+            "period_coverage": {
+              "end_period": 2024,
+              "frequency": "annual",
+              "start_period": 1990
+            },
+            "population_standard_deviation": {
+              "canonical": "4.137044260882",
+              "display": "4.137",
+              "unit": "percent of GDP"
+            },
+            "provider_metadata": {
+              "dataset": "World Development Indicators",
+              "provider": "World Bank",
+              "sourceid": "2",
+              "wdi_lastupdated": "2026-07-01"
+            },
+            "raw_evidence_fingerprint": "sha256:1fda94bbab635a13ee82d64ec44fabe5c912335289eb523e93a14d335fab093f",
+            "selection_fingerprint": "sha256:ef2227e67f93b1a248c7f93a0b984337043892aa0eb476fb77a4c7b5abed6aba",
+            "unit": "percent of GDP",
+            "utility_decisions": {
+              "arithmetic_mean": {
+                "decision": "retain",
+                "rationale": "Annual exports share is a bounded-window percent-of-GDP economic ratio; finite-window center and dispersion describe retained observed values."
+              },
+              "median": {
+                "decision": "retain",
+                "rationale": "Annual exports share is a bounded-window percent-of-GDP economic ratio; finite-window center and dispersion describe retained observed values."
+              },
+              "population_standard_deviation": {
+                "decision": "retain",
+                "rationale": "Annual exports share is a bounded-window percent-of-GDP economic ratio; finite-window center and dispersion describe retained observed values."
+              }
+            }
+          },
+          "text": "For retained World Bank WDI NE.EXP.GNFS.ZS observations for Norway (NOR), annual 1990-2024, the fixture has 35 expected slots, 35 observed values, 0 missing values, coverage share 1, first valid value 38.873182876877 percent of GDP in 1990, last valid value 46.379495845844 percent of GDP in 2024, minimum 31.346350576485 percent of GDP in [2020], maximum 53.57954923602 percent of GDP in [2022], arithmetic mean 40.248198696371 percent of GDP, median 39.570345744281 percent of GDP, and population standard deviation 4.137044260882 percent of GDP under wdi_annual_scalar_statistical_summary_v2@2.0."
+        }
+      ],
+      "input_references": [
+        "srcpkg-campaign35-wdi-nordic-exports-share-https-fixture"
+      ],
+      "lineage": {
+        "lineage_fingerprint": "sha256:f0bd2ff785615cc06fd779475097d98362e3146c39a3a78496e9a05d72cf0ae1",
+        "previous_package_id": "pkg-candidate-srcpkg-campaign35-nor-exports-share-statistical-summary-v2",
+        "version_lineage": [
+          "pkg-candidate-srcpkg-campaign35-nor-exports-share-statistical-summary-v2",
+          "pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2"
+        ]
+      },
+      "package_id": "pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2",
+      "package_kind": "KnowledgeObjectPackage",
+      "package_version": "1.0",
+      "promotion": {
+        "from_candidate_package_id": "pkg-candidate-srcpkg-campaign35-nor-exports-share-statistical-summary-v2",
+        "maturity_state": "bounded replication accepted",
+        "promotion_justification": "Candidate passed deterministic Campaign 35 validation and preserves KnowledgeForge boundaries.",
+        "validation_history": []
+      },
+      "provenance_envelope": {
+        "calculation_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+        "computation_recipe": "wdi_annual_scalar_statistical_summary_v2@2.0",
+        "creator": "run_campaign35_wdi_nordic_exports_statistical_summary",
+        "evaluation_refs": [
+          "validation-campaign35-statistical-summary-v2"
+        ],
+        "evidence_refs": [
+          "ev-campaign35-wdi-nordic-exports-share-https-fixture"
+        ],
+        "generation_date": "2026-07-10",
+        "lineage": [
+          "raw_https_fixture",
+          "normalized_observations",
+          "statistical_summary_v2_package"
+        ],
+        "mutable_source_vintage_limitation": {
+          "exact_reproducibility_basis": "retained local raw response bytes and normalized fixture",
+          "source_identity_basis": "World Bank WDI API URL, request parameters, source id, and lastupdated metadata",
+          "vintage_limitation": "WDI API response is mutable; no true immutable historical vintage identifier was observed in the API response, so reacquiring identical bytes later is not claimed."
+        },
+        "normalized_evidence_fingerprint": "sha256:7a08f2f505a95a4a901dae2b02baead92b1069171ddccd66d640d17d488f2607",
+        "package_identity": "pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2",
+        "raw_evidence_fingerprint": "sha256:1fda94bbab635a13ee82d64ec44fabe5c912335289eb523e93a14d335fab093f",
+        "reproducibility_state": "reproducible_offline",
+        "selection_fingerprint": "sha256:ef2227e67f93b1a248c7f93a0b984337043892aa0eb476fb77a4c7b5abed6aba",
+        "source_systems": [
+          "World Bank WDI retained HTTPS fixture"
+        ],
+        "validation_tool": "run_campaign35_wdi_nordic_exports_statistical_summary",
+        "wdi_lastupdated": "2026-07-01"
+      },
+      "scope": {
+        "domain": "WDI Nordic exports share statistical summary",
+        "evidence_family": "external_wdi_annual_scalar_trade_statistical_summary",
+        "intended_use": "deterministic descriptive knowledge only",
+        "method_scope": "wdi_annual_scalar_statistical_summary_v2@2.0",
+        "source_scope": {
+          "campaign_id": "campaign-35-wdi-nordic-exports-share-statistical-summary-replication",
+          "dataset": "World Development Indicators",
+          "entity_id": "NOR",
+          "entity_name": "Norway",
+          "frequency": "annual",
+          "indicator_code": "NE.EXP.GNFS.ZS",
+          "indicator_name": "Exports of goods and services (% of GDP)",
+          "period_end": 2024,
+          "period_start": 1990,
+          "provider": "World Bank",
+          "scope_type": "bounded_statistical_summary",
+          "source_id": "2",
+          "unit": "percent of GDP"
+        }
+      },
+      "status": "accepted-for-controlled-production",
+      "validation_state": {
+        "blockers": [],
+        "validation_result": "pass",
+        "validator_version": "campaign35-v1",
+        "warnings": []
+      }
+    }
+  },
+  "valid": true
+}

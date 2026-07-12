@@ -1,0 +1,1443 @@
+{
+  "deterministic_content": {
+    "contract": {
+      "identity": "knowledgeforge_relationship_export_v1@1.0",
+      "name": "knowledgeforge_relationship_export_v1",
+      "version": "1.0"
+    },
+    "freshness": {
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "projection_tool_version": "postgresql_operational_projection_v1",
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "repository_object_count": 538
+    },
+    "package_identities": [
+      "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1"
+    ],
+    "query": {
+      "controls": {
+        "include_full_package_payload": true,
+        "include_provenance": true,
+        "limit": 200,
+        "max_result_count": 200,
+        "offset": 0,
+        "only_current_valid_projection": true,
+        "sort": "package_id"
+      },
+      "filters": {
+        "entity": "NOR",
+        "statement_type": "derived_relationship"
+      },
+      "query_contract": "knowledgeforge_relationship_query_v1@1.0"
+    },
+    "query_fingerprint": "sha256:aa9c9c4d054962e615ff4eb9d4505253c5457db9510dd31e3af0aeff6d55c495",
+    "result_count": 5,
+    "result_set_fingerprint": "sha256:e4e6a1e5708091026509bdc8784f43e48e46e49e81612214efebfb342a4c4e25",
+    "results": [
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation replication",
+            "lifecycle_state": "accepted",
+            "missingness_summary": "0 missing/excluded pairs of 35 expected periods",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "mutable_source_reacquisition_limit",
+              "shared_gdp_denominator",
+              "time_ordering_autocorrelation",
+              "structural_breaks",
+              "no_significance_or_causal_claim"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign37-nor-exports-imports-share-pearson-correlation-v1"
+            }
+          ],
+          "created_at": "2026-07-10",
+          "created_by": "run_campaign37_swe_nor_exports_imports_correlation",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:f7c368e2480bf6d57671e558a0b8e78cd1f8f61d65bc257fc84036118f2eb359"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-10",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign37-wdi-swe-nor-exports-imports-share-dual-series-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment contract, and calculation evidence",
+              "snapshot_fingerprint": "sha256:f7c368e2480bf6d57671e558a0b8e78cd1f8f61d65bc257fc84036118f2eb359",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI NE.EXP.GNFS.ZS and NE.IMP.GNFS.ZS NOR annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 37 controlled entity replication",
+            "changed_inputs_methods_templates_models_validators": [],
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+            "evidence_references": "sha256:3c1ba99190931c69caa5b68bfe5df4701dc9f78b306a97489286f1728de5a92d",
+            "generated_statements": "sha256:1dde32ae1826ac11ac280bb720de18a921685a51a3e45e95a938c4160437c8ac",
+            "input_set": "sha256:8dd61534fdc003c22c578299abb59201287ee790d9fe6be2ef1268ca2597b48a",
+            "package_manifest": "sha256:8ac5b7cca73fa31ab161d84f607be19d26a9ac8d12a511538416a1183b7c00bf",
+            "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "NOR",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign37-nor-pearson-correlation-v1",
+                "align-campaign37-nor-exports-imports-share"
+              ],
+              "evidence_refs": [
+                "ev-campaign37-wdi-swe-nor-exports-imports-share-dual-series-fixture"
+              ],
+              "origin": "computed_from_retained_dual_entity_dual_series_wdi_fixture",
+              "statement_id": "stmt-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "aligned_periods": [
+                  1990,
+                  1991,
+                  1992,
+                  1993,
+                  1994,
+                  1995,
+                  1996,
+                  1997,
+                  1998,
+                  1999,
+                  2000,
+                  2001,
+                  2002,
+                  2003,
+                  2004,
+                  2005,
+                  2006,
+                  2007,
+                  2008,
+                  2009,
+                  2010,
+                  2011,
+                  2012,
+                  2013,
+                  2014,
+                  2015,
+                  2016,
+                  2017,
+                  2018,
+                  2019,
+                  2020,
+                  2021,
+                  2022,
+                  2023,
+                  2024
+                ],
+                "calculation_evidence_fingerprint": "sha256:2538ba3bc401b0cc16593dbc0298d5f3ec917f3422ecd697b23f6b41e5bc782c",
+                "canonical_pair_identity": "sha256:172f5b3390ceee810ea497716295741fdd07ec64b5ab259789727a1e1a146eb2",
+                "combined_aligned_evidence_fingerprint": "sha256:f7c368e2480bf6d57671e558a0b8e78cd1f8f61d65bc257fc84036118f2eb359",
+                "combined_fixture_fingerprint": "sha256:72264fb528f0452ed9570b870ae55c0dbe597e780b87c34bcf03511ad086d81f",
+                "entity_id": "NOR",
+                "entity_name": "Norway",
+                "excluded_periods": [],
+                "frequency": "annual",
+                "limitations": {
+                  "non_causality_non_prediction": "The coefficient is a deterministic contemporaneous mathematical relationship only and is not causal, not predictive, not statistical-significance, not economic-significance, not investment, not trend, and not mechanism evidence.",
+                  "shared_gdp_denominator": "Both indicators use GDP as denominator; the coefficient may partly reflect shared-denominator movement.",
+                  "structural_breaks": "The coefficient is scoped only to the retained 1990-2024 aligned window and may not hold across structural breaks.",
+                  "time_ordering_autocorrelation": "Annual macroeconomic series can exhibit time ordering/autocorrelation; no stationarity or independence claim is made."
+                },
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "missing_pair_count": 0,
+                "mutable_source_limitation": "Retained bytes, not mutable WDI API reacquisition, provide exact historical reproducibility.",
+                "package_fingerprint": "sha256:8ac5b7cca73fa31ab161d84f607be19d26a9ac8d12a511538416a1183b7c00bf",
+                "pearson_coefficient": {
+                  "canonical": "-0.477418804478",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "provider_metadata": {
+                  "exports": {
+                    "dataset": "World Development Indicators",
+                    "provider": "World Bank",
+                    "source": "World Development Indicators",
+                    "sourceid": "2",
+                    "wdi_lastupdated": "2026-07-01"
+                  },
+                  "imports": {
+                    "dataset": "World Development Indicators",
+                    "provider": "World Bank",
+                    "source": "World Development Indicators",
+                    "sourceid": "2",
+                    "wdi_lastupdated": "2026-07-01"
+                  }
+                },
+                "selection_fingerprint": "sha256:22be48410c30c085afaa09c00e6dd71b6de254314e05e5fb75b6d9212022a494",
+                "series_a": {
+                  "code": "NE.EXP.GNFS.ZS",
+                  "definition": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "name": "Exports of goods and services (% of GDP)",
+                  "normalized_fingerprint": "sha256:09d22355c7b29a3f354710626bef9c6ee0fea41c0f07df6a88e017df2caf20bb",
+                  "raw_fingerprints": {
+                    "metadata": "sha256:57dae5fa8dbd577b2cff50f9cfe581b3273ecdaa1125c4188164ef9a3cdddff4",
+                    "observations": "sha256:2a8627127e0093a6aa0ee801aab1c447aadd35970b3cad98c896741963cd053d"
+                  },
+                  "unit": "percent of GDP"
+                },
+                "series_b": {
+                  "code": "NE.IMP.GNFS.ZS",
+                  "definition": "Imports of goods includes change in the economic ownership of goods from non-residents to\n\n\n\n\nresidents of the compiling economy, irrespective of physical movement of goods across national borders. Imports of services includes services provided by non-residents to residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+                  "name": "Imports of goods and services (% of GDP)",
+                  "normalized_fingerprint": "sha256:3491de7a6dcb4f1391a28d37f46bdac88b579d243b10d0e9bd5c99e6772ce4ca",
+                  "raw_fingerprints": {
+                    "metadata": "sha256:a6e803f45b0ecfabb89dfa448350c47e4994f543f62f46d2060362b91853eb75",
+                    "observations": "sha256:41ed299171735ae0de82caeaddd0bf7e409bda55c858fb6dd94876b07768d24e"
+                  },
+                  "unit": "percent of GDP"
+                },
+                "transformation_state": {
+                  "series_a": "raw",
+                  "series_b": "raw"
+                },
+                "validation_judgment": "accepted_bounded_correlation_replication_object"
+              },
+              "text": "Across the aligned annual NOR observations from 1990 through 2024, the Pearson correlation between exports of goods and services as a percentage of GDP and imports of goods and services as a percentage of GDP is -0.477418804478, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign37_dual_entity_dual_series_wdi_https_fixture",
+            "pearson_correlation_calculation_contract_v1"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "replicates_method_from": "Campaign 36",
+            "source_campaign": "Campaign 37",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "campaign37_nor_alignment_validation",
+              "campaign37_nor_calculation_evidence",
+              "campaign37_nor_non_promoted_diagnostics"
+            ],
+            "evidence_refs": [
+              "ev-campaign37-wdi-swe-nor-exports-imports-share-dual-series-fixture"
+            ],
+            "lineage_basis": "fresh Campaign 37 HTTPS acquisition; Campaign 35 exports evidence inspected but not reused",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "NOR"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "shared GDP denominator",
+              "economic flow co-movement possible",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:a036393e86c228f29fd2e35e0a7456c586c73a8a112b3684239a6223d21358ce",
+        "package_id": "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:8ac5b7cca73fa31ab161d84f607be19d26a9ac8d12a511538416a1183b7c00bf",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "-0.477418804478",
+            "unit": "dimensionless"
+          },
+          "entity": "NOR",
+          "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "non_causality_non_prediction": "The coefficient is a deterministic contemporaneous mathematical relationship only and is not causal, not predictive, not statistical-significance, not economic-significance, not investment, not trend, and not mechanism evidence.",
+            "shared_gdp_denominator": "Both indicators use GDP as denominator; the coefficient may partly reflect shared-denominator movement.",
+            "structural_breaks": "The coefficient is scoped only to the retained 1990-2024 aligned window and may not hold across structural breaks.",
+            "time_ordering_autocorrelation": "Annual macroeconomic series can exhibit time ordering/autocorrelation; no stationarity or independence claim is made."
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "campaign37_nor_alignment_validation",
+              "campaign37_nor_calculation_evidence",
+              "campaign37_nor_non_promoted_diagnostics"
+            ],
+            "evidence_refs": [
+              "ev-campaign37-wdi-swe-nor-exports-imports-share-dual-series-fixture"
+            ],
+            "lineage_basis": "fresh Campaign 37 HTTPS acquisition; Campaign 35 exports evidence inspected but not reused",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "NE.EXP.GNFS.ZS",
+              "definition": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "name": "Exports of goods and services (% of GDP)",
+              "normalized_fingerprint": "sha256:09d22355c7b29a3f354710626bef9c6ee0fea41c0f07df6a88e017df2caf20bb",
+              "raw_fingerprints": {
+                "metadata": "sha256:57dae5fa8dbd577b2cff50f9cfe581b3273ecdaa1125c4188164ef9a3cdddff4",
+                "observations": "sha256:2a8627127e0093a6aa0ee801aab1c447aadd35970b3cad98c896741963cd053d"
+              },
+              "unit": "percent of GDP"
+            },
+            {
+              "code": "NE.IMP.GNFS.ZS",
+              "definition": "Imports of goods includes change in the economic ownership of goods from non-residents to\n\n\n\n\nresidents of the compiling economy, irrespective of physical movement of goods across national borders. Imports of services includes services provided by non-residents to residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+              "name": "Imports of goods and services (% of GDP)",
+              "normalized_fingerprint": "sha256:3491de7a6dcb4f1391a28d37f46bdac88b579d243b10d0e9bd5c99e6772ce4ca",
+              "raw_fingerprints": {
+                "metadata": "sha256:a6e803f45b0ecfabb89dfa448350c47e4994f543f62f46d2060362b91853eb75",
+                "observations": "sha256:41ed299171735ae0de82caeaddd0bf7e409bda55c858fb6dd94876b07768d24e"
+              },
+              "unit": "percent of GDP"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": {
+            "series_a": "raw",
+            "series_b": "raw"
+          }
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation batch object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "transformation sensitivity",
+              "common time-ordering risk",
+              "autocorrelation limitation",
+              "structural-break limitation",
+              "measurement-methodology limitation",
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign39-infrastructure-digital-access-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-11",
+          "created_by": "run_campaign39_heterogeneous_correlation_batch",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:60cb7aba3428caa779e30e35b04869a206d42db8fb6f1dea0d9ff6af09329a58"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-11",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign39-infrastructure_digital_access-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, frozen batch selection, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:60cb7aba3428caa779e30e35b04869a206d42db8fb6f1dea0d9ff6af09329a58",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI IT.NET.USER.ZS and IT.CEL.SETS.P2 NOR annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 39 heterogeneous correlation batch",
+            "changed_inputs_methods_templates_models_validators": [],
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+            "evidence_references": "sha256:d0e6679b5676e91d9010f6da7c4419b0e9c134bfdf9da900742f8d17cf76650b",
+            "generated_statements": "sha256:3656115185ac9d1e5ef6b90dc0d14b360fb34a6b90b7ab09a9e457b9c4152548",
+            "input_set": "sha256:13fe96384f5d96c73d52d77e03a1163ac799028edf26fd4abbb41b9756fcbff8",
+            "package_manifest": "sha256:23dbffa610e9b829b4ec014a7cd0e4daec498fcea91e2ad4571379d576412a82",
+            "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "NOR",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign39-infrastructure_digital_access-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign39-infrastructure_digital_access-fixture"
+              ],
+              "origin": "computed_from_retained_campaign39_frozen_selection_wdi_fixture",
+              "statement_id": "stmt-campaign39-infrastructure-digital-access-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "calculation_evidence_fingerprint": "sha256:b10954cbab82ffb7102c3d2b776ddde77fdbc180bb6228395ac14c95ee37ed15",
+                "combined_aligned_evidence_fingerprint": "sha256:60cb7aba3428caa779e30e35b04869a206d42db8fb6f1dea0d9ff6af09329a58",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "promotion_blocker_present": false,
+                    "shared_denominator": "ordinary limitation",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "candidate_id": "infrastructure_digital_access",
+                  "material_limitations": [],
+                  "ordinary_limitations": [
+                    "shared_denominator",
+                    "common_modeled_estimation_process",
+                    "common_administrative_reporting"
+                  ],
+                  "promotion_blocker_present": false
+                },
+                "diagnostic_limitations": [
+                  "transformation sensitivity",
+                  "common time-ordering risk",
+                  "autocorrelation limitation",
+                  "structural-break limitation",
+                  "measurement-methodology limitation",
+                  "non-causality",
+                  "non-prediction",
+                  "absence of significance testing"
+                ],
+                "entity_id": "NOR",
+                "excluded_periods": [],
+                "family": "Infrastructure",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:65ae4b8cf7d5c8e8ef3841cf77f59816f7bd5c603e49a5d5a53f87b5c8bde7e1",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "Retained bytes, not mutable WDI API reacquisition, provide exact historical reproducibility.",
+                "package_fingerprint": "sha256:d5bb89925c93d5c4173841a2cf17192d9f860db92b109300b683c1b348bb9fa4",
+                "pearson_coefficient": {
+                  "canonical": "0.991171458703",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "IT.NET.USER.ZS",
+                  "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+                  "fingerprints": {
+                    "metadata": "sha256:5eab7a7474d01fc6d4ce94915589a0c1831eb10c875b8417962f66791fa6e3cd",
+                    "observations": "sha256:d7113d21ff7bfef798b824af5e3afaee6d4057e90292a68b459230c27eb286c4"
+                  },
+                  "name": "Individuals using the Internet (% of population)",
+                  "unit": "% of population"
+                },
+                "series_b": {
+                  "code": "IT.CEL.SETS.P2",
+                  "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+                  "fingerprints": {
+                    "metadata": "sha256:c407b3372707cb7bd118e387125936ddd7bf342a26fd029c57864034be1c62bf",
+                    "observations": "sha256:716646118c48735fb109f69874bd8d1ced44d4c932bd5a960564cc204f742598"
+                  },
+                  "name": "Mobile cellular subscriptions (per 100 people)",
+                  "unit": "per 100 people"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign39_batch_correlation_object"
+              },
+              "text": "Across the aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Individuals using the Internet (% of population) and Mobile cellular subscriptions (per 100 people) is 0.991171458703, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign39_frozen_batch_selection_decision",
+            "campaign39_batch_wdi_https_fixture",
+            "pearson_correlation_calculation_contract_v1"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 39",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "campaign39_frozen_batch_selection_decision",
+              "campaign39_infrastructure_digital_access_alignment",
+              "campaign39_infrastructure_digital_access_calculation",
+              "campaign39_infrastructure_digital_access_diagnostics"
+            ],
+            "evidence_refs": [
+              "ev-campaign39-infrastructure_digital_access-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free batch selection followed by Campaign 39 HTTPS acquisition",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "NOR"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_infrastructure_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "shared_denominator",
+              "common_modeled_estimation_process",
+              "common_administrative_reporting",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:49af2a03fe6b0909bb12cbde13e4a742df1ac6ed060adaaed0bb8b4de44cfd03",
+        "package_id": "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:23dbffa610e9b829b4ec014a7cd0e4daec498fcea91e2ad4571379d576412a82",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "0.991171458703",
+            "unit": "dimensionless"
+          },
+          "entity": "NOR",
+          "evidence_family": "external_wdi_annual_scalar_infrastructure_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": [
+            "transformation sensitivity",
+            "common time-ordering risk",
+            "autocorrelation limitation",
+            "structural-break limitation",
+            "measurement-methodology limitation",
+            "non-causality",
+            "non-prediction",
+            "absence of significance testing"
+          ],
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "campaign39_frozen_batch_selection_decision",
+              "campaign39_infrastructure_digital_access_alignment",
+              "campaign39_infrastructure_digital_access_calculation",
+              "campaign39_infrastructure_digital_access_diagnostics"
+            ],
+            "evidence_refs": [
+              "ev-campaign39-infrastructure_digital_access-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free batch selection followed by Campaign 39 HTTPS acquisition",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "IT.NET.USER.ZS",
+              "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+              "fingerprints": {
+                "metadata": "sha256:5eab7a7474d01fc6d4ce94915589a0c1831eb10c875b8417962f66791fa6e3cd",
+                "observations": "sha256:d7113d21ff7bfef798b824af5e3afaee6d4057e90292a68b459230c27eb286c4"
+              },
+              "name": "Individuals using the Internet (% of population)",
+              "unit": "% of population"
+            },
+            {
+              "code": "IT.CEL.SETS.P2",
+              "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+              "fingerprints": {
+                "metadata": "sha256:c407b3372707cb7bd118e387125936ddd7bf342a26fd029c57864034be1c62bf",
+                "observations": "sha256:716646118c48735fb109f69874bd8d1ced44d4c932bd5a960564cc204f742598"
+              },
+              "name": "Mobile cellular subscriptions (per 100 people)",
+              "unit": "per 100 people"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign40-demographic-birth-death-rates-nor-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-11",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:6508f75deb0b3d815637c1388a2523c115cb1ea7503cf46d962ff428838e404b"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-11",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign40-demographic_birth_death_rates_nor-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:6508f75deb0b3d815637c1388a2523c115cb1ea7503cf46d962ff428838e404b",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI SP.DYN.CBRT.IN and SP.DYN.CDRT.IN NOR annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 40 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:0940c1cfa31ae6329a93d9b06fe63a90a5744d14ff55fa8a00de7c53ef11f4fe",
+            "evidence_references": "sha256:0b9939c165d7ef3c21321ca9e8b87e7cc9ba14850875515520003cfb4cdeaadf",
+            "generated_statements": "sha256:87ee20277ea27532527bb4c983df9facda4ec4454a5eaaf4516164110bc596e9",
+            "input_set": "sha256:9a4d01da5016083880c70eb47a01f243642f05300689be27b347901b2e421128",
+            "package_manifest": "sha256:15356ff5f882891ae666640681431c59db01426d16856714028dacb6b6b0ef09",
+            "query_definitions": "sha256:09df6857e5e5159ed127a64ea95556e9a5f5a34a646ce644563186cde1a3f528"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "NOR",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign40-demographic_birth_death_rates_nor-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign40-demographic_birth_death_rates_nor-fixture"
+              ],
+              "origin": "computed_from_campaign40_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign40-demographic-birth-death-rates-nor-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "calculation_evidence_fingerprint": "sha256:d50410614c174344e5115215390f86c2807429c76bf9fd886dbfb3ab71233ca3",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "material limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "material limitation",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "-0.289912537517",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "-0.962386748464",
+                  "series_b_vs_time_index": "-0.959509920885"
+                },
+                "entity_id": "NOR",
+                "family": "Demographic",
+                "fixture_fingerprint": "sha256:6508f75deb0b3d815637c1388a2523c115cb1ea7503cf46d962ff428838e404b",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:ea6c12defa33aed2395b035889350e993e66bdcc86f3429374a03bd59be0a896",
+                "pearson_coefficient": {
+                  "canonical": "0.885026927298",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "SP.DYN.CBRT.IN",
+                  "definition": "Crude birth rate indicates the number of live births occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+                  "frequency": "annual",
+                  "name": "Birth rate, crude (per 1,000 people)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "per 1,000 people"
+                },
+                "series_b": {
+                  "code": "SP.DYN.CDRT.IN",
+                  "definition": "Crude death rate indicates the number of deaths occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+                  "frequency": "annual",
+                  "name": "Death rate, crude (per 1,000 people)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "per 1,000 people"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign40_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Birth rate, crude (per 1,000 people) and Death rate, crude (per 1,000 people) is 0.885026927298, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign40_first_end_to_end_spec_driven_pearson_batch",
+            "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 40",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:d50410614c174344e5115215390f86c2807429c76bf9fd886dbfb3ab71233ca3"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-demographic_birth_death_rates_nor-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "NOR"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_demographic_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "shared_denominator",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:17179471915a64d7c51979b3f8498e72913b2b6355356044f7ef7f9287923481",
+        "package_id": "pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:15356ff5f882891ae666640681431c59db01426d16856714028dacb6b6b0ef09",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "0.885026927298",
+            "unit": "dimensionless"
+          },
+          "entity": "NOR",
+          "evidence_family": "external_wdi_annual_scalar_demographic_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "-0.289912537517",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "-0.962386748464",
+            "series_b_vs_time_index": "-0.959509920885"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:d50410614c174344e5115215390f86c2807429c76bf9fd886dbfb3ab71233ca3"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-demographic_birth_death_rates_nor-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "SP.DYN.CBRT.IN",
+              "definition": "Crude birth rate indicates the number of live births occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+              "frequency": "annual",
+              "name": "Birth rate, crude (per 1,000 people)",
+              "source_identity": "World Bank WDI",
+              "unit": "per 1,000 people"
+            },
+            {
+              "code": "SP.DYN.CDRT.IN",
+              "definition": "Crude death rate indicates the number of deaths occurring during the year, per 1,000 population estimated at midyear. Subtracting the crude death rate from the crude birth rate provides the rate of natural increase, which is equal to the rate of population change in the absence of migration.",
+              "frequency": "annual",
+              "name": "Death rate, crude (per 1,000 people)",
+              "source_identity": "World Bank WDI",
+              "unit": "per 1,000 people"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-11",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:8a2ab644acf20f63c52feb509e2d53f36130451d3d0e723fbe5c4ef222157a4d"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-11",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign40-energy_fossil_nonhydro_renewables_nor-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:8a2ab644acf20f63c52feb509e2d53f36130451d3d0e723fbe5c4ef222157a4d",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI EG.ELC.FOSL.ZS and EG.ELC.RNWX.ZS NOR annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 40 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:d133ca0e2a3273a6b4430b2053f5bf69b828d245f5ba6b057f78528ee749219d",
+            "evidence_references": "sha256:ed6c9bc942a04a0ab30957262b3209096485399b149207a88b5e01ff3b982686",
+            "generated_statements": "sha256:4202d9a730e1fbce1c618dcb821db53e8e0788fb4cf942911301d282fe89d528",
+            "input_set": "sha256:9a4d01da5016083880c70eb47a01f243642f05300689be27b347901b2e421128",
+            "package_manifest": "sha256:601812aabe64a5d687c57945a9ae6bbc57fcd07e7b5211db7964575025a5c5e6",
+            "query_definitions": "sha256:962c737e821f032b8f52a90b0f0f98050e03046862ed8b2500dc57516319c9cd"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "NOR",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign40-energy_fossil_nonhydro_renewables_nor-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign40-energy_fossil_nonhydro_renewables_nor-fixture"
+              ],
+              "origin": "computed_from_campaign40_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "0.914285714286",
+                "aligned_pair_count": 32,
+                "calculation_evidence_fingerprint": "sha256:dbc03aa9f60389b3cdaca8aa196c152a8f82953f82a94edacb8dbde52299822e",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "ordinary limitation",
+                    "definitional_overlap": "ordinary limitation",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "material limitation",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "-0.204185174675",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "0.64921014377",
+                  "series_b_vs_time_index": "0.804092533899"
+                },
+                "entity_id": "NOR",
+                "family": "Energy & Mining",
+                "fixture_fingerprint": "sha256:8a2ab644acf20f63c52feb509e2d53f36130451d3d0e723fbe5c4ef222157a4d",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [
+                    2024
+                  ],
+                  "series_b": [
+                    2022,
+                    2023,
+                    2024
+                  ]
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:7d699fd1d900df05167f0395922234824123066a0a2a937182b035c9b18c102e",
+                "pearson_coefficient": {
+                  "canonical": "0.315942832953",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "EG.ELC.FOSL.ZS",
+                  "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+                  "frequency": "annual",
+                  "name": "Electricity production from oil, gas and coal sources (% of total)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "% of total"
+                },
+                "series_b": {
+                  "code": "EG.ELC.RNWX.ZS",
+                  "definition": "The share of electricity production from renewable sources of total electricity production. Electricity production from renewable sources, excluding hydroelectric, includes geothermal, solar, tides, wind, biomass, and biofuels.",
+                  "frequency": "annual",
+                  "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "% of total"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign40_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Electricity production from oil, gas and coal sources (% of total) and Electricity production from renewable sources, excluding hydroelectric (% of total) is 0.315942832953, using 32 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign40_first_end_to_end_spec_driven_pearson_batch",
+            "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 40",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:dbc03aa9f60389b3cdaca8aa196c152a8f82953f82a94edacb8dbde52299822e"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-energy_fossil_nonhydro_renewables_nor-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "NOR"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_energy_mining_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "definitional_overlap",
+              "shared_denominator",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:d0bcf30588c6a5e3ef92bc9b3834fa26a357a056fa7b68812f476c63d74e9c01",
+        "package_id": "pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:601812aabe64a5d687c57945a9ae6bbc57fcd07e7b5211db7964575025a5c5e6",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "0.315942832953",
+            "unit": "dimensionless"
+          },
+          "entity": "NOR",
+          "evidence_family": "external_wdi_annual_scalar_energy_mining_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "-0.204185174675",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "0.64921014377",
+            "series_b_vs_time_index": "0.804092533899"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:dbc03aa9f60389b3cdaca8aa196c152a8f82953f82a94edacb8dbde52299822e"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-energy_fossil_nonhydro_renewables_nor-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "EG.ELC.FOSL.ZS",
+              "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+              "frequency": "annual",
+              "name": "Electricity production from oil, gas and coal sources (% of total)",
+              "source_identity": "World Bank WDI",
+              "unit": "% of total"
+            },
+            {
+              "code": "EG.ELC.RNWX.ZS",
+              "definition": "The share of electricity production from renewable sources of total electricity production. Electricity production from renewable sources, excluding hydroelectric, includes geothermal, solar, tides, wind, biomass, and biofuels.",
+              "frequency": "annual",
+              "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)",
+              "source_identity": "World Bank WDI",
+              "unit": "% of total"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      },
+      {
+        "canonical_package": {
+          "confidence_quality": {
+            "confidence_label": "fixture-supported-deterministic",
+            "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation object",
+            "lifecycle_state": "accepted",
+            "reproducibility_state": "reproducible_offline_from_retained_fixture",
+            "uncertainty_dimensions": [
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing",
+              "transformation sensitivity",
+              "common time-ordering risk"
+            ],
+            "validation_state": "pass"
+          },
+          "contradiction_records": [
+            {
+              "contradicting_evidence": null,
+              "contradiction_id": "none-recorded",
+              "contradiction_type": "none",
+              "disposition": "not_applicable",
+              "target_statement": "stmt-campaign40-health-life-expectancy-under5-mortality-nor-pearson-v1"
+            }
+          ],
+          "created_at": "2026-07-11",
+          "created_by": "correlation_batch_engine",
+          "evidence_integrity": {
+            "evidence_refs_verified": true,
+            "fingerprints_verified": true,
+            "source_package_fingerprint": "sha256:210fa5b3b1e739d10fa3e1081b61547a0465c1d0010a5237ec5b24a834fee9ac"
+          },
+          "evidence_references": [
+            {
+              "accessed_at": "2026-07-11",
+              "evaluation_status": "evaluated",
+              "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+              "evidence_ref_id": "ev-campaign40-health_life_expectancy_under5_mortality_nor-fixture",
+              "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment and calculation evidence",
+              "snapshot_fingerprint": "sha256:210fa5b3b1e739d10fa3e1081b61547a0465c1d0010a5237ec5b24a834fee9ac",
+              "source_family": "official_statistical_source_data",
+              "source_identity": "World Bank WDI SP.DYN.LE00.IN and SH.DYN.MORT NOR annual 1990-2024 fixture",
+              "source_owner": "World Bank WDI API retained local fixture",
+              "source_version": "2026-07-01"
+            }
+          ],
+          "evolution_metadata": {
+            "change_reason": "Campaign 40 end-to-end specification-driven Pearson production batch",
+            "dependent_object_review_posture": "not_applicable",
+            "previous_revision": null,
+            "version_lineage": []
+          },
+          "fingerprints": {
+            "computation_recipe": "sha256:ba1f21daa39649593cdeff0e53a44c123996d2e6ad411cb544e4b6de06c10db4",
+            "evidence_references": "sha256:04da8e6d52548dbcdd97e3e97353f2218434135c1bfda1381b035af017072076",
+            "generated_statements": "sha256:926c9d12ee47e45d8236aa14e3f0411ab8d03859f595dddeddfcc91231c2f764",
+            "input_set": "sha256:9a4d01da5016083880c70eb47a01f243642f05300689be27b347901b2e421128",
+            "package_manifest": "sha256:5bfcb7ac2b5ee01fc2bf2b5055f0298253998c08a4c39e37ec185cf513216ad5",
+            "query_definitions": "sha256:ca511ba8390e1586e7a2c238f93e682ee03ddd1b9a671826c07441355f4e17fb"
+          },
+          "generated_statements": [
+            {
+              "applicability": {
+                "entity_id": "NOR",
+                "frequency": "annual",
+                "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+                "method_version": "1.0",
+                "period_end": 2024,
+                "period_start": 1990
+              },
+              "dependencies": [
+                "calc-campaign40-health_life_expectancy_under5_mortality_nor-pearson-v1"
+              ],
+              "evidence_refs": [
+                "ev-campaign40-health_life_expectancy_under5_mortality_nor-fixture"
+              ],
+              "origin": "computed_from_campaign40_declarative_spec_wdi_fixture",
+              "statement_id": "stmt-campaign40-health-life-expectancy-under5-mortality-nor-pearson-v1",
+              "statement_type": "derived_relationship",
+              "structured_payload": {
+                "aligned_coverage": "1",
+                "aligned_pair_count": 35,
+                "calculation_evidence_fingerprint": "sha256:9940d3ad553c0933c066f59f2dc00e477eb8ed918f6fd89266df56ce323754e6",
+                "construction_risk_assessment": {
+                  "assessment": {
+                    "algebraic_identity": "not present",
+                    "common_administrative_reporting": "ordinary limitation",
+                    "common_modeled_estimation_process": "material limitation",
+                    "definitional_overlap": "not present",
+                    "direct_component_total_construction": "not present",
+                    "embedded_series_construction": "not present",
+                    "frequency_mismatch": "not present",
+                    "shared_denominator": "not present",
+                    "transformation_mismatch": "not present",
+                    "unit_incompatibility": "not present"
+                  },
+                  "promotion_blocker_present": false,
+                  "promotion_blockers": []
+                },
+                "diagnostic_limitations": {
+                  "first_difference_pearson": "-0.207863151096",
+                  "promoted_as_knowledge_object": false,
+                  "series_a_vs_time_index": "0.991026536994",
+                  "series_b_vs_time_index": "-0.940259226282"
+                },
+                "entity_id": "NOR",
+                "family": "Health",
+                "fixture_fingerprint": "sha256:210fa5b3b1e739d10fa3e1081b61547a0465c1d0010a5237ec5b24a834fee9ac",
+                "frequency": "annual",
+                "frozen_batch_selection_fingerprint": "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+                "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+                "missing_periods": {
+                  "series_a": [],
+                  "series_b": []
+                },
+                "mutable_source_limitation": "WDI API is mutable; retained raw bytes and normalized fixture provide exact offline reproducibility for this package.",
+                "package_fingerprint": "sha256:6b1699ab64cf79cd89d0e0436c1b015e63629565a9cf7dee67b172b67c0c6feb",
+                "pearson_coefficient": {
+                  "canonical": "-0.951151571489",
+                  "unit": "dimensionless"
+                },
+                "period_scope": {
+                  "end": 2024,
+                  "start": 1990
+                },
+                "series_a": {
+                  "code": "SP.DYN.LE00.IN",
+                  "definition": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+                  "frequency": "annual",
+                  "name": "Life expectancy at birth, total (years)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "years"
+                },
+                "series_b": {
+                  "code": "SH.DYN.MORT",
+                  "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+                  "frequency": "annual",
+                  "name": "Mortality rate, under-5 (per 1,000 live births)",
+                  "source_identity": "World Bank WDI",
+                  "unit": "per 1,000 live births"
+                },
+                "transformation_state": "raw",
+                "validation_judgment": "accepted_campaign40_spec_driven_correlation_object"
+              },
+              "text": "Across aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Life expectancy at birth, total (years) and Mortality rate, under-5 (per 1,000 live births) is -0.951151571489, using 35 aligned observations."
+            }
+          ],
+          "input_references": [
+            "campaign40_first_end_to_end_spec_driven_pearson_batch",
+            "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+            "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476"
+          ],
+          "lineage": {
+            "previous_package_id": null,
+            "source_campaign": "Campaign 40",
+            "version_lineage": []
+          },
+          "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+          "package_kind": "KnowledgeObjectPackage",
+          "package_version": "1.0",
+          "provenance_envelope": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:9940d3ad553c0933c066f59f2dc00e477eb8ed918f6fd89266df56ce323754e6"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-health_life_expectancy_under5_mortality_nor-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "scope": {
+            "domain": "world_development_indicators",
+            "entity_scope": [
+              "NOR"
+            ],
+            "evidence_family": "external_wdi_annual_scalar_health_pearson_correlation",
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            }
+          },
+          "status": "accepted",
+          "validation_state": {
+            "blockers": [],
+            "validation_result": "pass",
+            "warnings": [
+              "common_administrative_reporting",
+              "common_modeled_estimation_process",
+              "no causal/predictive/significance interpretation"
+            ]
+          }
+        },
+        "lifecycle_state": "accepted",
+        "package_fingerprint": "sha256:f84032acffae0a2144f361f926afe20bd2413b7261b7ae26565a6f22f19ca2bd",
+        "package_id": "pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1",
+        "package_manifest_fingerprint": "sha256:5bfcb7ac2b5ee01fc2bf2b5055f0298253998c08a4c39e37ec185cf513216ad5",
+        "relationship_metadata": {
+          "coefficient": {
+            "canonical": "-0.951151571489",
+            "unit": "dimensionless"
+          },
+          "entity": "NOR",
+          "evidence_family": "external_wdi_annual_scalar_health_pearson_correlation",
+          "frequency": "annual",
+          "lifecycle_state": "accepted",
+          "limitations": {
+            "first_difference_pearson": "-0.207863151096",
+            "promoted_as_knowledge_object": false,
+            "series_a_vs_time_index": "0.991026536994",
+            "series_b_vs_time_index": "-0.940259226282"
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provenance": {
+            "evaluation_refs": [
+              "sha256:ae6ccfef63584d582459a5c575877f2e35db4a2c88989f0992e26d5b2d1928c0",
+              "sha256:9940d3ad553c0933c066f59f2dc00e477eb8ed918f6fd89266df56ce323754e6"
+            ],
+            "evidence_refs": [
+              "ev-campaign40-health_life_expectancy_under5_mortality_nor-fixture"
+            ],
+            "lineage_basis": "frozen coefficient-free declarative Campaign 40 specification followed by reusable engine acquisition and calculation",
+            "method_refs": [
+              "wdi_annual_scalar_pearson_correlation_v1@1.0"
+            ]
+          },
+          "series": [
+            {
+              "code": "SP.DYN.LE00.IN",
+              "definition": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+              "frequency": "annual",
+              "name": "Life expectancy at birth, total (years)",
+              "source_identity": "World Bank WDI",
+              "unit": "years"
+            },
+            {
+              "code": "SH.DYN.MORT",
+              "definition": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+              "frequency": "annual",
+              "name": "Mortality rate, under-5 (per 1,000 live births)",
+              "source_identity": "World Bank WDI",
+              "unit": "per 1,000 live births"
+            }
+          ],
+          "statement_type": "derived_relationship",
+          "transformation_state": "raw"
+        }
+      }
+    ],
+    "stable_order": "package_id_ascending"
+  },
+  "deterministic_content_fingerprint": "sha256:af5eb6032536286a4783707898735780bf507f6b4f75eb553b7ce80803d9f96e",
+  "operational_metadata": {
+    "created_at": "2026-07-11T13:09:41.568417+00:00",
+    "performance_seconds": {
+      "freshness_validation": 0.057886,
+      "payload_validation": 0.000581,
+      "query_execution": 0.038357,
+      "serialization": 0.001658
+    },
+    "query_shape": {
+      "indexed_generic_filters": 1,
+      "jsonb_payload_scans": 1
+    },
+    "sql_shape_evidence": "internal; table and schema details intentionally excluded from contract",
+    "tool": "relationship_export_v1"
+  }
+}

@@ -1,0 +1,498 @@
+{
+  "automation_capability_audit": {
+    "audit_scope": "KnowledgeForge-local files and state only",
+    "boundary_findings": {
+      "canonical_knowledge_object_creation_required": false,
+      "direct_macroforge_dependency_required": false,
+      "postgresql_schema_expansion_required_for_prototype": false,
+      "private_macroforge_tables_required": false
+    },
+    "existing_capabilities": {
+      "correlation_batch_engine": true,
+      "postgresql_projection_tool": true,
+      "relationship_export_tool": true,
+      "release_automation_tool": true
+    },
+    "gaps_before_this_slice": [
+      "no neutral evidence-release contract",
+      "no seen-release registry",
+      "no derivation/applicability registry",
+      "no release-to-output impact analysis",
+      "no incremental recomputation/supersession plan",
+      "no downstream delta export for changed release evidence",
+      "no eventing/scheduling recommendation tied to release detection"
+    ]
+  },
+  "change_detection": {
+    "added_item_ids": [
+      "obs:A:DNK:2022"
+    ],
+    "change_set_fingerprint": "sha256:0cf2c99e0a34e244647cd126954e838938a280f9d85f075f9d30e91ceb9bdae9",
+    "changed_item_ids": [
+      "obs:A:DNK:2021"
+    ],
+    "from_release_id": "synthetic-release-v1",
+    "removed_item_ids": [],
+    "to_release_id": "synthetic-release-v2",
+    "unchanged_item_ids": [
+      "obs:A:DNK:2020",
+      "obs:B:DNK:2020"
+    ]
+  },
+  "compact_ai_retrieval_assessment": {
+    "cards": [
+      {
+        "content_keys": [
+          "changed series SYN.A",
+          "changed period 2021",
+          "added period 2022",
+          "affected derivations: growth and relationship",
+          "unaffected: SYN.C control"
+        ],
+        "id": "release_delta_SYN.A_DNK_v1_to_v2",
+        "tokens_estimate": 160
+      }
+    ],
+    "frontier_llm_required": false,
+    "local_ai_possible_for_summarization_only": true,
+    "retrieval_unit": "release-impact-card"
+  },
+  "decisions": {
+    "independence_vs_automation": "Adapt: automate around neutral contracts owned by KnowledgeForge, not around MacroForge private schemas or shared runtime.",
+    "neutral_release_contract_recommendation": "Adopt a provider-neutral evidence-release contract as the boundary object for future MacroForge-compatible evidence transfer.",
+    "postgresql_maturation_requirements": [
+      "keep current schema for prototype",
+      "later add incremental publication semantics only after canonical-output impact mapping exists",
+      "measure query/update pressure before indexes/schema"
+    ],
+    "smallest_next_slice": "Implement file-backed seen-release registry plus release-diff CLI over one real provider-neutral fixture; still no MacroForge private access."
+  },
+  "dependency_impact_analysis": {
+    "affected_derivations": [
+      {
+        "derivation_id": "synthetic_growth_SYN.A_DNK_annual",
+        "output_family": "growth_rate_candidate",
+        "reason": {
+          "changed_entities": [
+            "DNK"
+          ],
+          "changed_periods": [
+            "2021",
+            "2022"
+          ],
+          "changed_series": [
+            "SYN.A"
+          ]
+        },
+        "recompute_strategy": "incremental_window_from_changed_period_minus_one"
+      },
+      {
+        "derivation_id": "synthetic_relationship_SYN.A_SYN.B_DNK_annual",
+        "output_family": "relationship_candidate",
+        "reason": {
+          "changed_entities": [
+            "DNK"
+          ],
+          "changed_periods": [
+            "2021",
+            "2022"
+          ],
+          "changed_series": [
+            "SYN.A"
+          ]
+        },
+        "recompute_strategy": "recompute_aligned_pair_window_for_affected_series"
+      }
+    ],
+    "affected_output_fingerprint": "sha256:04d8b36e8d225213e3a5b2f75c6c66eff869aca5ac499ae85f33359f5b2cc3b1",
+    "minimal_recompute": true,
+    "unaffected_derivation_ids": [
+      "synthetic_unaffected_SYN.C_DNK_annual"
+    ]
+  },
+  "derivation_applicability_registry": {
+    "derivations": [
+      {
+        "canonical_output_status": "not_created_in_this_task",
+        "depends_on": {
+          "entities": [
+            "DNK"
+          ],
+          "frequencies": [
+            "annual"
+          ],
+          "period_overlap": [
+            "2020",
+            "2022"
+          ],
+          "series_codes": [
+            "SYN.A"
+          ]
+        },
+        "derivation_id": "synthetic_growth_SYN.A_DNK_annual",
+        "output_family": "growth_rate_candidate",
+        "recompute_strategy": "incremental_window_from_changed_period_minus_one"
+      },
+      {
+        "canonical_output_status": "not_created_in_this_task",
+        "depends_on": {
+          "entities": [
+            "DNK"
+          ],
+          "frequencies": [
+            "annual"
+          ],
+          "period_overlap": [
+            "2020",
+            "2022"
+          ],
+          "series_codes": [
+            "SYN.A",
+            "SYN.B"
+          ]
+        },
+        "derivation_id": "synthetic_relationship_SYN.A_SYN.B_DNK_annual",
+        "output_family": "relationship_candidate",
+        "recompute_strategy": "recompute_aligned_pair_window_for_affected_series"
+      },
+      {
+        "canonical_output_status": "not_created_in_this_task",
+        "depends_on": {
+          "entities": [
+            "DNK"
+          ],
+          "frequencies": [
+            "annual"
+          ],
+          "period_overlap": [
+            "2020",
+            "2022"
+          ],
+          "series_codes": [
+            "SYN.C"
+          ]
+        },
+        "derivation_id": "synthetic_unaffected_SYN.C_DNK_annual",
+        "output_family": "unaffected_control",
+        "recompute_strategy": "none_unless_SYN.C_changes"
+      }
+    ],
+    "registry_id": "knowledgeforge_derivation_applicability_registry_v1@1.0"
+  },
+  "downstream_delta_export": {
+    "affected_derivations": [
+      {
+        "derivation_id": "synthetic_growth_SYN.A_DNK_annual",
+        "output_family": "growth_rate_candidate",
+        "reason": {
+          "changed_entities": [
+            "DNK"
+          ],
+          "changed_periods": [
+            "2021",
+            "2022"
+          ],
+          "changed_series": [
+            "SYN.A"
+          ]
+        },
+        "recompute_strategy": "incremental_window_from_changed_period_minus_one"
+      },
+      {
+        "derivation_id": "synthetic_relationship_SYN.A_SYN.B_DNK_annual",
+        "output_family": "relationship_candidate",
+        "reason": {
+          "changed_entities": [
+            "DNK"
+          ],
+          "changed_periods": [
+            "2021",
+            "2022"
+          ],
+          "changed_series": [
+            "SYN.A"
+          ]
+        },
+        "recompute_strategy": "recompute_aligned_pair_window_for_affected_series"
+      }
+    ],
+    "change_set": {
+      "added_item_ids": [
+        "obs:A:DNK:2022"
+      ],
+      "change_set_fingerprint": "sha256:0cf2c99e0a34e244647cd126954e838938a280f9d85f075f9d30e91ceb9bdae9",
+      "changed_item_ids": [
+        "obs:A:DNK:2021"
+      ],
+      "from_release_id": "synthetic-release-v1",
+      "removed_item_ids": [],
+      "to_release_id": "synthetic-release-v2",
+      "unchanged_item_ids": [
+        "obs:A:DNK:2020",
+        "obs:B:DNK:2020"
+      ]
+    },
+    "delta_contract_id": "knowledgeforge_downstream_release_delta_v1@1.0",
+    "delta_fingerprint": "sha256:2488ba01ff0b6cffeb2a027774b3a8809bf9093bf07a002caac90f81a2571ff3",
+    "from_release_id": "synthetic-release-v1",
+    "to_release_id": "synthetic-release-v2"
+  },
+  "eventing_recommendation": {
+    "reasons": [
+      "no network service requested",
+      "provider-neutral prototype only",
+      "avoid scheduler complexity before real release sources"
+    ],
+    "recommendation": "file/cron polling first; webhook/event bus only after repeated release cadence evidence",
+    "schedule": "bounded periodic release discovery against neutral release manifests"
+  },
+  "incremental_postgresql_publication": {
+    "affected_projection_rows": "derived from affected package/output identities when canonical outputs exist",
+    "executed_postgresql_write": false,
+    "publication_mode": "incremental_projection_refresh_plan_only",
+    "schema_expansion_required": false
+  },
+  "incremental_recomputation_model": {
+    "full_recompute_required": false,
+    "minimal_recompute": [
+      {
+        "derivation_id": "synthetic_growth_SYN.A_DNK_annual",
+        "output_family": "growth_rate_candidate",
+        "reason": {
+          "changed_entities": [
+            "DNK"
+          ],
+          "changed_periods": [
+            "2021",
+            "2022"
+          ],
+          "changed_series": [
+            "SYN.A"
+          ]
+        },
+        "recompute_strategy": "incremental_window_from_changed_period_minus_one"
+      },
+      {
+        "derivation_id": "synthetic_relationship_SYN.A_SYN.B_DNK_annual",
+        "output_family": "relationship_candidate",
+        "reason": {
+          "changed_entities": [
+            "DNK"
+          ],
+          "changed_periods": [
+            "2021",
+            "2022"
+          ],
+          "changed_series": [
+            "SYN.A"
+          ]
+        },
+        "recompute_strategy": "recompute_aligned_pair_window_for_affected_series"
+      }
+    ]
+  },
+  "local_ai_benchmark_gate": {
+    "current_gate": "not required",
+    "delegate_to_local_ai_when": [
+      "summarize many release-impact-cards",
+      "classify repetitive provider messages after deterministic extraction"
+    ],
+    "do_not_delegate": [
+      "fingerprint authority",
+      "change detection",
+      "publication decisions",
+      "canonical package mutation"
+    ]
+  },
+  "prototype_id": "macroforge_release_driven_knowledge_automation_alignment_gate@1.0",
+  "release_contract": {
+    "authority_boundary": {
+      "external_provider_or_macroforge_may_supply": [
+        "release metadata",
+        "observations",
+        "provider-native provenance",
+        "source fingerprints"
+      ],
+      "forbidden": [
+        "MacroForge private table dependency",
+        "shared runtime code",
+        "consumer writes",
+        "canonical package mutation",
+        "PostgreSQL schema expansion"
+      ],
+      "knowledgeforge_owns": [
+        "release-contract semantics",
+        "derivation applicability",
+        "impact analysis",
+        "recompute planning",
+        "supersession decisions",
+        "publication plans",
+        "delta export semantics"
+      ]
+    },
+    "contract_id": "knowledgeforge_neutral_evidence_release_contract_v1@1.0",
+    "fingerprints": {
+      "affected_output_fingerprint": "deterministic hash over affected derivations and recomputation plan",
+      "change_set_fingerprint": "deterministic hash over added/removed/changed/unchanged item identities",
+      "item_fingerprint": "deterministic hash over normalized evidence item",
+      "release_content_fingerprint": "deterministic hash over release metadata excluding operational receipt time"
+    },
+    "non_canonical_status": "Release contracts and registries are automation inputs/derived state, not canonical KnowledgeObjectPackages.",
+    "purpose": "Provider-neutral evidence release contract for KnowledgeForge-owned release automation.",
+    "required_item_fields": [
+      "item_id",
+      "series_code",
+      "entity",
+      "period",
+      "frequency",
+      "value",
+      "unit",
+      "as_of_date",
+      "source_observation_fingerprint"
+    ],
+    "required_release_fields": [
+      "release_id",
+      "provider_id",
+      "dataset_id",
+      "release_version",
+      "published_at",
+      "evidence_items",
+      "provenance"
+    ]
+  },
+  "release_v1": {
+    "contract_id": "knowledgeforge_neutral_evidence_release_contract_v1@1.0",
+    "dataset_id": "synthetic_macro_release_demo",
+    "evidence_items": [
+      {
+        "as_of_date": "2026-07-01",
+        "entity": "DNK",
+        "frequency": "annual",
+        "item_id": "obs:A:DNK:2020",
+        "period": "2020",
+        "series_code": "SYN.A",
+        "source_observation_fingerprint": "sha256:75de66001252cdcf17dff65302c69ef2806754a341cddc0726a277d4e2075081",
+        "unit": "index",
+        "value": "10.0"
+      },
+      {
+        "as_of_date": "2026-07-01",
+        "entity": "DNK",
+        "frequency": "annual",
+        "item_id": "obs:A:DNK:2021",
+        "period": "2021",
+        "series_code": "SYN.A",
+        "source_observation_fingerprint": "sha256:4bb1e0d3fd68300ef942aa6ea08a71050d730a20414462fb416138e9bc25a8ec",
+        "unit": "index",
+        "value": "11.0"
+      },
+      {
+        "as_of_date": "2026-07-01",
+        "entity": "DNK",
+        "frequency": "annual",
+        "item_id": "obs:B:DNK:2020",
+        "period": "2020",
+        "series_code": "SYN.B",
+        "source_observation_fingerprint": "sha256:e86788958ab0ff727f6a2b1aa81042c010ffa065af768a74550f2cfec9abc3b0",
+        "unit": "index",
+        "value": "20.0"
+      }
+    ],
+    "frequency": "annual",
+    "provenance": {
+      "provider_native_release_key": "demo-release",
+      "source_url": "synthetic://neutral-provider/release-demo"
+    },
+    "provider_id": "neutral_provider_synthetic",
+    "published_at": "2026-07-01T00:00:00Z",
+    "release_content_fingerprint": "sha256:2c27969fa7e1a10f92b4aea43d2f9010f0f4ccab4c2eacac396272272332a335",
+    "release_id": "synthetic-release-v1",
+    "release_version": "v1"
+  },
+  "release_v2": {
+    "contract_id": "knowledgeforge_neutral_evidence_release_contract_v1@1.0",
+    "dataset_id": "synthetic_macro_release_demo",
+    "evidence_items": [
+      {
+        "as_of_date": "2026-07-01",
+        "entity": "DNK",
+        "frequency": "annual",
+        "item_id": "obs:A:DNK:2020",
+        "period": "2020",
+        "series_code": "SYN.A",
+        "source_observation_fingerprint": "sha256:75de66001252cdcf17dff65302c69ef2806754a341cddc0726a277d4e2075081",
+        "unit": "index",
+        "value": "10.0"
+      },
+      {
+        "as_of_date": "2026-07-08",
+        "entity": "DNK",
+        "frequency": "annual",
+        "item_id": "obs:A:DNK:2021",
+        "period": "2021",
+        "series_code": "SYN.A",
+        "source_observation_fingerprint": "sha256:d75b7e584a771133f4ded0f1c5c5d10c93eace666e1698bc0a0efec97731de20",
+        "unit": "index",
+        "value": "12.5"
+      },
+      {
+        "as_of_date": "2026-07-08",
+        "entity": "DNK",
+        "frequency": "annual",
+        "item_id": "obs:A:DNK:2022",
+        "period": "2022",
+        "series_code": "SYN.A",
+        "source_observation_fingerprint": "sha256:9fe6e3e8fd8cee0af61530cf59d7d39e4175a439c5c1b58a0e2f9e504436f605",
+        "unit": "index",
+        "value": "13.0"
+      },
+      {
+        "as_of_date": "2026-07-01",
+        "entity": "DNK",
+        "frequency": "annual",
+        "item_id": "obs:B:DNK:2020",
+        "period": "2020",
+        "series_code": "SYN.B",
+        "source_observation_fingerprint": "sha256:e86788958ab0ff727f6a2b1aa81042c010ffa065af768a74550f2cfec9abc3b0",
+        "unit": "index",
+        "value": "20.0"
+      }
+    ],
+    "frequency": "annual",
+    "provenance": {
+      "provider_native_release_key": "demo-release",
+      "source_url": "synthetic://neutral-provider/release-demo"
+    },
+    "provider_id": "neutral_provider_synthetic",
+    "published_at": "2026-07-08T00:00:00Z",
+    "release_content_fingerprint": "sha256:4d9b67eebdd89915628df7697ea95738f5d172ec718b02b5354adf4c24f0b40d",
+    "release_id": "synthetic-release-v2",
+    "release_version": "v2",
+    "supersedes_release_id": "synthetic-release-v1"
+  },
+  "seen_release_registry": {
+    "registry_id": "knowledgeforge_seen_release_registry_v1@1.0",
+    "seen_releases": [
+      {
+        "fingerprint": "sha256:2c27969fa7e1a10f92b4aea43d2f9010f0f4ccab4c2eacac396272272332a335",
+        "release_id": "synthetic-release-v1",
+        "status": "superseded_by_v2"
+      },
+      {
+        "fingerprint": "sha256:4d9b67eebdd89915628df7697ea95738f5d172ec718b02b5354adf4c24f0b40d",
+        "release_id": "synthetic-release-v2",
+        "status": "current"
+      }
+    ]
+  },
+  "supersession_model": {
+    "canonical_package_mutation": false,
+    "rule": "newer release_version and explicit supersedes_release_id",
+    "superseded_release_id": "synthetic-release-v1",
+    "superseding_release_id": "synthetic-release-v2"
+  },
+  "validation_errors": {
+    "v1": [],
+    "v2": []
+  }
+}

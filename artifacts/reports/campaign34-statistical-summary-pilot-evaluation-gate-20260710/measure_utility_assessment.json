@@ -1,0 +1,30 @@
+{
+  "arithmetic_mean_across_annual_levels": {
+    "classification": "mathematically valid but substantively weak",
+    "reason": "ordered annual population levels are not interchangeable random samples; mean is a window descriptor, not timeless distribution or expectation"
+  },
+  "coverage": {
+    "classification": "strongly reusable",
+    "reason": "compact completeness metric with explicit expected-slot denominator; useful for validation gates and comparability when scope is explicit"
+  },
+  "first_and_last_observations": {
+    "classification": "conditionally reusable with method context",
+    "reason": "true endpoint facts, but not trend descriptors; useful mainly as window anchors"
+  },
+  "median_across_annual_levels": {
+    "classification": "mathematically valid but substantively weak",
+    "reason": "valid finite-set statistic but limited reusable meaning for monotone or near-monotone level series"
+  },
+  "min_max_with_periods": {
+    "classification": "conditionally reusable with method context",
+    "reason": "deterministic extrema are useful for bounded windows but can invite implicit trend/significance claims"
+  },
+  "observation_and_missingness_counts": {
+    "classification": "strongly reusable",
+    "reason": "direct evidence-quality and completeness facts; low interpretation risk; useful across fixtures"
+  },
+  "population_standard_deviation_across_annual_levels": {
+    "classification": "mathematically valid but substantively weak",
+    "reason": "valid finite-window dispersion descriptor, but easily mistaken for uncertainty, volatility, or distributional property"
+  }
+}

@@ -121,7 +121,7 @@ Before implementation begins, KnowledgeForge still needs accepted implementation
 - common durable-object kernel contract;
 - stable identity, revision, split, merge, and correction semantics;
 - dependency posture/facet contract;
-- evidence reference contract with MacroForge;
+- source evidence reference contract;
 - evidence evaluation model;
 - relationship representation contract;
 - lifecycle/governance/confidence/uncertainty contracts;

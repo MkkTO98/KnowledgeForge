@@ -1,0 +1,22 @@
+{
+  "findings": [
+    {
+      "classification": "guard_literal_not_runtime_dependency",
+      "path": "tools/external_outbox_poller_v1.py",
+      "term": "curated."
+    },
+    {
+      "classification": "guard_literal_not_runtime_dependency",
+      "path": "tools/external_outbox_poller_v1.py",
+      "term": "meta."
+    },
+    {
+      "classification": "guard_literal_not_runtime_dependency",
+      "path": "tools/external_outbox_poller_v1.py",
+      "term": "staging."
+    }
+  ],
+  "leaks": [],
+  "note": "curated/meta/staging occurrences are forbidden-term guard literals in config validation, not references to MacroForge private schemas.",
+  "valid": true
+}

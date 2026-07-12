@@ -1,0 +1,92 @@
+{
+  "authority_and_consistency_model": {
+    "canonical_authority": "Full KnowledgeObjectPackage JSON files under knowledge_repository/objects remain canonical.",
+    "classification": "preserves existing architecture",
+    "divergence_detection": "Compare package ids, package manifest fingerprints, repository fingerprint inputs, projection build metadata, and deterministic counts between canonical packages and PostgreSQL projection.",
+    "failure_behavior_on_disagreement": "Canonical packages win. PostgreSQL must be marked stale/invalid, downstream operational retrieval should fail closed or degrade to canonical filesystem reads, and rebuild/reconciliation is required before PostgreSQL results are treated as current.",
+    "fingerprint_relationship": "Package fingerprints remain canonical object fingerprints. Repository filesystem fingerprint remains canonical materialization fingerprint. PostgreSQL should have a projection/rebuild fingerprint derived from the same package inputs, but it does not replace canonical fingerprints.",
+    "fully_rebuildable_from_packages": true,
+    "may_postgresql_originate_or_mutate_canonical_knowledge": false,
+    "postgresql_contains_conceptually": [
+      "queryable projections of package identity, statement metadata, scope, provenance, lineage, lifecycle/governance state, fingerprints, relationships/dependencies where represented, and retrieval pointers to canonical packages",
+      "repository snapshot and rebuild metadata sufficient to detect divergence"
+    ],
+    "postgresql_in_canonical_fingerprints": false,
+    "postgresql_role": "Durable KnowledgeForge-owned operational repository for discovery, retrieval, traversal, verification support, and bulk access, derived from canonical packages."
+  },
+  "downstream_consumption_boundary": {
+    "acceptable_boundary": "Independent consumers such as InsightForge may retrieve KnowledgeForge knowledge through KnowledgeForge-owned read-only projections, exported deterministic snapshots, future KnowledgeForge-owned query interfaces, or direct canonical package consumption. They may not acquire ownership, write authority, shared schema control, shared runtime code, or the right to define KnowledgeForge structures.",
+    "classification": "preserves existing architecture",
+    "options": {
+      "combinations": {
+        "acceptable": "yes, recommended boundary pattern",
+        "access_control": "read-only consumers only",
+        "consumer_convenience": "high",
+        "coupling": "manageable if canonical packages + deterministic snapshots remain primary reproducibility path and PostgreSQL/query access is KnowledgeForge-owned read-only retrieval",
+        "operational_complexity": "medium",
+        "ownership_preservation": "strong if no shared schema ownership/runtime code/consumer writes",
+        "reproducibility": "high",
+        "versioning": "must be decided later"
+      },
+      "direct_read_only_postgresql_access": {
+        "acceptable": "conditionally later",
+        "access_control": "read-only only; no consumer writes",
+        "consumer_convenience": "high",
+        "coupling": "medium to high unless view/interface ownership remains entirely KnowledgeForge-owned and versioned",
+        "operational_complexity": "medium",
+        "ownership_preservation": "acceptable only if consumers cannot define structures or write",
+        "reproducibility": "good only if snapshot/projection version is explicit",
+        "versioning": "requires KnowledgeForge-owned version policy later"
+      },
+      "exported_deterministic_snapshots": {
+        "acceptable": "yes",
+        "access_control": "simple file/object access",
+        "consumer_convenience": "medium",
+        "coupling": "low",
+        "operational_complexity": "low to medium",
+        "ownership_preservation": "strong",
+        "reproducibility": "high",
+        "versioning": "strong via repository fingerprints and export manifests"
+      },
+      "filesystem_package_consumption": {
+        "acceptable": "yes",
+        "access_control": "simple repository artifact access",
+        "consumer_convenience": "lower for rich retrieval",
+        "coupling": "low",
+        "operational_complexity": "low",
+        "ownership_preservation": "strong",
+        "reproducibility": "highest",
+        "versioning": "native through packages/manifests/fingerprints"
+      },
+      "knowledgeforge_owned_query_interface": {
+        "acceptable": "yes later, not designed now",
+        "access_control": "strongest boundary",
+        "consumer_convenience": "high",
+        "coupling": "low to medium if interface is KnowledgeForge-owned",
+        "operational_complexity": "medium to high",
+        "ownership_preservation": "strong if consumer writes are impossible",
+        "reproducibility": "good if responses identify snapshot/fingerprints",
+        "versioning": "requires later contract decision"
+      }
+    }
+  },
+  "later_implementation_acceptance_criteria": {
+    "acceptance_criteria_without_design": [
+      "projection is fully rebuildable from canonical packages",
+      "canonical packages remain byte-preserved and authoritative",
+      "projection count and fingerprints match canonical repository inputs",
+      "divergence is detected and treated as projection invalidity",
+      "read-only retrieval works for the currently supported query dimensions",
+      "no PostgreSQL-originated canonical knowledge is possible",
+      "no cross-project runtime dependency or shared ownership is introduced",
+      "full test suite, compile, coherence, context health, architecture audit, and diff checks pass"
+    ],
+    "future_expansion_gates": [
+      "consumer-facing access requires a separate downstream consumption contract decision",
+      "rich statistical relationship projection requires successful deeper deterministic-knowledge campaigns first or an explicit design gate",
+      "incremental synchronization requires full-rebuild proof first and a separate consistency decision",
+      "direct InsightForge access requires an explicit read-only boundary decision after local KnowledgeForge projection proves stable"
+    ],
+    "smallest_later_implementation_slice": "If separately authorized, build a KnowledgeForge-owned, local, deterministic PostgreSQL projection of existing canonical KnowledgeObjectPackages sufficient for package-id lookup, evidence-family/statement-type/lifecycle/fingerprint filtering, provenance-lineage discovery, repository snapshot verification, and canonical-package retrieval pointers. No consumer access contract, no shared schema, no writes from PostgreSQL to canonical packages, no Campaign 34, and no rich statistical schema expansion in that first slice."
+  }
+}

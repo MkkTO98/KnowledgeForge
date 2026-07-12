@@ -1,0 +1,21 @@
+{
+  "method_id": "wdi_annual_scalar_statistical_summary_v2_candidate",
+  "method_version": "2.0-candidate",
+  "requirements": {
+    "Decimal precision": "pin local Decimal Context precision, e.g. precision 50 or other justified fixed value",
+    "canonical stored precision": "store canonical calculation outputs at declared significant-digit/decimal-place policy; enough for deterministic reproduction but not false evidentiary accuracy",
+    "contract_fingerprint": "fingerprint all method parameters excluding the fingerprint field itself",
+    "deterministic_serialization": "canonical JSON sort_keys=True, compact separators, UTF-8, no timestamps inside fingerprints",
+    "human_display_precision": "separate display policy from canonical stored values",
+    "input canonicalization": "Decimal from canonical base-10 strings only; reject exponent/locale/binary floats unless explicitly normalized",
+    "local context": "all Decimal division, summation, variance, sqrt, and formatting execute inside localcontext(fixed_context)",
+    "mean algorithm": "sum observed Decimal values / observed_count inside pinned context",
+    "median algorithm": "sort observed Decimal values; odd middle/even average inside pinned context",
+    "population_stddev_denominator": "N observed values, not N-1",
+    "rounding mode": "pin local rounding mode, e.g. ROUND_HALF_EVEN, serialized exactly",
+    "scientific_notation_policy": "define whether scientific notation is forbidden or allowed only under thresholds",
+    "square-root algorithm": "use Decimal.sqrt fixed context or define Newton iteration with termination and rounding; serialize chosen implementation",
+    "summation order": "stable entity_id, indicator_code, period ordering before arithmetic",
+    "trailing_zero_normalization": "define normalized string form and whether trailing zeros are stripped"
+  }
+}

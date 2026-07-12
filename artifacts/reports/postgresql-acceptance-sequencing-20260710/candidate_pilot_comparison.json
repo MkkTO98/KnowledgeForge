@@ -1,0 +1,84 @@
+{
+  "candidates": [
+    {
+      "candidate": "statistical_summary",
+      "currently_accessible": false,
+      "deterministic_method": "count, min, max, mean, median, standard deviation, percentile/missingness summary over an immutable evidence extract",
+      "doctrine_compatibility": "compatible after evidence-input boundary is operationalized",
+      "downstream_value": "high as first reusable numerical characterization",
+      "interpretation_risk": "low if purely descriptive and method-scoped",
+      "minimum_sample_coverage": "non-empty numeric sample with explicit entity-period scope; minimum viable pilot should use one WDI family, one or few indicators, documented missingness",
+      "missing_data_handling": "explicit missing vs absent values; exclude non-observations from numeric moments; report denominator",
+      "postgresql_v1_compatibility": "canonical package JSON can be projected without schema expansion",
+      "required_input_evidence": "observation-level numeric values for a bounded source scope, plus source/version/vintage, units, missingness and entity/period identifiers",
+      "versioning_provenance": "snapshot fingerprint, query/selection fingerprint, source URL/release/vintage, transformation recipe hash"
+    },
+    {
+      "candidate": "trend_descriptor",
+      "currently_accessible": false,
+      "deterministic_method": "OLS slope or start/end/CAGR-like descriptor with explicit window and missingness rules",
+      "doctrine_compatibility": "compatible after summary pilot proves boundary",
+      "downstream_value": "high but less shallow than summary",
+      "interpretation_risk": "medium; must avoid growth/weakening implication language",
+      "minimum_sample_coverage": "at least 3 ordered observations per series; stronger if >=10 years",
+      "missing_data_handling": "predefined contiguous/non-contiguous policy and minimum observations",
+      "postgresql_v1_compatibility": "yes via JSON payload",
+      "required_input_evidence": "time-ordered observation-level numeric values for a series/entity or bounded panel",
+      "versioning_provenance": "same as statistical summary plus method parameter fingerprint"
+    },
+    {
+      "candidate": "correlation",
+      "currently_accessible": false,
+      "deterministic_method": "Pearson/Spearman with pairwise/listwise deletion specified",
+      "doctrine_compatibility": "allowed later, but not the shallowest falsification test",
+      "downstream_value": "useful but premature",
+      "interpretation_risk": "high; must not imply explanation/causation/forecast",
+      "minimum_sample_coverage": "predefined n threshold; likely >=30 paired observations for pilot usefulness",
+      "missing_data_handling": "explicit pairwise alignment and missingness report",
+      "postgresql_v1_compatibility": "yes via JSON payload",
+      "required_input_evidence": "paired aligned numerical observations for two variables over same entities/periods",
+      "versioning_provenance": "source snapshots for both series plus alignment recipe"
+    },
+    {
+      "candidate": "covariance_structure",
+      "currently_accessible": false,
+      "deterministic_method": "covariance matrix with units/scaling caveats",
+      "doctrine_compatibility": "defer",
+      "downstream_value": "defer",
+      "interpretation_risk": "high and low immediate value before summaries/correlations",
+      "minimum_sample_coverage": "multiple variables and enough paired observations; stronger validation needed",
+      "missing_data_handling": "matrix deletion/imputation prohibition unless explicitly justified",
+      "postgresql_v1_compatibility": "yes as JSON but not worth schema expansion",
+      "required_input_evidence": "multi-variable aligned observation matrix",
+      "versioning_provenance": "multi-series extract fingerprint and alignment recipe"
+    },
+    {
+      "candidate": "lag_relationship",
+      "currently_accessible": false,
+      "deterministic_method": "cross-correlation or lagged association with fixed lag window",
+      "doctrine_compatibility": "allowed only after simpler empirical governance",
+      "downstream_value": "defer",
+      "interpretation_risk": "very high; easily mistaken for forecasting/causality",
+      "minimum_sample_coverage": "substantial continuous time depth; beyond current evidence",
+      "missing_data_handling": "strict alignment, lagged denominator report",
+      "postgresql_v1_compatibility": "yes via JSON",
+      "required_input_evidence": "time-indexed paired series with enough temporal depth",
+      "versioning_provenance": "series extracts, lag recipe, window fingerprint"
+    },
+    {
+      "candidate": "deterministic_mathematical_relationship",
+      "currently_accessible": "partially for source/methodology metadata; not for numerical component validation",
+      "deterministic_method": "formula/identity preservation with source citation, not empirical inference",
+      "doctrine_compatibility": "compatible but not the best next test of numerical evidence access",
+      "downstream_value": "moderate",
+      "interpretation_risk": "low",
+      "minimum_sample_coverage": "none for definitional identity; requires authoritative source docs",
+      "missing_data_handling": "not applicable unless validating numerically",
+      "postgresql_v1_compatibility": "yes via JSON",
+      "required_input_evidence": "known definitional identity or components from source documentation/observations",
+      "versioning_provenance": "source documentation snapshot/reference"
+    }
+  ],
+  "preferred_future_pilot_after_remediation": "bounded WDI annual-scalar statistical-summary pilot over an independently acquired immutable evidence extract",
+  "selected_outcome": "PostgreSQL accepted; an existing evidence-input boundary must first be operationalized"
+}

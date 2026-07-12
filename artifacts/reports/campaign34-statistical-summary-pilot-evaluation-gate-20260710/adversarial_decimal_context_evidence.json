@@ -1,0 +1,32 @@
+{
+  "campaign34_package_hash_before_gate": "ee124afc43b6db03c9ceacb9905864caa8abe15057d1bac507ba1a9db6e913eb",
+  "conclusion": "Campaign 34 v1 depends on ambient global Decimal context for division and sqrt; package fingerprints are not stable if recomputed under changed context.",
+  "finding": "bounded_reproducibility_defect_exposed",
+  "identical_across_contexts": false,
+  "results": [
+    {
+      "ambient_decimal_precision": 28,
+      "ambient_decimal_rounding": "ROUND_HALF_EVEN",
+      "arithmetic_mean": "5506886.828571428571428571429",
+      "label": "historical-default-equivalent",
+      "package_manifest_fingerprint": "sha256:833d840e69796e1a01bbcafca36b10502c682b6191419e8b3ac2d588a347a070",
+      "population_standard_deviation": "244565.4198270283104925028932"
+    },
+    {
+      "ambient_decimal_precision": 10,
+      "ambient_decimal_rounding": "ROUND_DOWN",
+      "arithmetic_mean": "5506886.828",
+      "label": "lower-external-precision-round-down",
+      "package_manifest_fingerprint": "sha256:f9bfef9b2be51f2435dac5802e55699ce1d27d1a8507719980d298e6569e337b",
+      "population_standard_deviation": "244565.4195"
+    },
+    {
+      "ambient_decimal_precision": 50,
+      "ambient_decimal_rounding": "ROUND_UP",
+      "arithmetic_mean": "5506886.8285714285714285714285714285714285714285715",
+      "label": "higher-external-precision-round-up",
+      "package_manifest_fingerprint": "sha256:c3614ef038abef50e00af7d7523ca0a41e72d4b6796e62893832fb8b39ec3651",
+      "population_standard_deviation": "244565.41982702831049250289311668731550388756235667"
+    }
+  ]
+}

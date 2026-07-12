@@ -1,0 +1,637 @@
+{
+  "architectural_commitments": {
+    "commitments": {
+      "canonical_authority": [
+        {
+          "classification": "preserves existing architecture",
+          "commitment": "Full KnowledgeObjectPackage JSON is canonical and remains the authoritative package representation.",
+          "evidence": "docs/knowledge_repository_architecture.md states the canonical persisted object representation is the existing validated KnowledgeObjectPackage JSON and repository metadata/indexes/evolution records are separate."
+        },
+        {
+          "classification": "preserves existing architecture",
+          "commitment": "Tables, graphs, APIs, database schemas, and documents are representations, not defining abstractions.",
+          "evidence": "CONSTITUTION.md non-negotiable rule 4 and representation-neutrality rule 9."
+        }
+      ],
+      "downstream_consumption": [
+        {
+          "classification": "preserves existing architecture",
+          "commitment": "KnowledgeForge may provide governed reusable knowledge interfaces to downstream systems but must not own reasoning, forecasting, decision, presentation, or observational responsibilities.",
+          "evidence": "CONSTITUTION.md and docs/architecture.md scope/non-scope boundaries."
+        },
+        {
+          "classification": "preserves existing architecture",
+          "commitment": "External project-specific runtime interfaces and shared ownership are forbidden; KnowledgeForge remains independent.",
+          "evidence": "CONSTITUTION.md rule 2 and docs/knowledge_repository_architecture.md architectural boundary."
+        }
+      ],
+      "operational_retrieval": [
+        {
+          "classification": "operational realization requirement",
+          "commitment": "KnowledgeForge must serve reusable knowledge and provide governed reusable knowledge interfaces for downstream reasoning/navigation/decision systems.",
+          "evidence": "CONSTITUTION.md purpose line and docs/architecture.md purpose/architectural-position sections."
+        },
+        {
+          "classification": "preserves existing architecture",
+          "commitment": "Current file indexes support retrieval by package id, knowledge identity, evidence family, statement type, lifecycle state, and package manifest fingerprint.",
+          "evidence": "docs/knowledge_repository_architecture.md indexing strategy and knowledge_repository/indexes contents."
+        }
+      ],
+      "postgresql": [
+        {
+          "classification": "operational realization requirement",
+          "commitment": "A separate bounded PostgreSQL repository-realization decision is required; implementation is not authorized by prior gates.",
+          "evidence": "500-object doctrine review decision and current state/architecture handoff."
+        },
+        {
+          "classification": "operational realization requirement",
+          "commitment": "V1 did not select storage technology, but KnowledgeForge should eventually own a knowledge database or equivalent persistent knowledge store separate from external observational databases.",
+          "evidence": "docs/architecture.md knowledge database posture."
+        }
+      ],
+      "project_independence": [
+        {
+          "classification": "preserves existing architecture",
+          "commitment": "KnowledgeForge must not introduce shared schemas, database ownership, runtime code, or cross-project coupling.",
+          "evidence": "CONSTITUTION.md, repository architecture boundary, 500-object decision, and user task boundary."
+        }
+      ],
+      "rebuildability": [
+        {
+          "classification": "preserves existing architecture",
+          "commitment": "Repository indexes, manifests, and evolution records are deterministic operational structures derived from packages.",
+          "evidence": "docs/knowledge_repository_architecture.md persistence/index/evolution sections and repository-scale review metrics."
+        }
+      ]
+    },
+    "contradiction_checks": {
+      "doctrine_frozen_and_realization_allowed": true,
+      "json_canonical_and_database_intent_coexist": true,
+      "postgresql_not_currently_implemented": false
+    },
+    "contradictions": []
+  },
+  "authority_and_consistency_model": {
+    "canonical_authority": "Full KnowledgeObjectPackage JSON files under knowledge_repository/objects remain canonical.",
+    "classification": "preserves existing architecture",
+    "divergence_detection": "Compare package ids, package manifest fingerprints, repository fingerprint inputs, projection build metadata, and deterministic counts between canonical packages and PostgreSQL projection.",
+    "failure_behavior_on_disagreement": "Canonical packages win. PostgreSQL must be marked stale/invalid, downstream operational retrieval should fail closed or degrade to canonical filesystem reads, and rebuild/reconciliation is required before PostgreSQL results are treated as current.",
+    "fingerprint_relationship": "Package fingerprints remain canonical object fingerprints. Repository filesystem fingerprint remains canonical materialization fingerprint. PostgreSQL should have a projection/rebuild fingerprint derived from the same package inputs, but it does not replace canonical fingerprints.",
+    "fully_rebuildable_from_packages": true,
+    "may_postgresql_originate_or_mutate_canonical_knowledge": false,
+    "postgresql_contains_conceptually": [
+      "queryable projections of package identity, statement metadata, scope, provenance, lineage, lifecycle/governance state, fingerprints, relationships/dependencies where represented, and retrieval pointers to canonical packages",
+      "repository snapshot and rebuild metadata sufficient to detect divergence"
+    ],
+    "postgresql_in_canonical_fingerprints": false,
+    "postgresql_role": "Durable KnowledgeForge-owned operational repository for discovery, retrieval, traversal, verification support, and bulk access, derived from canonical packages."
+  },
+  "decision_answers": {
+    "disagreement_behavior": "Canonical packages win. PostgreSQL must be marked stale/invalid, downstream operational retrieval should fail closed or degrade to canonical filesystem reads, and rebuild/reconciliation is required before PostgreSQL results are treated as current.",
+    "downstream_consumption_boundary": "Independent consumers such as InsightForge may retrieve KnowledgeForge knowledge through KnowledgeForge-owned read-only projections, exported deterministic snapshots, future KnowledgeForge-owned query interfaces, or direct canonical package consumption. They may not acquire ownership, write authority, shared schema control, shared runtime code, or the right to define KnowledgeForge structures.",
+    "expansion_gates": [
+      "consumer-facing access requires a separate downstream consumption contract decision",
+      "rich statistical relationship projection requires successful deeper deterministic-knowledge campaigns first or an explicit design gate",
+      "incremental synchronization requires full-rebuild proof first and a separate consistency decision",
+      "direct InsightForge access requires an explicit read-only boundary decision after local KnowledgeForge projection proves stable"
+    ],
+    "is_postgresql_justified_now": true,
+    "justification_basis": [
+      "operational usability",
+      "accepted end-state realization",
+      "future scale readiness"
+    ],
+    "mandatory_or_optional": "mandatory operational infrastructure once separately implemented and accepted for repository operation; not canonical authority and not required for emergency canonical filesystem access",
+    "may_postgresql_originate_or_mutate_canonical_knowledge": false,
+    "must_be_fully_rebuildable_from_canonical_packages": true,
+    "not_justified_by": [
+      "present performance alone",
+      "doctrine insufficiency",
+      "canonical package failure"
+    ],
+    "realization_before_deeper_campaigns": true,
+    "selected_option": "B",
+    "smallest_later_slice": "If separately authorized, build a KnowledgeForge-owned, local, deterministic PostgreSQL projection of existing canonical KnowledgeObjectPackages sufficient for package-id lookup, evidence-family/statement-type/lifecycle/fingerprint filtering, provenance-lineage discovery, repository snapshot verification, and canonical-package retrieval pointers. No consumer access contract, no shared schema, no writes from PostgreSQL to canonical packages, no Campaign 34, and no rich statistical schema expansion in that first slice."
+  },
+  "decision_kind": "Bounded PostgreSQL Knowledge Repository Realization Decision",
+  "downstream_consumption_boundary": {
+    "acceptable_boundary": "Independent consumers such as InsightForge may retrieve KnowledgeForge knowledge through KnowledgeForge-owned read-only projections, exported deterministic snapshots, future KnowledgeForge-owned query interfaces, or direct canonical package consumption. They may not acquire ownership, write authority, shared schema control, shared runtime code, or the right to define KnowledgeForge structures.",
+    "classification": "preserves existing architecture",
+    "options": {
+      "combinations": {
+        "acceptable": "yes, recommended boundary pattern",
+        "access_control": "read-only consumers only",
+        "consumer_convenience": "high",
+        "coupling": "manageable if canonical packages + deterministic snapshots remain primary reproducibility path and PostgreSQL/query access is KnowledgeForge-owned read-only retrieval",
+        "operational_complexity": "medium",
+        "ownership_preservation": "strong if no shared schema ownership/runtime code/consumer writes",
+        "reproducibility": "high",
+        "versioning": "must be decided later"
+      },
+      "direct_read_only_postgresql_access": {
+        "acceptable": "conditionally later",
+        "access_control": "read-only only; no consumer writes",
+        "consumer_convenience": "high",
+        "coupling": "medium to high unless view/interface ownership remains entirely KnowledgeForge-owned and versioned",
+        "operational_complexity": "medium",
+        "ownership_preservation": "acceptable only if consumers cannot define structures or write",
+        "reproducibility": "good only if snapshot/projection version is explicit",
+        "versioning": "requires KnowledgeForge-owned version policy later"
+      },
+      "exported_deterministic_snapshots": {
+        "acceptable": "yes",
+        "access_control": "simple file/object access",
+        "consumer_convenience": "medium",
+        "coupling": "low",
+        "operational_complexity": "low to medium",
+        "ownership_preservation": "strong",
+        "reproducibility": "high",
+        "versioning": "strong via repository fingerprints and export manifests"
+      },
+      "filesystem_package_consumption": {
+        "acceptable": "yes",
+        "access_control": "simple repository artifact access",
+        "consumer_convenience": "lower for rich retrieval",
+        "coupling": "low",
+        "operational_complexity": "low",
+        "ownership_preservation": "strong",
+        "reproducibility": "highest",
+        "versioning": "native through packages/manifests/fingerprints"
+      },
+      "knowledgeforge_owned_query_interface": {
+        "acceptable": "yes later, not designed now",
+        "access_control": "strongest boundary",
+        "consumer_convenience": "high",
+        "coupling": "low to medium if interface is KnowledgeForge-owned",
+        "operational_complexity": "medium to high",
+        "ownership_preservation": "strong if consumer writes are impossible",
+        "reproducibility": "good if responses identify snapshot/fingerprints",
+        "versioning": "requires later contract decision"
+      }
+    }
+  },
+  "findings": [
+    {
+      "classification": "preserves existing architecture",
+      "evidence": "Representation neutrality, canonical JSON repository architecture, and knowledge database posture.",
+      "finding": "Canonical filesystem packages and PostgreSQL operational realization can coexist if PostgreSQL is derived-only and rebuildable."
+    },
+    {
+      "classification": "preserves existing architecture",
+      "evidence": "Contradiction checks: {'json_canonical_and_database_intent_coexist': True, 'postgresql_not_currently_implemented': False, 'doctrine_frozen_and_realization_allowed': True}",
+      "finding": "No genuine architectural contradiction was found in accepted artifacts."
+    },
+    {
+      "classification": "preserves existing architecture",
+      "evidence": "Full object scan median 0.032258s and index lookups are sub-millisecond at 521 objects on this host.",
+      "finding": "PostgreSQL is not required today for raw performance at 521 objects."
+    },
+    {
+      "classification": "operational realization requirement",
+      "evidence": "Architecture says KnowledgeForge should eventually own a knowledge database or equivalent store; current state requires bounded realization decision after 521 objects.",
+      "finding": "PostgreSQL is justified now as operational realization of accepted end-state retrieval/discovery intent and future scale readiness."
+    },
+    {
+      "classification": "unsupported expansion",
+      "evidence": "No repeated evidence shows canonical package architecture is insufficient.",
+      "finding": "A co-authoritative or canonical PostgreSQL role is unsupported."
+    },
+    {
+      "classification": "implementation concern for a later task",
+      "evidence": "Current composition has zero primary statistical/correlation/covariance/lag/trend/mathematical objects, while architecture intends such objects later.",
+      "finding": "Future richer deterministic objects increase retrieval pressure but do not justify schema design in this decision task."
+    }
+  ],
+  "forbidden_implementation_check": {
+    "contains_forbidden_implementation_terms": false,
+    "found_term_count": 0,
+    "note": "Machine artifact deliberately contains no SQL/DDL/API/loader implementation design."
+  },
+  "later_implementation_acceptance_criteria": {
+    "acceptance_criteria_without_design": [
+      "projection is fully rebuildable from canonical packages",
+      "canonical packages remain byte-preserved and authoritative",
+      "projection count and fingerprints match canonical repository inputs",
+      "divergence is detected and treated as projection invalidity",
+      "read-only retrieval works for the currently supported query dimensions",
+      "no PostgreSQL-originated canonical knowledge is possible",
+      "no cross-project runtime dependency or shared ownership is introduced",
+      "full test suite, compile, coherence, context health, architecture audit, and diff checks pass"
+    ],
+    "future_expansion_gates": [
+      "consumer-facing access requires a separate downstream consumption contract decision",
+      "rich statistical relationship projection requires successful deeper deterministic-knowledge campaigns first or an explicit design gate",
+      "incremental synchronization requires full-rebuild proof first and a separate consistency decision",
+      "direct InsightForge access requires an explicit read-only boundary decision after local KnowledgeForge projection proves stable"
+    ],
+    "smallest_later_implementation_slice": "If separately authorized, build a KnowledgeForge-owned, local, deterministic PostgreSQL projection of existing canonical KnowledgeObjectPackages sufficient for package-id lookup, evidence-family/statement-type/lifecycle/fingerprint filtering, provenance-lineage discovery, repository snapshot verification, and canonical-package retrieval pointers. No consumer access contract, no shared schema, no writes from PostgreSQL to canonical packages, no Campaign 34, and no rich statistical schema expansion in that first slice."
+  },
+  "operational_requirements": {
+    "index_names": [
+      "by_evidence_family",
+      "by_knowledge_identity",
+      "by_lifecycle_state",
+      "by_package_id",
+      "by_package_manifest_fingerprint",
+      "by_statement_type"
+    ],
+    "object_count": 521,
+    "requirements": [
+      {
+        "classification": "preserves existing architecture",
+        "evidence": "package_id exists for every package and by_package_id index exists",
+        "requirement": "lookup_by_package_id",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "preserves existing architecture",
+        "evidence": "evidence_family appears in scope and is indexed",
+        "requirement": "filter_by_family",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "operational realization requirement",
+        "evidence": "source/evidence family represented in package scopes/provenance",
+        "requirement": "filter_by_source",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "preserves existing architecture",
+        "evidence": "generated statement_type is indexed",
+        "requirement": "filter_by_object_type",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "implementation concern for a later task",
+        "evidence": "521-object review computed knowledge-depth classifications from package content; no canonical index yet",
+        "requirement": "filter_by_knowledge_depth",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "operational realization requirement",
+        "evidence": "family maturity/status appears in generated statements and production artifacts",
+        "requirement": "filter_by_maturity",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "preserves existing architecture",
+        "evidence": "scope exists for every inspected package",
+        "requirement": "filter_by_evidence_scope",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "implementation concern for a later task",
+        "evidence": "territory/geography is represented in production statements where applicable",
+        "requirement": "filter_by_geography",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "implementation concern for a later task",
+        "evidence": "temporal coverage/period knowledge exists in production statements",
+        "requirement": "filter_by_time",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "operational realization requirement",
+        "evidence": "methodological statements are present",
+        "requirement": "filter_by_methodology",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "operational realization requirement",
+        "evidence": "provenance_envelope and lineage exist for all packages",
+        "requirement": "provenance_and_lineage_traversal",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "preserves existing architecture",
+        "evidence": "package manifest fingerprint index exists",
+        "requirement": "fingerprint_lookup_and_verification",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "implementation concern for a later task",
+        "evidence": "relationship/comparison/dependency language exists but richer relationship objects are not yet present",
+        "requirement": "relationship_discovery",
+        "supported_by_current_evidence": false
+      },
+      {
+        "classification": "operational realization requirement",
+        "evidence": "derived statement_type appears in persisted packages",
+        "requirement": "deterministic_derived_knowledge_retrieval",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "operational realization requirement",
+        "evidence": "package_version/evolution/lineage fields exist",
+        "requirement": "version_and_supersession_discovery",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "operational realization requirement",
+        "evidence": "full package JSON is available for all objects; bulk retrieval currently means filesystem traversal",
+        "requirement": "bulk_retrieval_for_downstream_analysis",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "preserves existing architecture",
+        "evidence": "manifest records repository fingerprint",
+        "requirement": "reproducible_repository_snapshots",
+        "supported_by_current_evidence": true
+      },
+      {
+        "classification": "implementation concern for a later task",
+        "evidence": "architecture intends statistical summaries/relationships, but repository currently has zero such primary objects",
+        "requirement": "efficient_access_for_richer_statistical_objects",
+        "supported_by_current_evidence": true
+      }
+    ]
+  },
+  "option_matrix": {
+    "options": {
+      "A": {
+        "architecture_fit": "partial",
+        "benefits": [
+          "maximal canonical clarity",
+          "low authority ambiguity",
+          "easy rebuild semantics"
+        ],
+        "classification": "preserves existing architecture",
+        "decision": "reject",
+        "justification": "Too weak for accepted end-state intent that KnowledgeForge should own an operational knowledge store, but useful as a rebuildability constraint inside option B.",
+        "name": "Disposable query projection derived entirely from canonical KnowledgeObjectPackages",
+        "risks": [
+          "quietly demotes intended operational repository role",
+          "weak durability for discovery/retrieval",
+          "may under-serve downstream consumers"
+        ]
+      },
+      "B": {
+        "architecture_fit": "strong",
+        "benefits": [
+          "serves discovery and retrieval",
+          "preserves package authority",
+          "supports independent ownership",
+          "fully rebuildable",
+          "enables future richer deterministic objects"
+        ],
+        "classification": "operational realization requirement",
+        "decision": "select",
+        "justification": "Best reconciles canonical package authority with accepted operational database intent and downstream discovery/retrieval needs.",
+        "name": "Durable KnowledgeForge-owned PostgreSQL operational repository derived from canonical packages",
+        "risks": [
+          "stale projection",
+          "schema rigidity if overbuilt",
+          "governance overhead",
+          "accidental consumer coupling"
+        ]
+      },
+      "C": {
+        "architecture_fit": "weak",
+        "benefits": [
+          "could support database-native operations"
+        ],
+        "classification": "unsupported expansion",
+        "decision": "reject",
+        "justification": "No repeated evidence justifies co-authority; it would increase governance and consistency risk.",
+        "name": "Co-authoritative operational store governed by explicit synchronization rules",
+        "risks": [
+          "authority ambiguity",
+          "dual-write risk",
+          "harder deterministic rebuild",
+          "conflicts with canonical package posture without stronger evidence"
+        ]
+      },
+      "D": {
+        "architecture_fit": "conflicting",
+        "benefits": [
+          "single operational database authority if architecture were rewritten"
+        ],
+        "classification": "unsupported expansion",
+        "decision": "reject",
+        "justification": "521-object scale is not exceptional repeated production evidence; this conflicts with accepted architecture.",
+        "name": "New canonical repository replacing filesystem packages as authority",
+        "risks": [
+          "contradicts current canonical-package architecture",
+          "requires doctrine/architecture amendment",
+          "non-rebuildable database authority risk"
+        ]
+      },
+      "E": {
+        "architecture_fit": "partial",
+        "benefits": [
+          "lowest immediate implementation cost",
+          "keeps current adequate performance"
+        ],
+        "classification": "unsupported expansion",
+        "decision": "reject",
+        "justification": "Performance does not require PostgreSQL today, but operational realization and intended end state justify a bounded decision now.",
+        "name": "Not presently justified; preserve filesystem-only operation",
+        "risks": [
+          "fails to realize accepted end-state operational repository",
+          "delays downstream usability",
+          "deeper objects may arrive before discovery substrate exists"
+        ]
+      }
+    },
+    "selected_option": "B"
+  },
+  "repository_composition": {
+    "by_detected_production_family": {
+      "agriculture_rural_development": 72,
+      "education": 72,
+      "energy_mining": 72,
+      "environment": 17,
+      "financial_sector": 72,
+      "health": 72,
+      "infrastructure": 72,
+      "trade": 72
+    },
+    "by_evidence_family": {
+      "external_wdi_annual_scalar_agriculture_rural_development": 19,
+      "external_wdi_annual_scalar_agriculture_rural_development_maturation": 36,
+      "external_wdi_annual_scalar_agriculture_rural_development_provenance_lineage": 17,
+      "external_wdi_annual_scalar_education": 19,
+      "external_wdi_annual_scalar_education_maturation": 36,
+      "external_wdi_annual_scalar_education_provenance_lineage": 17,
+      "external_wdi_annual_scalar_energy_mining": 19,
+      "external_wdi_annual_scalar_energy_mining_maturation": 36,
+      "external_wdi_annual_scalar_energy_mining_provenance_lineage": 17,
+      "external_wdi_annual_scalar_environment_provenance_lineage": 17,
+      "external_wdi_annual_scalar_financial_sector": 19,
+      "external_wdi_annual_scalar_financial_sector_maturation": 36,
+      "external_wdi_annual_scalar_financial_sector_provenance_lineage": 17,
+      "external_wdi_annual_scalar_health": 19,
+      "external_wdi_annual_scalar_health_maturation": 36,
+      "external_wdi_annual_scalar_health_provenance_lineage": 17,
+      "external_wdi_annual_scalar_infrastructure": 19,
+      "external_wdi_annual_scalar_infrastructure_maturation": 36,
+      "external_wdi_annual_scalar_infrastructure_provenance_lineage": 17,
+      "external_wdi_annual_scalar_trade": 19,
+      "external_wdi_annual_scalar_trade_maturation": 36,
+      "external_wdi_annual_scalar_trade_provenance_lineage": 17
+    },
+    "by_statement_type": {
+      "classified": 71,
+      "coverage": 202,
+      "derived": 43,
+      "evidence_quality": 22,
+      "factual": 29,
+      "methodological": 75,
+      "negative": 57,
+      "provenance": 22
+    },
+    "readiness_assessment": {
+      "classification": "operational realization requirement",
+      "current_repository_contains_many_richer_statistical_objects": false,
+      "current_repository_supports_uniform_package_persistence": true,
+      "postgresql_before_deeper_campaigns": "yes, bounded realization should precede deeper deterministic-knowledge campaigns so richer objects are discoverable, retrievable, and bulk-exportable from the start"
+    },
+    "richer_deterministic_knowledge_term_counts": {
+      "correlations": 0,
+      "covariance_structures": 0,
+      "lag_relationships": 0,
+      "mathematical_relationships": 0,
+      "relationships_or_mappings": 119,
+      "statistical_summaries": 2605,
+      "trend_descriptors": 0
+    }
+  },
+  "repository_object_count": 521,
+  "risk_register": [
+    {
+      "classification": "implementation concern for a later task",
+      "mitigation": "PostgreSQL must be derived-only; no canonical writes originate there.",
+      "risk": "dual-write risk"
+    },
+    {
+      "classification": "preserves existing architecture",
+      "mitigation": "Full package JSON remains canonical; PostgreSQL disagreement invalidates projection.",
+      "risk": "authority ambiguity"
+    },
+    {
+      "classification": "implementation concern for a later task",
+      "mitigation": "Projection fingerprint/rebuild metadata and fail-closed behavior.",
+      "risk": "stale projections"
+    },
+    {
+      "classification": "implementation concern for a later task",
+      "mitigation": "Later slice must define deterministic full rebuild acceptance before partial/incremental behavior.",
+      "risk": "partial rebuilds"
+    },
+    {
+      "classification": "implementation concern for a later task",
+      "mitigation": "Projection must be fully rebuildable and comparable to package inputs.",
+      "risk": "non-deterministic database state"
+    },
+    {
+      "classification": "implementation concern for a later task",
+      "mitigation": "Keep canonical packages and deterministic exports independent of PostgreSQL.",
+      "risk": "database-specific lock-in"
+    },
+    {
+      "classification": "implementation concern for a later task",
+      "mitigation": "Smallest future slice should project current retrieval fields only and avoid premature rich-type modeling.",
+      "risk": "excessive schema rigidity before richer knowledge types exist"
+    },
+    {
+      "classification": "preserves existing architecture",
+      "mitigation": "Decision is justified by operational realization/end state, not present performance.",
+      "risk": "premature optimization"
+    },
+    {
+      "classification": "operational realization requirement",
+      "mitigation": "PostgreSQL selected for discovery/retrieval at future scale while filesystem remains canonical.",
+      "risk": "filesystem scalability"
+    },
+    {
+      "classification": "implementation concern for a later task",
+      "mitigation": "Require bounded implementation acceptance criteria and no cross-project consumers in first slice.",
+      "risk": "governance overhead"
+    },
+    {
+      "classification": "preserves existing architecture",
+      "mitigation": "KnowledgeForge-owned read-only boundary only; no shared schema/runtime/consumer writes.",
+      "risk": "accidental coupling to InsightForge or MacroForge"
+    }
+  ],
+  "scale_and_performance": {
+    "measured_object_count": 521,
+    "measured_timings": {
+      "evidence_family_filter_index_lookup": {
+        "max_seconds": 7e-06,
+        "median_seconds": 6e-06,
+        "min_seconds": 4e-06
+      },
+      "fingerprint_index_lookup": {
+        "max_seconds": 1e-06,
+        "median_seconds": 0.0,
+        "min_seconds": 0.0
+      },
+      "full_object_scan": {
+        "max_seconds": 0.042156,
+        "median_seconds": 0.032258,
+        "min_seconds": 0.028623
+      },
+      "manifest_read": {
+        "max_seconds": 0.000134,
+        "median_seconds": 0.000116,
+        "min_seconds": 9.8e-05
+      },
+      "package_fingerprint_materialization": {
+        "max_seconds": 0.000373,
+        "median_seconds": 0.000278,
+        "min_seconds": 0.000262
+      },
+      "package_id_index_lookup": {
+        "max_seconds": 3e-06,
+        "median_seconds": 2e-06,
+        "min_seconds": 1e-06
+      },
+      "provenance_lineage_scan": {
+        "max_seconds": 0.000228,
+        "median_seconds": 0.000182,
+        "min_seconds": 0.000176
+      },
+      "statement_type_filter_index_lookup": {
+        "max_seconds": 2.8e-05,
+        "median_seconds": 1.3e-05,
+        "min_seconds": 1.2e-05
+      }
+    },
+    "performance_conclusion": {
+      "classification": "operational realization requirement",
+      "evidence": "Full object scan median 0.032258s and index lookups are sub-millisecond at 521 objects on this host.",
+      "postgresql_justified_today_for_operational_realization": true,
+      "postgresql_required_today_for_performance": false
+    },
+    "projections": {
+      "1000": {
+        "evidence_type": "bounded linear projection from current filesystem timings; not measured at target scale",
+        "linear_full_scan_seconds": 0.062,
+        "linear_package_fingerprint_materialization_seconds": 0.001,
+        "linear_provenance_lineage_scan_seconds": 0.0
+      },
+      "10000": {
+        "evidence_type": "bounded linear projection from current filesystem timings; not measured at target scale",
+        "linear_full_scan_seconds": 0.619,
+        "linear_package_fingerprint_materialization_seconds": 0.005,
+        "linear_provenance_lineage_scan_seconds": 0.003
+      },
+      "100000": {
+        "evidence_type": "bounded linear projection from current filesystem timings; not measured at target scale",
+        "linear_full_scan_seconds": 6.192,
+        "linear_package_fingerprint_materialization_seconds": 0.053,
+        "linear_provenance_lineage_scan_seconds": 0.035
+      },
+      "1000000": {
+        "evidence_type": "bounded linear projection from current filesystem timings; not measured at target scale",
+        "linear_full_scan_seconds": 61.916,
+        "linear_package_fingerprint_materialization_seconds": 0.534,
+        "linear_provenance_lineage_scan_seconds": 0.349
+      }
+    },
+    "repeat_count": 7
+  },
+  "selected_option": "B"
+}

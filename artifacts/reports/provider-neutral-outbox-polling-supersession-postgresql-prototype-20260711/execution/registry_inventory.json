@@ -1,0 +1,51 @@
+{
+  "migration_policy": "import real MacroForge operational history by copying prior seen-release registry and accepted release bytes; preserve test registries as fixtures/evidence; never merge incompatible release IDs silently",
+  "production_registry_authority": "artifacts/release-inbox-unified-v1/seen-release-registry.jsonl",
+  "registries": [
+    {
+      "classification": "test-only",
+      "entry_count": 3,
+      "path": "artifacts/external-outbox-failure-recovery-v1/seen-release-registry.jsonl"
+    },
+    {
+      "classification": "historical evidence",
+      "entry_count": 3,
+      "path": "artifacts/external-outbox-transport-v1/seen-release-registry.jsonl"
+    },
+    {
+      "classification": "producer_stream_operational",
+      "entry_count": 2,
+      "path": "artifacts/release-inbox-macroforge-real-handoff-v1/seen-release-registry.jsonl"
+    },
+    {
+      "classification": "candidate_for_unified_production_registry",
+      "entry_count": 2,
+      "path": "artifacts/release-inbox-unified-v1/seen-release-registry.jsonl"
+    },
+    {
+      "classification": "conformance-only",
+      "entry_count": 10,
+      "path": "artifacts/release-inbox-v1/seen-release-registry.jsonl"
+    },
+    {
+      "classification": "test-only",
+      "entry_count": 3,
+      "path": "artifacts/release-inbox-v1-failure-resume-scenario/seen-release-registry.jsonl"
+    },
+    {
+      "classification": "historical evidence",
+      "entry_count": 3,
+      "path": "artifacts/reports/provider-neutral-outbox-polling-supersession-postgresql-prototype-20260711/isolated/controlled_supersession/release-state/seen-release-registry.jsonl"
+    },
+    {
+      "classification": "external_outbox_transport_operational",
+      "entry_count": 4,
+      "path": "artifacts/external-outbox-failure-recovery-v1/transport-registry.jsonl"
+    },
+    {
+      "classification": "external_outbox_transport_operational",
+      "entry_count": 2,
+      "path": "artifacts/external-outbox-transport-v1/transport-registry.jsonl"
+    }
+  ]
+}

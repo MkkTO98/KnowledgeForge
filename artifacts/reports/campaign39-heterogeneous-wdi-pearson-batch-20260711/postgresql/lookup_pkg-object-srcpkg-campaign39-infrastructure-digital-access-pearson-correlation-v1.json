@@ -1,0 +1,227 @@
+{
+  "package": {
+    "canonical_path": "objects/pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1.json",
+    "evidence_family": "external_wdi_annual_scalar_infrastructure_pearson_correlation",
+    "lifecycle_state": "accepted",
+    "package_fingerprint": "sha256:49af2a03fe6b0909bb12cbde13e4a742df1ac6ed060adaaed0bb8b4de44cfd03",
+    "package_id": "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+    "package_manifest_fingerprint": "sha256:23dbffa610e9b829b4ec014a7cd0e4daec498fcea91e2ad4571379d576412a82",
+    "payload": {
+      "confidence_quality": {
+        "confidence_label": "fixture-supported-deterministic",
+        "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation batch object",
+        "lifecycle_state": "accepted",
+        "reproducibility_state": "reproducible_offline_from_retained_fixture",
+        "uncertainty_dimensions": [
+          "transformation sensitivity",
+          "common time-ordering risk",
+          "autocorrelation limitation",
+          "structural-break limitation",
+          "measurement-methodology limitation",
+          "non-causality",
+          "non-prediction",
+          "absence of significance testing"
+        ],
+        "validation_state": "pass"
+      },
+      "contradiction_records": [
+        {
+          "contradicting_evidence": null,
+          "contradiction_id": "none-recorded",
+          "contradiction_type": "none",
+          "disposition": "not_applicable",
+          "target_statement": "stmt-campaign39-infrastructure-digital-access-pearson-v1"
+        }
+      ],
+      "created_at": "2026-07-11",
+      "created_by": "run_campaign39_heterogeneous_correlation_batch",
+      "evidence_integrity": {
+        "evidence_refs_verified": true,
+        "fingerprints_verified": true,
+        "source_package_fingerprint": "sha256:60cb7aba3428caa779e30e35b04869a206d42db8fb6f1dea0d9ff6af09329a58"
+      },
+      "evidence_references": [
+        {
+          "accessed_at": "2026-07-11",
+          "evaluation_status": "evaluated",
+          "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+          "evidence_ref_id": "ev-campaign39-infrastructure_digital_access-fixture",
+          "reproducibility_handle": "retained HTTPS raw fixture, frozen batch selection, normalized series, alignment and calculation evidence",
+          "snapshot_fingerprint": "sha256:60cb7aba3428caa779e30e35b04869a206d42db8fb6f1dea0d9ff6af09329a58",
+          "source_family": "official_statistical_source_data",
+          "source_identity": "World Bank WDI IT.NET.USER.ZS and IT.CEL.SETS.P2 NOR annual 1990-2024 fixture",
+          "source_owner": "World Bank WDI API retained local fixture",
+          "source_version": "2026-07-01"
+        }
+      ],
+      "evolution_metadata": {
+        "change_reason": "Campaign 39 heterogeneous correlation batch",
+        "changed_inputs_methods_templates_models_validators": [],
+        "dependent_object_review_posture": "not_applicable",
+        "previous_revision": null
+      },
+      "fingerprints": {
+        "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+        "evidence_references": "sha256:d0e6679b5676e91d9010f6da7c4419b0e9c134bfdf9da900742f8d17cf76650b",
+        "generated_statements": "sha256:3656115185ac9d1e5ef6b90dc0d14b360fb34a6b90b7ab09a9e457b9c4152548",
+        "input_set": "sha256:13fe96384f5d96c73d52d77e03a1163ac799028edf26fd4abbb41b9756fcbff8",
+        "package_manifest": "sha256:23dbffa610e9b829b4ec014a7cd0e4daec498fcea91e2ad4571379d576412a82",
+        "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+      },
+      "generated_statements": [
+        {
+          "applicability": {
+            "entity_id": "NOR",
+            "frequency": "annual",
+            "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+            "method_version": "1.0",
+            "period_end": 2024,
+            "period_start": 1990
+          },
+          "dependencies": [
+            "calc-campaign39-infrastructure_digital_access-pearson-v1"
+          ],
+          "evidence_refs": [
+            "ev-campaign39-infrastructure_digital_access-fixture"
+          ],
+          "origin": "computed_from_retained_campaign39_frozen_selection_wdi_fixture",
+          "statement_id": "stmt-campaign39-infrastructure-digital-access-pearson-v1",
+          "statement_type": "derived_relationship",
+          "structured_payload": {
+            "aligned_coverage": "1",
+            "aligned_pair_count": 35,
+            "calculation_evidence_fingerprint": "sha256:b10954cbab82ffb7102c3d2b776ddde77fdbc180bb6228395ac14c95ee37ed15",
+            "combined_aligned_evidence_fingerprint": "sha256:60cb7aba3428caa779e30e35b04869a206d42db8fb6f1dea0d9ff6af09329a58",
+            "construction_risk_assessment": {
+              "assessment": {
+                "algebraic_identity": "not present",
+                "common_administrative_reporting": "ordinary limitation",
+                "common_modeled_estimation_process": "ordinary limitation",
+                "definitional_overlap": "not present",
+                "direct_component_total_construction": "not present",
+                "embedded_series_construction": "not present",
+                "frequency_mismatch": "not present",
+                "promotion_blocker_present": false,
+                "shared_denominator": "ordinary limitation",
+                "transformation_mismatch": "not present",
+                "unit_incompatibility": "not present"
+              },
+              "candidate_id": "infrastructure_digital_access",
+              "material_limitations": [],
+              "ordinary_limitations": [
+                "shared_denominator",
+                "common_modeled_estimation_process",
+                "common_administrative_reporting"
+              ],
+              "promotion_blocker_present": false
+            },
+            "diagnostic_limitations": [
+              "transformation sensitivity",
+              "common time-ordering risk",
+              "autocorrelation limitation",
+              "structural-break limitation",
+              "measurement-methodology limitation",
+              "non-causality",
+              "non-prediction",
+              "absence of significance testing"
+            ],
+            "entity_id": "NOR",
+            "excluded_periods": [],
+            "family": "Infrastructure",
+            "frequency": "annual",
+            "frozen_batch_selection_fingerprint": "sha256:65ae4b8cf7d5c8e8ef3841cf77f59816f7bd5c603e49a5d5a53f87b5c8bde7e1",
+            "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+            "missing_periods": {
+              "series_a": [],
+              "series_b": []
+            },
+            "mutable_source_limitation": "Retained bytes, not mutable WDI API reacquisition, provide exact historical reproducibility.",
+            "package_fingerprint": "sha256:d5bb89925c93d5c4173841a2cf17192d9f860db92b109300b683c1b348bb9fa4",
+            "pearson_coefficient": {
+              "canonical": "0.991171458703",
+              "unit": "dimensionless"
+            },
+            "period_scope": {
+              "end": 2024,
+              "start": 1990
+            },
+            "series_a": {
+              "code": "IT.NET.USER.ZS",
+              "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+              "fingerprints": {
+                "metadata": "sha256:5eab7a7474d01fc6d4ce94915589a0c1831eb10c875b8417962f66791fa6e3cd",
+                "observations": "sha256:d7113d21ff7bfef798b824af5e3afaee6d4057e90292a68b459230c27eb286c4"
+              },
+              "name": "Individuals using the Internet (% of population)",
+              "unit": "% of population"
+            },
+            "series_b": {
+              "code": "IT.CEL.SETS.P2",
+              "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+              "fingerprints": {
+                "metadata": "sha256:c407b3372707cb7bd118e387125936ddd7bf342a26fd029c57864034be1c62bf",
+                "observations": "sha256:716646118c48735fb109f69874bd8d1ced44d4c932bd5a960564cc204f742598"
+              },
+              "name": "Mobile cellular subscriptions (per 100 people)",
+              "unit": "per 100 people"
+            },
+            "transformation_state": "raw",
+            "validation_judgment": "accepted_campaign39_batch_correlation_object"
+          },
+          "text": "Across the aligned annual NOR observations from 1990 through 2024, the Pearson correlation between Individuals using the Internet (% of population) and Mobile cellular subscriptions (per 100 people) is 0.991171458703, using 35 aligned observations."
+        }
+      ],
+      "input_references": [
+        "campaign39_frozen_batch_selection_decision",
+        "campaign39_batch_wdi_https_fixture",
+        "pearson_correlation_calculation_contract_v1"
+      ],
+      "lineage": {
+        "previous_package_id": null,
+        "source_campaign": "Campaign 39",
+        "version_lineage": []
+      },
+      "package_id": "pkg-object-srcpkg-campaign39-infrastructure-digital-access-pearson-correlation-v1",
+      "package_kind": "KnowledgeObjectPackage",
+      "package_version": "1.0",
+      "provenance_envelope": {
+        "evaluation_refs": [
+          "campaign39_frozen_batch_selection_decision",
+          "campaign39_infrastructure_digital_access_alignment",
+          "campaign39_infrastructure_digital_access_calculation",
+          "campaign39_infrastructure_digital_access_diagnostics"
+        ],
+        "evidence_refs": [
+          "ev-campaign39-infrastructure_digital_access-fixture"
+        ],
+        "lineage_basis": "frozen coefficient-free batch selection followed by Campaign 39 HTTPS acquisition",
+        "method_refs": [
+          "wdi_annual_scalar_pearson_correlation_v1@1.0"
+        ]
+      },
+      "scope": {
+        "domain": "world_development_indicators",
+        "entity_scope": [
+          "NOR"
+        ],
+        "evidence_family": "external_wdi_annual_scalar_infrastructure_pearson_correlation",
+        "period_scope": {
+          "end": 2024,
+          "start": 1990
+        }
+      },
+      "status": "accepted",
+      "validation_state": {
+        "blockers": [],
+        "validation_result": "pass",
+        "warnings": [
+          "shared_denominator",
+          "common_modeled_estimation_process",
+          "common_administrative_reporting",
+          "no causal/predictive/significance interpretation"
+        ]
+      }
+    }
+  },
+  "valid": true
+}

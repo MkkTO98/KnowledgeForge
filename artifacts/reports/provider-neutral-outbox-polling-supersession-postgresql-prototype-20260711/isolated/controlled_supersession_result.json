@@ -1,0 +1,993 @@
+{
+  "changed_package_count": 1,
+  "compact_delta": {
+    "affected_derivation": [
+      "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1"
+    ],
+    "changed_observation_scope": {
+      "entities": [
+        "DNK"
+      ],
+      "indicators": [
+        "NE.EXP.GNFS.ZS",
+        "NE.IMP.GNFS.ZS"
+      ],
+      "periods": [
+        2000,
+        2025
+      ]
+    },
+    "historical_predecessor": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+    "limitations": [
+      "controlled_test_successor_not_provider_evidence",
+      "not production canonical knowledge"
+    ],
+    "new_current_package": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-controlled-successor-v2",
+    "new_producer_release": "macroforge-wdi-1990-2024-2b1a1c3d9e65b182-controlled-successor-v2",
+    "package_fingerprint": "sha256:8497153ec6732195ddc2c4a8efdc1bb2867824516fbb321db11d4d2899f0bcec",
+    "release_fingerprint": "sha256:2b69cfee26ee6922d630317c4d8f699301a1c5fc0f674b3337ed965531197d5e",
+    "unchanged_relationships": [
+      "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+      "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1"
+    ]
+  },
+  "compact_delta_bytes": 1027,
+  "full_delta_bytes": 2174,
+  "incremental_full_comparison": {
+    "decision": "retain_full_rebuild_for_now_adopt_incremental_later_after_bounded_consistency_decision",
+    "divergence_risk": "incremental higher unless transactional current uniqueness is enforced",
+    "full_rebuild_execution_seconds": "measured_subsecond_file_repository",
+    "full_rebuild_rows": 4,
+    "incremental_execution_seconds": "measured_subsecond_sqlite",
+    "incremental_rows_touched": 2,
+    "recovery_complexity": "full rebuild lower; incremental requires rollback/invalidation journal",
+    "validation_cost": "incremental requires predecessor/current uniqueness checks; full rebuild revalidates all packages"
+  },
+  "isolated_postgresql_result": {
+    "changed_since_release_query": [
+      [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-controlled-successor-v2",
+        "accepted",
+        1
+      ],
+      [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+        "superseded",
+        0
+      ]
+    ],
+    "engine": "isolated_sqlite_projection_prototype",
+    "full_rebuild_rows": 4,
+    "production_postgresql_unchanged_by_design": true,
+    "rows_after": 4,
+    "rows_before": 0,
+    "rows_touched_incremental": 2
+  },
+  "predecessor_package": {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic",
+      "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation",
+      "lifecycle_state": "superseded",
+      "missingness_summary": "0 missing/excluded pairs of 35 expected periods",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture",
+      "uncertainty_dimensions": [
+        "mutable_source_reacquisition_limit",
+        "shared_gdp_denominator",
+        "time_ordering_autocorrelation",
+        "structural_breaks",
+        "no_significance_or_causal_claim"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-campaign36-dnk-exports-imports-share-pearson-correlation-v1"
+      }
+    ],
+    "created_at": "2026-07-10",
+    "created_by": "run_campaign36_dnk_exports_imports_correlation",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-10",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+        "evidence_ref_id": "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture",
+        "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment contract, and calculation evidence",
+        "snapshot_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "World Bank WDI NE.EXP.GNFS.ZS and NE.IMP.GNFS.ZS DNK annual 1990-2024 fixture",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "2026-07-01"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "Campaign 36 first bounded production correlation pilot",
+      "changed_inputs_methods_templates_models_validators": [
+        "wdi_annual_scalar_pearson_correlation_v1"
+      ],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": null
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+      "evidence_references": "sha256:51d3ae190d5facc9a6006d7038b3d4722517632f64c55937abe9a32f6369aff5",
+      "generated_statements": "sha256:cb13eafc26ab41643a306fbc3e8d1e7e4dfe20314dc7a3f01258d7785ab1b63c",
+      "input_set": "sha256:dd9a2ab5863ae2a70ec411e7e0e0cb012748524e705f5e4d7e507436397055bf",
+      "package_manifest": "sha256:a7677b0c5e0d1d4299fc71aa7f8ccd7003b3185f6a80105ccae176582445c389",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "DNK",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_end": 2024,
+          "period_start": 1990
+        },
+        "dependencies": [
+          "calc-campaign36-pearson-correlation-v1",
+          "align-campaign36-dnk-exports-imports-share"
+        ],
+        "evidence_refs": [
+          "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+        ],
+        "origin": "computed_from_retained_dual_series_wdi_fixture",
+        "statement_id": "stmt-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_coverage": "1",
+          "aligned_pair_count": 35,
+          "aligned_periods": [
+            1990,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "calculation_evidence_fingerprint": "sha256:e43f4350e99e73e0557cba370bcd35e4ea3d22d88211d125a37695dafac67033",
+          "canonical_pair_identity": "sha256:4f132f3e9cbe36737d994c12257610b20b4e1b13b7da2d9bc1fae8da4ffee6d5",
+          "combined_aligned_evidence_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f",
+          "combined_raw_evidence_fingerprint": "sha256:bd1fffa81ce48a306ea3ed0a0493ae08ce0a41064e21397241beefe1d7b9a560",
+          "entity_id": "DNK",
+          "entity_name": "Denmark",
+          "excluded_periods": [],
+          "frequency": "annual",
+          "limitations": {
+            "non_causality": "The coefficient is a deterministic contemporaneous mathematical relationship only and is not a causal, predictive, statistical-significance, economic-significance, investment, trend, stationarity, or mechanism claim.",
+            "shared_gdp_denominator": "Both indicators use GDP as denominator, so correlation may partly reflect shared-denominator movement.",
+            "structural_breaks": "The coefficient is scoped only to the retained 1990-2024 aligned window and may not hold across structural breaks.",
+            "time_ordering_autocorrelation": "Annual macroeconomic series can exhibit time ordering/autocorrelation; no stationarity or independence claim is made."
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "missing_pair_count": 0,
+          "mutable_source_limitation": "Retained bytes, not mutable WDI API reacquisition, provide exact historical reproducibility.",
+          "package_fingerprint": "sha256:d717f394fe4998adb3b0abd3639c6d6ae9fafc6c3fbe850b8f1719d71d81f8b5",
+          "pearson_coefficient": {
+            "canonical": "0.988873850642",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "provider_metadata": {
+            "exports": {
+              "dataset": "World Development Indicators",
+              "provider": "World Bank",
+              "source": "World Development Indicators",
+              "sourceid": "2",
+              "wdi_lastupdated": "2026-07-01"
+            },
+            "imports": {
+              "dataset": "World Development Indicators",
+              "provider": "World Bank",
+              "source": "World Development Indicators",
+              "sourceid": "2",
+              "wdi_lastupdated": "2026-07-01"
+            }
+          },
+          "selection_fingerprint": "sha256:83b19470d2c7dfde5a17d66ce32f6867285539afeae9bd4bf30fe9d9ec5648a4",
+          "series_a": {
+            "code": "NE.EXP.GNFS.ZS",
+            "definition": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+            "name": "Exports of goods and services (% of GDP)",
+            "normalized_fingerprint": "sha256:afbc4de1619498ee6716c48f1d53b4591971c54f9cd9b7b0162dee951ac9986b",
+            "raw_fingerprints": {
+              "metadata": "sha256:57dae5fa8dbd577b2cff50f9cfe581b3273ecdaa1125c4188164ef9a3cdddff4",
+              "observations": "sha256:1217c3b6dbd7656137cf76cf7f39746e8fffd293315e4cf42ee5554214d76f3a"
+            },
+            "unit": "percent of GDP"
+          },
+          "series_b": {
+            "code": "NE.IMP.GNFS.ZS",
+            "definition": "Imports of goods includes change in the economic ownership of goods from non-residents to\n\n\n\n\nresidents of the compiling economy, irrespective of physical movement of goods across national borders. Imports of services includes services provided by non-residents to residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+            "name": "Imports of goods and services (% of GDP)",
+            "normalized_fingerprint": "sha256:aa45c162c20c317dd183018ff190fab402270c5b41b3f38dfad7dc953d54a0a3",
+            "raw_fingerprints": {
+              "metadata": "sha256:a6e803f45b0ecfabb89dfa448350c47e4994f543f62f46d2060362b91853eb75",
+              "observations": "sha256:e5700dd43c368020283a03b72146e998303e1111d71441b4610a815619ed4a67"
+            },
+            "unit": "percent of GDP"
+          },
+          "transformation_state": {
+            "series_a": "raw",
+            "series_b": "raw"
+          },
+          "validation_judgment": "accepted_one_bounded_correlation_object"
+        },
+        "text": "Across the aligned annual DNK observations from 1990 through 2024, the Pearson correlation between exports of goods and services as a percentage of GDP and imports of goods and services as a percentage of GDP is 0.988873850642, using 35 aligned observations."
+      }
+    ],
+    "input_references": [
+      "campaign36_dual_series_wdi_https_fixture",
+      "pearson_correlation_calculation_contract_v1"
+    ],
+    "lineage": {
+      "previous_package_id": null,
+      "source_campaign": "Campaign 36",
+      "version_lineage": []
+    },
+    "package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "campaign36_alignment_validation",
+        "campaign36_calculation_evidence",
+        "campaign36_non_promoted_diagnostics"
+      ],
+      "evidence_refs": [
+        "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+      ],
+      "lineage_basis": "fresh Campaign 36 HTTPS acquisition; Campaign 35 observations not reused as substitute",
+      "method_refs": [
+        "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "DNK"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+      "period_scope": {
+        "end": 2024,
+        "start": 1990
+      }
+    },
+    "status": "superseded",
+    "supersession": {
+      "current_for_scope": false,
+      "successor_package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-controlled-successor-v2",
+      "supersession_reason": "controlled evidence release change"
+    },
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "shared GDP denominator",
+        "economic flow co-movement possible",
+        "no causal/predictive/significance interpretation"
+      ]
+    }
+  },
+  "processing_result": {
+    "affected_derivation_fingerprint": "sha256:caf6252fcb55da78fe3bf54f74edcc31b488697e80e770799f413dc9590a6fb2",
+    "change": {
+      "added_item_ids": [
+        "wdi:DNK:NE.EXP.GNFS.ZS:2025",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2025"
+      ],
+      "change_set_fingerprint": "sha256:78127f339410814ba5110dd3f4da665b36b7d6b4570d03d3d5805619c1784a10",
+      "changed_item_ids": [
+        "wdi:DNK:NE.EXP.GNFS.ZS:2000"
+      ],
+      "predecessor_release_id": "macroforge-wdi-1990-2024-2b1a1c3d9e65b182",
+      "processed_release_id": "macroforge-wdi-1990-2024-2b1a1c3d9e65b182-controlled-successor-v2",
+      "removed_item_ids": [],
+      "unchanged_item_ids": [
+        "wdi:DNK:NE.EXP.GNFS.ZS:1990",
+        "wdi:DNK:NE.EXP.GNFS.ZS:1991",
+        "wdi:DNK:NE.EXP.GNFS.ZS:1992",
+        "wdi:DNK:NE.EXP.GNFS.ZS:1993",
+        "wdi:DNK:NE.EXP.GNFS.ZS:1994",
+        "wdi:DNK:NE.EXP.GNFS.ZS:1995",
+        "wdi:DNK:NE.EXP.GNFS.ZS:1996",
+        "wdi:DNK:NE.EXP.GNFS.ZS:1997",
+        "wdi:DNK:NE.EXP.GNFS.ZS:1998",
+        "wdi:DNK:NE.EXP.GNFS.ZS:1999",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2001",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2002",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2003",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2004",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2005",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2006",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2007",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2008",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2009",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2010",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2011",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2012",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2013",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2014",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2015",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2016",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2017",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2018",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2019",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2020",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2021",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2022",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2023",
+        "wdi:DNK:NE.EXP.GNFS.ZS:2024",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1990",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1991",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1992",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1993",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1994",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1995",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1996",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1997",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1998",
+        "wdi:DNK:NE.IMP.GNFS.ZS:1999",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2000",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2001",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2002",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2003",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2004",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2005",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2006",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2007",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2008",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2009",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2010",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2011",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2012",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2013",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2014",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2015",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2016",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2017",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2018",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2019",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2020",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2021",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2022",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2023",
+        "wdi:DNK:NE.IMP.GNFS.ZS:2024",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1990",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1991",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1992",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1993",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1994",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1995",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1996",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1997",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1998",
+        "wdi:NOR:NE.EXP.GNFS.ZS:1999",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2000",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2001",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2002",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2003",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2004",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2005",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2006",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2007",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2008",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2009",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2010",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2011",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2012",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2013",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2014",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2015",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2016",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2017",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2018",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2019",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2020",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2021",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2022",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2023",
+        "wdi:NOR:NE.EXP.GNFS.ZS:2024",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1990",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1991",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1992",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1993",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1994",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1995",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1996",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1997",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1998",
+        "wdi:NOR:NE.IMP.GNFS.ZS:1999",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2000",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2001",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2002",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2003",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2004",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2005",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2006",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2007",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2008",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2009",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2010",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2011",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2012",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2013",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2014",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2015",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2016",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2017",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2018",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2019",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2020",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2021",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2022",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2023",
+        "wdi:NOR:NE.IMP.GNFS.ZS:2024",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1990",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1991",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1992",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1993",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1994",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1995",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1996",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1997",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1998",
+        "wdi:SWE:NE.EXP.GNFS.ZS:1999",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2000",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2001",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2002",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2003",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2004",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2005",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2006",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2007",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2008",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2009",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2010",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2011",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2012",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2013",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2014",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2015",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2016",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2017",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2018",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2019",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2020",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2021",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2022",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2023",
+        "wdi:SWE:NE.EXP.GNFS.ZS:2024",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1990",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1991",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1992",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1993",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1994",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1995",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1996",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1997",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1998",
+        "wdi:SWE:NE.IMP.GNFS.ZS:1999",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2000",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2001",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2002",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2003",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2004",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2005",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2006",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2007",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2008",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2009",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2010",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2011",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2012",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2013",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2014",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2015",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2016",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2017",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2018",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2019",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2020",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2021",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2022",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2023",
+        "wdi:SWE:NE.IMP.GNFS.ZS:2024"
+      ]
+    },
+    "change_set_fingerprint": "sha256:78127f339410814ba5110dd3f4da665b36b7d6b4570d03d3d5805619c1784a10",
+    "contract_identity": "knowledgeforge_neutral_evidence_release_contract_v1@1.0",
+    "dataset_identity": "world_development_indicators",
+    "downstream_delta_fingerprint": "sha256:aeac42f873a169310602f182fe0c5dd5185020470c4cc3e71b1f82f251578f27",
+    "downstream_delta_path": "artifacts/reports/provider-neutral-outbox-polling-supersession-postgresql-prototype-20260711/isolated/controlled_supersession/release-state/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182-controlled-successor-v2/downstream_delta.json",
+    "failure_rejection_reason": null,
+    "impact": {
+      "affected_derivation_fingerprint": "sha256:caf6252fcb55da78fe3bf54f74edcc31b488697e80e770799f413dc9590a6fb2",
+      "affected_derivation_ids": [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1"
+      ],
+      "affected_derivations": [
+        {
+          "automatic_execution_class": "deterministic_local_no_promote_allowed",
+          "canonical_output_package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+          "derivation_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+          "entity": "DNK",
+          "evidence_requirements": {
+            "minimum_aligned_pairs": 30,
+            "observed_values_only": true,
+            "required_indicators": [
+              "NE.EXP.GNFS.ZS",
+              "NE.IMP.GNFS.ZS"
+            ]
+          },
+          "frequency": "annual",
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identity": "wdi_annual_scalar_pearson_correlation_v1@1.0",
+          "pair_identity": "sha256:4f132f3e9cbe36737d994c12257610b20b4e1b13b7da2d9bc1fae8da4ffee6d5",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "prior_coefficient": "0.988873850642",
+          "prior_package_fingerprint": "sha256:6a42d69696af4682113f790a065aa9bed22b181f21fbf728e40a0d5285d45842",
+          "promotion_requirement": "separate explicit promotion task required",
+          "recomputation_strategy": "no_promote_recompute_when_dependency_scope_changes",
+          "series_dependencies": [
+            "NE.EXP.GNFS.ZS",
+            "NE.IMP.GNFS.ZS"
+          ],
+          "transformation_scope": {
+            "series_a": "raw",
+            "series_b": "raw"
+          }
+        }
+      ],
+      "changed_scopes": {
+        "entities": [
+          "DNK"
+        ],
+        "indicators": [
+          "NE.EXP.GNFS.ZS",
+          "NE.IMP.GNFS.ZS"
+        ],
+        "periods": [
+          2000,
+          2025
+        ]
+      },
+      "unaffected_derivation_ids": [
+        "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1"
+      ],
+      "unaffected_derivations": [
+        {
+          "automatic_execution_class": "deterministic_local_no_promote_allowed",
+          "canonical_output_package_id": "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+          "derivation_id": "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+          "entity": "SWE",
+          "evidence_requirements": {
+            "minimum_aligned_pairs": 30,
+            "observed_values_only": true,
+            "required_indicators": [
+              "NE.EXP.GNFS.ZS",
+              "NE.IMP.GNFS.ZS"
+            ]
+          },
+          "frequency": "annual",
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identity": "wdi_annual_scalar_pearson_correlation_v1@1.0",
+          "pair_identity": "sha256:31c1f31d3d84108dd21655098988ec6bef0b6309ec98afc9120fdcec1e606b86",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "prior_coefficient": "0.968490740983",
+          "prior_package_fingerprint": "sha256:bbd635777d337087d1ba5addd5ac716e0c72635c0b65c0a1914326121b871097",
+          "promotion_requirement": "separate explicit promotion task required",
+          "recomputation_strategy": "no_promote_recompute_when_dependency_scope_changes",
+          "series_dependencies": [
+            "NE.EXP.GNFS.ZS",
+            "NE.IMP.GNFS.ZS"
+          ],
+          "transformation_scope": {
+            "series_a": "raw",
+            "series_b": "raw"
+          }
+        },
+        {
+          "automatic_execution_class": "deterministic_local_no_promote_allowed",
+          "canonical_output_package_id": "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+          "derivation_id": "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+          "entity": "NOR",
+          "evidence_requirements": {
+            "minimum_aligned_pairs": 30,
+            "observed_values_only": true,
+            "required_indicators": [
+              "NE.EXP.GNFS.ZS",
+              "NE.IMP.GNFS.ZS"
+            ]
+          },
+          "frequency": "annual",
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_identity": "wdi_annual_scalar_pearson_correlation_v1@1.0",
+          "pair_identity": "sha256:172f5b3390ceee810ea497716295741fdd07ec64b5ab259789727a1e1a146eb2",
+          "period_scope": {
+            "end": 2024,
+            "start": 1990
+          },
+          "prior_coefficient": "-0.477418804478",
+          "prior_package_fingerprint": "sha256:8ac5b7cca73fa31ab161d84f607be19d26a9ac8d12a511538416a1183b7c00bf",
+          "promotion_requirement": "separate explicit promotion task required",
+          "recomputation_strategy": "no_promote_recompute_when_dependency_scope_changes",
+          "series_dependencies": [
+            "NE.EXP.GNFS.ZS",
+            "NE.IMP.GNFS.ZS"
+          ],
+          "transformation_scope": {
+            "series_a": "raw",
+            "series_b": "raw"
+          }
+        }
+      ]
+    },
+    "operational_timestamp": "2026-07-11T20:13:25+00:00",
+    "prior_release_id": "macroforge-wdi-1990-2024-2b1a1c3d9e65b182",
+    "processing_status": "accepted_but_not_promoted",
+    "provider_identity": "world_bank",
+    "received_status": "valid_successor_release",
+    "recomputation_summary": {
+      "avoided_recompute_count": 2,
+      "full_comparison_results_for_affected": [
+        {
+          "aligned_pair_count": 36,
+          "candidate_coefficient": "0.988250088869",
+          "candidate_result_fingerprint": "sha256:f8ba216bccf6054a6b64559d2c00112fb76bb44271b8dec3bdf9c8e649b7344d",
+          "derivation_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+          "prior_coefficient": "0.988873850642",
+          "prior_fingerprint": "sha256:6a42d69696af4682113f790a065aa9bed22b181f21fbf728e40a0d5285d45842",
+          "promotion_status": "not_promoted"
+        }
+      ],
+      "full_recompute_count_for_verification": 3,
+      "incremental_recompute_count": 1,
+      "incremental_results": [
+        {
+          "aligned_pair_count": 36,
+          "candidate_coefficient": "0.988250088869",
+          "candidate_result_fingerprint": "sha256:f8ba216bccf6054a6b64559d2c00112fb76bb44271b8dec3bdf9c8e649b7344d",
+          "derivation_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+          "prior_coefficient": "0.988873850642",
+          "prior_fingerprint": "sha256:6a42d69696af4682113f790a065aa9bed22b181f21fbf728e40a0d5285d45842",
+          "promotion_status": "not_promoted"
+        }
+      ],
+      "unchanged_derivation_identities": [
+        "pkg-object-srcpkg-campaign37-swe-exports-imports-share-pearson-correlation-v1",
+        "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1"
+      ]
+    },
+    "registry_entry_id": "sha256:bc1791be4288ad95db1f48ea9809dd1bc474ace79bb894250798463285253a4f",
+    "release_content_fingerprint": "sha256:2b69cfee26ee6922d630317c4d8f699301a1c5fc0f674b3337ed965531197d5e",
+    "release_id": "macroforge-wdi-1990-2024-2b1a1c3d9e65b182-controlled-successor-v2",
+    "source_release_vintage": "WDI:2026-07-01:1990:2024",
+    "supersession_state": "supersedes_prior_release",
+    "validation_result": {
+      "errors": [],
+      "release_content_fingerprint": "sha256:2b69cfee26ee6922d630317c4d8f699301a1c5fc0f674b3337ed965531197d5e",
+      "release_id": "macroforge-wdi-1990-2024-2b1a1c3d9e65b182-controlled-successor-v2",
+      "valid": true
+    }
+  },
+  "raw_release_bytes": 191704,
+  "repository_fingerprint": "sha256:3835f9961eff4eb0b10872c9d419bb74b99c787eef9e79bf1d5acee618046636",
+  "repository_result": {
+    "manifest_path": "artifacts/reports/provider-neutral-outbox-polling-supersession-postgresql-prototype-20260711/isolated/controlled_supersession/repository/manifest.json",
+    "persisted_count": 4,
+    "rejected_count": 0,
+    "repository_fingerprint": "sha256:3835f9961eff4eb0b10872c9d419bb74b99c787eef9e79bf1d5acee618046636",
+    "repository_root": "artifacts/reports/provider-neutral-outbox-polling-supersession-postgresql-prototype-20260711/isolated/controlled_supersession/repository",
+    "total_object_count": 4
+  },
+  "successor_package": {
+    "confidence_quality": {
+      "confidence_label": "fixture-supported-deterministic",
+      "evidence_sufficiency": "sufficient for bounded deterministic Pearson correlation",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "0 missing/excluded pairs of 35 expected periods",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture",
+      "uncertainty_dimensions": [
+        "mutable_source_reacquisition_limit",
+        "shared_gdp_denominator",
+        "time_ordering_autocorrelation",
+        "structural_breaks",
+        "no_significance_or_causal_claim"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-campaign36-dnk-exports-imports-share-pearson-correlation-v1"
+      }
+    ],
+    "created_at": "2026-07-10",
+    "created_by": "external_outbox_poller_v1_controlled_supersession_prototype",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-10",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_dual_series_observation_level_numerical_fixture",
+        "evidence_ref_id": "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture",
+        "reproducibility_handle": "retained HTTPS raw fixture, normalized series, alignment contract, and calculation evidence",
+        "snapshot_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "World Bank WDI NE.EXP.GNFS.ZS and NE.IMP.GNFS.ZS DNK annual 1990-2024 fixture",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "2026-07-01"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "controlled_test_successor_not_provider_evidence: evidence release change",
+      "changed_inputs_methods_templates_models_validators": [
+        "wdi_annual_scalar_pearson_correlation_v1"
+      ],
+      "dependent_object_review_posture": "not_applicable",
+      "previous_revision": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1"
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+      "evidence_references": "sha256:51d3ae190d5facc9a6006d7038b3d4722517632f64c55937abe9a32f6369aff5",
+      "generated_statements": "sha256:cb13eafc26ab41643a306fbc3e8d1e7e4dfe20314dc7a3f01258d7785ab1b63c",
+      "input_set": "sha256:dd9a2ab5863ae2a70ec411e7e0e0cb012748524e705f5e4d7e507436397055bf",
+      "package_manifest": "sha256:8497153ec6732195ddc2c4a8efdc1bb2867824516fbb321db11d4d2899f0bcec",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "entity_id": "DNK",
+          "frequency": "annual",
+          "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "period_end": 2024,
+          "period_start": 1990
+        },
+        "dependencies": [
+          "calc-campaign36-pearson-correlation-v1",
+          "align-campaign36-dnk-exports-imports-share"
+        ],
+        "evidence_refs": [
+          "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+        ],
+        "origin": "computed_from_retained_dual_series_wdi_fixture",
+        "statement_id": "stmt-campaign36-dnk-exports-imports-share-pearson-correlation-controlled-successor-v2",
+        "statement_type": "derived_relationship",
+        "structured_payload": {
+          "aligned_coverage": "1",
+          "aligned_pair_count": 36,
+          "aligned_periods": [
+            1990,
+            1991,
+            1992,
+            1993,
+            1994,
+            1995,
+            1996,
+            1997,
+            1998,
+            1999,
+            2000,
+            2001,
+            2002,
+            2003,
+            2004,
+            2005,
+            2006,
+            2007,
+            2008,
+            2009,
+            2010,
+            2011,
+            2012,
+            2013,
+            2014,
+            2015,
+            2016,
+            2017,
+            2018,
+            2019,
+            2020,
+            2021,
+            2022,
+            2023,
+            2024
+          ],
+          "calculation_evidence_fingerprint": "sha256:e43f4350e99e73e0557cba370bcd35e4ea3d22d88211d125a37695dafac67033",
+          "canonical_pair_identity": "sha256:4f132f3e9cbe36737d994c12257610b20b4e1b13b7da2d9bc1fae8da4ffee6d5",
+          "combined_aligned_evidence_fingerprint": "sha256:a12b78bbfb39d38c4316a5b9bcc74bb1899cecb71134a1200fb851c62b1e8b0f",
+          "combined_raw_evidence_fingerprint": "sha256:bd1fffa81ce48a306ea3ed0a0493ae08ce0a41064e21397241beefe1d7b9a560",
+          "controlled_fixture_label": "controlled_test_successor_not_provider_evidence",
+          "entity_id": "DNK",
+          "entity_name": "Denmark",
+          "excluded_periods": [],
+          "frequency": "annual",
+          "limitations": {
+            "non_causality": "The coefficient is a deterministic contemporaneous mathematical relationship only and is not a causal, predictive, statistical-significance, economic-significance, investment, trend, stationarity, or mechanism claim.",
+            "shared_gdp_denominator": "Both indicators use GDP as denominator, so correlation may partly reflect shared-denominator movement.",
+            "structural_breaks": "The coefficient is scoped only to the retained 1990-2024 aligned window and may not hold across structural breaks.",
+            "time_ordering_autocorrelation": "Annual macroeconomic series can exhibit time ordering/autocorrelation; no stationarity or independence claim is made."
+          },
+          "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+          "method_id": "wdi_annual_scalar_pearson_correlation_v1",
+          "method_version": "1.0",
+          "missing_pair_count": 0,
+          "mutable_source_limitation": "Retained bytes, not mutable WDI API reacquisition, provide exact historical reproducibility.",
+          "package_fingerprint": "sha256:d717f394fe4998adb3b0abd3639c6d6ae9fafc6c3fbe850b8f1719d71d81f8b5",
+          "pearson_coefficient": {
+            "canonical": "0.988250088869",
+            "unit": "dimensionless"
+          },
+          "period_scope": {
+            "end": 2025,
+            "start": 1990
+          },
+          "provider_metadata": {
+            "exports": {
+              "dataset": "World Development Indicators",
+              "provider": "World Bank",
+              "source": "World Development Indicators",
+              "sourceid": "2",
+              "wdi_lastupdated": "2026-07-01"
+            },
+            "imports": {
+              "dataset": "World Development Indicators",
+              "provider": "World Bank",
+              "source": "World Development Indicators",
+              "sourceid": "2",
+              "wdi_lastupdated": "2026-07-01"
+            }
+          },
+          "selection_fingerprint": "sha256:83b19470d2c7dfde5a17d66ce32f6867285539afeae9bd4bf30fe9d9ec5648a4",
+          "series_a": {
+            "code": "NE.EXP.GNFS.ZS",
+            "definition": "Exports of goods includes changes in the economic ownership of goods from residents of the compiling economy to non-residents, irrespective of physical movement of goods across national borders. Exports of services includes services provided by residents to non-residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+            "name": "Exports of goods and services (% of GDP)",
+            "normalized_fingerprint": "sha256:afbc4de1619498ee6716c48f1d53b4591971c54f9cd9b7b0162dee951ac9986b",
+            "raw_fingerprints": {
+              "metadata": "sha256:57dae5fa8dbd577b2cff50f9cfe581b3273ecdaa1125c4188164ef9a3cdddff4",
+              "observations": "sha256:1217c3b6dbd7656137cf76cf7f39746e8fffd293315e4cf42ee5554214d76f3a"
+            },
+            "unit": "percent of GDP"
+          },
+          "series_b": {
+            "code": "NE.IMP.GNFS.ZS",
+            "definition": "Imports of goods includes change in the economic ownership of goods from non-residents to\n\n\n\n\nresidents of the compiling economy, irrespective of physical movement of goods across national borders. Imports of services includes services provided by non-residents to residents. This indicator is expressed as a percentage of Gross Domestic Product (GDP) which is the total income earned through the production of goods and services in an economic territory during an accounting period.",
+            "name": "Imports of goods and services (% of GDP)",
+            "normalized_fingerprint": "sha256:aa45c162c20c317dd183018ff190fab402270c5b41b3f38dfad7dc953d54a0a3",
+            "raw_fingerprints": {
+              "metadata": "sha256:a6e803f45b0ecfabb89dfa448350c47e4994f543f62f46d2060362b91853eb75",
+              "observations": "sha256:e5700dd43c368020283a03b72146e998303e1111d71441b4610a815619ed4a67"
+            },
+            "unit": "percent of GDP"
+          },
+          "transformation_state": {
+            "series_a": "raw",
+            "series_b": "raw"
+          },
+          "validation_judgment": "accepted_one_bounded_correlation_object"
+        },
+        "text": "CONTROLLED TEST ONLY: Across the aligned annual DNK observations from 1990 through 2025, the Pearson correlation is 0.988250088869, using 36 aligned observations."
+      }
+    ],
+    "input_references": [
+      "campaign36_dual_series_wdi_https_fixture",
+      "pearson_correlation_calculation_contract_v1"
+    ],
+    "lineage": {
+      "previous_package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+      "source_campaign": "Campaign 36",
+      "version_lineage": [
+        "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1"
+      ]
+    },
+    "package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-controlled-successor-v2",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "2.0-controlled-test",
+    "provenance_envelope": {
+      "evaluation_refs": [
+        "campaign36_alignment_validation",
+        "campaign36_calculation_evidence",
+        "campaign36_non_promoted_diagnostics"
+      ],
+      "evidence_refs": [
+        "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+      ],
+      "lineage_basis": "fresh Campaign 36 HTTPS acquisition; Campaign 35 observations not reused as substitute",
+      "method_refs": [
+        "wdi_annual_scalar_pearson_correlation_v1@1.0"
+      ]
+    },
+    "scope": {
+      "domain": "world_development_indicators",
+      "entity_scope": [
+        "DNK"
+      ],
+      "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+      "period_scope": {
+        "end": 2025,
+        "start": 1990
+      }
+    },
+    "status": "accepted",
+    "supersession": {
+      "controlled_fixture_label": "controlled_test_successor_not_provider_evidence",
+      "current_for_scope": true,
+      "predecessor_package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+      "supersession_reason": "controlled evidence release change"
+    },
+    "validation_state": {
+      "blockers": [],
+      "validation_result": "pass",
+      "warnings": [
+        "shared GDP denominator",
+        "economic flow co-movement possible",
+        "no causal/predictive/significance interpretation"
+      ]
+    }
+  },
+  "unchanged_package_count": 2,
+  "valid": true
+}

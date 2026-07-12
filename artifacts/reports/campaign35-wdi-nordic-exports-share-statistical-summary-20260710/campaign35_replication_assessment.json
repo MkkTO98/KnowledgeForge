@@ -1,0 +1,75 @@
+{
+  "accepted_package_count": 3,
+  "after_repository_fingerprint": "sha256:257d003fba6800cecef6f7d4750875ce79811955d892e13c176d79316f94c9fd",
+  "after_repository_object_count": 525,
+  "before_repository_fingerprint": "sha256:ccaf05f2e0f12cb6f9e31c14c09d97b13582e89ce8afca7ca3dfab7ccbdb5ab6",
+  "before_repository_object_count": 522,
+  "campaign_outcome": "A",
+  "existing_package_immutability": {
+    "added": [
+      "pkg-object-srcpkg-campaign35-dnk-exports-share-statistical-summary-v2.json",
+      "pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2.json",
+      "pkg-object-srcpkg-campaign35-swe-exports-share-statistical-summary-v2.json"
+    ],
+    "changed_existing": [],
+    "disappeared_existing": [],
+    "valid": true
+  },
+  "governance_artifacts": {
+    "count": 16,
+    "counting_policy": "campaign-specific non-substantive artifact files excluding raw provider response byte files, canonical package JSONs, repository indexes, and final verification logs",
+    "paths": [
+      "artifacts/evidence-fixtures/campaign35-wdi-nordic-exports-share-1990-2024-https/selection_contract.json",
+      "artifacts/evidence-fixtures/campaign35-wdi-nordic-exports-share-1990-2024-https/acquisition_manifest.json",
+      "artifacts/evidence-fixtures/campaign35-wdi-nordic-exports-share-1990-2024-https/raw_fixture.json",
+      "artifacts/evidence-fixtures/campaign35-wdi-nordic-exports-share-1990-2024-https/normalized_observations.json",
+      "artifacts/evidence-fixtures/campaign35-wdi-nordic-exports-share-1990-2024-https/validation_results.json",
+      "artifacts/evidence-fixtures/campaign35-wdi-nordic-exports-share-1990-2024-https/fingerprints.json",
+      "artifacts/evidence-fixtures/campaign35-wdi-nordic-exports-share-1990-2024-https/campaign35_fixture_validation.json",
+      "artifacts/production/campaign-35-wdi-nordic-exports-share-statistical-summary-replication/accepted_packages.json",
+      "artifacts/production/campaign-35-wdi-nordic-exports-share-statistical-summary-replication/rejected_candidates.json",
+      "artifacts/production/campaign-35-wdi-nordic-exports-share-statistical-summary-replication/entity_summaries.json",
+      "artifacts/production/campaign-35-wdi-nordic-exports-share-statistical-summary-replication/fixture_validation.json",
+      "artifacts/reports/campaign35-wdi-nordic-exports-share-statistical-summary-20260710/campaign35_report.md",
+      "artifacts/reports/campaign35-wdi-nordic-exports-share-statistical-summary-20260710/campaign35_replication_assessment.json",
+      "artifacts/reports/campaign35-wdi-nordic-exports-share-statistical-summary-20260710/local_ai_experiment.json",
+      "artifacts/decisions/D-20260710-campaign35-wdi-nordic-exports-share-statistical-summary-replication.md",
+      "artifacts/tasks/T-20260710-campaign35-wdi-nordic-exports-share-statistical-summary-replication.md"
+    ]
+  },
+  "governance_artifacts_per_substantive_package": 5.333333333333333,
+  "intended_added_packages_only": true,
+  "local_ai_experiment": {
+    "deterministic_validator_result": [
+      {
+        "blockers": [],
+        "package_id": "pkg-object-srcpkg-campaign35-dnk-exports-share-statistical-summary-v2",
+        "validation_result": "pass"
+      },
+      {
+        "blockers": [],
+        "package_id": "pkg-object-srcpkg-campaign35-swe-exports-share-statistical-summary-v2",
+        "validation_result": "pass"
+      },
+      {
+        "blockers": [],
+        "package_id": "pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2",
+        "validation_result": "pass"
+      }
+    ],
+    "execution_time_seconds": 180.004,
+    "human_governance_disposition": "No model finding is authoritative; deterministic package validators passed. Treat model output as advisory screen only.",
+    "input_fingerprint": "sha256:6114b7855d184c468480c506d5c4b6b7e8420be147cf04c3710e8b474f46c0e9",
+    "model": "qwen3:4b",
+    "model_digest": "359d7dd4bcda",
+    "prompt": "Screen these three deterministic candidate package statements for only: (1) prohibited interpretive language; (2) unit-definition conflicts; (3) obvious mismatch between indicator definition and summary wording. Do not perform arithmetic. Do not alter numerical values. Do not accept or reject candidates. Return concise JSON with findings per package and no extra interpretation.\nINPUT:\n[{\"indicator\": \"Exports of goods and services (% of GDP)\", \"package_id\": \"pkg-object-srcpkg-campaign35-dnk-exports-share-statistical-summary-v2\", \"text\": \"For retained World Bank WDI NE.EXP.GNFS.ZS observations for Denmark (DNK), annual 1990-2024, the fixture has 35 expected slots, 35 observed values, 0 missing values, coverage share 1, first valid value 36.43094120982 percent of GDP in 1990, last valid value 71.002013204305 percent of GDP in 2024, minimum 36.43094120982 percent of GDP in [1990], maximum 71.002013204305 percent of GDP in [2024], arithmetic mean 49.21269358036 percent of GDP, median 50.590780535634 percent of GDP, and population standard deviation 9.903424891466 percent of GDP under wdi_annual_scalar_statistical_summary_v2@2.0.\", \"unit\": \"percent of GDP\"}, {\"indicator\": \"Exports of goods and services (% of GDP)\", \"package_id\": \"pkg-object-srcpkg-campaign35-swe-exports-share-statistical-summary-v2\", \"text\": \"For retained World Bank WDI NE.EXP.GNFS.ZS observations for Sweden (SWE), annual 1990-2024, the fixture has 35 expected slots, 35 observed values, 0 missing values, coverage share 1, first valid value 28.099133049227 percent of GDP in 1990, last valid value 54.497139681544 percent of GDP in 2024, minimum 26.122100009274 percent of GDP in [1992], maximum 55.195877970181 percent of GDP in [2023], arithmetic mean 42.379514821825 percent of GDP, median 43.458732395716 percent of GDP, and population standard deviation 6.967188570239 percent of GDP under wdi_annual_scalar_statistical_summary_v2@2.0.\", \"unit\": \"percent of GDP\"}, {\"indicator\": \"Exports of goods and services (% of GDP)\", \"package_id\": \"pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2\", \"text\": \"For retained World Bank WDI NE.EXP.GNFS.ZS observations for Norway (NOR), annual 1990-2024, the fixture has 35 expected slots, 35 observed values, 0 missing values, coverage share 1, first valid value 38.873182876877 percent of GDP in 1990, last valid value 46.379495845844 percent of GDP in 2024, minimum 31.346350576485 percent of GDP in [2020], maximum 53.57954923602 percent of GDP in [2022], arithmetic mean 40.248198696371 percent of GDP, median 39.570345744281 percent of GDP, and population standard deviation 4.137044260882 percent of GDP under wdi_annual_scalar_statistical_summary_v2@2.0.\", \"unit\": \"percent of GDP\"}]",
+    "raw_output": "Command '['ollama', 'run', 'qwen3:4b', 'Screen these three deterministic candidate package statements for only: (1) prohibited interpretive language; (2) unit-definition conflicts; (3) obvious mismatch between indicator definition and summary wording. Do not perform arithmetic. Do not alter numerical values. Do not accept or reject candidates. Return concise JSON with findings per package and no extra interpretation.\\nINPUT:\\n[{\"indicator\": \"Exports of goods and services (% of GDP)\", \"package_id\": \"pkg-object-srcpkg-campaign35-dnk-exports-share-statistical-summary-v2\", \"text\": \"For retained World Bank WDI NE.EXP.GNFS.ZS observations for Denmark (DNK), annual 1990-2024, the fixture has 35 expected slots, 35 observed values, 0 missing values, coverage share 1, first valid value 36.43094120982 percent of GDP in 1990, last valid value 71.002013204305 percent of GDP in 2024, minimum 36.43094120982 percent of GDP in [1990], maximum 71.002013204305 percent of GDP in [2024], arithmetic mean 49.21269358036 percent of GDP, median 50.590780535634 percent of GDP, and population standard deviation 9.903424891466 percent of GDP under wdi_annual_scalar_statistical_summary_v2@2.0.\", \"unit\": \"percent of GDP\"}, {\"indicator\": \"Exports of goods and services (% of GDP)\", \"package_id\": \"pkg-object-srcpkg-campaign35-swe-exports-share-statistical-summary-v2\", \"text\": \"For retained World Bank WDI NE.EXP.GNFS.ZS observations for Sweden (SWE), annual 1990-2024, the fixture has 35 expected slots, 35 observed values, 0 missing values, coverage share 1, first valid value 28.099133049227 percent of GDP in 1990, last valid value 54.497139681544 percent of GDP in 2024, minimum 26.122100009274 percent of GDP in [1992], maximum 55.195877970181 percent of GDP in [2023], arithmetic mean 42.379514821825 percent of GDP, median 43.458732395716 percent of GDP, and population standard deviation 6.967188570239 percent of GDP under wdi_annual_scalar_statistical_summary_v2@2.0.\", \"unit\": \"percent of GDP\"}, {\"indicator\": \"Exports of goods and services (% of GDP)\", \"package_id\": \"pkg-object-srcpkg-campaign35-nor-exports-share-statistical-summary-v2\", \"text\": \"For retained World Bank WDI NE.EXP.GNFS.ZS observations for Norway (NOR), annual 1990-2024, the fixture has 35 expected slots, 35 observed values, 0 missing values, coverage share 1, first valid value 38.873182876877 percent of GDP in 1990, last valid value 46.379495845844 percent of GDP in 2024, minimum 31.346350576485 percent of GDP in [2020], maximum 53.57954923602 percent of GDP in [2022], arithmetic mean 40.248198696371 percent of GDP, median 39.570345744281 percent of GDP, and population standard deviation 4.137044260882 percent of GDP under wdi_annual_scalar_statistical_summary_v2@2.0.\", \"unit\": \"percent of GDP\"}]']' timed out after 180 seconds",
+    "raw_output_fingerprint": "sha256:13421cfd1775e691febc89baa0aed11f47667dde91fd09f5047ddefa9f69ce8c",
+    "saved_effort_assessment": "low; useful as a quick wording screen but added operational overhead for three short packages",
+    "status": "failed",
+    "token_counts": "not_measured_by_ollama_cli"
+  },
+  "next_recommendation": "Prepare the first correlation-method design and falsification gate; another statistical-summary pilot is now less valuable unless it targets real missingness as a direct blocker.",
+  "rejected_candidate_count": 0,
+  "scaling_readiness": "not_blocked"
+}

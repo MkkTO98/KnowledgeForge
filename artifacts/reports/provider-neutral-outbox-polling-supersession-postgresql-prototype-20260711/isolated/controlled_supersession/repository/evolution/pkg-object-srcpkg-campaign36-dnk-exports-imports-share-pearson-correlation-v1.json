@@ -1,0 +1,51 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 36 first bounded production correlation pilot",
+    "changed_inputs_methods_templates_models_validators": [
+      "wdi_annual_scalar_pearson_correlation_v1"
+    ],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+    "evidence_references": "sha256:51d3ae190d5facc9a6006d7038b3d4722517632f64c55937abe9a32f6369aff5",
+    "generated_statements": "sha256:cb13eafc26ab41643a306fbc3e8d1e7e4dfe20314dc7a3f01258d7785ab1b63c",
+    "input_set": "sha256:dd9a2ab5863ae2a70ec411e7e0e0cb012748524e705f5e4d7e507436397055bf",
+    "package_manifest": "sha256:a7677b0c5e0d1d4299fc71aa7f8ccd7003b3185f6a80105ccae176582445c389",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "lifecycle_state": "superseded",
+  "lineage": {
+    "previous_package_id": null,
+    "source_campaign": "Campaign 36",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "campaign36_alignment_validation",
+      "campaign36_calculation_evidence",
+      "campaign36_non_promoted_diagnostics"
+    ],
+    "evidence_refs": [
+      "ev-campaign36-wdi-dnk-exports-imports-share-dual-series-fixture"
+    ],
+    "lineage_basis": "fresh Campaign 36 HTTPS acquisition; Campaign 35 observations not reused as substitute",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture",
+  "status": "superseded",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "shared GDP denominator",
+      "economic flow co-movement possible",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

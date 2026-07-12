@@ -1,0 +1,35 @@
+{
+  "clean": true,
+  "findings": [],
+  "reviewed_false_positives": [
+    {
+      "classification": "excluded_self_report",
+      "path": "artifacts/reports/canonical-supersession-immutability-durability-gate-20260711/sensitive_material_scan.json"
+    },
+    {
+      "classification": "scanner_pattern_literal",
+      "path": "tools/canonical_supersession_immutability_validator.py",
+      "pattern": "password"
+    },
+    {
+      "classification": "scanner_pattern_literal",
+      "path": "tools/canonical_supersession_immutability_validator.py",
+      "pattern": "secret"
+    },
+    {
+      "classification": "scanner_pattern_literal",
+      "path": "tools/canonical_supersession_immutability_validator.py",
+      "pattern": "api_key"
+    },
+    {
+      "classification": "scanner_pattern_literal",
+      "path": "tools/canonical_supersession_immutability_validator.py",
+      "pattern": "BEGIN PRIVATE KEY"
+    },
+    {
+      "classification": "scanner_pattern_literal",
+      "path": "tools/canonical_supersession_immutability_validator.py",
+      "pattern": "AWS_SECRET"
+    }
+  ]
+}

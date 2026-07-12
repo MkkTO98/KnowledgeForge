@@ -1,0 +1,19 @@
+{
+  "correction": "removed predecessor copy mutation; predecessor package is persisted unchanged; supersession/current state stored externally",
+  "flawed_reusable_function": "tools/external_outbox_poller_v1.py::run_isolated_supersession_prototype",
+  "production_canonical_invocation": false,
+  "safe_for_future_real_releases": "prototype no longer rewrites predecessor; production canonical supersession still not implemented and should remain gated",
+  "superseded_lifecycle_assignments_after_correction": [],
+  "supersession_mentions_after_correction": [
+    {
+      "classification": "mention_or_state_record",
+      "line": 275,
+      "path": "tools/repository_wide_durability_validator.py"
+    },
+    {
+      "classification": "mention_or_state_record",
+      "line": 270,
+      "path": "tools/canonical_supersession_immutability_validator.py"
+    }
+  ]
+}

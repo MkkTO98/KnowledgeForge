@@ -1,0 +1,50 @@
+{
+  "evolution_metadata": {
+    "change_reason": "Campaign 37 controlled entity replication",
+    "changed_inputs_methods_templates_models_validators": [],
+    "dependent_object_review_posture": "not_applicable",
+    "previous_revision": null
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:eec09fa6d2efbda5500c16e058d16f8ac83aa802a008b48e619697ad569bcc5e",
+    "evidence_references": "sha256:3c1ba99190931c69caa5b68bfe5df4701dc9f78b306a97489286f1728de5a92d",
+    "generated_statements": "sha256:1dde32ae1826ac11ac280bb720de18a921685a51a3e45e95a938c4160437c8ac",
+    "input_set": "sha256:8dd61534fdc003c22c578299abb59201287ee790d9fe6be2ef1268ca2597b48a",
+    "package_manifest": "sha256:8ac5b7cca73fa31ab161d84f607be19d26a9ac8d12a511538416a1183b7c00bf",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "lifecycle_state": "accepted",
+  "lineage": {
+    "previous_package_id": null,
+    "replicates_method_from": "Campaign 36",
+    "source_campaign": "Campaign 37",
+    "version_lineage": []
+  },
+  "package_id": "pkg-object-srcpkg-campaign37-nor-exports-imports-share-pearson-correlation-v1",
+  "package_version": "1.0",
+  "provenance_envelope": {
+    "evaluation_refs": [
+      "campaign37_nor_alignment_validation",
+      "campaign37_nor_calculation_evidence",
+      "campaign37_nor_non_promoted_diagnostics"
+    ],
+    "evidence_refs": [
+      "ev-campaign37-wdi-swe-nor-exports-imports-share-dual-series-fixture"
+    ],
+    "lineage_basis": "fresh Campaign 37 HTTPS acquisition; Campaign 35 exports evidence inspected but not reused",
+    "method_refs": [
+      "wdi_annual_scalar_pearson_correlation_v1@1.0"
+    ]
+  },
+  "reproducibility_state": "reproducible_offline_from_retained_fixture",
+  "status": "accepted",
+  "validation_state": {
+    "blockers": [],
+    "validation_result": "pass",
+    "warnings": [
+      "shared GDP denominator",
+      "economic flow co-movement possible",
+      "no causal/predictive/significance interpretation"
+    ]
+  }
+}

@@ -1,0 +1,23 @@
+{
+  "payload": {
+    "evidence_family": "external_wdi_annual_scalar_trade_pearson_correlation",
+    "lifecycle_state": "candidate_example_not_promoted",
+    "package_id": "pkg-object-srcpkg-campaign36-dnk-exports-imports-share-pearson-correlation-v1-example-not-promoted",
+    "statement_type": "derived_relationship",
+    "structured_payload": {
+      "aligned_pair_count": 35,
+      "coefficient": {
+        "canonical": "0.000000000000"
+      },
+      "entity": "DNK",
+      "method_contract_fingerprint": "sha256:916fd60c347214eda2a7a7b384c70b737a1ff3c62ce1e7971034dc7df473f476",
+      "series_a": "NE.EXP.GNFS.ZS",
+      "series_b": "NE.IMP.GNFS.ZS",
+      "transformation_state": "raw"
+    }
+  },
+  "reason": "Existing PostgreSQL v1 projects full canonical JSON payload into JSONB plus generic package/evidence family/statement/lifecycle/fingerprint/provenance lookup fields; a future correlation package remains canonical JSON and does not require correlation-specific columns.",
+  "schema_change_required": false,
+  "synthetic_payload_fingerprint": "sha256:8fa68873ee91c3423a5915585127285e85c9c5e17c1f164c36e5e893c7c36350",
+  "valid": true
+}

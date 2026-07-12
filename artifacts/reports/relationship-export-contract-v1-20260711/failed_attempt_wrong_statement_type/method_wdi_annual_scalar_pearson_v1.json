@@ -1,0 +1,55 @@
+{
+  "deterministic_content": {
+    "contract": {
+      "identity": "knowledgeforge_relationship_export_v1@1.0",
+      "name": "knowledgeforge_relationship_export_v1",
+      "version": "1.0"
+    },
+    "freshness": {
+      "logical_projection_fingerprint": "sha256:bf6538b4610919e5fde1c6c5d12f6535b25886afbcb5604af5590d40d3771757",
+      "projection_id": "sha256:f18f617896489d63662faa1911dedc9c8af177e0e732216df5564d8ee00c8334",
+      "projection_tool_version": "postgresql_operational_projection_v1",
+      "repository_fingerprint": "sha256:958c88d4be0bce735adcaaf3f236a7643aa80fd79846db23f4b521d05459771b",
+      "repository_object_count": 538
+    },
+    "package_identities": [],
+    "query": {
+      "controls": {
+        "include_full_package_payload": true,
+        "include_provenance": true,
+        "limit": 200,
+        "max_result_count": 200,
+        "offset": 0,
+        "only_current_valid_projection": true,
+        "sort": "package_id"
+      },
+      "filters": {
+        "method_identifier": "wdi_annual_scalar_pearson_correlation_v1",
+        "method_version": "1.0",
+        "statement_type": "statistical_relationship"
+      },
+      "query_contract": "knowledgeforge_relationship_query_v1@1.0"
+    },
+    "query_fingerprint": "sha256:34dd17d211815d68363a5838710b8beec186283435b511032c82e711f34b9eed",
+    "result_count": 0,
+    "result_set_fingerprint": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+    "results": [],
+    "stable_order": "package_id_ascending"
+  },
+  "deterministic_content_fingerprint": "sha256:a2fcfdf521d9dda8bcd78cd2a05ccf5e22b39826956485127c44372b6d42576e",
+  "operational_metadata": {
+    "created_at": "2026-07-11T12:46:35.518656+00:00",
+    "performance_seconds": {
+      "freshness_validation": 0.054,
+      "payload_validation": 0.0,
+      "query_execution": 0.027691,
+      "serialization": 0.000208
+    },
+    "query_shape": {
+      "indexed_generic_filters": 1,
+      "jsonb_payload_scans": 2
+    },
+    "sql_shape_evidence": "internal; table and schema details intentionally excluded from contract",
+    "tool": "relationship_export_v1"
+  }
+}

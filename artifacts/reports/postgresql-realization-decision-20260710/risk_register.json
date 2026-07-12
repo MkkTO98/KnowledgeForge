@@ -1,0 +1,57 @@
+[
+  {
+    "classification": "implementation concern for a later task",
+    "mitigation": "PostgreSQL must be derived-only; no canonical writes originate there.",
+    "risk": "dual-write risk"
+  },
+  {
+    "classification": "preserves existing architecture",
+    "mitigation": "Full package JSON remains canonical; PostgreSQL disagreement invalidates projection.",
+    "risk": "authority ambiguity"
+  },
+  {
+    "classification": "implementation concern for a later task",
+    "mitigation": "Projection fingerprint/rebuild metadata and fail-closed behavior.",
+    "risk": "stale projections"
+  },
+  {
+    "classification": "implementation concern for a later task",
+    "mitigation": "Later slice must define deterministic full rebuild acceptance before partial/incremental behavior.",
+    "risk": "partial rebuilds"
+  },
+  {
+    "classification": "implementation concern for a later task",
+    "mitigation": "Projection must be fully rebuildable and comparable to package inputs.",
+    "risk": "non-deterministic database state"
+  },
+  {
+    "classification": "implementation concern for a later task",
+    "mitigation": "Keep canonical packages and deterministic exports independent of PostgreSQL.",
+    "risk": "database-specific lock-in"
+  },
+  {
+    "classification": "implementation concern for a later task",
+    "mitigation": "Smallest future slice should project current retrieval fields only and avoid premature rich-type modeling.",
+    "risk": "excessive schema rigidity before richer knowledge types exist"
+  },
+  {
+    "classification": "preserves existing architecture",
+    "mitigation": "Decision is justified by operational realization/end state, not present performance.",
+    "risk": "premature optimization"
+  },
+  {
+    "classification": "operational realization requirement",
+    "mitigation": "PostgreSQL selected for discovery/retrieval at future scale while filesystem remains canonical.",
+    "risk": "filesystem scalability"
+  },
+  {
+    "classification": "implementation concern for a later task",
+    "mitigation": "Require bounded implementation acceptance criteria and no cross-project consumers in first slice.",
+    "risk": "governance overhead"
+  },
+  {
+    "classification": "preserves existing architecture",
+    "mitigation": "KnowledgeForge-owned read-only boundary only; no shared schema/runtime/consumer writes.",
+    "risk": "accidental coupling to InsightForge or MacroForge"
+  }
+]
