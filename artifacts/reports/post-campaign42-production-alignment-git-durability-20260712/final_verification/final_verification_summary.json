@@ -1,0 +1,134 @@
+[
+  {
+    "name": "git_fetch_prepush",
+    "cmd": "git fetch origin",
+    "exit": 0,
+    "excerpt": ""
+  },
+  {
+    "name": "ahead_behind_prepush",
+    "cmd": "git rev-list --left-right --count HEAD...origin/main",
+    "exit": 0,
+    "excerpt": "4\t0"
+  },
+  {
+    "name": "full_test_suite",
+    "cmd": "uvx pytest -q",
+    "exit": 0,
+    "excerpt": "........................................................................ [ 22%]\n........................................................................ [ 45%]\n............................................................ [ 64%]\n................................................................... [ 85%]\n.............................................                            [100%]\n316 passed, 17 subtests passed in 25.56s"
+  },
+  {
+    "name": "python_compileall",
+    "cmd": "python3 -m compileall -q tools tests",
+    "exit": 0,
+    "excerpt": ""
+  },
+  {
+    "name": "canonical_repository_validation",
+    "cmd": "python3 - <<'PY'\n\nimport json, pathlib, subprocess, hashlib\nroot=pathlib.Path('.')\nmanifest=json.loads((root/'knowledge_repository/manifest.json').read_text())\nobjects=sorted((root/'knowledge_repository/objects').glob('*.json'))\nraw=[]; fd=[]; stat=[]; ids=[]; package_fps={}\nfor p in objects:\n    pkg=json.loads(p.read_text()); ids.append(pkg['package_id'])\n    ef=pkg.get('scope',{}).get('evidence_family','')\n    pl=(pkg.get('generated_statements') or [{}])[0].get('structured_payload') or {}\n    if 'first_difference_pearson_companion' in ef or pl.get('method_id')=='wdi_annual_scalar_first_difference_pearson_v1': fd.append(pkg['package_id'])\n    elif 'pearson' in ef: raw.append(pkg['package_id'])\n    if 'statistical_summary' in ef or (pkg.get('generated_statements') or [{}])[0].get('statement_type')=='statistical_summary': stat.append(pkg['package_id'])\n    package_fps[pkg['package_id']]=pkg.get('fingerprints',{}).get('package_manifest')\nchanged_raw=subprocess.run(['git','diff','--name-status','e7deaa66281e1bbbaa5c90d50a216f0a9b838b11..HEAD','--','knowledge_repository/objects/*campaign40*pearson-correlation-v1.json'],text=True,stdout=subprocess.PIPE).stdout.splitlines()\n# Direct retrieval separation from indexes\nby_family=json.loads((root/'knowledge_repository/indexes/by_evidence_family.json').read_text())\nraw_index=[]; fd_index=[]\nfor k,v in by_family.items():\n    if 'first_difference_pearson_companion' in k: fd_index+=v\n    elif 'pearson' in k: raw_index+=v\nsummary={'manifest_count':manifest.get('object_count'),'object_file_count':len(objects),'repository_fingerprint':manifest.get('repository_fingerprint'),'raw_pearson_count':len(raw),'first_difference_companion_count':len(fd),'statistical_summary_count':len(stat),'raw_index_count':len(set(raw_index)),'fd_index_count':len(set(fd_index)),'raw_fd_overlap':sorted(set(raw_index)&set(fd_index)),'campaign40_raw_object_mutations_since_baseline':changed_raw,'valid':len(objects)==554 and manifest.get('object_count')==554 and manifest.get('repository_fingerprint')=='sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b' and len(raw)==21 and len(fd)==8 and len(stat)==4 and not changed_raw and not (set(raw_index)&set(fd_index))}\nprint(json.dumps(summary,indent=2,sort_keys=True))\nraise SystemExit(0 if summary['valid'] else 2)\n\nPY",
+    "exit": 0,
+    "excerpt": "{\n  \"campaign40_raw_object_mutations_since_baseline\": [],\n  \"fd_index_count\": 8,\n  \"first_difference_companion_count\": 8,\n  \"manifest_count\": 554,\n  \"object_file_count\": 554,\n  \"raw_fd_overlap\": [],\n  \"raw_index_count\": 21,\n  \"raw_pearson_count\": 21,\n  \"repository_fingerprint\": \"sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b\",\n  \"statistical_summary_count\": 4,\n  \"valid\": true\n}"
+  },
+  {
+    "name": "first_difference_method_validation",
+    "cmd": "python3 tools/first_difference_pearson_method_v1.py --write-artifacts artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/first_difference_method",
+    "exit": 0,
+    "excerpt": "{\n  \"diagnostic_reconciliation\": \"artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/first_difference_method/diagnostic_reconciliation.json\",\n  \"method_contract\": \"artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/first_difference_method/method_contract.json\",\n  \"representation_compatibility_proof\": \"artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/first_difference_method/representation_compatibility_proof.json\",\n  \"transformation_contract\": \"artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/first_difference_method/transformation_contract.json\",\n  \"validation_registry\": \"artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/first_difference_method/validation_registry.json\",\n  \"validation_results\": \"artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/first_difference_method/validation_results.json\"\n}"
+  },
+  {
+    "name": "campaign42_deterministic_idempotent_rerun",
+    "cmd": "python3 tools/campaign42_first_difference_companion_production.py --root . --output-dir artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/campaign42_no_publish_rerun",
+    "exit": 0,
+    "excerpt": "      \"pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-first-difference-pearson-companion-v1\",\n      \"pkg-object-srcpkg-campaign40-agriculture-agricultural-forest-land-dnk-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-first-difference-pearson-companion-v1\",\n      \"pkg-object-srcpkg-campaign40-demographic-birth-death-rates-nor-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-first-difference-pearson-companion-v1\",\n      \"pkg-object-srcpkg-campaign40-energy-fossil-nonhydro-renewables-nor-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-first-difference-pearson-companion-v1\",\n      \"pkg-object-srcpkg-campaign40-finance-credit-broad-money-dnk-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-first-difference-pearson-companion-v1\",\n      \"pkg-object-srcpkg-campaign40-health-life-expectancy-under5-mortality-nor-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-first-difference-pearson-companion-v1\",\n      \"pkg-object-srcpkg-campaign40-infrastructure-internet-mobile-swe-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign41-dnk-forest-area-broad-money-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign41-nor-crude-birth-rate-fossil-electricity-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign41-nor-fossil-electricity-under5-mortality-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign41-nor-nonhydro-renewable-electricity-under5-mortality-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-first-difference-pearson-companion-v1\",\n      \"pkg-object-srcpkg-campaign41-swe-private-credit-internet-users-pearson-correlation-v1\",\n      \"pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-first-difference-pearson-companion-v1\",\n      \"pkg-object-srcpkg-campaign41-swe-private-credit-mobile-cellular-pearson-correlation-v1\"\n    ],\n    \"persistence_policy\": \"persist validated KnowledgeObjectPackage JSON exactly; repository metadata and indexes remain separate\",\n    \"repository_fingerprint\": \"sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b\",\n    \"repository_kind\": \"KnowledgeForgeKnowledgeRepository\",\n    \"repository_root\": \"knowledge_repository\",\n    \"schema_version\": \"1.0\"\n  }\n}"
+  },
+  {
+    "name": "relationship_export_all",
+    "cmd": "python3 tools/relationship_export_v1.py export --query all_pearson --output artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/all_pearson_relationship_export.json",
+    "exit": 1,
+    "excerpt": "Traceback (most recent call last):\n  File \"/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_v1.py\", line 198, in <module>\n    if __name__=='__main__': raise SystemExit(main())\n                                              ^^^^^^\n  File \"/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_v1.py\", line 194, in main\n    q=json.loads(Path(args.query).read_text()); print(json.dumps(export(q,Path(args.output),db=args.database,simulate_stale=args.simulate_stale),indent=2,sort_keys=True))\n                 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1029, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1015, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'all_pearson'"
+  },
+  {
+    "name": "relationship_export_verify",
+    "cmd": "python3 tools/relationship_export_v1.py verify --export artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/all_pearson_relationship_export.json",
+    "exit": 1,
+    "excerpt": "Traceback (most recent call last):\n  File \"/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_v1.py\", line 198, in <module>\n    if __name__=='__main__': raise SystemExit(main())\n                                              ^^^^^^\n  File \"/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_v1.py\", line 195, in main\n    else: print(json.dumps(verify_export(Path(args.export)),indent=2,sort_keys=True))\n                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_v1.py\", line 171, in verify_export\n    obj=json.loads(path.read_text()); det=obj.get('deterministic_content')\n                   ^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1029, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1015, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/all_pearson_relationship_export.json'"
+  },
+  {
+    "name": "relationship_export_consumer_simulation",
+    "cmd": "python3 tools/relationship_export_consumer_simulator_v1.py --export artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/all_pearson_relationship_export.json --output artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/relationship_export_consumer_simulation.json",
+    "exit": 1,
+    "excerpt": "Traceback (most recent call last):\n  File \"/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_consumer_simulator_v1.py\", line 61, in <module>\n    if __name__=='__main__': raise SystemExit(main())\n                                              ^^^^^^\n  File \"/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_consumer_simulator_v1.py\", line 55, in main\n    res=verify(Path(args.export))\n        ^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_consumer_simulator_v1.py\", line 19, in verify\n    obj=json.loads(path.read_text()); det=obj.get('deterministic_content')\n                   ^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1029, in read_text\n    with self.open(mode='r', encoding=encoding, errors=errors) as f:\n         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\n  File \"/usr/lib/python3.12/pathlib.py\", line 1015, in open\n    return io.open(self, mode, buffering, encoding, errors, newline)\n           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^\nFileNotFoundError: [Errno 2] No such file or directory: 'artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/all_pearson_relationship_export.json'"
+  },
+  {
+    "name": "postgres_drop_pre_existing",
+    "cmd": "dropdb --if-exists knowledgeforge_post_campaign42_prepush_verify_20260712",
+    "exit": 0,
+    "excerpt": "NOTICE:  database \"knowledgeforge_post_campaign42_prepush_verify_20260712\" does not exist, skipping"
+  },
+  {
+    "name": "postgres_rebuild",
+    "cmd": "python3 tools/postgresql_operational_projection.py --database knowledgeforge_post_campaign42_prepush_verify_20260712 --create-database --output artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/postgres_rebuild.json rebuild --traversal-order sorted",
+    "exit": 0,
+    "excerpt": "{\n  \"database\": \"knowledgeforge_post_campaign42_prepush_verify_20260712\",\n  \"logical_projection_fingerprint\": \"sha256:6699bcb0dcf5f439a715885c281f3c744a0c4f8ed7a6edc66a953006618b4b4e\",\n  \"object_count\": 554,\n  \"projection_id\": \"sha256:e971da4bb8e65dba1580908a68b1e836001e5f5f885f615ce0a89e50662f2b54\",\n  \"provenance_lineage_rows\": 5563,\n  \"repository_fingerprint\": \"sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b\",\n  \"schema\": \"knowledgeforge_projection\",\n  \"statement_type_rows\": 554,\n  \"tool_version\": \"postgresql_operational_projection_v1\",\n  \"valid\": true\n}"
+  },
+  {
+    "name": "postgres_verify",
+    "cmd": "python3 tools/postgresql_operational_projection.py --database knowledgeforge_post_campaign42_prepush_verify_20260712 --output artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/postgres_verify.json verify",
+    "exit": 0,
+    "excerpt": "{\n  \"canonical_object_count\": 554,\n  \"extra_package_ids\": [],\n  \"logical_projection_fingerprint\": \"sha256:6699bcb0dcf5f439a715885c281f3c744a0c4f8ed7a6edc66a953006618b4b4e\",\n  \"missing_package_ids\": [],\n  \"package_fingerprint_failure_ids\": [],\n  \"package_fingerprint_failures\": 0,\n  \"payload_fidelity_failure_ids\": [],\n  \"payload_fidelity_failures\": 0,\n  \"projected_object_count\": 554,\n  \"projection_id\": \"sha256:e971da4bb8e65dba1580908a68b1e836001e5f5f885f615ce0a89e50662f2b54\",\n  \"repository_fingerprint\": \"sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b\",\n  \"state_repository_fingerprint\": \"sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b\",\n  \"valid\": true\n}"
+  },
+  {
+    "name": "operational_checkpoint_tests",
+    "cmd": "uvx pytest -q tests/test_operational_state_checkpoint.py",
+    "exit": 0,
+    "excerpt": "......                                                                   [100%]\n6 passed in 0.05s"
+  },
+  {
+    "name": "campaign40_41_backward_compatibility_tests",
+    "cmd": "uvx pytest -q tests/test_correlation_batch_engine.py tests/test_coefficient_free_pearson_candidate_registry.py tests/test_correlation_engine_provenance_parameterization.py",
+    "exit": 0,
+    "excerpt": ".................................                            [100%]\n33 passed, 12 subtests passed in 1.10s"
+  },
+  {
+    "name": "repository_wide_durability_validator",
+    "cmd": "python3 tools/repository_wide_durability_validator.py --project . --output-dir artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/repository_wide_durability_validator",
+    "exit": 2,
+    "excerpt": "usage: repository_wide_durability_validator.py [-h] [--report REPORT]\nrepository_wide_durability_validator.py: error: unrecognized arguments: --project . --output-dir artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/repository_wide_durability_validator"
+  },
+  {
+    "name": "check_coherence",
+    "cmd": "python3 tools/check_coherence.py --project . --json",
+    "exit": 0,
+    "excerpt": "{\n  \"mode\": \"generated\",\n  \"blocks\": [],\n  \"warnings\": [\n    \"context health: context/active_context.md is 320.1 hours old; generated bundles are task-specific and should be regenerated when needed\"\n  ]\n}"
+  },
+  {
+    "name": "context_health",
+    "cmd": "python3 tools/context_health.py --project . --json",
+    "exit": 0,
+    "excerpt": "      \"limit_chars\": 6000\n    },\n    {\n      \"path\": \"context/latest_handoff.md\",\n      \"chars\": 1854,\n      \"estimated_tokens\": 464,\n      \"warn_chars\": 3000,\n      \"block_chars\": 9000\n    },\n    {\n      \"path\": \"context/active_context.md\",\n      \"chars\": 434,\n      \"estimated_tokens\": 109,\n      \"warn_chars\": 40000,\n      \"block_chars\": 256000,\n      \"generated_artifact\": true\n    }\n  ],\n  \"policy\": {\n    \"active_goal_chars\": 6000,\n    \"project_state_chars\": 12000,\n    \"architecture_chars\": 12000,\n    \"recent_changes_chars\": 6000,\n    \"handoff_warn_chars\": 3000,\n    \"handoff_block_chars\": 9000,\n    \"active_context_warn_chars\": 40000,\n    \"active_context_block_chars\": 256000,\n    \"generated_context_stale_hours\": 168\n  }\n}"
+  },
+  {
+    "name": "architecture_reality_audit",
+    "cmd": "python3 tools/architecture_reality_audit.py --project . --write-report",
+    "exit": 0,
+    "excerpt": "Report: /home/mkkto/srv/EIP/projects/KnowledgeForge/artifacts/reports/R-20260712-architecture-reality-audit.md\narchitecture-reality-audit: 0 block(s), 0 warning(s)"
+  },
+  {
+    "name": "git_diff_check",
+    "cmd": "git diff --check",
+    "exit": 0,
+    "excerpt": ""
+  },
+  {
+    "name": "git_diff_cached_check",
+    "cmd": "git diff --cached --check",
+    "exit": 0,
+    "excerpt": ""
+  },
+  {
+    "name": "git_status_short",
+    "cmd": "git status --short",
+    "exit": 0,
+    "excerpt": "?? artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/architecture_reality_audit.log\n?? artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/final_git_diff_check.log\n?? artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/full_test_suite.log\n?? artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/git_diff_check.log\n?? artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/postgresql_verify_stdout.log\n?? artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/py_compile.log\n?? artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/release_inbox_tests.log\n?? artifacts/reports/relationship-export-contract-v1-20260711/verification/architecture_reality_audit.log\n?? artifacts/reports/relationship-export-contract-v1-20260711/verification/full_test_suite.log\n?? artifacts/reports/relationship-export-contract-v1-20260711/verification/git_diff_check.log\n?? artifacts/reports/relationship-export-contract-v1-20260711/verification/python_compile.log\n?? artifacts/reports/relationship-export-contract-v1-20260711/verification/targeted_export_tests.log\n?? artifacts/reports/repository-wide-durability-inventory-supersession-correction-20260711/final_context_verification.log\n?? artifacts/reports/repository-wide-durability-inventory-supersession-correction-20260711/final_verification.log\n?? artifacts/reports/repository-wide-durability-inventory-supersession-correction-20260711/final_verification_after_closeout.log\n?? artifacts/reports/repository-wide-durability-inventory-supersession-correction-20260711/summary_refresh.log\n?? artifacts/reports/reviewed-git-durability-publication-20260712/continuation/\n?? artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/\n?? artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/architecture_audit.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/coherence.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/context_health.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/full_tests.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/git_diff_check.log\n?? artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/targeted_method_v2_tests.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/architecture_audit.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/coherence.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/context_health.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/full_tests.log\n?? artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/targeted_fixture_tests.log"
+  }
+]

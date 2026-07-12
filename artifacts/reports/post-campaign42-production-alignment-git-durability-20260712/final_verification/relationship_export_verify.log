@@ -1,0 +1,17 @@
+Traceback (most recent call last):
+  File "/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_v1.py", line 198, in <module>
+    if __name__=='__main__': raise SystemExit(main())
+                                              ^^^^^^
+  File "/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_v1.py", line 195, in main
+    else: print(json.dumps(verify_export(Path(args.export)),indent=2,sort_keys=True))
+                           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/home/mkkto/srv/EIP/projects/KnowledgeForge/tools/relationship_export_v1.py", line 171, in verify_export
+    obj=json.loads(path.read_text()); det=obj.get('deterministic_content')
+                   ^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1029, in read_text
+    with self.open(mode='r', encoding=encoding, errors=errors) as f:
+         ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+  File "/usr/lib/python3.12/pathlib.py", line 1015, in open
+    return io.open(self, mode, buffering, encoding, errors, newline)
+           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+FileNotFoundError: [Errno 2] No such file or directory: 'artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_verification/all_pearson_relationship_export.json'
