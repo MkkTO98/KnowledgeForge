@@ -74,6 +74,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `D-20260712-operational-state-backup-restore-durability-gate.md`
 - `D-20260713-post-campaign43-next-production-readiness-gate.md`
 - `D-20260713-post-repair-production-readiness-gate.md`
+- `D-20260713-non-wdi-multisource-disagreement-planning-gate.md`
 - `D-20260712-pearson-candidate-policy-v2-consistency-correction.md`
 - `D-20260712-pearson-candidate-policy-v2-mixed-roadmap.md`
 - `D-20260712-pearson-path-to-100-mixed-roadmap.md`
@@ -81,7 +82,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `D-20260713-post-repair-production-readiness-gate.md` was adversarially corrected to path D: next selected task is the Phase 2 non-WDI multi-source disagreement planning gate; implementation not started.
+- `D-20260713-non-wdi-multisource-disagreement-planning-gate.md` rejects the only concrete retained-evidence pair as not source-independent; no disagreement-production candidate is selected.
 
 ## Needs Attention
-- Do not start source acquisition, ingestion, package production, architecture/doctrine/schema changes, or other-project modification. The selected boundary is a planning gate only.
+- Reopen non-WDI disagreement production only after a bounded, immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists or is admitted through existing producer-neutral handoff boundaries.

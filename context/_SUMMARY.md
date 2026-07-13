@@ -14,7 +14,7 @@ Context and handoff material for future KnowledgeForge sessions.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `latest_handoff.md` points to the corrected Phase 2 non-WDI multi-source disagreement planning gate; implementation is not started.
+- `latest_handoff.md` records completed non-WDI multi-source disagreement planning gate: no candidate selected.
 
 ## Needs Attention
 - Rebuild generated context bundles for future tasks instead of trusting stale `active_context.md` or `compressed_context.md`.

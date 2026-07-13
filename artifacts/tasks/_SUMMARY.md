@@ -106,10 +106,10 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Next ready task: `T-20260713-non-wdi-multisource-disagreement-planning-gate.md`; implementation is not started and requires separate authorization.
+- `T-20260713-non-wdi-multisource-disagreement-planning-gate.md` — completed; no disagreement-production candidate selected because the only concrete retained-evidence pair is not source-independent.
 
 ## Needs Attention
-- Selected boundary is planning only for non-WDI multi-source disagreement. Stop before source acquisition, ingestion, packages, PostgreSQL, Relationship Export outputs, architecture/doctrine/schema changes, other-project modification, staging, commit, or push.
+- Reopen non-WDI disagreement production only after a bounded, immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists. Preserve unrelated residue; do not stage/commit/push unless separately authorized.
 - Repository-wide unittest discovery is repaired (`336 tests OK`); package production still requires a later explicit execution/publication authorization.
 - `T-20260712-campaign41-coefficient-free-pearson-candidate-registry.md` — completed; froze 8 coefficient-free Campaign 41 Pearson candidates and spec; outcome B required bounded engine extension before calculation.
 - `T-20260712-campaign41-generic-correlation-engine-provenance-parameterization.md` — completed; outcome A; generic correlation engine ready for separately authorized Campaign 41 execution.

@@ -15,7 +15,7 @@ This folder is part of the ProjectForge file-backed operating system for `state`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Next active goal is the Phase 2 non-WDI multi-source disagreement planning gate if separately authorized; the corrected readiness gate is complete.
+- No active production task selected. Phase 2 non-WDI multi-source disagreement planning gate completed with no candidate selected.
 
 ## Needs Attention
-- Preserve known unrelated local residue; do not clean or stage it as part of the next planning task.
+- Preserve known unrelated local residue; do not clean or stage it. Reopen disagreement production only after a source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists.

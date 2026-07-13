@@ -331,7 +331,7 @@ Recommended production-family order:
 5. WDI Trade annual-scalar evidence.
 6. WDI Financial Sector annual-scalar evidence.
 7. WDI Education or Health annual-scalar evidence as scale-family stress.
-8. Deliberate non-WDI multi-source disagreement workstream.
+8. Deliberate non-WDI multi-source disagreement workstream — planning gate completed 2026-07-13 with no candidate selected. The only concrete retained-evidence source-pair candidate, WDI trade-share evidence vs MacroForge neutral WDI release, was rejected as a mirror/provenance/release candidate rather than independent source disagreement. Reopen only after KnowledgeForge has an immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle.
 
 This is a family-oriented roadmap, not an individual campaign design. Each family should use the Production Methodology Closeout criteria unchanged.
 

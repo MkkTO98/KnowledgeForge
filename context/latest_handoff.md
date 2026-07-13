@@ -1,44 +1,45 @@
 # Latest Handoff
 
-Updated: 2026-07-13
+Date: 2026-07-13
+Status: Phase 2 non-WDI multi-source disagreement planning gate completed; no candidate selected.
 
 ## Outcome
 
-Post-repair production-readiness gate adversarially corrected.
+Rejected concrete candidate: World Bank WDI retained trade-share evidence vs MacroForge neutral WDI release for DNK/SWE/NOR annual 1990-2024 exports/imports percent of GDP.
 
-Corrected selected path: D — defer/reject the remaining corrected-policy Pearson candidates for immediate priority and select a stronger documented production-enabling alternative.
+Reason: not source-independent. MacroForge neutral release redistributes/exports WDI evidence, so numerical differences would indicate release/adapter/provenance/normalization/vintage behavior, not source disagreement.
 
-Selected next task: Phase 2 non-WDI multi-source disagreement planning gate from `B-20260709-025`.
+Decision: `artifacts/decisions/D-20260713-non-wdi-multisource-disagreement-planning-gate.md`.
+Report: `artifacts/reports/non-wdi-multisource-disagreement-planning-gate-20260713/report.md`.
+Inventory: `artifacts/reports/non-wdi-multisource-disagreement-planning-gate-20260713/candidate_inventory.json`.
 
-## Correction basis
+## Verification
 
-The prior path B rationale over-weighted Pearson residue closure. Corrected-policy eligibility, finishing candidate lists, campaign continuity, and using recently validated infrastructure are procedural/cost considerations, not knowledge-value evidence. Campaigns 42-43 already proved the raw/first-difference coexistence and retrieval pattern.
+Passed:
 
-## Pearson/C alternatives
+- `python3 -m unittest discover -s tests -v` — 336 tests OK.
+- Targeted handoff/source-boundary suite — 37 tests OK.
+- Canonical count/fingerprint — 560, `sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7`.
+- PostgreSQL projection verify-only — valid true, 560 projected/560 canonical.
+- `git diff --check` and `git diff --cached --check`.
+- `python3 -m compileall -q tools tests`.
+- Coherence and context health — 0 blocks; stale generated-context warning only.
+- Architecture-to-reality audit — 0 blocks, 0 warnings.
+- Durability/sensitive/unsafe-path validation — exited 0; secret blockers 0; unsafe-path dependencies 0. Pre-publication D includes this gate's then-untracked artifacts plus unrelated residue; scoped commit/push makes the gate-specific exposure durable.
+- EOF/malformed-artifact inspection passed.
 
-- NOR crude birth rate / under-5 mortality: deferred indefinitely.
-- NOR crude birth rate / life expectancy: deferred indefinitely.
-- NOR crude death rate / under-5 mortality: deferred indefinitely.
-- DNK forest area / private credit: rejected for current production priority.
-- DNK/SWE/NOR `NE.EXP.GNFS.ZS` statistical-summary replication: rejected as next production because Campaign 35 already produced those exact canonical packages.
+## Changed by this gate
 
-## Key artifacts
+Decision/report/inventory/task/backlog/roadmap/state/handoff/affected summaries plus `artifacts/reports/R-20260713-architecture-reality-audit.md`.
 
-- Decision: `artifacts/decisions/D-20260713-post-repair-production-readiness-gate.md`
-- Task: `artifacts/tasks/T-20260713-non-wdi-multisource-disagreement-planning-gate.md`
-- Report: `artifacts/reports/post-repair-production-readiness-gate-20260713/comparison_report.md`
-- Roadmap/backlog/state updated.
+## Current Git/residue boundary
 
-## Boundary
+Branch `main`; HEAD/origin/main `b0957ed0373fd1e56154999048e806034a249bdc`; ahead/behind `0 0`; nothing staged.
 
-No implementation has started. Do not acquire sources, implement ingestion, construct/publish packages, mutate PostgreSQL, mutate Relationship Export outputs, change doctrine/architecture/schema, modify another project, stage, commit, push, tag, release, or clean protected residue unless separately authorized.
+No package file changed, no new package was created, no Campaign 40-42 package changed, and production PostgreSQL was not mutated.
 
-## Protected residue
+Preserve unrelated residue: six `architecture/architectureharvest/` tracked deletions, eight Campaign 43 Relationship Export verification modifications, stale generated context, local config/caches/dumps/restore material, and unrelated operational/report residue.
 
-Preserve unless separately authorized: six tracked `architecture/architectureharvest/` deletions, eight Campaign 43 export-verification modifications, stale generated active context, local config, caches/dumps/restore material, and unrelated operational/report residue.
+## Resume boundary
 
-## Resume command
-
-From `/home/mkkto/srv/EIP/projects/KnowledgeForge`, only if separately authorized:
-
-`Open the Phase 2 non-WDI multi-source disagreement planning gate from B-20260709-025; select or reject one concrete objective disagreement-production candidate and stop before source acquisition, implementation, or production.`
+No active production task is selected. Reopen non-WDI disagreement production only after a bounded, immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists or is admitted through existing producer-neutral handoff boundaries.

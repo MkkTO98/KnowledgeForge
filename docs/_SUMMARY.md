@@ -57,7 +57,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `production_campaign_roadmap.md` records corrected path D: next selected task is the Phase 2 non-WDI multi-source disagreement planning gate; implementation not started.
+- `production_campaign_roadmap.md` records completed non-WDI multi-source disagreement planning gate: no candidate selected; reopen only after a source-independent metadata-complete two-source evidence bundle exists.
 
 ## Needs Attention
-- No source acquisition, ingestion implementation, package production, PostgreSQL mutation, Relationship Export output mutation, or doctrine/architecture change is authorized by the current roadmap entry.
+- No source acquisition, ingestion implementation, package production, PostgreSQL mutation, Relationship Export output mutation, or doctrine/architecture change is authorized by the completed planning gate.

@@ -320,13 +320,11 @@ Constraints: no pytest installation, no dependency declaration mutation merely t
 ### B-20260713-KF-002 — Phase 2 non-WDI multi-source disagreement planning gate
 
 Priority: P0
-Status: selected; not started
+Status: completed; no disagreement-production candidate selected
 Source: Corrected post-repair production-readiness gate decision D; original backlog item `B-20260709-025`.
+Decision: `artifacts/decisions/D-20260713-non-wdi-multisource-disagreement-planning-gate.md`.
+Report: `artifacts/reports/non-wdi-multisource-disagreement-planning-gate-20260713/report.md`.
 
-Objective: open a bounded production-enabling planning gate for non-WDI multi-source disagreement. Select or reject a concrete future objective disagreement-production candidate, define evidence boundaries and prerequisites, and determine whether later production is justified without architecture redesign.
+Outcome: the only concrete repository-supported source-pair candidate, World Bank WDI retained trade-share evidence vs the MacroForge neutral WDI release for DNK/SWE/NOR annual 1990-2024 exports/imports percent of GDP, was rejected because MacroForge redistributes WDI evidence and is not an independent source estimate. Broad MacroForge-documented non-WDI capabilities remain insufficiently bounded in KnowledgeForge for disagreement production.
 
-Deferred/rejected Pearson candidates: all four remaining corrected-policy Pearson candidates are not selected for immediate production. The three NOR demographic/health pairs are deferred indefinitely; DNK forest area / private credit remains rejected for current production priority.
-
-Rejected duplicate alternative: the DNK/SWE/NOR `NE.EXP.GNFS.ZS` statistical-summary replication is already complete and canonical from Campaign 35.
-
-Constraints: planning gate only; no source acquisition, ingestion implementation, package construction, canonical publication, PostgreSQL mutation/rebuild, Relationship Export output mutation, architecture/doctrine/schema change, MacroForge/InsightForge/other-project modification, staging, commit, push, tag, release, or unrelated residue cleanup.
+Smallest prerequisite to reopen: admit or retain one immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle through existing KnowledgeForge evidence or producer-neutral handoff boundaries. Do not reopen for source acquisition, comparison calculation, packages, PostgreSQL mutation, Relationship Export output mutation, architecture/doctrine/schema change, MacroForge/InsightForge/other-project modification, staging, commit, push, tag, release, or unrelated residue cleanup.

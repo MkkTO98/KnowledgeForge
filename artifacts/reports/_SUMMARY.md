@@ -117,6 +117,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `postgresql-realization-decision-20260710/`
 - `provider-neutral-outbox-polling-supersession-postgresql-prototype-20260711/`
 - `provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/`
+- `non-wdi-multisource-disagreement-planning-gate-20260713/`
 - `relationship-export-contract-v1-20260711/`
 - `relationship-export-existing-commitments-grep.txt`
 - `repository-scale-doctrine-review-20260710/`
@@ -127,7 +128,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `post-repair-production-readiness-gate-20260713/` records the corrected comparison selecting path D: Phase 2 non-WDI multi-source disagreement planning gate.
+- `non-wdi-multisource-disagreement-planning-gate-20260713/` records the completed planning gate: no candidate selected; the concrete WDI vs MacroForge neutral WDI release pair was rejected as not source-independent.
 
 ## Needs Attention
-- Campaign 43 Relationship Export artifacts modified by prior authorized verification remain local residue unless separately staged as closeout evidence.
+- Campaign 43 Relationship Export artifacts modified by prior authorized verification remain local residue unless separately staged as closeout evidence. Non-WDI disagreement production requires a future source-independent two-source evidence bundle before reopening.
