@@ -1,45 +1,33 @@
 # Latest Handoff
 
 Date: 2026-07-13
-Status: Phase 2 non-WDI multi-source disagreement planning gate completed; no candidate selected.
+Status: two-source evidence-admission prerequisite completed; candidate rejected before admission with available evidence.
 
 ## Outcome
 
-Rejected concrete candidate: World Bank WDI retained trade-share evidence vs MacroForge neutral WDI release for DNK/SWE/NOR annual 1990-2024 exports/imports percent of GDP.
+Rejected candidate: IMF WEO/DataMapper `NGDP_RPCH` vs OECD Economic Outlook 119 `GDPV_ANNPCT` for Denmark (`DNK`) annual real GDP growth, 2025.
 
-Reason: not source-independent. MacroForge neutral release redistributes/exports WDI evidence, so numerical differences would indicate release/adapter/provenance/normalization/vintage behavior, not source disagreement.
+Outcome: C — rejected. No immutable two-source evidence bundle was admitted.
 
-Decision: `artifacts/decisions/D-20260713-non-wdi-multisource-disagreement-planning-gate.md`.
-Report: `artifacts/reports/non-wdi-multisource-disagreement-planning-gate-20260713/report.md`.
-Inventory: `artifacts/reports/non-wdi-multisource-disagreement-planning-gate-20260713/candidate_inventory.json`.
+This is not a permanent-unsuitability decision. Retention permission was not established, not proven prohibited. The tool-layer blockage of an official terms lookup is an environment limitation, not substantive licensing evidence. Public API access is not redistribution or raw-value-retention permission. IMF/OECD independence is plausible but not proven for the exact concept. IMF exact release/vintage identity and 2025 observation status (actual, estimate, forecast, or mixed) remain unresolved.
 
-## Verification
+Task: `artifacts/tasks/T-20260713-two-source-gdp-growth-evidence-admission-prerequisite.md`.
+Decision: `artifacts/decisions/D-20260713-two-source-gdp-growth-evidence-admission-rejected.md`.
+Report: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/report.md`.
+Candidate assessment: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/candidate_assessment.json`.
 
-Passed:
+## Evidence retained
 
-- `python3 -m unittest discover -s tests -v` — 336 tests OK.
-- Targeted handoff/source-boundary suite — 37 tests OK.
-- Canonical count/fingerprint — 560, `sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7`.
-- PostgreSQL projection verify-only — valid true, 560 projected/560 canonical.
-- `git diff --check` and `git diff --cached --check`.
-- `python3 -m compileall -q tools tests`.
-- Coherence and context health — 0 blocks; stale generated-context warning only.
-- Architecture-to-reality audit — 0 blocks, 0 warnings.
-- Durability/sensitive/unsafe-path validation — exited 0; secret blockers 0; unsafe-path dependencies 0. Pre-publication D includes this gate's then-untracked artifacts plus unrelated residue; scoped commit/push makes the gate-specific exposure durable.
-- EOF/malformed-artifact inspection passed.
+Repository retains a compact human report plus one machine-readable assessment. Duplicative per-topic JSON records and the candidate-specific test module were removed during closeout. No temporary payload location is a recovery dependency, and no raw source values are retained.
 
-## Changed by this gate
+## Current production state
 
-Decision/report/inventory/task/backlog/roadmap/state/handoff/affected summaries plus `artifacts/reports/R-20260713-architecture-reality-audit.md`.
+No package file changed, no new package was created, production PostgreSQL was not mutated, and Relationship Export outputs were not modified by this task. No cross-source comparison was performed and no agreement/disagreement conclusion was reached. Architecture remains unchanged.
 
-## Current Git/residue boundary
+## Residue boundary
 
-Branch `main`; HEAD/origin/main `b0957ed0373fd1e56154999048e806034a249bdc`; ahead/behind `0 0`; nothing staged.
-
-No package file changed, no new package was created, no Campaign 40-42 package changed, and production PostgreSQL was not mutated.
-
-Preserve unrelated residue: six `architecture/architectureharvest/` tracked deletions, eight Campaign 43 Relationship Export verification modifications, stale generated context, local config/caches/dumps/restore material, and unrelated operational/report residue.
+Preserve unrelated residue: six `architecture/architectureharvest/` deletions, eight Campaign 43 Relationship Export verification modifications, stale generated context, local config/caches/dumps/restore material, and unrelated operational/report residue.
 
 ## Resume boundary
 
-No active production task is selected. Reopen non-WDI disagreement production only after a bounded, immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists or is admitted through existing producer-neutral handoff boundaries.
+No admitted two-source evidence bundle exists. This candidate may be reconsidered only if missing admission evidence is independently established before raw values are retained. Do not calculate source differences or classify agreement/disagreement.

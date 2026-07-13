@@ -15,7 +15,7 @@ This folder is part of the ProjectForge file-backed operating system for `state`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No active production task selected. Phase 2 non-WDI multi-source disagreement planning gate completed with no candidate selected.
+- Current state records the rejected IMF/OECD GDP-growth evidence-admission attempt with available evidence; no admitted two-source bundle exists.
 
 ## Needs Attention
-- Preserve known unrelated local residue; do not clean or stage it. Reopen disagreement production only after a source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists.
+- Next attempt must independently establish retention permission, exact release/vintage identity, source independence, and observation status before retaining raw source values.

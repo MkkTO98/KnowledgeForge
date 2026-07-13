@@ -328,3 +328,16 @@ Report: `artifacts/reports/non-wdi-multisource-disagreement-planning-gate-202607
 Outcome: the only concrete repository-supported source-pair candidate, World Bank WDI retained trade-share evidence vs the MacroForge neutral WDI release for DNK/SWE/NOR annual 1990-2024 exports/imports percent of GDP, was rejected because MacroForge redistributes WDI evidence and is not an independent source estimate. Broad MacroForge-documented non-WDI capabilities remain insufficiently bounded in KnowledgeForge for disagreement production.
 
 Smallest prerequisite to reopen: admit or retain one immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle through existing KnowledgeForge evidence or producer-neutral handoff boundaries. Do not reopen for source acquisition, comparison calculation, packages, PostgreSQL mutation, Relationship Export output mutation, architecture/doctrine/schema change, MacroForge/InsightForge/other-project modification, staging, commit, push, tag, release, or unrelated residue cleanup.
+
+
+### B-20260713-KF-003 — Two-source GDP growth evidence-admission prerequisite
+
+Priority: P0
+Status: completed; rejected before admission
+Source: prerequisite from completed non-WDI multi-source disagreement planning gate.
+Decision: `artifacts/decisions/D-20260713-two-source-gdp-growth-evidence-admission-rejected.md`.
+Report: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/report.md`.
+
+Outcome: IMF WEO/DataMapper vs OECD Economic Outlook 119 for Denmark 2025 annual real GDP growth was rejected before admission with available evidence. Retention permission was not established, not proven prohibited; the blocked official terms lookup is a tool-layer limitation rather than substantive licensing evidence. IMF exact release/vintage identity, exact source-independence proof, and 2025 observation status also remained unresolved.
+
+Smallest next prerequisite: independently establish retention permission, exact release/vintage identities, exact source independence, and observation status for a bounded two-source candidate before retaining raw source values. Do not calculate differences or classify agreement/disagreement.

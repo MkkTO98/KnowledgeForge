@@ -1,39 +1,29 @@
 # Active Goal
 
-Status: no active production task selected after Phase 2 non-WDI multi-source disagreement planning gate.
+Status: no admitted two-source evidence bundle after IMF/OECD GDP-growth evidence-admission prerequisite.
 
-## Latest completed gate
+## Latest completed prerequisite attempt
 
-The Phase 2 non-WDI multi-source disagreement planning gate from `B-20260709-025` completed on 2026-07-13.
+The two-source evidence-admission prerequisite completed on 2026-07-13 with outcome C — rejected before admission with available evidence.
 
-Outcome: no disagreement-production candidate selected.
+Task: `artifacts/tasks/T-20260713-two-source-gdp-growth-evidence-admission-prerequisite.md`.
+Decision: `artifacts/decisions/D-20260713-two-source-gdp-growth-evidence-admission-rejected.md`.
+Report: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/report.md`.
+Machine record: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/candidate_assessment.json`.
 
-Decision: `artifacts/decisions/D-20260713-non-wdi-multisource-disagreement-planning-gate.md`.
-Report: `artifacts/reports/non-wdi-multisource-disagreement-planning-gate-20260713/report.md`.
-Task: `artifacts/tasks/T-20260713-non-wdi-multisource-disagreement-planning-gate.md`.
+## Result
 
-## Gate result
+Candidate rejected with available evidence: IMF WEO/DataMapper `NGDP_RPCH` vs OECD Economic Outlook 119 `GDPV_ANNPCT` for Denmark annual real GDP growth, 2025.
 
-The only concrete repository-supported source-pair candidate was rejected:
-
-- World Bank WDI retained trade-share evidence vs MacroForge neutral WDI release for DNK/SWE/NOR annual 1990-2024 exports/imports percent of GDP.
-
-Reason: MacroForge redistributes WDI evidence and is not an independent source estimate. Any numerical difference would be release/adapter/provenance/normalization/vintage/revision behavior, not source disagreement.
-
-## Smallest prerequisite to reopen
-
-Reopen disagreement production only after KnowledgeForge has, or has admitted through an existing producer-neutral handoff boundary, one immutable two-source evidence bundle that is:
-
-- genuinely source-independent;
-- bounded to one concept, one or a few entities, one frequency, and one time window;
-- metadata-complete for equivalence testing;
-- licensing/retention-cleared;
-- deterministic and fingerprinted;
-- usable without runtime imports, database access, shared code, or private schema dependence on MacroForge or another project.
+This is not a permanent-unsuitability decision. Retention permission was not established, not proven prohibited. The tool-layer blockage of an official terms lookup is an environment limitation, not substantive licensing evidence. Public API access is not redistribution permission. IMF/OECD source independence remains plausible but unproven. IMF exact release/vintage identity and 2025 observation status (actual, estimate, forecast, or mixed) remain unresolved.
 
 ## Current boundary
 
-Do not begin source acquisition, API calls, ingestion, normalization, difference calculation, disagreement registry creation, package construction/publication, PostgreSQL mutation/rebuild, Relationship Export output mutation, architecture/doctrine/schema change, other-project modification, protected-residue cleanup, staging, commit, push, tag or release without separate authorization.
+No admitted two-source evidence bundle exists. The candidate may be reconsidered only if missing admission evidence is independently established before raw values are retained.
+
+No cross-source comparison was performed and no agreement/disagreement conclusion was reached. Architecture, doctrine, schema, package model, PostgreSQL role, and Relationship Export remain unchanged.
+
+Do not calculate differences, classify agreement/disagreement, create registries, construct/publish packages, mutate PostgreSQL, mutate Relationship Export outputs, change architecture/doctrine/schema, modify other projects, or clean protected residue without separate authorization.
 
 ## Protected residue
 

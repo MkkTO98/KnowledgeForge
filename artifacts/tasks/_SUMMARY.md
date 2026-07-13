@@ -103,20 +103,11 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260712-pearson-candidate-policy-refinement-mixed-roadmap.md`
 - `T-20260712-pearson-candidate-policy-v2-consistency-correction.md`
 - `backlog.md`
+- `T-20260713-two-source-gdp-growth-evidence-admission-prerequisite.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `T-20260713-non-wdi-multisource-disagreement-planning-gate.md` — completed; no disagreement-production candidate selected because the only concrete retained-evidence pair is not source-independent.
+- `T-20260713-two-source-gdp-growth-evidence-admission-prerequisite.md` — completed; IMF/OECD Denmark 2025 real GDP growth candidate rejected before admission with available evidence because retention permission, IMF release/vintage identity, exact independence proof, and 2025 observation status remained unresolved.
 
 ## Needs Attention
 - Reopen non-WDI disagreement production only after a bounded, immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists. Preserve unrelated residue; do not stage/commit/push unless separately authorized.
-- Repository-wide unittest discovery is repaired (`336 tests OK`); package production still requires a later explicit execution/publication authorization.
-- `T-20260712-campaign41-coefficient-free-pearson-candidate-registry.md` — completed; froze 8 coefficient-free Campaign 41 Pearson candidates and spec; outcome B required bounded engine extension before calculation.
-- `T-20260712-campaign41-generic-correlation-engine-provenance-parameterization.md` — completed; outcome A; generic correlation engine ready for separately authorized Campaign 41 execution.
-- `T-20260712-campaign41-frozen-pearson-batch-production.md` — completed; outcome A; 8 Campaign 41 Pearson packages published append-only and PostgreSQL/export retrieval verified.
-- `T-20260712-campaign41-assimilation-pearson-path-to-100-production-utility-review.md` — completed; disposition E; Campaign 41 assimilation required no new index/schema work and Pearson sequencing now favors a mixed roadmap before any Campaign 42/raw path expansion.
-- `T-20260712-pearson-candidate-policy-refinement-mixed-roadmap.md` — completed; original disposition A corrected by v2 consistency task; its 7-candidate output is historical comparison, not future-production evidence.
-- `T-20260712-pearson-candidate-policy-v2-consistency-correction.md` — completed; disposition B; corrected canonical exclusion and remote-cap arithmetic, found only 4 future-production candidates, and selected first-difference method validation before further raw production.
-- `T-20260712-first-difference-pearson-method-contract-validation.md` — completed; decision A; validated `wdi_annual_scalar_first_difference_pearson_v1@1.0` as bounded companion method, with next task a coefficient-free companion-production registry before any coefficient calculation/publication.
-- `T-20260712-campaign42-coefficient-free-first-difference-pearson-companion-registry.md` — completed; decision A; froze 8 coefficient-free first-difference Pearson companion candidates with registry fingerprint `sha256:be7a085b5a74860c9a6c95fb2c9e6f45a066679d317fc743694959d502e3dc15` and spec fingerprint `sha256:ec3eaf0f735a888bc01f9cf394f015dd87eab3096be2690e75de0c4ec6f86d00`; no coefficients/packages were produced.
-- `T-20260712-campaign43-coefficient-free-first-difference-companion-registry-freeze.md` — completed; froze all six authorized remaining Campaign 41 high-shared-time-trend raw Pearson relationships with registry fingerprint `sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1`; no coefficients/packages/PostgreSQL mutation.

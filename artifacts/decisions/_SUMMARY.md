@@ -79,10 +79,11 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `D-20260712-pearson-candidate-policy-v2-mixed-roadmap.md`
 - `D-20260712-pearson-path-to-100-mixed-roadmap.md`
 - `D-SETUP-project-initialization.md`
+- `D-20260713-two-source-gdp-growth-evidence-admission-rejected.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `D-20260713-non-wdi-multisource-disagreement-planning-gate.md` rejects the only concrete retained-evidence pair as not source-independent; no disagreement-production candidate is selected.
+- `D-20260713-two-source-gdp-growth-evidence-admission-rejected.md` rejects IMF/OECD Denmark 2025 real GDP growth evidence admission with available evidence; no bundle admitted and candidate is not classified permanently unsuitable.
 
 ## Needs Attention
-- Reopen non-WDI disagreement production only after a bounded, immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists or is admitted through existing producer-neutral handoff boundaries.
+- Next evidence-admission attempt must independently establish retention permission, exact release/vintage identity, source independence, and observation status before retaining raw source values.

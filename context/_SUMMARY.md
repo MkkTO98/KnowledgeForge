@@ -14,8 +14,7 @@ Context and handoff material for future KnowledgeForge sessions.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `latest_handoff.md` records completed non-WDI multi-source disagreement planning gate: no candidate selected.
+- `latest_handoff.md` records the rejected IMF/OECD GDP-growth evidence-admission attempt, semantic corrections, and resume boundary.
 
 ## Needs Attention
-- Rebuild generated context bundles for future tasks instead of trusting stale `active_context.md` or `compressed_context.md`.
-- Preserve unrelated residue; do not clean/stage it unless separately authorized.
+- Preserve protected residue and avoid stale `active_context.md` unless deliberately rebuilt.

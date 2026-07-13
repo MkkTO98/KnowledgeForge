@@ -1,0 +1,121 @@
+{
+  "admission_outcome": "C_rejected_not_admitted_with_available_evidence",
+  "artifact_proportionality": {
+    "consolidated_removed_records": [
+      "source_independence_record.json",
+      "metadata_comparability_readiness.json",
+      "licensing_retention_record.json",
+      "retrieval_provenance_compact.json",
+      "compact_validation_summary.json"
+    ],
+    "removed_test_module": "tests/test_two_source_evidence_admission_prerequisite.py removed because it froze this specific rejection artifact rather than reusable candidate-independent admission logic.",
+    "retained_machine_record_purpose": "Single structured record preserving the exact admission-gate blockers, semantic distinctions, and non-comparison invariants for future pre-admission review without retaining raw source values."
+  },
+  "artifact_type": "two_source_evidence_admission_rejection_assessment",
+  "artifact_version": "1.1",
+  "bundle_identifier": null,
+  "candidate_identifier": "candidate-imf-weo-vs-oecd-eo119-dnk-real-gdp-growth-2025",
+  "candidate_reconsideration": "May be reconsidered only if missing admission evidence is independently established; this rejection is not a permanent unsuitability finding.",
+  "closeout_corrected_at_utc": "2026-07-13",
+  "created_at_utc": "2026-07-13T05:27:15Z",
+  "decision_id": "D-20260713-two-source-gdp-growth-evidence-admission-rejected",
+  "fingerprints": {
+    "candidate_assessment_v1_1": "sha256:0021076165725ad5ae98ae38772ac10b97afa35be50326dc898bd2d0dff5be89"
+  },
+  "independence_assessment": {
+    "conclusion": "plausible_not_proven; insufficient for admission",
+    "institutional_publishers_distinct": true,
+    "plausible_independence_basis": "IMF and OECD are distinct institutional publishers with separate publication processes.",
+    "unresolved_questions": [
+      "whether either source cites or redistributes the other for this exact concept",
+      "whether both rely on the same upstream estimate for this exact observation",
+      "whether the exact selected estimates are independently compiled rather than mirrored or adapted"
+    ]
+  },
+  "licensing_retention_assessment": {
+    "metadata_retention_permission": "not_established_for_source_terms",
+    "public_access_not_equivalent_to_redistribution_permission": true,
+    "public_api_access_observed": true,
+    "raw_value_retention_permission": "not_established",
+    "redistribution_permission": "not_established",
+    "retention_gate": "failed_due_to_unresolved_permission",
+    "terms_lookup_status": "blocked_by_tool_layer; not substantive evidence of permission or prohibition"
+  },
+  "metadata_comparability_readiness": {
+    "aggregation_method": "unresolved",
+    "concept_definition": "present_with_source-specific_labels",
+    "currency_conversion_basis": "not_applicable_or_unresolved_for_percent_growth",
+    "entity_territorial_scope": "present_DNK",
+    "frequency": "present_annual",
+    "missing_value_semantics": "unresolved",
+    "nominal_real_status": "real_growth_intent_present_but_source_specific_basis_unresolved",
+    "observation_status": "unresolved_actual_estimate_forecast_or_mixed",
+    "price_or_index_base": "oecd_base_observed; imf_basis_unresolved",
+    "reference_period": "present_2025",
+    "release_vintage": "oecd_observed; imf_unresolved",
+    "revision_policy": "unresolved",
+    "seasonal_calendar_adjustment": "unresolved",
+    "unit_and_scaling": "present_as_annual_percent_change_or_percentage_label"
+  },
+  "negative_invariants": {
+    "no_agreement_or_disagreement_classification": true,
+    "no_architecture_doctrine_or_schema_change": true,
+    "no_canonical_publication": true,
+    "no_comparison_registry_created": true,
+    "no_cross_source_difference_calculated": true,
+    "no_knowledge_object_package_created": true,
+    "no_postgresql_mutation": true,
+    "no_relationship_export_mutation": true
+  },
+  "scope": {
+    "concept": "annual real GDP growth / annual percent change in real GDP",
+    "entity": [
+      "DNK"
+    ],
+    "frequency": "annual",
+    "source_a_release_or_endpoint": "IMF DataMapper/WEO NGDP_RPCH endpoint for Denmark; exact IMF release/vintage unresolved",
+    "source_b_release_or_endpoint": "OECD Economic Outlook 119, SDMX dataflow OECD.ECO.MAD:DSD_EO@DF_EO(1.5), GDPV_ANNPCT, Denmark, 2025",
+    "sources": [
+      "International Monetary Fund",
+      "OECD"
+    ],
+    "time_window": [
+      "2025"
+    ]
+  },
+  "semantic_corrections": {
+    "architecture_boundary": "Architecture, doctrine, schema, package model, PostgreSQL role, and Relationship Export remain unchanged.",
+    "candidate_status": "The candidate was not admitted with available evidence; it is not classified as permanently unsuitable.",
+    "comparison_boundary": "No agreement/disagreement conclusion was reached and no cross-source comparison was performed.",
+    "observation_status": "The 2025 observation status remains unresolved: actual, estimate, forecast, or mixed status was not established for both sources.",
+    "public_access": "Unauthenticated public API access was observed, but public access is not treated as redistribution or raw-value-retention permission.",
+    "release_identity": "OECD Economic Outlook 119 identity was observed; IMF exact release/vintage identity remains unresolved and is not treated as immutable release identity.",
+    "retention_permission": "Retention permission was not established; the assessment does not claim retention is prohibited.",
+    "source_independence": "Distinct institutional publishers make independence plausible, but source independence was not proven for the exact concept.",
+    "tool_layer_blockage": "The blocked official-terms lookup is an environment/tool limitation, not substantive licensing evidence."
+  },
+  "source_components": [
+    {
+      "candidate_endpoint": "https://www.imf.org/external/datamapper/api/v1/NGDP_RPCH/DNK",
+      "component_id": "source_a_imf_weo_ngdp_rpch_dnk_2025",
+      "institutional_publisher": "International Monetary Fund",
+      "observation_status": "unresolved_actual_estimate_forecast_or_mixed",
+      "raw_values_retained_in_repository": false,
+      "redistribution_permission_status": "not_established",
+      "release_vintage_identity_status": "unresolved_exact_imf_release_or_vintage",
+      "retention_permission_status": "not_established"
+    },
+    {
+      "candidate_endpoint": "https://sdmx.oecd.org/public/rest/v1/data/OECD.ECO.MAD,DSD_EO@DF_EO,1.5/DNK.GDPV_ANNPCT.A?startPeriod=2025&endPeriod=2025",
+      "component_id": "source_b_oecd_eo119_gdpv_annpct_dnk_2025",
+      "institutional_publisher": "OECD",
+      "observation_status": "unresolved_actual_estimate_forecast_or_mixed",
+      "raw_values_retained_in_repository": false,
+      "redistribution_permission_status": "not_established",
+      "release_vintage_identity_status": "oecd_economic_outlook_119_observed",
+      "retention_permission_status": "not_established"
+    }
+  ],
+  "task_id": "T-20260713-two-source-gdp-growth-evidence-admission-prerequisite",
+  "validation_status": "rejected_before_admission"
+}

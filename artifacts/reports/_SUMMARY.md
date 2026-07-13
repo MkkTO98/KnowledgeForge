@@ -125,10 +125,11 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `reviewed-git-durability-publication-20260712/`
 - `statistical-summary-method-v2-and-campaign35-prep-20260710/`
 - `wdi-observation-fixture-statistical-summary-design-gate-20260710/`
+- `evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `non-wdi-multisource-disagreement-planning-gate-20260713/` records the completed planning gate: no candidate selected; the concrete WDI vs MacroForge neutral WDI release pair was rejected as not source-independent.
+- `evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/` records the rejected IMF/OECD Denmark 2025 real GDP growth evidence-admission attempt using one compact report plus one machine-readable assessment.
 
 ## Needs Attention
-- Campaign 43 Relationship Export artifacts modified by prior authorized verification remain local residue unless separately staged as closeout evidence. Non-WDI disagreement production requires a future source-independent two-source evidence bundle before reopening.
+- Do not retain bulky validator/source payloads in repository unless policy authority and long-term use are explicit. Non-WDI disagreement production still lacks an admitted two-source evidence bundle.

@@ -57,7 +57,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `production_campaign_roadmap.md` records completed non-WDI multi-source disagreement planning gate: no candidate selected; reopen only after a source-independent metadata-complete two-source evidence bundle exists.
+- `production_campaign_roadmap.md` notes the rejected IMF/OECD evidence-admission prerequisite attempt with unresolved retention/release/independence/observation-status evidence.
 
 ## Needs Attention
-- No source acquisition, ingestion implementation, package production, PostgreSQL mutation, Relationship Export output mutation, or doctrine/architecture change is authorized by the completed planning gate.
+- Non-WDI disagreement production still requires an admitted source-independent two-source evidence bundle.
