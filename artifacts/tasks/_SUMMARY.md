@@ -97,16 +97,18 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260712-first-difference-pearson-method-contract-validation.md`
 - `T-20260712-next-production-readiness-decision-before-campaign43.md`
 - `T-20260712-operational-state-backup-restore-durability-gate.md`
+- `T-20260713-post-campaign43-next-production-readiness-gate.md`
+- `T-20260713-post-campaign43-test-discovery-correction.md`
 - `T-20260712-pearson-candidate-policy-refinement-mixed-roadmap.md`
 - `T-20260712-pearson-candidate-policy-v2-consistency-correction.md`
 - `backlog.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No folder-specific active work recorded.
+- Next ready task: open a new post-repair production-readiness decision gate; do not begin implementation inside the gate.
 
 ## Needs Attention
-- No folder-specific issues recorded.
+- Repository-wide unittest discovery is repaired (`336 tests OK`); package production still requires a new explicit readiness decision and authorization.
 - `T-20260712-campaign41-coefficient-free-pearson-candidate-registry.md` — completed; froze 8 coefficient-free Campaign 41 Pearson candidates and spec; outcome B required bounded engine extension before calculation.
 - `T-20260712-campaign41-generic-correlation-engine-provenance-parameterization.md` — completed; outcome A; generic correlation engine ready for separately authorized Campaign 41 execution.
 - `T-20260712-campaign41-frozen-pearson-batch-production.md` — completed; outcome A; 8 Campaign 41 Pearson packages published append-only and PostgreSQL/export retrieval verified.

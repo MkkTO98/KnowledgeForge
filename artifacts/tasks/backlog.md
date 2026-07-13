@@ -306,3 +306,13 @@ Source: MacroForge real handoff compatibility pilot integration decision B.
 Objective: ask MacroForge to trigger its neutral evidence-release exporter from successful canonical release closeout, preserving producer-side release/run lineage and avoiding scheduler/canonical-mutation work until handoff generation is reliable.
 
 Constraints: no KnowledgeForge canonical promotion, no inbox scheduling, no PostgreSQL incremental mutation, no shared runtime code, and no MacroForge private-schema dependency.
+
+### B-20260713-KF-001 — Restore repository-wide unittest discovery after Campaign 43
+
+Priority: P0
+Status: completed locally 2026-07-13
+Source: Post-Campaign-43 next-production readiness gate decision D.
+
+Objective: convert `tests/test_operational_state_checkpoint.py` from undeclared `pytest` dependency to standard-library `unittest` semantics, preserving all operational-state-checkpoint assertions and proving `python3 -m unittest discover -s tests -v` runs cleanly.
+
+Constraints: no pytest installation, no dependency declaration mutation merely to satisfy tests, no production behavior change, no package production, no PostgreSQL mutation, no architecture/doctrine/schema change, no broad test-framework migration, no unrelated residue cleanup.

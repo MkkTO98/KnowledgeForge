@@ -999,3 +999,17 @@ Interpretation boundary: five coefficients are near zero or weak after differenc
 No doctrine, architecture, schema, method-family, PostgreSQL schema, Relationship Export Contract, or KnowledgeObjectPackage redesign occurred.
 
 Next roadmap step: select the next production campaign from the real backlog after Campaign 43, without treating Campaign 43 publication as authorization for a new campaign.
+
+## Post-Campaign-43 next-production readiness gate — 2026-07-13
+
+Decision D: perform the smallest bounded production-enabling correction before additional production.
+
+Selected task: convert `tests/test_operational_state_checkpoint.py` from undeclared `pytest` dependency to standard-library `unittest` semantics, preserving behavior and proving repository-wide unittest discovery.
+
+Basis: Campaign 43 is fully closed at 560 packages, PostgreSQL and Relationship Export are valid, but `python3 -m unittest discover -s tests -v` fails because a single test imports undeclared `pytest` in a repository with no declared pytest environment and established `python3 -m unittest` usage. This materially weakens repeatable verification and can hide unexecuted tests.
+
+Rejected for immediate execution: four remaining corrected-policy raw Pearson candidates are all high time-risk and raw-only publication would be predictably incomplete; paired raw-plus-first-difference sequencing is valid in principle but should follow verification repair; other roadmap/backlog candidates do not exceed the immediate value of restoring reliable repository-wide verification.
+
+Boundary: no package production, coefficient calculation, PostgreSQL mutation, doctrine/architecture/schema change, broad test-framework migration, or residue cleanup is authorized.
+
+Closeout: selected test-discovery correction completed locally on 2026-07-13. `tests/test_operational_state_checkpoint.py` now uses pure unittest/standard-library constructs, focused module verification passed with 6 tests, and repository-wide `python3 -m unittest discover -s tests -v` passed with 336 tests. Next roadmap step is a new readiness gate selecting one bounded production or production-enabling task from the documented backlog; do not begin implementation as part of this closeout.

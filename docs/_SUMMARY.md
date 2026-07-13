@@ -57,7 +57,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No folder-specific active work recorded.
+- `production_campaign_roadmap.md` records restored repository-wide unittest discovery after the post-Campaign-43 test-governance correction.
 
 ## Needs Attention
-- No folder-specific issues recorded.
+- No package production, coefficient calculation, or doctrine/architecture change is authorized by the current roadmap entry.

@@ -14,8 +14,8 @@ Context and handoff material for future KnowledgeForge sessions.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No active work remains after the Campaign 43 coefficient-free first-difference companion registry freeze; awaiting authorization for Campaign 43 production preflight/coefficient calculation from the frozen registry.
+- Post-Campaign-43 test-discovery correction complete; `latest_handoff.md` points to the next readiness-gate boundary.
 
 ## Needs Attention
 - Rebuild generated context bundles for future tasks instead of trusting stale `active_context.md` or `compressed_context.md`.
-- `latest_handoff.md` records the completed Campaign 43 registry freeze, registry/spec fingerprints, verification outcome, and exact next authorized-task boundary.
+- Preserve unrelated residue; do not clean/stage it unless separately authorized.

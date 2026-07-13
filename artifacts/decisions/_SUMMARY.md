@@ -72,6 +72,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `D-20260712-first-difference-pearson-method-contract-validation.md`
 - `D-20260712-next-production-readiness-before-campaign43.md`
 - `D-20260712-operational-state-backup-restore-durability-gate.md`
+- `D-20260713-post-campaign43-next-production-readiness-gate.md`
 - `D-20260712-pearson-candidate-policy-v2-consistency-correction.md`
 - `D-20260712-pearson-candidate-policy-v2-mixed-roadmap.md`
 - `D-20260712-pearson-path-to-100-mixed-roadmap.md`
@@ -82,4 +83,4 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - No folder-specific active work recorded.
 
 ## Needs Attention
-- `D-20260712-campaign43-first-difference-companion-registry-frozen.md` accepts the coefficient-free six-candidate registry freeze only; it does not authorize calculation, package publication, PostgreSQL mutation, doctrine changes, or export/schema redesign.
+- `D-20260713-post-campaign43-next-production-readiness-gate.md` selected bounded test-governance correction; implementation is complete locally and repository-wide unittest discovery passed with 336 tests. It still does not authorize packages, coefficients, PostgreSQL mutation, doctrine/schema changes, or residue cleanup.

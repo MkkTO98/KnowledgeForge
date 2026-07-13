@@ -1,23 +1,27 @@
 # Active Goal
 
-Status: Campaign 43 published locally; Git publication in progress
+## Current active goal
 
-Current completed production task: Campaign 43 first-difference Pearson companion publication.
+Open the next post-repair production-readiness decision gate.
 
-Outcome: exactly six Campaign 43 companion packages were published append-only into the canonical Knowledge Repository, PostgreSQL projection was rebuilt, and Relationship Export v1 was verified.
+## Status
 
-Canonical state:
+Ready for a new decision gate; do not begin implementation without separate authorization.
 
-- packages: 560
-- repository fingerprint: `sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7`
-- Campaign 43 package-set fingerprint: `sha256:9ed161b9dcf7472b7e13979cbd9cd1a24f1ce3009108e677c41dace20277d559`
+## Current verified baseline
 
-Operational verification:
+- Branch: `main`
+- HEAD/origin baseline: `bda3f13808bf70c7b108bcf215f98f5789d937fe`
+- Canonical packages: 560
+- Repository fingerprint: `sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7`
+- PostgreSQL projection: valid at 560 packages
+- Relationship Export closeout: 35 total relationships, 21 raw Pearson, 14 first-difference Pearson, no raw/first-difference overlap
+- Repository-wide unittest discovery: restored; `python3 -m unittest discover -s tests -v` passed with 336 tests on 2026-07-13
 
-- PostgreSQL projected package count: 560
-- Relationship Export counts: raw Pearson 21; first-difference Pearson 14
-- independent consumer simulation: passed
+## Completed immediately prior task
 
-Git publication step remains: stage only the Campaign 43 boundary, commit, push normally to `origin/main`, and perform post-push verification.
+The post-Campaign-43 production-enabling correction converted `tests/test_operational_state_checkpoint.py` from undeclared pytest usage to pure unittest/standard-library semantics. No production code or canonical state changed.
 
-Next smallest task after successful push: choose the next production campaign from the real backlog; do not begin it without explicit authorization.
+## Next boundary
+
+Select exactly one bounded next production or production-enabling task from the documented roadmap/backlog. Do not calculate coefficients, create registries/packages, mutate PostgreSQL, clean unrelated residue, stage, commit, or push unless separately authorized.

@@ -15,7 +15,7 @@ This folder is part of the ProjectForge file-backed operating system for `state`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No folder-specific active work recorded.
+- Next active goal is a new post-repair production-readiness decision gate only; repository-wide unittest discovery is restored.
 
 ## Needs Attention
-- No folder-specific issues recorded.
+- Preserve known unrelated local residue; do not clean or stage it as part of the next readiness gate.
