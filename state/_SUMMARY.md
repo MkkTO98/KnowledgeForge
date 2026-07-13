@@ -15,7 +15,7 @@ This folder is part of the ProjectForge file-backed operating system for `state`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Next active goal is a new post-repair production-readiness decision gate only; repository-wide unittest discovery is restored.
+- Next active goal is the Phase 2 non-WDI multi-source disagreement planning gate if separately authorized; the corrected readiness gate is complete.
 
 ## Needs Attention
-- Preserve known unrelated local residue; do not clean or stage it as part of the next readiness gate.
+- Preserve known unrelated local residue; do not clean or stage it as part of the next planning task.

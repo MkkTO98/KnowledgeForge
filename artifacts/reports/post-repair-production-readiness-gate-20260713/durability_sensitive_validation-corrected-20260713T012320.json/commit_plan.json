@@ -1,0 +1,2266 @@
+{
+  "groups": [
+    {
+      "approx_bytes": 76414,
+      "canonical_data_included": false,
+      "depends_on": [],
+      "file_count": 7,
+      "group": "01-foundational-doctrine-state-architecture",
+      "pathspecs": [
+        "AGENTS.md",
+        "CONSTITUTION.md",
+        "README.md",
+        "_SUMMARY.md",
+        "architecture/",
+        "docs/",
+        "state/",
+        "context/",
+        "instructions/"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [
+        {
+          "classification": "reviewed_historical_or_evidence_local_path_reference",
+          "count": 1,
+          "disposition": "benign as historical/provenance text; do not treat as a secret",
+          "finding_type": "absolute_home_path",
+          "path": "context/latest_handoff.md"
+        },
+        {
+          "classification": "reviewed_historical_or_evidence_local_path_reference",
+          "count": 1,
+          "disposition": "benign as historical/provenance text; do not treat as a secret",
+          "finding_type": "absolute_home_path",
+          "path": "state/active_goal.md"
+        }
+      ],
+      "sequence": 1,
+      "suggested_commit_message": "KnowledgeForge: 01 foundational doctrine state architecture",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 7,
+      "untracked": 0
+    },
+    {
+      "approx_bytes": 0,
+      "canonical_data_included": false,
+      "depends_on": [
+        "01-foundational-doctrine-state-architecture"
+      ],
+      "file_count": 0,
+      "group": "02-canonical-knowledge-repository",
+      "pathspecs": [
+        "knowledge_repository/"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 2,
+      "suggested_commit_message": "KnowledgeForge: 02 canonical knowledge repository",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 0
+    },
+    {
+      "approx_bytes": 0,
+      "canonical_data_included": false,
+      "depends_on": [
+        "02-canonical-knowledge-repository"
+      ],
+      "file_count": 0,
+      "group": "03-mature-wdi-production-evidence",
+      "pathspecs": [
+        "artifacts/evidence-fixtures/",
+        "artifacts/production/",
+        "artifacts/methods/"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 3,
+      "suggested_commit_message": "KnowledgeForge: 03 mature wdi production evidence",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 0
+    },
+    {
+      "approx_bytes": 0,
+      "canonical_data_included": false,
+      "depends_on": [
+        "03-mature-wdi-production-evidence"
+      ],
+      "file_count": 0,
+      "group": "04-postgresql-projection",
+      "pathspecs": [
+        "tools/postgresql_operational_projection.py",
+        "tools/postgresql_realization_decision.py",
+        "tests/test_postgresql",
+        "docs/postgresql"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 4,
+      "suggested_commit_message": "KnowledgeForge: 04 postgresql projection",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 0
+    },
+    {
+      "approx_bytes": 134348,
+      "canonical_data_included": false,
+      "depends_on": [
+        "04-postgresql-projection"
+      ],
+      "file_count": 18,
+      "group": "05-statistical-summary-methods-objects",
+      "pathspecs": [
+        "tools/deterministic_statistical_summary_v2.py",
+        "tests/test_statistical_summary",
+        "docs/statistical_summary",
+        "artifacts/reports/campaign34",
+        "artifacts/reports/campaign35"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 5,
+      "suggested_commit_message": "KnowledgeForge: 05 statistical summary methods objects",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 18
+    },
+    {
+      "approx_bytes": 212713,
+      "canonical_data_included": false,
+      "depends_on": [
+        "05-statistical-summary-methods-objects"
+      ],
+      "file_count": 36,
+      "group": "06-pearson-correlation-method-objects",
+      "pathspecs": [
+        "tools/deterministic_pearson_correlation_v1.py",
+        "tools/run_campaign36",
+        "tools/run_campaign37",
+        "tools/run_campaign38",
+        "tools/run_campaign39",
+        "tests/test_campaign36",
+        "tests/test_campaign37",
+        "tests/test_campaign38",
+        "tests/test_campaign39",
+        "docs/pearson",
+        "docs/correlation",
+        "artifacts/reports/campaign36",
+        "artifacts/reports/campaign37",
+        "artifacts/reports/campaign38",
+        "artifacts/reports/campaign39"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 6,
+      "suggested_commit_message": "KnowledgeForge: 06 pearson correlation method objects",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 36
+    },
+    {
+      "approx_bytes": 53757,
+      "canonical_data_included": false,
+      "depends_on": [
+        "06-pearson-correlation-method-objects"
+      ],
+      "file_count": 5,
+      "group": "07-specification-driven-batch-engine-campaign40",
+      "pathspecs": [
+        "tools/correlation_batch_engine.py",
+        "tests/test_correlation_batch_engine.py",
+        "artifacts/reports/campaign40",
+        "specs/"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 7,
+      "suggested_commit_message": "KnowledgeForge: 07 specification driven batch engine campaign40",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 5
+    },
+    {
+      "approx_bytes": 54387,
+      "canonical_data_included": false,
+      "depends_on": [
+        "07-specification-driven-batch-engine-campaign40"
+      ],
+      "file_count": 5,
+      "group": "08-relationship-export-contract",
+      "pathspecs": [
+        "tools/relationship_export",
+        "tests/test_relationship_export",
+        "artifacts/reports/relationship-export",
+        "docs/interfaces.md"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 8,
+      "suggested_commit_message": "KnowledgeForge: 08 relationship export contract",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 5
+    },
+    {
+      "approx_bytes": 0,
+      "canonical_data_included": false,
+      "depends_on": [
+        "08-relationship-export-contract"
+      ],
+      "file_count": 0,
+      "group": "09-release-automation-inbox-registries",
+      "pathspecs": [
+        "tools/release_inbox_v1.py",
+        "tools/release_automation_alignment_v1.py",
+        "tests/test_release",
+        "artifacts/release-inbox"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 9,
+      "suggested_commit_message": "KnowledgeForge: 09 release automation inbox registries",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 0
+    },
+    {
+      "approx_bytes": 282385,
+      "canonical_data_included": false,
+      "depends_on": [
+        "09-release-automation-inbox-registries"
+      ],
+      "file_count": 17,
+      "group": "10-macroforge-adapter-real-handoff-evidence",
+      "pathspecs": [
+        "tools/macroforge_neutral_release_adapter_v1.py",
+        "tests/test_macroforge",
+        "artifacts/external-release-handoffs/",
+        "artifacts/release-inbox-macroforge-real-handoff-v1/",
+        "artifacts/reports/macroforge"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 10,
+      "suggested_commit_message": "KnowledgeForge: 10 macroforge adapter real handoff evidence",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 17
+    },
+    {
+      "approx_bytes": 99231,
+      "canonical_data_included": false,
+      "depends_on": [
+        "10-macroforge-adapter-real-handoff-evidence"
+      ],
+      "file_count": 8,
+      "group": "11-outbox-polling",
+      "pathspecs": [
+        "tools/external_outbox_poller_v1.py",
+        "tests/test_external_outbox",
+        "config/external_outbox_sources.json",
+        "artifacts/external-outbox",
+        "artifacts/release-inbox-unified-v1",
+        "artifacts/reports/provider-neutral-outbox"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 11,
+      "suggested_commit_message": "KnowledgeForge: 11 outbox polling",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 8
+    },
+    {
+      "approx_bytes": 100244,
+      "canonical_data_included": false,
+      "depends_on": [
+        "11-outbox-polling"
+      ],
+      "file_count": 9,
+      "group": "12-corrected-supersession-model",
+      "pathspecs": [
+        "tools/canonical_supersession_immutability_validator.py",
+        "tests/test_canonical_supersession",
+        "artifacts/reports/canonical-supersession",
+        "artifacts/decisions/D-20260711-canonical-supersession"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [],
+      "sequence": 12,
+      "suggested_commit_message": "KnowledgeForge: 12 corrected supersession model",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 0,
+      "untracked": 9
+    },
+    {
+      "approx_bytes": 191574,
+      "canonical_data_included": false,
+      "depends_on": [
+        "12-corrected-supersession-model"
+      ],
+      "file_count": 9,
+      "group": "13-documentation-final-handoff-and-durability",
+      "pathspecs": [
+        "artifacts/tasks/",
+        "artifacts/decisions/",
+        "artifacts/reports/repository-wide-durability",
+        "tools/repository_wide_durability_validator.py"
+      ],
+      "rollback_implications": "do not reset/clean; rollback by inverse patch or new corrective commit after review",
+      "sensitive_findings": [
+        {
+          "classification": "reviewed_false_positive_domain_keyword",
+          "count": 1,
+          "disposition": "domain text, schema field, or evidence variable name; no secret value reported",
+          "finding_type": "credential_keyword",
+          "path": "artifacts/decisions/_SUMMARY.md"
+        },
+        {
+          "classification": "reviewed_false_positive_domain_keyword",
+          "count": 1,
+          "disposition": "domain text, schema field, or evidence variable name; no secret value reported",
+          "finding_type": "credential_keyword",
+          "path": "artifacts/tasks/backlog.md"
+        }
+      ],
+      "sequence": 13,
+      "suggested_commit_message": "KnowledgeForge: 13 documentation final handoff and durability",
+      "tests_required": [
+        "python3 -m compileall -q tools tests",
+        "uvx --from pytest pytest tests -q"
+      ],
+      "tracked_modified": 3,
+      "untracked": 6
+    }
+  ],
+  "unassigned_changed_or_untracked": [
+    {
+      "bytes": 546,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 487,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 497,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json"
+    },
+    {
+      "bytes": 487,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 3664,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json"
+    },
+    {
+      "bytes": 478,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 3318,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 6338,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-failure-recovery-v1/transport-registry.jsonl"
+    },
+    {
+      "bytes": 545,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 473,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 459,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbound/_SUMMARY.md"
+    },
+    {
+      "bytes": 207509,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbound/macroforge-neutral-evidence-release-outbox-local-v1/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.neutral-release.json"
+    },
+    {
+      "bytes": 1331,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbound/macroforge-neutral-evidence-release-outbox-local-v1/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/manifest.json"
+    },
+    {
+      "bytes": 483,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json"
+    },
+    {
+      "bytes": 473,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 3657,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json"
+    },
+    {
+      "bytes": 464,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 3318,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 3978,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-outbox-transport-v1/transport-registry.jsonl"
+    },
+    {
+      "bytes": 396,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/_SUMMARY.md"
+    },
+    {
+      "bytes": 454,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/macroforge/_SUMMARY.md"
+    },
+    {
+      "bytes": 207509,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/macroforge-wdi-trade-share-dnk-swe-nor-1990-2024.neutral-release.json"
+    },
+    {
+      "bytes": 862,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/manifest.json"
+    },
+    {
+      "bytes": 2771,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/transfer_integrity_record.json"
+    },
+    {
+      "bytes": 527,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 497,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 507,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json"
+    },
+    {
+      "bytes": 497,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 3669,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json"
+    },
+    {
+      "bytes": 4649,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/downstream_delta.json"
+    },
+    {
+      "bytes": 18818,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/processing_result.json"
+    },
+    {
+      "bytes": 488,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 2272,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-macroforge-real-handoff-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 495,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 465,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 426,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 454,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 456,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 2272,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-unified-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 479,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 508,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 245367,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/accepted-releases/wdi-trade-exports-imports-controlled-test-v2.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/accepted-releases/wdi-trade-exports-imports-retained-evidence-v1.json"
+    },
+    {
+      "bytes": 460,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 245367,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/inbox/controlled_successor_release_v2.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/inbox/real_wdi_exports_imports_release_v1.json"
+    },
+    {
+      "bytes": 504,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 2597,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/downstream_delta.json"
+    },
+    {
+      "bytes": 16671,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/processing_result.json"
+    },
+    {
+      "bytes": 4659,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/downstream_delta.json"
+    },
+    {
+      "bytes": 18844,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/processing_result.json"
+    },
+    {
+      "bytes": 622,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 242919,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/conflicting_reuse_v1.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/fingerprint_mismatch_release.json"
+    },
+    {
+      "bytes": 9,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/malformed-410aed2fbd870bd0.json"
+    },
+    {
+      "bytes": 245314,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/missing_predecessor_release.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/real_wdi_exports_imports_release_v1.json"
+    },
+    {
+      "bytes": 242926,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/quarantined-releases/wrong_contract_release.json"
+    },
+    {
+      "bytes": 10707,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 527,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/_SUMMARY.md"
+    },
+    {
+      "bytes": 556,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 245367,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/wdi-trade-exports-imports-controlled-test-v2.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/wdi-trade-exports-imports-retained-evidence-v1.json"
+    },
+    {
+      "bytes": 458,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 552,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 2597,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/downstream_delta.json"
+    },
+    {
+      "bytes": 1340,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/failure.json"
+    },
+    {
+      "bytes": 16695,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/processing_result.json"
+    },
+    {
+      "bytes": 4659,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/downstream_delta.json"
+    },
+    {
+      "bytes": 18868,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/processing_result.json"
+    },
+    {
+      "bytes": 488,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 3771,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/20260712-local-operational-state-gate/files/artifacts/release-inbox-v1-failure-resume-scenario/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 431,
+      "category": "operational_checkpoint_artifact",
+      "path": "artifacts/operational-state-checkpoints/_SUMMARY.md"
+    },
+    {
+      "bytes": 7405,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/_SUMMARY.md"
+    },
+    {
+      "bytes": 602437,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign43-canonical-publication-20260712/relationship_export_verification/all_relationships_export.json"
+    },
+    {
+      "bytes": 602437,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign43-canonical-publication-20260712/relationship_export_verification/all_relationships_export.stdout.json"
+    },
+    {
+      "bytes": 279364,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign43-canonical-publication-20260712/relationship_export_verification/first_difference_method_export.json"
+    },
+    {
+      "bytes": 279364,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign43-canonical-publication-20260712/relationship_export_verification/first_difference_method_export.stdout.json"
+    },
+    {
+      "bytes": 279337,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign43-canonical-publication-20260712/relationship_export_verification/first_difference_transformation_export.json"
+    },
+    {
+      "bytes": 279337,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign43-canonical-publication-20260712/relationship_export_verification/first_difference_transformation_export.stdout.json"
+    },
+    {
+      "bytes": 325296,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign43-canonical-publication-20260712/relationship_export_verification/raw_pearson_export.json"
+    },
+    {
+      "bytes": 325296,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/campaign43-canonical-publication-20260712/relationship_export_verification/raw_pearson_export.stdout.json"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-method-v1-and-campaign36-design-20260710/final-verification/architecture_audit.log"
+    },
+    {
+      "bytes": 178,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-method-v1-and-campaign36-design-20260710/final-verification/coherence.log"
+    },
+    {
+      "bytes": 167,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-method-v1-and-campaign36-design-20260710/final-verification/context_health.log"
+    },
+    {
+      "bytes": 1346,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-method-v1-and-campaign36-design-20260710/final-verification/correlation_synthetic_adversarial_tests.log"
+    },
+    {
+      "bytes": 46547,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-method-v1-and-campaign36-design-20260710/final-verification/full_tests.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-method-v1-and-campaign36-design-20260710/final-verification/git_diff_check.log"
+    },
+    {
+      "bytes": 1170,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-method-v1-and-campaign36-design-20260710/final-verification/unit_resolution_tests.log"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-production-operationalization-20260711/final-verification/architecture_audit.log"
+    },
+    {
+      "bytes": 178,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-production-operationalization-20260711/final-verification/coherence.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-production-operationalization-20260711/final-verification/compileall.log"
+    },
+    {
+      "bytes": 167,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-production-operationalization-20260711/final-verification/context_health.log"
+    },
+    {
+      "bytes": 51267,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-production-operationalization-20260711/final-verification/full_tests.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-production-operationalization-20260711/final-verification/git_diff_check.log"
+    },
+    {
+      "bytes": 9894,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-production-operationalization-20260711/final-verification/no_promote_historical_reproduction.log"
+    },
+    {
+      "bytes": 666,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/correlation-production-operationalization-20260711/final-verification/targeted_correlation_batch_engine_tests.log"
+    },
+    {
+      "bytes": 546,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 487,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 497,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json"
+    },
+    {
+      "bytes": 487,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 3664,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json"
+    },
+    {
+      "bytes": 478,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 3318,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 6338,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-failure-recovery-v1/transport-registry.jsonl"
+    },
+    {
+      "bytes": 545,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 473,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 459,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/inbound/_SUMMARY.md"
+    },
+    {
+      "bytes": 207509,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/inbound/macroforge-neutral-evidence-release-outbox-local-v1/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.neutral-release.json"
+    },
+    {
+      "bytes": 1331,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/inbound/macroforge-neutral-evidence-release-outbox-local-v1/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/manifest.json"
+    },
+    {
+      "bytes": 483,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json"
+    },
+    {
+      "bytes": 473,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 3657,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json"
+    },
+    {
+      "bytes": 464,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 3318,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 3978,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-outbox-transport-v1/transport-registry.jsonl"
+    },
+    {
+      "bytes": 396,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-release-handoffs/_SUMMARY.md"
+    },
+    {
+      "bytes": 454,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-release-handoffs/macroforge/_SUMMARY.md"
+    },
+    {
+      "bytes": 207509,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/macroforge-wdi-trade-share-dnk-swe-nor-1990-2024.neutral-release.json"
+    },
+    {
+      "bytes": 862,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/manifest.json"
+    },
+    {
+      "bytes": 2771,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/external-release-handoffs/macroforge/task-210-wdi-trade-share-dnk-swe-nor-1990-2024/transfer_integrity_record.json"
+    },
+    {
+      "bytes": 527,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 497,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 507,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/inbox/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.knowledgeforge-normalized-release.json"
+    },
+    {
+      "bytes": 497,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 3669,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/adapter_processing_record.json"
+    },
+    {
+      "bytes": 4649,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/downstream_delta.json"
+    },
+    {
+      "bytes": 18818,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/processing-evidence/macroforge-wdi-1990-2024-2b1a1c3d9e65b182/processing_result.json"
+    },
+    {
+      "bytes": 488,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 2272,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-macroforge-real-handoff-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 495,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-unified-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 465,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-unified-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 234690,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-unified-v1/accepted-releases/macroforge-wdi-1990-2024-2b1a1c3d9e65b182.json"
+    },
+    {
+      "bytes": 426,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-unified-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 454,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-unified-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 456,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-unified-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 2272,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-unified-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 479,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/_SUMMARY.md"
+    },
+    {
+      "bytes": 508,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 245367,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/accepted-releases/wdi-trade-exports-imports-controlled-test-v2.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/accepted-releases/wdi-trade-exports-imports-retained-evidence-v1.json"
+    },
+    {
+      "bytes": 460,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 245367,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/inbox/controlled_successor_release_v2.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/inbox/real_wdi_exports_imports_release_v1.json"
+    },
+    {
+      "bytes": 504,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 2597,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/downstream_delta.json"
+    },
+    {
+      "bytes": 16671,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/processing_result.json"
+    },
+    {
+      "bytes": 4659,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/downstream_delta.json"
+    },
+    {
+      "bytes": 18844,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/processing_result.json"
+    },
+    {
+      "bytes": 622,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 242919,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/quarantined-releases/conflicting_reuse_v1.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/quarantined-releases/fingerprint_mismatch_release.json"
+    },
+    {
+      "bytes": 9,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/quarantined-releases/malformed-410aed2fbd870bd0.json"
+    },
+    {
+      "bytes": 245314,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/quarantined-releases/missing_predecessor_release.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/quarantined-releases/real_wdi_exports_imports_release_v1.json"
+    },
+    {
+      "bytes": 242926,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/quarantined-releases/wrong_contract_release.json"
+    },
+    {
+      "bytes": 10707,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 527,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/_SUMMARY.md"
+    },
+    {
+      "bytes": 556,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 245367,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/wdi-trade-exports-imports-controlled-test-v2.json"
+    },
+    {
+      "bytes": 242932,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/accepted-releases/wdi-trade-exports-imports-retained-evidence-v1.json"
+    },
+    {
+      "bytes": 458,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/inbox/_SUMMARY.md"
+    },
+    {
+      "bytes": 552,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/_SUMMARY.md"
+    },
+    {
+      "bytes": 2597,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/downstream_delta.json"
+    },
+    {
+      "bytes": 1340,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/failure.json"
+    },
+    {
+      "bytes": 16695,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-controlled-test-v2/processing_result.json"
+    },
+    {
+      "bytes": 4659,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/downstream_delta.json"
+    },
+    {
+      "bytes": 18868,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/processing-evidence/wdi-trade-exports-imports-retained-evidence-v1/processing_result.json"
+    },
+    {
+      "bytes": 488,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/quarantined-releases/_SUMMARY.md"
+    },
+    {
+      "bytes": 3771,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/artifacts/release-inbox-v1-failure-resume-scenario/seen-release-registry.jsonl"
+    },
+    {
+      "bytes": 18119,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/operational-state-backup-restore-durability-gate-20260712/isolated_restore/restore_validation.json"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/commits/05_publication_readiness_check_coherence.log"
+    },
+    {
+      "bytes": 1466,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/commits/05_publication_readiness_context_health.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/commits/05_publication_readiness_diff_check.log"
+    },
+    {
+      "bytes": 13268,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/commits/05_publication_readiness_result.json"
+    },
+    {
+      "bytes": 11611,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/commits/05_publication_readiness_staged_name_status.log"
+    },
+    {
+      "bytes": 2,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/commits/05_publication_readiness_staged_sensitive_scan.json"
+    },
+    {
+      "bytes": 5026,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/commits/05_publication_readiness_staged_stat.log"
+    },
+    {
+      "bytes": 4,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final2_ahead_behind.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final2_cached_check.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final2_diff_check.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final2_fetch.log"
+    },
+    {
+      "bytes": 41,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final2_head.log"
+    },
+    {
+      "bytes": 172,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final2_log.log"
+    },
+    {
+      "bytes": 41,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final2_origin.log"
+    },
+    {
+      "bytes": 797,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final2_push_summary.json"
+    },
+    {
+      "bytes": 4,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_ahead_behind_after_report_push.log"
+    },
+    {
+      "bytes": 4,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_ahead_behind_before_report_push.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_fetch_after_report_push.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_fetch_before_report_push.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_final_cached_check.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_final_diff_check.log"
+    },
+    {
+      "bytes": 20893,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_final_status_short.log"
+    },
+    {
+      "bytes": 41,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_head_after_report_push.log"
+    },
+    {
+      "bytes": 41,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_origin_after_report_push.log"
+    },
+    {
+      "bytes": 75,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_push_report.log"
+    },
+    {
+      "bytes": 22564,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/final_push_summary.json"
+    },
+    {
+      "bytes": 3650,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/postpush_doc_commit_result.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/postpush_doc_diff_check.log"
+    },
+    {
+      "bytes": 2,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/postpush_doc_sensitive_scan.json"
+    },
+    {
+      "bytes": 2985,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/postpush_doc_staged_name_status.log"
+    },
+    {
+      "bytes": 4,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/prepush_ahead_behind.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/prepush_cached.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/prepush_fetch.log"
+    },
+    {
+      "bytes": 19479,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/prepush_gate_summary.json"
+    },
+    {
+      "bytes": 41,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/prepush_head.log"
+    },
+    {
+      "bytes": 41,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/prepush_origin.log"
+    },
+    {
+      "bytes": 18884,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/post-campaign42-production-alignment-git-durability-20260712/prepush_status_short.log"
+    },
+    {
+      "bytes": 1514,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/artifact_class_policy.json"
+    },
+    {
+      "bytes": 1510,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/artifact_policy.json"
+    },
+    {
+      "bytes": 103055,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/commit_plan.json"
+    },
+    {
+      "bytes": 7514,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/consolidated_machine_readable_summary.json"
+    },
+    {
+      "bytes": 3453284,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/inventory.json"
+    },
+    {
+      "bytes": 48310,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/machine_loss_recovery.json"
+    },
+    {
+      "bytes": 5274,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/package_counts.json"
+    },
+    {
+      "bytes": 3259,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/repository_wide_validator.json"
+    },
+    {
+      "bytes": 196576,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/sensitive_scan.json"
+    },
+    {
+      "bytes": 1521,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/size_storage_assessment.json"
+    },
+    {
+      "bytes": 365,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/durability_sensitive_validation.json/temporary_db_cleanup_assessment.json"
+    },
+    {
+      "bytes": 10234,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-campaign43-next-production-readiness-gate-20260713/final_report.md"
+    },
+    {
+      "bytes": 8570,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/comparison_report.md"
+    },
+    {
+      "bytes": 1514,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/artifact_class_policy.json"
+    },
+    {
+      "bytes": 1510,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/artifact_policy.json"
+    },
+    {
+      "bytes": 106272,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/commit_plan.json"
+    },
+    {
+      "bytes": 7514,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/consolidated_machine_readable_summary.json"
+    },
+    {
+      "bytes": 3469457,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/inventory.json"
+    },
+    {
+      "bytes": 49974,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/machine_loss_recovery.json"
+    },
+    {
+      "bytes": 5274,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/package_counts.json"
+    },
+    {
+      "bytes": 3245,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/repository_wide_validator.json"
+    },
+    {
+      "bytes": 206766,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/sensitive_scan.json"
+    },
+    {
+      "bytes": 1521,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/size_storage_assessment.json"
+    },
+    {
+      "bytes": 365,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/post-repair-production-readiness-gate-20260713/durability_sensitive_validation-20260713T003608.json/temporary_db_cleanup_assessment.json"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/postgresql-acceptance-sequencing-20260710/final-verification/architecture_audit.log"
+    },
+    {
+      "bytes": 178,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/postgresql-acceptance-sequencing-20260710/final-verification/coherence.log"
+    },
+    {
+      "bytes": 167,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/postgresql-acceptance-sequencing-20260710/final-verification/context_health.log"
+    },
+    {
+      "bytes": 38802,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/postgresql-acceptance-sequencing-20260710/final-verification/full_tests.log"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/architecture_reality_audit.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/final_git_diff_check.log"
+    },
+    {
+      "bytes": 54806,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/full_test_suite.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/git_diff_check.log"
+    },
+    {
+      "bytes": 709,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/postgresql_verify_stdout.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/py_compile.log"
+    },
+    {
+      "bytes": 1196,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/verification/release_inbox_tests.log"
+    },
+    {
+      "bytes": 183,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/continuation/db_dependency_check.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/continuation/db_presence.txt"
+    },
+    {
+      "bytes": 48,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/continuation/db_safety.txt"
+    },
+    {
+      "bytes": 1163,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/continuation/preconditions.json"
+    },
+    {
+      "bytes": 18402,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/continuation/preconditions.txt"
+    },
+    {
+      "bytes": 165,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/architecture_reality_audit.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/architecture_reality_audit.stderr"
+    },
+    {
+      "bytes": 53,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/architecture_reality_audit.stdout"
+    },
+    {
+      "bytes": 126,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/cached_diff_check.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/cached_diff_check.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/cached_diff_check.stdout"
+    },
+    {
+      "bytes": 126,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/cached_diff_final.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/cached_diff_final.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/cached_diff_final.stdout"
+    },
+    {
+      "bytes": 77184,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/canonical_manifest_fingerprint.json"
+    },
+    {
+      "bytes": 77184,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/canonical_manifest_fingerprint.stdout"
+    },
+    {
+      "bytes": 79103,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/canonical_manifest_fingerprint_corrected.json"
+    },
+    {
+      "bytes": 17,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/canonical_manifest_fingerprint_corrected.status.json"
+    },
+    {
+      "bytes": 79103,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/canonical_manifest_fingerprint_corrected.stdout"
+    },
+    {
+      "bytes": 192,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/checkpoint_restore_tests.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/checkpoint_restore_tests.stderr"
+    },
+    {
+      "bytes": 98,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/checkpoint_restore_tests.stdout"
+    },
+    {
+      "bytes": 157,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/coherence_check.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/coherence_check.stderr"
+    },
+    {
+      "bytes": 205,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/coherence_check.stdout"
+    },
+    {
+      "bytes": 150,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/complete_test_suite.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/complete_test_suite.stderr"
+    },
+    {
+      "bytes": 341,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/complete_test_suite.stdout"
+    },
+    {
+      "bytes": 161,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/context_health_check.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/context_health_check.stderr"
+    },
+    {
+      "bytes": 1465,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/context_health_check.stdout"
+    },
+    {
+      "bytes": 153,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/create_verification_database.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/create_verification_database.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/create_verification_database.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/db_presence_before_create.txt"
+    },
+    {
+      "bytes": 107,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/git_diff_check.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/git_diff_check.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/git_diff_check.stdout"
+    },
+    {
+      "bytes": 83091,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/isolated_postgresql_reconstruction.json"
+    },
+    {
+      "bytes": 17,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/isolated_postgresql_reconstruction.status.json"
+    },
+    {
+      "bytes": 83091,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/isolated_postgresql_reconstruction.stdout"
+    },
+    {
+      "bytes": 579,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_rebuild_first.json"
+    },
+    {
+      "bytes": 402,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_rebuild_first.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_rebuild_first.stderr"
+    },
+    {
+      "bytes": 579,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_rebuild_first.stdout"
+    },
+    {
+      "bytes": 579,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_rebuild_second.json"
+    },
+    {
+      "bytes": 379,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_rebuild_second.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_rebuild_second.stderr"
+    },
+    {
+      "bytes": 579,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_rebuild_second.stdout"
+    },
+    {
+      "bytes": 709,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_verify_first.json"
+    },
+    {
+      "bytes": 374,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_verify_first.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_verify_first.stderr"
+    },
+    {
+      "bytes": 709,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_verify_first.stdout"
+    },
+    {
+      "bytes": 709,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_verify_second.json"
+    },
+    {
+      "bytes": 376,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_verify_second.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_verify_second.stderr"
+    },
+    {
+      "bytes": 709,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/postgresql_verify_second.stdout"
+    },
+    {
+      "bytes": 148,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/python_compile.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/python_compile.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/python_compile.stdout"
+    },
+    {
+      "bytes": 187,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/relationship_export_tests.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/relationship_export_tests.stderr"
+    },
+    {
+      "bytes": 98,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/relationship_export_tests.stdout"
+    },
+    {
+      "bytes": 311,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/release_recomputation_tests.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/release_recomputation_tests.stderr"
+    },
+    {
+      "bytes": 99,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/release_recomputation_tests.stdout"
+    },
+    {
+      "bytes": 1514,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/artifact_class_policy.json"
+    },
+    {
+      "bytes": 1510,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/artifact_policy.json"
+    },
+    {
+      "bytes": 167986,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/commit_plan.json"
+    },
+    {
+      "bytes": 4246,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/consolidated_machine_readable_summary.json"
+    },
+    {
+      "bytes": 2779105,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/inventory.json"
+    },
+    {
+      "bytes": 520277,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/machine_loss_recovery.json"
+    },
+    {
+      "bytes": 2275,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/package_counts.json"
+    },
+    {
+      "bytes": 7631,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/repository_wide_validator.json"
+    },
+    {
+      "bytes": 137500,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/sensitive_scan.json"
+    },
+    {
+      "bytes": 1521,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/size_storage_assessment.json"
+    },
+    {
+      "bytes": 365,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive-and-durability/temporary_db_cleanup_assessment.json"
+    },
+    {
+      "bytes": 287,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive_material_scan.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive_material_scan.stderr"
+    },
+    {
+      "bytes": 4246,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/sensitive_material_scan.stdout"
+    },
+    {
+      "bytes": 5068,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/summary.json"
+    },
+    {
+      "bytes": 221,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/supersession_immutability_validation.status.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/supersession_immutability_validation.stderr"
+    },
+    {
+      "bytes": 98,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/final-validation-continuation/supersession_immutability_validation.stdout"
+    },
+    {
+      "bytes": 86,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/database_disposition.txt"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/fetch_after_push.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/fetch_after_push.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/fetch_before_push.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/fetch_before_push.stdout"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/final_cached_diff.txt"
+    },
+    {
+      "bytes": 17762,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/final_git_status_short.txt"
+    },
+    {
+      "bytes": 8356,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/final_local_only_summary.json"
+    },
+    {
+      "bytes": 18,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/git_push.status"
+    },
+    {
+      "bytes": 75,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/git_push.stderr"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/git_push.stdout"
+    },
+    {
+      "bytes": 1514,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/artifact_class_policy.json"
+    },
+    {
+      "bytes": 1510,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/artifact_policy.json"
+    },
+    {
+      "bytes": 87583,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/commit_plan.json"
+    },
+    {
+      "bytes": 4248,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/consolidated_machine_readable_summary.json"
+    },
+    {
+      "bytes": 2813814,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/inventory.json"
+    },
+    {
+      "bytes": 43496,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/machine_loss_recovery.json"
+    },
+    {
+      "bytes": 2275,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/package_counts.json"
+    },
+    {
+      "bytes": 2818,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/repository_wide_validator.json"
+    },
+    {
+      "bytes": 144626,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/sensitive_scan.json"
+    },
+    {
+      "bytes": 1521,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/size_storage_assessment.json"
+    },
+    {
+      "bytes": 365,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator/temporary_db_cleanup_assessment.json"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator.stderr"
+    },
+    {
+      "bytes": 4248,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_durability_validator.stdout"
+    },
+    {
+      "bytes": 3152,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/post_push_summary.json"
+    },
+    {
+      "bytes": 627,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/pre_push_gate.json"
+    },
+    {
+      "bytes": 1128,
+      "category": "historical_evidence_optional_main_git",
+      "path": "artifacts/reports/reviewed-git-durability-publication-20260712/push-and-remote-verification/remote_reachability.json"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/architecture_audit.log"
+    },
+    {
+      "bytes": 178,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/coherence.log"
+    },
+    {
+      "bytes": 167,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/context_health.log"
+    },
+    {
+      "bytes": 43523,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/full_tests.log"
+    },
+    {
+      "bytes": 0,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/git_diff_check.log"
+    },
+    {
+      "bytes": 1550,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/statistical-summary-method-v2-and-campaign35-prep-20260710/final-verification/targeted_method_v2_tests.log"
+    },
+    {
+      "bytes": 164,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/architecture_audit.log"
+    },
+    {
+      "bytes": 178,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/coherence.log"
+    },
+    {
+      "bytes": 167,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/context_health.log"
+    },
+    {
+      "bytes": 40242,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/full_tests.log"
+    },
+    {
+      "bytes": 1586,
+      "category": "historical_evidence_or_external_storage",
+      "path": "artifacts/reports/wdi-observation-fixture-statistical-summary-design-gate-20260710/final-verification/targeted_fixture_tests.log"
+    }
+  ],
+  "unassigned_count": 378
+}

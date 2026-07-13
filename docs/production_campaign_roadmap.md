@@ -1012,4 +1012,18 @@ Rejected for immediate execution: four remaining corrected-policy raw Pearson ca
 
 Boundary: no package production, coefficient calculation, PostgreSQL mutation, doctrine/architecture/schema change, broad test-framework migration, or residue cleanup is authorized.
 
-Closeout: selected test-discovery correction completed locally on 2026-07-13. `tests/test_operational_state_checkpoint.py` now uses pure unittest/standard-library constructs, focused module verification passed with 6 tests, and repository-wide `python3 -m unittest discover -s tests -v` passed with 336 tests. Next roadmap step is a new readiness gate selecting one bounded production or production-enabling task from the documented backlog; do not begin implementation as part of this closeout.
+Closeout: selected test-discovery correction completed locally on 2026-07-13 and published at `8191790fb74b85cafcd5e253a29865a66df9c24d`. `tests/test_operational_state_checkpoint.py` now uses pure unittest/standard-library constructs, focused module verification passed with 6 tests, and repository-wide `python3 -m unittest discover -s tests -v` passed with 336 tests. Next roadmap step is a new readiness gate selecting one bounded production or production-enabling task from the documented backlog; do not begin implementation as part of this closeout.
+
+## Post-repair production-readiness gate — 2026-07-13
+
+Corrected decision: path D — defer all four remaining corrected-policy Pearson candidates for immediate priority and select the strongest documented production-enabling alternative.
+
+Selected next task: `B-20260709-025 — Phase 2 non-WDI multi-source disagreement planning gate`.
+
+Correction basis: resolving Pearson residue, finishing corrected-policy candidates, campaign continuity, and using recently validated infrastructure are procedural benefits, not knowledge-value evidence. Campaigns 42-43 already proved raw/first-difference coexistence, transformed qualification, and Relationship Export separation. Remaining Pearson work must win on marginal knowledge value and does not.
+
+Rejected/deferred Pearson candidates: all three NOR demographic/health pairs are deferred indefinitely because their immediate incremental empirical value is narrow, clustered in one country/demographic-health domain, and likely to repeat known time-trend qualification lessons. DNK forest area / private credit remains rejected for current production priority because it is semantically remote and mainly cautionary.
+
+Rejected exports-share alternative: the proposed DNK/SWE/NOR `NE.EXP.GNFS.ZS` statistical-summary replication is already complete and canonical from Campaign 35, so it would be duplicate production rather than new knowledge.
+
+Boundary: decision gate only. Do not begin the non-WDI disagreement planning gate without separate authorization. Stop before source acquisition, ingestion implementation, package construction/publication, PostgreSQL mutation, Relationship Export output mutation, architecture/doctrine/schema change, staging, commit, push, tag, release, or protected residue cleanup.

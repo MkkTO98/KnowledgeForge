@@ -310,9 +310,23 @@ Constraints: no KnowledgeForge canonical promotion, no inbox scheduling, no Post
 ### B-20260713-KF-001 — Restore repository-wide unittest discovery after Campaign 43
 
 Priority: P0
-Status: completed locally 2026-07-13
+Status: completed and published 2026-07-13
 Source: Post-Campaign-43 next-production readiness gate decision D.
 
 Objective: convert `tests/test_operational_state_checkpoint.py` from undeclared `pytest` dependency to standard-library `unittest` semantics, preserving all operational-state-checkpoint assertions and proving `python3 -m unittest discover -s tests -v` runs cleanly.
 
 Constraints: no pytest installation, no dependency declaration mutation merely to satisfy tests, no production behavior change, no package production, no PostgreSQL mutation, no architecture/doctrine/schema change, no broad test-framework migration, no unrelated residue cleanup.
+
+### B-20260713-KF-002 — Phase 2 non-WDI multi-source disagreement planning gate
+
+Priority: P0
+Status: selected; not started
+Source: Corrected post-repair production-readiness gate decision D; original backlog item `B-20260709-025`.
+
+Objective: open a bounded production-enabling planning gate for non-WDI multi-source disagreement. Select or reject a concrete future objective disagreement-production candidate, define evidence boundaries and prerequisites, and determine whether later production is justified without architecture redesign.
+
+Deferred/rejected Pearson candidates: all four remaining corrected-policy Pearson candidates are not selected for immediate production. The three NOR demographic/health pairs are deferred indefinitely; DNK forest area / private credit remains rejected for current production priority.
+
+Rejected duplicate alternative: the DNK/SWE/NOR `NE.EXP.GNFS.ZS` statistical-summary replication is already complete and canonical from Campaign 35.
+
+Constraints: planning gate only; no source acquisition, ingestion implementation, package construction, canonical publication, PostgreSQL mutation/rebuild, Relationship Export output mutation, architecture/doctrine/schema change, MacroForge/InsightForge/other-project modification, staging, commit, push, tag, release, or unrelated residue cleanup.

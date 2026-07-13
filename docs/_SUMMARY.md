@@ -57,7 +57,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `production_campaign_roadmap.md` records restored repository-wide unittest discovery after the post-Campaign-43 test-governance correction.
+- `production_campaign_roadmap.md` records corrected path D: next selected task is the Phase 2 non-WDI multi-source disagreement planning gate; implementation not started.
 
 ## Needs Attention
-- No package production, coefficient calculation, or doctrine/architecture change is authorized by the current roadmap entry.
+- No source acquisition, ingestion implementation, package production, PostgreSQL mutation, Relationship Export output mutation, or doctrine/architecture change is authorized by the current roadmap entry.

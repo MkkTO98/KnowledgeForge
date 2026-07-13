@@ -1,50 +1,44 @@
 # Latest Handoff
 
-Date: 2026-07-13
+Updated: 2026-07-13
 
-## Completed task
+## Outcome
 
-Implemented the selected post-Campaign-43 production-enabling correction.
+Post-repair production-readiness gate adversarially corrected.
 
-`tests/test_operational_state_checkpoint.py` now uses pure standard-library unittest semantics. No production code changed.
+Corrected selected path: D — defer/reject the remaining corrected-policy Pearson candidates for immediate priority and select a stronger documented production-enabling alternative.
 
-## Conversion
+Selected next task: Phase 2 non-WDI multi-source disagreement planning gate from `B-20260709-025`.
 
-Removed `import pytest`, `pytest.MonkeyPatch`, `monkeypatch.setattr(...)`, `pytest.raises(...)`, and pytest fixture parameters.
+## Correction basis
 
-Added `unittest.TestCase`, `tempfile.TemporaryDirectory()`, `unittest.mock.patch.object(...)`, `self.assertRaises(...)`, and unittest assertions.
+The prior path B rationale over-weighted Pearson residue closure. Corrected-policy eligibility, finishing candidate lists, campaign continuity, and using recently validated infrastructure are procedural/cost considerations, not knowledge-value evidence. Campaigns 42-43 already proved the raw/first-difference coexistence and retrieval pattern.
 
-## Verification
+## Pearson/C alternatives
 
-Preflight reproduced the defect:
+- NOR crude birth rate / under-5 mortality: deferred indefinitely.
+- NOR crude birth rate / life expectancy: deferred indefinitely.
+- NOR crude death rate / under-5 mortality: deferred indefinitely.
+- DNK forest area / private credit: rejected for current production priority.
+- DNK/SWE/NOR `NE.EXP.GNFS.ZS` statistical-summary replication: rejected as next production because Campaign 35 already produced those exact canonical packages.
 
-- focused module failed with `ModuleNotFoundError: No module named 'pytest'`.
-- full discovery failed after 331 tests with the same import error.
+## Key artifacts
 
-Post-fix:
+- Decision: `artifacts/decisions/D-20260713-post-repair-production-readiness-gate.md`
+- Task: `artifacts/tasks/T-20260713-non-wdi-multisource-disagreement-planning-gate.md`
+- Report: `artifacts/reports/post-repair-production-readiness-gate-20260713/comparison_report.md`
+- Roadmap/backlog/state updated.
 
-- `python3 -m unittest tests.test_operational_state_checkpoint -v` — 6 tests OK.
-- `python3 -m unittest discover -s tests -v` — 336 tests OK.
-- Repaired module discovered/executed as `test_operational_state_checkpoint.OperationalStateCheckpointTests`.
-- No failures, errors, skips, pytest import error, or hidden discovery warning.
-- Canonical check — 560 packages, fingerprint `sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7`.
-- PostgreSQL projection verify — valid at 560 packages.
-- Relationship Export tests included in full discovery and passed.
-- `git diff --check` passed; coherence/context health no blocks; architecture audit no blocks/warnings; durability/sensitive validation sensitive passes true and unsafe absolute paths 0, with D only due unrelated residue/checkpoint durability.
+## Boundary
 
-## Files changed intentionally
+No implementation has started. Do not acquire sources, implement ingestion, construct/publish packages, mutate PostgreSQL, mutate Relationship Export outputs, change doctrine/architecture/schema, modify another project, stage, commit, push, tag, release, or clean protected residue unless separately authorized.
 
-- `tests/test_operational_state_checkpoint.py`
-- `artifacts/tasks/T-20260713-post-campaign43-test-discovery-correction.md`
-- `artifacts/reports/post-campaign43-test-discovery-correction-20260713/`
-- `artifacts/decisions/D-20260713-post-campaign43-next-production-readiness-gate.md`
-- `artifacts/tasks/T-20260713-post-campaign43-next-production-readiness-gate.md`
-- roadmap/backlog/state/context/report/task/decision summaries
+## Protected residue
 
-## Residue to preserve
+Preserve unless separately authorized: six tracked `architecture/architectureharvest/` deletions, eight Campaign 43 export-verification modifications, stale generated active context, local config, caches/dumps/restore material, and unrelated operational/report residue.
 
-Do not clean or stage unrelated residue: six `architecture/architectureharvest/` deletions, operational/checkpoint/report residue, `workspace_config.yaml`, stale `context/active_context.md`, caches/dumps/restores/temp verification paths, and Campaign 43 Relationship Export artifacts modified by prior authorized verification.
+## Resume command
 
-## Resume boundary
+From `/home/mkkto/srv/EIP/projects/KnowledgeForge`, only if separately authorized:
 
-Open the next post-repair production-readiness decision gate. Select one bounded next production or production-enabling task only. Do not calculate coefficients, create packages, mutate PostgreSQL, modify Relationship Export outputs, clean residue, stage, commit, or push unless separately instructed.
+`Open the Phase 2 non-WDI multi-source disagreement planning gate from B-20260709-025; select or reject one concrete objective disagreement-production candidate and stop before source acquisition, implementation, or production.`

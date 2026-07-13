@@ -14,7 +14,7 @@ Context and handoff material for future KnowledgeForge sessions.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Post-Campaign-43 test-discovery correction complete; `latest_handoff.md` points to the next readiness-gate boundary.
+- `latest_handoff.md` points to the corrected Phase 2 non-WDI multi-source disagreement planning gate; implementation is not started.
 
 ## Needs Attention
 - Rebuild generated context bundles for future tasks instead of trusting stale `active_context.md` or `compressed_context.md`.

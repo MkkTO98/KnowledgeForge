@@ -110,6 +110,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `pearson-candidate-policy-refinement-mixed-roadmap-20260712/`
 - `pearson-candidate-policy-v2-consistency-correction-20260712/`
 - `post-campaign43-test-discovery-correction-20260713/`
+- `post-repair-production-readiness-gate-20260713/`
 - `post-campaign42-production-alignment-git-durability-20260712/`
 - `postgresql-acceptance-sequencing-20260710/`
 - `postgresql-projection-implementation-20260710/`
@@ -126,7 +127,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Post-Campaign-43 test-discovery correction complete; next active work is a new readiness gate only.
+- `post-repair-production-readiness-gate-20260713/` records the corrected comparison selecting path D: Phase 2 non-WDI multi-source disagreement planning gate.
 
 ## Needs Attention
 - Campaign 43 Relationship Export artifacts modified by prior authorized verification remain local residue unless separately staged as closeout evidence.
