@@ -1,0 +1,154 @@
+{
+  "accessed": "2026-07-13T06:53:22Z; adversarial correction evidence gathered 2026-07-13",
+  "candidate_count": 3,
+  "candidates": [
+    {
+      "bounded_concept": "total/resident population, Denmark, annual/historical 2024",
+      "gate_status": {
+        "comparability_readiness": "unresolved",
+        "genuine_source_independence": "unresolved",
+        "immutable_identity": "unresolved",
+        "observation_status": "unresolved",
+        "retention_reuse": "partly_passed"
+      },
+      "id": "world-bank-wdi-vs-eurostat-population-dnk-2024",
+      "reassessed_in_correction": false,
+      "selected": false
+    },
+    {
+      "bounded_concept": "total population, one country, annual bounded historical year",
+      "gate_status": {
+        "comparability_readiness": "unresolved",
+        "genuine_source_independence": "unresolved",
+        "immutable_identity": "unresolved",
+        "observation_status": "unresolved",
+        "retention_reuse": "unresolved"
+      },
+      "id": "world-bank-wdi-vs-un-wpp-total-population-historical-year",
+      "reassessed_in_correction": false,
+      "selected": false
+    },
+    {
+      "bounded_concept": "published historical mid-year total population estimate, one country, annual, July 1/mid-year, historical-estimate period only",
+      "corrected_independence_classification": "shared-upstream but independently estimated",
+      "doctrine_compatibility": "passed_in_principle: existing doctrine does not categorically forbid source-published historical estimates when scoped as objective evidence of a source estimate, not observed population, and when provenance/retention/identity/scope are satisfied",
+      "failed_gates": [],
+      "gate_status": {
+        "comparability_readiness": "unresolved_partial_metadata_available_but_exact_status_population_universe_revision_policy_missingness_and_release_file_identity_remain_open",
+        "genuine_source_independence": "passed_as_shared_upstream_but_independently_estimated",
+        "immutable_identity": {
+          "census": "unresolved_named_december_2025_release_notes_but_data_download_link_appears_mutable_current",
+          "wpp": "conditionally_passed_for_named_wpp2024_or_rev1_documents; exact future data-file path still required"
+        },
+        "observation_status": "unresolved_for_exact_census_denmark_2023_status; passed_in_principle_for_historical_estimate_concept_if_confirmed; projections_not_applicable",
+        "retention_reuse": {
+          "census": "passed_for_narrow_attributed_evidence_under_general_census_guidance_no_idb_specific_restriction_found",
+          "wpp_future_data_fixture": "unresolved_dataset_download_specific_terms_not_found",
+          "wpp_publications": "passed_for_methodology_report_figures_tables_under_cc_by_3_0_igo"
+        }
+      },
+      "id": "census-idb-vs-un-wpp-total-population-historical-year",
+      "not_applicable_gates": [
+        "forecast_or_projection_admission"
+      ],
+      "observation_status_classification": "published historical mid-year population estimate; not direct observation, not census count, not forecast, not future projection if boundary is restricted to historical estimate years",
+      "passed_gates": [
+        "independence_classification_corrected_to_shared_upstream_but_independently_estimated",
+        "historical_estimate_doctrine_compatibility_in_principle",
+        "partial_metadata_plausibility",
+        "census_general_reuse_guidance",
+        "wpp_publication_license_for_docs"
+      ],
+      "potential_historical_boundary": {
+        "country": "Denmark (candidate only; not selected)",
+        "measure": "total population estimate",
+        "population_boundary": "WPP de facto population as of 1 Jan or 1 July, thousands; Census modified de facto where possible and July 1 midyear framing",
+        "reference_date": "July 1 / mid-year",
+        "reference_year": "2023 candidate only because WPP 2024 documents estimates through 2023 and projections after; Census status remains unresolved",
+        "selected": false,
+        "status": "not selected; Census exact historical-estimate status unresolved"
+      },
+      "reassessed_in_correction": true,
+      "selected": false,
+      "unresolved_gates": [
+        "wpp_data_file_fixture_retention_permission",
+        "census_version_specific_immutable_data_payload_identity",
+        "exact_census_historical_estimate_status_for_denmark_2023",
+        "exact_wpp_version_specific_future_data_file_path",
+        "full_metadata_comparability_readiness"
+      ]
+    }
+  ],
+  "correction_scope": "Candidate 3 only: U.S. Census International Database versus UN World Population Prospects",
+  "data_payloads_retrieved": false,
+  "date": "2026-07-13",
+  "gate_status_vocabulary": [
+    "passed",
+    "failed",
+    "unresolved",
+    "not_applicable"
+  ],
+  "non_mutation_invariants": {
+    "candidate_3_only_reassessed": true,
+    "no_agreement_or_disagreement_classification": true,
+    "no_architecture_change": true,
+    "no_cross_source_comparison": true,
+    "no_doctrine_change": true,
+    "no_knowledge_object_package_created": true,
+    "no_observation_values_retrieved": true,
+    "no_postgresql_mutation": true,
+    "no_relationship_export_mutation": true,
+    "no_source_data_payloads_retrieved": true
+  },
+  "official_sources": [
+    {
+      "finding": "Census statistical products can be reused/replicated with citation; citation patterns include data files/API dataset title, vintage, URL and access date.",
+      "title": "Citing our Data, Tools, Technical Documents and Research",
+      "url": "https://www.census.gov/about/policies/citation.html"
+    },
+    {
+      "finding": "IDB provides estimates/projections, source metadata, full dataset/API/web tool links, release notes, errata, December 2025 update and planned November 2026 update.",
+      "title": "International Database (IDB)",
+      "url": "https://www.census.gov/programs-surveys/international-programs/about/idb.html"
+    },
+    {
+      "finding": "Lists Data Tool Release Notes: December 2025 and prior releases; establishes named release note but not a version-specific immutable data-file path.",
+      "title": "International Database Release Notes",
+      "url": "https://www.census.gov/programs-surveys/international-programs/data/tools/international-data-base/idb-release-notes.html"
+    },
+    {
+      "finding": "Census independently collects/evaluates demographic data, estimates parameters, applies adjustments and uses cohort-component projection systems; July 1/midyear framing documented.",
+      "title": "International Data Base: Population Estimates and Projections Methodology",
+      "url": "https://www2.census.gov/programs-surveys/international-programs/technical-documentation/methodology/idb-methodology.pdf"
+    },
+    {
+      "finding": "Official WPP 2024 site identifies the 2024 Revision as UN DESA Population Division official estimates/projections and provides documentation/download routes.",
+      "title": "World Population Prospects",
+      "url": "https://population.un.org/wpp/"
+    },
+    {
+      "finding": "WPP 2024 is the 28th revision; systematic compilation/evaluation of empirical data and probabilistic/demographic methods; CC BY 3.0 IGO for the report; published estimates with 1 July reference date are documented.",
+      "title": "World Population Prospects 2024: Methodology of the United Nations population estimates and projections",
+      "url": "https://population.un.org/wpp/assets/Files/WPP2024_Methodology.pdf"
+    },
+    {
+      "finding": "Country-specific source evidence and notes; figures/tables in the publication reproducible under CC BY 3.0 IGO; does not by itself establish data-file fixture redistribution permission.",
+      "title": "World Population Prospects 2024: Data Sources",
+      "url": "https://population.un.org/wpp/assets/Files/WPP2024_Data_Sources.pdf"
+    },
+    {
+      "finding": "Release date 11 July 2024; estimates from 1950 to today/2023 and projections thereafter; based on censuses, vital registration and surveys.",
+      "title": "World Population Prospects 2024: Release note",
+      "url": "https://population.un.org/wpp/assets/Files/WPP2024_Release-Note.pdf"
+    },
+    {
+      "finding": "Release date 19 January 2026; Togo-only update, estimates 1950-2023 and medium projections 2024-2100; next revision postponed to 2027.",
+      "title": "World Population Prospects 2024 (revision 1): Interim update",
+      "url": "https://population.un.org/wpp/assets/Files/WPP2024_Release-Note-rev1.pdf"
+    }
+  ],
+  "outcome": "B_no_candidate_selected",
+  "production_state_changed": false,
+  "status": "adversarially_corrected_candidate_3_only",
+  "values_retrieved": false
+}
