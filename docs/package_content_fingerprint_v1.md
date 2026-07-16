@@ -16,13 +16,19 @@ For a package that conforms to this specification, the authoritative field is:
 
 This specification is an accepted architectural core. Its content-fingerprint boundary and descriptor are decided, but independent conformance remains incomplete until a separately accepted, versioned contract-resolution profile defines the contract-artifact representation and rule vocabulary required by Section 6.1. Until then, derivation and verification MUST fail closed. This document does not claim that producers, validators, schemas, repository persistence, PostgreSQL projection, exports, or consumers currently enforce it.
 
+### 1.1 Normative orchestration precedence
+
+This specification remains authoritative for fingerprint calculation, strict parsing, canonicalization, package binding, governing-contract resolution, and technical verification. `docs/promotion_verification_admission_publication_sequence_v1.md` governs ordering and authority boundaries among final-package construction authorization, final repository serialization, non-canonical staging, verification, admission, canonical insertion, Git publication, PostgreSQL projection, export generation, and export verification.
+
+Where older orchestration language in this specification conflicts with that accepted sequence, the corrected sequence controls. This is a bounded clarification and amendment, not a new fingerprint algorithm version. It does not change the field, descriptor, specification identifier, RFC 8785 canonicalization, SHA-256, exact `/fingerprints` exclusion, parsing rules, package-ID binding, semantic roles, or legacy classifications and measurements.
+
 ## 2. Applicability and non-retroactivity
 
 This specification applies only to future packages created under a separately authorized implementation that explicitly declares conformance to `knowledgeforge_package_content_fingerprint_v1@1.0`.
 
 It MUST NOT be applied retroactively to existing packages. Existing `fingerprints.package_manifest` values MUST remain immutable legacy values and MUST NOT be reinterpreted as Package Content Fingerprint v1 values.
 
-No current package is classified as native v1-valid. A package carrying the descriptor and claiming the governing contract is only `purported_package_content_fingerprint_v1`; the descriptor is a claim, not proof of acceptance. `native_package_content_fingerprint_v1_valid` may be assigned only by an independently implemented verifier after successful verification and admission. A production package MUST NOT adopt this contract until the contract-resolution profile, implementation, independent validation, conformance vectors, legacy handling, and the applicable production gate have been separately authorized and completed.
+No current package is classified as native v1-valid. A package carrying the descriptor and claiming the governing contract is only `purported_package_content_fingerprint_v1`; the descriptor is a claim, not proof of technical validity or acceptance. `native_package_content_fingerprint_v1_valid` may be assigned only when an independent verifier successfully establishes that the exact frozen descriptor-bearing artifact conforms to this specification and its complete applicable immutable governing-contract set. Technical validity does not require or imply admission. A production package MUST NOT adopt this contract until the contract-resolution profile, implementation, independent validation, conformance vectors, legacy handling, and the applicable production gate have been separately authorized and completed.
 
 ## 3. Typed descriptor schema
 
@@ -58,7 +64,7 @@ Normative formula:
 
 > Package Content Fingerprint v1 is SHA-256 over the RFC 8785 canonical UTF-8 serialization of the complete final parsed package after removing exactly the root `/fingerprints` member.
 
-Derivation and verification are distinct normative operations. Derivation receives a proposed package whose hash-covered content is finalized and complete; it does not require or accept a completed Package Content Fingerprint v1 descriptor. Verification receives a persisted purported-native package and requires the exact completed descriptor.
+Derivation and verification are distinct normative operations. Derivation receives a proposed package whose hash-covered content is finalized and complete; it does not require or accept a completed Package Content Fingerprint v1 descriptor. Verification receives the exact frozen descriptor-bearing final repository serialization from non-canonical staging and requires the exact completed descriptor.
 
 Normative derivation pseudocode:
 
@@ -155,7 +161,7 @@ An implementation MUST identify and test a concrete RFC 8785 implementation or c
 
 ## 6. JSON parsing requirements
 
-The exact package bytes presented for admission or verification MUST be parsed as one JSON document with a root object. Trailing non-whitespace data, malformed UTF-8, malformed JSON, unsupported values, and parser recovery MUST be rejected.
+The exact frozen staged package bytes presented for verification and later admission evaluation MUST be parsed as one JSON document with a root object. Trailing non-whitespace data, malformed UTF-8, malformed JSON, unsupported values, and parser recovery MUST be rejected.
 
 An initial UTF-8 byte-order mark (BOM) MUST be rejected. A conforming parser MUST NOT silently discard it.
 
@@ -210,7 +216,7 @@ This section fixes the hash-covered bootstrap location, reference shape, exact-b
 
 Duplicate keys in any JSON object at any depth MUST be rejected. This applies even when duplicate values are textually or semantically equal.
 
-A package containing duplicate keys has no valid v1 content fingerprint and MUST NOT proceed to v1 admission, promotion, repository insertion, projection activation, or export as a v1-conformant package.
+A package containing duplicate keys has no valid v1 content fingerprint and MUST NOT proceed to successful technical verification, admission authorization, canonical insertion, Git publication, production projection, or export as a v1-conformant package.
 
 ## 8. Numeric restrictions
 
@@ -279,59 +285,67 @@ Fingerprints concerning other packages, source evidence, methods, inputs, regist
 
 A referenced-other-package fingerprint MUST carry a contract-declared target relation and a hash-covered target package identifier sufficient to distinguish it from a containing-package self-reference. Such a reference MUST NOT be removed merely because its value happens to resemble or equal another digest.
 
-## 14. Construction and finalization sequence
+## 14. Construction, staging, verification, and admission sequence
 
-A conforming future producer MUST use this sequence:
+A conforming future-native flow MUST preserve this order:
 
-1. Construct the complete semantic package, including all hash-covered evidence, provenance, methods, inputs, calculations, statements, applicability, contract references, and fields classified as pre-finalization content in Section 14.1.
+1. Complete all final semantic package content under a valid final-package construction authorization, including hash-covered evidence, provenance, methods, inputs, calculations, statements, applicability, governing-contract references, and pre-finalization fields.
 2. Represent exact non-integer quantities as governed canonical decimal strings.
-3. Ensure root `/fingerprints` is absent or is an empty object. A placeholder, pending digest, incomplete descriptor, or completed descriptor MUST NOT be supplied to derivation.
-4. Invoke `derive_package_content_fingerprint_v1` with the exact proposed serialized package bytes, immutable contract artifacts, and the accepted contract-resolution profile.
-5. Derivation independently performs strict parsing, bootstrap and contract resolution, complete hash-covered content validation, package-ID validation, self-reference checks, exact root exclusion, RFC 8785 canonicalization, and SHA-256 calculation.
-6. Only after derivation succeeds, attach the returned complete four-member descriptor as the sole member at `/fingerprints/package_content_fingerprint`.
-7. Freeze the complete package. No hash-covered field may change after this point.
-8. Serialize and persist only through a separately authorized admission path.
-9. Independently verify the persisted bytes under Section 15.
-10. Record authoritative post-fingerprint admission and verification results externally.
+3. Ensure root `/fingerprints` is absent or an empty object; no placeholder, pending digest, incomplete descriptor, or completed descriptor may be supplied to derivation.
+4. Derive Package Content Fingerprint v1 from the complete proposed semantic content using the exact algorithm, immutable governing-contract artifacts, and accepted contract-resolution profile defined here.
+5. Attach the returned complete four-member descriptor as the sole member at `/fingerprints/package_content_fingerprint`.
+6. Produce the exact final repository serialization.
+7. Freeze and persist those exact bytes in non-canonical staging, identified by a distinct serialized-artifact digest.
+8. Have an independent verifier verify that exact frozen descriptor-bearing artifact and record a verifier-owned result.
+9. Have a distinct admission authority evaluate the successfully verified exact artifact and issue `authorized`, `denied`, or `deferred`.
+10. Permit canonical insertion only after an unconditional successful `authorized` admission attestation.
+11. Treat insertion, repository reconciliation, Git publication, PostgreSQL projection, export generation, and export verification as later separate events governed by the sequence specification.
 
-No placeholder or pending digest may be serialized, persisted, admitted, projected, or exported. A producer MAY self-check the result, but producer self-checking is not independent verification.
+Non-canonical staging is pre-admission persistence outside the canonical Knowledge Repository. It is not canonical repository membership, publication, an admission result, or a violation of the prohibition on premature canonical persistence. A producer MAY self-check, but producer self-checking is not independent verification.
+
+The semantic Package Content Fingerprint v1 and serialized-artifact digest are distinct. The former identifies parsed semantic content under this specification; the latter identifies every exact byte of the final repository serialization. Exact digest descriptor details remain a closed record-contract dependency.
+
+The verifier records verification results only. The admission authority records admission results only. No combined “admission/verification result” is owned by the verifier.
 
 ### 14.1 Lifecycle and validation-state classification for future native packages
 
-This table governs only future v1-native package design and does not operationally reclassify legacy packages or resolve the deferred promotion policy.
+This table governs only future v1-native package design and does not operationally reclassify legacy packages or resolve deferred lifecycle and construction-authorization contracts.
 
 | Information class | v1 classification | Normative treatment |
 | --- | --- | --- |
-| `status` | deferred pending promotion-policy reconciliation | A later authorized reconciliation MUST decide whether each status is fixed pre-finalization content or external lifecycle state. v1 MUST NOT infer that answer. |
-| Governance or review state | deferred pending promotion-policy reconciliation | Review and governance timing relative to admission remains a separate lifecycle decision. |
-| Lifecycle state | deferred pending promotion-policy reconciliation | Mutable lifecycle state MUST NOT be inserted after fingerprinting; exact representation remains undecided. |
-| Promotion metadata | deferred pending promotion-policy reconciliation | Existing candidate-to-object semantics remain unchanged until separately reconciled. |
+| `status` | deferred pending lifecycle-contract reconciliation | A later authorized reconciliation MUST decide whether each status is fixed pre-finalization content or external lifecycle state. v1 MUST NOT infer that answer. |
+| Governance or review state | deferred pending lifecycle-contract reconciliation | Review and governance timing relative to admission remains a separate lifecycle decision. |
+| Lifecycle state | deferred pending lifecycle-contract reconciliation | Mutable lifecycle state MUST NOT be inserted after fingerprinting; exact representation remains undecided. |
+| Historical promotion metadata | immutable legacy evidence; future contract unresolved | Existing candidate-to-`KnowledgeObjectPackage` promotion semantics and package-local fields remain unchanged. Future final-package construction authorization is external and distinct. |
 | Completed pre-fingerprint validation results | hash-covered pre-finalization content | They may attest only to checks completed before derivation and MUST NOT claim successful final-fingerprint verification or admission. |
-| Successful post-fingerprint verification or admission results | external post-fingerprint record | They MUST be keyed externally by validated package ID and Package Content Fingerprint v1 value and MUST NOT be inserted into the package. |
-| Failed verification or admission attempts | external post-fingerprint record | This specification does not define their external identity when package ID or descriptor validation fails. A separately governed admission contract MAY record an exact external artifact identity and untrusted claimed values, but MUST NOT represent an unvalidated package ID or descriptor as validated. |
-| Evidence-integrity assertions | deferred pending promotion-policy reconciliation | Substantive evidence/provenance remains hash-covered, but existing assertions such as fingerprint-verification flags require explicit timing and authority reconciliation. |
+| Successful post-fingerprint verification and admission results | external post-fingerprint attestations | Verification and admission remain distinct attestations bound to validated package ID, Package Content Fingerprint v1, exact serialized-artifact digest, construction authorization, and governing contracts; neither is inserted into the package. |
+| Failed verification or admission attempts | external non-canonical failure or decision evidence | A separately governed failure-evidence contract MAY bind exact artifact identity and untrusted claimed values but MUST NOT represent an unvalidated package ID or descriptor as validated or use failure evidence as proof of admission. |
+| Evidence-integrity assertions | deferred pending lifecycle-contract reconciliation | Substantive evidence/provenance remains hash-covered, but existing assertions such as fingerprint-verification flags require explicit timing and authority reconciliation. |
 | Lineage | hash-covered pre-finalization content | Lineage known when the proposed package is finalized is substantive package content; later lineage events require an external record or a separately governed immutable successor. |
 | Evolution and supersession assertions | hash-covered pre-finalization content | A package may contain only assertions complete before derivation. Later successor/supersession events require an external record or separately governed immutable successor and MUST NOT mutate the predecessor. |
 | Package-local claim that the completed descriptor has already passed independent verification or admission | prohibited package-local claim | The claim can arise only after the descriptor and persisted bytes exist and therefore would create a post-fingerprint mutation or attestation cycle. |
 
-## 15. Independent verification sequence
+## 15. Independent technical verification and external status separation
 
 An independent verifier MUST:
 
-1. Receive the exact serialized persisted package artifact, its claimed package ID, an explicitly identified immutable contract-artifact set, and an accepted contract-resolution profile without relying on producer in-memory or ambient state.
-2. Parse it with strict duplicate-key, numeric, Unicode, UTF-8, BOM, and JSON rules.
-3. Require root `/fingerprints` to contain exactly `package_content_fingerprint`, and validate the descriptor's exact four-member set, types, and required values.
-4. Validate the exact bootstrap reference at `/governing_contracts/package_contract`, verify the contract artifact's exact-byte SHA-256 digest, and resolve every applicable contract under the accepted profile.
-5. Repeat package schema, complete hash-covered content, package-ID, decimal, semantic-role, target-relation, reservation, and containing-package self-reference validation independently.
-6. Require the validated parsed package ID to equal the separately claimed package ID exactly.
-7. Deep-copy the complete final parsed package and remove exactly root `/fingerprints`.
-8. Independently produce the RFC 8785 canonical UTF-8 bytes and calculate SHA-256.
-9. Construct the expected complete four-member descriptor and compare it with the stored descriptor using exact member, type, token, and value equality.
-10. Fail closed on any difference or unresolved dependency.
-11. Record a successful admission/verification result externally, keyed by the validated package ID and stored Package Content Fingerprint v1 value. If verification fails before both values validate, any external failure record is governed separately and MUST NOT present untrusted claimed values as validated keys.
-12. Assign `native_package_content_fingerprint_v1_valid` only after successful verification and admission; before that, the artifact is merely `purported_package_content_fingerprint_v1`.
+1. Receive the exact frozen descriptor-bearing staged artifact, separately claimed package ID, serialized-artifact digest, explicitly identified immutable governing-contract set, accepted contract-resolution profile, and final-package construction-authorization identity without relying on producer in-memory or ambient state.
+2. Recalculate the serialized-artifact digest over those exact staged bytes and require equality with the supplied exact-byte identity.
+3. Parse the artifact with strict duplicate-key, numeric, Unicode, UTF-8, BOM, and JSON rules.
+4. Require root `/fingerprints` to contain exactly `package_content_fingerprint`, and validate the descriptor's exact four-member set, types, and required values.
+5. Validate the exact bootstrap reference, governing-contract artifact digests, complete applicable immutable contract set, and accepted profile.
+6. Repeat package schema, complete hash-covered content, package-ID, decimal, semantic-role, target-relation, reservation, and containing-package self-reference validation independently.
+7. Require the validated parsed package ID to equal the separately claimed package ID exactly.
+8. Remove exactly root `/fingerprints` from a deep copy, produce RFC 8785 canonical UTF-8 bytes, calculate SHA-256, construct the expected descriptor, and require exact descriptor equality.
+9. Fail closed on any difference or unresolved dependency.
+10. Record a verifier-owned result with exact artifact and governing-contract binding, verifier identity/role, implementation identity/version, outcome, completion time, attestation identity/content digest, and failure reason where applicable.
+11. Assign `native_package_content_fingerprint_v1_valid` upon successful independent technical verification of the exact artifact. Before success, it is merely `purported_package_content_fingerprint_v1`.
 
-The independent verifier SHOULD be implemented or tested across more than one runtime or language before production authorization.
+Technical fingerprint verification status, admission-authorization status, canonical-insertion status, Git-publication status, PostgreSQL-projection status, export-generation status, export-verification status, and later lifecycle status are separate dimensions.
+
+A fingerprint-valid artifact may be denied or deferred admission. Denial or deferral does not make its correctly computed fingerprint invalid. Technical validity alone does not make an artifact admitted, insertion-ready, canonical, inserted, Git-published, projected, exported, or current. A fingerprint-invalid or incompletely verified artifact cannot receive successful admission authorization.
+
+The verifier MUST NOT issue admission authorization. The admission authority MUST explicitly reference the completed successful verification attestation and bind the same artifact and governing-contract tuple. The independent verifier SHOULD be implemented or tested across more than one runtime or language before production authorization.
 
 ## 16. Cycle-breaking rule
 
@@ -348,6 +362,8 @@ No fixed-point search, repeated rehashing until stability, recursive fingerprint
 Conformance is fail-closed. Any parse error, BOM, duplicate key, malformed Unicode, prohibited numeric value, absent or malformed bootstrap reference, unavailable or digest-mismatched contract artifact, unsupported or unresolvable contract/algorithm/media-type/version, ambiguous applicability, conflicting rules, ungoverned field requiring governance, malformed descriptor, package-ID mismatch, digest mismatch, containing-package self-reference, additional root `/fingerprints` member, or closed-member-rule violation MUST cause v1 verification failure.
 
 Any hash-covered mutation after finalization produces a different artifact for which the prior Package Content Fingerprint v1 value is invalid. It does not invalidate, alter, or diminish the preserved predecessor artifact or the correctness of that predecessor's fingerprint for its original bytes and content. If the changed artifact retains the old descriptor, independent verification detects a digest mismatch. If its content and descriptor are both recomputed, a separately persisted changed artifact MUST receive the identity and version required by the applicable package and lifecycle contracts and MUST enter a separately authorized lifecycle-permitted finalization. Where canonical overwrite prohibition applies, one package ID MUST NOT identify different canonical bytes. Successor and supersession treatment remains separately governed; this rule neither authorizes a successor nor retroactively makes any legacy defect valid. Artifact-only verification does not claim to reconstruct unrecorded producer history; repository immutability and external records keyed by package ID plus fingerprint provide the cross-artifact detection boundary.
+
+If any byte changes after verification or admission, the former serialized-artifact digest no longer identifies the artifact, and the former verification and admission evidence cannot authorize it. The changed bytes MUST be frozen as a new staged artifact and receive a new exact digest, independent verification, and admission decision. Semantic fingerprint equality does not waive exact-byte reauthorization. Canonical insertion MUST install the exact admitted bytes unchanged; parsing and reserialization, normalization, whitespace or escaping changes, member-order changes, newline changes, and every other byte change are prohibited before insertion.
 
 Failure MUST NOT be rewritten as a warning merely because full-file persistence, repository indexing, PostgreSQL projection, or export payload fidelity succeeds.
 
@@ -381,11 +397,13 @@ The following categories are governed:
 4. `legacy_manifest_invalid_self_reference_order`
    - The stored legacy outer value does not recompute because containing-package mirror insertion/update and outer hashing occurred in an incoherent order; this is the Campaign 37 defect class.
 5. `native_package_content_fingerprint_v1_valid`
-   - Reserved exclusively for future packages that pass implemented independent v1 verification and admission.
+   - Reserved exclusively for future packages whose exact frozen descriptor-bearing artifact passes implemented independent v1 technical verification under the complete applicable immutable governing-contract set. Admission is a separate status.
 
 The five invalid legacy outer manifests measured in the 2026-07-15 560-package corpus MUST remain preserved and require later lifecycle adjudication before any successor is created. This corpus-scoped count does not preclude future audits from discovering additional defects. The 35 deprecated containing-package mirror occurrences measured in that corpus, including 33 stale mirrors, are non-authoritative legacy fields. A stale mirror alone does not require a successor when the authoritative legacy outer manifest remains valid.
 
 No current package MAY be classified as `native_package_content_fingerprint_v1_valid`.
+
+The five anomalous packages may remain historically accepted under their original governance while not being technically valid under this future native-v1 contract. Historical acceptance and native-v1 technical validity are separate classifications. This amendment does not alter the measured zero-current-native-v1 result.
 
 ## 20. PostgreSQL implications
 
@@ -400,11 +418,15 @@ A future separately authorized projection MAY expose the v1 descriptor, package 
 
 PostgreSQL MUST NOT originate or mutate a canonical v1 package, and database agreement MUST NOT be treated as proof that the package content fingerprint is valid.
 
+For conforming future-native production, successful Git publication precedes PostgreSQL projection. A separately authorized prepublication test projection is non-authoritative, non-production, preview-only, and nonconforming with the completed production sequence; it proves no earlier stage and cannot support consumer export publication.
+
 ## 21. Relationship Export Contract v1 implications
 
 Relationship Export Contract v1 remains unchanged. This specification does not alter export fields, query semantics, result-set fingerprints, consumer simulations, or relationship package publication.
 
 A future export-contract revision MAY carry Package Content Fingerprint v1 only after separate authorization and compatibility analysis. Export fidelity MUST remain distinct from package-content-fingerprint validity.
+
+Export generation or materialization occurs after the applicable production projection. Independent export verification is a distinct later event. Neither may rewrite canonical packages or establish earlier authority.
 
 ## 22. Required future conformance vectors
 
@@ -463,10 +485,11 @@ This accepted architectural core does not:
 - implement or modify a producer, parser, validator, schema, migration, registry, repository index, projection, export, or consumer;
 - repair, rewrite, normalize, or reclassify current packages operationally;
 - create successors or alter lifecycle state;
-- reconcile candidate-to-object promotion policy;
+- redefine historical candidate-to-object promotion or settle the future standardized construction-authorization contract;
 - make PostgreSQL canonical;
 - change Relationship Export Contract v1;
 - define a universal decimal ontology for all methods;
 - define a serialized-file or repository fingerprint;
 - authorize production package generation;
-- authorize publication.
+- authorize publication;
+- implement staging, admission, insertion, Git publication, PostgreSQL projection, export generation, export verification, authority-record placement, failure-evidence storage, or lifecycle handling.
