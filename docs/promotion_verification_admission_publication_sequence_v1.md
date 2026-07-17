@@ -1,7 +1,7 @@
 # KnowledgeForge Promotion–Verification–Admission–Publication Sequence v1
 
 Date: 2026-07-16
-Status: architecturally accepted; not implemented; not production-authorized; contract-resolution profile and record contract pending
+Status: architecturally accepted; Governing Contract Resolution Profile v1 accepted as normative architecture; not implemented; not production-authorized; machine-readable profile artifacts and record contract pending
 Specification identifier: `knowledgeforge_promotion_verification_admission_publication_sequence_v1@1.0`
 Applicability: future native Package Content Fingerprint v1 flows only
 
@@ -13,7 +13,7 @@ This document defines the future ordering, authority boundaries, identities, and
 
 This sequence is architecturally accepted. It is not implemented and is not production-authorized. It depends on:
 
-- the pending versioned Package Content Fingerprint v1 contract-resolution profile uniquely and immutably bound to `knowledgeforge_package_content_fingerprint_v1@1.0`;
+- the accepted normative architecture in `docs/governing_contract_resolution_profile_v1.md`, with its machine-readable contracts, ResolverTrustRelease evidence, conformance vectors, and implementation still pending;
 - a future contract for `FinalPackageVerificationAndAdmissionAuthorizationRecord` or an equivalently clear successor name;
 - separately authorized implementation, conformance, production, and publication gates.
 
@@ -34,7 +34,7 @@ Current production paths MAY continue to be described by their historical contra
 
 ### 2.1 Normative relationship to Package Content Fingerprint v1
 
-`docs/package_content_fingerprint_v1.md` remains authoritative for fingerprint calculation, strict parsing, canonicalization, package binding, governing-contract resolution, and technical verification. This specification governs ordering and authority boundaries among final-package construction authorization, final repository serialization, non-canonical staging, verification, admission, canonical insertion, Git publication, PostgreSQL projection, export generation, and export verification.
+`docs/package_content_fingerprint_v1.md` remains authoritative for fingerprint calculation, strict package parsing, canonicalization, package binding, and technical fingerprint recomputation. `docs/governing_contract_resolution_profile_v1.md` governs contract-manifest interpretation, ResolverTrustRelease validation, external technical trust selection, root authorization, closed dispatch, typed dependency closure, rule-domain delegation, and closure identity. This specification governs ordering and authority boundaries among final-package construction authorization, final repository serialization, non-canonical staging, verification, admission, canonical insertion, Git publication, PostgreSQL projection, export generation, and export verification. Each document is authoritative only within its declared domain.
 
 Where older orchestration language in `docs/package_content_fingerprint_v1.md` conflicts with this accepted sequence, this corrected sequence controls. The corresponding bounded correction to that document is an orchestration clarification and amendment, not a new fingerprint algorithm version. It does not change the fingerprint field, descriptor, specification identifier, derivation boundary, RFC 8785 canonicalization, SHA-256 algorithm, parsing rules, package-ID binding, self-reference rules, or legacy classifications.
 
@@ -67,7 +67,7 @@ The following units are distinct and MUST NOT be collapsed:
 | Frozen staged artifact | The complete descriptor-bearing final package in its exact final repository serialization, frozen as immutable bytes outside the canonical Knowledge Repository. |
 | Independent verification | Independent evaluation of the exact frozen staged artifact and its complete applicable immutable governing-contract set. Successful verification establishes technical fingerprint validity; it does not authorize admission. |
 | Admission authorization | Unconditional authority to attempt insertion of one exact successfully verified artifact tuple into the canonical repository. Denied or deferred outcomes are not insertion-ready. |
-| Canonical insertion | One logically atomic append-only repository transition that makes the exact admitted bytes and required authority/repository metadata canonically visible together. |
+| Canonical insertion | One logically atomic append-only repository transition whose materialization remains behind the non-canonical reader gate until successful read-back/reconciliation and whose single visibility switch then makes the exact admitted bytes and required authority/repository metadata canonically visible together. |
 | Repository reconciliation | Read-back and deterministic reconciliation of the package, authority record, manifest, indexes, required evolution metadata, and resulting repository identity. |
 | Git publication | An immutable Git commit containing the complete authorized repository transition and authority evidence. A local commit is not by itself proof of off-host durability. |
 | Distribution | Transfer or exposure of the publication commit, normally through a verified remote ref. Distribution is not admission. |
@@ -76,7 +76,7 @@ The following units are distinct and MUST NOT be collapsed:
 | Export verification | Independent verification of a generated export against its governing contract. |
 | Later lifecycle event | A separately governed contradiction, weakening, withdrawal, currentness, succession, or supersession event that never mutates an immutable predecessor. |
 
-For future native-v1 flows, successful local repository materialization MUST be called `canonical insertion complete`. An uncommitted local insertion MUST NOT be called `Git-published` or off-host durable.
+For future native-v1 flows, only successful stage-10 reconciliation followed by the one atomic visibility switch may be called `canonical insertion complete`. Stage-9 local materialization is non-canonical preparation. An uncommitted completed insertion MUST NOT be called `Git-published` or off-host durable.
 
 ## 5. Complete event order
 
@@ -93,8 +93,8 @@ A conforming future native-v1 flow MUST use this order:
    - package ID;
    - Package Content Fingerprint v1;
    - serialized-artifact digest.
-9. Logically atomic append-only canonical repository transition.
-10. Read-back verification and deterministic repository reconciliation.
+9. Complete canonical-transition preparation and materialization behind the non-canonical reader gate.
+10. Read-back verification, deterministic reconciliation, and logically atomic visibility switch completing canonical insertion.
 11. Git publication in an immutable commit, followed by verification of the actual resulting commit tree.
 12. Derived PostgreSQL projection from Git-published canonical state.
 13. Derived export generation or materialization.
@@ -133,17 +133,20 @@ A final-package construction authorization MUST:
 - identify the governing authority and decision basis;
 - state the construction scope it authorizes.
 
-Final-package construction authorization authorizes only construction of a proposed final package. It is a required binding input to later derivation, staging, and independent technical verification, but it does not authorize those later events. It does not bind a Package Content Fingerprint that does not yet exist. It MUST NOT authorize:
+Final-package construction authorization authorizes only stage 4: construction of complete final semantic package content. Its identity is a required binding and process-lineage input to stages 5 through 7, but required identity binding grants no authority to perform those later events. Stages 4 through 7 MAY occur within one bounded operational attempt; that operational boundary does not define or expand stage-3 authority. The authorization does not bind a Package Content Fingerprint or exact serialized-artifact digest that does not yet exist. It MUST NOT authorize Package Content Fingerprint derivation, descriptor attachment, final repository serialization, freezing, non-canonical staging, or:
 
 - final package or technical fingerprint validity;
 - independent technical verification;
+- any verification result;
 - admission;
 - canonical insertion;
+- read-back or reconciliation;
 - Git publication;
 - PostgreSQL projection;
-- export generation or verification.
+- export generation or verification;
+- lifecycle action.
 
-A package-local reference to the final-package construction authorization MAY be hash-covered lineage. The authoritative authorization remains the external governance artifact, not a package-local assertion.
+A package-local reference to the final-package construction authorization MAY be hash-covered lineage, but the authoritative authorization remains the external governance artifact, not a package-local assertion. The exact external construction-authorization identity MUST bind stage-5 derivation evidence, MUST bind stage-6 serialization and non-canonical staging evidence, MUST accompany the frozen artifact and stage-7 verification as required process lineage, and MUST be preserved by the verification evidence or combined authority record. The technical verifier MUST check and record exact equality of that identity across those bindings as a process-conformance observation. Required presence and exact binding do not grant authority, do not establish governance validity, and do not determine deterministic technical-fingerprint validity. The technical verifier MUST NOT evaluate the authorization's legitimacy, scope, currentness, expiry, withdrawal, or sufficiency as part of technical validity. Admission governance MUST evaluate those properties and MAY deny or defer an otherwise technically valid artifact when the construction process or required lineage binding was unauthorized or nonconforming.
 
 This event is distinct from historical KnowledgeForge `promotion` and the current candidate-to-`KnowledgeObjectPackage` promotion convention. Existing package-local `promotion` fields remain immutable historical evidence. Existing acceptance criteria, historical decisions, and construction behavior are not retroactively redefined or renamed. Final native-v1 canonical acceptance is governed by independent verification, admission, logically atomic insertion, and Git publication—not by a historical package-local promotion block alone.
 
@@ -189,14 +192,18 @@ The verifier MUST receive, at minimum:
 - the separately claimed package ID;
 - the Package Content Fingerprint v1 descriptor carried by the artifact;
 - the serialized-artifact digest;
+- the exact fingerprint-specification artifact identified by media type and SHA-256 in the checkpoint-qualified `ResolverTrustRelease` uniquely selected by the accepted-release evidence closure derived from the externally pinned governance checkpoint;
 - explicitly identified immutable governing contract artifacts;
-- the accepted contract-resolution profile.
+- the accepted resolution profile;
+- the exact fixed release-authority-family identity `knowledgeforge_native_package_content_fingerprint_v1_release_authority_family@1.0`, exact externally pinned `governance_checkpoint_boundary_identity` and `governance_checkpoint_result_tuple`, governed Git-tree material, complete cross-genesis checkpoint-derived accepted-release evidence closure, uniquely selected checkpoint-qualified ResolverTrustRelease and derived lineage when resolved, all applicable acceptance/withdrawal/supersession/disposition/adjudication/reactivation evidence, exact release-bound conformance-suite artifact and implementation-conformance evidence, and exact `technical_trust_context` tuple required by `docs/governing_contract_resolution_profile_v1.md`.
+
+The exact final-package construction-authorization identity MUST accompany the artifact and the stage-5 derivation and stage-6 serialization/staging evidence as required stage-7 process lineage. The verifier MUST check and record exact equality of the identity across those bindings, but required presence and exact binding grant no authority, do not prove governance validity, and MUST NOT determine the deterministic technical result. Admission separately evaluates legitimacy, scope, currentness, expiry, withdrawal, and sufficiency.
 
 The verifier MUST independently perform all checks required by `docs/package_content_fingerprint_v1.md`, including strict parsing, duplicate-key rejection, numeric and Unicode constraints, governing-contract resolution and digest validation, package validation, package-ID validation, containing-package self-reference rejection, RFC 8785 canonicalization, SHA-256 derivation, and exact descriptor comparison.
 
 Verification establishes properties of the exact final bytes. It MUST NOT authorize admission merely by reporting success. Producer self-checking MAY supplement but MUST NOT replace independent verification.
 
-A successful independent verification assigns technical status `native_package_content_fingerprint_v1_valid` to the exact frozen descriptor-bearing artifact when the verifier establishes conformance to Package Content Fingerprint v1 and the complete applicable immutable governing-contract set. This technical status is separate from admission, canonical insertion, Git publication, PostgreSQL projection, export generation, export verification, and later lifecycle status. A fingerprint-valid artifact MAY still be denied or deferred admission. Denial or deferral does not make a correctly computed fingerprint technically invalid.
+A successful independent verification assigns technical status `native_package_content_fingerprint_v1_valid` to the exact frozen descriptor-bearing artifact when the verifier establishes conformance under the exact externally bound fingerprint-specification identity, media type, and SHA-256; exact resolver profile; fixed release-authority family; complete checkpoint identities and cross-genesis accepted-release evidence closure; exactly one eligible checkpoint-current ResolverTrustRelease and derived lineage in current mode or matching immutable historical evidence in historical mode; exact release-bound conformance-suite artifact and implementation-conformance evidence; authorized root; package technical contract closure; and verification-procedure closure. Zero or multiple eligible terminal releases cannot produce checkpoint-current technical validity. The verified fingerprint-specification digest MUST equal the fingerprint-specification explicit-root digest in the procedure closure. The result MUST be labelled `checkpoint-current` or `historical` with the exact checkpoint and MUST NOT claim unqualified global currentness. This qualified technical status is separate from construction-authorization validity, admission, canonical insertion, Git publication, PostgreSQL projection, export generation, export verification, and later lifecycle status. A fingerprint-valid artifact MAY still be denied or deferred admission. Denial, deferral, or a construction-authorization defect does not make a correctly computed fingerprint technically invalid.
 
 Verification failure MUST prevent successful admission. Failed verification evidence MUST NOT present unvalidated claimed package IDs or fingerprints as validated identities.
 
@@ -212,7 +219,7 @@ validated package_id
 + exact serialized-artifact digest
 ```
 
-Admission policy MUST also evaluate the valid final-package construction authorization, governing package contract, package-kind and constitutional boundaries, complete applicable immutable governing-contract set, and collision/no-overwrite preconditions.
+Admission policy MUST bind exactly one externally authorized governance checkpoint for the evaluation and evaluate that checkpoint pin's legitimacy, applicability, sufficient recency, withdrawal status, and sufficiency; final-package construction-authorization legitimacy, scope, currentness, expiry, withdrawal, and sufficiency; the `admission_policy_closure`; current eligibility and stale-authority status of the already verified technical-trust-context, authorized root, and named technical closures; package-kind and constitutional boundaries; and collision/no-overwrite preconditions. A verification result under a different checkpoint is stale, mismatched, or inapplicable. Multiple incompatible checkpoints presented as applicable to one evaluation MUST fail closed pending governance adjudication. Admission MUST NOT rerun, redefine, or silently replace the verifier-owned checkpoint-relative technical-conformance result.
 
 Admission outcomes are:
 
@@ -224,7 +231,7 @@ A conditional decision with unresolved conditions is not successful authorizatio
 
 The admission authority MUST NOT manufacture, alter, suppress, or rewrite the independent verifier's result. Successful verification MUST NOT compel admission. Admission status does not determine technical fingerprint validity.
 
-Immediately before insertion, the gate MUST fail closed if any bound authority, contract, evidence, or identity has changed, become unavailable, been superseded, been withdrawn, expired under its governing contract, ceased to resolve immutably, or become inconsistent with the staged artifact. Renewed verification or admission MUST occur as applicable.
+Immediately before insertion, the gate MUST fail closed if the exact admission-bound checkpoint or admission policy, or an explicit governance event recognized by that policy, establishes that any bound authority, contract, evidence, or identity has become unavailable, been superseded, been withdrawn, expired under its governing contract, ceased to resolve immutably, or become inconsistent with the staged artifact. Ambient branch movement, timestamps, or an unpinned later checkpoint MUST NOT silently redefine this evaluation. Renewed verification or admission MUST occur as applicable.
 
 An `authorized` result permits an insertion attempt for the exact verified artifact. It does not prove that insertion, repository reconciliation, Git publication, PostgreSQL projection, export generation, or export verification later succeeds. After canonical insertion or publication, later contradiction, weakening, withdrawal, currentness, or supersession MUST remain a separately governed lifecycle event and MUST NOT rewrite the immutable predecessor.
 
@@ -252,9 +259,12 @@ The future record contract MUST bind:
 - package ID;
 - complete Package Content Fingerprint v1 descriptor and value;
 - serialized-artifact digest;
-- final-package construction-authorization identity;
-- complete applicable immutable governing-contract set;
-- fingerprint specification and accepted contract-resolution-profile identity;
+- final-package construction-authorization identity and its admission-policy evaluation;
+- fingerprint-specification identity, media type, and exact SHA-256, plus any required accepted no-semantic-change decision identity, digest, and Git commit, and accepted resolution-profile identity and exact digest;
+- exact `governance_checkpoint_boundary_identity` and `governance_checkpoint_result_tuple`, including repository identity, commit, root-tree identity, governed evidence-subtree identities, profile identity/digest, fixed release-authority-family identity, governed namespace/enumeration identity, accepted-release evidence-closure identity, complete candidate sets, checkpoint-current release and derived lineage or exact unresolved designation, and verification mode; checkpoint-qualified ResolverTrustRelease identity/digest when resolved; exact conformance-suite identity/media type/digest and implementation-conformance-evidence identity/digest; all applicable acceptance, withdrawal, supersession, disposition, adjudication, and reactivation decision identities/digests; verifier-invocation authorization identity/digest and exact checkpoint/family/mode binding; selected release lineage, genesis, sequence, predecessor, and authorized root only when derived after complete resolution;
+- `package_technical_contract_closure` identity;
+- `fingerprint_verification_procedure_closure` identity;
+- `admission_policy_closure` identity;
 - admission-policy identity and version;
 - record status.
 
@@ -270,7 +280,7 @@ The verification section MUST include:
 - verification outcome;
 - verification-completion time;
 - verification-attestation identity or content digest;
-- binding to the shared artifact tuple and governing-contract set;
+- binding to the shared artifact tuple; fingerprint-specification identity, media type, and exact SHA-256; exact `technical_trust_context`; authorized root; `package_technical_contract_closure`; and `fingerprint_verification_procedure_closure`, including equality between the recorded fingerprint-specification digest and that closure's fingerprint-specification explicit root;
 - exact checks performed;
 - blockers and failure reason where not successful.
 
@@ -285,7 +295,7 @@ The admission section MUST include:
 - admission-authorization time;
 - admission-attestation identity or content digest;
 - explicit reference to the completed successful verification attestation;
-- binding to the same artifact tuple and governing-contract set;
+- binding to the same artifact tuple and exact technical-trust-context tuple, including the fingerprint-specification descriptor, exact governance checkpoint, accepted-release evidence closure, checkpoint-qualified designation, and applicable lineage evidence; explicit reference to the verifier-owned technical closures without redefining them; and binding to the exact `admission_policy_closure`;
 - denial or deferral reasons where applicable.
 
 The record MUST contain immutable ordering evidence proving verification completed before admission authorization. Separate attestation timestamps are mandatory unless a later accepted contract provides an equally deterministic immutable ordering mechanism.
@@ -320,42 +330,45 @@ This specification does not invent the final authority-record path. Operational 
 
 Under that future contract, the finalized successful record MUST participate in the same logically atomic canonical transition and later Git publication boundary as the admitted package. No package may be admitted operationally under this architecture before this dependency is closed.
 
-## 13. Logically atomic canonical repository transition
+## 13. Stage-9 canonical-transition preparation and materialization
 
-Canonical insertion MUST occur only after unconditional `authorized` admission and a final stale-authority check.
+Stage 9 may begin only after unconditional `authorized` admission and a final stale-authority check. It MUST prepare and materialize the complete admitted transition behind a non-canonical reader-visibility gate. Stage 9 does not make the next state canonically visible and does not complete canonical insertion.
 
-The complete transition MUST include, as applicable:
+The prepared transition MUST include, as applicable under the future repository contract:
 
 - the exact admitted package bytes;
 - the finalized successful verification/admission authority record;
 - required evolution metadata;
 - deterministic indexes;
 - deterministic manifest state;
-- the expected repository fingerprint or equivalent reconciliation identity.
+- expected repository-fingerprint or equivalent reconciliation-identity material;
+- every other repository-contract-required component.
 
-Logical atomicity means readers and downstream processes observe either the complete previous canonical repository state or the complete next canonical repository state. They MUST NOT treat a partially materialized transition as canonical. A visible package object file alone does not establish canonical membership. One explicit repository transition boundary or commit marker MUST determine canonical visibility.
+The prepared transition MUST be append-only, preserve existing predecessors without mutation, reject same-package-ID/different-content and unexpected-pre-existence collisions, and fail closed on overwrite, stale authority, identity, digest, contract, or authorization mismatch. It MUST install the exact admitted staged bytes unchanged. No parsing and reserialization, normalization, repair, overwrite, or implicit successor creation is authorized.
 
-The transition MUST be append-only, preserve existing predecessors without mutation, reject same-package-ID/different-content and unexpected-pre-existence collisions, and fail closed on overwrite, stale authority, identity, digest, contract, or authorization mismatch.
+Future implementations MAY use staging plus atomic replacement or a transactionally enforced reader gate, but this specification does not select the mechanism. A manifest-last protocol conforms only if every canonical reader enforces that manifest as the visibility gate. Arbitrary sequential writes followed by best-effort rollback MUST NOT be called atomic. Materialized files remain non-canonical until successful stage 10; canonical readers and downstream processes MUST be unable to consume them as canonical.
 
-Future implementations MAY use staging plus atomic replacement or a manifest-last transactional visibility protocol, but this specification does not select the mechanism. Arbitrary sequential writes followed by best-effort rollback MUST NOT be described as atomic. Partial files after failure remain non-canonical residue; canonical readers MUST be unable to consume them, and they MUST be quarantined, recovered, or removed only through a separately governed recovery procedure.
+The current `tools/knowledge_repository.py` implementation does not satisfy this future non-canonical preparation, exact-byte, or logical-atomicity boundary and remains unchanged and nonconforming.
 
-Canonical insertion MUST install the exact admitted staged bytes unchanged. No overwrite, parsing and reserialization, normalization, repair, or implicit successor creation is authorized. The current `tools/knowledge_repository.py` implementation does not satisfy this future logical-atomicity or exact-byte boundary and remains unchanged.
+## 14. Stage-10 read-back, reconciliation, and canonical visibility completion
 
-## 14. Read-back verification and repository reconciliation
+While the complete previous state remains the only canonically visible state, stage 10 MUST read back and reconcile the prepared next state:
 
-After the logical transition is prepared and before the next state is accepted as complete, the system MUST read back and reconcile:
-
-- the exact canonical package bytes against the admitted serialized-artifact digest;
-- the finalized authority record and its bindings;
-- `knowledge_repository/manifest.json`;
+- exact prepared package bytes against the admitted serialized-artifact digest and admitted staged bytes;
+- finalized authority record and its bindings;
+- prepared `knowledge_repository/manifest.json` state;
 - applicable deterministic indexes;
 - required evolution metadata;
-- the resulting repository fingerprint or equivalent reconciliation identity and package set;
-- predecessor immutability and the absence of unauthorized paths.
+- resulting repository fingerprint or equivalent reconciliation identity and package set;
+- predecessor immutability and absence of unauthorized paths.
 
-The explicit transition boundary MUST expose the next canonical state only when these requirements succeed under the accepted repository contract. Failure MUST preserve the previous state as the only canonical state. Partial materialization is non-canonical residue, not new canonical knowledge.
+Only after every stage-10 check succeeds under the accepted repository contract may one logically atomic visibility switch expose the complete next state, retire the previous state as current, and complete canonical insertion. Logical atomicity has one conformance meaning: readers and downstream processes observe either the complete previous canonical state or the complete next canonical state, never an intermediate state. A materialized or otherwise directly visible object file before this switch does not establish canonical membership.
 
-The exact transaction mechanism, repository read gate, recovery protocol, authority-record location, and reconciliation implementation remain closed implementation-contract dependencies.
+If any stage-10 check fails, the visibility switch MUST NOT occur, canonical insertion MUST NOT be claimed complete, and the previous state MUST remain the only canonical state. Partial materialization remains non-canonical residue. Retention, quarantine, repair, or cleanup follows separately governed future recovery contracts. Reconciliation failure cannot occur after the transition is considered canonical because successful reconciliation is a prerequisite to the sole canonical-visibility switch.
+
+The exact transaction mechanism, repository reader gate, visibility switch, recovery protocol, authority-record location, and reconciliation implementation remain closed implementation-contract dependencies. Stage 11 Git publication MUST NOT begin before successful stage-10 completion.
+
+Future conformance vectors MUST include at least: stage-9 materialization followed by stage-10 failure, proving no visibility switch and only the previous canonical state; successful stage-10 reconciliation followed by exactly one atomic visibility switch; attempted canonical visibility before all stage-10 checks succeed, which MUST fail closed; and attempted stage-11 publication before stage-10 canonical insertion completion, which MUST fail closed.
 
 ## 15. Git publication and commit-tree proof
 
@@ -412,7 +425,7 @@ Operational failure MUST NOT automatically be classified as substantive negative
 | Final verification failed | A frozen purported package exists, but no valid/admitted package | No | Exact staged-artifact digest, checks, verifier identity, blockers, and untrusted claims clearly marked | MAY retry the identical bytes with corrected verifier dependencies; changed bytes require a new artifact digest and re-verification, and may require a new package identity. |
 | Admission denied or deferred | A successfully verified artifact may exist | No | Verification attestation, admission attestation, policy, reasons, and limitations | MAY seek a new admission decision after policy/context changes; changed bytes require new verification and authorization. |
 | Insertion collision | An admitted staged artifact exists | Existing canonical knowledge remains; the new artifact is not inserted | Admission record, existing/new identities, collision evidence | Retry is permitted only after resolving identity/content conflict without overwriting; same ID/different content normally requires a new valid package identity or rejection. |
-| Partial insertion or reconciliation failure | An admitted staged artifact exists; local partial files may exist as non-canonical residue but are not a valid completed transition | The complete previous repository state remains the only canonical state | Exact attempted transition, affected paths, read-back/reconciliation results, quarantine/recovery state | MAY retry only after repository consistency is restored and the exact admission remains valid; changed bytes require new verification/admission. |
+| Stage-9 materialization or stage-10 reconciliation failure | An admitted staged artifact exists; local partial materialization may exist as non-canonical residue, but no visibility switch or completed insertion exists | The complete previous repository state remains the only canonical state | Exact attempted transition, affected paths, read-back/reconciliation results, quarantine/recovery state | MUST NOT switch visibility or attempt stage 11; MAY retry only after repository consistency is restored and exact admission remains valid; changed bytes require new verification/admission. |
 | Git publication failed | Canonical insertion may be complete locally | Local canonical materialization may exist, but Git publication is incomplete | Repository transition, admission evidence, Git failure, intended allowlist | MAY retry publication of the unchanged complete transition without a new package identity or admission; changed package bytes require new verification/admission. |
 | Remote push failed | Immutable local publication commit exists | Canonical package and local Git publication may exist; off-host distribution/durability is incomplete | Commit ID, remote/ref target, push failure | MAY retry distribution of the same commit; no new package identity or admission is required. |
 | PostgreSQL projection failed | Yes, if prior gates succeeded | Yes | Projection identity, source repository fingerprint, failure and reconciliation evidence | MAY retry projection; no new package identity or admission is required when canonical content is unchanged. |
@@ -453,9 +466,9 @@ The five anomalous packages may remain historically accepted under their origina
 
 ## 20. Implementation prerequisites
 
-Before implementation may be authorized, KnowledgeForge MUST separately:
+This specification does not authorize implementation. Before implementation work begins, KnowledgeForge MUST issue separate bounded implementation authorization. Before any implementation may claim native-v1 conformance or receive production authorization, KnowledgeForge MUST separately:
 
-1. accept the versioned Package Content Fingerprint v1 contract-resolution profile and bind it uniquely and immutably to the fingerprint specification;
+1. implement and independently validate the accepted Governing Contract Resolution Profile v1 through exact machine-readable trust-release, governance-checkpoint, governed-namespace/enumeration, Git-tree completeness-proof, accepted-release evidence-closure, contract-manifest, technical closure, vocabulary, selector, verifier-invocation, and conformance contracts uniquely bound to the fingerprint specification;
 2. standardize the final-package construction-authorization contract;
 3. define the `FinalPackageVerificationAndAdmissionAuthorizationRecord` contract with shared artifact and complete governing-contract bindings, independently identifiable attestations, timestamps, ordering proof, and minimum role rules;
 4. define content-bound or immutable deterministic record and attestation resolution;
