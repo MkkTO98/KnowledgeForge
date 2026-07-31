@@ -1,0 +1,452 @@
+{
+  "amendment": {
+    "calculation_methods_changed": false,
+    "candidate_universe_changed": false,
+    "outcome_replacement_or_padding": false,
+    "predecessor_manifest_fingerprint": "sha256:8e82a5859402f3ded40e739a0ee82525118a224d6031c4a7dbde6ae1b533a5c1",
+    "reason": "Independent pre-closeout semantic review required quantity-aware derived units and an explicit across-years statistical-population limitation.",
+    "scope": [
+      "derived_result_unit_labels",
+      "statistical_population_limitation"
+    ]
+  },
+  "bundle_definition": "bounded campaign grouping only; not a new canonical object type",
+  "campaign_id": "evidence-portfolio-infrastructure-sweden-baseline-20260731",
+  "candidate_order": [
+    "candidate-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+    "candidate-infrastructure-it-cel-sets-p2-swe-1990-2024-baseline-v1",
+    "candidate-infrastructure-internet-users-cagr-excluded-v1"
+  ],
+  "canonical_ontology_change": false,
+  "computational_budget": {
+    "maximum_executed_candidates": 2,
+    "maximum_promoted_objects": 2,
+    "maximum_raw_result_records": 56,
+    "stop_on_canary_failure": true
+  },
+  "entries": [
+    {
+      "applicability": {
+        "denominator_basis": "resident_population_scaled_as_percent",
+        "frequency": "annual",
+        "measure_kind": "individual_people_using_internet_share",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "% of population"
+      },
+      "bundle_id": "bundle-infrastructure-sweden-annual-1990-2024-v1",
+      "campaign_id": "evidence-portfolio-infrastructure-sweden-baseline-20260731",
+      "canary": true,
+      "candidate_id": "candidate-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+      "computational_budget": {
+        "maximum_result_records": 28,
+        "maximum_wall_seconds": 5
+      },
+      "dependencies": [
+        "retained_campaign40_fixture",
+        "wdi_annual_scalar_statistical_summary_v2@2.0"
+      ],
+      "disposition": "execute",
+      "exclusion_and_stopping_rules": [
+        "stop_on_input_hash_mismatch",
+        "stop_on_manifest_fingerprint_mismatch",
+        "exclude_nonconsecutive_differences",
+        "exclude_growth_rates",
+        "exclude_relationship_claims"
+      ],
+      "expected_output_class": "baseline_characterization",
+      "family_configuration": {
+        "applicability_limitations": [
+          "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+          "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+          "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+          "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+          "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+        ],
+        "domain": "WDI Infrastructure baseline characterization",
+        "evidence_family": "external_wdi_annual_scalar_infrastructure_baseline_characterization",
+        "evolution_change_reason": "first bounded Sweden Infrastructure Evidence Portfolio production pilot",
+        "family": "Infrastructure",
+        "family_slug": "infrastructure",
+        "generation_date": "2026-07-31",
+        "governance_review_state": "bounded Infrastructure portfolio promotion contract passed",
+        "package_limitations": [
+          "No cross-series comparison or relationship is calculated.",
+          "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent.",
+          "The indicator is interpreted only as individual_people_using_internet_share; it is not a general measure of infrastructure quality or welfare.",
+          "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity, saturation or forecastability.",
+          "First differences summarize consecutive retained annual values only and do not identify technology transitions or structural breaks.",
+          "WDI reacquisition may change; retained local bytes are the replay anchor.",
+          "Canonical decimal precision is not measurement precision.",
+          "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions."
+        ],
+        "promotion_maturity_state": "bounded Infrastructure portfolio pilot accepted",
+        "result_limitations": [
+          "finite retained ordered annual sequence",
+          "descriptive only",
+          "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+          "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions."
+        ],
+        "uncertainty_dimensions": [
+          "mutable_source_reacquisition_limit",
+          "survey_modeled_or_administrative_measurement_process",
+          "technology_definition_and_adoption_change",
+          "bounded_single_territory_window"
+        ]
+      },
+      "identity_inputs": {
+        "indicator_code": "IT.NET.USER.ZS",
+        "method_id": "baseline_characterization_portfolio_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990,
+        "territory_id": "SWE"
+      },
+      "indicator": {
+        "code": "IT.NET.USER.ZS",
+        "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+        "family": "Infrastructure",
+        "name": "Individuals using the Internet (% of population)"
+      },
+      "input": {
+        "admission_basis": "retained Campaign 40 HTTPS fixture selected by the frozen coefficient-free candidate registry",
+        "normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.NET.USER.ZS__SWE__1990-2024/normalized_observations.json",
+        "sha256": "sha256:45a1e0f2b69b6dd2a0011e084df3497e2c9687f776189e82cf70812b7630982d"
+      },
+      "method": {
+        "id": "baseline_characterization_portfolio_v1",
+        "parameters": {
+          "decimal_precision": 50,
+          "difference_rule": "only consecutive observed annual periods",
+          "minimum_coverage_share": "0.85",
+          "minimum_observed_count": 30,
+          "quartile_rule": "median of lower and upper halves excluding the overall median for odd N",
+          "rounding": "ROUND_HALF_EVEN",
+          "slope_rule": "ordinary least-squares slope against integer calendar year; descriptor only",
+          "summary_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+          "summary_method": "wdi_annual_scalar_statistical_summary_v2@2.0"
+        },
+        "version": "1.0"
+      },
+      "promotion_conditions": [
+        "all_28_required_results_valid",
+        "no_identity_collision",
+        "no_redundancy",
+        "knowledge_object_validation_pass"
+      ],
+      "territory": {
+        "id": "SWE",
+        "name": "Sweden",
+        "observational_population": "retained observed annual Sweden values for the indicator within 1990-2024"
+      },
+      "transformation": [
+        "level",
+        "adjacent_first_difference",
+        "linear_time_index_slope"
+      ],
+      "validation_requirements": [
+        "input_hash",
+        "coverage",
+        "stable_identity",
+        "exact_lineage",
+        "applicability",
+        "schema",
+        "nonredundancy",
+        "input_immutability"
+      ]
+    },
+    {
+      "applicability": {
+        "denominator_basis": "resident_population_scaled_per_100_people",
+        "frequency": "annual",
+        "measure_kind": "mobile_cellular_subscriptions_per_100_people",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "per 100 people"
+      },
+      "bundle_id": "bundle-infrastructure-sweden-annual-1990-2024-v1",
+      "campaign_id": "evidence-portfolio-infrastructure-sweden-baseline-20260731",
+      "canary": false,
+      "candidate_id": "candidate-infrastructure-it-cel-sets-p2-swe-1990-2024-baseline-v1",
+      "computational_budget": {
+        "maximum_result_records": 28,
+        "maximum_wall_seconds": 5
+      },
+      "dependencies": [
+        "retained_campaign40_fixture",
+        "wdi_annual_scalar_statistical_summary_v2@2.0"
+      ],
+      "disposition": "execute",
+      "exclusion_and_stopping_rules": [
+        "stop_on_input_hash_mismatch",
+        "stop_on_manifest_fingerprint_mismatch",
+        "exclude_nonconsecutive_differences",
+        "exclude_growth_rates",
+        "exclude_relationship_claims"
+      ],
+      "expected_output_class": "baseline_characterization",
+      "family_configuration": {
+        "applicability_limitations": [
+          "The measure counts mobile cellular subscriptions, not unique people, devices, service quality, usage or affordability; one person may hold multiple subscriptions.",
+          "Technology definitions, active-account rules and administrative reporting practices can change across the retained window.",
+          "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+          "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+          "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+        ],
+        "domain": "WDI Infrastructure baseline characterization",
+        "evidence_family": "external_wdi_annual_scalar_infrastructure_baseline_characterization",
+        "evolution_change_reason": "first bounded Sweden Infrastructure Evidence Portfolio production pilot",
+        "family": "Infrastructure",
+        "family_slug": "infrastructure",
+        "generation_date": "2026-07-31",
+        "governance_review_state": "bounded Infrastructure portfolio promotion contract passed",
+        "package_limitations": [
+          "No cross-series comparison or relationship is calculated.",
+          "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent.",
+          "The indicator is interpreted only as mobile_cellular_subscriptions_per_100_people; it is not a general measure of infrastructure quality or welfare.",
+          "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity, saturation or forecastability.",
+          "First differences summarize consecutive retained annual values only and do not identify technology transitions or structural breaks.",
+          "WDI reacquisition may change; retained local bytes are the replay anchor.",
+          "Canonical decimal precision is not measurement precision.",
+          "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions."
+        ],
+        "promotion_maturity_state": "bounded Infrastructure portfolio pilot accepted",
+        "result_limitations": [
+          "finite retained ordered annual sequence",
+          "descriptive only",
+          "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+          "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions."
+        ],
+        "uncertainty_dimensions": [
+          "mutable_source_reacquisition_limit",
+          "survey_modeled_or_administrative_measurement_process",
+          "technology_definition_and_adoption_change",
+          "bounded_single_territory_window"
+        ]
+      },
+      "identity_inputs": {
+        "indicator_code": "IT.CEL.SETS.P2",
+        "method_id": "baseline_characterization_portfolio_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990,
+        "territory_id": "SWE"
+      },
+      "indicator": {
+        "code": "IT.CEL.SETS.P2",
+        "definition": "Mobile cellular telephone subscriptions are subscriptions to a public mobile telephone service that provide access to the PSTN using cellular technology. The indicator includes (and is split into) the number of postpaid subscriptions, and the number of active prepaid accounts (i.e. that have been used during the last three months). The indicator applies to all mobile cellular subscriptions that offer voice communications. It excludes subscriptions via data cards or USB modems, subscriptions to public mobile data services, private trunked mobile radio, telepoint, radio paging and telemetry services.",
+        "family": "Infrastructure",
+        "name": "Mobile cellular subscriptions (per 100 people)"
+      },
+      "input": {
+        "admission_basis": "retained Campaign 40 HTTPS fixture selected by the frozen coefficient-free candidate registry",
+        "normalized_fingerprint": "sha256:7689361a24f2545a177de984e566594b9cf1284c7bebf19ea1100c37548bf2bd",
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.CEL.SETS.P2__SWE__1990-2024/normalized_observations.json",
+        "sha256": "sha256:a6bc1362e18fc768478de9e2b3dfcd5cdb4222b392df5605bdb4e87819028eef"
+      },
+      "method": {
+        "id": "baseline_characterization_portfolio_v1",
+        "parameters": {
+          "decimal_precision": 50,
+          "difference_rule": "only consecutive observed annual periods",
+          "minimum_coverage_share": "0.85",
+          "minimum_observed_count": 30,
+          "quartile_rule": "median of lower and upper halves excluding the overall median for odd N",
+          "rounding": "ROUND_HALF_EVEN",
+          "slope_rule": "ordinary least-squares slope against integer calendar year; descriptor only",
+          "summary_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+          "summary_method": "wdi_annual_scalar_statistical_summary_v2@2.0"
+        },
+        "version": "1.0"
+      },
+      "promotion_conditions": [
+        "all_28_required_results_valid",
+        "no_identity_collision",
+        "no_redundancy",
+        "knowledge_object_validation_pass"
+      ],
+      "territory": {
+        "id": "SWE",
+        "name": "Sweden",
+        "observational_population": "retained observed annual Sweden values for the indicator within 1990-2024"
+      },
+      "transformation": [
+        "level",
+        "adjacent_first_difference",
+        "linear_time_index_slope"
+      ],
+      "validation_requirements": [
+        "input_hash",
+        "coverage",
+        "stable_identity",
+        "exact_lineage",
+        "applicability",
+        "schema",
+        "nonredundancy",
+        "input_immutability"
+      ]
+    },
+    {
+      "applicability": {
+        "denominator_basis": "resident_population_scaled_as_percent",
+        "frequency": "annual",
+        "measure_kind": "individual_people_using_internet_share",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "% of population"
+      },
+      "bundle_id": "bundle-infrastructure-sweden-annual-1990-2024-v1",
+      "campaign_id": "evidence-portfolio-infrastructure-sweden-baseline-20260731",
+      "canary": true,
+      "candidate_id": "candidate-infrastructure-internet-users-cagr-excluded-v1",
+      "computational_budget": {
+        "maximum_result_records": 28,
+        "maximum_wall_seconds": 5
+      },
+      "dependencies": [
+        "retained_campaign40_fixture",
+        "wdi_annual_scalar_statistical_summary_v2@2.0"
+      ],
+      "disposition": "excluded_pre_execution",
+      "exclusion_and_stopping_rules": [
+        "stop_on_input_hash_mismatch",
+        "stop_on_manifest_fingerprint_mismatch",
+        "exclude_nonconsecutive_differences",
+        "exclude_growth_rates",
+        "exclude_relationship_claims"
+      ],
+      "exclusion_reason": "CAGR and percentage-growth summaries are not semantically justified for this bounded infrastructure adoption-share level series and could imply a compound accumulation process.",
+      "expected_output_class": "excluded_inapplicable_method",
+      "family_configuration": {
+        "applicability_limitations": [
+          "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+          "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+          "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+          "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+          "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+        ],
+        "domain": "WDI Infrastructure baseline characterization",
+        "evidence_family": "external_wdi_annual_scalar_infrastructure_baseline_characterization",
+        "evolution_change_reason": "first bounded Sweden Infrastructure Evidence Portfolio production pilot",
+        "family": "Infrastructure",
+        "family_slug": "infrastructure",
+        "generation_date": "2026-07-31",
+        "governance_review_state": "bounded Infrastructure portfolio promotion contract passed",
+        "package_limitations": [
+          "No cross-series comparison or relationship is calculated.",
+          "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent.",
+          "The indicator is interpreted only as individual_people_using_internet_share; it is not a general measure of infrastructure quality or welfare.",
+          "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity, saturation or forecastability.",
+          "First differences summarize consecutive retained annual values only and do not identify technology transitions or structural breaks.",
+          "WDI reacquisition may change; retained local bytes are the replay anchor.",
+          "Canonical decimal precision is not measurement precision.",
+          "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions."
+        ],
+        "promotion_maturity_state": "bounded Infrastructure portfolio pilot accepted",
+        "result_limitations": [
+          "finite retained ordered annual sequence",
+          "descriptive only",
+          "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+          "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions."
+        ],
+        "uncertainty_dimensions": [
+          "mutable_source_reacquisition_limit",
+          "survey_modeled_or_administrative_measurement_process",
+          "technology_definition_and_adoption_change",
+          "bounded_single_territory_window"
+        ]
+      },
+      "identity_inputs": {
+        "indicator_code": "IT.NET.USER.ZS",
+        "method_id": "compound_annual_growth_rate",
+        "method_version": "not_registered",
+        "period_end": 2024,
+        "period_start": 1990,
+        "territory_id": "SWE"
+      },
+      "indicator": {
+        "code": "IT.NET.USER.ZS",
+        "definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+        "family": "Infrastructure",
+        "name": "Individuals using the Internet (% of population)"
+      },
+      "input": {
+        "admission_basis": "retained Campaign 40 HTTPS fixture selected by the frozen coefficient-free candidate registry",
+        "normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.NET.USER.ZS__SWE__1990-2024/normalized_observations.json",
+        "sha256": "sha256:45a1e0f2b69b6dd2a0011e084df3497e2c9687f776189e82cf70812b7630982d"
+      },
+      "method": {
+        "id": "compound_annual_growth_rate",
+        "parameters": {},
+        "version": "not_registered"
+      },
+      "promotion_conditions": [
+        "all_28_required_results_valid",
+        "no_identity_collision",
+        "no_redundancy",
+        "knowledge_object_validation_pass"
+      ],
+      "territory": {
+        "id": "SWE",
+        "name": "Sweden",
+        "observational_population": "retained observed annual Sweden values for the indicator within 1990-2024"
+      },
+      "transformation": [
+        "level",
+        "adjacent_first_difference",
+        "linear_time_index_slope"
+      ],
+      "validation_requirements": [
+        "input_hash",
+        "coverage",
+        "stable_identity",
+        "exact_lineage",
+        "applicability",
+        "schema",
+        "nonredundancy",
+        "input_immutability"
+      ]
+    }
+  ],
+  "evidence_card_equivalent_definition": "one operational result-record view; canonical authority remains the KnowledgeObjectPackage",
+  "forbidden_outcome_fields": [
+    "calculated_value",
+    "interesting",
+    "attractive",
+    "coefficient",
+    "significance",
+    "result_rank"
+  ],
+  "manifest_fingerprint": "sha256:d59dfd9944f47aa81adf6b4bd9b5b9ddcde8551956545e21e0ab2ed34744db1f",
+  "manifest_id": "manifest-evidence-portfolio-infrastructure-sweden-baseline-v1",
+  "manifest_version": "1.1",
+  "portfolio_kind": "bounded_baseline_characterization_execution_manifest",
+  "promotion_conditions": [
+    "canary_gate_pass",
+    "all_required_records_valid",
+    "canonical_package_validator_pass",
+    "no_duplicate_promotion"
+  ],
+  "selection_rubric_fingerprint": "sha256:ab0432a7710f83c9d78cd9bfe272c576308d4af499aca38fadf22d308d6e8f67",
+  "stopping_rules": [
+    "no candidate substitution after outcomes",
+    "stop_on_canary_material_failure",
+    "do_not_exceed_budget"
+  ],
+  "validation_requirements": [
+    "manifest_schema",
+    "outcome_blind_fields",
+    "input_hashes",
+    "stable_identities",
+    "complete_accounting",
+    "deterministic_rerun"
+  ]
+}

@@ -12,6 +12,9 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
+import os
+import re
+import tempfile
 from pathlib import Path
 from typing import Any
 
@@ -30,7 +33,19 @@ def sha256_fingerprint(value: Any) -> str:
 
 def write_json(path: Path, value: Any) -> None:
     path.parent.mkdir(parents=True, exist_ok=True)
-    path.write_text(json.dumps(value, sort_keys=True, indent=2, ensure_ascii=False) + "\n")
+    payload = (json.dumps(value, sort_keys=True, indent=2, ensure_ascii=False) + "\n").encode("utf-8")
+    descriptor, temporary_name = tempfile.mkstemp(prefix=f".{path.name}.", suffix=".tmp", dir=path.parent)
+    temporary_path = Path(temporary_name)
+    try:
+        os.fchmod(descriptor, 0o644)
+        with os.fdopen(descriptor, "wb") as stream:
+            descriptor = -1
+            stream.write(payload)
+        os.replace(temporary_path, path)
+    finally:
+        if descriptor != -1:
+            os.close(descriptor)
+        temporary_path.unlink(missing_ok=True)
 
 
 def read_json(path: Path) -> Any:
@@ -66,8 +81,78 @@ def _require_validated_knowledge_object(package: dict[str, Any]) -> None:
             raise ValueError(f"{package_id} contains a statement without statement_id")
 
 
+def _validate_package_id(package_id: Any) -> str:
+    """Require one portable filename stem, never a path or special component."""
+    if not isinstance(package_id, str) or re.fullmatch(r"[A-Za-z0-9][A-Za-z0-9._-]*", package_id) is None:
+        raise ValueError("package_id must be a single safe filename stem")
+    if "/" in package_id or "\\" in package_id or package_id in {".", ".."}:
+        raise ValueError("package_id must be a single safe filename stem")
+    return package_id
+
+
 def _object_path(package_id: str) -> str:
+    _validate_package_id(package_id)
     return f"objects/{package_id}.json"
+
+
+def _contained_path(root: Path, directory: str, package_id: str) -> Path:
+    _validate_package_id(package_id)
+    resolved_root = root.resolve(strict=False)
+    intended = (resolved_root / directory).resolve(strict=False)
+    try:
+        intended.relative_to(resolved_root)
+    except ValueError as exc:
+        raise ValueError(f"repository {directory} directory escapes repository root") from exc
+    candidate = (intended / f"{package_id}.json").resolve(strict=False)
+    try:
+        candidate.relative_to(intended)
+    except ValueError as exc:
+        raise ValueError(f"package_id escapes repository {directory} directory") from exc
+    return candidate
+
+
+INDEX_NAMES = (
+    "by_package_id",
+    "by_knowledge_identity",
+    "by_evidence_family",
+    "by_statement_type",
+    "by_lifecycle_state",
+    "by_package_manifest_fingerprint",
+)
+
+
+def _validate_repository_output(root: Path, relative_path: str, *, directory: bool = False) -> Path:
+    """Resolve one canonical output without following a repository-internal symlink."""
+    relative = Path(relative_path)
+    if relative.is_absolute() or ".." in relative.parts:
+        raise ValueError(f"repository output escapes repository root: {relative_path}")
+    resolved_root = root.resolve(strict=False)
+    lexical = root / relative
+    current = root
+    for part in relative.parts:
+        current = current / part
+        if current.is_symlink():
+            raise ValueError(f"repository output {relative_path} symlink escapes repository containment")
+    resolved = lexical.resolve(strict=False)
+    try:
+        resolved.relative_to(resolved_root)
+    except ValueError as exc:
+        raise ValueError(f"repository output {relative_path} escapes repository root") from exc
+    if lexical.exists() and directory and not lexical.is_dir():
+        raise ValueError(f"repository output directory is not a directory: {relative_path}")
+    if lexical.exists() and not directory and not lexical.is_file():
+        raise ValueError(f"repository output file is not a regular file: {relative_path}")
+    if lexical.exists() and not directory and lexical.stat().st_nlink > 1:
+        raise ValueError(f"repository output file is hard-linked (multiple links): {relative_path}")
+    return lexical
+
+
+def _validate_repository_structure(root: Path) -> None:
+    for directory in ("objects", "indexes", "evolution"):
+        _validate_repository_output(root, directory, directory=True)
+    for name in INDEX_NAMES:
+        _validate_repository_output(root, f"indexes/{name}.json")
+    _validate_repository_output(root, "manifest.json")
 
 
 def _sorted_unique(values: list[str]) -> list[str]:
@@ -131,9 +216,19 @@ def _load_existing_packages(repository_root: Path) -> list[dict[str, Any]]:
         return []
     packages = []
     for path in sorted(objects_dir.glob("*.json")):
+        package_id_from_name = _validate_package_id(path.stem)
+        _validate_repository_output(repository_root, f"objects/{package_id_from_name}.json")
+        expected_path = _contained_path(repository_root, "objects", package_id_from_name)
+        if path.resolve(strict=True) != expected_path:
+            raise ValueError("repository object path escapes objects directory")
         value = read_json(path)
-        if isinstance(value, dict):
-            packages.append(value)
+        if not isinstance(value, dict):
+            raise ValueError("repository object must be a JSON object")
+        package_id = _validate_package_id(value.get("package_id"))
+        if package_id != package_id_from_name:
+            raise ValueError("repository object filename and package_id mismatch")
+        _require_validated_knowledge_object(value)
+        packages.append(value)
     return packages
 
 
@@ -158,23 +253,115 @@ def _portable_repository_root(root: Path) -> str:
         return str(root)
 
 
-def persist_knowledge_object_packages(packages: list[dict[str, Any]], repository_root: Path | str = DEFAULT_REPOSITORY_ROOT) -> dict[str, Any]:
-    """Persist validated KnowledgeObjectPackages into a file-backed repository.
+def _build_manifest(
+    root: Path,
+    packages: list[dict[str, Any]],
+    indexes: dict[str, Any],
+    *,
+    repository_root: str | None = None,
+) -> dict[str, Any]:
+    fingerprint = _repository_fingerprint(packages, indexes)
+    return {
+        "repository_kind": REPOSITORY_KIND,
+        "schema_version": SCHEMA_VERSION,
+        "repository_root": _portable_repository_root(root) if repository_root is None else repository_root,
+        "object_count": len(packages),
+        "package_ids": sorted(package["package_id"] for package in packages),
+        "index_files": [f"indexes/{name}.json" for name in sorted(indexes)],
+        "object_directory": "objects/",
+        "evolution_directory": "evolution/",
+        "repository_fingerprint": fingerprint,
+        "persistence_policy": "persist validated KnowledgeObjectPackage JSON exactly; repository metadata and indexes remain separate",
+    }
 
-    Existing packages are read and included in indexes so repeated calls are
-    deterministic and idempotent. Incoming packages overwrite the same package_id
-    only when their content is explicitly supplied again.
-    """
+
+def _validate_directory_population(root: Path, directory: str, expected_json_names: set[str]) -> None:
+    """Require exactly the canonical JSON files, plus an optional governed summary."""
+    entries = {path.name for path in (root / directory).iterdir()}
+    allowed = expected_json_names | {"_SUMMARY.md"}
+    if not expected_json_names.issubset(entries) or not entries.issubset(allowed):
+        population_name = {"objects": "object", "evolution": "evolution", "indexes": "index"}[directory]
+        raise ValueError(f"repository {population_name} population mismatch")
+    if "_SUMMARY.md" in entries:
+        _validate_repository_output(root, f"{directory}/_SUMMARY.md")
+
+
+def _validated_manifest_repository_root(root: Path, manifest: dict[str, Any]) -> str:
+    """Validate a stored root locator without rebasing a portable relative value."""
+    value = manifest.get("repository_root")
+    if not isinstance(value, str) or not value:
+        raise ValueError("repository manifest repository_root is not a non-empty string")
+    stored = Path(value)
+    if stored.is_absolute():
+        if stored.resolve(strict=False) != root.resolve(strict=True):
+            raise ValueError("repository manifest absolute repository_root mismatch")
+        return value
+    if value != stored.as_posix() or value == "." or any(part in {"", ".", ".."} for part in stored.parts):
+        raise ValueError("repository manifest repository_root is not a normalized portable path")
+    return value
+
+
+def authenticate_repository(repository_root: Path | str) -> dict[str, Any]:
+    """Read-only authentication of every canonical v1 repository component."""
     root = Path(repository_root)
-    root.mkdir(parents=True, exist_ok=True)
-    (root / "objects").mkdir(exist_ok=True)
-    (root / "indexes").mkdir(exist_ok=True)
-    (root / "evolution").mkdir(exist_ok=True)
+    try:
+        if root.is_symlink():
+            raise ValueError("repository root must not be a symlink")
+        _validate_repository_structure(root)
+        if not root.is_dir():
+            raise ValueError("repository root is missing or not a directory")
+        packages = _load_existing_packages(root)
+        package_ids = [package["package_id"] for package in packages]
+        expected_object_names = {f"{package_id}.json" for package_id in package_ids}
+        expected_index_names = {f"{name}.json" for name in INDEX_NAMES}
+        _validate_directory_population(root, "objects", expected_object_names)
+        _validate_directory_population(root, "evolution", expected_object_names)
+        _validate_directory_population(root, "indexes", expected_index_names)
+        indexes = _build_indexes(packages)
+        for package in packages:
+            package_id = package["package_id"]
+            evolution_path = _validate_repository_output(root, f"evolution/{package_id}.json")
+            if read_json(evolution_path) != _evolution_record(package):
+                raise ValueError(f"repository evolution record mismatch: {package_id}")
+        for name, expected in indexes.items():
+            if read_json(_validate_repository_output(root, f"indexes/{name}.json")) != expected:
+                raise ValueError(f"repository index mismatch: {name}")
+        manifest = read_json(_validate_repository_output(root, "manifest.json"))
+        if not isinstance(manifest, dict):
+            raise ValueError("repository manifest must be a JSON object")
+        stored_repository_root = _validated_manifest_repository_root(root, manifest)
+        expected_manifest = _build_manifest(
+            root,
+            packages,
+            indexes,
+            repository_root=stored_repository_root,
+        )
+        if manifest != expected_manifest:
+            raise ValueError("repository manifest mismatch")
+        return {
+            "object_count": len(packages),
+            "repository_fingerprint": expected_manifest["repository_fingerprint"],
+        }
+    except (OSError, json.JSONDecodeError, TypeError, KeyError, ValueError) as exc:
+        raise ValueError(f"repository authentication failed: {exc}") from exc
 
-    existing_by_id = {package["package_id"]: package for package in _load_existing_packages(root)}
+
+def persist_knowledge_object_packages(packages: list[dict[str, Any]], repository_root: Path | str = DEFAULT_REPOSITORY_ROOT) -> dict[str, Any]:
+    """Persist validated packages only after a complete canonical-output preflight."""
+    root = Path(repository_root)
+    if root.is_symlink():
+        raise ValueError("repository root must not be a symlink")
+    _validate_repository_structure(root)
+    for package in packages:
+        if not isinstance(package, dict):
+            raise ValueError("package must be a JSON object with a safe package_id")
+        _validate_package_id(package.get("package_id"))
+        _require_validated_knowledge_object(package)
+
+    existing_packages = _load_existing_packages(root) if root.exists() else []
+    existing_by_id = {package["package_id"]: package for package in existing_packages}
     incoming_by_id: dict[str, dict[str, Any]] = {}
     for package in packages:
-        _require_validated_knowledge_object(package)
         package_id = package["package_id"]
         existing = existing_by_id.get(package_id)
         if existing is not None and sha256_fingerprint(existing) != sha256_fingerprint(package):
@@ -183,30 +370,27 @@ def persist_knowledge_object_packages(packages: list[dict[str, Any]], repository
                 "Publish a distinct successor package and append evolution/current-state records instead."
             )
         incoming_by_id[package_id] = package
-        write_json(root / _object_path(package_id), package)
-        write_json(root / "evolution" / f"{package_id}.json", _evolution_record(package))
 
     all_by_id = dict(existing_by_id)
     all_by_id.update(incoming_by_id)
     all_packages = [all_by_id[key] for key in sorted(all_by_id)]
-
     indexes = _build_indexes(all_packages)
+    manifest = _build_manifest(root, all_packages, indexes)
+
+    # Validate every dynamic output as well as the static metadata outputs before
+    # creating directories or writing one byte.
+    for package_id in all_by_id:
+        _validate_repository_output(root, f"objects/{package_id}.json")
+        _validate_repository_output(root, f"evolution/{package_id}.json")
+
+    root.mkdir(parents=True, exist_ok=True)
+    for directory in ("objects", "indexes", "evolution"):
+        (root / directory).mkdir(exist_ok=True)
+    for package_id, package in incoming_by_id.items():
+        write_json(root / "objects" / f"{package_id}.json", package)
+        write_json(root / "evolution" / f"{package_id}.json", _evolution_record(package))
     for name, index in indexes.items():
         write_json(root / "indexes" / f"{name}.json", index)
-
-    fingerprint = _repository_fingerprint(all_packages, indexes)
-    manifest = {
-        "repository_kind": REPOSITORY_KIND,
-        "schema_version": SCHEMA_VERSION,
-        "repository_root": _portable_repository_root(root),
-        "object_count": len(all_packages),
-        "package_ids": sorted(package["package_id"] for package in all_packages),
-        "index_files": [f"indexes/{name}.json" for name in sorted(indexes)],
-        "object_directory": "objects/",
-        "evolution_directory": "evolution/",
-        "repository_fingerprint": fingerprint,
-        "persistence_policy": "persist validated KnowledgeObjectPackage JSON exactly; repository metadata and indexes remain separate",
-    }
     write_json(root / "manifest.json", manifest)
 
     return {
@@ -214,7 +398,7 @@ def persist_knowledge_object_packages(packages: list[dict[str, Any]], repository
         "persisted_count": len(incoming_by_id),
         "rejected_count": 0,
         "total_object_count": len(all_packages),
-        "repository_fingerprint": fingerprint,
+        "repository_fingerprint": manifest["repository_fingerprint"],
         "manifest_path": str(root / "manifest.json"),
     }
 

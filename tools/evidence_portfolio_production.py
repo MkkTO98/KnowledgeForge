@@ -19,6 +19,7 @@ import sys
 import tempfile
 import time
 from contextlib import contextmanager
+from datetime import date
 from decimal import Decimal, Context, ROUND_HALF_EVEN, localcontext
 from pathlib import Path
 from typing import Any
@@ -323,12 +324,169 @@ def _slug(code: str) -> str:
     return code.lower().replace(".", "-")
 
 
-def stable_object_id(entry: dict[str, Any]) -> str:
-    identity = entry["identity_inputs"]
-    return (
-        f"pkg-object-eppilot-health-{_slug(identity['indicator_code'])}-"
-        f"{identity['territory_id'].lower()}-{identity['period_start']}-{identity['period_end']}-baseline-v1"
+LEGACY_HEALTH_FAMILY_CONFIGURATION = {
+    "family": "Health",
+    "family_slug": "health",
+    "domain": "WDI Health baseline characterization",
+    "evidence_family": "external_wdi_annual_scalar_health_baseline_characterization",
+    "result_limitations": ["finite retained ordered annual sequence", "descriptive only", "no causal predictive significance stationarity or permanence claim"],
+    "package_limitations": ["No cross-series comparison or relationship is calculated.", "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity or forecastability.", "First differences summarize consecutive retained annual values only.", "WDI reacquisition may change; retained local bytes are the replay anchor.", "Canonical decimal precision is not measurement precision."],
+    "applicability_limitations": [],
+    "uncertainty_dimensions": ["mutable_source_reacquisition_limit", "modeled_estimation_process", "bounded_single_territory_window"],
+    "governance_review_state": "bounded pilot promotion contract passed",
+    "evolution_change_reason": "first bounded Evidence Portfolio production pilot",
+    "promotion_maturity_state": "bounded portfolio pilot accepted",
+    "generation_date": "2026-07-30",
+}
+LEGACY_HEALTH_ENTRY_IDENTITIES = {
+    (
+        "candidate-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1",
+        "execute",
+        "SP.DYN.LE00.IN",
+        METHOD_ID,
+        METHOD_VERSION,
+    ),
+    (
+        "candidate-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+        "execute",
+        "SH.DYN.MORT",
+        METHOD_ID,
+        METHOD_VERSION,
+    ),
+    (
+        "candidate-health-life-expectancy-cagr-excluded-v1",
+        "excluded_pre_execution",
+        "SP.DYN.LE00.IN",
+        "compound_annual_growth_rate",
+        "not_registered",
+    ),
+}
+LEGACY_HEALTH_ENTRY_FINGERPRINTS = {
+    "candidate-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1": "sha256:75c18911c501467c4f4d5d89e791adff4afc5768b24d033ac9401ac71a47062c",
+    "candidate-health-sh-dyn-mort-nor-1990-2024-baseline-v1": "sha256:f542c10af16cc139a5eeac659c9b7fa2d2e3b56369067221340cc8bb3b8e24eb",
+    "candidate-health-life-expectancy-cagr-excluded-v1": "sha256:9d04cce19c8728e0e07e8ec57c8e8a85109ba92713aa078e11121bf34f8d30e8",
+}
+LEGACY_HEALTH_INPUTS = {
+    "SP.DYN.LE00.IN": {
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.LE00.IN__NOR__1990-2024/normalized_observations.json",
+        "sha256": "sha256:bcbed15f37c0208fd80641ac280e9279f38968b2229fa9a7cdf3efbb685d5728",
+        "normalized_fingerprint": "sha256:83d74ce0f508ec88a4a841fdea817725e1c022ee71ac42a6a5895d3b775e2f27",
+    },
+    "SH.DYN.MORT": {
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SH.DYN.MORT__NOR__1990-2024/normalized_observations.json",
+        "sha256": "sha256:6e3ca56274f18bf710383d5c438fa89d15680e3405f8d1045456855c67a5b411",
+        "normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+    },
+}
+LEGACY_HEALTH_DEFINITIONS = {series["code"]: series["definition"] for series in SERIES}
+LEGACY_HEALTH_METADATA_DEFINITIONS = {
+    "SP.DYN.LE00.IN": "Life expectancy at birth indicates the number of years a newborn infant would live if prevailing patterns of mortality at the time of its birth were to stay the same throughout its life.",
+    "SH.DYN.MORT": "Under-five mortality rate is the probability per 1,000 that a newborn baby will die before reaching age five, if subject to age-specific mortality rates of the specified year.",
+}
+FAMILY_CONFIGURATION_FIELDS = set(LEGACY_HEALTH_FAMILY_CONFIGURATION)
+
+
+def _is_published_legacy_health_entry(entry: dict[str, Any]) -> bool:
+    """Match one immutable, field-complete published Norway entry identity."""
+    if not isinstance(entry, dict):
+        return False
+    candidate_id = entry.get("candidate_id")
+    expected_fingerprint = LEGACY_HEALTH_ENTRY_FINGERPRINTS.get(candidate_id)
+    identity = (
+        candidate_id,
+        entry.get("disposition"),
+        entry.get("indicator", {}).get("code"),
+        entry.get("method", {}).get("id"),
+        entry.get("method", {}).get("version"),
     )
+    return (
+        expected_fingerprint is not None
+        and identity in LEGACY_HEALTH_ENTRY_IDENTITIES
+        and fingerprint(entry) == expected_fingerprint
+    )
+
+
+def _safe_family_slug(family: str) -> str:
+    if not isinstance(family, str) or re.fullmatch(r"[A-Z][A-Za-z0-9]*(?: [A-Z][A-Za-z0-9]*)*", family) is None:
+        raise ValueError("family configuration family must use the closed family-name grammar")
+    return family.lower().replace(" ", "-")
+
+
+def _validate_entry_identifiers(entry: dict[str, Any], config: dict[str, Any]) -> str:
+    indicator_code = entry.get("indicator", {}).get("code")
+    territory_id = entry.get("territory", {}).get("id")
+    if not isinstance(indicator_code, str) or re.fullmatch(r"[A-Z0-9]+(?:\.[A-Z0-9]+)*", indicator_code) is None:
+        raise ValueError("indicator identifier does not use the accepted grammar")
+    indicator_slug = _slug(indicator_code)
+    if re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", indicator_slug) is None:
+        raise ValueError("indicator-derived slug does not use the accepted grammar")
+    if not isinstance(territory_id, str) or re.fullmatch(r"[A-Z0-9][A-Z0-9_-]*", territory_id) is None:
+        raise ValueError("territory identifier does not use the accepted grammar")
+    identity = entry.get("identity_inputs", {})
+    package_id = (
+        f"pkg-object-eppilot-{config['family_slug']}-{indicator_slug}-"
+        f"{territory_id.lower()}-{identity.get('period_start')}-{identity.get('period_end')}-baseline-v1"
+    )
+    if re.fullmatch(r"[a-z0-9][a-z0-9_-]*", package_id) is None:
+        raise ValueError("final package identifier does not use the accepted grammar")
+    return package_id
+
+
+def family_configuration(entry: dict[str, Any]) -> dict[str, Any]:
+    """Return closed rendering configuration; only published Health v1 may omit it."""
+    configured = entry.get("family_configuration")
+    if configured is None:
+        if _is_published_legacy_health_entry(entry):
+            return copy.deepcopy(LEGACY_HEALTH_FAMILY_CONFIGURATION)
+        raise ValueError("family configuration is required outside the exact published Norway Health portfolio")
+    if not isinstance(configured, dict) or set(configured) != FAMILY_CONFIGURATION_FIELDS:
+        raise ValueError("family configuration must contain the complete normative field set")
+    if configured.get("family") != entry.get("indicator", {}).get("family"):
+        raise ValueError("family configuration family is inconsistent with indicator family")
+    list_fields = {"result_limitations", "package_limitations", "applicability_limitations", "uncertainty_dimensions"}
+    if any(not isinstance(configured.get(key), str) or not configured[key] for key in FAMILY_CONFIGURATION_FIELDS - list_fields):
+        raise ValueError("family configuration scalar fields must be nonempty strings")
+    for key in list_fields:
+        if not isinstance(configured.get(key), list) or not configured[key] or any(not isinstance(value, str) or not value for value in configured[key]):
+            raise ValueError(f"family configuration {key} must be a nonempty string list")
+    family = configured["family"]
+    family_slug = _safe_family_slug(family)
+    if re.fullmatch(r"[a-z0-9]+(?:-[a-z0-9]+)*", configured["family_slug"]) is None:
+        raise ValueError("family configuration family_slug does not use the accepted safe grammar")
+    if configured["family_slug"] != family_slug:
+        raise ValueError("family configuration family_slug is not deterministically bound to family")
+    expected = {
+        "domain": f"WDI {family} baseline characterization",
+        "evidence_family": f"external_wdi_annual_scalar_{family_slug.replace('-', '_')}_baseline_characterization",
+        "governance_review_state": "bounded pilot promotion contract passed" if family == "Health" else f"bounded {family} portfolio promotion contract passed",
+        "promotion_maturity_state": "bounded portfolio pilot accepted" if family == "Health" else f"bounded {family} portfolio pilot accepted",
+    }
+    if any(configured[key] != value for key, value in expected.items()):
+        raise ValueError("family configuration is not semantically bound to its declared family")
+    try:
+        parsed_date = date.fromisoformat(configured["generation_date"])
+    except ValueError as exc:
+        raise ValueError("family configuration generation_date must be a valid ISO date") from exc
+    if parsed_date.isoformat() != configured["generation_date"]:
+        raise ValueError("family configuration generation_date must be a valid ISO date")
+    return copy.deepcopy(configured)
+
+
+def campaign_generation_date(campaign_id: Any) -> str:
+    """Derive the immutable portfolio date from the authorized campaign identity."""
+    if not isinstance(campaign_id, str):
+        raise ValueError("campaign_id must end in an authorized YYYYMMDD generation date")
+    match = re.search(r"-(\d{4})(\d{2})(\d{2})$", campaign_id)
+    if match is None:
+        raise ValueError("campaign_id must end in an authorized YYYYMMDD generation date")
+    try:
+        return date(*(int(value) for value in match.groups())).isoformat()
+    except ValueError as exc:
+        raise ValueError("campaign_id generation date is invalid") from exc
+
+
+def stable_object_id(entry: dict[str, Any]) -> str:
+    return _validate_entry_identifiers(entry, family_configuration(entry))
 
 
 def stable_result_id(entry: dict[str, Any], result_class: str, metric: str) -> str:
@@ -446,7 +604,7 @@ def build_preregistration() -> tuple[dict[str, Any], dict[str, Any]]:
 
 
 def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
-    required = {"manifest_id", "entries", "candidate_order", "computational_budget", "selection_rubric_fingerprint"}
+    required = {"manifest_id", "campaign_id", "entries", "candidate_order", "computational_budget", "selection_rubric_fingerprint"}
     missing = sorted(required - set(manifest))
     if missing:
         raise ValueError(f"manifest missing fields: {missing}")
@@ -462,6 +620,7 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
                 raise ValueError("stop_on_canary_failure must be the literal Boolean true")
         elif type(value) is not int or value != expected_value:
             raise ValueError(f"normative portfolio limit mismatch: {key}")
+    authorized_generation_date = campaign_generation_date(manifest["campaign_id"])
     forbidden = set(manifest.get("forbidden_outcome_fields", FORBIDDEN_OUTCOME_FIELDS))
     for entry in manifest["entries"]:
         overlap = forbidden.intersection(entry)
@@ -472,11 +631,27 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
                 raise ValueError(f"manifest entry missing {key}")
         if type(entry.get("canary")) is not bool:
             raise ValueError(f"{entry.get('candidate_id')} canary must be a JSON Boolean")
+        if entry["campaign_id"] != manifest["campaign_id"]:
+            raise ValueError("manifest entry campaign must match top-level campaign")
         entry_limits = entry["computational_budget"]
         if not isinstance(entry_limits, dict) or set(entry_limits) != set(REQUIRED_ENTRY_LIMITS):
             raise ValueError("manifest entry must contain the complete normative limit set")
         if any(type(entry_limits[key]) is not int or entry_limits[key] != expected for key, expected in REQUIRED_ENTRY_LIMITS.items()):
             raise ValueError("normative manifest entry limit mismatch")
+        config = family_configuration(entry)
+        if config["generation_date"] != authorized_generation_date:
+            raise ValueError("family configuration generation_date does not match authorized campaign generation date")
+        identity = entry["identity_inputs"]
+        if (
+            identity.get("indicator_code") != entry["indicator"].get("code")
+            or identity.get("territory_id") != entry["territory"].get("id")
+            or identity.get("period_start") != entry["applicability"].get("period_start")
+            or identity.get("period_end") != entry["applicability"].get("period_end")
+            or identity.get("method_id") != entry["method"].get("id")
+            or identity.get("method_version") != entry["method"].get("version")
+        ):
+            raise ValueError("manifest entry identity inputs are inconsistent with structured entry")
+        _validate_entry_identifiers(entry, config)
     expected = manifest.get("manifest_fingerprint")
     if expected and expected != fingerprint({k: v for k, v in manifest.items() if k != "manifest_fingerprint"}):
         raise ValueError("manifest fingerprint mismatch")
@@ -532,6 +707,40 @@ def _metric_value(summary: dict[str, Any], extras: dict[str, Any], metric: str) 
     return direct[metric] if metric in direct else extras[metric]
 
 
+_RATE_METRICS = {
+    "first_difference_mean", "first_difference_median", "first_difference_minimum",
+    "first_difference_maximum", "linear_time_index_slope_per_year",
+    "first_difference_population_standard_deviation", "mean_absolute_first_difference",
+}
+_ABSOLUTE_DELTA_METRICS = {
+    "population_standard_deviation", "interquartile_range", "net_level_difference",
+}
+
+
+def _semantic_result_value(entry: dict[str, Any], metric: str, value: Any) -> Any:
+    """Give derived values quantity-aware units without changing source applicability.
+
+    The admitted provider unit remains in applicability/source scope. Result-level
+    units distinguish percentage levels from percentage-point distances and make
+    subscription quantities explicit in standalone operational views. Families
+    without an explicit supported measure_kind retain their historical rendering.
+    """
+    if not isinstance(value, dict) or "unit" not in value:
+        return value
+    rendered = copy.deepcopy(value)
+    measure_kind = entry["applicability"].get("measure_kind")
+    if measure_kind == "individual_people_using_internet_share":
+        if metric in _RATE_METRICS:
+            rendered["unit"] = "percentage points per year"
+        elif metric in _ABSOLUTE_DELTA_METRICS:
+            rendered["unit"] = "percentage points"
+    elif measure_kind == "mobile_cellular_subscriptions_per_100_people":
+        rendered["unit"] = "mobile cellular subscriptions per 100 people"
+        if metric in _RATE_METRICS:
+            rendered["unit"] += " per year"
+    return rendered
+
+
 def calculate_candidate(entry: dict[str, Any], normalized: dict[str, Any]) -> dict[str, Any]:
     if entry.get("disposition") != "execute":
         raise ValueError("candidate is not executable")
@@ -569,13 +778,15 @@ def calculate_candidate(entry: dict[str, Any], normalized: dict[str, Any]) -> di
             "mean_absolute_first_difference": {"canonical": _canon(sum(abs(v) for v in diffs) / Decimal(len(diffs))), "unit": f"{entry['applicability']['unit']} per year"},
         }
     records = []
+    config = family_configuration(entry)
+    record_limitations = config["result_limitations"] + config["applicability_limitations"]
     for result_class, metric in RESULT_SPEC:
-        value = _metric_value(summary, extras, metric)
+        value = _semantic_result_value(entry, metric, _metric_value(summary, extras, metric))
         record = {
             "result_id": stable_result_id(entry, result_class, metric), "class": result_class, "metric": metric, "value": value,
             "applicability": copy.deepcopy(entry["applicability"]), "input_normalized_fingerprint": normalized["normalized_fingerprint"],
-            "method_id": METHOD_ID, "method_version": METHOD_VERSION, "transformation": "adjacent_first_difference" if "difference" in metric else "linear_time_index" if metric.startswith("linear_") else "level",
-            "limitations": ["finite retained ordered annual sequence", "descriptive only", "no causal predictive significance stationarity or permanence claim"],
+            "method_id": entry["method"]["id"], "method_version": entry["method"]["version"], "transformation": "adjacent_first_difference" if "difference" in metric else "linear_time_index" if metric.startswith("linear_") else "level",
+            "limitations": record_limitations,
         }
         record["semantic_fingerprint"] = fingerprint({k: v for k, v in record.items() if k not in {"result_id", "semantic_fingerprint"}})
         records.append(record)
@@ -606,39 +817,46 @@ def build_knowledge_object(entry: dict[str, Any], result: dict[str, Any], manife
     if len(result.get("result_records", [])) != EXPECTED_RESULT_RECORDS or result.get("valid_result_count") != EXPECTED_RESULT_RECORDS:
         raise ValueError("required result records are incomplete")
     package_id = stable_object_id(entry)
+    config = family_configuration(entry)
+    identity = entry["identity_inputs"]
+    applicability = entry["applicability"]
+    territory = entry["territory"]
+    method_id, method_version = entry["method"]["id"], entry["method"]["version"]
+    campaign_id = entry["campaign_id"]
+    evidence_ref_id = f"ev-eppilot-{_slug(entry['indicator']['code'])}-{territory['id'].lower()}-{identity['period_start']}-{identity['period_end']}"
     candidate_id = package_id.replace("pkg-object-", "pkg-candidate-")
     statement_id = package_id.replace("pkg-object-", "stmt-")
     result_classes = sorted({record["class"] for record in result["result_records"]})
     common = {
-        "package_id": package_id, "package_kind": "KnowledgeObjectPackage", "package_version": "1.0", "created_at": DATE,
+        "package_id": package_id, "package_kind": "KnowledgeObjectPackage", "package_version": "1.0", "created_at": config["generation_date"],
         "created_by": "evidence_portfolio_production", "status": "accepted-for-controlled-production",
         "scope": {
-            "domain": "WDI Health baseline characterization", "evidence_family": "external_wdi_annual_scalar_health_baseline_characterization",
-            "source_scope": {"campaign_id": CAMPAIGN_ID, "provider": "World Bank", "dataset": "World Development Indicators", "source_id": "2", "indicator_code": entry["indicator"]["code"], "indicator_name": entry["indicator"]["name"], "entity_id": "NOR", "entity_name": "Norway", "period_start": 1990, "period_end": 2024, "frequency": "annual", "unit": entry["applicability"]["unit"], "denominator_basis": entry["applicability"]["denominator_basis"], "observational_population": entry["territory"]["observational_population"], "scope_type": "bounded_baseline_characterization"},
-            "method_scope": f"{METHOD_ID}@{METHOD_VERSION}", "intended_use": "deterministic descriptive baseline knowledge only",
+            "domain": config["domain"], "evidence_family": config["evidence_family"],
+            "source_scope": {"campaign_id": campaign_id, "provider": "World Bank", "dataset": "World Development Indicators", "source_id": "2", "indicator_code": entry["indicator"]["code"], "indicator_name": entry["indicator"]["name"], "entity_id": territory["id"], "entity_name": territory["name"], "period_start": identity["period_start"], "period_end": identity["period_end"], "frequency": applicability["frequency"], "unit": applicability["unit"], "denominator_basis": applicability["denominator_basis"], "observational_population": territory["observational_population"], "scope_type": "bounded_baseline_characterization"},
+            "method_scope": f"{method_id}@{method_version}", "intended_use": "deterministic descriptive baseline knowledge only",
         },
         "input_references": [entry["input"]["normalized_fingerprint"]],
         "evidence_references": [{
-            "evidence_ref_id": f"ev-eppilot-{_slug(entry['indicator']['code'])}-nor-1990-2024", "evidence_class": "external_observation_level_numerical_fixture",
-            "source_family": "official_statistical_source_data", "source_identity": f"World Bank WDI {entry['indicator']['code']} NOR annual retained Campaign 40 fixture",
+            "evidence_ref_id": evidence_ref_id, "evidence_class": "external_observation_level_numerical_fixture",
+            "source_family": "official_statistical_source_data", "source_identity": f"World Bank WDI {entry['indicator']['code']} {territory['id']} {applicability['frequency']} retained Campaign 40 fixture",
             "source_owner": "World Bank WDI API retained local fixture", "source_version": "2026-07-01", "accessed_at": "2026-07-11",
             "snapshot_fingerprint": entry["input"]["sha256"], "reproducibility_handle": entry["input"]["path"], "evaluation_status": "evaluated",
         }],
-        "computation_method": {"name": METHOD_ID, "version": METHOD_VERSION, "recipe": "summary v2 plus deterministic adjacent first-difference, quartile and calendar-year OLS slope descriptors", "parameters": entry["method"]["parameters"], "query_definitions": [], "nondeterminism": "none", "rerun": f"python3 tools/evidence_portfolio_production.py run --manifest artifacts/production/{CAMPAIGN_ID}/portfolio_manifest.json --mode production --canary-gate artifacts/production/{CAMPAIGN_ID}/canary_gate.json"},
+        "computation_method": {"name": method_id, "version": method_version, "recipe": "summary v2 plus deterministic adjacent first-difference, quartile and calendar-year OLS slope descriptors", "parameters": entry["method"]["parameters"], "query_definitions": [], "nondeterminism": "none", "rerun": f"python3 tools/evidence_portfolio_production.py run --manifest artifacts/production/{campaign_id}/portfolio_manifest.json --mode production --canary-gate artifacts/production/{campaign_id}/canary_gate.json"},
         "generated_statements": [{
             "statement_id": statement_id, "statement_type": "derived",
-            "text": f"The retained World Bank WDI {entry['indicator']['code']} series for Norway, annual 1990-2024, has a deterministic baseline characterization containing {EXPECTED_RESULT_RECORDS} coverage, period, level, adjacent-difference, linear time-index slope and variability result records. These descriptors apply only to the finite retained sequence and do not explain, predict or establish persistence.",
+            "text": f"The retained World Bank WDI {entry['indicator']['code']} series for {territory['name']}, {applicability['frequency']} {identity['period_start']}-{identity['period_end']}, has a deterministic baseline characterization containing {EXPECTED_RESULT_RECORDS} coverage, period, level, adjacent-difference, linear time-index slope and variability result records. These descriptors apply only to the finite retained sequence and do not explain, predict or establish persistence.",
             "applicability": copy.deepcopy(entry["applicability"]),
             "dependencies": [entry["input"]["normalized_fingerprint"], SUMMARY_CONTRACT_FINGERPRINT, manifest_fingerprint],
-            "evidence_refs": [f"ev-eppilot-{_slug(entry['indicator']['code'])}-nor-1990-2024"], "origin": "computed_offline_from_retained_admitted_evidence",
-            "structured_payload": {"result_records": result["result_records"], "result_classes": result_classes, "result_count": EXPECTED_RESULT_RECORDS, "calculation_fingerprint": result["calculation_fingerprint"], "manifest_fingerprint": manifest_fingerprint, "indicator_definition": entry["indicator"]["definition"], "limitations": ["No cross-series comparison or relationship is calculated.", "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity or forecastability.", "First differences summarize consecutive retained annual values only.", "WDI reacquisition may change; retained local bytes are the replay anchor.", "Canonical decimal precision is not measurement precision."]},
+            "evidence_refs": [evidence_ref_id], "origin": "computed_offline_from_retained_admitted_evidence",
+            "structured_payload": {"result_records": result["result_records"], "result_classes": result_classes, "result_count": EXPECTED_RESULT_RECORDS, "calculation_fingerprint": result["calculation_fingerprint"], "manifest_fingerprint": manifest_fingerprint, "indicator_definition": entry["indicator"]["definition"], "limitations": config["package_limitations"]},
         }],
-        "confidence_quality": {"confidence_label": "retained-fixture-supported-deterministic", "uncertainty_dimensions": ["mutable_source_reacquisition_limit", "modeled_estimation_process", "bounded_single_territory_window"], "missingness_summary": "encoded in result records", "evidence_sufficiency": "sufficient for bounded descriptive baseline characterization", "reproducibility_state": "reproducible_offline_from_retained_fixture", "validation_state": "pass", "governance_review_state": "bounded pilot promotion contract passed", "lifecycle_state": "accepted"},
+        "confidence_quality": {"confidence_label": "retained-fixture-supported-deterministic", "uncertainty_dimensions": config["uncertainty_dimensions"], "missingness_summary": "encoded in result records", "evidence_sufficiency": "sufficient for bounded descriptive baseline characterization", "reproducibility_state": "reproducible_offline_from_retained_fixture", "validation_state": "pass", "governance_review_state": config["governance_review_state"], "lifecycle_state": "accepted"},
         "contradiction_records": [{"contradiction_id": "none-recorded", "target_statement": statement_id, "contradiction_type": "none", "contradicting_evidence": None, "disposition": "not_applicable"}],
-        "provenance_envelope": {"package_identity": package_id, "creator": "evidence_portfolio_production", "generation_date": DATE, "source_systems": ["World Bank WDI retained Campaign 40 HTTPS fixture"], "evidence_refs": [f"ev-eppilot-{_slug(entry['indicator']['code'])}-nor-1990-2024"], "evaluation_refs": [f"validation-{CAMPAIGN_ID}"], "computation_recipe": f"{METHOD_ID}@{METHOD_VERSION}", "validation_tool": "evidence_portfolio_production", "reproducibility_state": "reproducible_offline", "input_file_sha256": entry["input"]["sha256"], "normalized_evidence_fingerprint": entry["input"]["normalized_fingerprint"], "selection_manifest_fingerprint": manifest_fingerprint, "calculation_contract_fingerprint": SUMMARY_CONTRACT_FINGERPRINT, "lineage": ["retained_https_fixture", "normalized_observations", "preregistered_calculation", "validated_result_records", "knowledge_object_package"]},
+        "provenance_envelope": {"package_identity": package_id, "creator": "evidence_portfolio_production", "generation_date": config["generation_date"], "source_systems": ["World Bank WDI retained Campaign 40 HTTPS fixture"], "evidence_refs": [evidence_ref_id], "evaluation_refs": [f"validation-{campaign_id}"], "computation_recipe": f"{method_id}@{method_version}", "validation_tool": "evidence_portfolio_production", "reproducibility_state": "reproducible_offline", "input_file_sha256": entry["input"]["sha256"], "normalized_evidence_fingerprint": entry["input"]["normalized_fingerprint"], "selection_manifest_fingerprint": manifest_fingerprint, "calculation_contract_fingerprint": SUMMARY_CONTRACT_FINGERPRINT, "lineage": ["retained_https_fixture", "normalized_observations", "preregistered_calculation", "validated_result_records", "knowledge_object_package"]},
         "validation_state": {"validation_result": "pass", "validator_version": "evidence-portfolio-pilot-v1", "blockers": [], "warnings": [], "human_review_required": False},
-        "evolution_metadata": {"previous_revision": None, "change_reason": "first bounded Evidence Portfolio production pilot", "changed_inputs_methods_templates_models_validators": [METHOD_ID], "dependent_object_review_posture": "review_on_source_or_method_supersession", "supersession_dependencies": [entry["input"]["normalized_fingerprint"], SUMMARY_CONTRACT_FINGERPRINT, manifest_fingerprint]},
-        "promotion": {"from_candidate_package_id": candidate_id, "promotion_justification": "Pre-registered candidate passed deterministic calculation, applicability, lineage, nonredundancy and package validation gates.", "validation_history": ["manifest_validation_pass", "calculation_validation_pass", "package_validation_pass"], "maturity_state": "bounded portfolio pilot accepted"},
+        "evolution_metadata": {"previous_revision": None, "change_reason": config["evolution_change_reason"], "changed_inputs_methods_templates_models_validators": [method_id], "dependent_object_review_posture": "review_on_source_or_method_supersession", "supersession_dependencies": [entry["input"]["normalized_fingerprint"], SUMMARY_CONTRACT_FINGERPRINT, manifest_fingerprint]},
+        "promotion": {"from_candidate_package_id": candidate_id, "promotion_justification": "Pre-registered candidate passed deterministic calculation, applicability, lineage, nonredundancy and package validation gates.", "validation_history": ["manifest_validation_pass", "calculation_validation_pass", "package_validation_pass"], "maturity_state": config["promotion_maturity_state"]},
         "evidence_integrity": {"evidence_refs_verified": True, "fingerprints_verified": True, "source_package_fingerprint": entry["input"]["sha256"]},
         "lineage": {"previous_package_id": candidate_id, "version_lineage": [candidate_id, package_id]},
     }
@@ -676,13 +894,9 @@ def render_operational_views(entry: dict[str, Any], result: dict[str, Any]) -> l
 
 def repository_state(repository_root: Path) -> dict[str, Any]:
     try:
-        manifest = read_json(repository_root / "manifest.json")
-    except (OSError, json.JSONDecodeError, TypeError, KeyError) as exc:
-        raise ValueError("production repository state is unreadable") from exc
-    state = {"repository_fingerprint": manifest.get("repository_fingerprint"), "object_count": manifest.get("object_count")}
-    if type(state["object_count"]) is not int or re.fullmatch(r"sha256:[0-9a-f]{64}", str(state["repository_fingerprint"])) is None:
-        raise ValueError("production repository state is invalid")
-    return state
+        return knowledge_repository.authenticate_repository(repository_root)
+    except ValueError as exc:
+        raise ValueError("production repository authentication failed") from exc
 
 
 def persist_packages(packages: list[dict[str, Any]], repository_root: Path) -> dict[str, Any]:
@@ -692,6 +906,74 @@ def persist_packages(packages: list[dict[str, Any]], repository_root: Path) -> d
     knowledge_repository.persist_knowledge_object_packages(packages, repository_root)
     manifest = read_json(repository_root / "manifest.json")
     return {"repository_fingerprint": manifest["repository_fingerprint"], "object_count": manifest["object_count"]}
+
+
+def validate_normalized_input_binding(entry: dict[str, Any], normalized: dict[str, Any]) -> None:
+    """Bind authorized structured identity and applicability to normalized evidence."""
+    identity = entry["identity_inputs"]
+    indicator = entry["indicator"]
+    territory = entry["territory"]
+    applicability = entry["applicability"]
+    method = entry["method"]
+    if normalized.get("normalized_fingerprint") != entry["input"]["normalized_fingerprint"]:
+        raise ValueError("normalized fingerprint mismatch")
+    actual_fingerprint = fingerprint({key: value for key, value in normalized.items() if key != "normalized_fingerprint"})
+    if actual_fingerprint != normalized.get("normalized_fingerprint"):
+        raise ValueError("normalized fingerprint does not authenticate normalized fixture semantics")
+    if (
+        identity.get("indicator_code") != indicator.get("code")
+        or identity.get("territory_id") != territory.get("id")
+        or identity.get("period_start") != applicability.get("period_start")
+        or identity.get("period_end") != applicability.get("period_end")
+        or identity.get("method_id") != method.get("id")
+        or identity.get("method_version") != method.get("version")
+    ):
+        raise ValueError("registered method or identity inputs mismatch")
+    selection = normalized.get("selection_contract", {})
+    periods = selection.get("periods", {})
+    metadata = normalized.get("indicator_metadata", {})
+    observations = normalized.get("observations")
+    if not isinstance(observations, list) or not observations:
+        raise ValueError("normalized observations missing")
+    if selection.get("indicator", {}).get("code") != indicator.get("code") or metadata.get("id") != indicator.get("code"):
+        raise ValueError("normalized indicator binding mismatch")
+    if indicator.get("name") != metadata.get("name"):
+        raise ValueError("normalized indicator metadata name binding mismatch")
+    definition_matches = indicator.get("definition") == metadata.get("definition")
+    if _is_published_legacy_health_entry(entry):
+        code = indicator.get("code")
+        definition_matches = (
+            indicator.get("definition") == LEGACY_HEALTH_DEFINITIONS.get(code)
+            and metadata.get("definition") == LEGACY_HEALTH_METADATA_DEFINITIONS.get(code)
+        )
+    if not definition_matches:
+        raise ValueError("normalized indicator metadata definition binding mismatch")
+    config = family_configuration(entry)
+    topic_families = {
+        topic.get("value", "").strip()
+        for topic in metadata.get("topics", [])
+        if isinstance(topic, dict) and isinstance(topic.get("value"), str)
+    }
+    if config["family"] not in topic_families:
+        raise ValueError("normalized indicator metadata family binding mismatch")
+    if selection.get("entities") != [territory.get("id")]:
+        raise ValueError("normalized territory binding mismatch")
+    if periods.get("start_year") != identity.get("period_start") or periods.get("end_year") != identity.get("period_end"):
+        raise ValueError("normalized period binding mismatch")
+    if periods.get("frequency") != applicability.get("frequency"):
+        raise ValueError("normalized frequency binding mismatch")
+    expected_periods = list(range(identity["period_start"], identity["period_end"] + 1))
+    if [row.get("period") for row in observations] != expected_periods:
+        raise ValueError("normalized observation period population mismatch")
+    if any(row.get("indicator_code") != indicator["code"] for row in observations):
+        raise ValueError("normalized observation indicator mismatch")
+    if any(row.get("entity_id") != territory["id"] or row.get("entity_name") != territory["name"] for row in observations):
+        raise ValueError("normalized observation territory mismatch")
+    provider_unit = metadata.get("unit")
+    if provider_unit and (provider_unit != applicability.get("unit") or any(row.get("unit") != provider_unit for row in observations)):
+        raise ValueError("normalized provider-explicit unit binding mismatch")
+    if any(row.get("frequency") not in (None, applicability["frequency"]) for row in observations):
+        raise ValueError("normalized observation frequency mismatch")
 
 
 def execute_entry(entry: dict[str, Any], project_root: Path = PROJECT_ROOT) -> dict[str, Any]:
@@ -705,8 +987,10 @@ def execute_entry(entry: dict[str, Any], project_root: Path = PROJECT_ROOT) -> d
         return {"candidate_id": entry["candidate_id"], "disposition": "failed", "stage": "input_validation", "reason": "input hash mismatch", "raw_result_count": 0}
     try:
         normalized = read_json(path)
-        if normalized.get("normalized_fingerprint") != entry["input"]["normalized_fingerprint"]:
-            raise ValueError("normalized fingerprint mismatch")
+        validate_normalized_input_binding(entry, normalized)
+    except (ValueError, json.JSONDecodeError, OSError, TypeError, KeyError) as exc:
+        return {"candidate_id": entry["candidate_id"], "disposition": "failed", "stage": "input_validation", "reason": str(exc), "raw_result_count": 0}
+    try:
         result = calculate_candidate(entry, normalized)
     except ValueError as exc:
         disposition = "null" if "null" in str(exc).lower() else "failed"
@@ -841,8 +1125,14 @@ def _run_portfolio_locked(
             blockers.append(str(exc))
     accounting = account_outcomes(outcomes, packages, views)
     publication = None
-    if not blockers and mode == "production" and repository_state(repository_root) != authorized_repository_state:
-        blockers.append("production repository state changed after authorization; persistence blocked")
+    if not blockers and mode == "production":
+        try:
+            current_repository_state = repository_state(repository_root)
+        except ValueError:
+            blockers.append("production repository state changed after authorization; persistence blocked")
+        else:
+            if current_repository_state != authorized_repository_state:
+                blockers.append("production repository state changed after authorization; persistence blocked")
     if not blockers:
         publication = persist_packages(packages, repository_root)
         publication = {"disposition": "isolated_canary_admitted" if mode == "canary" else "isolated_production_admitted", "admitted_object_count": len(packages), **publication}
@@ -860,7 +1150,8 @@ def _run_portfolio_locked(
         write_json(output_root / "canary_gate.json", result_gate)
         write_json(output_root / "canary_authorization_v1.json", result_gate)
     else:
-        result_gate = {"mode": mode, "passed": not blockers, "blockers": blockers, "accounting": accounting, "reruns": reruns, "publication": publication}
+        deterministic_reruns = [{key: value for key, value in row.items() if key != "elapsed_wall_seconds"} for row in reruns]
+        result_gate = {"mode": mode, "passed": not blockers, "blockers": blockers, "accounting": accounting, "reruns": deterministic_reruns, "publication": publication}
         result_gate["gate_fingerprint"] = fingerprint({key: value for key, value in result_gate.items() if key != "gate_fingerprint"})
     write_json(output_root / f"{mode}_gate.json", result_gate)
     if blockers:

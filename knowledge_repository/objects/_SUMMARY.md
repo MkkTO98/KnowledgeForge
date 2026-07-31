@@ -7,6 +7,8 @@ This folder is part of the ProjectForge file-backed operating system for `knowle
 <!-- PROJECTFORGE:BEGIN-CONTAINS -->
 - `pkg-object-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1.json`
 - `pkg-object-eppilot-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1.json`
+- `pkg-object-eppilot-infrastructure-it-cel-sets-p2-swe-1990-2024-baseline-v1.json`
+- `pkg-object-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1.json`
 - `pkg-object-srcpkg-campaign12-architectural-continuity-review.json`
 - `pkg-object-srcpkg-campaign12-artifact-count.json`
 - `pkg-object-srcpkg-campaign12-complete-lineage-count.json`
@@ -128,7 +130,7 @@ This folder is part of the ProjectForge file-backed operating system for `knowle
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Two `pkg-object-eppilot-health-*` baseline-characterization packages were added append-only by the completed bounded Evidence Portfolio pilot.
+- Four `pkg-object-eppilot-*` baseline-characterization packages now cover the completed Norway Health and Sweden Infrastructure portfolios; the two Sweden objects are append-only publication candidates.
 
 ## Needs Attention
 - No folder-specific issues recorded.

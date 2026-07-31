@@ -1,0 +1,63 @@
+{
+  "database": "knowledgeforge_eppilot_swe_20260731_semantic_v11",
+  "database_disposition": "isolated task database retained; no default or pre-existing database mutated",
+  "direct_filters": {
+    "evidence_family": {
+      "count": 2,
+      "valid": true,
+      "value": "external_wdi_annual_scalar_infrastructure_baseline_characterization"
+    },
+    "lifecycle_state": {
+      "count": 564,
+      "valid": true,
+      "value": "accepted-for-controlled-production"
+    }
+  },
+  "filter_limitation": "indicator, territory, period, method, transformation and applicability remain canonical JSONB payload fields rather than first-class generic filter arguments; no second projection architecture is justified",
+  "payload_lookup_checks": [
+    {
+      "applicability_basis": "resident_population_scaled_per_100_people",
+      "expected_first_difference_unit": "mobile cellular subscriptions per 100 people per year",
+      "first_difference_unit": "mobile cellular subscriptions per 100 people per year",
+      "indicator": "IT.CEL.SETS.P2",
+      "lookup_valid": true,
+      "method": "baseline_characterization_portfolio_v1",
+      "package_id": "pkg-object-eppilot-infrastructure-it-cel-sets-p2-swe-1990-2024-baseline-v1",
+      "period": [
+        1990,
+        2024
+      ],
+      "source_unit": "per 100 people",
+      "territory": "SWE",
+      "transformations": [
+        "adjacent_first_difference",
+        "level",
+        "linear_time_index"
+      ]
+    },
+    {
+      "applicability_basis": "resident_population_scaled_as_percent",
+      "expected_first_difference_unit": "percentage points per year",
+      "first_difference_unit": "percentage points per year",
+      "indicator": "IT.NET.USER.ZS",
+      "lookup_valid": true,
+      "method": "baseline_characterization_portfolio_v1",
+      "package_id": "pkg-object-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+      "period": [
+        1990,
+        2024
+      ],
+      "source_unit": "% of population",
+      "territory": "SWE",
+      "transformations": [
+        "adjacent_first_difference",
+        "level",
+        "linear_time_index"
+      ]
+    }
+  ],
+  "repository_fingerprint": "sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67",
+  "repository_object_count": 564,
+  "schema": "knowledgeforge.evidence_portfolio.projection_compatibility.v1",
+  "valid": true
+}

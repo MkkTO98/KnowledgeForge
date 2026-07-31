@@ -1,0 +1,1185 @@
+{
+  "computation_method": {
+    "name": "baseline_characterization_portfolio_v1",
+    "nondeterminism": "none",
+    "parameters": {
+      "decimal_precision": 50,
+      "difference_rule": "only consecutive observed annual periods",
+      "minimum_coverage_share": "0.85",
+      "minimum_observed_count": 30,
+      "quartile_rule": "median of lower and upper halves excluding the overall median for odd N",
+      "rounding": "ROUND_HALF_EVEN",
+      "slope_rule": "ordinary least-squares slope against integer calendar year; descriptor only",
+      "summary_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+      "summary_method": "wdi_annual_scalar_statistical_summary_v2@2.0"
+    },
+    "query_definitions": [],
+    "recipe": "summary v2 plus deterministic adjacent first-difference, quartile and calendar-year OLS slope descriptors",
+    "rerun": "python3 tools/evidence_portfolio_production.py run --manifest artifacts/production/evidence-portfolio-infrastructure-sweden-baseline-20260731/portfolio_manifest.json --mode production --canary-gate artifacts/production/evidence-portfolio-infrastructure-sweden-baseline-20260731/canary_gate.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "retained-fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded descriptive baseline characterization",
+    "governance_review_state": "bounded Infrastructure portfolio promotion contract passed",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "encoded in result records",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "mutable_source_reacquisition_limit",
+      "survey_modeled_or_administrative_measurement_process",
+      "technology_definition_and_adoption_change",
+      "bounded_single_territory_window"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1"
+    }
+  ],
+  "created_at": "2026-07-31",
+  "created_by": "evidence_portfolio_production",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:45a1e0f2b69b6dd2a0011e084df3497e2c9687f776189e82cf70812b7630982d"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-11",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-eppilot-it-net-user-zs-swe-1990-2024",
+      "reproducibility_handle": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.NET.USER.ZS__SWE__1990-2024/normalized_observations.json",
+      "snapshot_fingerprint": "sha256:45a1e0f2b69b6dd2a0011e084df3497e2c9687f776189e82cf70812b7630982d",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI IT.NET.USER.ZS SWE annual retained Campaign 40 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "first bounded Sweden Infrastructure Evidence Portfolio production pilot",
+    "changed_inputs_methods_templates_models_validators": [
+      "baseline_characterization_portfolio_v1"
+    ],
+    "dependent_object_review_posture": "review_on_source_or_method_supersession",
+    "previous_revision": null,
+    "supersession_dependencies": [
+      "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+      "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+      "sha256:d59dfd9944f47aa81adf6b4bd9b5b9ddcde8551956545e21e0ab2ed34744db1f"
+    ]
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:0617bbe98693d2b2ab69cc281e007e185a0907248001c0976e2dc60e24435b11",
+    "evidence_references": "sha256:14d603b498a90fcb6f4c79077fc5c9780cd975a6678439cf238c7cfbbc9b4f0b",
+    "generated_statements": "sha256:e4507af3c6a9e1639cb3736893aa88bf4189e4e990a6f14e54f438d7859a0072",
+    "input_set": "sha256:84543fc47cac690628fc10ee167ed8d9e8234fc8d51c19df939f9b43778b1dd9",
+    "package_manifest": "sha256:3bfd566dfb5645cbb5698c594519be494c1f3c9170f527ffeff58e644d110ab3",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "denominator_basis": "resident_population_scaled_as_percent",
+        "frequency": "annual",
+        "measure_kind": "individual_people_using_internet_share",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "% of population"
+      },
+      "dependencies": [
+        "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+        "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+        "sha256:d59dfd9944f47aa81adf6b4bd9b5b9ddcde8551956545e21e0ab2ed34744db1f"
+      ],
+      "evidence_refs": [
+        "ev-eppilot-it-net-user-zs-swe-1990-2024"
+      ],
+      "origin": "computed_offline_from_retained_admitted_evidence",
+      "statement_id": "stmt-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+      "statement_type": "derived",
+      "structured_payload": {
+        "calculation_fingerprint": "sha256:ba0d6eb5abffa01dd90c8cb4e3aad6a0ad91e10d1f4d14344c73c261ec63a8d8",
+        "indicator_definition": "Internet users are individuals who have used the Internet (from any location) in the last 3 months. The Internet can be used via a computer, mobile phone, personal digital assistant, games machine, digital TV etc.",
+        "limitations": [
+          "No cross-series comparison or relationship is calculated.",
+          "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent.",
+          "The indicator is interpreted only as individual_people_using_internet_share; it is not a general measure of infrastructure quality or welfare.",
+          "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity, saturation or forecastability.",
+          "First differences summarize consecutive retained annual values only and do not identify technology transitions or structural breaks.",
+          "WDI reacquisition may change; retained local bytes are the replay anchor.",
+          "Canonical decimal precision is not measurement precision.",
+          "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions."
+        ],
+        "manifest_fingerprint": "sha256:d59dfd9944f47aa81adf6b4bd9b5b9ddcde8551956545e21e0ab2ed34744db1f",
+        "result_classes": [
+          "coverage_missingness",
+          "differences",
+          "level_distribution",
+          "sample_period",
+          "trend_descriptor",
+          "variability_stability"
+        ],
+        "result_count": 28,
+        "result_records": [
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "expected_observation_slot_count",
+            "result_id": "result-12a223fa9f5f4daad48e3290",
+            "semantic_fingerprint": "sha256:0b47dbf9066357604352429ec9b363ea544b43adfa41b29997f257768225d039",
+            "transformation": "level",
+            "value": 35
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "observed_count",
+            "result_id": "result-ca1d1087ec8d16eb38f5aeb5",
+            "semantic_fingerprint": "sha256:2be0a5fd7dae84c71c4384987460e1b6316716beca2f17596960078ad66635f7",
+            "transformation": "level",
+            "value": 35
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "missing_count",
+            "result_id": "result-6f8c56d31fd7dfbd610a230e",
+            "semantic_fingerprint": "sha256:fbb5e74b4b2077debc9134861d165ac715c0d8cac355d30b45a29ce09962ce15",
+            "transformation": "level",
+            "value": 0
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "coverage_share",
+            "result_id": "result-5576ca557b40d0101f091164",
+            "semantic_fingerprint": "sha256:b0f1ff9ec666b60484de3d60a71e5272698a97c5f8b37e0ca9b1b171622c187a",
+            "transformation": "level",
+            "value": "1"
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "missing_share",
+            "result_id": "result-dd5a6ae5d98b5834a684c453",
+            "semantic_fingerprint": "sha256:82daeb84a233f9c8c36503e3b1257b043a2f32b4f7503c0ea9c2b54d53583f14",
+            "transformation": "level",
+            "value": "0"
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "period_start",
+            "result_id": "result-952acf546d3f3789e27e8ac9",
+            "semantic_fingerprint": "sha256:4cad67833854ad58d3076f3e67230a930285d9874cb82ed95fad6cef8dff7f8b",
+            "transformation": "level",
+            "value": 1990
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "period_end",
+            "result_id": "result-f005e00ae2c856450d8a7845",
+            "semantic_fingerprint": "sha256:38f67e9fa0cdd5b773bbfd2fafe8f3351a86e8d391d8714b92f7973e35910f95",
+            "transformation": "level",
+            "value": 2024
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_valid_observation",
+            "result_id": "result-d1c786b3b3f076a29cceef50",
+            "semantic_fingerprint": "sha256:c5f8905e00c22a300b7cb0d29f1e77eaab7d341ed6f112742e6282bdf303ae08",
+            "transformation": "level",
+            "value": {
+              "period": 1990,
+              "unit": "% of population",
+              "value": "0.584"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "last_valid_observation",
+            "result_id": "result-3a3b5df98945b1660fb1790b",
+            "semantic_fingerprint": "sha256:ca094a48aeee430fd846f63b00d6a7763d94668c6cc1bbffbc3172306c92ccb0",
+            "transformation": "level",
+            "value": {
+              "period": 2024,
+              "unit": "% of population",
+              "value": "95.52930428"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "observed_period_span_years",
+            "result_id": "result-d007b1c22f60aeb9a71c2b45",
+            "semantic_fingerprint": "sha256:3ee2e97876168085cb2199666eac90fc10201bcdf4c35db9625bdb21c40ba82d",
+            "transformation": "level",
+            "value": 34
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "minimum",
+            "result_id": "result-f284b3c071210221fc6fd670",
+            "semantic_fingerprint": "sha256:02c5a0d9e2006fedb4bf4e0e8ca54137601282caaba8cbb55767d704041cdc39",
+            "transformation": "level",
+            "value": {
+              "canonical": "0.584",
+              "display": "0.584",
+              "periods": [
+                1990
+              ],
+              "unit": "% of population"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "maximum",
+            "result_id": "result-dab43f03352c6695ca90646f",
+            "semantic_fingerprint": "sha256:feab47c412d941830ec2ccfbfff944bfb8ac19d1e506aab03a81fd8a10374697",
+            "transformation": "level",
+            "value": {
+              "canonical": "95.70327461",
+              "display": "95.7033",
+              "periods": [
+                2023
+              ],
+              "unit": "% of population"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "arithmetic_mean",
+            "result_id": "result-5acba2dc03e51e2e19811668",
+            "semantic_fingerprint": "sha256:800cfbf6e671c596ecbeff6293fc9aeae54c7c9078f3ff421e36c32a5f01d210",
+            "transformation": "level",
+            "value": {
+              "canonical": "65.242124150186",
+              "display": "65.2421",
+              "unit": "% of population"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "median",
+            "result_id": "result-5fa34bade78a1f16c473a72f",
+            "semantic_fingerprint": "sha256:3dc38f146b3725646067abe9943789402f112dc911f4bd3ed3edb6b41882a9f8",
+            "transformation": "level",
+            "value": {
+              "canonical": "87.76",
+              "display": "87.76",
+              "unit": "% of population"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "population_standard_deviation",
+            "result_id": "result-e1f4d509bc70e29505091217",
+            "semantic_fingerprint": "sha256:6f9acf97b48c94e9cf36405a080b85d10d3e245789b41272510543aa53418fe6",
+            "transformation": "level",
+            "value": {
+              "canonical": "36.068700981068",
+              "display": "36.0687",
+              "unit": "percentage points"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_quartile",
+            "result_id": "result-44ece6575e540baaa580c0aa",
+            "semantic_fingerprint": "sha256:33831f77e37fac5be046f8bcfa4babf74ce3520eefc8ee7d66fabbc91410b141",
+            "transformation": "level",
+            "value": {
+              "canonical": "33.5",
+              "unit": "% of population"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "third_quartile",
+            "result_id": "result-2ea3046cb9eb2aa6ed41fb3c",
+            "semantic_fingerprint": "sha256:dd90881263b14a5012743398bcb356bf5b918af06182caceb4bbd2ffc63227e6",
+            "transformation": "level",
+            "value": {
+              "canonical": "93.006266965213",
+              "unit": "% of population"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "interquartile_range",
+            "result_id": "result-d195d2cfea7727988b22aeec",
+            "semantic_fingerprint": "sha256:df95168d2f7287bd784d4774da5d71438d381678742b911d797458e6b2d49bcc",
+            "transformation": "level",
+            "value": {
+              "canonical": "59.506266965213",
+              "unit": "percentage points"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "adjacent_first_difference_count",
+            "result_id": "result-19fd1c73944d7fdb06148597",
+            "semantic_fingerprint": "sha256:4336085dcfdcb0abddfd1553d4ae13afe26007fc505ce3df21a305df9921dcb3",
+            "transformation": "adjacent_first_difference",
+            "value": 34
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_mean",
+            "result_id": "result-4299c48525a59f32ed3110a8",
+            "semantic_fingerprint": "sha256:c322fd7a861a858ffe2c709d5f61682207a4482aa50bc4d948019c0ec8566ef0",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "2.792508949412",
+              "unit": "percentage points per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_median",
+            "result_id": "result-a8fc146e376564a502442f5e",
+            "semantic_fingerprint": "sha256:e4e5af2a68cf52d840747687cff161332cab31bca6fc6da8914e76e327dd2e89",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "1.301805996745",
+              "unit": "percentage points per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_minimum",
+            "result_id": "result-22fcb9d39eda22144916fc6e",
+            "semantic_fingerprint": "sha256:011d5d843a8283a6a7c84005777391e864f8e822ab081b9c352f707d65efb9e0",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "-5.75",
+              "unit": "percentage points per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_maximum",
+            "result_id": "result-52bc6035de5c8e30c1bb4c8f",
+            "semantic_fingerprint": "sha256:3a75fa1faab10729d9eee97a8f19e0e94faf1857a03a69baa4fedbf3ceacb699",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "18.804335062719",
+              "unit": "percentage points per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "net_level_difference",
+            "result_id": "result-fb949453414fee978ae553f9",
+            "semantic_fingerprint": "sha256:beb0be7e40193b4d097dbbe221da87944ff789c600814e91e86381ec843a53e2",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "94.94530428",
+              "unit": "percentage points"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "trend_descriptor",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "linear_time_index_slope_per_year",
+            "result_id": "result-5e121ce067cbac08883be89c",
+            "semantic_fingerprint": "sha256:86b0c62b0c95eef20c0c6f2ad1f5628dfcf156594d6171bed0a6d56b205c77ad",
+            "transformation": "linear_time_index",
+            "value": {
+              "canonical": "3.17898459731",
+              "unit": "percentage points per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "trend_descriptor",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "linear_time_index_slope_sign",
+            "result_id": "result-d1becfd5cb822d0c54b0dc83",
+            "semantic_fingerprint": "sha256:3442eb59466d9cb7c85624c0cc3a834dad48807d95f743234b26f2c16e112dee",
+            "transformation": "linear_time_index",
+            "value": "positive"
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "variability_stability",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_population_standard_deviation",
+            "result_id": "result-6ab29c4d994e4aa0c0371caf",
+            "semantic_fingerprint": "sha256:14e5403b02fb72132eff33b86dba5b472260c9c9efe95397816f3f26c6673ab9",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "4.9015491789",
+              "unit": "percentage points per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "resident_population_scaled_as_percent",
+              "frequency": "annual",
+              "measure_kind": "individual_people_using_internet_share",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "% of population"
+            },
+            "class": "variability_stability",
+            "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity saturation permanence or technology-adoption claim",
+              "Level-distribution statistics are unweighted summaries across retained annual observations; they are not population-weighted pooled-period estimates and do not describe a cross-sectional distribution among people, users or subscriptions.",
+              "The measure concerns people using the Internet, not subscriptions, devices, connection quality, intensity of use or digital skills.",
+              "Technology definitions and survey or modeled-estimation practices can change across the retained window.",
+              "Adoption and saturation dynamics can be nonlinear and are not represented by a structural model.",
+              "Structural breaks, policy changes and technology transitions are not identified or explained by these descriptors.",
+              "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent."
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "mean_absolute_first_difference",
+            "result_id": "result-6f3a1327236ffa48d835b529",
+            "semantic_fingerprint": "sha256:e61bdd8dfde1c6ebc1777a57bf212ba907909f8612d25d6f9d304db567387cb6",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "3.722857568598",
+              "unit": "percentage points per year"
+            }
+          }
+        ]
+      },
+      "text": "The retained World Bank WDI IT.NET.USER.ZS series for Sweden, annual 1990-2024, has a deterministic baseline characterization containing 28 coverage, period, level, adjacent-difference, linear time-index slope and variability result records. These descriptors apply only to the finite retained sequence and do not explain, predict or establish persistence."
+    }
+  ],
+  "input_references": [
+    "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:483e9fe19b493791879bf12d557fb6a7f593e5aa7251a8bd40c3f6bf46f241ef",
+    "previous_package_id": "pkg-candidate-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+    "version_lineage": [
+      "pkg-candidate-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+      "pkg-object-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1"
+    ]
+  },
+  "package_id": "pkg-object-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+    "maturity_state": "bounded Infrastructure portfolio pilot accepted",
+    "promotion_justification": "Pre-registered candidate passed deterministic calculation, applicability, lineage, nonredundancy and package validation gates.",
+    "validation_history": [
+      "manifest_validation_pass",
+      "calculation_validation_pass",
+      "package_validation_pass"
+    ]
+  },
+  "provenance_envelope": {
+    "calculation_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+    "computation_recipe": "baseline_characterization_portfolio_v1@1.0",
+    "creator": "evidence_portfolio_production",
+    "evaluation_refs": [
+      "validation-evidence-portfolio-infrastructure-sweden-baseline-20260731"
+    ],
+    "evidence_refs": [
+      "ev-eppilot-it-net-user-zs-swe-1990-2024"
+    ],
+    "generation_date": "2026-07-31",
+    "input_file_sha256": "sha256:45a1e0f2b69b6dd2a0011e084df3497e2c9687f776189e82cf70812b7630982d",
+    "lineage": [
+      "retained_https_fixture",
+      "normalized_observations",
+      "preregistered_calculation",
+      "validated_result_records",
+      "knowledge_object_package"
+    ],
+    "normalized_evidence_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+    "package_identity": "pkg-object-eppilot-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+    "reproducibility_state": "reproducible_offline",
+    "selection_manifest_fingerprint": "sha256:d59dfd9944f47aa81adf6b4bd9b5b9ddcde8551956545e21e0ab2ed34744db1f",
+    "source_systems": [
+      "World Bank WDI retained Campaign 40 HTTPS fixture"
+    ],
+    "validation_tool": "evidence_portfolio_production"
+  },
+  "scope": {
+    "domain": "WDI Infrastructure baseline characterization",
+    "evidence_family": "external_wdi_annual_scalar_infrastructure_baseline_characterization",
+    "intended_use": "deterministic descriptive baseline knowledge only",
+    "method_scope": "baseline_characterization_portfolio_v1@1.0",
+    "source_scope": {
+      "campaign_id": "evidence-portfolio-infrastructure-sweden-baseline-20260731",
+      "dataset": "World Development Indicators",
+      "denominator_basis": "resident_population_scaled_as_percent",
+      "entity_id": "SWE",
+      "entity_name": "Sweden",
+      "frequency": "annual",
+      "indicator_code": "IT.NET.USER.ZS",
+      "indicator_name": "Individuals using the Internet (% of population)",
+      "observational_population": "retained observed annual Sweden values for the indicator within 1990-2024",
+      "period_end": 2024,
+      "period_start": 1990,
+      "provider": "World Bank",
+      "scope_type": "bounded_baseline_characterization",
+      "source_id": "2",
+      "unit": "% of population"
+    }
+  },
+  "status": "accepted-for-controlled-production",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "evidence-portfolio-pilot-v1",
+    "warnings": []
+  }
+}

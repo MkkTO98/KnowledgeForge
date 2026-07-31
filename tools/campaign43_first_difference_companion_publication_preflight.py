@@ -33,6 +33,8 @@ EXPECTED_POST_PUBLICATION_COUNT = 560
 EXPECTED_POST_PUBLICATION_FP = "sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7"
 POST_EVIDENCE_PORTFOLIO_PILOT_COUNT = 562
 POST_EVIDENCE_PORTFOLIO_PILOT_FP = "sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff"
+POST_SECOND_EVIDENCE_PORTFOLIO_COUNT = 564
+POST_SECOND_EVIDENCE_PORTFOLIO_FP = "sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67"
 EXPECTED_POST_PUBLICATION_FD_COUNT = 14
 EXPECTED_PACKAGE_FPS = {
     "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-first-difference-pearson-companion-v1": "sha256:5dfcca7a3b90bf8ab058f20b32555145c684fa004140ad457d67fc3dd222db14",
@@ -199,9 +201,10 @@ def preflight(root: Path) -> dict[str, Any]:
     pre_publication_baseline = (baseline["object_file_count"] == EXPECTED_REPOSITORY_COUNT and baseline["manifest_object_count"] == EXPECTED_REPOSITORY_COUNT and baseline["computed_repository_fingerprint"] == EXPECTED_REPOSITORY_FP and baseline["manifest_repository_fingerprint"] == EXPECTED_REPOSITORY_FP and baseline["first_difference_pearson_relationship_count"] == 8)
     post_publication_baseline = (baseline["object_file_count"] == EXPECTED_POST_PUBLICATION_COUNT and baseline["manifest_object_count"] == EXPECTED_POST_PUBLICATION_COUNT and baseline["computed_repository_fingerprint"] == EXPECTED_POST_PUBLICATION_FP and baseline["manifest_repository_fingerprint"] == EXPECTED_POST_PUBLICATION_FP and baseline["first_difference_pearson_relationship_count"] == EXPECTED_POST_PUBLICATION_FD_COUNT)
     post_portfolio_pilot_baseline = (baseline["object_file_count"] == POST_EVIDENCE_PORTFOLIO_PILOT_COUNT and baseline["manifest_object_count"] == POST_EVIDENCE_PORTFOLIO_PILOT_COUNT and baseline["computed_repository_fingerprint"] == POST_EVIDENCE_PORTFOLIO_PILOT_FP and baseline["manifest_repository_fingerprint"] == POST_EVIDENCE_PORTFOLIO_PILOT_FP and baseline["first_difference_pearson_relationship_count"] == EXPECTED_POST_PUBLICATION_FD_COUNT)
-    add("canonical_count", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_COUNT, EXPECTED_POST_PUBLICATION_COUNT, POST_EVIDENCE_PORTFOLIO_PILOT_COUNT])
-    add("canonical_fingerprint", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_FP, EXPECTED_POST_PUBLICATION_FP, POST_EVIDENCE_PORTFOLIO_PILOT_FP])
-    add("existing_fd_count", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline, actual=baseline["first_difference_pearson_relationship_count"], expected=[8, EXPECTED_POST_PUBLICATION_FD_COUNT])
+    post_second_portfolio_baseline = (baseline["object_file_count"] == POST_SECOND_EVIDENCE_PORTFOLIO_COUNT and baseline["manifest_object_count"] == POST_SECOND_EVIDENCE_PORTFOLIO_COUNT and baseline["computed_repository_fingerprint"] == POST_SECOND_EVIDENCE_PORTFOLIO_FP and baseline["manifest_repository_fingerprint"] == POST_SECOND_EVIDENCE_PORTFOLIO_FP and baseline["first_difference_pearson_relationship_count"] == EXPECTED_POST_PUBLICATION_FD_COUNT)
+    add("canonical_count", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline or post_second_portfolio_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_COUNT, EXPECTED_POST_PUBLICATION_COUNT, POST_EVIDENCE_PORTFOLIO_PILOT_COUNT, POST_SECOND_EVIDENCE_PORTFOLIO_COUNT])
+    add("canonical_fingerprint", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline or post_second_portfolio_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_FP, EXPECTED_POST_PUBLICATION_FP, POST_EVIDENCE_PORTFOLIO_PILOT_FP, POST_SECOND_EVIDENCE_PORTFOLIO_FP])
+    add("existing_fd_count", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline or post_second_portfolio_baseline, actual=baseline["first_difference_pearson_relationship_count"], expected=[8, EXPECTED_POST_PUBLICATION_FD_COUNT])
     registry_by_id = {c["campaign43_candidate_id"]: c for c in registry_entries}
     calc_by_id = {c["candidate_id"]: c for c in calc.get("candidate_results", [])}
     recomputed_by_id = {c["candidate_id"]: c for c in recomputed_calc.get("candidate_results", [])}

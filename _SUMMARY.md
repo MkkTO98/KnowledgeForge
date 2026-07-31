@@ -40,8 +40,8 @@ Root of KnowledgeForge, the EIP canonical reusable knowledge substrate project. 
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No task is active. The first bounded Evidence Portfolio pilot completed with two promoted Norway Health baseline packages and 56 operational result views.
-- The canonical Knowledge Repository contains 562 accepted KnowledgeObjectPackages with fingerprint `sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff`.
+- No task is active. Two bounded Evidence Portfolios completed with four promoted baseline packages and 112 operational result views across Norway Health and Sweden Infrastructure.
+- The canonical publication candidate contains 564 accepted KnowledgeObjectPackages with fingerprint `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`; publication remains unauthorized.
 
 ## Needs Attention
 - Keep canonical packages, result records and operational views separately counted; the approximately 100-output horizon is not a quota.

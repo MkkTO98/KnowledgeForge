@@ -1,32 +1,40 @@
 # Project State
 
-Status: Operational Expansion; no active task
-Last substantive task: Evidence Portfolio Production Boundary Contract v1 correction and exact replay
+## Status
 
-## Canonical repository
+KnowledgeForge has completed and applied an unstaged second bounded Evidence Portfolio publication candidate. Publication is not authorized.
 
-- Filesystem `knowledge_repository/` remains authoritative.
-- Accepted package count: 562.
-- Repository fingerprint: `sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff`.
-- PostgreSQL remains a rebuildable bounded operational projection, not authority.
+## Canonical repository candidate
 
-## Latest production result
+- Accepted KnowledgeObjectPackages: 564
+- Repository fingerprint: `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`
+- New packages: two Sweden Infrastructure baseline-characterization objects
+- Filesystem remains authoritative; PostgreSQL remains a rebuildable projection.
 
-The 2026-07-30 Health baseline portfolio reused retained admitted Campaign 40 WDI fixtures for Norway, 1990–2024. It pre-registered three candidates, excluded one inapplicable CAGR before calculation, executed two statistical-characterization candidates, promoted two canonical packages and rendered 56 operational Evidence-Card-equivalent views. Canary, deterministic reruns, identity/lineage/applicability gates, idempotent promotion, isolated projection and repository-wide tests passed.
+## Portfolio accounting
 
-## Architecture posture
+- 3 preregistered candidates
+- 2 executed, 56 raw/valid results
+- 2 promoted canonical objects
+- 56 non-canonical operational views
+- 1 Evidence Bundle, 1 Calculation Campaign, 2 dependency clusters
+- 1 expected exclusion; 0 rejected, redundant, null or failed
 
-No contradiction or redesign was required. Portfolio production is deterministic composition over existing candidate, campaign, package, repository, promotion, view and projection contracts. Evidence-Card-equivalent views remain operational representations of canonical result records. KnowledgeForge remains independent from MacroForge and consumed only durable admitted evidence fixtures.
+## Validation state
 
-## Consumer posture
+- Corrected canary/production fresh run: pass
+- Independent fresh-tree replay: pass
+- Independent semantic re-review: pass
+- Focused test suite: 121/121 pass
+- Repository-wide unittest discovery: 434/434 pass
+- Genuine isolated compilation: 211 nonempty `.pyc` files under task `/tmp`
+- Isolated PostgreSQL rebuild/verify: 564/564, zero fidelity failures
+- Final attested Architecture-to-Reality Audit: zero blocks and zero warnings
+- Live post-application preservation: exact 493 Git-visible and 309 ignored identities; six mixed representations not copied; staging empty
+- Applied complete/new paths: 57; actual Git-visible task delta: 54; unexpected delta: zero
+- Candidate/live repository authentication: 564 objects, exact corrected fingerprint
+- Active task: none
 
-Direct canonical-package and read-only projection consumption are content-adequate without recalculation. The accepted relationship export remains relationship-specific; no general InsightForge baseline-characterization adapter contract is accepted. No cross-project integration was performed.
+## Boundaries
 
-## Governance state
-
-- Accepted decision: `artifacts/decisions/D-20260731-evidence-portfolio-production-boundary-contract-v1.md`.
-- Production Authorization v1 now binds exact campaign/manifest/population/limits/reruns/accounting and exact canary-admitted repository pre-state; compliant writers are serialized and state is rechecked before persistence.
-- Architecture-to-Reality candidate attestation is deterministic, acyclic and exact-path fail-closed.
-- No canonical schema, ontology, production-doctrine, projection-schema or Campaign 43 analytical-identity change occurred.
-- No next task is active.
-- Existing unrelated working-tree residue remains outside task ownership and must remain preserved.
+No architecture change, provider acquisition, live MacroForge query, live/default PostgreSQL mutation, cross-project integration, staging, commit, push, tag or release is authorized. The approximately 100-view horizon is not a quota. No follow-on task is active.

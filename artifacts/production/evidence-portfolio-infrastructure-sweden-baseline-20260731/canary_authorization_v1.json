@@ -1,0 +1,102 @@
+{
+  "accounting": {
+    "dependency_clusters": 1,
+    "distinct_source_series": 1,
+    "distinct_transformations": 3,
+    "evidence_bundles": 1,
+    "executed_candidates": 1,
+    "execution_failures": 0,
+    "manifest_candidates": 2,
+    "null_candidates": 0,
+    "operational_views": 28,
+    "promoted_canonical_objects": 1,
+    "raw_calculation_results": 28,
+    "redundant_candidates": 0,
+    "redundant_result_records": 0,
+    "rejected_candidates": 1,
+    "valid_candidates": 1,
+    "valid_result_records": 28
+  },
+  "blockers": [],
+  "campaign_id": "evidence-portfolio-infrastructure-sweden-baseline-20260731",
+  "candidate_population": [
+    {
+      "canary": true,
+      "candidate_id": "candidate-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+      "disposition": "execute",
+      "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+      "input_path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.NET.USER.ZS__SWE__1990-2024/normalized_observations.json",
+      "input_sha256": "sha256:45a1e0f2b69b6dd2a0011e084df3497e2c9687f776189e82cf70812b7630982d"
+    },
+    {
+      "canary": false,
+      "candidate_id": "candidate-infrastructure-it-cel-sets-p2-swe-1990-2024-baseline-v1",
+      "disposition": "execute",
+      "input_normalized_fingerprint": "sha256:7689361a24f2545a177de984e566594b9cf1284c7bebf19ea1100c37548bf2bd",
+      "input_path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.CEL.SETS.P2__SWE__1990-2024/normalized_observations.json",
+      "input_sha256": "sha256:a6bc1362e18fc768478de9e2b3dfcd5cdb4222b392df5605bdb4e87819028eef"
+    },
+    {
+      "canary": true,
+      "candidate_id": "candidate-infrastructure-internet-users-cagr-excluded-v1",
+      "disposition": "excluded_pre_execution",
+      "input_normalized_fingerprint": "sha256:ebc7b93fac69eccce658a46d2807a059636a43784f42b2e9ff9589b6e9389de2",
+      "input_path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/IT.NET.USER.ZS__SWE__1990-2024/normalized_observations.json",
+      "input_sha256": "sha256:45a1e0f2b69b6dd2a0011e084df3497e2c9687f776189e82cf70812b7630982d"
+    }
+  ],
+  "candidate_population_fingerprint": "sha256:d3c8306c8bda8d16eaa1f55341f19da680b57c743df432529acd3fd42c290209",
+  "execution_manifest_byte_fingerprint": "sha256:f622a9891631bc3d44073bce827dc6fa30b0b7a240ac14fa6613849f05b0284c",
+  "execution_mode": "canary",
+  "gate_fingerprint": "sha256:0c3da8dd0635253f94b7c2bf14c3562b7d25b9cd19f37f0631dc270cacfed240",
+  "manifest_fingerprint": "sha256:d59dfd9944f47aa81adf6b4bd9b5b9ddcde8551956545e21e0ab2ed34744db1f",
+  "manifest_id": "manifest-evidence-portfolio-infrastructure-sweden-baseline-v1",
+  "passed": true,
+  "production_limits": {
+    "entries": [
+      {
+        "candidate_id": "candidate-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+        "limits": {
+          "maximum_result_records": 28,
+          "maximum_wall_seconds": 5
+        }
+      },
+      {
+        "candidate_id": "candidate-infrastructure-it-cel-sets-p2-swe-1990-2024-baseline-v1",
+        "limits": {
+          "maximum_result_records": 28,
+          "maximum_wall_seconds": 5
+        }
+      },
+      {
+        "candidate_id": "candidate-infrastructure-internet-users-cagr-excluded-v1",
+        "limits": {
+          "maximum_result_records": 28,
+          "maximum_wall_seconds": 5
+        }
+      }
+    ],
+    "portfolio": {
+      "maximum_executed_candidates": 2,
+      "maximum_promoted_objects": 2,
+      "maximum_raw_result_records": 56,
+      "stop_on_canary_failure": true
+    }
+  },
+  "publication": {
+    "admitted_object_count": 1,
+    "disposition": "isolated_canary_admitted",
+    "object_count": 563,
+    "repository_fingerprint": "sha256:f53c018fffb04042ab3461c40bc90c9bc0c5f6668d8d59dbe82584471701e0a7"
+  },
+  "reruns": [
+    {
+      "candidate_id": "candidate-infrastructure-it-net-user-zs-swe-1990-2024-baseline-v1",
+      "first_fingerprint": "sha256:4d143f935a4fc74420ab457d0443b360da45a975ddb96321897a1186fb0042c3",
+      "matched": true,
+      "second_fingerprint": "sha256:4d143f935a4fc74420ab457d0443b360da45a975ddb96321897a1186fb0042c3"
+    }
+  ],
+  "schema_name": "knowledgeforge.evidence_portfolio.production_authorization.v1",
+  "schema_version": "1.0"
+}

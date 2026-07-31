@@ -1033,3 +1033,9 @@ Rejected/deferred Pearson candidates: all three NOR demographic/health pairs are
 Rejected exports-share alternative: the proposed DNK/SWE/NOR `NE.EXP.GNFS.ZS` statistical-summary replication is already complete and canonical from Campaign 35, so it would be duplicate production rather than new knowledge.
 
 Boundary: decision gate only. Do not begin the non-WDI disagreement planning gate without separate authorization. Stop before source acquisition, ingestion implementation, package construction/publication, PostgreSQL mutation, Relationship Export output mutation, architecture/doctrine/schema change, staging, commit, push, tag, release, or protected residue cleanup.
+
+## Second bounded Evidence Portfolio — Sweden Infrastructure — 2026-07-31
+
+The separately authorized second portfolio completed production under Evidence Portfolio Production Boundary Contract v1. It preregistered two admitted Sweden Infrastructure baseline candidates and one expected relationship exclusion, promoted two canonical Knowledge Objects, and rendered 56 non-canonical operational views. Independent semantic review required a bounded manifest-v1.1 unit/applicability correction; the universe and calculation methods remained unchanged and complete fresh-tree replay passed. The corrected repository contains 564 objects.
+
+Readiness result: the architecture generalizes beyond Norway Health and can sustain additional bounded baseline characterization. This does not establish a quota or activate another portfolio. Publication and any third portfolio require separate authorization.

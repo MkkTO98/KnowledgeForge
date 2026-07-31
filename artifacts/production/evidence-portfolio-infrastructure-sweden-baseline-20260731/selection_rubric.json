@@ -1,0 +1,75 @@
+{
+  "criteria": [
+    "authoritative Mature WDI Infrastructure family and admitted retained HTTPS evidence",
+    "complete two-series registry pair with coefficient-free admission metadata",
+    "same Sweden territory, annual frequency and 1990-2024 window",
+    "durable local raw and normalized inputs with exact hashes",
+    "clear units, definitions, observational population and denominator/applicability bases",
+    "35 retained observations and complete coverage in frozen admission metadata",
+    "low bounded computational and review cost",
+    "descriptive downstream utility without relationship calculation or technology-adoption interpretation",
+    "no selection based on newly calculated level, difference, slope or variability outcomes"
+  ],
+  "eligible_universe": [
+    {
+      "candidate_ids": [
+        "health_life_expectancy_under5_mortality_nor",
+        "finance_credit_broad_money_dnk",
+        "infrastructure_internet_mobile_swe",
+        "energy_fossil_nonhydro_renewables_nor",
+        "agriculture_agricultural_forest_land_dnk",
+        "demographic_birth_death_rates_nor",
+        "education_primary_secondary_enrollment_nor",
+        "finance_atm_credit_swe"
+      ],
+      "registry_fingerprint": "sha256:c1a99bada3e936739f0573eada4d3494a72baf10c66c8bd6236bd2c9dde80d18",
+      "registry_id": "campaign40_coefficient_free_candidate_registry_v1"
+    }
+  ],
+  "excluded_universe": [
+    {
+      "candidate_id": "health_life_expectancy_under5_mortality_nor",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "finance_credit_broad_money_dnk",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "energy_fossil_nonhydro_renewables_nor",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "agriculture_agricultural_forest_land_dnk",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "demographic_birth_death_rates_nor",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "education_primary_secondary_enrollment_nor",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "finance_atm_credit_swe",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    }
+  ],
+  "known_limitations": [
+    "WDI mutable-source vintage limitation; retained bytes are the replay anchor",
+    "Internet users measure people while mobile cellular subscriptions may count multiple subscriptions per person",
+    "Shared population scaling or denominator conventions do not make Internet users and mobile cellular subscriptions substantively equivalent.",
+    "technology definitions, reporting methods, adoption, saturation and structural breaks can vary over time",
+    "finite ordered annual values are not random or independent samples",
+    "linear slope and first-difference descriptors do not establish persistence, explanation or forecastability",
+    "canonical decimal precision is representation policy, not source measurement precision"
+  ],
+  "recorded_before_new_outcome_calculation": true,
+  "rubric_fingerprint": "sha256:ab0432a7710f83c9d78cd9bfe272c576308d4af499aca38fadf22d308d6e8f67",
+  "rubric_id": "selection-rubric-infrastructure-sweden-baseline-portfolio-v1",
+  "selected_candidate_id": "infrastructure_internet_mobile_swe",
+  "selected_family": "Infrastructure",
+  "selection_reason": "The complete retained Sweden Infrastructure pair is mature, semantically distinguishable, territory/period consistent, fully covered in admitted metadata and useful for bounded baseline characterization without calculating a cross-series relationship.",
+  "selection_registry_file_sha256": "sha256:56432eee9704483aa189f9b4a5c86a26b0d643007fa567ef427a371db696bc36"
+}

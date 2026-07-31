@@ -1,0 +1,32 @@
+{
+  "correction": {
+    "calculation_methods_changed": false,
+    "candidate_universe_changed": false,
+    "manifest_version": "1.1",
+    "outcome_replacement_or_padding": false,
+    "predecessor_manifest_fingerprint": "sha256:8e82a5859402f3ded40e739a0ee82525118a224d6031c4a7dbde6ae1b533a5c1"
+  },
+  "independent_re_review": {
+    "checks": {
+      "across_years_limitation_all_records_and_views": true,
+      "canonical_view_semantic_equivalence": true,
+      "descriptive_only_language_all_records_and_views": true,
+      "internet_percentage_point_units": true,
+      "mobile_quantity_bearing_units": true,
+      "no_cross_series_comparison": true
+    },
+    "residual_blockers": [],
+    "valid": true
+  },
+  "initial_review": {
+    "blocking_findings": [
+      "percentage-share differences and dispersion inherited percent source units instead of percentage-point units",
+      "mobile derived values omitted the measured quantity from unit labels",
+      "across-year distribution statistics lacked an explicit non-cross-sectional statistical-population limitation"
+    ],
+    "valid": false
+  },
+  "review_outcome": "pass after bounded correction and complete fresh-tree regeneration",
+  "schema": "knowledgeforge.evidence_portfolio.semantic_review.v1",
+  "valid": true
+}

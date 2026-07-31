@@ -1,36 +1,37 @@
 # Latest Handoff
 
-Date: 2026-07-31
-Task: `T-20260731-evidence-portfolio-production-boundary-contract-v1`
-Status: completed prospective candidate; no active successor; no Git publication
+## Status
 
-## Outcome
+The Sweden Infrastructure Evidence Portfolio is complete as an unstaged publication candidate. Corrected canary, bounded production, deterministic replay, semantic re-review, isolated projection, 434-test full validation, isolated compilation, context health, coherence and the final attested architecture audit passed. Guarded application preserved all unrelated and ignored state; no active task remains.
 
-Corrected the first unpublished Evidence Portfolio candidate without creating another portfolio or claim. Production Authorization v1 binds exact campaign, manifest bytes/semantics, candidate/input population, limits, accounting, reruns and canary-admitted repository pre-state. An operational lock spans validation through persistence and state is rechecked before writes. Manifest evidence paths fail closed before external read/hash. Audit attestation freezes exact subject blobs, derives tool identity independently and requires an exact sorted unique final path set.
+## Context used
 
-Fresh replay reconstructed 560 packages, ran the same canary and unchanged wave, and matched the retained 562-package fingerprint `sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff`.
+- Evidence Portfolio Production Boundary Contract v1 and prior Norway Health golden pilot
+- admitted Campaign 40 Sweden fixtures/registry
+- canonical Knowledge Object, operational-view, lifecycle, repository and projection contracts
+- frozen live preservation baselines and task allowlist v4 under `/tmp/knowledgeforge-eppilot-sweden-infrastructure-v1-20260731/`
 
-Accounting remains: 3 candidates; 2 executed/valid/promoted; 56 raw/valid records and views; 2 series; 3 transformations; 1 bundle; 2 dependency clusters; 1 expected exclusion; 0 null, redundant or failed candidates.
+## Candidate result
 
-## Principal artifacts
+- 3 preregistered / 2 executed / 56 raw / 56 valid / 2 promoted / 56 views
+- 1 expected exclusion; 0 rejected/redundant/null/failed
+- repository: 564 objects, fingerprint `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`
+- manifest v1.1 records a bounded semantic unit/applicability correction; universe and methods unchanged
+- independent replay and semantic re-review pass
+- focused 121/121 pass
+- isolated retained PostgreSQL database `knowledgeforge_eppilot_swe_20260731_semantic_v11`: 564/564, zero fidelity failures
 
-Contract: `docs/evidence_portfolio_production_boundary_contract_v1.md`. Decision/task/report: `D-20260731-evidence-portfolio-production-boundary-contract-v1`, `T-20260731-evidence-portfolio-production-boundary-contract-v1`, and `R-20260731-evidence-portfolio-production-boundary-contract-v1`. Audit: `artifacts/reports/R-20260731-architecture-reality-audit.md`. External manifests and proofs: `/tmp/knowledgeforge-eppilot-boundary-contract-v1-20260731/`.
+## Boundaries
 
-## Verification
+- Live branch/HEAD remain `main` / `f96497c58903ba715908b33bfad87e5e72aa4995`; staging is empty.
+- All 493 pre-existing Git-visible and 309 ignored identities are preserved.
+- Six mixed candidate representations remain only under the task `/tmp` root; live mixed files were not overwritten.
+- No commit, push, tag, release, publication, external acquisition, cross-project mutation or follow-on activation occurred.
 
-- Focused adversarial: 56 passed; Campaign 42/43 compatibility: 38 passed.
-- Full suite: 395 passed isolated and 395 passed live.
-- Compileall passed; audit: 0 blocks/0 warnings.
-- Canonical regeneration: 562 packages; objects/evolution/six indexes exact.
-- Disposable PostgreSQL: 562 projected; zero missing/extra/fingerprint/payload failures; cleanup exact.
-- Independent review drove correction of five fail-open defects and one concurrency race.
+## Remaining actions
 
-## Preservation
+None active. Publication or follow-on production requires separate explicit authorization.
 
-Complete candidate files were applied conditionally; seven mixed live files remained byte-unchanged and their candidate representations are retained externally. No unrelated bytes or Git index entries changed. No stage/commit/push/tag/release, cross-project mutation, acquisition or persistent/default PostgreSQL mutation occurred.
+## Resume command
 
-## Residual / next task
-
-One family, territory and two series prove bounded production, not broad maturity. Views remain noncanonical. Smallest justified next task, not activated: separately pre-register the admitted Campaign 40 Sweden Infrastructure pair with technology-era and structural-break limits.
-
-Resume only after separate authorization: `python3 tools/recover_session.py --project . --json`.
+No resume command. Start a separately authorized publication or successor task from the live repository without applying the external mixed representations.

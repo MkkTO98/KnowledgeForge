@@ -10,8 +10,8 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = ROOT / "tools" / "campaign43_first_difference_companion_registry.py"
 REGISTRY_PATH = ROOT / "specs" / "correlation_batches" / "campaign43_coefficient_free_first_difference_companion_registry.json"
-EXPECTED_COUNT = 562
-EXPECTED_REPOSITORY_FINGERPRINT = "sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff"
+EXPECTED_COUNT = 564
+EXPECTED_REPOSITORY_FINGERPRINT = "sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67"
 AUTHORIZED_RAW_IDS = [
     "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-pearson-correlation-v1",
     "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-pearson-correlation-v1",

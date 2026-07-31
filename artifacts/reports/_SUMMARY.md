@@ -86,6 +86,8 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `R-20260730-first-bounded-evidence-portfolio-production-pilot.md`
 - `R-20260731-architecture-reality-audit.md`
 - `R-20260731-evidence-portfolio-production-boundary-contract-v1.md`
+- `R-20260731-second-evidence-portfolio-sweden-infrastructure-v1.md`
+- `R-20260801-architecture-reality-audit.md`
 - `campaign33_pre_existing_object_hashes.json`
 - `campaign34-statistical-summary-pilot-evaluation-gate-20260710/`
 - `campaign34-wdi-denmark-population-statistical-summary-20260710/`
@@ -129,7 +131,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `R-20260731-evidence-portfolio-production-boundary-contract-v1.md` records the completed strict authorization, limit, containment, attestation and exact replay correction; `R-20260731-architecture-reality-audit.md` attests the frozen prospective subject with zero blocks and zero warnings.
+- `R-20260731-second-evidence-portfolio-sweden-infrastructure-v1.md` records corrected production, exact accounting, replay, semantic review, projection and preservation evidence; `R-20260801-architecture-reality-audit.md` is the zero-block/zero-warning attested drift gate.
 
 ## Needs Attention
 - Do not retain bulky validator/source payloads in repository unless policy authority and long-term use are explicit. Non-WDI disagreement production still lacks an admitted two-source evidence bundle.

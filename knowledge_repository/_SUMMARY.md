@@ -12,7 +12,7 @@ This folder is part of the ProjectForge file-backed operating system for `knowle
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Canonical repository contains 562 accepted packages after append-only promotion of two Norway Health baseline-characterization packages; filesystem packages remain authoritative.
+- Canonical publication candidate contains 564 accepted packages after append-only promotion of two Sweden Infrastructure baseline-characterization packages; filesystem packages remain authoritative.
 
 ## Needs Attention
 - Keep operational view counts separate from canonical package count; PostgreSQL remains a rebuildable projection.

@@ -35,7 +35,7 @@ def synthetic_normalized(*, observed=35):
         })
     value = {
         "selection_contract": {"indicator": {"code": "TEST.HEALTH", "name": "Test health"}, "entities": ["NOR"], "periods": {"start_year": 1990, "end_year": 2024}},
-        "indicator_metadata": {"id": "TEST.HEALTH", "name": "Test health", "unit": "years", "definition": "fixture"},
+        "indicator_metadata": {"id": "TEST.HEALTH", "name": "Test health", "unit": "years", "definition": "Synthetic health-state duration fixture.", "topics": [{"id": "8", "value": "Health "}]},
         "provider_metadata": {"provider": "World Bank", "dataset": "World Development Indicators", "sourceid": "2", "wdi_lastupdated": "2026-07-01"},
         "raw_artifacts": {"combined_raw_artifact_fingerprint": "sha256:" + "1" * 64},
         "normalized_fingerprint": "sha256:" + "2" * 64,
@@ -65,6 +65,10 @@ def manifest_entry():
         "promotion_conditions": ["all_required_results_valid", "no_identity_collision", "package_validation_pass"],
         "exclusion_and_stopping_rules": ["stop_on_input_hash_mismatch", "exclude_growth_rates"],
         "identity_inputs": {"indicator_code": "TEST.HEALTH", "territory_id": "NOR", "period_start": 1990, "period_end": 2024, "method_id": "baseline_characterization_portfolio_v1", "method_version": "1.0"},
+        "family_configuration": {
+            **copy.deepcopy(epp.LEGACY_HEALTH_FAMILY_CONFIGURATION),
+            "applicability_limitations": ["synthetic fixture only"],
+        },
     }
 
 
@@ -140,7 +144,7 @@ class PortfolioUnitTests(unittest.TestCase):
         self.assertEqual(outcome["stage"], "pre_execution")
 
     def test_manifest_validation_rejects_outcome_fields(self):
-        manifest = {"manifest_id": "m", "entries": [manifest_entry()], "candidate_order": ["health-test-nor-1990-2024"], "computational_budget": copy.deepcopy(epp.REQUIRED_PORTFOLIO_LIMITS), "selection_rubric_fingerprint": "sha256:" + "4" * 64, "forbidden_outcome_fields": ["calculated_value", "interesting"]}
+        manifest = {"manifest_id": "m", "campaign_id": epp.CAMPAIGN_ID, "entries": [manifest_entry()], "candidate_order": ["health-test-nor-1990-2024"], "computational_budget": copy.deepcopy(epp.REQUIRED_PORTFOLIO_LIMITS), "selection_rubric_fingerprint": "sha256:" + "4" * 64, "forbidden_outcome_fields": ["calculated_value", "interesting"]}
         manifest["entries"][0]["interesting"] = True
         with self.assertRaisesRegex(ValueError, "outcome field"):
             epp.validate_manifest(manifest)
@@ -182,7 +186,7 @@ class PortfolioUnitTests(unittest.TestCase):
     def test_tampered_manifest_fingerprint_fails_closed(self):
         _, manifest = epp.build_preregistration()
         manifest["entries"][0]["applicability"]["unit"] = "tampered"
-        with self.assertRaisesRegex(ValueError, "manifest fingerprint mismatch"):
+        with self.assertRaisesRegex(ValueError, "exact published Norway Health"):
             epp.validate_manifest(manifest)
 
     @unittest.skipUnless(all(shutil.which(name) for name in ("psql", "createdb", "dropdb")), "PostgreSQL CLI unavailable")
@@ -309,8 +313,9 @@ class ProductionBoundaryAuthorizationTests(unittest.TestCase):
     def test_repository_state_mismatch_fails_before_calculation_or_persistence(self):
         manifest = boundary_manifest(); gate = valid_authorization(manifest)
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td); gate_path = root / "gate.json"; repo = root / "repo"; repo.mkdir()
-            epp.write_json(gate_path, gate); epp.write_json(repo / "manifest.json", {"object_count": 2, "repository_fingerprint": "sha256:" + "9" * 64})
+            root = Path(td); gate_path = root / "gate.json"; repo = root / "repo"
+            epp.persist_packages([], repo)
+            epp.write_json(gate_path, gate)
             with mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "persist_packages", side_effect=AssertionError("persistence reached")):
                 with self.assertRaisesRegex(ValueError, "repository state"):
                     epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root)
@@ -320,8 +325,12 @@ class ProductionBoundaryAuthorizationTests(unittest.TestCase):
         manifest = boundary_manifest([first_entry, second_entry]); gate = valid_authorization(manifest)
         result1 = epp.calculate_candidate(first_entry, synthetic_normalized()); result2 = copy.deepcopy(result1); result2["candidate_id"] = "second"
         with tempfile.TemporaryDirectory() as td:
-            root = Path(td); gate_path = root / "gate.json"; repo = root / "repo"; repo.mkdir(); epp.write_json(gate_path, gate)
-            epp.write_json(repo / "manifest.json", authorized_repository_state(gate))
+            root = Path(td); gate_path = root / "gate.json"; repo = root / "repo"
+            package = epp.build_knowledge_object(first_entry, result1, manifest["manifest_fingerprint"])
+            admitted = epp.persist_packages([package], repo)
+            gate["publication"].update(admitted)
+            gate["gate_fingerprint"] = epp.authorization_fingerprint(gate)
+            epp.write_json(gate_path, gate)
             calls = iter([(result1, copy.deepcopy(result1), True), (result2, copy.deepcopy(result2), True)])
             def mutate_then_return(*_args):
                 value = next(calls)
@@ -329,6 +338,76 @@ class ProductionBoundaryAuthorizationTests(unittest.TestCase):
                 return value
             with mock.patch.object(epp, "_rerun_match", side_effect=mutate_then_return), mock.patch.object(epp, "persist_packages", side_effect=AssertionError("persistence reached")):
                 with self.assertRaisesRegex(RuntimeError, "repository state changed"):
+                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root)
+
+    def test_production_gate_identity_excludes_elapsed_telemetry_but_execution_evidence_retains_it(self):
+        first_entry = manifest_entry()
+        second_entry = copy.deepcopy(first_entry); second_entry["candidate_id"] = "second"; second_entry["canary"] = False
+        manifest = boundary_manifest([first_entry, second_entry]); gate = valid_authorization(manifest)
+        result1 = epp.calculate_candidate(first_entry, synthetic_normalized())
+        result2 = copy.deepcopy(result1); result2["candidate_id"] = "second"
+        authorized_state = authorized_repository_state(gate)
+
+        def execute_once(root, elapsed_values):
+            gate_path = root / "canary_gate.json"
+            epp.write_json(gate_path, gate)
+            rerun_results = iter([
+                (copy.deepcopy(result1), copy.deepcopy(result1), True),
+                (copy.deepcopy(result2), copy.deepcopy(result2), True),
+            ])
+            monotonic_values = iter([0.0, elapsed_values[0], 10.0, 10.0 + elapsed_values[1]])
+            package = lambda entry, *_args: {"package_id": entry["candidate_id"], "scope": {"source_scope": {"indicator_code": entry["indicator"]["code"]}}}
+            with mock.patch.object(epp, "repository_state", return_value=authorized_state), \
+                    mock.patch.object(epp, "_rerun_match", side_effect=lambda *_args: next(rerun_results)), \
+                    mock.patch.object(epp.time, "monotonic", side_effect=lambda: next(monotonic_values)), \
+                    mock.patch.object(epp, "build_knowledge_object", side_effect=package), \
+                    mock.patch.object(epp, "render_operational_views", return_value=[]), \
+                    mock.patch.object(epp, "persist_packages", return_value={"object_count": 2, "repository_fingerprint": "sha256:" + "7" * 64}), \
+                    mock.patch.object(epp, "enforce_candidate_result_limits", wraps=epp.enforce_candidate_result_limits) as enforce:
+                result_gate = epp.run_portfolio(
+                    manifest, "production", root / "out", root / "repo", gate_path,
+                    manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root,
+                )
+            evidence = epp.read_json(root / "out" / "production_execution_results.json")
+            self.assertEqual([call.args[2] for call in enforce.call_args_list], elapsed_values)
+            self.assertEqual([row["elapsed_wall_seconds"] for row in evidence["reruns"]], [format(value, ".9f") for value in elapsed_values])
+            self.assertTrue(all("elapsed_wall_seconds" not in row for row in result_gate["reruns"]))
+            return result_gate
+
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td)
+            first_gate = execute_once(root / "first", [0.25, 0.75])
+            second_gate = execute_once(root / "second", [1.25, 1.75])
+            self.assertEqual(epp.canonical_json(first_gate), epp.canonical_json(second_gate))
+            self.assertEqual(first_gate["gate_fingerprint"], second_gate["gate_fingerprint"])
+
+
+    def test_claimed_manifest_cannot_authenticate_repository_or_authorize_execution(self):
+        manifest = boundary_manifest(); gate = valid_authorization(manifest)
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); repo = root / "repo"; repo.mkdir(); gate_path = root / "gate.json"
+            epp.write_json(repo / "manifest.json", authorized_repository_state(gate))
+            epp.write_json(gate_path, gate)
+            with mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "persist_packages", side_effect=AssertionError("persistence reached")):
+                with self.assertRaisesRegex(ValueError, "repository"):
+                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root)
+
+
+    def test_tampered_object_cannot_authorize_execution(self):
+        manifest = boundary_manifest(); gate = valid_authorization(manifest)
+        entry = manifest["entries"][0]
+        result = epp.calculate_candidate(entry, synthetic_normalized())
+        package = epp.build_knowledge_object(entry, result, manifest["manifest_fingerprint"])
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); repo = root / "repo"; gate_path = root / "gate.json"
+            admitted = epp.persist_packages([package], repo)
+            gate["publication"].update(admitted)
+            gate["gate_fingerprint"] = epp.authorization_fingerprint(gate)
+            epp.write_json(gate_path, gate)
+            package["status"] = "tampered"
+            epp.write_json(repo / "objects" / f"{package['package_id']}.json", package)
+            with mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "persist_packages", side_effect=AssertionError("persistence reached")):
+                with self.assertRaisesRegex(ValueError, "authentication"):
                     epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root)
 
 
@@ -386,6 +465,93 @@ class ManifestContainmentTests(unittest.TestCase):
     def test_existing_valid_repository_relative_manifest_paths_remain_supported(self):
         _, manifest = epp.build_preregistration()
         for entry in manifest["entries"]: self.assertTrue(epp.resolve_manifest_input(ROOT, entry["input"]["path"]).is_file())
+
+
+class FamilyGeneralizationRegressionTests(unittest.TestCase):
+    def test_legacy_fallback_does_not_read_mutable_published_manifest(self):
+        published = epp.read_json(ROOT / "artifacts/production/evidence-portfolio-pilot-health-baseline-20260730/portfolio_manifest.json")
+        entry = published["entries"][0]
+        with mock.patch.object(epp, "read_json", side_effect=AssertionError("mutable historical artifact read")):
+            self.assertEqual(epp.family_configuration(entry), epp.LEGACY_HEALTH_FAMILY_CONFIGURATION)
+
+    def test_legacy_fallback_is_unchanged_when_historical_artifact_is_missing_or_altered(self):
+        published = epp.read_json(ROOT / "artifacts/production/evidence-portfolio-pilot-health-baseline-20260730/portfolio_manifest.json")
+        entry = published["entries"][0]
+        with tempfile.TemporaryDirectory() as td:
+            missing = Path(td) / "missing"
+            altered = Path(td) / "altered"
+            altered.mkdir()
+            epp.write_json(altered / "portfolio_manifest.json", {"entries": [entry | {"canary": False}]})
+            for output_root in (missing, altered):
+                with self.subTest(output_root=output_root), mock.patch.object(epp, "DEFAULT_OUTPUT_ROOT", output_root):
+                    self.assertEqual(epp.family_configuration(entry), epp.LEGACY_HEALTH_FAMILY_CONFIGURATION)
+
+    def test_unsafe_identity_components_fail_before_package_construction(self):
+        probes = [
+            ("family slash traversal", lambda e: e["family_configuration"].update(family_slug="x/../../../../tmp/escaped")),
+            ("family absolute", lambda e: e["family_configuration"].update(family_slug="/tmp/escaped")),
+            ("family backslash", lambda e: e["family_configuration"].update(family_slug=r"health\\escaped")),
+            ("territory traversal", lambda e: (e["territory"].update(id="../SWE"), e["identity_inputs"].update(territory_id="../SWE"))),
+            ("territory absolute", lambda e: (e["territory"].update(id="/SWE"), e["identity_inputs"].update(territory_id="/SWE"))),
+            ("indicator backslash", lambda e: (e["indicator"].update(code=r"TEST\\HEALTH"), e["identity_inputs"].update(indicator_code=r"TEST\\HEALTH"))),
+        ]
+        for label, mutate in probes:
+            entry = manifest_entry()
+            mutate(entry)
+            with self.subTest(label=label), mock.patch.object(epp, "build_knowledge_object", side_effect=AssertionError("package construction reached")):
+                with self.assertRaisesRegex(ValueError, "identifier|slug|territory|indicator|package"):
+                    epp.validate_manifest(boundary_manifest([entry]))
+
+    def test_published_norway_packages_are_byte_equivalent(self):
+        manifest = epp.read_json(ROOT / "artifacts/production/evidence-portfolio-pilot-health-baseline-20260730/portfolio_manifest.json")
+        for entry in manifest["entries"][:2]:
+            result = epp.execute_entry(entry, ROOT)
+            self.assertEqual(result["disposition"], "valid")
+            generated = epp.build_knowledge_object(entry, result, manifest["manifest_fingerprint"])
+            retained = epp.read_json(ROOT / "knowledge_repository/objects" / f"{generated['package_id']}.json")
+            self.assertEqual(generated, retained)
+
+    def test_legacy_fallback_rejects_any_nonpublished_entry_semantics_before_calculation_or_package(self):
+        published = epp.read_json(ROOT / "artifacts/production/evidence-portfolio-pilot-health-baseline-20260730/portfolio_manifest.json")
+        probes = [
+            ("canary", 0, lambda entry: entry.update(canary=not entry["canary"])),
+            ("denominator_basis", 1, lambda entry: entry["applicability"].update(denominator_basis="bogus denominator")),
+            ("observational_population", 2, lambda entry: entry["territory"].update(observational_population="bogus population")),
+            ("unit", 2, lambda entry: entry["applicability"].update(unit="bogus rendered unit")),
+        ]
+        for label, index, mutate in probes:
+            manifest = copy.deepcopy(published)
+            mutate(manifest["entries"][index])
+            manifest["manifest_fingerprint"] = epp.fingerprint({k: v for k, v in manifest.items() if k != "manifest_fingerprint"})
+            with self.subTest(field=label), mock.patch.object(epp, "calculate_candidate", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "build_knowledge_object", side_effect=AssertionError("package reached")):
+                with self.assertRaisesRegex(ValueError, "exact published Norway Health"):
+                    epp.validate_manifest(manifest)
+
+    def test_semantic_input_mismatches_fail_before_calculation(self):
+        probes = [
+            ("indicator", lambda entry: entry["indicator"].update(code="OTHER")),
+            ("territory", lambda entry: entry["territory"].update(id="SWE", name="Sweden")),
+            ("period", lambda entry: entry["applicability"].update(period_end=2023)),
+            ("unit", lambda entry: entry["applicability"].update(unit="people")),
+            ("method", lambda entry: entry["identity_inputs"].update(method_id="other")),
+        ]
+        with tempfile.TemporaryDirectory() as td:
+            root = Path(td); normalized = synthetic_normalized(); path = root / "fixture.json"
+            path.write_text(json.dumps(normalized))
+            for label, mutate in probes:
+                entry = manifest_entry(); entry["input"]["sha256"] = epp.file_fingerprint(path); mutate(entry)
+                with self.subTest(label=label), mock.patch.object(epp, "calculate_candidate", side_effect=AssertionError("calculation reached")):
+                    outcome = epp.execute_entry(entry, root)
+                    self.assertEqual(outcome["disposition"], "failed")
+                    self.assertEqual(outcome["stage"], "input_validation")
+
+    def test_evidence_reference_binds_authorized_input(self):
+        entry = manifest_entry(); result = epp.calculate_candidate(entry, synthetic_normalized())
+        package = epp.build_knowledge_object(entry, result, "sha256:" + "4" * 64)
+        evidence = package["evidence_references"][0]
+        self.assertEqual(evidence["snapshot_fingerprint"], entry["input"]["sha256"])
+        self.assertEqual(evidence["reproducibility_handle"], entry["input"]["path"])
+        self.assertEqual(package["generated_statements"][0]["evidence_refs"], [evidence["evidence_ref_id"]])
 
 
 if __name__ == "__main__":

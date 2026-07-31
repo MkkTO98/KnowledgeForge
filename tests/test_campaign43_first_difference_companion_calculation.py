@@ -25,8 +25,8 @@ class Campaign43FirstDifferenceCompanionCalculationTests(unittest.TestCase):
         self.assertTrue(gate["valid"])
         self.assertEqual(gate["registry_fingerprint"], mod.EXPECTED_REGISTRY_FP)
         self.assertEqual(gate["specification_fingerprint"], mod.EXPECTED_SPEC_FP)
-        self.assertEqual(gate["repository_baseline"]["object_file_count"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_COUNT)
-        self.assertEqual(gate["repository_baseline"]["computed_repository_fingerprint"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_FP)
+        self.assertEqual(gate["repository_baseline"]["object_file_count"], mod.POST_SECOND_EVIDENCE_PORTFOLIO_COUNT)
+        self.assertEqual(gate["repository_baseline"]["computed_repository_fingerprint"], mod.POST_SECOND_EVIDENCE_PORTFOLIO_FP)
         self.assertEqual(gate["repository_baseline"]["first_difference_pearson_companions"], 14)
 
     def test_recalculates_six_frozen_candidates_after_publication_without_mutation(self):
@@ -41,8 +41,8 @@ class Campaign43FirstDifferenceCompanionCalculationTests(unittest.TestCase):
         self.assertFalse(result["knowledge_object_packages_constructed"])
         self.assertTrue(result["pre_existing_package_immutability"]["valid"])
         self.assertEqual(result["pre_existing_package_immutability"]["changed_object_files"], [])
-        self.assertEqual(result["repository_after"]["object_file_count"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_COUNT)
-        self.assertEqual(result["repository_after"]["computed_repository_fingerprint"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_FP)
+        self.assertEqual(result["repository_after"]["object_file_count"], mod.POST_SECOND_EVIDENCE_PORTFOLIO_COUNT)
+        self.assertEqual(result["repository_after"]["computed_repository_fingerprint"], mod.POST_SECOND_EVIDENCE_PORTFOLIO_FP)
         for candidate in result["candidate_results"]:
             self.assertEqual(candidate["status"], "calculated_not_published")
             self.assertGreaterEqual(candidate["aligned_transformed_observation_count"], 30)
@@ -88,7 +88,7 @@ class Campaign43FirstDifferenceCompanionCalculationTests(unittest.TestCase):
             artifact["repository_after"]["computed_repository_fingerprint"],
             direct["repository_after"]["computed_repository_fingerprint"],
         )
-        self.assertIn(artifact["repository_after"]["computed_repository_fingerprint"], [mod.EXPECTED_REPOSITORY_FP, mod.POST_PUBLICATION_REPOSITORY_FP, mod.POST_EVIDENCE_PORTFOLIO_PILOT_FP])
+        self.assertIn(artifact["repository_after"]["computed_repository_fingerprint"], [mod.EXPECTED_REPOSITORY_FP, mod.POST_PUBLICATION_REPOSITORY_FP, mod.POST_SECOND_EVIDENCE_PORTFOLIO_FP])
 
     def test_analytical_identity_excludes_contextual_fingerprint_cascade(self):
         mod = load_module()

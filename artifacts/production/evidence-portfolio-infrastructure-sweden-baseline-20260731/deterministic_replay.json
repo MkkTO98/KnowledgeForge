@@ -1,0 +1,96 @@
+{
+  "canonical_repository": {
+    "all_objects_indexes_and_evolution_byte_identical": true,
+    "manifest_equal_except_repository_root": true,
+    "run_a_fingerprint": "sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67",
+    "run_a_object_count": 564,
+    "run_b_fingerprint": "sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67",
+    "run_b_object_count": 564
+  },
+  "exact_artifacts": [
+    {
+      "path": "canary_accounting.json",
+      "sha256": "sha256:3a820578a6af0a4823d1f0e12180e92b10288002b3605428b2049313a840c873"
+    },
+    {
+      "path": "canary_authorization_v1.json",
+      "sha256": "sha256:ede712e1720bb9ccf0a5dcf4a0e3d2bf7543bd21689371fe057a8bf45bd1e203"
+    },
+    {
+      "path": "canary_gate.json",
+      "sha256": "sha256:ede712e1720bb9ccf0a5dcf4a0e3d2bf7543bd21689371fe057a8bf45bd1e203"
+    },
+    {
+      "path": "canary_packages.json",
+      "sha256": "sha256:364e5f735d3af5a681747e60418382acd226819fd42f20ea02a481bdb17eac8b"
+    },
+    {
+      "path": "canary_views.json",
+      "sha256": "sha256:ebcd54a8dfb6a6240e9aa67edb2a80cf268a9251e75a8994bcdf6be2eb6cffed"
+    },
+    {
+      "path": "portfolio_manifest.json",
+      "sha256": "sha256:f622a9891631bc3d44073bce827dc6fa30b0b7a240ac14fa6613849f05b0284c"
+    },
+    {
+      "path": "production_accounting.json",
+      "sha256": "sha256:ed18981b862328ee715ddc7a88de892c0c054ced21300d919ae4114ac37d2036"
+    },
+    {
+      "path": "production_gate.json",
+      "sha256": "sha256:89fde1c4663f1a3be14a20b6dfa841da8b251b3948cf9b91a8a9b25c5e1d54fd"
+    },
+    {
+      "path": "production_packages.json",
+      "sha256": "sha256:89a5ca3f1ac968b9c9e04cce0745cacf93644215a0d9e9cf8fa4114fb8779519"
+    },
+    {
+      "path": "production_views.json",
+      "sha256": "sha256:3b10cada858daf81b91620a6165a322221fc62bbc346c453fa5d975837f0e26c"
+    },
+    {
+      "path": "selection_rubric.json",
+      "sha256": "sha256:95163742897ab8942f43f931e239253f50ecdd01c495e37b3000d92d56cb6686"
+    }
+  ],
+  "fresh_source_head": "f96497c58903ba715908b33bfad87e5e72aa4995",
+  "manifest_file_sha256": "sha256:f622a9891631bc3d44073bce827dc6fa30b0b7a240ac14fa6613849f05b0284c",
+  "manifest_fingerprint": "sha256:d59dfd9944f47aa81adf6b4bd9b5b9ddcde8551956545e21e0ab2ed34744db1f",
+  "operational_metadata_exclusions": [
+    {
+      "excluded_fields": [
+        "reruns[].elapsed_wall_seconds"
+      ],
+      "path": "canary_execution_results.json",
+      "reason": "measured runtime is nondeterministic and excluded from semantic identity",
+      "run_a_sha256": "sha256:48525c2da56f7f172510e64897cbce1fd79bfa3c5260dcdb0d73165c6c30ea80",
+      "run_b_sha256": "sha256:6cb1c78429898180445426df2ce4a5551ee07085dbe4b59d179b67cd6f6fb7eb"
+    },
+    {
+      "excluded_fields": [
+        "reruns[].elapsed_wall_seconds"
+      ],
+      "path": "production_execution_results.json",
+      "reason": "measured runtime is nondeterministic and excluded from semantic identity",
+      "run_a_sha256": "sha256:55044eef174abf2057da10771ae3c2e6c86b2171881e12e0a9224120e0308b9b",
+      "run_b_sha256": "sha256:1861c310b0ec9c05e57361db1f6555890cae69c40a453770f7ea9987dadb00ec"
+    },
+    {
+      "excluded_fields": [
+        "repository_root"
+      ],
+      "path": "knowledge_repository/manifest.json",
+      "reason": "portable display path differs by replay working directory; excluded from repository fingerprint"
+    }
+  ],
+  "pre_state": {
+    "object_count": 562,
+    "repository_fingerprint": "sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff"
+  },
+  "result_calculation_fingerprints": {
+    "IT.CEL.SETS.P2": "sha256:5bff3366e6c01bf3a214400908d4565f2ad0ebd2244bc2f9f382617c54dbae0c",
+    "IT.NET.USER.ZS": "sha256:4d143f935a4fc74420ab457d0443b360da45a975ddb96321897a1186fb0042c3"
+  },
+  "schema": "knowledgeforge.evidence_portfolio.deterministic_replay.v1",
+  "valid": true
+}
