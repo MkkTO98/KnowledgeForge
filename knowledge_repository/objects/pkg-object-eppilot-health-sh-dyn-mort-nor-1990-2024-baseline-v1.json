@@ -1,0 +1,988 @@
+{
+  "computation_method": {
+    "name": "baseline_characterization_portfolio_v1",
+    "nondeterminism": "none",
+    "parameters": {
+      "decimal_precision": 50,
+      "difference_rule": "only consecutive observed annual periods",
+      "minimum_coverage_share": "0.85",
+      "minimum_observed_count": 30,
+      "quartile_rule": "median of lower and upper halves excluding the overall median for odd N",
+      "rounding": "ROUND_HALF_EVEN",
+      "slope_rule": "ordinary least-squares slope against integer calendar year; descriptor only",
+      "summary_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+      "summary_method": "wdi_annual_scalar_statistical_summary_v2@2.0"
+    },
+    "query_definitions": [],
+    "recipe": "summary v2 plus deterministic adjacent first-difference, quartile and calendar-year OLS slope descriptors",
+    "rerun": "python3 tools/evidence_portfolio_production.py run --manifest artifacts/production/evidence-portfolio-pilot-health-baseline-20260730/portfolio_manifest.json --mode production --canary-gate artifacts/production/evidence-portfolio-pilot-health-baseline-20260730/canary_gate.json",
+    "version": "1.0"
+  },
+  "confidence_quality": {
+    "confidence_label": "retained-fixture-supported-deterministic",
+    "evidence_sufficiency": "sufficient for bounded descriptive baseline characterization",
+    "governance_review_state": "bounded pilot promotion contract passed",
+    "lifecycle_state": "accepted",
+    "missingness_summary": "encoded in result records",
+    "reproducibility_state": "reproducible_offline_from_retained_fixture",
+    "uncertainty_dimensions": [
+      "mutable_source_reacquisition_limit",
+      "modeled_estimation_process",
+      "bounded_single_territory_window"
+    ],
+    "validation_state": "pass"
+  },
+  "contradiction_records": [
+    {
+      "contradicting_evidence": null,
+      "contradiction_id": "none-recorded",
+      "contradiction_type": "none",
+      "disposition": "not_applicable",
+      "target_statement": "stmt-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1"
+    }
+  ],
+  "created_at": "2026-07-30",
+  "created_by": "evidence_portfolio_production",
+  "evidence_integrity": {
+    "evidence_refs_verified": true,
+    "fingerprints_verified": true,
+    "source_package_fingerprint": "sha256:6e3ca56274f18bf710383d5c438fa89d15680e3405f8d1045456855c67a5b411"
+  },
+  "evidence_references": [
+    {
+      "accessed_at": "2026-07-11",
+      "evaluation_status": "evaluated",
+      "evidence_class": "external_observation_level_numerical_fixture",
+      "evidence_ref_id": "ev-eppilot-sh-dyn-mort-nor-1990-2024",
+      "reproducibility_handle": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SH.DYN.MORT__NOR__1990-2024/normalized_observations.json",
+      "snapshot_fingerprint": "sha256:6e3ca56274f18bf710383d5c438fa89d15680e3405f8d1045456855c67a5b411",
+      "source_family": "official_statistical_source_data",
+      "source_identity": "World Bank WDI SH.DYN.MORT NOR annual retained Campaign 40 fixture",
+      "source_owner": "World Bank WDI API retained local fixture",
+      "source_version": "2026-07-01"
+    }
+  ],
+  "evolution_metadata": {
+    "change_reason": "first bounded Evidence Portfolio production pilot",
+    "changed_inputs_methods_templates_models_validators": [
+      "baseline_characterization_portfolio_v1"
+    ],
+    "dependent_object_review_posture": "review_on_source_or_method_supersession",
+    "previous_revision": null,
+    "supersession_dependencies": [
+      "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+      "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+      "sha256:7c5f85ffe0660d012915db2cbec240e02e2ad4c0ca61efa2ef44298e55dedc15"
+    ]
+  },
+  "fingerprints": {
+    "computation_recipe": "sha256:e83f0cb8202d985fa46b2006e51127bdc6e72f958d20229b8d1ae9d49506d581",
+    "evidence_references": "sha256:485508cb870b15eb7b4e8e75ea6db7649ab83aafcbbf011c53c711e56eb587d8",
+    "generated_statements": "sha256:9840b6c81aeb68ae9a4d387b834d587187af141ef5d8c45354e14277c16016a4",
+    "input_set": "sha256:50b3e00d7f58c6f6c986074752ff213e9aa8d7a40c0b02825f18643eeae5f87a",
+    "package_manifest": "sha256:5d87c9cab72c94d44fec7f70217ef16841d5027a552306ecb0030d5f92b8981d",
+    "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+  },
+  "generated_statements": [
+    {
+      "applicability": {
+        "denominator_basis": "live_births_scaled_per_1000",
+        "frequency": "annual",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "per 1,000 live births"
+      },
+      "dependencies": [
+        "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+        "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+        "sha256:7c5f85ffe0660d012915db2cbec240e02e2ad4c0ca61efa2ef44298e55dedc15"
+      ],
+      "evidence_refs": [
+        "ev-eppilot-sh-dyn-mort-nor-1990-2024"
+      ],
+      "origin": "computed_offline_from_retained_admitted_evidence",
+      "statement_id": "stmt-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+      "statement_type": "derived",
+      "structured_payload": {
+        "calculation_fingerprint": "sha256:0c52d1c6e78213ebc7d14292514f924e37c993cf5901b3785ff673da49920f13",
+        "indicator_definition": "Probability per 1,000 live births of dying before age five under the retained WDI series definition.",
+        "limitations": [
+          "No cross-series comparison or relationship is calculated.",
+          "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity or forecastability.",
+          "First differences summarize consecutive retained annual values only.",
+          "WDI reacquisition may change; retained local bytes are the replay anchor.",
+          "Canonical decimal precision is not measurement precision."
+        ],
+        "manifest_fingerprint": "sha256:7c5f85ffe0660d012915db2cbec240e02e2ad4c0ca61efa2ef44298e55dedc15",
+        "result_classes": [
+          "coverage_missingness",
+          "differences",
+          "level_distribution",
+          "sample_period",
+          "trend_descriptor",
+          "variability_stability"
+        ],
+        "result_count": 28,
+        "result_records": [
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "expected_observation_slot_count",
+            "result_id": "result-5b03a7f5efa608dcdf529bc7",
+            "semantic_fingerprint": "sha256:68efec39365be89f21ab68bf68e61f59f1e1e34d2ecf26072da1d056f3da46df",
+            "transformation": "level",
+            "value": 35
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "observed_count",
+            "result_id": "result-634f7fa9b85cc21c24a00053",
+            "semantic_fingerprint": "sha256:d00766271f9e632c397c3f651269c833cbd4ebdfdb76fee4fd57e764e59e9093",
+            "transformation": "level",
+            "value": 35
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "missing_count",
+            "result_id": "result-d7ccc42569464685fd6b76b2",
+            "semantic_fingerprint": "sha256:2317947f0c673c16cc8e96ec1f45e7d3158e95b43e620b3f5acffe79c6e4306f",
+            "transformation": "level",
+            "value": 0
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "coverage_share",
+            "result_id": "result-d24ce655b47161f7ad748a52",
+            "semantic_fingerprint": "sha256:6f7bab7afbbe42589b95197a2b38aa6f52be0ad3af8a530244df106ce6bd6b30",
+            "transformation": "level",
+            "value": "1"
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "coverage_missingness",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "missing_share",
+            "result_id": "result-4d172176d8002e6ab169f14a",
+            "semantic_fingerprint": "sha256:0541c435c5838261164bdd322d7bc092122d7526b263794daea7282d7137a45e",
+            "transformation": "level",
+            "value": "0"
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "period_start",
+            "result_id": "result-2ef20b66cacb0c4ea1926c57",
+            "semantic_fingerprint": "sha256:4f4110a73e026db5cdb298ffe6d98ffda883063c7245112b04179888a2bdaab3",
+            "transformation": "level",
+            "value": 1990
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "period_end",
+            "result_id": "result-0ce7c34eafca422ee13e82ca",
+            "semantic_fingerprint": "sha256:9f8b5e0121e38ec2674e28960888ded9829627f2531e91a71a4ee1eecbf28bd1",
+            "transformation": "level",
+            "value": 2024
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_valid_observation",
+            "result_id": "result-f38851022ac76b39bf13595e",
+            "semantic_fingerprint": "sha256:16291c47e33902b953b6fc1468e655c7643bd523f0713e6868c2edfee703c11a",
+            "transformation": "level",
+            "value": {
+              "period": 1990,
+              "unit": "per 1,000 live births",
+              "value": "8.7"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "last_valid_observation",
+            "result_id": "result-0144087d8fe5adc6d68b858f",
+            "semantic_fingerprint": "sha256:f8b53d2fee773d6c2b13b28d83e2ca13f30f45bd334d15837a4baba959f4cdb6",
+            "transformation": "level",
+            "value": {
+              "period": 2024,
+              "unit": "per 1,000 live births",
+              "value": "2.5"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "sample_period",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "observed_period_span_years",
+            "result_id": "result-10270ca3e3009b226cde3f29",
+            "semantic_fingerprint": "sha256:c0409dc466145085e13ba2454ee590fc9250751e68713d7752a1f27120af32c5",
+            "transformation": "level",
+            "value": 34
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "minimum",
+            "result_id": "result-a90a6f4b5492904495cae8b9",
+            "semantic_fingerprint": "sha256:3b68d9f6aeb257dcb6bc37271ccf74deefa70f02567c6ce42ea9f2a920b4b0d5",
+            "transformation": "level",
+            "value": {
+              "canonical": "2.4",
+              "display": "2.4",
+              "periods": [
+                2019,
+                2020,
+                2021,
+                2022,
+                2023
+              ],
+              "unit": "per 1,000 live births"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "maximum",
+            "result_id": "result-0b130acd16431ff641eb7866",
+            "semantic_fingerprint": "sha256:7e88caf0c03175534df86a18a5648edeb03aed04d7ca77558b7d54099b0d267a",
+            "transformation": "level",
+            "value": {
+              "canonical": "8.7",
+              "display": "8.7",
+              "periods": [
+                1990
+              ],
+              "unit": "per 1,000 live births"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "arithmetic_mean",
+            "result_id": "result-269ae5a881055dd2c92d4013",
+            "semantic_fingerprint": "sha256:e8dbb8630cd0c62111c36a7d6e71035621d54e8932cfe9b968e2fff0d00c94a9",
+            "transformation": "level",
+            "value": {
+              "canonical": "4.125714285714",
+              "display": "4.1257",
+              "unit": "per 1,000 live births"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "median",
+            "result_id": "result-66c6b5a1e2024f28c03b1a35",
+            "semantic_fingerprint": "sha256:0edbd4f388cb94949693160ec7d9323c9f5cc33bb6fbc274e4e4793da9014af9",
+            "transformation": "level",
+            "value": {
+              "canonical": "3.7",
+              "display": "3.7",
+              "unit": "per 1,000 live births"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "population_standard_deviation",
+            "result_id": "result-cd93664c4b93f1b898313c09",
+            "semantic_fingerprint": "sha256:f74c06999c858daf28ba89b0082e2012b455de9fe63e712545ac97928268dcfa",
+            "transformation": "level",
+            "value": {
+              "canonical": "1.674061418423",
+              "display": "1.6741",
+              "unit": "per 1,000 live births"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_quartile",
+            "result_id": "result-b8f53c9d60122bd076146d8f",
+            "semantic_fingerprint": "sha256:e9e7a000b74c9734e6dfd586eb43ccd4a584e1efdb7cc8578e46f16d4a63c582",
+            "transformation": "level",
+            "value": {
+              "canonical": "2.6",
+              "unit": "per 1,000 live births"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "third_quartile",
+            "result_id": "result-7d567717993bdf998375f049",
+            "semantic_fingerprint": "sha256:597b5d81dfd320a2902b1b51e3811fdd9717bf1fd16c214ec0ecce6c4276dd04",
+            "transformation": "level",
+            "value": {
+              "canonical": "5.1",
+              "unit": "per 1,000 live births"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "level_distribution",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "interquartile_range",
+            "result_id": "result-024e81f60ac671097b474ee8",
+            "semantic_fingerprint": "sha256:4dd2ece79fbdee5e4d9fe0b97301c7dcb8d06c0319889a5f8c0aaceb23194e80",
+            "transformation": "level",
+            "value": {
+              "canonical": "2.5",
+              "unit": "per 1,000 live births"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "adjacent_first_difference_count",
+            "result_id": "result-d1048758489844cd686e19f1",
+            "semantic_fingerprint": "sha256:35c8329145630de4be7c3fc57adc73be17576e4e7d6a4db8c4bdf4e1d50a9cc2",
+            "transformation": "adjacent_first_difference",
+            "value": 34
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_mean",
+            "result_id": "result-325bf925c574073930750422",
+            "semantic_fingerprint": "sha256:6432e93dacd0b5a7ea50f5c01b7e3c59c79ff83b5228b1a0a608846e6f220c6a",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "-0.182352941176",
+              "unit": "per 1,000 live births per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_median",
+            "result_id": "result-5a0eaf7c8e6ab9e7b8906aec",
+            "semantic_fingerprint": "sha256:da32120b019fe383358899b80a5188900e44d0b4237ff2101e600be78c884448",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "-0.1",
+              "unit": "per 1,000 live births per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_minimum",
+            "result_id": "result-3fc7a9c56959e08ef89799b9",
+            "semantic_fingerprint": "sha256:3ba1299dca7ba3a71004ca29ef0a504afe8c8af216b9a8f4e5c7c8f9f825f059",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "-0.8",
+              "unit": "per 1,000 live births per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_maximum",
+            "result_id": "result-ab49ed9089115774acd90775",
+            "semantic_fingerprint": "sha256:dc0076990b7b66839c741bb042d9db568cad78e38b3a8f25dcf13493b5074c8d",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "0.1",
+              "unit": "per 1,000 live births per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "differences",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "net_level_difference",
+            "result_id": "result-53852087d284a0688107a5b9",
+            "semantic_fingerprint": "sha256:e1f1cf051998296abf99df45ebcd49d08c915bca2561290643d77e042140a9b7",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "-6.2",
+              "unit": "per 1,000 live births"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "trend_descriptor",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "linear_time_index_slope_per_year",
+            "result_id": "result-7cd5aa06a9e0dab87a821445",
+            "semantic_fingerprint": "sha256:dce42defb560a6022c5fb1a72f67da5cccdec666965fe9aacfa6a2ba4506bde7",
+            "transformation": "linear_time_index",
+            "value": {
+              "canonical": "-0.155854341737",
+              "unit": "per 1,000 live births per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "trend_descriptor",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "linear_time_index_slope_sign",
+            "result_id": "result-b02bc73bfa136d4d2a48f96f",
+            "semantic_fingerprint": "sha256:c1ef86adc93bdf9fb9462fef6b085c5f756105fb9b601fb91fd8cf333454b82f",
+            "transformation": "linear_time_index",
+            "value": "negative"
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "variability_stability",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "first_difference_population_standard_deviation",
+            "result_id": "result-6d8c0d238fd321c25c8a2118",
+            "semantic_fingerprint": "sha256:f8eb56f2fa3159f4fcc810f4ec65f7ed166563ca10e8e9ee3fee736ab01972c8",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "0.197738074282",
+              "unit": "per 1,000 live births per year"
+            }
+          },
+          {
+            "applicability": {
+              "denominator_basis": "live_births_scaled_per_1000",
+              "frequency": "annual",
+              "observation_grain": "territory_indicator_year",
+              "period_end": 2024,
+              "period_start": 1990,
+              "population_basis": "finite retained sequence; not a random sample",
+              "unit": "per 1,000 live births"
+            },
+            "class": "variability_stability",
+            "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+            "limitations": [
+              "finite retained ordered annual sequence",
+              "descriptive only",
+              "no causal predictive significance stationarity or permanence claim"
+            ],
+            "method_id": "baseline_characterization_portfolio_v1",
+            "method_version": "1.0",
+            "metric": "mean_absolute_first_difference",
+            "result_id": "result-10bccb1fd276e72b2e20233a",
+            "semantic_fingerprint": "sha256:cf552573bf48da055b1334f9207a7f05320192d2e5ec31dd560e24462c1d47e2",
+            "transformation": "adjacent_first_difference",
+            "value": {
+              "canonical": "0.188235294118",
+              "unit": "per 1,000 live births per year"
+            }
+          }
+        ]
+      },
+      "text": "The retained World Bank WDI SH.DYN.MORT series for Norway, annual 1990-2024, has a deterministic baseline characterization containing 28 coverage, period, level, adjacent-difference, linear time-index slope and variability result records. These descriptors apply only to the finite retained sequence and do not explain, predict or establish persistence."
+    }
+  ],
+  "input_references": [
+    "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e"
+  ],
+  "lineage": {
+    "lineage_fingerprint": "sha256:07b0be98889cd8cc06ca6d5fbeec60b17c5756e7b69253933c00970869ee401a",
+    "previous_package_id": "pkg-candidate-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+    "version_lineage": [
+      "pkg-candidate-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+      "pkg-object-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1"
+    ]
+  },
+  "package_id": "pkg-object-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+  "package_kind": "KnowledgeObjectPackage",
+  "package_version": "1.0",
+  "promotion": {
+    "from_candidate_package_id": "pkg-candidate-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+    "maturity_state": "bounded portfolio pilot accepted",
+    "promotion_justification": "Pre-registered candidate passed deterministic calculation, applicability, lineage, nonredundancy and package validation gates.",
+    "validation_history": [
+      "manifest_validation_pass",
+      "calculation_validation_pass",
+      "package_validation_pass"
+    ]
+  },
+  "provenance_envelope": {
+    "calculation_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+    "computation_recipe": "baseline_characterization_portfolio_v1@1.0",
+    "creator": "evidence_portfolio_production",
+    "evaluation_refs": [
+      "validation-evidence-portfolio-pilot-health-baseline-20260730"
+    ],
+    "evidence_refs": [
+      "ev-eppilot-sh-dyn-mort-nor-1990-2024"
+    ],
+    "generation_date": "2026-07-30",
+    "input_file_sha256": "sha256:6e3ca56274f18bf710383d5c438fa89d15680e3405f8d1045456855c67a5b411",
+    "lineage": [
+      "retained_https_fixture",
+      "normalized_observations",
+      "preregistered_calculation",
+      "validated_result_records",
+      "knowledge_object_package"
+    ],
+    "normalized_evidence_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+    "package_identity": "pkg-object-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+    "reproducibility_state": "reproducible_offline",
+    "selection_manifest_fingerprint": "sha256:7c5f85ffe0660d012915db2cbec240e02e2ad4c0ca61efa2ef44298e55dedc15",
+    "source_systems": [
+      "World Bank WDI retained Campaign 40 HTTPS fixture"
+    ],
+    "validation_tool": "evidence_portfolio_production"
+  },
+  "scope": {
+    "domain": "WDI Health baseline characterization",
+    "evidence_family": "external_wdi_annual_scalar_health_baseline_characterization",
+    "intended_use": "deterministic descriptive baseline knowledge only",
+    "method_scope": "baseline_characterization_portfolio_v1@1.0",
+    "source_scope": {
+      "campaign_id": "evidence-portfolio-pilot-health-baseline-20260730",
+      "dataset": "World Development Indicators",
+      "denominator_basis": "live_births_scaled_per_1000",
+      "entity_id": "NOR",
+      "entity_name": "Norway",
+      "frequency": "annual",
+      "indicator_code": "SH.DYN.MORT",
+      "indicator_name": "Mortality rate, under-5 (per 1,000 live births)",
+      "observational_population": "retained observed annual Norway values for the indicator within 1990-2024",
+      "period_end": 2024,
+      "period_start": 1990,
+      "provider": "World Bank",
+      "scope_type": "bounded_baseline_characterization",
+      "source_id": "2",
+      "unit": "per 1,000 live births"
+    }
+  },
+  "status": "accepted-for-controlled-production",
+  "validation_state": {
+    "blockers": [],
+    "human_review_required": false,
+    "validation_result": "pass",
+    "validator_version": "evidence-portfolio-pilot-v1",
+    "warnings": []
+  }
+}

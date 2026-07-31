@@ -14,7 +14,7 @@ This folder is part of the ProjectForge file-backed operating system for `knowle
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No folder-specific active work recorded.
+- Indexes are synchronized with 562 canonical packages, including two Norway Health baseline-characterization packages.
 
 ## Needs Attention
-- No folder-specific issues recorded.
+- Preserve deterministic rebuildability and filesystem authority; do not infer first-class query support for every applicability field.

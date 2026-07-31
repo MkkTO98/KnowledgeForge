@@ -81,6 +81,11 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `R-20260710-architecture-reality-audit.md`
 - `R-20260711-architecture-reality-audit.md`
 - `R-20260712-architecture-reality-audit.md`
+- `R-20260713-architecture-reality-audit.md`
+- `R-20260730-architecture-reality-audit.md`
+- `R-20260730-first-bounded-evidence-portfolio-production-pilot.md`
+- `R-20260731-architecture-reality-audit.md`
+- `R-20260731-evidence-portfolio-production-boundary-contract-v1.md`
 - `campaign33_pre_existing_object_hashes.json`
 - `campaign34-statistical-summary-pilot-evaluation-gate-20260710/`
 - `campaign34-wdi-denmark-population-statistical-summary-20260710/`
@@ -97,7 +102,10 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `campaign41-generic-correlation-engine-provenance-parameterization-20260712/`
 - `campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712/`
 - `campaign42-first-difference-pearson-companion-production-20260712/`
+- `campaign43-canonical-publication-20260712/`
 - `campaign43-coefficient-free-first-difference-companion-registry-20260712/`
+- `campaign43-first-difference-companion-calculation-20260712/`
+- `campaign43-first-difference-companion-publication-preflight-20260712/`
 - `canonical-supersession-immutability-durability-gate-20260711/`
 - `correlation-method-v1-and-campaign36-design-20260710/`
 - `correlation-production-operationalization-20260711/`
@@ -106,30 +114,22 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `macroforge-neutral-release-knowledgeforge-compatibility-pilot-20260711/`
 - `macroforge-release-driven-automation-alignment-20260711/`
 - `next-production-readiness-decision-20260712/`
+- `non-wdi-multisource-disagreement-planning-gate-20260713/`
 - `operational-state-backup-restore-durability-gate-20260712/`
 - `pearson-candidate-policy-refinement-mixed-roadmap-20260712/`
 - `pearson-candidate-policy-v2-consistency-correction-20260712/`
+- `post-campaign42-production-alignment-git-durability-20260712/`
 - `post-campaign43-test-discovery-correction-20260713/`
 - `post-repair-production-readiness-gate-20260713/`
-- `post-campaign42-production-alignment-git-durability-20260712/`
 - `postgresql-acceptance-sequencing-20260710/`
 - `postgresql-projection-implementation-20260710/`
 - `postgresql-realization-decision-20260710/`
 - `provider-neutral-outbox-polling-supersession-postgresql-prototype-20260711/`
 - `provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/`
-- `non-wdi-multisource-disagreement-planning-gate-20260713/`
-- `relationship-export-contract-v1-20260711/`
-- `relationship-export-existing-commitments-grep.txt`
-- `repository-scale-doctrine-review-20260710/`
-- `repository-wide-durability-inventory-supersession-correction-20260711/`
-- `reviewed-git-durability-publication-20260712/`
-- `statistical-summary-method-v2-and-campaign35-prep-20260710/`
-- `wdi-observation-fixture-statistical-summary-design-gate-20260710/`
-- `evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/` records the rejected IMF/OECD Denmark 2025 real GDP growth evidence-admission attempt using one compact report plus one machine-readable assessment.
+- `R-20260731-evidence-portfolio-production-boundary-contract-v1.md` records the completed strict authorization, limit, containment, attestation and exact replay correction; `R-20260731-architecture-reality-audit.md` attests the frozen prospective subject with zero blocks and zero warnings.
 
 ## Needs Attention
 - Do not retain bulky validator/source payloads in repository unless policy authority and long-term use are explicit. Non-WDI disagreement production still lacks an admitted two-source evidence bundle.

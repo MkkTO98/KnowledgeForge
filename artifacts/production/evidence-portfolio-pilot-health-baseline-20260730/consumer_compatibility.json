@@ -1,0 +1,24 @@
+{
+  "assessment_id": "evidence-portfolio-pilot-consumer-compatibility-v1",
+  "canonical_direct_consumption": {
+    "adequate_without_recalculation": true,
+    "basis": "Each promoted KnowledgeObjectPackage contains exact input lineage, method and parameters, applicability, 28 validated result records, limitations, lifecycle state, fingerprints and executable rerun provenance. A read-only consumer can use those records directly."
+  },
+  "postgresql_projection_consumption": {
+    "adequate_without_recalculation": true,
+    "basis": "The isolated 562-package projection rebuilt and verified exactly; both pilot packages were retrieved by family and their complete canonical JSONB payloads exposed indicator, territory, period, method, transformations, applicability basis, bundle and lifecycle state.",
+    "limitation": "The generic filter API directly indexes evidence_family, statement_type, lifecycle_state and package_fingerprint. Indicator, territory, period, method, transformation and applicability are retrievable from payload JSONB but are not all first-class filters."
+  },
+  "relationship_export_v1": {
+    "adequate_for_this_portfolio": false,
+    "classification": "content-contract mismatch, not a canonical-package or projection failure",
+    "reason": "knowledgeforge_relationship_export_v1 is relationship-specific. It preserves the canonical package but emits relationship metadata fields that are null or semantically inapplicable for baseline-characterization packages."
+  },
+  "insightforge_adapter_contract": {
+    "exists_for_general_baseline_characterization": false,
+    "assessment": "No accepted general InsightForge adapter contract was found. Direct canonical-package or read-only projection consumption is content-adequate, but an InsightForge-specific compatibility claim would be unsupported until a consumer contract is separately authorized and tested."
+  },
+  "cross_project_mutation_performed": false,
+  "recalculation_required_by_consumer": false,
+  "valid": true
+}

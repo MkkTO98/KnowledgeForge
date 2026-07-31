@@ -7,6 +7,7 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 <!-- PROJECTFORGE:BEGIN-CONTAINS -->
 - `fixtures/`
 - `invariants/`
+- `test_architecture_reality_audit.py`
 - `test_campaign0_repository_evidence.py`
 - `test_campaign10_cross_campaign_recurrence_audit.py`
 - `test_campaign11_wdi_environment_maturation.py`
@@ -44,6 +45,8 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_campaign3_wdi_freshness_metadata.py`
 - `test_campaign42_first_difference_companion_production.py`
 - `test_campaign42_first_difference_companion_registry.py`
+- `test_campaign43_first_difference_companion_calculation.py`
+- `test_campaign43_first_difference_companion_publication_preflight.py`
 - `test_campaign43_first_difference_companion_registry.py`
 - `test_campaign4_wdi_indicator_inventory.py`
 - `test_campaign5_wdi_territorial_coverage.py`
@@ -55,6 +58,7 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_coefficient_free_pearson_candidate_registry.py`
 - `test_correlation_batch_engine.py`
 - `test_correlation_engine_provenance_parameterization.py`
+- `test_evidence_portfolio_production.py`
 - `test_external_outbox_polling_supersession_v1.py`
 - `test_first_difference_pearson_method.py`
 - `test_knowledge_repository.py`
@@ -80,6 +84,8 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 ## Active Work
 - `test_validation_framework_v1.py` verifies positive and negative synthetic fixtures for all five pre-production validation stages.
 - `test_vertical_slice_0.py` verifies the approved four-object ecosystem plus negative invariant cases.
+- `test_evidence_portfolio_production.py` verifies deterministic manifests/identities/reruns, strict authorization and repository pre-state/concurrency binding, every normative limit, path containment, accounting, applicability, immutability, promotion/idempotence, duplicate/null/rejection/failure separation, isolated projection and unrelated-state preservation.
+- `test_architecture_reality_audit.py` verifies deterministic acyclic subject identity, tool binding, predecessor exclusion and exact sorted unique final-candidate manifests.
 
 ## Needs Attention
 - Future MacroForge compatibility tests should remain audit/fixture-backed until production generation is explicitly approved.

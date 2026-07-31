@@ -1,0 +1,73 @@
+{
+  "criteria": [
+    "authoritative Mature WDI family and admitted retained HTTPS evidence",
+    "two-series semantic coherence within one registered family",
+    "same territory, annual frequency and 1990-2024 window",
+    "durable local raw and normalized inputs with hashes",
+    "clear units, definitions, observational population and denominator/applicability bases",
+    "at least 30 retained observations and 0.85 coverage under existing admission metadata",
+    "low bounded computational and review cost",
+    "descriptive downstream utility without requiring comparison or interpretation",
+    "no selection based on newly calculated level, difference, slope or variability outcomes"
+  ],
+  "eligible_universe": [
+    {
+      "candidate_ids": [
+        "health_life_expectancy_under5_mortality_nor",
+        "finance_credit_broad_money_dnk",
+        "infrastructure_internet_mobile_swe",
+        "energy_fossil_nonhydro_renewables_nor",
+        "agriculture_agricultural_forest_land_dnk",
+        "demographic_birth_death_rates_nor",
+        "education_primary_secondary_enrollment_nor",
+        "finance_atm_credit_swe"
+      ],
+      "registry_fingerprint": "sha256:c1a99bada3e936739f0573eada4d3494a72baf10c66c8bd6236bd2c9dde80d18",
+      "registry_id": "campaign40_coefficient_free_candidate_registry_v1"
+    }
+  ],
+  "excluded_universe": [
+    {
+      "candidate_id": "finance_credit_broad_money_dnk",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "infrastructure_internet_mobile_swe",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "energy_fossil_nonhydro_renewables_nor",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "agriculture_agricultural_forest_land_dnk",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "demographic_birth_death_rates_nor",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "education_primary_secondary_enrollment_nor",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    },
+    {
+      "candidate_id": "finance_atm_credit_swe",
+      "reason": "different WDI topical family; excluded before portfolio outcomes"
+    }
+  ],
+  "known_limitations": [
+    "WDI mutable-source vintage limitation; retained bytes are the replay anchor",
+    "shared modeled-estimation processes can create dependence but no cross-series relationship is calculated",
+    "finite ordered annual values are not random or independent samples",
+    "linear slope and first-difference descriptors do not establish stationarity, persistence, explanation or forecastability",
+    "canonical decimal precision is representation policy, not source measurement precision"
+  ],
+  "recorded_before_new_outcome_calculation": true,
+  "rubric_fingerprint": "sha256:9656401298b5b6da363707071469dcf3445c5e5d580bcfcc452f89e6fcac5ef5",
+  "rubric_id": "selection-rubric-health-baseline-portfolio-v1",
+  "selected_candidate_id": "health_life_expectancy_under5_mortality_nor",
+  "selected_family": "Health",
+  "selection_reason": "The complete retained Health pair is mature, semantically coherent, territory/period consistent, fully covered in admitted metadata, denominator-explicit and useful for baseline characterization without relationship calculation.",
+  "selection_registry_file_sha256": "sha256:56432eee9704483aa189f9b4a5c86a26b0d643007fa567ef427a371db696bc36"
+}

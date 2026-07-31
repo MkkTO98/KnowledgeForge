@@ -21,6 +21,7 @@ from typing import Any
 REGISTRY_REL = Path("specs/correlation_batches/campaign43_coefficient_free_first_difference_companion_registry.json")
 SPEC_REL = Path("specs/correlation_batches/campaign43_first_difference_companion_registry_freeze_specification.json")
 CALC_REL = Path("artifacts/reports/campaign43-first-difference-companion-calculation-20260712/calculation_results.json")
+CALC_TOOL_REL = "tools/campaign43_first_difference_companion_calculation.py"
 REPORT_DIR_REL = Path("artifacts/reports/campaign43-first-difference-companion-publication-preflight-20260712")
 PACKAGE_DIR_NAME = "candidate_packages"
 EXPECTED_REGISTRY_FP = "sha256:f03db436c06350a755f181a4cf0e9852ac30064fea84d77cd79332e774efc5a1"
@@ -30,6 +31,8 @@ EXPECTED_REPOSITORY_COUNT = 554
 EXPECTED_REPOSITORY_FP = "sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b"
 EXPECTED_POST_PUBLICATION_COUNT = 560
 EXPECTED_POST_PUBLICATION_FP = "sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7"
+POST_EVIDENCE_PORTFOLIO_PILOT_COUNT = 562
+POST_EVIDENCE_PORTFOLIO_PILOT_FP = "sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff"
 EXPECTED_POST_PUBLICATION_FD_COUNT = 14
 EXPECTED_PACKAGE_FPS = {
     "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-first-difference-pearson-companion-v1": "sha256:5dfcca7a3b90bf8ab058f20b32555145c684fa004140ad457d67fc3dd222db14",
@@ -163,9 +166,27 @@ def preflight(root: Path) -> dict[str, Any]:
     reg_fp = sha256_value(registry)
     spec_fp = sha256_value(spec)
     calc_fp = calc.get("candidate_result_fingerprint")
+    calc_mod = load_module(root, CALC_TOOL_REL, "campaign43_calculation_compatibility")
+    recomputed_calc = calc_mod.calculate_campaign43(root)
+    artifact_analytical_fp = calc_mod.analytical_result_fingerprint(calc)
+    recomputed_analytical_fp = calc_mod.analytical_result_fingerprint(recomputed_calc)
+    calculated_content_fp = sha256_value(calc.get("candidate_results", []))
     add("registry_logical_fingerprint", reg_fp == EXPECTED_REGISTRY_FP, actual=reg_fp, expected=EXPECTED_REGISTRY_FP)
     add("specification_logical_fingerprint", spec_fp == EXPECTED_SPEC_FP, actual=spec_fp, expected=EXPECTED_SPEC_FP)
     add("calculation_result_fingerprint", calc_fp == EXPECTED_CALC_FP, actual=calc_fp, expected=EXPECTED_CALC_FP)
+    add(
+        "calculation_result_fingerprint_content_integrity",
+        calc_fp == calculated_content_fp,
+        claimed=calc_fp,
+        recomputed=calculated_content_fp,
+    )
+    add(
+        "independent_analytical_recomputation",
+        artifact_analytical_fp == recomputed_analytical_fp,
+        artifact=artifact_analytical_fp,
+        recomputed=recomputed_analytical_fp,
+        comparison_profile=calc_mod.ANALYTICAL_COMPARISON_PROFILE,
+    )
     registry_entries = registry.get("entries", registry.get("candidates", []))
     add("candidate_count", len(registry_entries) == 6 and len(calc.get("candidate_results", [])) == 6, registry_count=len(registry_entries), calculation_count=len(calc.get("candidate_results", [])))
     add("calculation_not_published", calc.get("canonical_publication_performed") is False and calc.get("knowledge_object_packages_constructed") is False and calc.get("postgresql_projection_performed") is False)
@@ -177,11 +198,13 @@ def preflight(root: Path) -> dict[str, Any]:
     baseline = repository_baseline(root)
     pre_publication_baseline = (baseline["object_file_count"] == EXPECTED_REPOSITORY_COUNT and baseline["manifest_object_count"] == EXPECTED_REPOSITORY_COUNT and baseline["computed_repository_fingerprint"] == EXPECTED_REPOSITORY_FP and baseline["manifest_repository_fingerprint"] == EXPECTED_REPOSITORY_FP and baseline["first_difference_pearson_relationship_count"] == 8)
     post_publication_baseline = (baseline["object_file_count"] == EXPECTED_POST_PUBLICATION_COUNT and baseline["manifest_object_count"] == EXPECTED_POST_PUBLICATION_COUNT and baseline["computed_repository_fingerprint"] == EXPECTED_POST_PUBLICATION_FP and baseline["manifest_repository_fingerprint"] == EXPECTED_POST_PUBLICATION_FP and baseline["first_difference_pearson_relationship_count"] == EXPECTED_POST_PUBLICATION_FD_COUNT)
-    add("canonical_count", pre_publication_baseline or post_publication_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_COUNT, EXPECTED_POST_PUBLICATION_COUNT])
-    add("canonical_fingerprint", pre_publication_baseline or post_publication_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_FP, EXPECTED_POST_PUBLICATION_FP])
-    add("existing_fd_count", pre_publication_baseline or post_publication_baseline, actual=baseline["first_difference_pearson_relationship_count"], expected=[8, EXPECTED_POST_PUBLICATION_FD_COUNT])
+    post_portfolio_pilot_baseline = (baseline["object_file_count"] == POST_EVIDENCE_PORTFOLIO_PILOT_COUNT and baseline["manifest_object_count"] == POST_EVIDENCE_PORTFOLIO_PILOT_COUNT and baseline["computed_repository_fingerprint"] == POST_EVIDENCE_PORTFOLIO_PILOT_FP and baseline["manifest_repository_fingerprint"] == POST_EVIDENCE_PORTFOLIO_PILOT_FP and baseline["first_difference_pearson_relationship_count"] == EXPECTED_POST_PUBLICATION_FD_COUNT)
+    add("canonical_count", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_COUNT, EXPECTED_POST_PUBLICATION_COUNT, POST_EVIDENCE_PORTFOLIO_PILOT_COUNT])
+    add("canonical_fingerprint", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_FP, EXPECTED_POST_PUBLICATION_FP, POST_EVIDENCE_PORTFOLIO_PILOT_FP])
+    add("existing_fd_count", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline, actual=baseline["first_difference_pearson_relationship_count"], expected=[8, EXPECTED_POST_PUBLICATION_FD_COUNT])
     registry_by_id = {c["campaign43_candidate_id"]: c for c in registry_entries}
     calc_by_id = {c["candidate_id"]: c for c in calc.get("candidate_results", [])}
+    recomputed_by_id = {c["candidate_id"]: c for c in recomputed_calc.get("candidate_results", [])}
     for cid in reg_ids:
         r = registry_by_id[cid]
         c = calc_by_id.get(cid, {})
@@ -199,7 +222,15 @@ def preflight(root: Path) -> dict[str, Any]:
         else:
             companion_ok = True
         add("canonical_collision_absent_or_matching_published_companion", companion_ok, candidate_id=cid, package_id=expected_pid, exists=companion_path.exists())
-        add("accepted_coefficient_preserved", c.get("coefficient", {}).get("canonical") == r["calculation_boundary",].get("accepted_coefficient") if False else True, candidate_id=cid)
+        recomputed = recomputed_by_id.get(cid, {})
+        add(
+            "accepted_coefficient_preserved",
+            c.get("coefficient") == recomputed.get("coefficient")
+            and c.get("independent_recompute_coefficient") == recomputed.get("independent_recompute_coefficient"),
+            candidate_id=cid,
+            artifact=c.get("coefficient"),
+            recomputed=recomputed.get("coefficient"),
+        )
     return {"valid": all(c["pass"] for c in checks), "registry_fingerprint": reg_fp, "specification_fingerprint": spec_fp, "calculation_result_fingerprint": calc_fp, "canonical_baseline": baseline, "checks": checks}
 
 

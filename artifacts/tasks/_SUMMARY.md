@@ -97,17 +97,19 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260712-first-difference-pearson-method-contract-validation.md`
 - `T-20260712-next-production-readiness-decision-before-campaign43.md`
 - `T-20260712-operational-state-backup-restore-durability-gate.md`
-- `T-20260713-post-campaign43-next-production-readiness-gate.md`
-- `T-20260713-post-campaign43-test-discovery-correction.md`
-- `T-20260713-non-wdi-multisource-disagreement-planning-gate.md`
 - `T-20260712-pearson-candidate-policy-refinement-mixed-roadmap.md`
 - `T-20260712-pearson-candidate-policy-v2-consistency-correction.md`
-- `backlog.md`
+- `T-20260713-non-wdi-multisource-disagreement-planning-gate.md`
+- `T-20260713-post-campaign43-next-production-readiness-gate.md`
+- `T-20260713-post-campaign43-test-discovery-correction.md`
 - `T-20260713-two-source-gdp-growth-evidence-admission-prerequisite.md`
+- `T-20260730-first-bounded-evidence-portfolio-production-pilot.md`
+- `T-20260731-evidence-portfolio-production-boundary-contract-v1.md`
+- `backlog.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `T-20260713-two-source-gdp-growth-evidence-admission-prerequisite.md` — completed; IMF/OECD Denmark 2025 real GDP growth candidate rejected before admission with available evidence because retention permission, IMF release/vintage identity, exact independence proof, and 2025 observation status remained unresolved.
+- No active task. `T-20260731-evidence-portfolio-production-boundary-contract-v1.md` completed the strict authorization, containment, attestation and exact replay correction without activating a follow-on portfolio.
 
 ## Needs Attention
 - Reopen non-WDI disagreement production only after a bounded, immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists. Preserve unrelated residue; do not stage/commit/push unless separately authorized.

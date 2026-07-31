@@ -1,0 +1,102 @@
+{
+  "accounting": {
+    "dependency_clusters": 1,
+    "distinct_source_series": 1,
+    "distinct_transformations": 3,
+    "evidence_bundles": 1,
+    "executed_candidates": 1,
+    "execution_failures": 0,
+    "manifest_candidates": 2,
+    "null_candidates": 0,
+    "operational_views": 28,
+    "promoted_canonical_objects": 1,
+    "raw_calculation_results": 28,
+    "redundant_candidates": 0,
+    "redundant_result_records": 0,
+    "rejected_candidates": 1,
+    "valid_candidates": 1,
+    "valid_result_records": 28
+  },
+  "blockers": [],
+  "campaign_id": "evidence-portfolio-pilot-health-baseline-20260730",
+  "candidate_population": [
+    {
+      "canary": true,
+      "candidate_id": "candidate-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1",
+      "disposition": "execute",
+      "input_normalized_fingerprint": "sha256:83d74ce0f508ec88a4a841fdea817725e1c022ee71ac42a6a5895d3b775e2f27",
+      "input_path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.LE00.IN__NOR__1990-2024/normalized_observations.json",
+      "input_sha256": "sha256:bcbed15f37c0208fd80641ac280e9279f38968b2229fa9a7cdf3efbb685d5728"
+    },
+    {
+      "canary": false,
+      "candidate_id": "candidate-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+      "disposition": "execute",
+      "input_normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+      "input_path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SH.DYN.MORT__NOR__1990-2024/normalized_observations.json",
+      "input_sha256": "sha256:6e3ca56274f18bf710383d5c438fa89d15680e3405f8d1045456855c67a5b411"
+    },
+    {
+      "canary": true,
+      "candidate_id": "candidate-health-life-expectancy-cagr-excluded-v1",
+      "disposition": "excluded_pre_execution",
+      "input_normalized_fingerprint": "sha256:83d74ce0f508ec88a4a841fdea817725e1c022ee71ac42a6a5895d3b775e2f27",
+      "input_path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.LE00.IN__NOR__1990-2024/normalized_observations.json",
+      "input_sha256": "sha256:bcbed15f37c0208fd80641ac280e9279f38968b2229fa9a7cdf3efbb685d5728"
+    }
+  ],
+  "candidate_population_fingerprint": "sha256:90f1c3b26a96a8bba41cad35d946310f7e9f19ccc0c50d1b9d7d2b4e4ff221e3",
+  "execution_manifest_byte_fingerprint": "sha256:e6b7fea3eeee4e6f5a4c19d019e86b37e40ded23c4e1a06048aa7f37eee18085",
+  "execution_mode": "canary",
+  "gate_fingerprint": "sha256:a2a867d51016d79fa6049e32aaeddf03a2acca676a801d919cbbe0d8dc86cd6d",
+  "manifest_fingerprint": "sha256:7c5f85ffe0660d012915db2cbec240e02e2ad4c0ca61efa2ef44298e55dedc15",
+  "manifest_id": "manifest-evidence-portfolio-pilot-health-baseline-v1",
+  "passed": true,
+  "production_limits": {
+    "entries": [
+      {
+        "candidate_id": "candidate-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1",
+        "limits": {
+          "maximum_result_records": 28,
+          "maximum_wall_seconds": 5
+        }
+      },
+      {
+        "candidate_id": "candidate-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+        "limits": {
+          "maximum_result_records": 28,
+          "maximum_wall_seconds": 5
+        }
+      },
+      {
+        "candidate_id": "candidate-health-life-expectancy-cagr-excluded-v1",
+        "limits": {
+          "maximum_result_records": 28,
+          "maximum_wall_seconds": 5
+        }
+      }
+    ],
+    "portfolio": {
+      "maximum_executed_candidates": 2,
+      "maximum_promoted_objects": 2,
+      "maximum_raw_result_records": 56,
+      "stop_on_canary_failure": true
+    }
+  },
+  "publication": {
+    "admitted_object_count": 1,
+    "disposition": "isolated_canary_admitted",
+    "object_count": 561,
+    "repository_fingerprint": "sha256:f56d609074bc94942ad7b5b7ccd9c91989d0f4986de314a8e439cf711c3c63b3"
+  },
+  "reruns": [
+    {
+      "candidate_id": "candidate-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1",
+      "first_fingerprint": "sha256:79fff1288b014e30e3fb560aea75b46824a2beabdd9a608f643799c93632c581",
+      "matched": true,
+      "second_fingerprint": "sha256:79fff1288b014e30e3fb560aea75b46824a2beabdd9a608f643799c93632c581"
+    }
+  ],
+  "schema_name": "knowledgeforge.evidence_portfolio.production_authorization.v1",
+  "schema_version": "1.0"
+}

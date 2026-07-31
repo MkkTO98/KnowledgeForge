@@ -1,0 +1,321 @@
+{
+  "bundle_definition": "bounded campaign grouping only; not a new canonical object type",
+  "campaign_id": "evidence-portfolio-pilot-health-baseline-20260730",
+  "candidate_order": [
+    "candidate-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1",
+    "candidate-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+    "candidate-health-life-expectancy-cagr-excluded-v1"
+  ],
+  "canonical_ontology_change": false,
+  "computational_budget": {
+    "maximum_executed_candidates": 2,
+    "maximum_promoted_objects": 2,
+    "maximum_raw_result_records": 56,
+    "stop_on_canary_failure": true
+  },
+  "entries": [
+    {
+      "applicability": {
+        "denominator_basis": "not_applicable_duration_measure_years",
+        "frequency": "annual",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "years"
+      },
+      "bundle_id": "bundle-health-norway-annual-1990-2024-v1",
+      "campaign_id": "evidence-portfolio-pilot-health-baseline-20260730",
+      "canary": true,
+      "candidate_id": "candidate-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1",
+      "computational_budget": {
+        "maximum_result_records": 28,
+        "maximum_wall_seconds": 5
+      },
+      "dependencies": [
+        "retained_campaign40_fixture",
+        "wdi_annual_scalar_statistical_summary_v2@2.0"
+      ],
+      "disposition": "execute",
+      "exclusion_and_stopping_rules": [
+        "stop_on_input_hash_mismatch",
+        "stop_on_manifest_fingerprint_mismatch",
+        "exclude_nonconsecutive_differences",
+        "exclude_growth_rates",
+        "exclude_relationship_claims"
+      ],
+      "expected_output_class": "baseline_characterization",
+      "identity_inputs": {
+        "indicator_code": "SP.DYN.LE00.IN",
+        "method_id": "baseline_characterization_portfolio_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990,
+        "territory_id": "NOR"
+      },
+      "indicator": {
+        "code": "SP.DYN.LE00.IN",
+        "definition": "Expected years of life at birth under the period mortality schedule represented by the retained WDI series.",
+        "family": "Health",
+        "name": "Life expectancy at birth, total (years)"
+      },
+      "input": {
+        "admission_basis": "retained Campaign 40 HTTPS fixture selected by the frozen coefficient-free candidate registry",
+        "normalized_fingerprint": "sha256:83d74ce0f508ec88a4a841fdea817725e1c022ee71ac42a6a5895d3b775e2f27",
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.LE00.IN__NOR__1990-2024/normalized_observations.json",
+        "sha256": "sha256:bcbed15f37c0208fd80641ac280e9279f38968b2229fa9a7cdf3efbb685d5728"
+      },
+      "method": {
+        "id": "baseline_characterization_portfolio_v1",
+        "parameters": {
+          "decimal_precision": 50,
+          "difference_rule": "only consecutive observed annual periods",
+          "minimum_coverage_share": "0.85",
+          "minimum_observed_count": 30,
+          "quartile_rule": "median of lower and upper halves excluding the overall median for odd N",
+          "rounding": "ROUND_HALF_EVEN",
+          "slope_rule": "ordinary least-squares slope against integer calendar year; descriptor only",
+          "summary_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+          "summary_method": "wdi_annual_scalar_statistical_summary_v2@2.0"
+        },
+        "version": "1.0"
+      },
+      "promotion_conditions": [
+        "all_28_required_results_valid",
+        "no_identity_collision",
+        "no_redundancy",
+        "knowledge_object_validation_pass"
+      ],
+      "territory": {
+        "id": "NOR",
+        "name": "Norway",
+        "observational_population": "retained observed annual Norway values for the indicator within 1990-2024"
+      },
+      "transformation": [
+        "level",
+        "adjacent_first_difference",
+        "linear_time_index_slope"
+      ],
+      "validation_requirements": [
+        "input_hash",
+        "coverage",
+        "stable_identity",
+        "exact_lineage",
+        "applicability",
+        "schema",
+        "nonredundancy",
+        "input_immutability"
+      ]
+    },
+    {
+      "applicability": {
+        "denominator_basis": "live_births_scaled_per_1000",
+        "frequency": "annual",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "per 1,000 live births"
+      },
+      "bundle_id": "bundle-health-norway-annual-1990-2024-v1",
+      "campaign_id": "evidence-portfolio-pilot-health-baseline-20260730",
+      "canary": false,
+      "candidate_id": "candidate-health-sh-dyn-mort-nor-1990-2024-baseline-v1",
+      "computational_budget": {
+        "maximum_result_records": 28,
+        "maximum_wall_seconds": 5
+      },
+      "dependencies": [
+        "retained_campaign40_fixture",
+        "wdi_annual_scalar_statistical_summary_v2@2.0"
+      ],
+      "disposition": "execute",
+      "exclusion_and_stopping_rules": [
+        "stop_on_input_hash_mismatch",
+        "stop_on_manifest_fingerprint_mismatch",
+        "exclude_nonconsecutive_differences",
+        "exclude_growth_rates",
+        "exclude_relationship_claims"
+      ],
+      "expected_output_class": "baseline_characterization",
+      "identity_inputs": {
+        "indicator_code": "SH.DYN.MORT",
+        "method_id": "baseline_characterization_portfolio_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990,
+        "territory_id": "NOR"
+      },
+      "indicator": {
+        "code": "SH.DYN.MORT",
+        "definition": "Probability per 1,000 live births of dying before age five under the retained WDI series definition.",
+        "family": "Health",
+        "name": "Mortality rate, under-5 (per 1,000 live births)"
+      },
+      "input": {
+        "admission_basis": "retained Campaign 40 HTTPS fixture selected by the frozen coefficient-free candidate registry",
+        "normalized_fingerprint": "sha256:15a09202c1263ed917c780d7557bb353f9183271b4840b25b2a4c368a1df922e",
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SH.DYN.MORT__NOR__1990-2024/normalized_observations.json",
+        "sha256": "sha256:6e3ca56274f18bf710383d5c438fa89d15680e3405f8d1045456855c67a5b411"
+      },
+      "method": {
+        "id": "baseline_characterization_portfolio_v1",
+        "parameters": {
+          "decimal_precision": 50,
+          "difference_rule": "only consecutive observed annual periods",
+          "minimum_coverage_share": "0.85",
+          "minimum_observed_count": 30,
+          "quartile_rule": "median of lower and upper halves excluding the overall median for odd N",
+          "rounding": "ROUND_HALF_EVEN",
+          "slope_rule": "ordinary least-squares slope against integer calendar year; descriptor only",
+          "summary_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+          "summary_method": "wdi_annual_scalar_statistical_summary_v2@2.0"
+        },
+        "version": "1.0"
+      },
+      "promotion_conditions": [
+        "all_28_required_results_valid",
+        "no_identity_collision",
+        "no_redundancy",
+        "knowledge_object_validation_pass"
+      ],
+      "territory": {
+        "id": "NOR",
+        "name": "Norway",
+        "observational_population": "retained observed annual Norway values for the indicator within 1990-2024"
+      },
+      "transformation": [
+        "level",
+        "adjacent_first_difference",
+        "linear_time_index_slope"
+      ],
+      "validation_requirements": [
+        "input_hash",
+        "coverage",
+        "stable_identity",
+        "exact_lineage",
+        "applicability",
+        "schema",
+        "nonredundancy",
+        "input_immutability"
+      ]
+    },
+    {
+      "applicability": {
+        "denominator_basis": "not_applicable_duration_measure_years",
+        "frequency": "annual",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "years"
+      },
+      "bundle_id": "bundle-health-norway-annual-1990-2024-v1",
+      "campaign_id": "evidence-portfolio-pilot-health-baseline-20260730",
+      "canary": true,
+      "candidate_id": "candidate-health-life-expectancy-cagr-excluded-v1",
+      "computational_budget": {
+        "maximum_result_records": 28,
+        "maximum_wall_seconds": 5
+      },
+      "dependencies": [
+        "retained_campaign40_fixture",
+        "wdi_annual_scalar_statistical_summary_v2@2.0"
+      ],
+      "disposition": "excluded_pre_execution",
+      "exclusion_and_stopping_rules": [
+        "stop_on_input_hash_mismatch",
+        "stop_on_manifest_fingerprint_mismatch",
+        "exclude_nonconsecutive_differences",
+        "exclude_growth_rates",
+        "exclude_relationship_claims"
+      ],
+      "exclusion_reason": "Compound annual growth and percentage-growth summaries are not semantically justified for this bounded health-state level series and could imply an accumulation process.",
+      "expected_output_class": "excluded_inapplicable_method",
+      "identity_inputs": {
+        "indicator_code": "SP.DYN.LE00.IN",
+        "method_id": "compound_annual_growth_rate",
+        "method_version": "not_registered",
+        "period_end": 2024,
+        "period_start": 1990,
+        "territory_id": "NOR"
+      },
+      "indicator": {
+        "code": "SP.DYN.LE00.IN",
+        "definition": "Expected years of life at birth under the period mortality schedule represented by the retained WDI series.",
+        "family": "Health",
+        "name": "Life expectancy at birth, total (years)"
+      },
+      "input": {
+        "admission_basis": "retained Campaign 40 HTTPS fixture selected by the frozen coefficient-free candidate registry",
+        "normalized_fingerprint": "sha256:83d74ce0f508ec88a4a841fdea817725e1c022ee71ac42a6a5895d3b775e2f27",
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/SP.DYN.LE00.IN__NOR__1990-2024/normalized_observations.json",
+        "sha256": "sha256:bcbed15f37c0208fd80641ac280e9279f38968b2229fa9a7cdf3efbb685d5728"
+      },
+      "method": {
+        "id": "compound_annual_growth_rate",
+        "parameters": {},
+        "version": "not_registered"
+      },
+      "promotion_conditions": [
+        "all_28_required_results_valid",
+        "no_identity_collision",
+        "no_redundancy",
+        "knowledge_object_validation_pass"
+      ],
+      "territory": {
+        "id": "NOR",
+        "name": "Norway",
+        "observational_population": "retained observed annual Norway values for the indicator within 1990-2024"
+      },
+      "transformation": [
+        "level",
+        "adjacent_first_difference",
+        "linear_time_index_slope"
+      ],
+      "validation_requirements": [
+        "input_hash",
+        "coverage",
+        "stable_identity",
+        "exact_lineage",
+        "applicability",
+        "schema",
+        "nonredundancy",
+        "input_immutability"
+      ]
+    }
+  ],
+  "evidence_card_equivalent_definition": "one operational result-record view; canonical authority remains the KnowledgeObjectPackage",
+  "forbidden_outcome_fields": [
+    "calculated_value",
+    "interesting",
+    "attractive",
+    "coefficient",
+    "significance",
+    "result_rank"
+  ],
+  "manifest_fingerprint": "sha256:7c5f85ffe0660d012915db2cbec240e02e2ad4c0ca61efa2ef44298e55dedc15",
+  "manifest_id": "manifest-evidence-portfolio-pilot-health-baseline-v1",
+  "manifest_version": "1.0",
+  "portfolio_kind": "bounded_baseline_characterization_execution_manifest",
+  "promotion_conditions": [
+    "canary_gate_pass",
+    "all_required_records_valid",
+    "canonical_package_validator_pass",
+    "no_duplicate_promotion"
+  ],
+  "selection_rubric_fingerprint": "sha256:9656401298b5b6da363707071469dcf3445c5e5d580bcfcc452f89e6fcac5ef5",
+  "stopping_rules": [
+    "no candidate substitution after outcomes",
+    "stop_on_canary_material_failure",
+    "do_not_exceed_budget"
+  ],
+  "validation_requirements": [
+    "manifest_schema",
+    "outcome_blind_fields",
+    "input_hashes",
+    "stable_identities",
+    "complete_accounting",
+    "deterministic_rerun"
+  ]
+}

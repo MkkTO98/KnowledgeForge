@@ -37,14 +37,12 @@ Root of KnowledgeForge, the EIP canonical reusable knowledge substrate project. 
 - `state/`
 - `tests/`
 - `tools/`
-- `workspace_config.yaml`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Operational Autonomy Transition is complete: ordinary production proceeds from `docs/production_campaign_roadmap.md` and `docs/production_doctrine.md` without campaign-by-campaign external prompting.
-- Knowledge Repository contains 538 accepted KnowledgeObjectPackages after Campaign 40, including six specification-driven Pearson relationship packages from the reusable correlation batch engine.
+- No task is active. The first bounded Evidence Portfolio pilot completed with two promoted Norway Health baseline packages and 56 operational result views.
+- The canonical Knowledge Repository contains 562 accepted KnowledgeObjectPackages with fingerprint `sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff`.
 
 ## Needs Attention
-- Relationship Export Contract v1 is validated; next strategic direction is to continue operational Pearson production toward 100 objects.
-- Do not redesign architecture, validators, taxonomy, package hierarchy, repository model, provenance, fingerprints, Production Support, or reporting unless a Doctrine Review Trigger occurs.
-- MacroForge-Release-Driven Automation Alignment Gate is complete; next architectural slice is a file-backed seen-release registry plus release-diff CLI over one real provider-neutral fixture.
+- Keep canonical packages, result records and operational views separately counted; the approximately 100-output horizon is not a quota.
+- Do not redesign architecture or activate another portfolio without separate authorization. Preserve unrelated working-tree residue.

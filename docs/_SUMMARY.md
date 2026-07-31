@@ -20,8 +20,10 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 - `campaign39_production_value_assessment.md`
 - `correlation_knowledge_boundary.md`
 - `doctrine_review_triggers.md`
+- `evidence_portfolio_production_boundary_contract_v1.md`
 - `evidence_source_evaluation_specification.md`
 - `governed_vocabularies.md`
+- `governing_contract_resolution_profile_v1.md`
 - `interfaces.md`
 - `invariants.md`
 - `knowledge_acceptance_criteria.md`
@@ -33,6 +35,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 - `model_routing_policy.md`
 - `open_questions.md`
 - `operational_autonomy_declaration.md`
+- `package_content_fingerprint_v1.md`
 - `pearson_correlation_method_v1.md`
 - `postgresql_operational_repository.md`
 - `postgresql_projection_config.example`
@@ -42,6 +45,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 - `production_evolution_log.md`
 - `production_quality_assessment.md`
 - `production_value_scorecard.md`
+- `promotion_verification_admission_publication_sequence_v1.md`
 - `provenance_fingerprinting.md`
 - `reproducible_knowledge_generation_architecture.md`
 - `roadmap.md`
@@ -57,7 +61,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `production_campaign_roadmap.md` notes the rejected IMF/OECD evidence-admission prerequisite attempt with unresolved retention/release/independence/observation-status evidence.
+- Architectural formalization remains closed. The first bounded Evidence Portfolio production pilot subsequently validated the accepted architecture without redesign; roadmap and production-evolution records now capture the 562-package state.
 
 ## Needs Attention
-- Non-WDI disagreement production still requires an admitted source-independent two-source evidence bundle.
+- Do not infer that the two-series portfolio authorizes quota-driven scaling, advanced statistical methods or a general InsightForge adapter. A second portfolio requires separate authorization.

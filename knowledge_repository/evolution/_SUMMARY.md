@@ -5,6 +5,8 @@ This folder is part of the ProjectForge file-backed operating system for `knowle
 
 ## Contains
 <!-- PROJECTFORGE:BEGIN-CONTAINS -->
+- `pkg-object-eppilot-health-sh-dyn-mort-nor-1990-2024-baseline-v1.json`
+- `pkg-object-eppilot-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1.json`
 - `pkg-object-srcpkg-campaign12-architectural-continuity-review.json`
 - `pkg-object-srcpkg-campaign12-artifact-count.json`
 - `pkg-object-srcpkg-campaign12-complete-lineage-count.json`
@@ -123,12 +125,10 @@ This folder is part of the ProjectForge file-backed operating system for `knowle
 - `pkg-object-srcpkg-campaign17-family-membership-energy_production_metadata.json`
 - `pkg-object-srcpkg-campaign17-family-membership-energy_use_efficiency_metadata.json`
 - `pkg-object-srcpkg-campaign17-family-membership-mining_and_extractives_metadata.json`
-- `pkg-object-srcpkg-campaign17-family-temporal-coverage-emissions_energy_metadata.json`
-- `pkg-object-srcpkg-campaign17-family-temporal-coverage-energy_access_metadata.json`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No folder-specific active work recorded.
+- Evolution records include the two append-only `pkg-object-eppilot-health-*` promotions from the completed bounded Evidence Portfolio pilot.
 
 ## Needs Attention
 - No folder-specific issues recorded.

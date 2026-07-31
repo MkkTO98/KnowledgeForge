@@ -41,10 +41,11 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `campaign-7-wdi-demographic-structure-provenance-lineage-completeness/`
 - `campaign-8-wdi-environment-annual-scalar-evidence-quality-coverage-transfer/`
 - `campaign-9-wdi-cross-family-annual-scalar-coverage-comparison/`
+- `evidence-portfolio-pilot-health-baseline-20260730/`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No folder-specific active work recorded.
+- The completed Health baseline Evidence Portfolio retains its manifest, canary and production accounting, packages, views, projection evidence and compatibility/cost assessments under `evidence-portfolio-pilot-health-baseline-20260730/`.
 
 ## Needs Attention
 - No folder-specific issues recorded.

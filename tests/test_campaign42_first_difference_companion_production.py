@@ -25,9 +25,10 @@ class Campaign42FirstDifferenceCompanionProductionTests(unittest.TestCase):
         gate = mod.pre_execution_gate(ROOT)
         self.assertTrue(gate["valid"])
         # The live repository is 546 before Campaign 42 publication, 554 after
-        # Campaign 42, and 560 after later Campaign 43 append-only publication;
+        # Campaign 42, 560 after Campaign 43, and 562 after the evidence
+        # portfolio pilot's append-only publication;
         # the gate remains valid after later publication for compatibility reruns.
-        self.assertIn(gate["repository_baseline"]["object_count"], {546, 554, 560})
+        self.assertIn(gate["repository_baseline"]["object_count"], {546, 554, 560, 562})
         self.assertEqual(gate["repository_baseline"]["raw_pearson_objects"], 21)
         self.assertEqual(gate["repository_baseline"]["statistical_summary_objects"], 4)
         self.assertIn(gate["repository_baseline"]["first_difference_pearson_companions"], {0, 8, 14})
@@ -81,11 +82,11 @@ class Campaign42FirstDifferenceCompanionProductionTests(unittest.TestCase):
             shutil.copytree(ROOT / "specs" / "correlation_batches", tmp_root / "specs" / "correlation_batches")
             shutil.copytree(ROOT / "artifacts" / "reports" / "campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712", tmp_root / "artifacts" / "reports" / "campaign42-coefficient-free-first-difference-pearson-companion-registry-20260712")
             result = mod.produce_campaign42(tmp_root, publish=True)
-            self.assertEqual(result["repository_after"]["object_count"], 560)
+            self.assertEqual(result["repository_after"]["object_count"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_COUNT)
             self.assertTrue(result["pre_existing_package_immutability"]["valid"])
             second = mod.produce_campaign42(tmp_root, publish=True)
             self.assertTrue(second["idempotent_republish"]["collision_safe"])
-            self.assertEqual(second["repository_after"]["object_count"], 560)
+            self.assertEqual(second["repository_after"]["object_count"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_COUNT)
 
 
 if __name__ == "__main__":

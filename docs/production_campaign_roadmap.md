@@ -1014,6 +1014,12 @@ Boundary: no package production, coefficient calculation, PostgreSQL mutation, d
 
 Closeout: selected test-discovery correction completed locally on 2026-07-13 and published at `8191790fb74b85cafcd5e253a29865a66df9c24d`. `tests/test_operational_state_checkpoint.py` now uses pure unittest/standard-library constructs, focused module verification passed with 6 tests, and repository-wide `python3 -m unittest discover -s tests -v` passed with 336 tests. Next roadmap step is a new readiness gate selecting one bounded production or production-enabling task from the documented backlog; do not begin implementation as part of this closeout.
 
+## First bounded Evidence Portfolio production pilot — 2026-07-30
+
+The separately authorized pilot completed successfully over the admitted Campaign 40 Norway Health pair. The canary passed and the bounded wave promoted two canonical baseline-characterization packages from a three-candidate pre-registration, retaining one expected CAGR applicability exclusion. The portfolio produced 56 distinct result records and 56 operational views without treating those views as canonical objects or independent knowledge packages. Repository state is 562 packages with fingerprint `sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff`.
+
+Readiness result: the existing architecture can sustain another bounded baseline portfolio; this does not authorize quota-driven production or a 1,000-output expansion. Smallest justified candidate for a separately authorized next task is a second pre-registered baseline-characterization portfolio over the already admitted Campaign 40 Sweden Infrastructure pair, with explicit technology-era and structural-break applicability limitations. Do not activate it automatically.
+
 ## Post-repair production-readiness gate — 2026-07-13
 
 Corrected decision: path D — defer all four remaining corrected-policy Pearson candidates for immediate priority and select the strongest documented production-enabling alternative.

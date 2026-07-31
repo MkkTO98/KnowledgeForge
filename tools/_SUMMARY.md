@@ -26,6 +26,7 @@ ProjectForge helper tools plus KnowledgeForge deterministic validators.
 - `deterministic_statistical_summary_v2.py`
 - `dry_run.py`
 - `escalate.py`
+- `evidence_portfolio_production.py`
 - `external_outbox_poller_v1.py`
 - `first_difference_pearson_method_v1.py`
 - `git_autopush.py`
@@ -101,6 +102,8 @@ ProjectForge helper tools plus KnowledgeForge deterministic validators.
 
 ## Active Work
 - `validate_knowledge_pipeline_v1.py` validates synthetic pre-production pipeline fixtures across Evidence, Evidence Evaluation, Knowledge Candidate, Knowledge Object, and Knowledge Change.
+- `evidence_portfolio_production.py` composes accepted contracts for deterministic preregistration, strict repository-state-bound canary authorization, enforced limits, contained inputs, serialized persistence, complete accounting, canonical promotion, operational views and rerun/preservation verification; it does not define a portfolio ontology.
+- `architecture_reality_audit.py` supports exact acyclic audit-subject and final-candidate attestation with independently verified tool identity.
 
 ## Needs Attention
 - Validation Framework v1 is fixture-backed only; do not treat it as production generation or MacroForge compatibility proof.

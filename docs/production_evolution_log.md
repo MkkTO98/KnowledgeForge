@@ -870,6 +870,14 @@ Architectural implications:
 
 Status: monitor. No Doctrine amendment, schema expansion, local AI, or general transformation framework is justified by this registry-freeze task alone.
 
+## 2026-07-30 — First bounded Evidence Portfolio production pilot
+
+Completed the first machine-executable bounded Evidence Portfolio by composing the existing admitted-evidence, calculation, canonical package, repository, promotion, operational-view and PostgreSQL-projection contracts. The outcome-blind Health-family manifest contained three candidates: two Norway annual 1990–2024 statistical-characterization candidates and one pre-execution CAGR applicability exclusion. The representative canary passed and authorized the production wave.
+
+Production accounting: 2 executed and valid candidates, 56 distinct result records, 2 promoted canonical packages, 56 operational Evidence-Card-equivalent views, 1 bundle, 2 dependency clusters, 1 expected exclusion, and 0 null, redundant or failed candidates. Repository state is 562 packages with fingerprint `sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff`. Deterministic reruns, idempotent append-only promotion, isolated PostgreSQL projection, focused/adversarial tests and repository-wide tests passed.
+
+Classification: production success using the accepted architecture. A portfolio remains deterministic composition and accounting, not a new canonical ontology; operational views are not canonical objects. No Doctrine, architecture, package schema, projection schema, advanced-statistics roadmap or cross-project contract changed. No follow-on task is activated.
+
 ## Campaign 42 first-difference Pearson companion production — 2026-07-12
 
 Campaign 42 successfully produced exactly eight frozen first-difference Pearson companion packages from the authorized coefficient-free registry/specification. Repository count increased from 546 to 554; repository fingerprint changed from `sha256:c89c25ede69ec88a12f4791dba94b6199f2927721d0028420a65a74dd6ee735c` to `sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b`. Raw Pearson objects remain 21 and first-difference Pearson companions are separately classified as 8.

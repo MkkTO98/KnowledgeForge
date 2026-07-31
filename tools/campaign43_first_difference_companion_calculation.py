@@ -25,6 +25,8 @@ EXPECTED_REPOSITORY_COUNT = 554
 EXPECTED_REPOSITORY_FP = "sha256:82fbbfecf1b9d33bc164d3380ab5d350435e7d5e0ab8a0cdcebfc8fd9f9a0c8b"
 POST_PUBLICATION_REPOSITORY_COUNT = 560
 POST_PUBLICATION_REPOSITORY_FP = "sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7"
+POST_EVIDENCE_PORTFOLIO_PILOT_COUNT = 562
+POST_EVIDENCE_PORTFOLIO_PILOT_FP = "sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff"
 EXPECTED_COMPANION_MANIFEST_FINGERPRINTS = {
     "pkg-object-srcpkg-campaign41-dnk-agricultural-land-broad-money-first-difference-pearson-companion-v1": "sha256:5dfcca7a3b90bf8ab058f20b32555145c684fa004140ad457d67fc3dd222db14",
     "pkg-object-srcpkg-campaign41-dnk-agricultural-land-private-credit-first-difference-pearson-companion-v1": "sha256:46365f326c989e8aed78efc51e3d561a0ec77a2a6057949cbc854988240449a6",
@@ -50,6 +52,64 @@ def canonical_json(value: Any) -> str:
 
 def sha256_value(value: Any) -> str:
     return "sha256:" + hashlib.sha256(canonical_json(value).encode("utf-8")).hexdigest()
+
+
+ANALYTICAL_COMPARISON_PROFILE = "campaign43_analytical_comparison_v1"
+# The accepted Campaign 43 broad candidate fingerprint includes these fields.
+# Their transformed-series preimages contain the operational normalized-file
+# path, so they preserve historical execution context but are not portable
+# analytical comparison keys across clean checkout roots.
+_CONTEXTUAL_CANDIDATE_FIELDS = frozenset({
+    "transformed_series_fingerprints",
+    "calculation_result_fingerprint",
+    "calculation_summary_fingerprint",
+})
+
+
+def analytical_candidate_projection(candidate: dict[str, Any]) -> dict[str, Any]:
+    """Return stable Campaign 43 analytical content without path-context hashes.
+
+    This is a new compatibility projection. It does not reinterpret or replace
+    the accepted historical candidate_result_fingerprint.
+    """
+    return {
+        key: value
+        for key, value in candidate.items()
+        if key not in _CONTEXTUAL_CANDIDATE_FIELDS
+    }
+
+
+def analytical_result_projection(result: dict[str, Any]) -> dict[str, Any]:
+    """Separate analytical identity from repository/execution context."""
+    return {
+        "profile": ANALYTICAL_COMPARISON_PROFILE,
+        "campaign": result.get("campaign"),
+        "registry_fingerprint": result.get("registry_fingerprint"),
+        "specification_fingerprint": result.get("specification_fingerprint"),
+        "candidate_count": result.get("candidate_count"),
+        "accepted_calculation_count": result.get("accepted_calculation_count"),
+        "rejected_calculation_count": result.get("rejected_calculation_count"),
+        "method_contract_fingerprint": result.get("method_contract_fingerprint"),
+        "transformation_contract_fingerprint": result.get("transformation_contract_fingerprint"),
+        "validation_registry_fingerprint": result.get("validation_registry_fingerprint"),
+        "expected_companion_package_ids": result.get("expected_companion_package_ids"),
+        "candidate_results": [
+            analytical_candidate_projection(candidate)
+            for candidate in result.get("candidate_results", [])
+        ],
+    }
+
+
+def analytical_result_fingerprint(result: dict[str, Any]) -> str:
+    return sha256_value(analytical_result_projection(result))
+
+
+def repository_context_projection(result: dict[str, Any]) -> dict[str, Any]:
+    return {
+        "repository_before": result.get("repository_before"),
+        "repository_after": result.get("repository_after"),
+        "pre_existing_package_immutability": result.get("pre_existing_package_immutability"),
+    }
 
 
 def sha256_bytes(data: bytes) -> str:
@@ -152,8 +212,9 @@ def pre_execution_gate(root: Path) -> dict[str, Any]:
     add("candidate_order", [e["campaign43_candidate_id"] for e in entries] == spec.get("candidate_ids"), actual=[e.get("campaign43_candidate_id") for e in entries], expected=spec.get("candidate_ids"))
     pre_publication_baseline = (baseline["object_file_count"] == EXPECTED_REPOSITORY_COUNT and baseline["manifest_object_count"] == EXPECTED_REPOSITORY_COUNT and baseline["computed_repository_fingerprint"] == EXPECTED_REPOSITORY_FP and baseline["manifest_repository_fingerprint"] == EXPECTED_REPOSITORY_FP)
     post_publication_baseline = (baseline["object_file_count"] == POST_PUBLICATION_REPOSITORY_COUNT and baseline["manifest_object_count"] == POST_PUBLICATION_REPOSITORY_COUNT and baseline["computed_repository_fingerprint"] == POST_PUBLICATION_REPOSITORY_FP and baseline["manifest_repository_fingerprint"] == POST_PUBLICATION_REPOSITORY_FP)
-    add("repository_count", pre_publication_baseline or post_publication_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_COUNT, POST_PUBLICATION_REPOSITORY_COUNT])
-    add("repository_fingerprint", pre_publication_baseline or post_publication_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_FP, POST_PUBLICATION_REPOSITORY_FP])
+    post_portfolio_pilot_baseline = (baseline["object_file_count"] == POST_EVIDENCE_PORTFOLIO_PILOT_COUNT and baseline["manifest_object_count"] == POST_EVIDENCE_PORTFOLIO_PILOT_COUNT and baseline["computed_repository_fingerprint"] == POST_EVIDENCE_PORTFOLIO_PILOT_FP and baseline["manifest_repository_fingerprint"] == POST_EVIDENCE_PORTFOLIO_PILOT_FP)
+    add("repository_count", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_COUNT, POST_PUBLICATION_REPOSITORY_COUNT, POST_EVIDENCE_PORTFOLIO_PILOT_COUNT])
+    add("repository_fingerprint", pre_publication_baseline or post_publication_baseline or post_portfolio_pilot_baseline, actual=baseline, expected=[EXPECTED_REPOSITORY_FP, POST_PUBLICATION_REPOSITORY_FP, POST_EVIDENCE_PORTFOLIO_PILOT_FP])
     add("repository_validation", not baseline["validation_errors"], errors=baseline["validation_errors"])
     add("method_contract_fingerprint", spec.get("method_contracts", {}).get("future_method_contract_fingerprint") == METHOD_FP, actual=spec.get("method_contracts", {}).get("future_method_contract_fingerprint"), expected=METHOD_FP)
     add("transformation_contract_fingerprint", spec.get("method_contracts", {}).get("future_transformation_contract_fingerprint") == TRANSFORMATION_FP, actual=spec.get("method_contracts", {}).get("future_transformation_contract_fingerprint"), expected=TRANSFORMATION_FP)

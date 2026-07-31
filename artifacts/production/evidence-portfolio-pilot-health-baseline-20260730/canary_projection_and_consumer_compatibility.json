@@ -1,0 +1,49 @@
+{
+  "content_contract": {
+    "applicability_basis": "not_applicable_duration_measure_years",
+    "bundle_or_family": "external_wdi_annual_scalar_health_baseline_characterization",
+    "lifecycle_state": "accepted",
+    "method": "baseline_characterization_portfolio_v1",
+    "period": [
+      1990,
+      2024
+    ],
+    "subject_indicator": "SP.DYN.LE00.IN",
+    "territory": "NOR",
+    "transformations": [
+      "level",
+      "adjacent_first_difference",
+      "linear_time_index"
+    ]
+  },
+  "filters": {
+    "family": {
+      "count": 1,
+      "package_ids": [
+        "pkg-object-eppilot-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1"
+      ],
+      "valid": true
+    },
+    "lifecycle": {
+      "count": 1,
+      "package_ids": [
+        "pkg-object-eppilot-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1"
+      ],
+      "valid": true
+    },
+    "statement_type": {
+      "count": 1,
+      "package_ids": [
+        "pkg-object-eppilot-health-sp-dyn-le00-in-nor-1990-2024-baseline-v1"
+      ],
+      "valid": true
+    }
+  },
+  "insightforge_compatibility": {
+    "assessment": "Canonical package and projection preserve all values, applicability, lineage, method and limitations needed for read-only direct consumption without recalculation. The current export implementation is relationship-specific and no generalized InsightForge adapter contract exists; cross-project integration remains a separate doctrine-triggering task.",
+    "direct_canonical_package_content_adequate_without_recalculation": true,
+    "generalized_insightforge_adapter_present": false,
+    "relationship_export_v1_applicable": false
+  },
+  "valid": true
+}

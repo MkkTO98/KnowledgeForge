@@ -1,32 +1,32 @@
 # Project State
 
-## Current production state
+Status: Operational Expansion; no active task
+Last substantive task: Evidence Portfolio Production Boundary Contract v1 correction and exact replay
 
-KnowledgeForge remains canonical-package-first. Canonical packages remain unchanged at 560 packages with repository fingerprint `sha256:e69a86bc7574383bc2fbbc9380d9de049d82abcaf35a767019ada98b3a299fb7`. PostgreSQL remains a derived projection only.
+## Canonical repository
 
-## Latest completed work
+- Filesystem `knowledge_repository/` remains authoritative.
+- Accepted package count: 562.
+- Repository fingerprint: `sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff`.
+- PostgreSQL remains a rebuildable bounded operational projection, not authority.
 
-Completed the two-source evidence-admission prerequisite attempt for IMF/OECD Denmark 2025 annual real GDP growth.
+## Latest production result
 
-Task: `artifacts/tasks/T-20260713-two-source-gdp-growth-evidence-admission-prerequisite.md`.
-Decision: `artifacts/decisions/D-20260713-two-source-gdp-growth-evidence-admission-rejected.md`.
-Report: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/report.md`.
-Machine record: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/candidate_assessment.json`.
+The 2026-07-30 Health baseline portfolio reused retained admitted Campaign 40 WDI fixtures for Norway, 1990–2024. It pre-registered three candidates, excluded one inapplicable CAGR before calculation, executed two statistical-characterization candidates, promoted two canonical packages and rendered 56 operational Evidence-Card-equivalent views. Canary, deterministic reruns, identity/lineage/applicability gates, idempotent promotion, isolated projection and repository-wide tests passed.
 
-Outcome: C — rejected before admission with available evidence. No immutable two-source evidence bundle was admitted.
+## Architecture posture
 
-The candidate was bounded and potentially useful, but required admission evidence was missing. Retention permission was not established; this does not prove retention is prohibited. The official terms lookup was blocked by the tool layer, which is an environment limitation rather than substantive licensing evidence. Public API access was observed but is not redistribution or raw-value-retention permission. IMF exact release/vintage identity, exact source-independence proof, and 2025 observation status (actual, estimate, forecast, or mixed) remain unresolved.
+No contradiction or redesign was required. Portfolio production is deterministic composition over existing candidate, campaign, package, repository, promotion, view and projection contracts. Evidence-Card-equivalent views remain operational representations of canonical result records. KnowledgeForge remains independent from MacroForge and consumed only durable admitted evidence fixtures.
 
-## Architecture/doctrine status
+## Consumer posture
 
-No architecture, doctrine, schema, package type, PostgreSQL, Relationship Export, or producer-project change is required or justified. Existing SourceEvidencePackage, provenance, evidence-quality, producer-neutral handoff and deterministic-fingerprinting structures remain sufficient.
+Direct canonical-package and read-only projection consumption are content-adequate without recalculation. The accepted relationship export remains relationship-specific; no general InsightForge baseline-characterization adapter contract is accepted. No cross-project integration was performed.
 
-## Reopen prerequisite
+## Governance state
 
-The smallest prerequisite remains: obtain or admit one immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle through existing KnowledgeForge evidence/provenance boundaries. This candidate may be reconsidered only if missing admission evidence is independently established before raw values are retained.
-
-## Active constraints
-
-- No source-difference calculation or agreement/disagreement classification occurred or is authorized by this outcome.
-- No comparison registry, KnowledgeObjectPackage construction/publication, PostgreSQL mutation, Relationship Export mutation, architecture/doctrine/schema change, or other-project modification.
-- Preserve protected local residue: six `architecture/architectureharvest/` tracked deletions, eight Campaign 43 Relationship Export verification modifications, stale generated context, local config/caches/dumps/restore material, and unrelated operational/report residue.
+- Accepted decision: `artifacts/decisions/D-20260731-evidence-portfolio-production-boundary-contract-v1.md`.
+- Production Authorization v1 now binds exact campaign/manifest/population/limits/reruns/accounting and exact canary-admitted repository pre-state; compliant writers are serialized and state is rechecked before persistence.
+- Architecture-to-Reality candidate attestation is deterministic, acyclic and exact-path fail-closed.
+- No canonical schema, ontology, production-doctrine, projection-schema or Campaign 43 analytical-identity change occurred.
+- No next task is active.
+- Existing unrelated working-tree residue remains outside task ownership and must remain preserved.

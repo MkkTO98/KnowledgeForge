@@ -15,7 +15,7 @@ This folder is part of the ProjectForge file-backed operating system for `state`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Current state records the rejected IMF/OECD GDP-growth evidence-admission attempt with available evidence; no admitted two-source bundle exists.
+- Current state records the completed first bounded Evidence Portfolio pilot, the validated Production Boundary Contract v1 correction and canonical 562-package repository; no active task or successor portfolio is authorized.
 
 ## Needs Attention
-- Next attempt must independently establish retention permission, exact release/vintage identity, source independence, and observation status before retaining raw source values.
+- Preserve canonical/view-count distinctions and unrelated local residue; await explicit authorization before another portfolio or consumer contract task.

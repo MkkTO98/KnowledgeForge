@@ -1,33 +1,36 @@
 # Latest Handoff
 
-Date: 2026-07-13
-Status: two-source evidence-admission prerequisite completed; candidate rejected before admission with available evidence.
+Date: 2026-07-31
+Task: `T-20260731-evidence-portfolio-production-boundary-contract-v1`
+Status: completed prospective candidate; no active successor; no Git publication
 
 ## Outcome
 
-Rejected candidate: IMF WEO/DataMapper `NGDP_RPCH` vs OECD Economic Outlook 119 `GDPV_ANNPCT` for Denmark (`DNK`) annual real GDP growth, 2025.
+Corrected the first unpublished Evidence Portfolio candidate without creating another portfolio or claim. Production Authorization v1 binds exact campaign, manifest bytes/semantics, candidate/input population, limits, accounting, reruns and canary-admitted repository pre-state. An operational lock spans validation through persistence and state is rechecked before writes. Manifest evidence paths fail closed before external read/hash. Audit attestation freezes exact subject blobs, derives tool identity independently and requires an exact sorted unique final path set.
 
-Outcome: C — rejected. No immutable two-source evidence bundle was admitted.
+Fresh replay reconstructed 560 packages, ran the same canary and unchanged wave, and matched the retained 562-package fingerprint `sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff`.
 
-This is not a permanent-unsuitability decision. Retention permission was not established, not proven prohibited. The tool-layer blockage of an official terms lookup is an environment limitation, not substantive licensing evidence. Public API access is not redistribution or raw-value-retention permission. IMF/OECD independence is plausible but not proven for the exact concept. IMF exact release/vintage identity and 2025 observation status (actual, estimate, forecast, or mixed) remain unresolved.
+Accounting remains: 3 candidates; 2 executed/valid/promoted; 56 raw/valid records and views; 2 series; 3 transformations; 1 bundle; 2 dependency clusters; 1 expected exclusion; 0 null, redundant or failed candidates.
 
-Task: `artifacts/tasks/T-20260713-two-source-gdp-growth-evidence-admission-prerequisite.md`.
-Decision: `artifacts/decisions/D-20260713-two-source-gdp-growth-evidence-admission-rejected.md`.
-Report: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/report.md`.
-Candidate assessment: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/candidate_assessment.json`.
+## Principal artifacts
 
-## Evidence retained
+Contract: `docs/evidence_portfolio_production_boundary_contract_v1.md`. Decision/task/report: `D-20260731-evidence-portfolio-production-boundary-contract-v1`, `T-20260731-evidence-portfolio-production-boundary-contract-v1`, and `R-20260731-evidence-portfolio-production-boundary-contract-v1`. Audit: `artifacts/reports/R-20260731-architecture-reality-audit.md`. External manifests and proofs: `/tmp/knowledgeforge-eppilot-boundary-contract-v1-20260731/`.
 
-Repository retains a compact human report plus one machine-readable assessment. Duplicative per-topic JSON records and the candidate-specific test module were removed during closeout. No temporary payload location is a recovery dependency, and no raw source values are retained.
+## Verification
 
-## Current production state
+- Focused adversarial: 56 passed; Campaign 42/43 compatibility: 38 passed.
+- Full suite: 395 passed isolated and 395 passed live.
+- Compileall passed; audit: 0 blocks/0 warnings.
+- Canonical regeneration: 562 packages; objects/evolution/six indexes exact.
+- Disposable PostgreSQL: 562 projected; zero missing/extra/fingerprint/payload failures; cleanup exact.
+- Independent review drove correction of five fail-open defects and one concurrency race.
 
-No package file changed, no new package was created, production PostgreSQL was not mutated, and Relationship Export outputs were not modified by this task. No cross-source comparison was performed and no agreement/disagreement conclusion was reached. Architecture remains unchanged.
+## Preservation
 
-## Residue boundary
+Complete candidate files were applied conditionally; seven mixed live files remained byte-unchanged and their candidate representations are retained externally. No unrelated bytes or Git index entries changed. No stage/commit/push/tag/release, cross-project mutation, acquisition or persistent/default PostgreSQL mutation occurred.
 
-Preserve unrelated residue: six `architecture/architectureharvest/` deletions, eight Campaign 43 Relationship Export verification modifications, stale generated context, local config/caches/dumps/restore material, and unrelated operational/report residue.
+## Residual / next task
 
-## Resume boundary
+One family, territory and two series prove bounded production, not broad maturity. Views remain noncanonical. Smallest justified next task, not activated: separately pre-register the admitted Campaign 40 Sweden Infrastructure pair with technology-era and structural-break limits.
 
-No admitted two-source evidence bundle exists. This candidate may be reconsidered only if missing admission evidence is independently established before raw values are retained. Do not calculate source differences or classify agreement/disagreement.
+Resume only after separate authorization: `python3 tools/recover_session.py --project . --json`.

@@ -1,35 +1,28 @@
 # Active Goal
 
-Status: no admitted two-source evidence bundle after IMF/OECD GDP-growth evidence-admission prerequisite.
+## Current status
 
-## Latest completed prerequisite attempt
+No active implementation or production task.
 
-The two-source evidence-admission prerequisite completed on 2026-07-13 with outcome C — rejected before admission with available evidence.
+The first bounded Evidence Portfolio production pilot remains complete. On 2026-07-31 its unpublished prospective candidate received the bounded Production Boundary Contract v1 correction: strict content-bound canary authorization, normative-limit enforcement, manifest-path containment, repository pre-state/concurrency protection, exact isolated 560→562 replay and acyclic Architecture-to-Reality candidate attestation. No follow-on task is activated.
 
-Task: `artifacts/tasks/T-20260713-two-source-gdp-growth-evidence-admission-prerequisite.md`.
-Decision: `artifacts/decisions/D-20260713-two-source-gdp-growth-evidence-admission-rejected.md`.
-Report: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/report.md`.
-Machine record: `artifacts/evidence-admissions/two-source-gdp-growth-imf-oecd-2025-20260713/candidate_assessment.json`.
+## Authoritative completed tasks
 
-## Result
+- Pilot: `artifacts/tasks/T-20260730-first-bounded-evidence-portfolio-production-pilot.md`
+- Boundary correction: `artifacts/tasks/T-20260731-evidence-portfolio-production-boundary-contract-v1.md`
+- Latest report: `artifacts/reports/R-20260731-evidence-portfolio-production-boundary-contract-v1.md`
+- Production evidence: `artifacts/production/evidence-portfolio-pilot-health-baseline-20260730/`
 
-Candidate rejected with available evidence: IMF WEO/DataMapper `NGDP_RPCH` vs OECD Economic Outlook 119 `GDPV_ANNPCT` for Denmark annual real GDP growth, 2025.
+## Current canonical state
 
-This is not a permanent-unsuitability decision. Retention permission was not established, not proven prohibited. The tool-layer blockage of an official terms lookup is an environment limitation, not substantive licensing evidence. Public API access is not redistribution permission. IMF/OECD source independence remains plausible but unproven. IMF exact release/vintage identity and 2025 observation status (actual, estimate, forecast, or mixed) remain unresolved.
+- Knowledge Repository packages: 562.
+- Repository fingerprint: `sha256:80a9388a21f07191c2758c8d230512535492b9b30f7ed93bab45c3a9471d64ff`.
+- Pilot accounting: 3 pre-registered candidates; 2 executed/valid/promoted; 56 distinct result records and operational views; 1 expected applicability exclusion; 0 null, redundant or failed candidates.
 
-## Current boundary
+## Boundary
 
-No admitted two-source evidence bundle exists. The candidate may be reconsidered only if missing admission evidence is independently established before raw values are retained.
+Do not treat operational views as canonical objects, the approximately 100-output horizon as a quota, or this two-series pilot as authorization for unrestricted scale or advanced statistics. Do not activate another portfolio without a separate task.
 
-No cross-source comparison was performed and no agreement/disagreement conclusion was reached. Architecture, doctrine, schema, package model, PostgreSQL role, and Relationship Export remain unchanged.
+## Smallest justified next task — not activated
 
-Do not calculate differences, classify agreement/disagreement, create registries, construct/publish packages, mutate PostgreSQL, mutate Relationship Export outputs, change architecture/doctrine/schema, modify other projects, or clean protected residue without separate authorization.
-
-## Protected residue
-
-Preserve known unrelated local residue:
-
-- six tracked `architecture/architectureharvest/` deletions;
-- eight Campaign 43 Relationship Export verification modifications;
-- stale generated context;
-- local config, caches, dumps, restore material and unrelated operational/report residue.
+A second pre-registered bounded baseline-characterization portfolio over the already admitted Campaign 40 Sweden Infrastructure pair, with explicit technology-era and structural-break applicability limitations and the same canary/accounting/promotion gates.

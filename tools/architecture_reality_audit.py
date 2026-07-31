@@ -9,6 +9,7 @@ from __future__ import annotations
 
 import argparse
 import datetime as dt
+import hashlib
 import json
 import re
 import sys
@@ -76,6 +77,198 @@ def read(path: Path) -> str:
     return path.read_text(encoding="utf-8", errors="replace") if path.exists() else ""
 
 
+def canonical_json(value: Any) -> str:
+    return json.dumps(value, sort_keys=True, separators=(",", ":"), ensure_ascii=False)
+
+
+def byte_fingerprint(path: Path) -> str:
+    return "sha256:" + hashlib.sha256(path.read_bytes()).hexdigest()
+
+
+def value_fingerprint(value: Any) -> str:
+    return "sha256:" + hashlib.sha256(canonical_json(value).encode("utf-8")).hexdigest()
+
+
+def _contained_regular_file(project: Path, relative_path: str) -> Path:
+    relative = Path(relative_path)
+    if relative.is_absolute() or ".." in relative.parts:
+        raise ValueError(f"audit subject path is not repository-relative: {relative_path}")
+    root = project.resolve(strict=True)
+    try:
+        resolved = (root / relative).resolve(strict=True)
+        resolved.relative_to(root)
+    except (OSError, ValueError) as exc:
+        raise ValueError(f"audit subject path escapes or is missing: {relative_path}") from exc
+    if not resolved.is_file():
+        raise ValueError(f"audit subject path is not a regular file: {relative_path}")
+    return resolved
+
+
+def _git_mode(path: Path) -> str:
+    return "100755" if path.stat().st_mode & 0o111 else "100644"
+
+
+def audit_subject_fingerprint(manifest: dict[str, Any]) -> str:
+    return value_fingerprint({key: value for key, value in manifest.items() if key != "subject_manifest_fingerprint"})
+
+
+def _validate_exclusions(exclusions: list[dict[str, str]]) -> None:
+    if not isinstance(exclusions, list) or len(exclusions) != 2:
+        raise ValueError("audit subject must declare exactly audit-output and reports-summary exclusions")
+    paths = sorted(row.get("path") for row in exclusions if isinstance(row, dict))
+    audit_paths = [path for path in paths if isinstance(path, str) and re.fullmatch(r"artifacts/reports/R-\d{8}-architecture-reality-audit\.md", path)]
+    if len(audit_paths) != 1 or "artifacts/reports/_SUMMARY.md" not in paths:
+        raise ValueError("audit subject exclusion set must contain only its audit output and reports summary")
+    if any(not isinstance(row.get("reason"), str) or not row["reason"].strip() for row in exclusions):
+        raise ValueError("every audit subject exclusion requires a reason")
+
+
+def build_audit_subject_manifest(
+    project: Path, paths: list[str], *, parent_head: str, repository_fingerprint: str,
+    exclusions: list[dict[str, str]],
+) -> dict[str, Any]:
+    _validate_exclusions(exclusions)
+    excluded_paths = {row["path"] for row in exclusions}
+    normalized = sorted(set(paths))
+    if len(normalized) != len(paths):
+        raise ValueError("audit subject paths must be unique")
+    if excluded_paths.intersection(normalized):
+        raise ValueError("excluded paths must not appear in audit subject")
+    subject_paths = []
+    for relative in normalized:
+        path = _contained_regular_file(project, relative)
+        subject_paths.append({"path": relative, "mode": _git_mode(path), "blob_sha256": byte_fingerprint(path)})
+    manifest = {
+        "schema_name": "knowledgeforge.architecture_reality.audit_subject_manifest.v1",
+        "schema_version": "1.0", "parent_repository_head": parent_head,
+        "repository_fingerprint": repository_fingerprint, "subject_paths": subject_paths,
+        "subject_path_count": len(subject_paths),
+        "exclusions": sorted(exclusions, key=lambda row: row["path"]),
+    }
+    manifest["subject_manifest_fingerprint"] = audit_subject_fingerprint(manifest)
+    return manifest
+
+
+def verify_audit_subject_manifest(project: Path, manifest: Any) -> dict[str, Any]:
+    if not isinstance(manifest, dict):
+        raise ValueError("audit subject manifest must be a JSON object")
+    if manifest.get("schema_name") != "knowledgeforge.architecture_reality.audit_subject_manifest.v1" or manifest.get("schema_version") != "1.0":
+        raise ValueError("audit subject schema or version mismatch")
+    _validate_exclusions(manifest.get("exclusions"))
+    rows = manifest.get("subject_paths")
+    if not isinstance(rows, list) or manifest.get("subject_path_count") != len(rows):
+        raise ValueError("audit subject path count mismatch")
+    if [row.get("path") for row in rows] != sorted(row.get("path") for row in rows):
+        raise ValueError("audit subject paths must be sorted")
+    excluded = {row["path"] for row in manifest["exclusions"]}
+    if excluded.intersection(row.get("path") for row in rows):
+        raise ValueError("excluded path appears in audit subject")
+    for row in rows:
+        path = _contained_regular_file(project, row.get("path"))
+        if row.get("mode") != _git_mode(path) or row.get("blob_sha256") != byte_fingerprint(path):
+            raise ValueError(f"audit subject blob or mode mismatch: {row.get('path')}")
+    if manifest.get("subject_manifest_fingerprint") != audit_subject_fingerprint(manifest):
+        raise ValueError("audit subject manifest fingerprint mismatch")
+    return {"valid": True, "subject_path_count": len(rows), "subject_manifest_fingerprint": manifest["subject_manifest_fingerprint"]}
+
+
+def audit_attestation(subject_manifest: dict[str, Any], tool_fingerprint: str, workspace: str | None = None) -> dict[str, Any]:
+    return {
+        "contract": "knowledgeforge.architecture_reality.candidate_attestation.v1@1.0",
+        "parent_repository_head": subject_manifest["parent_repository_head"],
+        "subject_manifest_fingerprint": subject_manifest["subject_manifest_fingerprint"],
+        "subject_path_count": subject_manifest["subject_path_count"],
+        "exclusions": copy_exclusions(subject_manifest["exclusions"]),
+        "repository_fingerprint": subject_manifest["repository_fingerprint"],
+        "audit_tool_fingerprint": tool_fingerprint, "audit_result": "generated",
+        "workspace_location_informational": workspace,
+    }
+
+
+def copy_exclusions(value: list[dict[str, str]]) -> list[dict[str, str]]:
+    return [{"path": row["path"], "reason": row["reason"]} for row in value]
+
+
+def verify_audit_report_binding(project: Path, audit_report_path: str, subject_manifest: dict[str, Any]) -> dict[str, Any]:
+    text = read(_contained_regular_file(project, audit_report_path))
+    match = re.search(r"Machine-readable attestation: `([^\n]+)`", text)
+    if not match:
+        raise ValueError("architecture audit lacks machine-readable candidate attestation")
+    try:
+        attestation = json.loads(match.group(1))
+    except json.JSONDecodeError as exc:
+        raise ValueError("architecture audit candidate attestation is malformed") from exc
+    tool_rows = [row for row in subject_manifest["subject_paths"] if row.get("path") == "tools/architecture_reality_audit.py"]
+    if len(tool_rows) != 1:
+        raise ValueError("frozen audit subject must contain exactly one architecture audit tool")
+    expected_tool_fingerprint = tool_rows[0].get("blob_sha256")
+    expected = audit_attestation(subject_manifest, expected_tool_fingerprint, attestation.get("workspace_location_informational"))
+    if attestation != expected:
+        raise ValueError("architecture audit tool identity or frozen-subject attestation mismatch")
+    return {"valid": True, "subject_manifest_fingerprint": subject_manifest["subject_manifest_fingerprint"]}
+
+
+def final_manifest_fingerprint(manifest: dict[str, Any]) -> str:
+    return value_fingerprint({key: value for key, value in manifest.items() if key != "final_manifest_fingerprint"})
+
+
+def build_final_candidate_manifest(
+    project: Path, paths: list[str], subject_manifest: dict[str, Any], audit_report_path: str,
+    reports_summary_path: str,
+) -> dict[str, Any]:
+    verify_audit_subject_manifest(project, subject_manifest)
+    verify_audit_report_binding(project, audit_report_path, subject_manifest)
+    required = {row["path"] for row in subject_manifest["subject_paths"]} | {audit_report_path, reports_summary_path}
+    if set(paths) != required or len(paths) != len(required):
+        raise ValueError("final candidate paths must exactly equal the audited subject plus audit and reports summary")
+    rows = []
+    for relative in sorted(set(paths)):
+        path = _contained_regular_file(project, relative)
+        rows.append({"path": relative, "mode": _git_mode(path), "blob_sha256": byte_fingerprint(path)})
+    if Path(audit_report_path).name not in read(project / reports_summary_path):
+        raise ValueError("reports summary does not list architecture audit")
+    manifest = {
+        "schema_name": "knowledgeforge.prospective_publication_manifest.v3", "schema_version": "1.0",
+        "subject_manifest_fingerprint": subject_manifest["subject_manifest_fingerprint"],
+        "audit_report_path": audit_report_path, "reports_summary_path": reports_summary_path,
+        "path_count": len(rows), "paths": rows,
+    }
+    manifest["final_manifest_fingerprint"] = final_manifest_fingerprint(manifest)
+    return manifest
+
+
+def verify_final_candidate_manifest(
+    project: Path, manifest: Any, subject_manifest: dict[str, Any], audit_report_path: str,
+    reports_summary_path: str,
+) -> dict[str, Any]:
+    if not isinstance(manifest, dict) or manifest.get("schema_name") != "knowledgeforge.prospective_publication_manifest.v3" or manifest.get("schema_version") != "1.0":
+        raise ValueError("final candidate manifest schema or version mismatch")
+    verify_audit_subject_manifest(project, subject_manifest)
+    verify_audit_report_binding(project, audit_report_path, subject_manifest)
+    if manifest.get("subject_manifest_fingerprint") != subject_manifest["subject_manifest_fingerprint"]:
+        raise ValueError("final candidate audit-subject binding mismatch")
+    if manifest.get("audit_report_path") != audit_report_path or manifest.get("reports_summary_path") != reports_summary_path:
+        raise ValueError("final candidate audit or summary binding mismatch")
+    rows = manifest.get("paths")
+    if not isinstance(rows, list) or manifest.get("path_count") != len(rows):
+        raise ValueError("final candidate path count mismatch")
+    required = {row["path"] for row in subject_manifest["subject_paths"]} | {audit_report_path, reports_summary_path}
+    row_paths = [row.get("path") for row in rows if isinstance(row, dict)]
+    if len(row_paths) != len(rows) or row_paths != sorted(required) or len(row_paths) != len(set(row_paths)):
+        raise ValueError("final candidate paths must be the exact canonical sorted unique set")
+    for row in rows:
+        if set(row) != {"path", "mode", "blob_sha256"}:
+            raise ValueError("final candidate path row schema is not exact")
+        path = _contained_regular_file(project, row.get("path"))
+        if row.get("mode") != _git_mode(path) or row.get("blob_sha256") != byte_fingerprint(path):
+            raise ValueError(f"final candidate blob or mode mismatch: {row.get('path')}")
+    if Path(audit_report_path).name not in read(project / reports_summary_path):
+        raise ValueError("reports summary does not list architecture audit")
+    if manifest.get("final_manifest_fingerprint") != final_manifest_fingerprint(manifest):
+        raise ValueError("final candidate manifest fingerprint mismatch")
+    return {"valid": True, "path_count": len(rows), "final_manifest_fingerprint": manifest["final_manifest_fingerprint"]}
+
+
 def has(path: Path, text: str) -> bool:
     return text.lower() in read(path).lower()
 
@@ -94,8 +287,9 @@ def add(items: list[dict[str, str]], severity: str, category: str, drift_type: s
     })
 
 
-def latest_architecture_audit(project: Path) -> Path | None:
-    reports = sorted((project / "artifacts" / "reports").glob("R-*-architecture-reality-audit.md"))
+def latest_architecture_audit(project: Path, exclude: Path | None = None) -> Path | None:
+    excluded = exclude.resolve() if exclude is not None else None
+    reports = sorted(path for path in (project / "artifacts" / "reports").glob("R-*-architecture-reality-audit.md") if excluded is None or path.resolve() != excluded)
     return reports[-1] if reports else None
 
 
@@ -214,11 +408,11 @@ def check_architecture_docs(project: Path, findings: list[dict[str, str]]) -> No
         add(findings, "block", "architecture_vs_implementation", "documentation_without_implementation", "Architecture-to-Reality Audit is documented but the tool is missing", "Restore tools/architecture_reality_audit.py.")
 
 
-def check(project: Path) -> dict[str, Any]:
+def check(project: Path, *, exclude_audit: Path | None = None, timestamp: str | None = None) -> dict[str, Any]:
     project = project.resolve()
     mode = detect_mode(project)
     findings: list[dict[str, str]] = []
-    latest = latest_architecture_audit(project)
+    latest = latest_architecture_audit(project, exclude=exclude_audit)
     completed = completed_tasks_since(project, latest)
 
     check_process_documented(project, mode, findings)
@@ -239,7 +433,7 @@ def check(project: Path) -> dict[str, Any]:
     return {
         "project": str(project),
         "mode": mode,
-        "timestamp": dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
+        "timestamp": timestamp or dt.datetime.now(dt.UTC).isoformat(timespec="seconds"),
         "audit_categories": AUDIT_CATEGORIES,
         "drift_types": DRIFT_TYPES,
         "latest_architecture_reality_audit": str(latest.relative_to(project)) if latest else None,
@@ -262,10 +456,25 @@ def render_markdown(report: dict[str, Any]) -> str:
         "## Scope",
         "",
         "This audit checks documented architecture, governance rules, operating procedures, state artifacts, templates, automation, logging/context systems, and available implementation for drift.",
-        "",
-        "## Categories",
-        "",
     ]
+    if "attestation" in report:
+        attestation = report["attestation"]
+        lines.extend([
+            "", "## Candidate attestation", "",
+            "This report attests the frozen audit subject identified below; it does not recursively hash itself or predict a final commit.",
+            "",
+            f"- Parent repository HEAD: `{attestation['parent_repository_head']}`",
+            f"- Subject-manifest fingerprint: `{attestation['subject_manifest_fingerprint']}`",
+            f"- Subject path count: {attestation['subject_path_count']}",
+            f"- Canonical repository fingerprint: `{attestation['repository_fingerprint']}`",
+            f"- Audit tool fingerprint: `{attestation['audit_tool_fingerprint']}`",
+            f"- Audit result: `{attestation['audit_result']}`",
+            f"- Workspace location (informational): `{attestation.get('workspace_location_informational') or 'not-recorded'}`",
+            "- Exact exclusions:",
+        ])
+        lines.extend(f"  - `{row['path']}` — {row['reason']}" for row in attestation["exclusions"])
+        lines.append(f"- Machine-readable attestation: `{canonical_json(attestation)}`")
+    lines.extend(["", "## Categories", ""])
     lines.extend(f"- {cat}" for cat in report["audit_categories"])
     lines.extend(["", "## Drift types", ""])
     lines.extend(f"- {kind}" for kind in report["drift_types"])
@@ -293,9 +502,9 @@ def render_markdown(report: dict[str, Any]) -> str:
     return "\n".join(lines) + "\n"
 
 
-def write_report(project: Path, report: dict[str, Any]) -> Path:
-    today = dt.date.today().isoformat().replace("-", "")
-    out = project / "artifacts" / "reports" / f"R-{today}-architecture-reality-audit.md"
+def write_report(project: Path, report: dict[str, Any], output_path: Path | None = None) -> Path:
+    today = report["timestamp"][:10].replace("-", "")
+    out = output_path or project / "artifacts" / "reports" / f"R-{today}-architecture-reality-audit.md"
     out.parent.mkdir(parents=True, exist_ok=True)
     out.write_text(render_markdown(report), encoding="utf-8")
     return out
@@ -306,13 +515,29 @@ def main() -> int:
     ap.add_argument("--project", default=".")
     ap.add_argument("--json", action="store_true")
     ap.add_argument("--write-report", action="store_true", help="Write artifacts/reports/R-YYYYMMDD-architecture-reality-audit.md")
+    ap.add_argument("--output-path", help="Explicit report output path; must remain under the project")
+    ap.add_argument("--subject-manifest", help="Frozen Audit Subject Manifest JSON")
+    ap.add_argument("--timestamp", help="Explicit ISO timestamp for deterministic regeneration")
     ns = ap.parse_args()
 
     project = Path(ns.project).resolve()
-    report = check(project)
+    output_path = Path(ns.output_path).resolve() if ns.output_path else None
+    if ns.write_report and output_path is None:
+        date_text = (ns.timestamp[:10] if ns.timestamp else dt.date.today().isoformat()).replace("-", "")
+        output_path = project / "artifacts" / "reports" / f"R-{date_text}-architecture-reality-audit.md"
+    if output_path is not None:
+        try:
+            output_path.relative_to(project)
+        except ValueError as exc:
+            raise ValueError("audit output path must remain under project root") from exc
+    report = check(project, exclude_audit=output_path, timestamp=ns.timestamp)
+    if ns.subject_manifest:
+        subject = json.loads(Path(ns.subject_manifest).read_text())
+        verify_audit_subject_manifest(project, subject)
+        report["attestation"] = audit_attestation(subject, byte_fingerprint(Path(__file__).resolve()), str(project))
     report_path = None
     if ns.write_report:
-        report_path = write_report(project, report)
+        report_path = write_report(project, report, output_path=output_path)
         report["report_path"] = str(report_path)
 
     if ns.json:

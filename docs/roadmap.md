@@ -440,3 +440,7 @@ Conclusion:
 ## 2026-07-11 — Release-driven automation next step
 
 KnowledgeForge consumer-side release inbox/registry/no-promote impact processing is validated against retained WDI evidence and existing Pearson derivations. Do not keep simulating indefinitely; next recommended slice is a separate MacroForge-owned neutral evidence-release exporter task.
+
+## 2026-07-30 — First bounded Evidence Portfolio production pilot completed
+
+KnowledgeForge has now demonstrated outcome-blind portfolio pre-registration, a full representative canary, conditional bounded-wave continuation, exact manifest-to-result accounting, deterministic baseline characterization, append-only canonical promotion, operational Evidence-Card-equivalent views and isolated PostgreSQL projection through the existing architecture. Two Norway Health packages were promoted from two valid executions; one inapplicable CAGR candidate remained explicitly excluded. The result supports further bounded baseline portfolios but does not authorize quota padding, advanced statistical expansion or automatic activation of a second portfolio.

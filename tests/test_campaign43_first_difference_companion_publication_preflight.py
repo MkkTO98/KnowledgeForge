@@ -1,11 +1,13 @@
 from __future__ import annotations
 
+import copy
 import importlib.util
 import json
 import shutil
 import tempfile
 import unittest
 from pathlib import Path
+from unittest import mock
 
 ROOT = Path(__file__).resolve().parents[1]
 MODULE_PATH = ROOT / "tools" / "campaign43_first_difference_companion_publication_preflight.py"
@@ -28,8 +30,8 @@ class Campaign43CompanionPublicationPreflightTests(unittest.TestCase):
         self.assertEqual(gate["registry_fingerprint"], mod.EXPECTED_REGISTRY_FP)
         self.assertEqual(gate["specification_fingerprint"], mod.EXPECTED_SPEC_FP)
         self.assertEqual(gate["calculation_result_fingerprint"], mod.EXPECTED_CALC_FP)
-        self.assertEqual(gate["canonical_baseline"]["object_file_count"], mod.EXPECTED_POST_PUBLICATION_COUNT)
-        self.assertEqual(gate["canonical_baseline"]["computed_repository_fingerprint"], mod.EXPECTED_POST_PUBLICATION_FP)
+        self.assertEqual(gate["canonical_baseline"]["object_file_count"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_COUNT)
+        self.assertEqual(gate["canonical_baseline"]["computed_repository_fingerprint"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_FP)
         self.assertEqual(gate["canonical_baseline"]["first_difference_pearson_relationship_count"], mod.EXPECTED_POST_PUBLICATION_FD_COUNT)
 
     def test_constructs_exactly_six_valid_one_to_one_packages_without_publication(self):
@@ -83,10 +85,10 @@ class Campaign43CompanionPublicationPreflightTests(unittest.TestCase):
         self.assertTrue(dry["safe_dry_run_performed_in_temporary_repository_copy"])
         self.assertFalse(dry["canonical_repository_mutated"])
         self.assertEqual(dry["collisions_with_existing_canonical_packages"], [])
-        self.assertEqual(dry["expected_post_publication_package_count"], 560)
+        self.assertEqual(dry["expected_post_publication_package_count"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_COUNT)
         self.assertEqual(dry["expected_post_publication_first_difference_relationship_count"], 14)
         self.assertEqual(dry["expected_post_publication_raw_pearson_relationship_count"], 21)
-        self.assertEqual(dry["expected_postgresql_projected_package_count"], 560)
+        self.assertEqual(dry["expected_postgresql_projected_package_count"], mod.POST_EVIDENCE_PORTFOLIO_PILOT_COUNT)
         self.assertTrue(dry["pre_existing_package_immutability_after_dry_run"]["valid"])
 
     def test_no_campaign42_duplication_and_raw_sources_remain_canonical(self):
@@ -117,14 +119,29 @@ class Campaign43CompanionPublicationPreflightTests(unittest.TestCase):
 
     def test_independent_recomputation_artifact_agrees_at_recorded_precision(self):
         # Package construction consumes the accepted calculation artifact; this test
-        # verifies that the accepted artifact remains independently reproducible.
+        # verifies that the accepted analytical content remains independently reproducible.
         calc_mod = load_module(CALC_MODULE_PATH, "campaign43_calculation")
         direct = calc_mod.calculate_campaign43(ROOT)
         artifact = json.loads((ROOT / "artifacts/reports/campaign43-first-difference-companion-calculation-20260712/calculation_results.json").read_text())
-        self.assertEqual(direct["candidate_result_fingerprint"], artifact["candidate_result_fingerprint"])
+        self.assertEqual(
+            calc_mod.analytical_result_fingerprint(direct),
+            calc_mod.analytical_result_fingerprint(artifact),
+        )
         for direct_candidate, artifact_candidate in zip(direct["candidate_results"], artifact["candidate_results"]):
             self.assertEqual(direct_candidate["coefficient"], artifact_candidate["coefficient"])
             self.assertEqual(direct_candidate["independent_recompute_coefficient"], artifact_candidate["independent_recompute_coefficient"])
+
+    def test_preflight_rejects_mutated_artifact_with_stale_claimed_fingerprint(self):
+        mod = load_module(MODULE_PATH, "campaign43_publication_preflight_tamper")
+        registry, spec, artifact = mod.load_inputs(ROOT)
+        tampered = copy.deepcopy(artifact)
+        tampered["candidate_results"][0]["coefficient"]["canonical"] = "0.123456789012"
+        with mock.patch.object(mod, "load_inputs", return_value=(registry, spec, tampered)):
+            gate = mod.preflight(ROOT)
+        self.assertFalse(gate["valid"])
+        checks = {check["check"]: check for check in gate["checks"]}
+        self.assertFalse(checks["calculation_result_fingerprint_content_integrity"]["pass"])
+        self.assertFalse(checks["independent_analytical_recomputation"]["pass"])
 
 
 if __name__ == "__main__":
