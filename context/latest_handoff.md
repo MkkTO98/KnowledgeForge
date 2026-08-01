@@ -2,36 +2,37 @@
 
 ## Status
 
-The Sweden Infrastructure Evidence Portfolio is complete as an unstaged publication candidate. Corrected canary, bounded production, deterministic replay, semantic re-review, isolated projection, 434-test full validation, isolated compilation, context health, coherence and the final attested architecture audit passed. Guarded application preserved all unrelated and ignored state; no active task remains.
+Publication Authority Hardening v1 is complete as a validated unstaged working-tree candidate. The reusable mechanism authenticates parent and source identities, reconciles complete/mixed/authority-only populations, preserves authority history and emits a deterministic staging plan without staging or publication.
 
 ## Context used
 
-- Evidence Portfolio Production Boundary Contract v1 and prior Norway Health golden pilot
-- admitted Campaign 40 Sweden fixtures/registry
-- canonical Knowledge Object, operational-view, lifecycle, repository and projection contracts
-- frozen live preservation baselines and task allowlist v4 under `/tmp/knowledgeforge-eppilot-sweden-infrastructure-v1-20260731/`
+- Evidence Portfolio Production Boundary Contract v1
+- prior Norway Health and Sweden Infrastructure candidate/publication evidence
+- live parent `4de0fcc9825dcbeb04a5c52a92bc259b8bd416c3`
+- frozen preservation baseline and allowlist v2 under `/tmp/knowledgeforge-publication-authority-hardening-4de0fcc/`
+- independent adversarial review
 
-## Candidate result
+## Files and capability
 
-- 3 preregistered / 2 executed / 56 raw / 56 valid / 2 promoted / 56 views
-- 1 expected exclusion; 0 rejected/redundant/null/failed
-- repository: 564 objects, fingerprint `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`
-- manifest v1.1 records a bounded semantic unit/applicability correction; universe and methods unchanged
-- independent replay and semantic re-review pass
-- focused 121/121 pass
-- isolated retained PostgreSQL database `knowledgeforge_eppilot_swe_20260731_semantic_v11`: 564/564, zero fidelity failures
+- `tools/publication_authority.py`: reusable validator, authority/registry/gate implementation and CLI
+- `tests/test_publication_authority.py`: generic and Sweden regression tests
+- `tests/test_publication_authority_adversarial_review.py`: independent negative/regression coverage
+- `tests/fixtures/publication_authority/sweden_infrastructure_regression.json`: frozen historical regression population
+- contract, decision, task, report, audit and continuity artifacts updated
 
-## Boundaries
+## Verification
 
-- Live branch/HEAD remain `main` / `f96497c58903ba715908b33bfad87e5e72aa4995`; staging is empty.
-- All 493 pre-existing Git-visible and 309 ignored identities are preserved.
-- Six mixed candidate representations remain only under the task `/tmp` root; live mixed files were not overwritten.
-- No commit, push, tag, release, publication, external acquisition, cross-project mutation or follow-on activation occurred.
+- focused authority/audit: 48/48 pass
+- full repository suite: 473/473 pass
+- compileall/security scan: pass
+- coherence/context health: pass
+- formal architecture audit: zero blocks/warnings
+- independent final review findings: corrected and regression-tested
 
-## Remaining actions
+## Boundary and residual
 
-None active. Publication or follow-on production requires separate explicit authorization.
+The tool authorizes an exact plan but does not call `git add`. Publication must stage from frozen verified sources and immediately verify index identity to close the remaining path-replacement interval. No Git publication or follow-on task is authorized.
 
 ## Resume command
 
-No resume command. Start a separately authorized publication or successor task from the live repository without applying the external mixed representations.
+No active resume command. Start a separately authorized publication operation from the live repository and require the canonical authority/gate plus frozen-source staging verification.

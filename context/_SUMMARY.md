@@ -13,7 +13,7 @@ Context and handoff material for future KnowledgeForge sessions.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `latest_handoff.md` records the completed Evidence Portfolio Production Boundary Contract v1 correction, exact 560→562 replay, verification, preservation boundary and no-active-task state.
+- `latest_handoff.md` records Publication Authority Hardening v1, exact validation, preserved boundaries and no-active-task state.
 
 ## Needs Attention
-- Preserve protected residue and avoid stale `active_context.md`; do not activate a second portfolio automatically.
+- Preserve protected residue and avoid stale `active_context.md`; do not stage, publish or activate follow-on work automatically.

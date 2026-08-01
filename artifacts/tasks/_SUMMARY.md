@@ -106,11 +106,13 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260730-first-bounded-evidence-portfolio-production-pilot.md`
 - `T-20260731-evidence-portfolio-production-boundary-contract-v1.md`
 - `T-20260731-second-evidence-portfolio-sweden-infrastructure-v1.md`
+- `T-20260801-publication-authority-hardening-v1.md`
+- `T-20260801-mixed-live-restoration-hardening-v1.md`
 - `backlog.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No active task. The Sweden Infrastructure portfolio completed production and validation in an unstaged publication candidate; publication and follow-on production remain separately authorized.
+- No active task. Mixed-Live Restoration Hardening v1 completed as an unstaged correction; publication and follow-on work remain separately authorized.
 
 ## Needs Attention
-- Reopen non-WDI disagreement production only after a bounded, immutable, source-independent, metadata-complete, licensing-cleared two-source evidence bundle exists. Preserve unrelated residue; do not stage/commit/push unless separately authorized.
+- Preserve unrelated residue and keep staging empty. Any later publication must rebuild authority/gate evidence from independently authenticated originals and close the documented path-replacement interval.

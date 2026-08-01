@@ -38,6 +38,7 @@ ProjectForge helper tools plus KnowledgeForge deterministic validators.
 - `postgresql_operational_projection.py`
 - `postgresql_realization_decision.py`
 - `production_support.py`
+- `publication_authority.py`
 - `record_metric.py`
 - `recover_session.py`
 - `register_project.py`
@@ -104,6 +105,7 @@ ProjectForge helper tools plus KnowledgeForge deterministic validators.
 - `validate_knowledge_pipeline_v1.py` validates synthetic pre-production pipeline fixtures across Evidence, Evidence Evaluation, Knowledge Candidate, Knowledge Object, and Knowledge Change.
 - `evidence_portfolio_production.py` composes accepted contracts for deterministic preregistration, strict repository-state-bound canary authorization, enforced limits, contained inputs, serialized persistence, complete accounting, canonical promotion, operational views and rerun/preservation verification; it does not define a portfolio ontology.
 - `architecture_reality_audit.py` supports exact acyclic audit-subject and final-candidate attestation with independently verified tool identity.
+- `publication_authority.py` authenticates exact parent/source populations, separately retained mixed-live originals, protected snapshots, canonical authority history and deterministic staging gates without mutating the Git index.
 
 ## Needs Attention
 - Validation Framework v1 is fixture-backed only; do not treat it as production generation or MacroForge compatibility proof.

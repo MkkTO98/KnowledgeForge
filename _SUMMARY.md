@@ -40,9 +40,9 @@ Root of KnowledgeForge, the EIP canonical reusable knowledge substrate project. 
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No task is active. Two bounded Evidence Portfolios completed with four promoted baseline packages and 112 operational result views across Norway Health and Sweden Infrastructure.
+- No task is active. Publication Authority Hardening v1 is validated as an unstaged working-tree candidate; it changes no canonical Knowledge Objects or portfolio accounting.
 - The canonical publication candidate contains 564 accepted KnowledgeObjectPackages with fingerprint `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`; publication remains unauthorized.
 
 ## Needs Attention
-- Keep canonical packages, result records and operational views separately counted; the approximately 100-output horizon is not a quota.
-- Do not redesign architecture or activate another portfolio without separate authorization. Preserve unrelated working-tree residue.
+- Preserve unrelated working-tree residue and empty staging.
+- Future publication must use the canonical authority/gate and frozen-source staging verification; do not activate another portfolio without separate authorization.

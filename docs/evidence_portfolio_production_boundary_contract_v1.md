@@ -96,14 +96,41 @@ Predecessor discovery excludes the current output destination and selects the le
 
 ## 5. Acyclic generation and publication-preflight sequence
 
-1. Freeze substantive authorized candidate blobs.
-2. Build and verify the external Audit Subject Manifest, excluding only audit output and reports summary.
-3. Run the architecture audit against that subject and write the audit report.
-4. Regenerate `artifacts/reports/_SUMMARY.md` so it lists the audit.
-5. Freeze all candidate blobs.
-6. Build the external prospective publication manifest containing every subject path, the exact audit report, exact regenerated summary and all other authorized candidate paths.
-7. Verify that the audit binds the subject manifest, every subject mode/hash still matches, the summary lists the audit, and the final path/mode/hash set is exact.
-8. Publication remains separately prohibited until an explicit publication-only task.
+1. Before applying or staging any candidate representation, run `tools/publication_authority.py snapshot-mixed` against the current live repository, the exact mixed-source manifest, and a separately retained independently authenticated original-evidence manifest/root. The original-evidence root must be external to the repository, contain the exact mixed path population and bytes/modes, bind the same parent HEAD, and remain independent of both current live paths and candidate roots. The new protected snapshot root must also be external and new. Snapshot construction first proves that current live paths equal the independent originals, copies from the authenticated original-evidence descriptors rather than mutable live pathnames, and verifies live equality again after capture. It binds the current parent HEAD plus mixed-manifest fingerprint.
+2. Freeze substantive authorized candidate blobs.
+3. Build and verify the external Audit Subject Manifest, excluding only audit output and reports summary.
+4. Run the architecture audit against that subject and write the audit report.
+5. Regenerate `artifacts/reports/_SUMMARY.md` so it lists the audit.
+6. Freeze all candidate blobs and declare three publication source populations: the complete-file manifest, the mixed-representation manifest, and any additional authority-only entries with non-empty reasons.
+7. Build and verify the external prospective publication manifest containing every subject path, the exact audit report, exact regenerated summary and all other authorized candidate paths.
+8. Reconcile that flat manifest with `tools/publication_authority.py`. Audit-subject coverage is an attestation input only and never contributes paths to publication authority. The publication authority must be the exact union of all complete, mixed and justified authority-only declarations.
+9. Derive parent identities directly from the exact Git commit named by both source manifests, require it to equal repository `HEAD`, and disable replacement refs and process-level Git path/object overrides. Caller-supplied parent projections are historical regression evidence only and cannot build a staging-capable authority.
+10. Derive the changed-versus-parent subset mechanically from authenticated modes and blob bytes. Parent-identical authority remains authorized but is excluded from the changed-path staging plan; mode-only changes remain real changes.
+11. Verify each physical complete, mixed and authority-only candidate source root independently. Missing files, root/final/intermediate symlinks, unsupported types, mode drift, byte drift, traversal and escapes fail closed.
+12. Verify the independent original-evidence manifest/root, the complete protected mixed snapshot population and its retained bytes, then prove that the snapshot and current live mixed files both equal those independent originals while candidate mixed files independently equal the mixed-source manifest. Hash-only evidence, evidence derived only from current live paths, partial snapshots, late snapshot after candidate overwrite, M=1 live overwrite, stale parent/manifest binding, exact filesystem-mode drift, snapshot mutation, candidate mutation and live mutation fail closed.
+13. Bind the authority to one normalized absolute `publication_authority_registry.json` locator whose parent chain contains no symlink. Registry installation writes that bound locator atomically and appends an identity-named record to `publication_authority_registry.history/`. Generations form a contiguous fingerprint chain and every successor accounts for its predecessor. Gate construction and verification require the canonical registry to equal the latest retained history record; callers cannot substitute an arbitrary registry object or roll the canonical file back.
+14. Verify the current source manifests and roots, authenticated parent tree, protected mixed snapshot and live originals, authority, registry and strict-Boolean staging gate immediately before any index mutation. The staging gate binds separate fingerprints for the protected/live mixed population and candidate mixed population. A v3 flat final-candidate manifest without this source-aware and preservation-aware reconciliation cannot authorize staging.
+15. Publication remains separately prohibited until an explicit publication-only task.
+
+### 5.1 Publication Authority Contract v1
+
+Schema identities:
+
+- `knowledgeforge.publication_authority.v1@1.0`
+- `knowledgeforge.publication_authority.registry.v1@1.0`
+- `knowledgeforge.publication_authority.staging_gate.v1@1.0`
+
+The authority binds parent HEAD and authenticated tree identity, its canonical registry locator, audit-subject fingerprint, complete and mixed source-manifest fingerprints and counts, every justified authority-only declaration, representation kind, exact path/mode/blob identity, parent-population fingerprint, changed and parent-identical populations, supersession state, one changed complete durable-record path and a canonical authority fingerprint.
+
+The source populations are declarative authority, not inferred from audit coverage or current working-tree status. Missing complete or mixed entries, unexpected authority entries and conflicting representations fail closed. Exact duplicate authority-only declarations are canonically deduplicated; declarations sharing a path but differing in representation kind, mode, blob identity or justification conflict and fail closed.
+
+Paths must be canonical repository-relative POSIX paths. Empty, absolute, traversal, dot-normalized, backslash, NUL, `.git`, unsupported-mode, malformed-hash, false declared size, missing, non-regular and symlinked representations fail closed. The Git repository, registry parent and all source roots must have no symlink component in their complete ancestor chains; source roots are checked independently so one representation population cannot escape into another.
+
+`added`, `content`, `mode_only`, `content_and_mode` and `parent_identical` are distinct classifications. Only the first four enter the staging plan. The authority remains larger than or equal to its parent delta.
+
+Registry installation itself requires an exact active authority schema with a valid self-fingerprint. The staging gate is valid only when its result is the literal Boolean `true`, blockers are empty, the authenticated parent tree still matches, every physical candidate source representation still matches, the complete externally retained mixed snapshot still authenticates, every current live mixed path still equals its protected snapshot bytes and exact filesystem mode, all source and authority fingerprints still match, and the latest hash-chained registry names the authority as active and not superseded. The gate binds protected/live and candidate mixed populations independently. Mutation after snapshot capture, authority construction or gate construction invalidates authorization; an M=1 overwrite is a gate failure rather than a preservation success. A replacement authority must explicitly name and supersede its active predecessor, and the registry history must account for that predecessor; an old gate cannot authorize staging under the successor registry. Deleting canonical, history or protected-snapshot evidence is evidence destruction outside this local mechanism's trust boundary and remains prohibited by preservation controls.
+
+The exact authority and postflight evidence remain external and fingerprinted because including a manifest that hashes itself would create a cycle. Independent original evidence is a separate trust input: it must pre-exist candidate application, be retained outside the repository, bind the same parent and exact mixed population, and cannot be synthesized from already-overwritten live paths. The candidate must nevertheless contain an authorized changed complete task, decision, report or handoff artifact. Gate verification requires exact semantic markers for schema identity, parent HEAD, audit-subject fingerprint, mixed-manifest fingerprint, complete and authority-only counts, and a non-empty external-evidence locator. A report-shaped file without these markers cannot satisfy continuity. Disposable storage alone is not sufficient continuity evidence.
 
 ## 6. Current unpublished pilot compatibility
 

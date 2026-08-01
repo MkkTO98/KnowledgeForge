@@ -88,6 +88,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `R-20260731-evidence-portfolio-production-boundary-contract-v1.md`
 - `R-20260731-second-evidence-portfolio-sweden-infrastructure-v1.md`
 - `R-20260801-architecture-reality-audit.md`
+- `R-20260801-publication-authority-hardening-v1.md`
 - `campaign33_pre_existing_object_hashes.json`
 - `campaign34-statistical-summary-pilot-evaluation-gate-20260710/`
 - `campaign34-wdi-denmark-population-statistical-summary-20260710/`
@@ -131,7 +132,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `R-20260731-second-evidence-portfolio-sweden-infrastructure-v1.md` records corrected production, exact accounting, replay, semantic review, projection and preservation evidence; `R-20260801-architecture-reality-audit.md` is the zero-block/zero-warning attested drift gate.
+- `R-20260801-publication-authority-hardening-v1.md` records the reusable authority correction, adversarial review and exact validation; `R-20260801-architecture-reality-audit.md` records the scheduled cadence trigger and frozen candidate attestation, after which the no-write rerun was zero-block/zero-warning.
 
 ## Needs Attention
-- Do not retain bulky validator/source payloads in repository unless policy authority and long-term use are explicit. Non-WDI disagreement production still lacks an admitted two-source evidence bundle.
+- Publication remains unauthorized. Preserve the external source/audit/authority evidence named by the durable report until a separately authorized publication operation completes.

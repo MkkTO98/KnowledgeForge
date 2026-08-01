@@ -15,7 +15,7 @@ This folder is part of the ProjectForge file-backed operating system for `state`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Current state records the completed first bounded Evidence Portfolio pilot, the validated Production Boundary Contract v1 correction and canonical 562-package repository; no active task or successor portfolio is authorized.
+- Current state records two completed portfolios, the unchanged 564-package canonical repository and validated Publication Authority Hardening v1; no active task is authorized.
 
 ## Needs Attention
-- Preserve canonical/view-count distinctions and unrelated local residue; await explicit authorization before another portfolio or consumer contract task.
+- Preserve unrelated residue and empty staging; publication and follow-on production require separate authorization.

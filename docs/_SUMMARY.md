@@ -61,7 +61,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Architectural formalization remains closed. The first bounded Evidence Portfolio production pilot subsequently validated the accepted architecture without redesign; roadmap and production-evolution records now capture the 562-package state.
+- Architectural formalization remains closed. The production-boundary contract now includes one reusable publication-authority, registry and staging-gate procedure without changing canonical knowledge semantics.
 
 ## Needs Attention
-- Do not infer that the two-series portfolio authorizes quota-driven scaling, advanced statistical methods or a general InsightForge adapter. A second portfolio requires separate authorization.
+- The authority tool emits a plan only; future publication must stage from frozen verified sources and immediately verify index identity.

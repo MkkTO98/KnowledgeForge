@@ -80,10 +80,11 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `D-20260712-pearson-path-to-100-mixed-roadmap.md`
 - `D-SETUP-project-initialization.md`
 - `D-20260713-two-source-gdp-growth-evidence-admission-rejected.md`
+- `D-20260801-publication-authority-hardening-v1.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `D-20260713-two-source-gdp-growth-evidence-admission-rejected.md` rejects IMF/OECD Denmark 2025 real GDP growth evidence admission with available evidence; no bundle admitted and candidate is not classified permanently unsuitable.
+- `D-20260801-publication-authority-hardening-v1.md` accepts one repository-local, fail-closed authority/registry/gate mechanism without authorizing Git publication or changing canonical knowledge architecture.
 
 ## Needs Attention
-- Next evidence-admission attempt must independently establish retention permission, exact release/vintage identity, source independence, and observation status before retaining raw source values.
+- Future publication must stage only from frozen verified representations and immediately verify index identity; this decision does not authorize staging, commit or push.

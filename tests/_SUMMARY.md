@@ -69,6 +69,9 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_postgresql_operational_projection.py`
 - `test_postgresql_realization_decision.py`
 - `test_production_support.py`
+- `test_publication_authority.py`
+- `test_publication_authority_adversarial_review.py`
+- `test_publication_authority_mixed_restoration.py`
 - `test_relationship_export_v1.py`
 - `test_release_automation_alignment_v1.py`
 - `test_release_inbox_real_evidence_v1.py`
@@ -86,6 +89,7 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_vertical_slice_0.py` verifies the approved four-object ecosystem plus negative invariant cases.
 - `test_evidence_portfolio_production.py` verifies deterministic manifests/identities/reruns, strict authorization and repository pre-state/concurrency binding, every normative limit, path containment, accounting, applicability, immutability, promotion/idempotence, duplicate/null/rejection/failure separation, isolated projection and unrelated-state preservation.
 - `test_architecture_reality_audit.py` verifies deterministic acyclic subject identity, tool binding, predecessor exclusion and exact sorted unique final-candidate manifests.
+- Publication-authority tests verify exact reconciliation, stable authority/history, independently authenticated mixed-live restoration, late-capture and mid-copy mutation rejection, stale-source and rollback rejection, CLI behavior, symlink/replacement-ref defenses and the corrected Sweden Infrastructure regression.
 
 ## Needs Attention
 - Future MacroForge compatibility tests should remain audit/fixture-backed until production generation is explicitly approved.
