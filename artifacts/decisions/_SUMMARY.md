@@ -72,19 +72,27 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `D-20260712-first-difference-pearson-method-contract-validation.md`
 - `D-20260712-next-production-readiness-before-campaign43.md`
 - `D-20260712-operational-state-backup-restore-durability-gate.md`
-- `D-20260713-post-campaign43-next-production-readiness-gate.md`
-- `D-20260713-post-repair-production-readiness-gate.md`
-- `D-20260713-non-wdi-multisource-disagreement-planning-gate.md`
 - `D-20260712-pearson-candidate-policy-v2-consistency-correction.md`
 - `D-20260712-pearson-candidate-policy-v2-mixed-roadmap.md`
 - `D-20260712-pearson-path-to-100-mixed-roadmap.md`
-- `D-SETUP-project-initialization.md`
+- `D-20260713-non-wdi-multisource-disagreement-planning-gate.md`
+- `D-20260713-post-campaign43-next-production-readiness-gate.md`
+- `D-20260713-post-repair-production-readiness-gate.md`
 - `D-20260713-two-source-gdp-growth-evidence-admission-rejected.md`
+- `D-20260715-package-content-fingerprint-v1.md`
+- `D-20260716-governing-contract-resolution-profile-v1.md`
+- `D-20260716-promotion-verification-admission-publication-sequence-v1.md`
+- `D-20260717-canonical-visibility-completion-boundary-v1.md`
+- `D-20260731-evidence-portfolio-production-boundary-contract-v1.md`
+- `D-20260801-mixed-live-restoration-hardening-v1.md`
 - `D-20260801-publication-authority-hardening-v1.md`
+- `D-20260801-two-evidence-portfolio-generalization-review-v1.md`
+- `D-20260802-evidence-portfolio-conformance-profile-v1-accepted.md`
+- `D-SETUP-project-initialization.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `D-20260801-publication-authority-hardening-v1.md` accepts one repository-local, fail-closed authority/registry/gate mechanism without authorizing Git publication or changing canonical knowledge architecture.
+- `D-20260802-evidence-portfolio-conformance-profile-v1-accepted.md` accepts isolated prospective conformance only; no task is active.
 
 ## Needs Attention
-- Future publication must stage only from frozen verified representations and immediately verify index identity; this decision does not authorize staging, commit or push.
+- The conformance decision does not authorize live producer integration, publication, historical rewriting, canonical/PostgreSQL mutation or portfolio three.

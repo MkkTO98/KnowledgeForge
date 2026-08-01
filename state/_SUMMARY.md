@@ -15,7 +15,7 @@ This folder is part of the ProjectForge file-backed operating system for `state`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Current state records two completed portfolios, the unchanged 564-package canonical repository and validated Publication Authority Hardening v1; no active task is authorized.
+- Current state records the completed conformance correction and canonical 564-package repository; no active task or successor portfolio is authorized.
 
 ## Needs Attention
-- Preserve unrelated residue and empty staging; publication and follow-on production require separate authorization.
+- Preserve canonical/result/view distinctions and unrelated local residue; await explicit authority for publication, live admission or portfolio three.

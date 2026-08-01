@@ -6,6 +6,7 @@ This folder is part of the ProjectForge file-backed operating system for `templa
 ## Contains
 <!-- PROJECTFORGE:BEGIN-CONTAINS -->
 - `decisions/`
+- `evidence-admissions/`
 - `evidence-fixtures/`
 - `external-outbox-failure-recovery-v1/`
 - `external-outbox-transport-v1/`

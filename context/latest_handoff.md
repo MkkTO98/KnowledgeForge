@@ -1,38 +1,45 @@
 # Latest Handoff
 
-## Status
-
-Publication Authority Hardening v1 is complete as a validated unstaged working-tree candidate. The reusable mechanism authenticates parent and source identities, reconciles complete/mixed/authority-only populations, preserves authority history and emits a deterministic staging plan without staging or publication.
+Date: 2026-08-02
+Task: `T-20260801-evidence-portfolio-accounting-traceability-transformation-identity-dependence-conformance-correction-v1`
+Status: complete; fully validated uncommitted candidate; no active successor
 
 ## Context used
 
-- Evidence Portfolio Production Boundary Contract v1
-- prior Norway Health and Sweden Infrastructure candidate/publication evidence
-- live parent `4de0fcc9825dcbeb04a5c52a92bc259b8bd416c3`
-- frozen preservation baseline and allowlist v2 under `/tmp/knowledgeforge-publication-authority-hardening-4de0fcc/`
-- independent adversarial review
+Project constitution/state, correction task, published review, Evidence Portfolio contracts/tools/tests, Norway/Sweden source surfaces, continuity policy and two adversarial reviews.
 
-## Files and capability
+## Outcome
 
-- `tools/publication_authority.py`: reusable validator, authority/registry/gate implementation and CLI
-- `tests/test_publication_authority.py`: generic and Sweden regression tests
-- `tests/test_publication_authority_adversarial_review.py`: independent negative/regression coverage
-- `tests/fixtures/publication_authority/sweden_infrastructure_regression.json`: frozen historical regression population
-- contract, decision, task, report, audit and continuity artifacts updated
+Accepted `knowledgeforge.evidence_portfolio.conformance.v1@1.0` as the bounded prospective conformance layer. It enforces exact phase-aware accounting, directional question → candidate → evidence traceability, source-bound transformation identity, exact historical package/result/view assignment and explicit source-series/provider/acquisition/method dependence.
+
+Norway Health and Sweden Infrastructure each passed isolated proof with exact embedded-source, full report and conclusion preservation. Proof root: `/tmp/knowledgeforge-evidence-portfolio-conformance-correction-20260801-v2`.
+
+## Files changed
+
+Task-owned paths: implementation, focused tests, profile contract, task/decision/report, current state, this handoff and affected summaries.
+
+Historical portfolio roots/reports, canonical repository, PostgreSQL and sibling projects were not changed. Extensive unrelated pre-existing mixed-tree residue was not cleaned, reverted or absorbed.
 
 ## Verification
 
-- focused authority/audit: 48/48 pass
-- full repository suite: 473/473 pass
-- compileall/security scan: pass
-- coherence/context health: pass
-- formal architecture audit: zero blocks/warnings
-- independent final review findings: corrected and regression-tested
+- focused conformance: 30/30;
+- combined Evidence Portfolio: 95/95;
+- full suite: 518/518;
+- compilation: pass;
+- coherence/context health/architecture audit: 0 blocks; only known stale-context and architecture-size warnings;
+- canonical: 564 objects, 564 evolution records, 6 indexes, fingerprint `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`;
+- historical tracked diff: clean; Git index: empty;
+- final preservation: 504/504 expected visible records, 313/313 ignored records, 797 unrelated identities checked with zero mismatch, six exact new paths and zero unexpected/missing paths;
+- durability: decision D for local-only recovery-critical/operational state; 0 actual secret blockers; sensitive-material check passed;
+- one targeted shell scan was command-authorization denied, classified separately from technical failure.
 
-## Boundary and residual
+## Decisions / risks
 
-The tool authorizes an exact plan but does not call `git add`. Publication must stage from frozen verified sources and immediately verify index identity to close the remaining path-replacement interval. No Git publication or follow-on task is authorized.
+Decision: `D-20260802-evidence-portfolio-conformance-profile-v1-accepted`.
+Report: `R-20260802-evidence-portfolio-conformance-correction-closeout-v1`.
 
-## Resume command
+Two independent review cycles were exhausted. Cycle 2 found no blocker; two high-severity source-binding gaps were remediated and covered by coherent-resealing tests. Natural runtime rejection/null/redundancy/failure, missingness, disagreement, independent providers and a divergent third portfolio remain unproven.
 
-No active resume command. Start a separately authorized publication operation from the live repository and require the canonical authority/gate plus frozen-source staging verification.
+## Next action / resume
+
+Stop. Publication, live integration or portfolio three requires separate authority. To recover: `python3 tools/recover_session.py --project . --json`.

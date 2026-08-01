@@ -58,7 +58,9 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_coefficient_free_pearson_candidate_registry.py`
 - `test_correlation_batch_engine.py`
 - `test_correlation_engine_provenance_parameterization.py`
+- `test_evidence_portfolio_conformance.py`
 - `test_evidence_portfolio_production.py`
+- `test_evidence_portfolio_sweden_infrastructure.py`
 - `test_external_outbox_polling_supersession_v1.py`
 - `test_first_difference_pearson_method.py`
 - `test_knowledge_repository.py`
@@ -90,6 +92,7 @@ Project tests, including Vertical Slice 0 invariant coverage and Validation Fram
 - `test_evidence_portfolio_production.py` verifies deterministic manifests/identities/reruns, strict authorization and repository pre-state/concurrency binding, every normative limit, path containment, accounting, applicability, immutability, promotion/idempotence, duplicate/null/rejection/failure separation, isolated projection and unrelated-state preservation.
 - `test_architecture_reality_audit.py` verifies deterministic acyclic subject identity, tool binding, predecessor exclusion and exact sorted unique final-candidate manifests.
 - Publication-authority tests verify exact reconciliation, stable authority/history, independently authenticated mixed-live restoration, late-capture and mid-copy mutation rejection, stale-source and rollback rejection, CLI behavior, symlink/replacement-ref defenses and the corrected Sweden Infrastructure regression.
+- `test_evidence_portfolio_conformance.py` verifies strict schemas, accounting, traceability, transformation/dependence identity, historical-source binding, coherent resealing attacks and independent Norway/Sweden adaptation.
 
 ## Needs Attention
 - Future MacroForge compatibility tests should remain audit/fixture-backed until production generation is explicitly approved.

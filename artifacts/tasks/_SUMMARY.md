@@ -106,13 +106,15 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260730-first-bounded-evidence-portfolio-production-pilot.md`
 - `T-20260731-evidence-portfolio-production-boundary-contract-v1.md`
 - `T-20260731-second-evidence-portfolio-sweden-infrastructure-v1.md`
-- `T-20260801-publication-authority-hardening-v1.md`
+- `T-20260801-evidence-portfolio-accounting-traceability-transformation-identity-dependence-conformance-correction-v1.md`
 - `T-20260801-mixed-live-restoration-hardening-v1.md`
+- `T-20260801-publication-authority-hardening-v1.md`
+- `T-20260801-two-evidence-portfolio-generalization-review-v1.md`
 - `backlog.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No active task. Mixed-Live Restoration Hardening v1 completed as an unstaged correction; publication and follow-on work remain separately authorized.
+- No active task. Evidence Portfolio Conformance Profile v1 is complete as a fully validated uncommitted candidate.
 
 ## Needs Attention
-- Preserve unrelated residue and keep staging empty. Any later publication must rebuild authority/gate evidence from independently authenticated originals and close the documented path-replacement interval.
+- Preserve unrelated residue and keep the Git index empty. Publication, live admission and portfolio three remain separately authorized.

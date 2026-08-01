@@ -4,6 +4,12 @@ KnowledgeForge architecture remains canonical-package-first. The frozen Producti
 
 Current PostgreSQL projection role: discovery and retrieval over canonical packages while canonical authority remains with files. PostgreSQL may not originate or mutate canonical knowledge and does not participate in canonical fingerprints.
 
+## Native Package Content Fingerprint v1 formalization — 2026-07-17
+
+KnowledgeForge has published the documentation-only architecture for Package Content Fingerprint v1, deterministic governing-contract resolution, and the promotion–verification–admission–insertion–publication sequence. The architecture fixes one native-v1 release-authority family, derives checkpoint-qualified current authority from complete accepted-release evidence, separates technical validity from admission and insertion state, preserves exact serialized bytes through admission and publication proof, and completes canonical visibility only after stage-10 reconciliation and one atomic visibility switch.
+
+The normative documents are `docs/package_content_fingerprint_v1.md`, `docs/governing_contract_resolution_profile_v1.md`, and `docs/promotion_verification_admission_publication_sequence_v1.md`, governed by the accepted decisions under `artifacts/decisions/`. This formalization is not implemented and grants no production authority. Schemas, executable conformance vectors, resolver and authority-record implementation, reader-gate/visibility mechanisms, migrations, native-v1 production, PostgreSQL changes, and export changes remain separately gated future work.
+
 ## Method v2 status — 2026-07-10
 
 A bounded deterministic statistical-summary method v2 exists in `tools/deterministic_statistical_summary_v2.py` with contract `artifacts/methods/statistical_summary_calculation_contract_v2.json`. It establishes a local Decimal context independent of ambient Python Decimal state.
@@ -48,3 +54,17 @@ Current measured material supports ordinary Git as the primary durability destin
 ## Operational state checkpoint boundary — 2026-07-12
 
 KnowledgeForge has a versioned local operational-state checkpoint/restore primitive for mutable release inbox, seen-release/current-state, accepted source copy, and outbox transport state. The checkpoint contract is `knowledgeforge.operational_state_checkpoint.v1`; protected-state configuration is `knowledgeforge.protected_state.v1`. The primitive supports deterministic manifesting, sensitive exclusions, validation, isolated restore, and PostgreSQL reconstruction evidence. Same-host checkpoints are recovery/restore evidence only and must not be represented as disaster durability: `tested_local_only = true`, `machine_loss_durable = false`, and `external_destination_configured = false` until an off-host or outside-host-failure-domain destination is actually configured and verified.
+
+## Evidence Portfolio production realization — 2026-07-30
+
+The first bounded pilot confirmed that an Evidence Portfolio is an execution/accounting composition over accepted candidate-registry, campaign, calculation, KnowledgeObjectPackage, canonical repository, promotion, operational-view and projection contracts. It is not a canonical object type or parallel batching subsystem.
+
+Evidence-Card-equivalent outputs are operational views of canonical result records. Their count remains separate from canonical package count, source-series count, transformations, bundles, dependency clusters, exclusions, nulls, redundancies and failures.
+
+The existing filesystem authority and rebuildable PostgreSQL projection represented the two promoted baseline-characterization packages without schema change. Direct package/projection consumption is adequate; relationship-specific export metadata does not generalize to baseline characterization. No architecture amendment or new decision was required.
+
+## Evidence Portfolio conformance profile v1 — 2026-08-02
+
+`knowledgeforge.evidence_portfolio.conformance.v1@1.0` is the accepted prospective conformance layer over the existing Evidence Portfolio composition. It closes the reviewed accounting, question-to-evidence, transformation-identity and dependence gaps without introducing a canonical type, evidence family, calculation method, database, projection schema or parallel subsystem.
+
+The profile uses deterministic, versioned envelopes with embedded parsed historical source objects, exact source/report bindings, phase-aware candidate/result accounting, directional traceability, source-bound transformations and separately derived source-series/provider/acquisition/method dependence clusters. Envelope validation proves self-consistency; governed-source comparison remains a separate authentication requirement. Historical Norway/Sweden surfaces remain immutable and require explicit adaptation. Live producer admission, publication, a third portfolio and any canonical/PostgreSQL mutation remain separately gated.

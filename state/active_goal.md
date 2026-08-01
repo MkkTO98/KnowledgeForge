@@ -1,20 +1,24 @@
 # Active Goal
 
-## Current objective
+## Current status
 
-No active production task.
+No active successor task. The Evidence Portfolio accounting, traceability, transformation-identity and dependence conformance correction v1 is complete as a fully validated uncommitted candidate.
 
-Publication Authority Hardening v1 is complete as an unstaged working-tree candidate. It provides exact candidate reconciliation and staging-plan authorization; it does not authorize Git publication.
+## Completed authority
 
-## Completed boundary
+- Task: `artifacts/tasks/T-20260801-evidence-portfolio-accounting-traceability-transformation-identity-dependence-conformance-correction-v1.md`
+- Decision: `artifacts/decisions/D-20260802-evidence-portfolio-conformance-profile-v1-accepted.md`
+- Report: `artifacts/reports/R-20260802-evidence-portfolio-conformance-correction-closeout-v1.md`
+- Predecessor review: `artifacts/reports/R-20260801-two-evidence-portfolio-generalization-review-v1.md`
 
-- authenticated parent-tree and source-manifest reconciliation implemented;
-- complete, mixed, authority-only and parent-identical classifications enforced;
-- canonical authority registry history and rollback detection implemented;
-- durable continuity-report requirements enforced;
-- focused 48/48 and full 473/473 tests passed;
-- compilation, security scan, coherence, context health and formal architecture audit passed.
+## Result
 
-## Stop condition
+`knowledgeforge.evidence_portfolio.conformance.v1@1.0` now enforces exact phase-aware accounting, directional question-to-evidence traceability, source-bound transformation identity and explicit provider/acquisition/method dependence. Norway Health and Sweden Infrastructure passed isolated conformance with exact source and conclusion preservation.
 
-Stop after guarded candidate application and preservation verification. Do not stage, commit, push, tag, release, publish or activate a follow-on task without explicit authorization.
+## Boundary
+
+The candidate is uncommitted and the Git index is empty. No third portfolio, new evidence, live conformance admission, historical/canonical/PostgreSQL/sibling mutation, staging, commit, push, tag or release is authorized. Repository-wide durability remains decision D for pre-existing mixed local recovery-critical state; zero actual secret blockers were found.
+
+## Current next action
+
+Stop. Resume only under separate authority for publication, live integration or a deliberately divergent third portfolio.

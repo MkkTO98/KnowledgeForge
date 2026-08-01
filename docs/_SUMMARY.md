@@ -20,6 +20,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 - `campaign39_production_value_assessment.md`
 - `correlation_knowledge_boundary.md`
 - `doctrine_review_triggers.md`
+- `evidence_portfolio_conformance_profile_v1.md`
 - `evidence_portfolio_production_boundary_contract_v1.md`
 - `evidence_source_evaluation_specification.md`
 - `governed_vocabularies.md`
@@ -61,7 +62,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Architectural formalization remains closed. The production-boundary contract now includes one reusable publication-authority, registry and staging-gate procedure without changing canonical knowledge semantics.
+- Evidence Portfolio Conformance Profile v1 is accepted as a prospective adaptation and validation layer over the unchanged historical Norway/Sweden portfolios.
 
 ## Needs Attention
-- The authority tool emits a plan only; future publication must stage from frozen verified sources and immediately verify index identity.
+- Do not infer universal generality, live producer enforcement, publication authority or third-portfolio authority from two isolated conformance proofs.

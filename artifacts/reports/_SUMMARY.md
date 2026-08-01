@@ -88,7 +88,10 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `R-20260731-evidence-portfolio-production-boundary-contract-v1.md`
 - `R-20260731-second-evidence-portfolio-sweden-infrastructure-v1.md`
 - `R-20260801-architecture-reality-audit.md`
+- `R-20260801-mixed-live-restoration-hardening-v1.md`
 - `R-20260801-publication-authority-hardening-v1.md`
+- `R-20260801-two-evidence-portfolio-generalization-review-v1.md`
+- `R-20260802-evidence-portfolio-conformance-correction-closeout-v1.md`
 - `campaign33_pre_existing_object_hashes.json`
 - `campaign34-statistical-summary-pilot-evaluation-gate-20260710/`
 - `campaign34-wdi-denmark-population-statistical-summary-20260710/`
@@ -122,17 +125,10 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `pearson-candidate-policy-refinement-mixed-roadmap-20260712/`
 - `pearson-candidate-policy-v2-consistency-correction-20260712/`
 - `post-campaign42-production-alignment-git-durability-20260712/`
-- `post-campaign43-test-discovery-correction-20260713/`
-- `post-repair-production-readiness-gate-20260713/`
-- `postgresql-acceptance-sequencing-20260710/`
-- `postgresql-projection-implementation-20260710/`
-- `postgresql-realization-decision-20260710/`
-- `provider-neutral-outbox-polling-supersession-postgresql-prototype-20260711/`
-- `provider-neutral-release-inbox-real-evidence-impact-pilot-v1-20260711/`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `R-20260801-publication-authority-hardening-v1.md` records the reusable authority correction, adversarial review and exact validation; `R-20260801-architecture-reality-audit.md` records the scheduled cadence trigger and frozen candidate attestation, after which the no-write rerun was zero-block/zero-warning.
+- `R-20260802-evidence-portfolio-conformance-correction-closeout-v1.md` records the completed bounded correction and independent Norway/Sweden isolated proofs.
 
 ## Needs Attention
-- Publication remains unauthorized. Preserve the external source/audit/authority evidence named by the durable report until a separately authorized publication operation completes.
+- Proof payloads remain external under `/tmp`; publication, live integration and divergent third-portfolio work require separate authority.
