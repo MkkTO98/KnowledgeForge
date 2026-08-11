@@ -110,11 +110,14 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `T-20260801-mixed-live-restoration-hardening-v1.md`
 - `T-20260801-publication-authority-hardening-v1.md`
 - `T-20260801-two-evidence-portfolio-generalization-review-v1.md`
+- `T-20260802-evidence-portfolio-conformance-admission-boundary-integration-v1.md`
+- `T-20260808-deterministic-candidate-funnel-compact-escalation-pilot.md`
 - `backlog.md`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No active task. Evidence Portfolio Conformance Profile v1 is complete as a fully validated uncommitted candidate.
+- No task is active. `T-20260802-evidence-portfolio-conformance-admission-boundary-integration-v1.md` completed renewed closeout and remains unpublished.
+- The deterministic-funnel task is complete but separately owned and excluded.
 
 ## Needs Attention
-- Preserve unrelated residue and keep the Git index empty. Publication, live admission and portfolio three remain separately authorized.
+- Preserve the exact 22-path candidate and every fresh-snapshot excluded identity. Keep the index empty; publication requires separate authority.

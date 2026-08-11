@@ -15,7 +15,7 @@ This folder is part of the ProjectForge file-backed operating system for `state`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Current state records the completed conformance correction and canonical 564-package repository; no active task or successor portfolio is authorized.
+- No task is active. State records completed renewed admission-boundary closeout; the exact 22-path candidate remains unstaged.
 
 ## Needs Attention
-- Preserve canonical/result/view distinctions and unrelated local residue; await explicit authority for publication, live admission or portfolio three.
+- Preserve exact candidate and fresh-snapshot excluded identities, seven caches, and empty index. Publication requires separate authority.

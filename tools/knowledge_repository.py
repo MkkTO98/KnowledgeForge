@@ -10,17 +10,33 @@ source-project interfaces.
 from __future__ import annotations
 
 import argparse
+import fcntl
 import hashlib
 import json
 import os
 import re
 import tempfile
+from contextlib import contextmanager
 from pathlib import Path
 from typing import Any
 
 SCHEMA_VERSION = "1.0"
 REPOSITORY_KIND = "KnowledgeForgeKnowledgeRepository"
 DEFAULT_REPOSITORY_ROOT = Path("knowledge_repository")
+
+
+@contextmanager
+def repository_writer_lock(repository_root: Path | str):
+    """Serialize every compliant writer to one canonical repository."""
+    root = Path(repository_root)
+    lock_path = root.parent / f".{root.name}.evidence_portfolio_production.lock"
+    lock_path.parent.mkdir(parents=True, exist_ok=True)
+    with lock_path.open("a+b") as handle:
+        fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
+        try:
+            yield lock_path
+        finally:
+            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
 
 
 def canonical_json(value: Any) -> str:
@@ -346,9 +362,51 @@ def authenticate_repository(repository_root: Path | str) -> dict[str, Any]:
         raise ValueError(f"repository authentication failed: {exc}") from exc
 
 
-def persist_knowledge_object_packages(packages: list[dict[str, Any]], repository_root: Path | str = DEFAULT_REPOSITORY_ROOT) -> dict[str, Any]:
-    """Persist validated packages only after a complete canonical-output preflight."""
+def observed_repository_state(repository_root: Path | str) -> dict[str, Any]:
+    """Authenticate a nonempty repository or represent an absent/empty target exactly."""
     root = Path(repository_root)
+    if not root.exists():
+        return {"exists": False, "object_count": 0, "repository_fingerprint": None}
+    if root.is_symlink():
+        raise ValueError("repository root must not be a symlink")
+    if not root.is_dir():
+        raise ValueError("repository root is not an authenticatable directory")
+    try:
+        if not any(root.iterdir()):
+            return {"exists": False, "object_count": 0, "repository_fingerprint": None}
+    except OSError as exc:
+        raise ValueError("repository root cannot be inspected") from exc
+    return {"exists": True, **authenticate_repository(root)}
+
+
+def persist_knowledge_object_packages(
+    packages: list[dict[str, Any]],
+    repository_root: Path | str = DEFAULT_REPOSITORY_ROOT,
+    *,
+    expected_repository_state: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Persist validated packages under the shared repository writer lock."""
+    root = Path(repository_root)
+    with repository_writer_lock(root):
+        return _persist_knowledge_object_packages_locked(
+            packages,
+            root,
+            expected_repository_state=expected_repository_state,
+        )
+
+
+def _persist_knowledge_object_packages_locked(
+    packages: list[dict[str, Any]],
+    repository_root: Path | str,
+    *,
+    expected_repository_state: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Internal persistence body; caller must already hold repository_writer_lock."""
+    root = Path(repository_root)
+    if expected_repository_state is not None:
+        current_state = observed_repository_state(root)
+        if current_state != expected_repository_state:
+            raise ValueError("repository state changed before persistence")
     if root.is_symlink():
         raise ValueError("repository root must not be a symlink")
     _validate_repository_structure(root)
@@ -393,12 +451,19 @@ def persist_knowledge_object_packages(packages: list[dict[str, Any]], repository
         write_json(root / "indexes" / f"{name}.json", index)
     write_json(root / "manifest.json", manifest)
 
+    if expected_repository_state is not None:
+        authenticated = authenticate_repository(root)
+        object_count = authenticated["object_count"]
+        repository_fingerprint = authenticated["repository_fingerprint"]
+    else:
+        object_count = len(all_packages)
+        repository_fingerprint = manifest["repository_fingerprint"]
     return {
         "repository_root": str(root),
         "persisted_count": len(incoming_by_id),
         "rejected_count": 0,
-        "total_object_count": len(all_packages),
-        "repository_fingerprint": manifest["repository_fingerprint"],
+        "total_object_count": object_count,
+        "repository_fingerprint": repository_fingerprint,
         "manifest_path": str(root / "manifest.json"),
     }
 

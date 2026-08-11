@@ -289,7 +289,7 @@ def command_run(args: argparse.Namespace) -> None:
         Path(args.output_root),
         Path(args.repository_root),
         Path(args.canary_gate) if args.canary_gate else None,
-        manifest_file_fingerprint=portfolio.file_fingerprint(manifest_path),
+        manifest_source_path=manifest_path,
         project_root=PROJECT_ROOT,
     )
     print(json.dumps(gate, sort_keys=True))

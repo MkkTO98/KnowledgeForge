@@ -20,6 +20,8 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 - `campaign39_production_value_assessment.md`
 - `correlation_knowledge_boundary.md`
 - `doctrine_review_triggers.md`
+- `evidence_portfolio_admission_attempt_profile_v1.md`
+- `evidence_portfolio_conformance_admission_boundary_v1.md`
 - `evidence_portfolio_conformance_profile_v1.md`
 - `evidence_portfolio_production_boundary_contract_v1.md`
 - `evidence_source_evaluation_specification.md`
@@ -62,7 +64,7 @@ This folder is part of the ProjectForge file-backed operating system for `docs`.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- Evidence Portfolio Conformance Profile v1 is accepted as a prospective adaptation and validation layer over the unchanged historical Norway/Sweden portfolios.
+- No active task. The corrected admission-boundary contract and exact admission-attempt profile v1 completed renewed closeout in the unstaged candidate.
 
 ## Needs Attention
-- Do not infer universal generality, live producer enforcement, publication authority or third-portfolio authority from two isolated conformance proofs.
+- Historical conformance v1 remains a distinct immutable subject. Do not infer universal generality or production authority from the two historical portfolios.

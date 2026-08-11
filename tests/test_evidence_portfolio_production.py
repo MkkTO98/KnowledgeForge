@@ -307,8 +307,8 @@ class ProductionBoundaryAuthorizationTests(unittest.TestCase):
 
     def test_invalid_authorization_fails_before_calculation_or_persistence(self):
         manifest = boundary_manifest()
-        with tempfile.TemporaryDirectory() as td, mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "persist_packages", side_effect=AssertionError("persistence reached")):
-            with self.assertRaises(ValueError): epp.run_portfolio(manifest, "production", Path(td) / "out", Path(td) / "repo", Path(td) / "missing", manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=Path(td))
+        with tempfile.TemporaryDirectory() as td, mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "_persist_packages_locked", side_effect=AssertionError("persistence reached")):
+            with self.assertRaises(ValueError): epp.run_portfolio(manifest, "production", Path(td) / "out", Path(td) / "repo", Path(td) / "missing", project_root=Path(td))
 
     def test_repository_state_mismatch_fails_before_calculation_or_persistence(self):
         manifest = boundary_manifest(); gate = valid_authorization(manifest)
@@ -316,14 +316,14 @@ class ProductionBoundaryAuthorizationTests(unittest.TestCase):
             root = Path(td); gate_path = root / "gate.json"; repo = root / "repo"
             epp.persist_packages([], repo)
             epp.write_json(gate_path, gate)
-            with mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "persist_packages", side_effect=AssertionError("persistence reached")):
+            with mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "_persist_packages_locked", side_effect=AssertionError("persistence reached")):
                 with self.assertRaisesRegex(ValueError, "repository state"):
-                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root)
+                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, project_root=root)
 
     def test_repository_state_change_during_calculation_blocks_persistence(self):
-        first_entry = manifest_entry(); second_entry = copy.deepcopy(first_entry); second_entry["candidate_id"] = "second"; second_entry["canary"] = False
+        first_entry = manifest_entry(); second_entry = copy.deepcopy(first_entry); second_entry["candidate_id"] = "second"; second_entry["canary"] = False; second_entry["indicator"]["code"] = "TEST.HEALTH.SECOND"; second_entry["identity_inputs"]["indicator_code"] = "TEST.HEALTH.SECOND"
         manifest = boundary_manifest([first_entry, second_entry]); gate = valid_authorization(manifest)
-        result1 = epp.calculate_candidate(first_entry, synthetic_normalized()); result2 = copy.deepcopy(result1); result2["candidate_id"] = "second"
+        result1 = epp.calculate_candidate(first_entry, synthetic_normalized()); result2 = epp.calculate_candidate(second_entry, synthetic_normalized())
         with tempfile.TemporaryDirectory() as td:
             root = Path(td); gate_path = root / "gate.json"; repo = root / "repo"
             package = epp.build_knowledge_object(first_entry, result1, manifest["manifest_fingerprint"])
@@ -336,16 +336,16 @@ class ProductionBoundaryAuthorizationTests(unittest.TestCase):
                 value = next(calls)
                 epp.write_json(repo / "manifest.json", {"object_count": 99, "repository_fingerprint": "sha256:" + "9" * 64})
                 return value
-            with mock.patch.object(epp, "_rerun_match", side_effect=mutate_then_return), mock.patch.object(epp, "persist_packages", side_effect=AssertionError("persistence reached")):
+            with mock.patch.object(epp, "_rerun_match", side_effect=mutate_then_return), mock.patch.object(epp, "_persist_packages_locked", side_effect=AssertionError("persistence reached")):
                 with self.assertRaisesRegex(RuntimeError, "repository state changed"):
-                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root)
+                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, project_root=root)
 
     def test_production_gate_identity_excludes_elapsed_telemetry_but_execution_evidence_retains_it(self):
         first_entry = manifest_entry()
-        second_entry = copy.deepcopy(first_entry); second_entry["candidate_id"] = "second"; second_entry["canary"] = False
+        second_entry = copy.deepcopy(first_entry); second_entry["candidate_id"] = "second"; second_entry["canary"] = False; second_entry["indicator"]["code"] = "TEST.HEALTH.SECOND"; second_entry["identity_inputs"]["indicator_code"] = "TEST.HEALTH.SECOND"
         manifest = boundary_manifest([first_entry, second_entry]); gate = valid_authorization(manifest)
         result1 = epp.calculate_candidate(first_entry, synthetic_normalized())
-        result2 = copy.deepcopy(result1); result2["candidate_id"] = "second"
+        result2 = epp.calculate_candidate(second_entry, synthetic_normalized())
         authorized_state = authorized_repository_state(gate)
 
         def execute_once(root, elapsed_values):
@@ -356,17 +356,16 @@ class ProductionBoundaryAuthorizationTests(unittest.TestCase):
                 (copy.deepcopy(result2), copy.deepcopy(result2), True),
             ])
             monotonic_values = iter([0.0, elapsed_values[0], 10.0, 10.0 + elapsed_values[1]])
-            package = lambda entry, *_args: {"package_id": entry["candidate_id"], "scope": {"source_scope": {"indicator_code": entry["indicator"]["code"]}}}
-            with mock.patch.object(epp, "repository_state", return_value=authorized_state), \
+            with mock.patch.object(epp, "observed_repository_state", return_value={"exists": True, **authorized_state}), \
                     mock.patch.object(epp, "_rerun_match", side_effect=lambda *_args: next(rerun_results)), \
                     mock.patch.object(epp.time, "monotonic", side_effect=lambda: next(monotonic_values)), \
-                    mock.patch.object(epp, "build_knowledge_object", side_effect=package), \
-                    mock.patch.object(epp, "render_operational_views", return_value=[]), \
-                    mock.patch.object(epp, "persist_packages", return_value={"object_count": 2, "repository_fingerprint": "sha256:" + "7" * 64}), \
+                    mock.patch.object(epp.admission_attempt, "build_admission_attempt", side_effect=lambda **values: {"packages": values["packages"]}), \
+                    mock.patch.object(epp.admission_attempt, "dispatch_validate_admission_attempt", return_value={"valid": True, "decision": "admit", "admission_authorized": True}), \
+                    mock.patch.object(epp, "_persist_packages_locked", return_value={"object_count": 2, "repository_fingerprint": "sha256:" + "7" * 64}), \
                     mock.patch.object(epp, "enforce_candidate_result_limits", wraps=epp.enforce_candidate_result_limits) as enforce:
                 result_gate = epp.run_portfolio(
                     manifest, "production", root / "out", root / "repo", gate_path,
-                    manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root,
+                    project_root=root,
                 )
             evidence = epp.read_json(root / "out" / "production_execution_results.json")
             self.assertEqual([call.args[2] for call in enforce.call_args_list], elapsed_values)
@@ -388,9 +387,9 @@ class ProductionBoundaryAuthorizationTests(unittest.TestCase):
             root = Path(td); repo = root / "repo"; repo.mkdir(); gate_path = root / "gate.json"
             epp.write_json(repo / "manifest.json", authorized_repository_state(gate))
             epp.write_json(gate_path, gate)
-            with mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "persist_packages", side_effect=AssertionError("persistence reached")):
+            with mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "_persist_packages_locked", side_effect=AssertionError("persistence reached")):
                 with self.assertRaisesRegex(ValueError, "repository"):
-                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root)
+                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, project_root=root)
 
 
     def test_tampered_object_cannot_authorize_execution(self):
@@ -406,9 +405,9 @@ class ProductionBoundaryAuthorizationTests(unittest.TestCase):
             epp.write_json(gate_path, gate)
             package["status"] = "tampered"
             epp.write_json(repo / "objects" / f"{package['package_id']}.json", package)
-            with mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "persist_packages", side_effect=AssertionError("persistence reached")):
+            with mock.patch.object(epp, "_rerun_match", side_effect=AssertionError("calculation reached")), mock.patch.object(epp, "_persist_packages_locked", side_effect=AssertionError("persistence reached")):
                 with self.assertRaisesRegex(ValueError, "authentication"):
-                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, manifest_file_fingerprint=epp.manifest_bytes_fingerprint(manifest), project_root=root)
+                    epp.run_portfolio(manifest, "production", root / "out", repo, gate_path, project_root=root)
 
 
 class ProductionBoundaryLimitTests(unittest.TestCase):

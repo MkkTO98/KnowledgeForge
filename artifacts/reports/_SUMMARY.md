@@ -91,7 +91,9 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `R-20260801-mixed-live-restoration-hardening-v1.md`
 - `R-20260801-publication-authority-hardening-v1.md`
 - `R-20260801-two-evidence-portfolio-generalization-review-v1.md`
+- `R-20260802-evidence-portfolio-conformance-admission-boundary-integration-review-closeout.md`
 - `R-20260802-evidence-portfolio-conformance-correction-closeout-v1.md`
+- `R-20260808-deterministic-candidate-funnel-compact-escalation-pilot.md`
 - `campaign33_pre_existing_object_hashes.json`
 - `campaign34-statistical-summary-pilot-evaluation-gate-20260710/`
 - `campaign34-wdi-denmark-population-statistical-summary-20260710/`
@@ -115,6 +117,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 - `canonical-supersession-immutability-durability-gate-20260711/`
 - `correlation-method-v1-and-campaign36-design-20260710/`
 - `correlation-production-operationalization-20260711/`
+- `deterministic-candidate-funnel-compact-escalation-pilot-20260808/`
 - `durability-destination-decision-pre-staging-remediation-20260712/`
 - `first-difference-pearson-method-contract-validation-20260712/`
 - `macroforge-neutral-release-knowledgeforge-compatibility-pilot-20260711/`
@@ -128,7 +131,7 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `R-20260802-evidence-portfolio-conformance-correction-closeout-v1.md` records the completed bounded correction and independent Norway/Sweden isolated proofs.
+- No task is active. The admission-boundary and deterministic-funnel reports record separate completed work; the latter remains excluded from the exact 22-path admission candidate.
 
 ## Needs Attention
-- Proof payloads remain external under `/tmp`; publication, live integration and divergent third-portfolio work require separate authority.
+- No successor, production, publication, local-model, staging, commit, push or release authority is active.

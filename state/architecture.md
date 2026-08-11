@@ -68,3 +68,13 @@ The existing filesystem authority and rebuildable PostgreSQL projection represen
 `knowledgeforge.evidence_portfolio.conformance.v1@1.0` is the accepted prospective conformance layer over the existing Evidence Portfolio composition. It closes the reviewed accounting, question-to-evidence, transformation-identity and dependence gaps without introducing a canonical type, evidence family, calculation method, database, projection schema or parallel subsystem.
 
 The profile uses deterministic, versioned envelopes with embedded parsed historical source objects, exact source/report bindings, phase-aware candidate/result accounting, directional traceability, source-bound transformations and separately derived source-series/provider/acquisition/method dependence clusters. Envelope validation proves self-consistency; governed-source comparison remains a separate authentication requirement. Historical Norway/Sweden surfaces remain immutable and require explicit adaptation. Live producer admission, publication, a third portfolio and any canonical/PostgreSQL mutation remain separately gated.
+
+## Evidence Portfolio admission integration — 2026-08-02
+
+The historical analytical-adaptation profile `knowledgeforge.evidence_portfolio.conformance.v1@1.0` remains immutable and separate from live producer admission. The sole live owner is `tools/evidence_portfolio_production.py:run_portfolio()`, governed by exact profile `knowledgeforge.evidence_portfolio.admission_attempt.v1@1.0`.
+
+The live boundary distinguishes invocation, evaluation, rejected attempt and canonical package admission. Authorization requires exact manifest identity, evaluated scope, deterministic outcomes/reruns, empty blockers and complete independently owner-derived package/result/view identities. Cross-population semantics use canonical typed-JSON equality. Null/rejected/failed outcomes never authorize packages.
+
+Repository safety uses authenticated pre-state, a shared repository-adjacent writer lock, persistence-time state binding and authenticated post-state. Public persistence APIs always acquire the lock; only private locked implementations are called by the already-locked owner. Operational output and canonical repository roots are fully disjoint, and deterministic target defects are preflighted before execution.
+
+The two historical Norway/Sweden adaptations prove two concrete historical surfaces, not universal portfolio generality. The completed candidate adds no portfolio ontology, third portfolio, PostgreSQL projection or publication authority.

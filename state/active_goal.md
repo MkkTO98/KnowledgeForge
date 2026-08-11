@@ -1,24 +1,21 @@
 # Active Goal
 
-## Current status
+## Current Objective
 
-No active successor task. The Evidence Portfolio accounting, traceability, transformation-identity and dependence conformance correction v1 is complete as a fully validated uncommitted candidate.
+No task is active. The existing 22-path Evidence Portfolio admission-boundary candidate completed bounded correction and renewed closeout at an unstaged publication boundary.
 
-## Completed authority
+## Completed Boundary
 
-- Task: `artifacts/tasks/T-20260801-evidence-portfolio-accounting-traceability-transformation-identity-dependence-conformance-correction-v1.md`
-- Decision: `artifacts/decisions/D-20260802-evidence-portfolio-conformance-profile-v1-accepted.md`
-- Report: `artifacts/reports/R-20260802-evidence-portfolio-conformance-correction-closeout-v1.md`
-- Predecessor review: `artifacts/reports/R-20260801-two-evidence-portfolio-generalization-review-v1.md`
+- Historical `knowledgeforge.evidence_portfolio.conformance.v1@1.0` remains unchanged.
+- The distinct exact live profile is `knowledgeforge.evidence_portfolio.admission_attempt.v1@1.0`.
+- Blockers A and C are corrected; manifest/source-byte authentication precedes side-effecting output preflight.
+- Renewed RED-GREEN remediation rejects malformed or truthy-coerced validator authorization before persistence.
+- Cache-isolated verification passed while the separately owned funnel test file was excluded.
 
-## Result
+## Authority Boundary
 
-`knowledgeforge.evidence_portfolio.conformance.v1@1.0` now enforces exact phase-aware accounting, directional question-to-evidence traceability, source-bound transformation identity and explicit provider/acquisition/method dependence. Norway Health and Sweden Infrastructure passed isolated conformance with exact source and conclusion preservation.
+Exactly 22 admission paths form the unpublished candidate. Every visible path outside it and the seven named caches was frozen at fresh current-session identity and preserved. Eight excluded paths have established deterministic-funnel provenance and non-overlap; no separately owned work was continued, validated, modified, staged, committed, or published.
 
-## Boundary
+Unavailable historical bytes remain unauthenticated. Current evidence proves only current-session non-interference.
 
-The candidate is uncommitted and the Git index is empty. No third portfolio, new evidence, live conformance admission, historical/canonical/PostgreSQL/sibling mutation, staging, commit, push, tag or release is authorized. Repository-wide durability remains decision D for pre-existing mixed local recovery-critical state; zero actual secret blockers were found.
-
-## Current next action
-
-Stop. Resume only under separate authority for publication, live integration or a deliberately divergent third portfolio.
+Keep the index empty. Publication, production portfolio execution, canonical-repository/PostgreSQL mutation, funnel continuation, or successor activation requires separate authority.

@@ -1,29 +1,30 @@
 # Project State
 
-Status: Operational Expansion; no active task
-Last completed task: `T-20260801-evidence-portfolio-accounting-traceability-transformation-identity-dependence-conformance-correction-v1`
+## Current Phase
 
-## Canonical repository
+Evidence Portfolio admission-boundary correction and renewed closeout are complete. The exact 22-path candidate remains unpublished and unstaged. No task is active.
 
-- Filesystem `knowledge_repository/` remains authoritative.
-- Accepted Knowledge Objects: 564.
-- Evolution records: 564.
-- Indexes: 6.
-- Repository fingerprint: `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`.
-- PostgreSQL remains a rebuildable bounded operational projection, not authority, and was not mutated.
+## Completed Task
 
-## Evidence Portfolio posture
+`T-20260802-evidence-portfolio-conformance-admission-boundary-integration-v1.md`
 
-Norway Health and Sweden Infrastructure still support only `provisionally generalizable with bounded corrections`. The bounded correction is now implemented as prospective profile `knowledgeforge.evidence_portfolio.conformance.v1@1.0` and accepted by `D-20260802-evidence-portfolio-conformance-profile-v1-accepted`.
+Publication-review blockers were corrected without publication. Renewed independent review found one additional fail-open edge: truthy coercion of validator authorization. A preserved RED-GREEN cycle now requires exact valid Boolean authorization and owner/validator decision agreement before persistence.
 
-The profile enforces exact accounting, mechanically resolvable question-to-evidence traceability, transformation-governed identity and explicit source/provider/acquisition/method dependence. Historical portfolio surfaces remain immutable and require explicit versioned adaptation. Norway and Sweden passed independent isolated proofs in `/tmp/knowledgeforge-evidence-portfolio-conformance-correction-20260801-v2` with exact source-report and conclusion preservation.
+## Working-Tree Boundary
 
-## Governance state
+- Admission candidate: exactly 22 paths.
+- Every currently visible path outside that allowlist: excluded and frozen at fresh current-session identity.
+- Established separately owned deterministic-funnel provenance: eight excluded, non-overlapping paths.
+- Seven named ignored caches: frozen and unchanged from the fresh current-session snapshot.
+- Old visible-population totals are historical context, not immutable acceptance criteria.
+- Canonical repository: 564 objects; fingerprint `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`.
 
-- The correction task is complete as a fully validated uncommitted candidate.
-- Verification: 30 focused, 95 combined Evidence Portfolio and 518 full repository tests passed; compilation passed; coherence/context/architecture checks had zero blocks.
-- Canonical repository authenticated at 564/564/6 and the unchanged fingerprint.
-- Two independent adversarial cycles were exhausted; cycle-2 high-severity source-binding findings were remediated and covered by coherent-resealing tests.
-- Git index remains empty. Publication, live integration, canonical/PostgreSQL mutation and a third portfolio remain separately prohibited.
-- Broad repository durability remains decision D for local-only recovery-critical/operational state; actual secret blockers were zero and sensitive-material classification passed.
-- Known out-of-scope warnings remain stale `context/active_context.md` and near-threshold `state/architecture.md`.
+## Verification State
+
+Renewed isolated results: focused `147`; admission plus historical `83 passed, 47 subtests`; exact historical `95 passed, 98 subtests`; frozen integration `147 passed, 1 deselected, 109 subtests`; repository suite excluding the separately owned funnel test file `556 passed, 217 subtests`. Coherence has zero blocks and two known context warnings; architecture audit has zero blocks/warnings.
+
+Historical conformance surfaces remain unchanged from `HEAD`. Unavailable historical bytes cannot be reauthenticated; current authority proves only current-session preservation.
+
+## Terminal Boundary
+
+No publication, separately owned validation/modification, production execution, canonical/PostgreSQL mutation, or successor activation is authorized.

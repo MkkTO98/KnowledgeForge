@@ -10,9 +10,9 @@ from __future__ import annotations
 
 import argparse
 import copy
-import fcntl
 import hashlib
 import json
+import os
 import re
 import shutil
 import sys
@@ -28,6 +28,7 @@ PROJECT_ROOT = Path(__file__).resolve().parents[1]
 sys.path.insert(0, str(PROJECT_ROOT / "tools"))
 
 import deterministic_statistical_summary_v2 as summary_v2
+import evidence_portfolio_admission_attempt as admission_attempt
 import knowledge_repository
 from validate_knowledge_pipeline_v1 import validate_knowledge_object
 
@@ -130,6 +131,15 @@ def read_json(path: Path) -> Any:
 def manifest_bytes_fingerprint(manifest: dict[str, Any]) -> str:
     """Fingerprint the deterministic bytes used by an explicit in-memory invocation."""
     return "sha256:" + hashlib.sha256(canonical_json(manifest).encode("utf-8")).hexdigest()
+
+
+def read_manifest_source_identity(path: Path) -> tuple[dict[str, Any], str]:
+    """Decode and fingerprint one owner-observed byte string without a reopen race."""
+    source_bytes = path.read_bytes()
+    source_manifest = json.loads(source_bytes.decode("utf-8"))
+    if not isinstance(source_manifest, dict):
+        raise ValueError("manifest source must decode to a JSON object")
+    return source_manifest, "sha256:" + hashlib.sha256(source_bytes).hexdigest()
 
 
 def resolve_manifest_input(project_root: Path, raw_path: Any) -> Path:
@@ -491,6 +501,10 @@ def stable_object_id(entry: dict[str, Any]) -> str:
 
 def stable_result_id(entry: dict[str, Any], result_class: str, metric: str) -> str:
     return f"result-{fingerprint({'identity_inputs': entry['identity_inputs'], 'class': result_class, 'metric': metric}).split(':', 1)[1][:24]}"
+
+
+def stable_view_id(result_id: str) -> str:
+    return result_id.replace("result-", "view-", 1)
 
 
 def _entry_for_series(series: dict[str, Any]) -> dict[str, Any]:
@@ -882,7 +896,7 @@ def render_operational_views(entry: dict[str, Any], result: dict[str, Any]) -> l
     views = []
     for record in result["result_records"]:
         view = {
-            "view_id": record["result_id"].replace("result-", "view-"), "view_kind": "EvidenceCardEquivalentView",
+            "view_id": stable_view_id(record["result_id"]), "view_kind": "EvidenceCardEquivalentView",
             "canonical_package_id": package_id, "result_record_id": record["result_id"], "class": record["class"], "metric": record["metric"],
             "value": record["value"], "applicability": record["applicability"], "limitations": record["limitations"],
             "authority": "operational_view_only_canonical_authority_is_knowledge_object_package",
@@ -899,13 +913,40 @@ def repository_state(repository_root: Path) -> dict[str, Any]:
         raise ValueError("production repository authentication failed") from exc
 
 
-def persist_packages(packages: list[dict[str, Any]], repository_root: Path) -> dict[str, Any]:
+def observed_repository_state(repository_root: Path, mode: str) -> dict[str, Any]:
+    try:
+        return knowledge_repository.observed_repository_state(repository_root)
+    except ValueError as exc:
+        raise ValueError(f"{mode} repository authentication failed") from exc
+
+
+def persist_packages(
+    packages: list[dict[str, Any]],
+    repository_root: Path,
+    expected_repository_state: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Public helper that always acquires the shared repository writer lock."""
+    with production_repository_lock(repository_root):
+        return _persist_packages_locked(packages, repository_root, expected_repository_state)
+
+
+def _persist_packages_locked(
+    packages: list[dict[str, Any]],
+    repository_root: Path,
+    expected_repository_state: dict[str, Any] | None = None,
+) -> dict[str, Any]:
+    """Internal portfolio persistence body; run_portfolio already holds the lock."""
+    if expected_repository_state is None:
+        expected_repository_state = knowledge_repository.observed_repository_state(repository_root)
     ids = [package["package_id"] for package in packages]
     if len(ids) != len(set(ids)):
         raise ValueError("duplicate package IDs in publication set")
-    knowledge_repository.persist_knowledge_object_packages(packages, repository_root)
-    manifest = read_json(repository_root / "manifest.json")
-    return {"repository_fingerprint": manifest["repository_fingerprint"], "object_count": manifest["object_count"]}
+    knowledge_repository._persist_knowledge_object_packages_locked(
+        packages,
+        repository_root,
+        expected_repository_state=expected_repository_state,
+    )
+    return knowledge_repository.authenticate_repository(repository_root)
 
 
 def validate_normalized_input_binding(entry: dict[str, Any], normalized: dict[str, Any]) -> None:
@@ -1034,37 +1075,100 @@ def _rerun_match(entry: dict[str, Any], project_root: Path) -> tuple[dict[str, A
 
 @contextmanager
 def production_repository_lock(repository_root: Path):
-    """Serialize compliant portfolio writers without changing canonical repository bytes."""
-    lock_path = repository_root.parent / f".{repository_root.name}.evidence_portfolio_production.lock"
-    lock_path.parent.mkdir(parents=True, exist_ok=True)
-    with lock_path.open("a+b") as handle:
-        fcntl.flock(handle.fileno(), fcntl.LOCK_EX)
-        try:
-            yield lock_path
-        finally:
-            fcntl.flock(handle.fileno(), fcntl.LOCK_UN)
+    """Use the repository-wide writer lock shared by portfolio and lower-level writers."""
+    with knowledge_repository.repository_writer_lock(repository_root) as lock_path:
+        yield lock_path
+
+
+def preflight_output_destination(output_root: Path, mode: str) -> None:
+    """Reject deterministic output failures before canonical repository mutation."""
+    if mode not in {"canary", "production"}:
+        raise ValueError("mode must be canary or production")
+    if output_root.is_symlink():
+        raise ValueError("output root must not be a symlink")
+    if output_root.exists() and not output_root.is_dir():
+        raise ValueError("output root must be a directory")
+    try:
+        output_root.mkdir(parents=True, exist_ok=True)
+        with tempfile.NamedTemporaryFile(prefix=".knowledgeforge-output-preflight-", dir=output_root):
+            pass
+    except OSError as exc:
+        raise ValueError("output root is not writable") from exc
+    names = {
+        f"{mode}_admission_attempt.json",
+        f"{mode}_execution_results.json",
+        f"{mode}_accounting.json",
+        f"{mode}_packages.json",
+        f"{mode}_views.json",
+        f"{mode}_gate.json",
+    }
+    if mode == "canary":
+        names.update({"canary_gate.json", "canary_authorization_v1.json"})
+    observed_inodes: set[tuple[int, int]] = set()
+    for name in sorted(names):
+        target = output_root / name
+        if target.is_symlink() or (target.exists() and not target.is_file()):
+            raise ValueError(f"output target is not a regular file: {name}")
+        if target.exists():
+            status = target.stat()
+            inode = (status.st_dev, status.st_ino)
+            if status.st_nlink != 1 or inode in observed_inodes:
+                raise ValueError(f"output target has a hard-link or inode collision: {name}")
+            if status.st_mode & 0o222 == 0:
+                raise ValueError(f"output target is not writable: {name}")
+            flags = os.O_WRONLY | os.O_APPEND | getattr(os, "O_CLOEXEC", 0) | getattr(os, "O_NOFOLLOW", 0)
+            try:
+                descriptor = os.open(target, flags)
+            except OSError as exc:
+                raise ValueError(f"output target is not writable: {name}") from exc
+            else:
+                os.close(descriptor)
+            observed_inodes.add(inode)
 
 
 def run_portfolio(
     manifest: dict[str, Any], mode: str, output_root: Path, repository_root: Path,
-    canary_gate_path: Path | None = None, *, manifest_file_fingerprint: str | None = None,
+    canary_gate_path: Path | None = None, *, manifest_source_path: Path | None = None,
     project_root: Path = PROJECT_ROOT,
+    admission_profile_id: str | None = admission_attempt.PROFILE_ID,
 ) -> dict[str, Any]:
+    resolved_output = output_root.resolve(strict=False)
+    resolved_repository = repository_root.resolve(strict=False)
+    if (
+        resolved_output == resolved_repository
+        or resolved_repository in resolved_output.parents
+        or resolved_output in resolved_repository.parents
+    ):
+        raise ValueError("output root and repository root must be disjoint")
+    manifest_snapshot = copy.deepcopy(manifest)
     with production_repository_lock(repository_root):
         return _run_portfolio_locked(
-            manifest, mode, output_root, repository_root, canary_gate_path,
-            manifest_file_fingerprint=manifest_file_fingerprint, project_root=project_root,
+            manifest_snapshot, mode, output_root, repository_root, canary_gate_path,
+            manifest_source_path=manifest_source_path, project_root=project_root,
+            admission_profile_id=admission_profile_id,
         )
 
 
 def _run_portfolio_locked(
     manifest: dict[str, Any], mode: str, output_root: Path, repository_root: Path,
-    canary_gate_path: Path | None = None, *, manifest_file_fingerprint: str | None = None,
+    canary_gate_path: Path | None = None, *, manifest_source_path: Path | None = None,
     project_root: Path = PROJECT_ROOT,
+    admission_profile_id: str | None = admission_attempt.PROFILE_ID,
 ) -> dict[str, Any]:
     validate_manifest(manifest)
-    manifest_file_fingerprint = manifest_file_fingerprint or manifest_bytes_fingerprint(manifest)
-    authorized_repository_state: dict[str, Any] | None = None
+    if manifest_source_path is None:
+        manifest_file_fingerprint = manifest_bytes_fingerprint(manifest)
+        manifest_identity_kind = "canonical_in_memory_bytes"
+    else:
+        try:
+            source_manifest, manifest_file_fingerprint = read_manifest_source_identity(Path(manifest_source_path))
+        except (OSError, UnicodeDecodeError, json.JSONDecodeError) as exc:
+            raise ValueError("manifest source path is not a readable JSON file") from exc
+        if canonical_json(source_manifest) != canonical_json(manifest):
+            raise ValueError("manifest source bytes do not decode to the invoked manifest")
+        manifest_identity_kind = "file_bytes"
+    preflight_output_destination(output_root, mode)
+    expected_repository_state = observed_repository_state(repository_root, mode)
     if mode == "production":
         if canary_gate_path is None:
             raise ValueError("production wave requires v1 canary authorization")
@@ -1072,8 +1176,11 @@ def _run_portfolio_locked(
             gate = read_json(canary_gate_path)
         except (OSError, json.JSONDecodeError) as exc:
             raise ValueError("production wave requires readable v1 canary authorization") from exc
-        authorization_result = validate_production_authorization(gate, manifest, manifest_file_fingerprint, repository_state(repository_root))
-        authorized_repository_state = authorization_result["repository_state"]
+        authenticated_state = {
+            "object_count": expected_repository_state["object_count"],
+            "repository_fingerprint": expected_repository_state["repository_fingerprint"],
+        }
+        validate_production_authorization(gate, manifest, manifest_file_fingerprint, authenticated_state)
     selected = [entry for entry in manifest["entries"] if mode == "production" or entry.get("canary") is True]
     enforce_preexecution_limits(manifest, selected)
     outcomes: list[dict[str, Any]] = []
@@ -1125,18 +1232,77 @@ def _run_portfolio_locked(
             blockers.append(str(exc))
     accounting = account_outcomes(outcomes, packages, views)
     publication = None
-    if not blockers and mode == "production":
-        try:
-            current_repository_state = repository_state(repository_root)
-        except ValueError:
-            blockers.append("production repository state changed after authorization; persistence blocked")
-        else:
-            if current_repository_state != authorized_repository_state:
-                blockers.append("production repository state changed after authorization; persistence blocked")
     if not blockers:
-        publication = persist_packages(packages, repository_root)
-        publication = {"disposition": "isolated_canary_admitted" if mode == "canary" else "isolated_production_admitted", "admitted_object_count": len(packages), **publication}
+        try:
+            current_repository_state = observed_repository_state(repository_root, mode)
+        except ValueError:
+            blockers.append(f"{mode} repository state changed after authentication; persistence blocked")
+        else:
+            if current_repository_state != expected_repository_state:
+                blockers.append(f"{mode} repository state changed after authentication; persistence blocked")
+    admission_envelope = admission_attempt.build_admission_attempt(
+        manifest=manifest,
+        manifest_byte_fingerprint=manifest_file_fingerprint,
+        manifest_identity_kind=manifest_identity_kind,
+        mode=mode,
+        outcomes=outcomes,
+        reruns=reruns,
+        blockers=blockers,
+        packages=packages,
+        views=views,
+        profile_id=admission_profile_id,
+    )
+    expected_package_ids = {
+        entry["candidate_id"]: stable_object_id(entry)
+        for entry in selected if entry["disposition"] == "execute"
+    }
+    outcome_by_id = {outcome["candidate_id"]: outcome for outcome in outcomes}
+    expected_result_ids = {
+        entry["candidate_id"]: [
+            stable_result_id(entry, record["class"], record["metric"])
+            for record in outcome_by_id[entry["candidate_id"]].get("result_records", [])
+        ]
+        for entry in selected if entry["disposition"] == "execute"
+    }
+    expected_view_ids = {
+        result_id: stable_view_id(result_id)
+        for result_ids in expected_result_ids.values()
+        for result_id in result_ids
+    }
+    admission_validation = admission_attempt.dispatch_validate_admission_attempt(
+        admission_profile_id,
+        admission_envelope,
+        expected_manifest=manifest,
+        expected_manifest_byte_fingerprint=manifest_file_fingerprint,
+        expected_manifest_identity_kind=manifest_identity_kind,
+        expected_package_ids=expected_package_ids,
+        expected_result_ids=expected_result_ids,
+        expected_view_ids=expected_view_ids,
+    )
+    owner_authorizes_admission = not blockers
+    validation_authorizes_admission = admission_validation.get("admission_authorized")
+    validation_decision = admission_validation.get("decision")
+    if (
+        admission_validation.get("valid") is not True
+        or type(validation_authorizes_admission) is not bool
+        or validation_decision not in {"admit", "reject"}
+    ):
+        raise RuntimeError("malformed admission-attempt validation")
+    expected_validation_decision = "admit" if owner_authorizes_admission else "reject"
+    if (
+        validation_authorizes_admission is not owner_authorizes_admission
+        or validation_decision != expected_validation_decision
+    ):
+        raise RuntimeError("admission-attempt validation contradicts owner decision")
+    if not blockers:
+        publication = _persist_packages_locked(
+            admission_envelope["packages"],
+            repository_root,
+            expected_repository_state,
+        )
+        publication = {"disposition": "isolated_canary_admitted" if mode == "canary" else "isolated_production_admitted", "admitted_object_count": len(admission_envelope["packages"]), **publication}
     output_root.mkdir(parents=True, exist_ok=True)
+    write_json(output_root / f"{mode}_admission_attempt.json", admission_envelope)
     write_json(output_root / f"{mode}_execution_results.json", {"outcomes": outcomes, "reruns": reruns})
     write_json(output_root / f"{mode}_accounting.json", accounting)
     write_json(output_root / f"{mode}_packages.json", packages)
@@ -1171,7 +1337,7 @@ def command_run(args: argparse.Namespace) -> None:
     gate = run_portfolio(
         manifest, args.mode, Path(args.output_root), Path(args.repository_root),
         Path(args.canary_gate) if args.canary_gate else None,
-        manifest_file_fingerprint=file_fingerprint(manifest_path), project_root=PROJECT_ROOT,
+        manifest_source_path=manifest_path, project_root=PROJECT_ROOT,
     )
     print(json.dumps(gate, sort_keys=True))
 

@@ -14,7 +14,7 @@ Context and handoff material for future KnowledgeForge sessions.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- `latest_handoff.md` records the completed Evidence Portfolio conformance correction, proofs, preservation boundary and no-active-task state.
+- No task is active. `latest_handoff.md` records completed renewed admission-boundary closeout, verification, preservation, and the terminal publication boundary.
 
 ## Needs Attention
-- Preserve protected residue; `active_context.md` remains stale and must be rebuilt rather than trusted. Do not activate publication, live integration or portfolio three automatically.
+- `active_context.md` remains stale and must be rebuilt rather than trusted. Preserve all excluded paths and seven caches; do not infer publication or successor authority.

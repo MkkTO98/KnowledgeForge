@@ -41,9 +41,9 @@ Root of KnowledgeForge, the EIP canonical reusable knowledge substrate project. 
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No task is active. Evidence Portfolio Conformance Profile v1 is complete as a fully validated uncommitted candidate.
-- The canonical repository remains 564 accepted KnowledgeObjectPackages with fingerprint `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`; publication remains unauthorized.
+- No task is active. The exact 22-path Evidence Portfolio admission-boundary candidate completed renewed closeout and remains unstaged.
+- Separately owned deterministic-funnel work remains frozen and excluded.
 
 ## Needs Attention
-- Preserve unrelated working-tree residue and the empty Git index.
-- Publication, live conformance admission and a divergent third portfolio each require separate authority.
+- Preserve the exact 22-path candidate, every fresh-snapshot excluded identity, seven caches, and empty Git index.
+- Unavailable historical bytes remain unauthenticated. Publication requires separate fresh authority.
