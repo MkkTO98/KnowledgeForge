@@ -131,7 +131,8 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No task is active. The admission-boundary and deterministic-funnel reports record separate completed work; the latter remains excluded from the exact 22-path admission candidate.
+- No task is active. The existing deterministic-funnel report records correction, verification, independent PASS review, and renewed closeout; no duplicate report exists.
+- The published admission-boundary report remains closed.
 
 ## Needs Attention
-- No successor, production, publication, local-model, staging, commit, push or release authority is active.
+- No production, publication, staging, commit, push, release, or successor authority is active.

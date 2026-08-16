@@ -116,8 +116,8 @@ This folder is part of the ProjectForge file-backed operating system for `artifa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No task is active. `T-20260802-evidence-portfolio-conformance-admission-boundary-integration-v1.md` completed renewed closeout and remains unpublished.
-- The deterministic-funnel task is complete but separately owned and excluded.
+- No task is active. `T-20260808-deterministic-candidate-funnel-compact-escalation-pilot.md` completed remediation re-closeout; no replacement task exists.
+- The admission-boundary task remains closed at published baseline `c4e3e2a…`.
 
 ## Needs Attention
-- Preserve the exact 22-path candidate and every fresh-snapshot excluded identity. Keep the index empty; publication requires separate authority.
+- Preserve exact 17-path candidate authority and empty index. Publication requires separate fresh authority.

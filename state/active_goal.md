@@ -2,20 +2,18 @@
 
 ## Current Objective
 
-No task is active. The existing 22-path Evidence Portfolio admission-boundary candidate completed bounded correction and renewed closeout at an unstaged publication boundary.
+No task is active. The existing deterministic-candidate-funnel task completed bounded remediation and renewed closeout; its exact 17-path candidate remains unstaged and unpublished.
 
 ## Completed Boundary
 
 - Historical `knowledgeforge.evidence_portfolio.conformance.v1@1.0` remains unchanged.
-- The distinct exact live profile is `knowledgeforge.evidence_portfolio.admission_attempt.v1@1.0`.
-- Blockers A and C are corrected; manifest/source-byte authentication precedes side-effecting output preflight.
-- Renewed RED-GREEN remediation rejects malformed or truthy-coerced validator authorization before persistence.
-- Cache-isolated verification passed while the separately owned funnel test file was excluded.
+- Published baseline `c4e3e2a…` prospectively satisfies the funnel task's admission-boundary dependency without retroactively validating premature execution.
+- RED-GREEN remediation removed elapsed time from governed evidence, made output identities root-relative, and added structured fail-closed malformed-container validation.
+- Isolated focused, integration, full-suite, governance, security, canonical, PostgreSQL, and preservation checks passed.
+- Independent review returned PASS with no task-owned blockers; final exact-byte confirmation binds the closing authority.
 
 ## Authority Boundary
 
-Exactly 22 admission paths form the unpublished candidate. Every visible path outside it and the seven named caches was frozen at fresh current-session identity and preserved. Eight excluded paths have established deterministic-funnel provenance and non-overlap; no separately owned work was continued, validated, modified, staged, committed, or published.
+The corrected candidate contains the original eight authenticated funnel paths plus nine repository-required shared lifecycle surfaces. Every other visible and ignored identity remained frozen by the prospective snapshot. Unavailable historical cache bytes remain unauthenticated.
 
-Unavailable historical bytes remain unauthenticated. Current evidence proves only current-session non-interference.
-
-Keep the index empty. Publication, production portfolio execution, canonical-repository/PostgreSQL mutation, funnel continuation, or successor activation requires separate authority.
+Keep the index empty. Publication, production portfolio execution, candidate admission, canonical-repository/PostgreSQL mutation, or successor activation requires separate authority.

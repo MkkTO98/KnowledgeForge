@@ -24,10 +24,10 @@ This folder is part of the ProjectForge file-backed operating system for `templa
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No task is active. Admission-attempt integration completed renewed closeout at an unstaged publication boundary.
-- The separately owned deterministic-funnel task remains excluded from the admission candidate.
+- No task is active. The existing deterministic-funnel task completed correction and renewed closeout without replacement or successor activation.
+- Admission-boundary publication remains a fixed dependency baseline and was not reopened.
 
 ## Needs Attention
-- Preserve historical conformance v1, the exact 22-path admission candidate, all fresh-snapshot excluded identities, seven caches, and empty index. Do not publish or resume the funnel here.
+- Preserve historical conformance v1, exact candidate and non-candidate snapshot identities, rebaselined caches, and empty index. Do not publish or persist.
 
 - 2026-07-11: Added provider-neutral release inbox real-evidence impact pilot v1 artifacts and verification evidence.

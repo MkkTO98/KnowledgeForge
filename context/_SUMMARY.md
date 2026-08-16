@@ -14,7 +14,7 @@ Context and handoff material for future KnowledgeForge sessions.
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No task is active. `latest_handoff.md` records completed renewed admission-boundary closeout, verification, preservation, and the terminal publication boundary.
+- No task is active. `latest_handoff.md` records completed deterministic-funnel remediation, verification, review, preservation, and terminal boundary.
 
 ## Needs Attention
-- `active_context.md` remains stale and must be rebuilt rather than trusted. Preserve all excluded paths and seven caches; do not infer publication or successor authority.
+- `active_context.md` remains stale and must be rebuilt rather than trusted. Preserve exact candidate/non-candidate identities and infer no publication or successor authority.

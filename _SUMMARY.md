@@ -41,9 +41,9 @@ Root of KnowledgeForge, the EIP canonical reusable knowledge substrate project. 
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No task is active. The exact 22-path Evidence Portfolio admission-boundary candidate completed renewed closeout and remains unstaged.
-- Separately owned deterministic-funnel work remains frozen and excluded.
+- No task is active. Deterministic-funnel remediation completed renewed closeout; the exact 17-path candidate remains unstaged and unpublished.
+- The published admission-boundary baseline remains closed and unchanged.
 
 ## Needs Attention
-- Preserve the exact 22-path candidate, every fresh-snapshot excluded identity, seven caches, and empty Git index.
-- Unavailable historical bytes remain unauthenticated. Publication requires separate fresh authority.
+- Preserve the exact candidate, every non-candidate visible/ignored identity, and empty Git index.
+- Unavailable historical cache bytes remain unauthenticated. Publication requires separate fresh authority.

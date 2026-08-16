@@ -15,7 +15,7 @@ This folder is part of the ProjectForge file-backed operating system for `state`
 <!-- PROJECTFORGE:END-CONTAINS -->
 
 ## Active Work
-- No task is active. State records completed renewed admission-boundary closeout; the exact 22-path candidate remains unstaged.
+- No task is active. State records completed deterministic-funnel correction and renewed closeout; the exact 17-path candidate remains unstaged.
 
 ## Needs Attention
-- Preserve exact candidate and fresh-snapshot excluded identities, seven caches, and empty index. Publication requires separate authority.
+- Preserve exact candidate, non-candidate snapshot identities, rebaselined caches, and empty index. Do not publish.

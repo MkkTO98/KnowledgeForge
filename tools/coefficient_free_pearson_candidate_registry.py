@@ -12,7 +12,8 @@ from __future__ import annotations
 import argparse
 import hashlib
 import json
-from dataclasses import dataclass
+import re
+from dataclasses import dataclass, replace
 from decimal import Decimal, ROUND_FLOOR
 from pathlib import Path
 from typing import Any
@@ -35,6 +36,21 @@ FORBIDDEN_KEYS = {
     "significance",
     "r_squared",
     "regression",
+}
+FUNNEL_RESULT_DERIVED_KEYS = FORBIDDEN_KEYS | {
+    "acceptance_prediction",
+    "association_outcome",
+    "coefficient_estimate",
+    "correlation_coefficient",
+    "effect_size",
+    "generated_statement",
+    "generated_statements",
+    "lag",
+    "lag_result",
+    "pearson_r",
+    "preliminary_result",
+    "preliminary_result_cache",
+    "result_rank",
 }
 
 FAMILY_BY_INDICATOR = {
@@ -126,6 +142,29 @@ def has_forbidden_key(value: Any) -> bool:
                 return True
     elif isinstance(value, list):
         return any(has_forbidden_key(item) for item in value)
+    return False
+
+
+def has_funnel_result_derived_key(value: Any) -> bool:
+    result_markers = (
+        "acceptanceprediction", "associationscore", "associationoutcome", "candidatepaircoefficient",
+        "coefficient", "correlationresult", "covariance", "effectsize", "generatedrelationship",
+        "generatedstatement", "lagestimate", "lagresult", "lags", "pearsonr", "preliminaryresult", "pvalue",
+        "regression", "resultcache", "resultderived", "resultrank", "significance",
+    )
+    if isinstance(value, dict):
+        for key, item in value.items():
+            normalized = re.sub(r"[^a-z0-9]+", "", str(key).lower())
+            allowed_boundary_markers = {"coefficientfree", "candidatepairresultsused", "resultderivedinputsused"}
+            if normalized not in allowed_boundary_markers and (
+                str(key).lower() in FUNNEL_RESULT_DERIVED_KEYS
+                or any(marker in normalized for marker in result_markers)
+            ):
+                return True
+            if has_funnel_result_derived_key(item):
+                return True
+    elif isinstance(value, list):
+        return any(has_funnel_result_derived_key(item) for item in value)
     return False
 
 
@@ -827,6 +866,1042 @@ def build_successor_policy_future_production_dry_run(fixture_root: Path = DEFAUL
 
 def build_successor_policy_dry_run(fixture_root: Path = DEFAULT_FIXTURE_ROOT) -> dict[str, Any]:
     return build_successor_policy_historical_comparison(fixture_root)
+
+
+CANDIDATE_FUNNEL_PROFILE = "knowledgeforge.deterministic_candidate_funnel.v1@1.0"
+CANDIDATE_FUNNEL_POLICY_VERSION = "pearson_candidate_funnel_pilot_v1@1.0"
+UNRESOLVED_ESCALATION_PROFILE = "knowledgeforge.candidate_funnel_unresolved.v1@1.0"
+CANDIDATE_FUNNEL_REPORT_ROOT = Path("artifacts/reports/deterministic-candidate-funnel-compact-escalation-pilot-20260808")
+
+
+def scalar_leaf_count(value: Any) -> int:
+    if isinstance(value, dict):
+        return sum(scalar_leaf_count(item) for item in value.values())
+    if isinstance(value, list):
+        return sum(scalar_leaf_count(item) for item in value)
+    return 1
+
+
+def load_current_canonical_pearson_relationship_index(
+    repository_root: Path | None = None,
+) -> dict[tuple[str, str, str], list[str]]:
+    root = repository_root or (PROJECT_ROOT / "knowledge_repository" / "objects")
+    index: dict[tuple[str, str, str], list[str]] = {}
+    for path in sorted(root.glob("*.json")):
+        try:
+            package = read_json(path)
+        except (OSError, ValueError, json.JSONDecodeError) as exc:
+            raise ValueError(f"unreadable canonical repository object: {path}") from exc
+        if not isinstance(package, dict):
+            raise ValueError(f"malformed canonical repository object: {path}")
+        if package.get("status") != "accepted":
+            continue
+        target_statements: list[tuple[dict[str, Any], dict[str, Any]]] = []
+        for collection_name, payload_name in (
+            ("generated_statements", "structured_payload"),
+            ("statements", "payload"),
+        ):
+            collection = package.get(collection_name, [])
+            if not isinstance(collection, list):
+                raise ValueError(f"malformed accepted statement collection: {path}")
+            for statement in collection:
+                if not isinstance(statement, dict):
+                    raise ValueError(f"malformed accepted statement entry: {path}")
+                payload = statement.get(payload_name)
+                is_derived = statement.get("statement_type") == "derived_relationship"
+                if is_derived and not isinstance(payload, dict):
+                    raise ValueError(f"malformed accepted relationship statement: {path}")
+                targets_pearson = (
+                    isinstance(payload, dict)
+                    and payload.get("method_contract_fingerprint") == METHOD_CONTRACT_FINGERPRINT
+                )
+                if targets_pearson:
+                    if not is_derived:
+                        raise ValueError(f"malformed accepted Pearson relationship statement: {path}")
+                    assert isinstance(payload, dict)
+                    target_statements.append((statement, payload))
+        target_keys: list[tuple[str, str, str]] = []
+        for statement, payload in target_statements:
+            entity = payload.get("entity_id")
+            series_a = payload.get("series_a", {})
+            series_b = payload.get("series_b", {})
+            structurally_valid = (
+                bool(entity)
+                and isinstance(series_a, dict) and bool(series_a.get("code"))
+                and isinstance(series_b, dict) and bool(series_b.get("code"))
+                and series_a.get("transformation", "raw") == "raw"
+                and series_b.get("transformation", "raw") == "raw"
+                and statement.get("applicability", {}).get("frequency") == "annual"
+            )
+            if not structurally_valid:
+                raise ValueError(f"malformed accepted Pearson relationship identity: {path}")
+            target_keys.append(canonical_pair_key(str(entity), series_a["code"], series_b["code"]))
+        if len(set(target_keys)) > 1:
+            raise ValueError(f"inconsistent accepted Pearson relationship identities: {path}")
+        key = target_keys[0] if target_keys else None
+        if key:
+            package_identity = package.get("package_id") or package.get("id") or path.stem
+            index.setdefault(key, []).append(str(package_identity))
+    return {key: sorted(set(package_ids)) for key, package_ids in sorted(index.items())}
+
+
+def _candidate_series(candidate: dict[str, Any], side: str) -> Series:
+    item = candidate[side]
+    identity = item["identity"]
+    evidence = item["evidence_identity"]
+    missing = tuple(int(year) for year in evidence.get("missing_periods", []))
+    all_periods = tuple(range(int(candidate["period"]["start"]), int(candidate["period"]["end"]) + 1))
+    observed = tuple(year for year in all_periods if year not in missing)
+    return Series(
+        code=identity["code"],
+        entity=candidate["entity"],
+        name=identity.get("name", ""),
+        definition=identity.get("definition", ""),
+        unit=identity.get("unit", ""),
+        frequency=identity.get("frequency", ""),
+        transformation=identity.get("transformation", ""),
+        family=FAMILY_BY_INDICATOR.get(identity["code"], "Unknown"),
+        normalized_path=evidence.get("normalized_path", ""),
+        normalized_fingerprint=evidence.get("normalized_fingerprint", ""),
+        validation_path=evidence.get("validation_path", ""),
+        validation_fingerprint=evidence.get("validation_fingerprint", ""),
+        raw_fixture_path=evidence.get("raw_fixture_path", ""),
+        raw_fixture_fingerprint=evidence.get("raw_fixture_fingerprint", ""),
+        selection_contract_path=evidence.get("selection_contract_path", ""),
+        selection_contract_fingerprint=evidence.get("selection_contract_fingerprint", ""),
+        acquisition_manifest_path=evidence.get("acquisition_manifest_path", ""),
+        acquisition_manifest_fingerprint=evidence.get("acquisition_manifest_fingerprint", ""),
+        observed_periods=observed,
+        missing_periods=missing,
+    )
+
+
+def _evidence_reference_errors(candidate: dict[str, Any]) -> list[str]:
+    errors: list[str] = []
+    for side in ("series_a", "series_b"):
+        evidence = candidate.get(side, {}).get("evidence_identity", {})
+        references = (
+            ("raw_fixture", evidence.get("raw_fixture_path"), evidence.get("raw_fixture_fingerprint"), False),
+            ("validation", evidence.get("validation_path"), evidence.get("validation_fingerprint"), False),
+            ("selection_contract", evidence.get("selection_contract_path"), evidence.get("selection_contract_fingerprint"), False),
+            ("acquisition_manifest", evidence.get("acquisition_manifest_path"), evidence.get("acquisition_manifest_fingerprint"), False),
+            ("normalized", evidence.get("normalized_path"), evidence.get("normalized_fingerprint"), True),
+        )
+        for label, rel, expected, normalized_identity in references:
+            if not rel or not expected:
+                errors.append(f"missing_evidence_reference:{side}:{label}")
+                continue
+            path = PROJECT_ROOT / str(rel)
+            try:
+                resolved = path.resolve(strict=True)
+                resolved.relative_to(PROJECT_ROOT.resolve())
+            except (FileNotFoundError, ValueError, OSError):
+                errors.append(f"missing_evidence_reference:{side}:{label}")
+                continue
+            if not resolved.is_file():
+                errors.append(f"missing_evidence_reference:{side}:{label}")
+                continue
+            if normalized_identity:
+                try:
+                    normalized = read_json(resolved)
+                    embedded = normalized.get("normalized_fingerprint")
+                    payload = {key: value for key, value in normalized.items() if key != "normalized_fingerprint"}
+                    recomputed = sha256_value(payload)
+                    current = recomputed if embedded == recomputed else ""
+                except Exception:
+                    current = ""
+            else:
+                current = sha256_file(resolved)
+            if current != expected:
+                errors.append(f"stale_evidence_reference:{side}:{label}")
+    return sorted(errors)
+
+
+def _candidate_projection(candidate: dict[str, Any]) -> dict[str, Any]:
+    a = _candidate_series(candidate, "series_a")
+    b = _candidate_series(candidate, "series_b")
+    a, b = sorted((a, b), key=lambda item: item.code)
+    coverage = candidate["selection_evidence"]["coverage_probe"]
+    return {
+        "policy_version": CANDIDATE_FUNNEL_POLICY_VERSION,
+        "candidate_id": candidate["candidate_id"],
+        "candidate_key": list(canonical_pair_key(candidate["entity"], a.code, b.code)),
+        "method_contract": candidate["method_contract"],
+        "period": candidate["period"],
+        "thresholds": candidate["thresholds"],
+        "qualification_observations": {
+            "expected_slots": coverage["expected_slots"],
+            "aligned_pairs": coverage["expected_aligned_pairs"],
+            "aligned_coverage": coverage["aligned_coverage"],
+        },
+        "series": [
+            {
+                "code": series.code,
+                "name": series.name,
+                "definition": series.definition,
+                "entity": series.entity,
+                "family": series.family,
+                "frequency": series.frequency,
+                "unit": series.unit,
+                "transformation": series.transformation,
+                "normalized_fingerprint": series.normalized_fingerprint,
+                "raw_fixture_fingerprint": series.raw_fixture_fingerprint,
+            }
+            for series in (a, b)
+        ],
+        "construction_risk": candidate["construction_risk"],
+    }
+
+
+def _invalid_funnel_classification(candidate: dict[str, Any], reason_codes: list[str]) -> dict[str, Any]:
+    candidate_id = str(candidate.get("candidate_id", "invalid-candidate"))
+    entity = str(candidate.get("entity", ""))
+    codes = []
+    for side in ("series_a", "series_b"):
+        code = candidate.get(side, {}).get("identity", {}).get("code")
+        if code:
+            codes.append(str(code))
+    candidate_key = [entity, *sorted(codes)] if len(codes) == 2 else [entity]
+    return {
+        "candidate_id": candidate_id,
+        "candidate_key": candidate_key,
+        "input_fingerprint": sha256_value({"candidate_id": candidate_id, "candidate_key": candidate_key}),
+        "policy_version": CANDIDATE_FUNNEL_POLICY_VERSION,
+        "qualification": {"passed": False, "checks": {}, "observed": {}, "thresholds": {}, "blocker_codes": sorted(reason_codes)},
+        "contradiction_context": {"canonical_package_ids": [], "mechanical_rule": None, "prior_relationship": None, "construction_limitations": [], "hard_blocker_codes": sorted(reason_codes)},
+        "statistical_context": {"result_derived_inputs_used": "result_derived_input" in reason_codes},
+        "semantic_classification": {"classification": "not_evaluated", "rule": "invalid input fails before semantic classification"},
+        "disposition": "invalid",
+        "reason_codes": sorted(reason_codes),
+        "recovery_context": {"funnel_stage": "input_validation", "unresolved_fields": [], "required_action": "correct and re-authenticate candidate input", "reentry_condition": "all result-derived fields absent and all evidence references current"},
+        "provenance": {},
+    }
+
+
+def _classify_verified_candidate_for_funnel(
+    candidate: dict[str, Any],
+    a: Series,
+    b: Series,
+    canonical_relationship_index: dict[tuple[str, str, str], list[str]] | None = None,
+) -> dict[str, Any]:
+    try:
+        projection = _candidate_projection(candidate)
+    except (KeyError, TypeError, ValueError):
+        return _invalid_funnel_classification(candidate, ["malformed_candidate_identity"])
+
+    key = canonical_pair_key(candidate["entity"], a.code, b.code)
+    canonical_index = canonical_relationship_index if canonical_relationship_index is not None else load_current_canonical_pearson_relationship_index()
+    aligned = int(projection["qualification_observations"]["aligned_pairs"])
+    coverage = Decimal(str(projection["qualification_observations"]["aligned_coverage"]))
+    min_aligned = int(projection["thresholds"]["min_aligned_pairs"])
+    min_coverage = Decimal(str(projection["thresholds"]["min_aligned_coverage"]))
+    checks = {
+        "identity_complete": bool(candidate.get("candidate_id") and a.code and b.code and candidate.get("entity")),
+        "same_entity": a.entity == b.entity == candidate["entity"],
+        "annual_frequency": a.frequency == b.frequency == "annual",
+        "raw_transformation": a.transformation == b.transformation == "raw",
+        "units_resolved": bool(a.unit and b.unit),
+        "minimum_aligned_pairs": aligned >= min_aligned,
+        "minimum_aligned_coverage": coverage >= min_coverage,
+        "not_self_pair": a.code != b.code,
+    }
+    blocker_codes = [name for name, passed in checks.items() if not passed]
+    pair_code_key = tuple(sorted((a.code, b.code)))
+    canonical_package_ids = canonical_index.get(key, [])
+    mechanical_rule = MECHANICAL_EXCLUSIONS.get(pair_code_key)
+    prior_relationship = EXCLUDED_PRIOR_PAIRS.get(key)
+    reason_codes = list(blocker_codes)
+    if canonical_package_ids:
+        reason_codes.append("current_canonical_relationship")
+    elif prior_relationship:
+        reason_codes.append("prior_relationship")
+    if mechanical_rule:
+        reason_codes.append("mechanical_exclusion")
+    construction_limitations = sorted(
+        f"{name}:{value}" for name, value in candidate["construction_risk"].items() if value != "not present"
+    )
+    qualification = {
+        "passed": not blocker_codes,
+        "checks": checks,
+        "observed": projection["qualification_observations"],
+        "thresholds": projection["thresholds"],
+        "blocker_codes": sorted(blocker_codes),
+    }
+    contradiction = {
+        "canonical_package_ids": canonical_package_ids,
+        "mechanical_rule": mechanical_rule,
+        "prior_relationship": prior_relationship,
+        "construction_limitations": construction_limitations,
+        "hard_blocker_codes": sorted(set(reason_codes)),
+    }
+    evidence_provenance = {
+        "policy_version": CANDIDATE_FUNNEL_POLICY_VERSION,
+        "method_identity": candidate["method_contract"]["identity"],
+        "method_contract_fingerprint": candidate["method_contract"]["contract_fingerprint"],
+        "expected_package_id": candidate["expected_package_id"],
+        "series": [
+            {
+                "code": series.code,
+                "normalized_path": series.normalized_path,
+                "normalized_fingerprint": series.normalized_fingerprint,
+                "raw_fixture_path": series.raw_fixture_path,
+                "raw_fixture_fingerprint": series.raw_fixture_fingerprint,
+                "validation_path": series.validation_path,
+                "validation_fingerprint": series.validation_fingerprint,
+                "selection_contract_path": series.selection_contract_path,
+                "selection_contract_fingerprint": series.selection_contract_fingerprint,
+                "acquisition_manifest_path": series.acquisition_manifest_path,
+                "acquisition_manifest_fingerprint": series.acquisition_manifest_fingerprint,
+            }
+            for series in sorted((a, b), key=lambda item: item.code)
+        ],
+    }
+    if reason_codes:
+        return {
+            "candidate_id": candidate["candidate_id"],
+            "candidate_key": list(key),
+            "input_fingerprint": sha256_value(projection),
+            "policy_version": CANDIDATE_FUNNEL_POLICY_VERSION,
+            "qualification": qualification,
+            "contradiction_context": contradiction,
+            "statistical_context": {"result_derived_inputs_used": False},
+            "semantic_classification": {"classification": "not_evaluated", "rule": "deterministic exclusion precedes semantic classification"},
+            "disposition": "excluded",
+            "reason_codes": sorted(set(reason_codes)),
+            "recovery_context": {"funnel_stage": "deterministic_qualification", "unresolved_fields": [], "required_action": "none; excluded", "reentry_condition": None},
+            "provenance": evidence_provenance,
+        }
+
+    semantic = semantic_proximity(a, b)
+    risk = pair_time_risk(a, b)
+    companion = transformation_companion_eligibility(a, b, semantic["classification"], risk["category"])
+    statistical = {
+        "series_a_time_risk": risk["series_a"],
+        "series_b_time_risk": risk["series_b"],
+        "pair_time_risk": risk["category"],
+        "companion_priority": companion["raw_level_candidate_should_prioritize_companion"],
+        "result_derived_inputs_used": False,
+    }
+    unresolved_fields = []
+    if not a.definition:
+        unresolved_fields.append("series_a.definition")
+    if not b.definition:
+        unresolved_fields.append("series_b.definition")
+    unresolved = semantic["classification"] == "unresolved"
+    return {
+        "candidate_id": candidate["candidate_id"],
+        "candidate_key": list(key),
+        "input_fingerprint": sha256_value(projection),
+        "policy_version": CANDIDATE_FUNNEL_POLICY_VERSION,
+        "qualification": qualification,
+        "contradiction_context": contradiction,
+        "statistical_context": statistical,
+        "semantic_classification": {"classification": semantic["classification"], "rule": semantic["rule"]},
+        "disposition": "unresolved" if unresolved else "eligible",
+        "reason_codes": ["semantic_metadata_unresolved"] if unresolved else ["qualified", f"semantic_{semantic['classification']}"],
+        "recovery_context": {
+            "funnel_stage": "semantic_classification" if unresolved else "classification_complete",
+            "unresolved_fields": sorted(unresolved_fields),
+            "required_action": "human metadata review" if unresolved else "apply deterministic batch composition",
+            "reentry_condition": "supply authenticated missing metadata or an accepted explicit pair rule" if unresolved else None,
+        },
+        "provenance": evidence_provenance,
+    }
+
+
+def load_authenticated_series_pool(fixture_root: Path = DEFAULT_FIXTURE_ROOT) -> list[Series]:
+    resolved_root = fixture_root if fixture_root.is_absolute() else PROJECT_ROOT / fixture_root
+    normalized_paths = sorted(resolved_root.rglob("normalized_observations.json"))
+    if not normalized_paths:
+        raise ValueError(f"fixture root has no normalized observations: {resolved_root}")
+    for normalized_path in normalized_paths:
+        normalized = read_json(normalized_path)
+        if not isinstance(normalized, dict):
+            raise ValueError(f"normalized evidence is malformed: {normalized_path}")
+        embedded_fingerprint = normalized.get("normalized_fingerprint")
+        fingerprint_payload = {key: value for key, value in normalized.items() if key != "normalized_fingerprint"}
+        recomputed_fingerprint = sha256_value(fingerprint_payload)
+        if embedded_fingerprint != recomputed_fingerprint:
+            raise ValueError(f"normalized evidence fingerprint mismatch: {normalized_path}")
+        validation_path = normalized_path.parent / "validation_results.json"
+        validation = read_json(validation_path)
+        normalized_validation = validation.get("normalized_validation", {}) if isinstance(validation, dict) else {}
+        if (
+            not isinstance(validation, dict)
+            or validation.get("raw_validation", {}).get("valid") is not True
+            or normalized_validation.get("valid") is not True
+            or normalized_validation.get("normalized_fingerprint") != recomputed_fingerprint
+        ):
+            raise ValueError(f"fixture validation is not explicitly true and fingerprint-bound: {validation_path}")
+    return load_series_pool(fixture_root)
+
+
+def _authenticated_series_index(fixture_root: Path = DEFAULT_FIXTURE_ROOT) -> dict[str, Series]:
+    index: dict[str, Series] = {}
+    for series in load_authenticated_series_pool(fixture_root):
+        if series.normalized_path in index:
+            raise ValueError(f"duplicate authenticated normalized evidence path: {series.normalized_path}")
+        index[series.normalized_path] = series
+    return index
+
+
+def classify_candidate_for_funnel(
+    candidate: dict[str, Any],
+    canonical_relationship_index: dict[tuple[str, str, str], list[str]] | None = None,
+    authenticated_series_index: dict[str, Series] | None = None,
+) -> dict[str, Any]:
+    if not isinstance(candidate, dict):
+        return _invalid_funnel_classification({}, ["malformed_candidate_identity"])
+    if has_funnel_result_derived_key(candidate):
+        return _invalid_funnel_classification(candidate, ["result_derived_input"])
+    try:
+        reference_errors = _evidence_reference_errors(candidate)
+    except (AttributeError, KeyError, TypeError, ValueError):
+        return _invalid_funnel_classification(candidate, ["malformed_candidate_identity"])
+    if reference_errors:
+        classes = sorted({error.split(":", 1)[0] for error in reference_errors})
+        return _invalid_funnel_classification(candidate, classes)
+    try:
+        series_index = authenticated_series_index or _authenticated_series_index()
+        a_path = candidate["series_a"]["evidence_identity"]["normalized_path"]
+        b_path = candidate["series_b"]["evidence_identity"]["normalized_path"]
+        a = series_index[a_path]
+        b = series_index[b_path]
+        authenticated_candidate = build_candidate(a, b)
+    except (KeyError, TypeError, ValueError):
+        return _invalid_funnel_classification(candidate, ["unauthenticated_candidate_identity"])
+    if canonical_json(candidate) != canonical_json(authenticated_candidate):
+        return _invalid_funnel_classification(candidate, ["candidate_contract_mismatch"])
+    return _classify_verified_candidate_for_funnel(authenticated_candidate, a, b, canonical_relationship_index)
+
+
+def build_unresolved_escalation_package(classification: dict[str, Any]) -> dict[str, Any] | None:
+    if classification.get("disposition") != "unresolved":
+        return None
+    fingerprint = classification["input_fingerprint"]
+    return {
+        "profile": UNRESOLVED_ESCALATION_PROFILE,
+        "escalation_id": f"esc-{classification['candidate_id']}-{fingerprint.split(':', 1)[-1][:12]}",
+        "candidate_id": classification["candidate_id"],
+        "candidate_key": classification["candidate_key"],
+        "input_fingerprint": fingerprint,
+        "provenance": classification["provenance"],
+        "qualification": classification["qualification"],
+        "contradiction_context": classification["contradiction_context"],
+        "statistical_context": classification["statistical_context"],
+        "unresolved": {
+            "field_codes": classification["recovery_context"]["unresolved_fields"],
+            "question_codes": ["resolve_semantic_proximity"],
+            "allowed_evidence_fields": [
+                "entity", "frequency", "indicator_code", "indicator_definition", "indicator_name",
+                "period_scope", "production_family", "retained_evidence_fingerprint", "transformation", "unit",
+            ],
+        },
+        "recovery": {
+            "resume_stage": "semantic_classification",
+            "required_action": classification["recovery_context"]["required_action"],
+            "reentry_condition": classification["recovery_context"]["reentry_condition"],
+            "prohibited_action": "do not inspect or calculate candidate-pair results",
+        },
+    }
+
+
+def _all_pair_candidates(pool: list[Series]) -> list[dict[str, Any]]:
+    by_entity: dict[str, list[Series]] = {}
+    for series in pool:
+        by_entity.setdefault(series.entity, []).append(series)
+    candidates: list[dict[str, Any]] = []
+    for entity in sorted(by_entity, key=lambda item: ENTITY_ORDER.get(item, 99)):
+        rows = sorted(by_entity[entity], key=lambda item: (item.family, item.code, item.name))
+        for index, first in enumerate(rows):
+            for second in rows[index + 1:]:
+                candidates.append(build_candidate(first, second))
+    return candidates
+
+
+def _compact_funnel_classification(classification: dict[str, Any]) -> dict[str, Any]:
+    contradiction = classification["contradiction_context"]
+    return {
+        "candidate_id": classification["candidate_id"],
+        "candidate_key": classification["candidate_key"],
+        "input_fingerprint": classification["input_fingerprint"],
+        "disposition": classification["disposition"],
+        "reason_codes": classification["reason_codes"],
+        "qualification": {
+            "passed": classification["qualification"]["passed"],
+            "blocker_codes": classification["qualification"]["blocker_codes"],
+            "observed": classification["qualification"]["observed"],
+        },
+        "semantic_classification": classification["semantic_classification"]["classification"],
+        "contradiction_context": {
+            "canonical_package_ids": contradiction["canonical_package_ids"],
+            "mechanical_rule_present": contradiction["mechanical_rule"] is not None,
+            "prior_relationship_present": contradiction["prior_relationship"] is not None,
+            "construction_limitation_codes": [item.split(":", 1)[0] for item in contradiction["construction_limitations"]],
+        },
+        "recovery_stage": classification["recovery_context"]["funnel_stage"],
+    }
+
+
+def _candidate_population_records(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
+    records = [
+        {
+            "candidate_id": candidate["candidate_id"],
+            "candidate_key": list(canonical_pair_key(
+                candidate["entity"],
+                candidate["series_a"]["identity"]["code"],
+                candidate["series_b"]["identity"]["code"],
+            )),
+            "input_fingerprint": sha256_value(_candidate_projection(candidate)),
+        }
+        for candidate in candidates
+    ]
+    return sorted(records, key=lambda item: item["candidate_id"])
+
+
+def _rebuild_authenticated_candidate_funnel(
+    fixture_root: Path = DEFAULT_FIXTURE_ROOT,
+) -> tuple[list[Series], list[dict[str, Any]], list[dict[str, Any]]]:
+    pool = load_authenticated_series_pool(fixture_root)
+    authenticated_series = {series.normalized_path: series for series in pool}
+    if len(authenticated_series) != len(pool):
+        raise ValueError("duplicate authenticated normalized evidence path")
+    candidates = _all_pair_candidates(pool)
+    canonical_index = load_current_canonical_pearson_relationship_index()
+    full_classifications = [
+        classify_candidate_for_funnel(candidate, canonical_index, authenticated_series)
+        for candidate in candidates
+    ]
+    if any(item["disposition"] == "invalid" for item in full_classifications):
+        raise ValueError("authenticated candidate population produced an invalid classification")
+    by_id = {candidate["candidate_id"]: candidate for candidate in candidates}
+    eligible = [by_id[item["candidate_id"]] for item in full_classifications if item["disposition"] == "eligible"]
+    selected, deprioritized = select_candidates_successor_policy(eligible, 8)
+    selected_ids = {candidate["candidate_id"] for candidate in selected}
+    deprioritized_reason = {
+        candidate["candidate_id"]: candidate["successor_deprioritization_reason"]
+        for candidate in deprioritized
+    }
+    for classification in full_classifications:
+        if classification["candidate_id"] in selected_ids:
+            classification["disposition"] = "selected"
+            classification["reason_codes"] = sorted(set(
+                classification["reason_codes"] + ["selected_by_batch_composition"]
+            ))
+            classification["recovery_context"]["required_action"] = "freeze only under separate production authority"
+        elif classification["candidate_id"] in deprioritized_reason:
+            classification["disposition"] = "deprioritized"
+            classification["reason_codes"] = sorted(set(
+                classification["reason_codes"] + [deprioritized_reason[classification["candidate_id"]]]
+            ))
+            classification["recovery_context"]["required_action"] = "observe until a later expansion boundary"
+    full_classifications.sort(key=lambda item: item["candidate_id"])
+    return pool, candidates, full_classifications
+
+
+def validate_candidate_funnel_report(report: dict[str, Any]) -> dict[str, Any]:
+    """Validate a funnel report without leaking incidental container exceptions."""
+    malformed = {"valid": False, "errors": ["malformed candidate funnel report"]}
+    if not isinstance(report, dict):
+        return malformed
+    if not isinstance(report.get("source_candidate_ids"), list):
+        return malformed
+    classifications = report.get("candidate_classifications")
+    if not isinstance(classifications, list):
+        return malformed
+    if not isinstance(report.get("disposition_counts"), dict):
+        return malformed
+    if not isinstance(report.get("funnel_stage_counts"), dict):
+        return malformed
+    for item in classifications:
+        if not isinstance(item, dict):
+            return malformed
+        candidate_key = item.get("candidate_key")
+        if not isinstance(candidate_key, list) or any(not isinstance(value, str) for value in candidate_key):
+            return malformed
+        if not isinstance(item.get("reason_codes"), list):
+            return malformed
+    try:
+        return _validate_candidate_funnel_report(report)
+    except (AttributeError, KeyError, TypeError, ValueError, OSError):
+        return malformed
+
+
+def _validate_candidate_funnel_report(report: dict[str, Any]) -> dict[str, Any]:
+    errors: list[str] = []
+    expected_report_keys = {
+        "profile", "policy_version", "mode", "dry_run_only", "fixture_root",
+        "source_candidate_count", "source_candidate_ids", "source_population_fingerprint",
+        "candidate_classifications", "disposition_counts", "funnel_stage_counts",
+        "frontier_calls", "local_model_calls", "candidate_pair_results_used", "report_fingerprint",
+    }
+    if set(report) not in {frozenset(expected_report_keys), frozenset(expected_report_keys | {"validation"})}:
+        errors.append("unexpected candidate funnel report schema")
+    expected_boundaries = {
+        "profile": CANDIDATE_FUNNEL_PROFILE,
+        "policy_version": CANDIDATE_FUNNEL_POLICY_VERSION,
+        "mode": "representative_future_production_dry_run",
+        "dry_run_only": True,
+        "frontier_calls": 0,
+        "local_model_calls": 0,
+        "candidate_pair_results_used": False,
+    }
+    if any(report.get(key) != value for key, value in expected_boundaries.items()):
+        errors.append("candidate funnel execution boundary mismatch")
+    try:
+        fixture_root = Path(report["fixture_root"])
+        resolved_fixture = (fixture_root if fixture_root.is_absolute() else PROJECT_ROOT / fixture_root).resolve(strict=True)
+        resolved_fixture.relative_to(PROJECT_ROOT.resolve())
+        _, expected_candidates, expected_full_classifications = _rebuild_authenticated_candidate_funnel(resolved_fixture)
+        expected_records = _candidate_population_records(expected_candidates)
+        expected_compact_classifications = [
+            _compact_funnel_classification(item) for item in expected_full_classifications
+        ]
+    except (KeyError, TypeError, ValueError, OSError):
+        expected_records = []
+        expected_compact_classifications = []
+        errors.append("fixture root or authenticated source population is invalid")
+
+    declared_ids = report.get("source_candidate_ids", [])
+    classifications = report.get("candidate_classifications", [])
+    classified_ids = [item.get("candidate_id") for item in classifications if isinstance(item, dict)]
+    classified_records = sorted(
+        [
+            {
+                "candidate_id": item.get("candidate_id"),
+                "candidate_key": item.get("candidate_key"),
+                "input_fingerprint": item.get("input_fingerprint"),
+            }
+            for item in classifications if isinstance(item, dict)
+        ],
+        key=lambda item: str(item["candidate_id"]),
+    )
+    candidate_keys = [tuple(item.get("candidate_key", [])) for item in classifications if isinstance(item, dict)]
+    if len(declared_ids) != report.get("source_candidate_count") or len(declared_ids) != len(set(declared_ids)):
+        errors.append("declared source identities are not unique and cardinality-consistent")
+    if sorted(classified_ids, key=str) != sorted(declared_ids, key=str) or len(classified_ids) != len(declared_ids):
+        errors.append("candidate population does not exactly match declared source identities")
+    if len(candidate_keys) != len(set(candidate_keys)):
+        errors.append("duplicate canonical candidate relationship identity")
+    if classified_records != expected_records:
+        errors.append("classified candidate identities do not match authenticated source population")
+    if classifications != expected_compact_classifications:
+        errors.append("candidate classifications do not match deterministic authenticated reconstruction")
+    expected_population_fingerprint = sha256_value(expected_records)
+    if report.get("source_population_fingerprint") != expected_population_fingerprint:
+        errors.append("source population fingerprint mismatch")
+
+    allowed = {"selected", "deprioritized", "excluded", "unresolved", "invalid"}
+    if any(not isinstance(item, dict) or item.get("disposition") not in allowed for item in classifications):
+        errors.append("unknown candidate disposition")
+    counts: dict[str, int] = {key: 0 for key in report.get("disposition_counts", {})}
+    for item in classifications:
+        if isinstance(item, dict):
+            disposition = item.get("disposition")
+            counts[disposition] = counts.get(disposition, 0) + 1
+    if dict(sorted(counts.items())) != report.get("disposition_counts"):
+        errors.append("disposition counts do not match candidate classifications")
+
+    exclusion_counts: dict[str, int] = {}
+    semantic_counts: dict[str, int] = {}
+    mechanically_eligible = 0
+    for item in classifications:
+        if not isinstance(item, dict):
+            continue
+        if item.get("disposition") == "excluded":
+            for reason in item.get("reason_codes", []):
+                exclusion_counts[reason] = exclusion_counts.get(reason, 0) + 1
+        elif item.get("disposition") != "invalid":
+            mechanically_eligible += 1
+            semantic_class = item.get("semantic_classification")
+            semantic_counts[semantic_class] = semantic_counts.get(semantic_class, 0) + 1
+    expected_stages = {
+        "total_inventory": len(classifications),
+        "mechanical_exclusions_by_reason": dict(sorted(exclusion_counts.items())),
+        "mechanically_excluded_count": counts.get("excluded", 0),
+        "mechanically_eligible_count": mechanically_eligible,
+        "deterministic_semantic_classifications_by_class": dict(sorted(semantic_counts.items())),
+        "unresolved_manual_review_count": counts.get("unresolved", 0),
+        "escalation_inclusion_count": counts.get("unresolved", 0),
+    }
+    if report.get("funnel_stage_counts") != expected_stages:
+        errors.append("funnel stage accounting mismatch")
+    if expected_stages["mechanically_excluded_count"] + expected_stages["mechanically_eligible_count"] != expected_stages["total_inventory"]:
+        errors.append("funnel stage conservation failure")
+    if has_forbidden_key(report):
+        errors.append("forbidden outcome-derived field present")
+    fingerprint_payload = {key: value for key, value in report.items() if key not in {"report_fingerprint", "validation"}}
+    if not report.get("report_fingerprint") or sha256_value(fingerprint_payload) != report.get("report_fingerprint"):
+        errors.append("report fingerprint mismatch")
+    return {"valid": not errors, "errors": sorted(set(errors))}
+
+
+def _build_synthetic_unresolved_verification(
+    pool: list[Series],
+    candidates: list[dict[str, Any]],
+    full_classifications: list[dict[str, Any]],
+) -> dict[str, Any]:
+    authenticated_series = {series.normalized_path: series for series in pool}
+    by_id = {candidate["candidate_id"]: candidate for candidate in candidates}
+    synthetic_candidate_id = next(
+        item["candidate_id"]
+        for item in full_classifications
+        if item["semantic_classification"]["classification"] == "remote"
+        and item["disposition"] in {"selected", "deprioritized"}
+    )
+    synthetic_original = by_id[synthetic_candidate_id]
+    synthetic_a = authenticated_series[synthetic_original["series_a"]["evidence_identity"]["normalized_path"]]
+    synthetic_b = authenticated_series[synthetic_original["series_b"]["evidence_identity"]["normalized_path"]]
+    synthetic_a = replace(synthetic_a, definition="")
+    synthetic_source = build_candidate(synthetic_a, synthetic_b)
+    synthetic_classification = _classify_verified_candidate_for_funnel(
+        synthetic_source, synthetic_a, synthetic_b, canonical_relationship_index={}
+    )
+    synthetic_package = build_unresolved_escalation_package(synthetic_classification)
+    if synthetic_package is None:
+        raise ValueError("adversarial unresolved fixture did not emit an escalation package")
+    restored_classification = classify_candidate_for_funnel(
+        synthetic_original, canonical_relationship_index={}, authenticated_series_index=authenticated_series
+    )
+    return {
+        "test_only": True,
+        "mutation": "withhold one indicator definition from a real authenticated candidate shape",
+        "candidate_id": synthetic_classification["candidate_id"],
+        "unresolved_disposition": synthetic_classification["disposition"],
+        "restored_disposition": restored_classification["disposition"],
+        "restored_semantic_classification": restored_classification["semantic_classification"]["classification"],
+        "required_context_sections": sorted(
+            key for key in ("provenance", "qualification", "contradiction_context", "statistical_context", "recovery")
+            if key in synthetic_package
+        ),
+        "full_candidate_canonical_json_bytes": len(canonical_json(synthetic_original).encode()),
+        "full_candidate_scalar_leaf_count": scalar_leaf_count(synthetic_original),
+        "compact_escalation_canonical_json_bytes": len(canonical_json(synthetic_package).encode()),
+        "compact_escalation_scalar_leaf_count": scalar_leaf_count(synthetic_package),
+        "escalation_package_fingerprint": sha256_value(synthetic_package),
+        "result_derived_inputs_used": synthetic_package["statistical_context"]["result_derived_inputs_used"],
+    }
+
+
+def build_candidate_funnel_pilot(
+    fixture_root: Path = DEFAULT_FIXTURE_ROOT,
+    elapsed_time_seconds: str | None = None,
+) -> dict[str, Any]:
+    # Retained as a caller-compatibility input only. Runtime observations are
+    # deliberately excluded from governed deterministic artifacts.
+    _ = elapsed_time_seconds
+    pool, candidates, full_classifications = _rebuild_authenticated_candidate_funnel(fixture_root)
+    canonical_index = load_current_canonical_pearson_relationship_index()
+    by_id = {candidate["candidate_id"]: candidate for candidate in candidates}
+    source_ids = sorted(by_id)
+    counts: dict[str, int] = {"deprioritized": 0, "excluded": 0, "selected": 0, "unresolved": 0}
+    for item in full_classifications:
+        counts[item["disposition"]] = counts.get(item["disposition"], 0) + 1
+    compact_classifications = [_compact_funnel_classification(item) for item in full_classifications]
+    population_records = _candidate_population_records(candidates)
+    exclusion_counts: dict[str, int] = {}
+    semantic_counts: dict[str, int] = {}
+    for item in compact_classifications:
+        if item["disposition"] == "excluded":
+            for reason in item["reason_codes"]:
+                exclusion_counts[reason] = exclusion_counts.get(reason, 0) + 1
+        else:
+            semantic_class = item["semantic_classification"]
+            semantic_counts[semantic_class] = semantic_counts.get(semantic_class, 0) + 1
+    funnel_stage_counts = {
+        "total_inventory": len(source_ids),
+        "mechanical_exclusions_by_reason": dict(sorted(exclusion_counts.items())),
+        "mechanically_excluded_count": counts["excluded"],
+        "mechanically_eligible_count": len(source_ids) - counts["excluded"],
+        "deterministic_semantic_classifications_by_class": dict(sorted(semantic_counts.items())),
+        "unresolved_manual_review_count": counts["unresolved"],
+        "escalation_inclusion_count": counts["unresolved"],
+    }
+    report: dict[str, Any] = {
+        "profile": CANDIDATE_FUNNEL_PROFILE,
+        "policy_version": CANDIDATE_FUNNEL_POLICY_VERSION,
+        "mode": "representative_future_production_dry_run",
+        "dry_run_only": True,
+        "fixture_root": str(fixture_root),
+        "source_candidate_count": len(source_ids),
+        "source_candidate_ids": source_ids,
+        "source_population_fingerprint": sha256_value(population_records),
+        "candidate_classifications": compact_classifications,
+        "disposition_counts": dict(sorted(counts.items())),
+        "funnel_stage_counts": funnel_stage_counts,
+        "frontier_calls": 0,
+        "local_model_calls": 0,
+        "candidate_pair_results_used": False,
+    }
+    report["report_fingerprint"] = sha256_value(report)
+    report["validation"] = validate_candidate_funnel_report(report)
+    if not report["validation"]["valid"]:
+        raise ValueError(f"candidate funnel report validation failed: {report['validation']['errors']}")
+    packages = [package for item in full_classifications if (package := build_unresolved_escalation_package(item)) is not None]
+    escalation_collection: dict[str, Any] = {
+        "profile": "knowledgeforge.candidate_funnel_unresolved_collection.v1@1.0",
+        "policy_version": CANDIDATE_FUNNEL_POLICY_VERSION,
+        "report_fingerprint": report["report_fingerprint"],
+        "package_count": len(packages),
+        "packages": packages,
+    }
+    escalation_collection["collection_fingerprint"] = sha256_value(escalation_collection)
+
+    synthetic_verification = _build_synthetic_unresolved_verification(
+        pool, candidates, full_classifications
+    )
+    legacy = build_successor_policy_future_production_dry_run(fixture_root)
+    legacy_full_candidates = legacy["selected_candidates"] + legacy["deprioritized_candidates"]
+    run_evidence: dict[str, Any] = {
+        "profile": "knowledgeforge.candidate_funnel_run_evidence.v1@1.0",
+        "workflow_identity": "knowledgeforge.deterministic_candidate_funnel.pilot@1.0",
+        "placement": "deterministic",
+        "deterministic_route": [
+            "authenticated_fixture_inventory",
+            "mechanical_qualification_and_exclusion",
+            "deterministic_semantic_proximity",
+            "deterministic_batch_composition",
+            "unresolved_only_escalation_packaging",
+            "fail_closed_validation",
+        ],
+        "input_artifact_identities": {
+            "fixture_root": str(fixture_root),
+            "source_population_fingerprint": report["source_population_fingerprint"],
+            "canonical_relationship_index_fingerprint": sha256_value({str(key): value for key, value in canonical_index.items()}),
+        },
+        "output_artifact_identities": {
+            "funnel_report": {"path": "funnel_report.json", "fingerprint": report["report_fingerprint"]},
+            "unresolved_escalation_package": {"path": "unresolved_escalation_package.json", "fingerprint": escalation_collection["collection_fingerprint"]},
+        },
+        "reused_artifacts": [
+            {"identity": METHOD_IDENTITY, "fingerprint": METHOD_CONTRACT_FINGERPRINT},
+            {"path": "docs/model_routing_policy.md", "fingerprint": sha256_file(PROJECT_ROOT / "docs/model_routing_policy.md")},
+            {"path": str(fixture_root), "fingerprint": report["source_population_fingerprint"]},
+        ],
+        "funnel_counts": funnel_stage_counts,
+        "validator_result": report["validation"],
+        "hermes_implementation_review_usage": {
+            "boundary": "outside deterministic candidate-funnel execution",
+            "normalized_project_workflow_usage_available": False,
+            "reason": "Hermes usage is not normalized to KnowledgeForge workflow identities",
+        },
+        "report_fingerprint": report["report_fingerprint"],
+        "escalation_collection_fingerprint": escalation_collection["collection_fingerprint"],
+        "source_population_fingerprint": report["source_population_fingerprint"],
+        "source_candidate_count": len(source_ids),
+        "deterministically_resolved_candidate_count": sum(counts.get(key, 0) for key in ("selected", "deprioritized", "excluded")),
+        "human_review_candidate_count": counts.get("unresolved", 0),
+        "invalid_candidate_count": counts.get("invalid", 0),
+        "pre_change_full_candidate_records_materialized": len(legacy_full_candidates),
+        "pre_change_full_candidate_context_canonical_json_bytes": len(canonical_json(legacy_full_candidates).encode()),
+        "pre_change_full_candidate_context_scalar_leaf_count": scalar_leaf_count(legacy_full_candidates),
+        "post_change_funnel_report_canonical_json_bytes": len(canonical_json(report).encode()),
+        "post_change_funnel_report_scalar_leaf_count": scalar_leaf_count(report),
+        "post_change_escalation_context_canonical_json_bytes": len(canonical_json(escalation_collection).encode()),
+        "post_change_escalation_context_scalar_leaf_count": scalar_leaf_count(escalation_collection),
+        "post_change_combined_context_canonical_json_bytes": len(canonical_json(report).encode()) + len(canonical_json(escalation_collection).encode()),
+        "post_change_combined_context_scalar_leaf_count": scalar_leaf_count(report) + scalar_leaf_count(escalation_collection),
+        "comparison_basis": {
+            "pre_change": "10 full mechanically eligible selected/deprioritized candidate records materialized by the prior future-production workflow",
+            "post_change": "40 compact funnel classifications plus the unresolved-only escalation collection",
+            "limitation": "different schemas and cardinalities; valid as representative workflow context-burden evidence, not as an intrinsic per-candidate efficiency estimate",
+        },
+        "adversarial_unresolved_verification": synthetic_verification,
+        "measurement_boundary": "serialized JSON bytes and scalar leaves measure candidate/context burden; they are not token, cost, latency or capability-savings claims",
+        "coefficient_free": not has_funnel_result_derived_key({"report": report, "escalation": escalation_collection}),
+        "replay_command": "python3 -m unittest tests.test_coefficient_free_pearson_candidate_registry",
+    }
+    run_evidence["run_fingerprint"] = sha256_value(run_evidence)
+    return {
+        "funnel_report": report,
+        "unresolved_escalation_package": escalation_collection,
+        "run_evidence": run_evidence,
+    }
+
+
+def validate_candidate_funnel_outputs(outputs: dict[str, Any], require_elapsed: bool = True) -> dict[str, Any]:
+    # Compatibility parameter retained for existing callers. Elapsed time is
+    # not governed evidence and therefore is neither expected nor required.
+    _ = require_elapsed
+    errors: list[str] = []
+    try:
+        report = outputs["funnel_report"]
+        escalation = outputs["unresolved_escalation_package"]
+        run = outputs["run_evidence"]
+        report_validation = validate_candidate_funnel_report(report)
+        if not report_validation["valid"]:
+            errors.extend(f"report:{error}" for error in report_validation["errors"])
+        escalation_payload = {key: value for key, value in escalation.items() if key != "collection_fingerprint"}
+        if escalation.get("profile") != "knowledgeforge.candidate_funnel_unresolved_collection.v1@1.0":
+            errors.append("unexpected escalation collection profile")
+        if escalation.get("policy_version") != CANDIDATE_FUNNEL_POLICY_VERSION:
+            errors.append("escalation collection policy version mismatch")
+        if sha256_value(escalation_payload) != escalation.get("collection_fingerprint"):
+            errors.append("escalation collection fingerprint mismatch")
+        if escalation.get("report_fingerprint") != report.get("report_fingerprint"):
+            errors.append("escalation/report cross-fingerprint mismatch")
+        packages = escalation.get("packages", [])
+        if escalation.get("package_count") != len(packages):
+            errors.append("escalation package count mismatch")
+        if len(packages) != report.get("funnel_stage_counts", {}).get("escalation_inclusion_count"):
+            errors.append("escalation membership does not match funnel accounting")
+        if any(not isinstance(package, dict) or package.get("profile") != UNRESOLVED_ESCALATION_PROFILE for package in packages):
+            errors.append("non-unresolved package entered escalation collection")
+        fixture_root = Path(report["fixture_root"])
+        resolved_fixture = (fixture_root if fixture_root.is_absolute() else PROJECT_ROOT / fixture_root).resolve(strict=True)
+        resolved_fixture.relative_to(PROJECT_ROOT.resolve())
+        expected_pool, expected_candidates, expected_full_classifications = _rebuild_authenticated_candidate_funnel(resolved_fixture)
+        expected_packages = [
+            package
+            for item in expected_full_classifications
+            if (package := build_unresolved_escalation_package(item)) is not None
+        ]
+        if packages != expected_packages:
+            errors.append("escalation packages do not match deterministic unresolved reconstruction")
+
+        if report.get("validation") != report_validation:
+            errors.append("stored report validation result mismatch")
+        expected_counts: dict[str, int] = {}
+        for item in expected_full_classifications:
+            expected_counts[item["disposition"]] = expected_counts.get(item["disposition"], 0) + 1
+        expected_legacy = build_successor_policy_future_production_dry_run(resolved_fixture)
+        expected_legacy_full = expected_legacy["selected_candidates"] + expected_legacy["deprioritized_candidates"]
+        expected_canonical_index = load_current_canonical_pearson_relationship_index()
+        expected_synthetic = _build_synthetic_unresolved_verification(
+            expected_pool, expected_candidates, expected_full_classifications
+        )
+        expected_run: dict[str, Any] = {
+            "profile": "knowledgeforge.candidate_funnel_run_evidence.v1@1.0",
+            "workflow_identity": "knowledgeforge.deterministic_candidate_funnel.pilot@1.0",
+            "placement": "deterministic",
+            "deterministic_route": [
+                "authenticated_fixture_inventory",
+                "mechanical_qualification_and_exclusion",
+                "deterministic_semantic_proximity",
+                "deterministic_batch_composition",
+                "unresolved_only_escalation_packaging",
+                "fail_closed_validation",
+            ],
+            "input_artifact_identities": {
+                "fixture_root": report["fixture_root"],
+                "source_population_fingerprint": report["source_population_fingerprint"],
+                "canonical_relationship_index_fingerprint": sha256_value({
+                    str(key): value for key, value in expected_canonical_index.items()
+                }),
+            },
+            "output_artifact_identities": {
+                "funnel_report": {
+                    "path": "funnel_report.json",
+                    "fingerprint": report["report_fingerprint"],
+                },
+                "unresolved_escalation_package": {
+                    "path": "unresolved_escalation_package.json",
+                    "fingerprint": escalation["collection_fingerprint"],
+                },
+            },
+            "reused_artifacts": [
+                {"identity": METHOD_IDENTITY, "fingerprint": METHOD_CONTRACT_FINGERPRINT},
+                {"path": "docs/model_routing_policy.md", "fingerprint": sha256_file(PROJECT_ROOT / "docs/model_routing_policy.md")},
+                {"path": report["fixture_root"], "fingerprint": report["source_population_fingerprint"]},
+            ],
+            "funnel_counts": report["funnel_stage_counts"],
+            "validator_result": report_validation,
+            "hermes_implementation_review_usage": {
+                "boundary": "outside deterministic candidate-funnel execution",
+                "normalized_project_workflow_usage_available": False,
+                "reason": "Hermes usage is not normalized to KnowledgeForge workflow identities",
+            },
+            "report_fingerprint": report["report_fingerprint"],
+            "escalation_collection_fingerprint": escalation["collection_fingerprint"],
+            "source_population_fingerprint": report["source_population_fingerprint"],
+            "source_candidate_count": len(expected_candidates),
+            "deterministically_resolved_candidate_count": sum(
+                expected_counts.get(key, 0) for key in ("selected", "deprioritized", "excluded")
+            ),
+            "human_review_candidate_count": expected_counts.get("unresolved", 0),
+            "invalid_candidate_count": expected_counts.get("invalid", 0),
+            "pre_change_full_candidate_records_materialized": len(expected_legacy_full),
+            "pre_change_full_candidate_context_canonical_json_bytes": len(canonical_json(expected_legacy_full).encode()),
+            "pre_change_full_candidate_context_scalar_leaf_count": scalar_leaf_count(expected_legacy_full),
+            "post_change_funnel_report_canonical_json_bytes": len(canonical_json(report).encode()),
+            "post_change_funnel_report_scalar_leaf_count": scalar_leaf_count(report),
+            "post_change_escalation_context_canonical_json_bytes": len(canonical_json(escalation).encode()),
+            "post_change_escalation_context_scalar_leaf_count": scalar_leaf_count(escalation),
+            "post_change_combined_context_canonical_json_bytes": len(canonical_json(report).encode()) + len(canonical_json(escalation).encode()),
+            "post_change_combined_context_scalar_leaf_count": scalar_leaf_count(report) + scalar_leaf_count(escalation),
+            "comparison_basis": {
+                "pre_change": "10 full mechanically eligible selected/deprioritized candidate records materialized by the prior future-production workflow",
+                "post_change": "40 compact funnel classifications plus the unresolved-only escalation collection",
+                "limitation": "different schemas and cardinalities; valid as representative workflow context-burden evidence, not as an intrinsic per-candidate efficiency estimate",
+            },
+            "adversarial_unresolved_verification": expected_synthetic,
+            "measurement_boundary": "serialized JSON bytes and scalar leaves measure candidate/context burden; they are not token, cost, latency or capability-savings claims",
+            "coefficient_free": not has_funnel_result_derived_key({"report": report, "escalation": escalation}),
+            "replay_command": "python3 -m unittest tests.test_coefficient_free_pearson_candidate_registry",
+        }
+        expected_run["run_fingerprint"] = sha256_value(expected_run)
+        if run != expected_run:
+            errors.append("run evidence does not match deterministic reconstruction")
+
+        run_payload = {key: value for key, value in run.items() if key != "run_fingerprint"}
+        if sha256_value(run_payload) != run.get("run_fingerprint"):
+            errors.append("run evidence fingerprint mismatch")
+        if run.get("report_fingerprint") != report.get("report_fingerprint"):
+            errors.append("run/report cross-fingerprint mismatch")
+        if run.get("escalation_collection_fingerprint") != escalation.get("collection_fingerprint"):
+            errors.append("run/escalation cross-fingerprint mismatch")
+        if run.get("source_population_fingerprint") != report.get("source_population_fingerprint"):
+            errors.append("run/source-population cross-fingerprint mismatch")
+        if run.get("funnel_counts") != report.get("funnel_stage_counts"):
+            errors.append("run funnel counts mismatch")
+        if run.get("validator_result") != report.get("validation"):
+            errors.append("run validator result mismatch")
+        if run.get("placement") != "deterministic":
+            errors.append("run placement is not deterministic")
+        if has_funnel_result_derived_key(outputs):
+            errors.append("result-derived field entered deterministic outputs")
+    except (AttributeError, KeyError, TypeError, ValueError):
+        errors.append("malformed candidate funnel output set")
+    return {"valid": not errors, "errors": sorted(set(errors))}
+
+
+def write_candidate_funnel_outputs(
+    outputs: dict[str, Any],
+    report_root: Path = CANDIDATE_FUNNEL_REPORT_ROOT,
+    authorized_root: Path | None = None,
+) -> dict[str, str]:
+    validation = validate_candidate_funnel_outputs(outputs, require_elapsed=True)
+    if not validation["valid"]:
+        raise ValueError(f"candidate funnel outputs invalid: {validation['errors']}")
+    root = report_root if report_root.is_absolute() else PROJECT_ROOT / report_root
+    authority = authorized_root or (PROJECT_ROOT / "artifacts/reports")
+    authority = authority.resolve(strict=True)
+    resolved_root = root.resolve(strict=False)
+    try:
+        resolved_root.relative_to(authority)
+    except ValueError as exc:
+        raise ValueError("output root escapes authorized report boundary") from exc
+    cursor = root.absolute()
+    while cursor != authority and cursor != cursor.parent:
+        if cursor.exists() and cursor.is_symlink():
+            raise ValueError(f"symlinked output path component rejected: {cursor}")
+        cursor = cursor.parent
+    root.mkdir(parents=True, exist_ok=True)
+    paths = {
+        "funnel_report": root / "funnel_report.json",
+        "unresolved_escalation_package": root / "unresolved_escalation_package.json",
+        "run_evidence": root / "run_evidence.json",
+    }
+    for key, path in paths.items():
+        if path.is_symlink():
+            raise ValueError(f"symlinked output destination rejected: {path}")
+        temporary = path.with_name(f".{path.name}.tmp")
+        if temporary.exists() or temporary.is_symlink():
+            raise ValueError(f"unsafe temporary output destination: {temporary}")
+        temporary.write_text(json.dumps(outputs[key], indent=2, sort_keys=True, ensure_ascii=False) + "\n")
+        temporary.replace(path)
+    return {key: str(path) for key, path in paths.items()}
+
 
 def registry_records_from_candidates(candidates: list[dict[str, Any]]) -> list[dict[str, Any]]:
     records = []

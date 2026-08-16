@@ -52,3 +52,8 @@
 
 - 2026-07-10: Removed generic WDI unit fallback; implemented Pearson correlation method v1; selected Campaign 36 specification without execution.
 - 2026-07-11: Completed MacroForge neutral evidence release compatibility pilot; validated bounded KnowledgeForge adapter, no-promote Pearson recomputation, downstream delta, and integration decision B.
+
+## 2026-08-08/16 — Deterministic candidate-funnel pilot and re-closeout
+
+- Reused the Pearson registry for 40 candidates: 30 excluded, 4 selected, 6 deprioritized, 0 unresolved/escalated; no production or publication occurred.
+- Re-closeout disclosed premature execution and non-isolated cache mutation. `c4e3e2a…` satisfies the dependency prospectively; RED-GREEN corrected elapsed evidence, output paths, and malformed containers. Independent review passed; candidate remains unstaged/unpublished.
