@@ -1,0 +1,39 @@
+{
+  "criteria": [
+    "authoritative Mature WDI Energy & Mining family and retained HTTPS evidence",
+    "same Norway territory, annual frequency and 1990-2024 requested window",
+    "durable local raw and normalized inputs with exact hashes",
+    "at least 30 retained observations and 0.85 coverage for each series",
+    "explicit missing-year and consecutive-year difference accounting",
+    "percentage-of-total denominator and percentage-point derived units",
+    "descriptive downstream utility without cross-series calculation or composition claim",
+    "no selection based on newly calculated level, difference, slope or variability outcomes"
+  ],
+  "eligible_universe": [
+    {
+      "candidate_ids": [
+        "energy_fossil_nonhydro_renewables_nor"
+      ],
+      "registry_fingerprint": "sha256:c1a99bada3e936739f0573eada4d3494a72baf10c66c8bd6236bd2c9dde80d18",
+      "registry_id": "campaign40_coefficient_free_candidate_registry_v1"
+    }
+  ],
+  "excluded_universe": [],
+  "governing_question": "What objective baseline evidence can the retained Norway fossil-generation-share and non-hydro-renewable-generation-share series support about coverage, missingness, finite-window levels, variation, and adjacent annual changes, without treating the two series as an exhaustive composition or making causal, predictive, policy, or cross-series relationship claims?",
+  "known_limitations": [
+    "WDI mutable-source vintage limitation; retained bytes are the replay anchor",
+    "EG.ELC.FOSL.ZS is missing 2024; EG.ELC.RNWX.ZS is missing 2022-2024",
+    "the two shares are not exhaustive and must not be summed or treated as total electricity production",
+    "shared total-electricity-production denominator does not justify a relationship claim",
+    "finite ordered annual values are not random or independent samples",
+    "linear slope and first-difference descriptors do not establish trend structure, stationarity, persistence, explanation or forecastability",
+    "canonical decimal precision is representation policy, not source measurement precision"
+  ],
+  "recorded_before_new_outcome_calculation": true,
+  "rubric_fingerprint": "sha256:e12ec01ae39ce1bb3566e67d95440e5e935950f938bfd9b0d5419a88571f359f",
+  "rubric_id": "selection-rubric-energy-mining-norway-baseline-portfolio-v1",
+  "selected_candidate_id": "energy_fossil_nonhydro_renewables_nor",
+  "selected_family": "Energy & Mining",
+  "selection_reason": "The retained Norway Energy & Mining pair is territory/window consistent, provider-unit explicit, above the published minimum coverage threshold, naturally incomplete at the tail, and useful for testing bounded missingness and calendar-adjacency semantics without calculating a relationship.",
+  "selection_registry_file_sha256": "sha256:56432eee9704483aa189f9b4a5c86a26b0d643007fa567ef427a371db696bc36"
+}

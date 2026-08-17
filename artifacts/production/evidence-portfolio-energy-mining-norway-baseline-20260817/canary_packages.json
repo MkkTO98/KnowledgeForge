@@ -1,0 +1,1187 @@
+[
+  {
+    "computation_method": {
+      "name": "baseline_characterization_portfolio_v1",
+      "nondeterminism": "none",
+      "parameters": {
+        "decimal_precision": 50,
+        "difference_rule": "only consecutive observed annual periods; never bridge a calendar gap",
+        "minimum_coverage_share": "0.85",
+        "minimum_observed_count": 30,
+        "quartile_rule": "median of lower and upper halves excluding the overall median for odd N",
+        "rounding": "ROUND_HALF_EVEN",
+        "slope_rule": "ordinary least-squares slope against integer calendar year; descriptor only",
+        "summary_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+        "summary_method": "wdi_annual_scalar_statistical_summary_v2@2.0"
+      },
+      "query_definitions": [],
+      "recipe": "summary v2 plus deterministic adjacent first-difference, quartile and calendar-year OLS slope descriptors",
+      "rerun": "python3 tools/evidence_portfolio_production.py run --manifest artifacts/production/evidence-portfolio-energy-mining-norway-baseline-20260817/portfolio_manifest.json --mode production --canary-gate artifacts/production/evidence-portfolio-energy-mining-norway-baseline-20260817/canary_gate.json",
+      "version": "1.0"
+    },
+    "confidence_quality": {
+      "confidence_label": "retained-fixture-supported-deterministic",
+      "evidence_sufficiency": "sufficient for bounded descriptive baseline characterization",
+      "governance_review_state": "bounded Energy & Mining portfolio promotion contract passed",
+      "lifecycle_state": "accepted",
+      "missingness_summary": "encoded in result records",
+      "reproducibility_state": "reproducible_offline_from_retained_fixture",
+      "uncertainty_dimensions": [
+        "mutable_source_reacquisition_limit",
+        "provider_measurement_and_revision_process",
+        "tail_missingness",
+        "bounded_single_territory_window"
+      ],
+      "validation_state": "pass"
+    },
+    "contradiction_records": [
+      {
+        "contradicting_evidence": null,
+        "contradiction_id": "none-recorded",
+        "contradiction_type": "none",
+        "disposition": "not_applicable",
+        "target_statement": "stmt-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1"
+      }
+    ],
+    "created_at": "2026-08-17",
+    "created_by": "evidence_portfolio_production",
+    "evidence_integrity": {
+      "evidence_refs_verified": true,
+      "fingerprints_verified": true,
+      "source_package_fingerprint": "sha256:15d997d4533774c96997c4375bd44230960032bc56c4ade1b41cd292cb062dc1"
+    },
+    "evidence_references": [
+      {
+        "accessed_at": "2026-07-11",
+        "evaluation_status": "evaluated",
+        "evidence_class": "external_observation_level_numerical_fixture",
+        "evidence_ref_id": "ev-eppilot-eg-elc-fosl-zs-nor-1990-2024",
+        "reproducibility_handle": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.FOSL.ZS__NOR__1990-2024/normalized_observations.json",
+        "snapshot_fingerprint": "sha256:15d997d4533774c96997c4375bd44230960032bc56c4ade1b41cd292cb062dc1",
+        "source_family": "official_statistical_source_data",
+        "source_identity": "World Bank WDI EG.ELC.FOSL.ZS NOR annual retained Campaign 40 fixture",
+        "source_owner": "World Bank WDI API retained local fixture",
+        "source_version": "2026-07-01"
+      }
+    ],
+    "evolution_metadata": {
+      "change_reason": "first bounded Norway Energy & Mining Evidence Portfolio with explicit missingness",
+      "changed_inputs_methods_templates_models_validators": [
+        "baseline_characterization_portfolio_v1"
+      ],
+      "dependent_object_review_posture": "review_on_source_or_method_supersession",
+      "previous_revision": null,
+      "supersession_dependencies": [
+        "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+        "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+        "sha256:6fc3c6a0d2df98336c24783b7201d890d7fca622311afb804fff63750669cf3d"
+      ]
+    },
+    "fingerprints": {
+      "computation_recipe": "sha256:b07beeac5a2d61c6266a78a8b3f372ead6c11db5b616c0c5622b618354bab061",
+      "evidence_references": "sha256:6e16f11849dc3ebf108933c7af4ff029f55864a055b31c2a4d5e1e4ffcf6c682",
+      "generated_statements": "sha256:e3f2d7f054a202869bef3789bceda9219d7cd08991b2dfd28159516eeff005a5",
+      "input_set": "sha256:1155614c6efaf81db6dec06706740031a491d69cec86891644e0019a5e9b5769",
+      "package_manifest": "sha256:97d862c8cbf139fa2c22f574fa385d89012df8ce9f54618156a2b320f8489942",
+      "query_definitions": "sha256:4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    "generated_statements": [
+      {
+        "applicability": {
+          "denominator_basis": "total_electricity_production_for_indicator_year",
+          "frequency": "annual",
+          "measure_kind": "electricity_production_share_of_total",
+          "observation_grain": "territory_indicator_year",
+          "period_end": 2024,
+          "period_start": 1990,
+          "population_basis": "finite retained sequence; not a random sample",
+          "unit": "% of total"
+        },
+        "dependencies": [
+          "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+          "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+          "sha256:6fc3c6a0d2df98336c24783b7201d890d7fca622311afb804fff63750669cf3d"
+        ],
+        "evidence_refs": [
+          "ev-eppilot-eg-elc-fosl-zs-nor-1990-2024"
+        ],
+        "origin": "computed_offline_from_retained_admitted_evidence",
+        "statement_id": "stmt-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+        "statement_type": "derived",
+        "structured_payload": {
+          "calculation_fingerprint": "sha256:1401fe5a196b00fe252c18aa3d5c886d2a3fb4b9401f1a6e1c512b23da5b907a",
+          "indicator_definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+          "limitations": [
+            "No cross-series comparison, coefficient or relationship is calculated.",
+            "The fossil and non-hydroelectric renewable shares are not exhaustive components of total electricity production and must not be summed or treated as a complete composition.",
+            "The denominator is total electricity production for the same indicator-year; percentage levels are not generation quantities.",
+            "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity, transition, persistence or forecastability.",
+            "First differences summarize consecutive retained annual values only; no difference is calculated across a missing calendar year.",
+            "No interpolation or imputation is performed.",
+            "WDI reacquisition may change; retained local bytes are the replay anchor.",
+            "Canonical decimal precision is not measurement precision."
+          ],
+          "manifest_fingerprint": "sha256:6fc3c6a0d2df98336c24783b7201d890d7fca622311afb804fff63750669cf3d",
+          "result_classes": [
+            "coverage_missingness",
+            "differences",
+            "level_distribution",
+            "sample_period",
+            "trend_descriptor",
+            "variability_stability"
+          ],
+          "result_count": 28,
+          "result_records": [
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "coverage_missingness",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "expected_observation_slot_count",
+              "result_id": "result-bcdb5943089be7b7314c018a",
+              "semantic_fingerprint": "sha256:affe26797c004a4347573d246774d590114af853dc80f55635739f660ed1fe8e",
+              "transformation": "level",
+              "value": 35
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "coverage_missingness",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "observed_count",
+              "result_id": "result-89f197420f8ed52a45f7da74",
+              "semantic_fingerprint": "sha256:37ed84e3543a833a14aa2a1dd6d1b46f318bd42467c19c07e19ef20427bda218",
+              "transformation": "level",
+              "value": 34
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "coverage_missingness",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "missing_count",
+              "result_id": "result-4188e31bbe972b3e1704c84a",
+              "semantic_fingerprint": "sha256:e1433ac12d2648fcadf549a408132cf2f4934406ef721cd972c24b8f26dde4fd",
+              "transformation": "level",
+              "value": 1
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "coverage_missingness",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "coverage_share",
+              "result_id": "result-2225b0cafb904e65a84bfd80",
+              "semantic_fingerprint": "sha256:dd62ce7d31da336e69378d48f7282d3207338e97085d8e79600a471ea796b13f",
+              "transformation": "level",
+              "value": "0.971428571429"
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "coverage_missingness",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "missing_share",
+              "result_id": "result-393c3d2f49fa8bc664055aad",
+              "semantic_fingerprint": "sha256:86b9b53f3463b096b8fa62ec7fd7c315d42d4f5544b2a96018239376f070f81c",
+              "transformation": "level",
+              "value": "0.028571428571"
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "sample_period",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "period_start",
+              "result_id": "result-f1d26b697548aeffddc99627",
+              "semantic_fingerprint": "sha256:c4dad1525e4f084a8ff28698b1a209115594de61224baa6c12867a387ae05a67",
+              "transformation": "level",
+              "value": 1990
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "sample_period",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "period_end",
+              "result_id": "result-db0faf105f641395ae36ccee",
+              "semantic_fingerprint": "sha256:0735b576f958e63bfa06b7c12f65493c529a883aabd8512bcb0b6c7abeb3d25e",
+              "transformation": "level",
+              "value": 2024
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "sample_period",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "first_valid_observation",
+              "result_id": "result-a8af56e78a14a38b5d06c7d7",
+              "semantic_fingerprint": "sha256:b100bf9246d21d5534303b68c7e6a4ff90d384d72b2cdbe3465d59d0a720dca5",
+              "transformation": "level",
+              "value": {
+                "period": 1990,
+                "unit": "% of total",
+                "value": "0.072221127963"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "sample_period",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "last_valid_observation",
+              "result_id": "result-508f74dbd736c8d5ca2a655e",
+              "semantic_fingerprint": "sha256:99d5a57432efb47df8850830ffd050250dc96da39803ede2fb751eb4ccdcec6a",
+              "transformation": "level",
+              "value": {
+                "period": 2023,
+                "unit": "% of total",
+                "value": "1.091061686949"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "sample_period",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "observed_period_span_years",
+              "result_id": "result-6c8b3cd3dafbb8215a9be962",
+              "semantic_fingerprint": "sha256:23f8b7b7c7a13c76d56495f31e07936f13c6e461f93e013fa9f990bd6d474afb",
+              "transformation": "level",
+              "value": 33
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "level_distribution",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "minimum",
+              "result_id": "result-396cf16169c55c31544220a7",
+              "semantic_fingerprint": "sha256:c16d8ae1ce33463a3a9b65fc283587d1f0839c72a13ad04b7bef4edde15c296a",
+              "transformation": "level",
+              "value": {
+                "canonical": "0.072221127963",
+                "display": "0.0722",
+                "periods": [
+                  1990
+                ],
+                "unit": "% of total"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "level_distribution",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "maximum",
+              "result_id": "result-d81597fea68ee6fc18a7dafe",
+              "semantic_fingerprint": "sha256:0748418c20521e1b0cdf0f896d2cbb0e0676f080b625392bcc0d2fe34d47f163",
+              "transformation": "level",
+              "value": {
+                "canonical": "4.069367715217",
+                "display": "4.0694",
+                "periods": [
+                  2010
+                ],
+                "unit": "% of total"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "level_distribution",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "arithmetic_mean",
+              "result_id": "result-07717ddec70544232870492b",
+              "semantic_fingerprint": "sha256:897b47056df9d899bd96a761ceba4c98e7feebf0b241773fd85d8ad286f023a3",
+              "transformation": "level",
+              "value": {
+                "canonical": "1.045637578505",
+                "display": "1.0456",
+                "unit": "% of total"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "level_distribution",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "median",
+              "result_id": "result-32cf840a213d89537ca4672c",
+              "semantic_fingerprint": "sha256:14323124d23042a255469b5fb3d815ca629ee3fc13045984be9d642fd64b52a1",
+              "transformation": "level",
+              "value": {
+                "canonical": "0.491584244684",
+                "display": "0.4916",
+                "unit": "% of total"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "level_distribution",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "population_standard_deviation",
+              "result_id": "result-36c826681f9b2f28a9c21d05",
+              "semantic_fingerprint": "sha256:93b7b4e6de467d322da490cefdb9af61790611041591b8386379ac07cb664aa4",
+              "transformation": "level",
+              "value": {
+                "canonical": "1.04039229198",
+                "display": "1.0404",
+                "unit": "percentage points"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "level_distribution",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "first_quartile",
+              "result_id": "result-956d662b99e9413bcf76676f",
+              "semantic_fingerprint": "sha256:c44d3e90ab95392e92de9fd1d30cde7818ddc14051d5032bf42e501dcf00f637",
+              "transformation": "level",
+              "value": {
+                "canonical": "0.270073830381",
+                "unit": "% of total"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "level_distribution",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "third_quartile",
+              "result_id": "result-26949481c705a77772fcec0e",
+              "semantic_fingerprint": "sha256:d9b5f1e0d487a28ac59e2e5b25d4a2d5f4251fddaf329e57f91e81b164d7ff5e",
+              "transformation": "level",
+              "value": {
+                "canonical": "1.897617600403",
+                "unit": "% of total"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "level_distribution",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "interquartile_range",
+              "result_id": "result-8f236104b60b0ec91f6c7974",
+              "semantic_fingerprint": "sha256:c837938c021ce27bdc2692a2e122d31b3d4750a191685b2a9eb3342b32d94545",
+              "transformation": "level",
+              "value": {
+                "canonical": "1.627543770022",
+                "unit": "percentage points"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "differences",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "adjacent_first_difference_count",
+              "result_id": "result-57f3a0d6cb0a85c3e1176673",
+              "semantic_fingerprint": "sha256:929d183fcfb81b01786a74bccf69a6aa8f516038f26d98d0d6069675503d41aa",
+              "transformation": "adjacent_first_difference",
+              "value": 33
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "differences",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "first_difference_mean",
+              "result_id": "result-94befc4f7a04167ec63b01dd",
+              "semantic_fingerprint": "sha256:cbd6e546c51a9268afa243d716ec318832346040dbdf1b0df93dae72d427da97",
+              "transformation": "adjacent_first_difference",
+              "value": {
+                "canonical": "0.030873956333",
+                "unit": "percentage points per year"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "differences",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "first_difference_median",
+              "result_id": "result-0b5e39663b42d322e4f9fc12",
+              "semantic_fingerprint": "sha256:4d30e19671e51f6e7ebec1f9bf624a1482ba8423cc3087a029fdc45e50ab5128",
+              "transformation": "adjacent_first_difference",
+              "value": {
+                "canonical": "-0.001129484853",
+                "unit": "percentage points per year"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "differences",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "first_difference_minimum",
+              "result_id": "result-4f1e530911d5b5d506418639",
+              "semantic_fingerprint": "sha256:58c8bf573b39483f2ec7abca6c05119314764b61a729adab535fd9e36d34a19e",
+              "transformation": "adjacent_first_difference",
+              "value": {
+                "canonical": "-1.393584031304",
+                "unit": "percentage points per year"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "differences",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "first_difference_maximum",
+              "result_id": "result-3b3c1f10079340d0979a17de",
+              "semantic_fingerprint": "sha256:e74b87f184d77d2857d10d34f254c469883e26c9d18c7252944a2b8bdfdd6bd3",
+              "transformation": "adjacent_first_difference",
+              "value": {
+                "canonical": "2.883879835571",
+                "unit": "percentage points per year"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "differences",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "net_level_difference",
+              "result_id": "result-fae04c0c92b1dc5bb608f36d",
+              "semantic_fingerprint": "sha256:462b91ec0af5e9a197786373ed40e6d8f8d9470db6a980d59724c40921734328",
+              "transformation": "adjacent_first_difference",
+              "value": {
+                "canonical": "1.018840558987",
+                "unit": "percentage points"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "trend_descriptor",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "linear_time_index_slope_per_year",
+              "result_id": "result-04f51f0f19e42fa6805e08a3",
+              "semantic_fingerprint": "sha256:ee566a702653b88aa6f08fb4c32d8a94aaed52e9076827538f62e8fa01a20b6d",
+              "transformation": "linear_time_index",
+              "value": {
+                "canonical": "0.062943347748",
+                "unit": "percentage points per year"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "trend_descriptor",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "linear_time_index_slope_sign",
+              "result_id": "result-a109e7d7e88d204a65b9fc36",
+              "semantic_fingerprint": "sha256:951e7cc3458ed6ea0759cbaa75fb05854f9b20cfce809a522bc7777159eca673",
+              "transformation": "linear_time_index",
+              "value": "positive"
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "variability_stability",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "first_difference_population_standard_deviation",
+              "result_id": "result-4f4295524396e08d907f957f",
+              "semantic_fingerprint": "sha256:4139b39baa5ec5e8c29296919be4c9b49baeac81670343fdeb2abbf0cb005e3b",
+              "transformation": "adjacent_first_difference",
+              "value": {
+                "canonical": "0.620027218766",
+                "unit": "percentage points per year"
+              }
+            },
+            {
+              "applicability": {
+                "denominator_basis": "total_electricity_production_for_indicator_year",
+                "frequency": "annual",
+                "measure_kind": "electricity_production_share_of_total",
+                "observation_grain": "territory_indicator_year",
+                "period_end": 2024,
+                "period_start": 1990,
+                "population_basis": "finite retained sequence; not a random sample",
+                "unit": "% of total"
+              },
+              "class": "variability_stability",
+              "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+              "limitations": [
+                "finite retained ordered annual sequence",
+                "descriptive only",
+                "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+                "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+                "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production",
+                "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+                "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+                "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+                "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+              ],
+              "method_id": "baseline_characterization_portfolio_v1",
+              "method_version": "1.0",
+              "metric": "mean_absolute_first_difference",
+              "result_id": "result-a12b9ec0e5657c98effdea71",
+              "semantic_fingerprint": "sha256:1aa250b8e316675247931ee6a14e032061145b037446d2eb5e24bd1ab31c9808",
+              "transformation": "adjacent_first_difference",
+              "value": {
+                "canonical": "0.282796560803",
+                "unit": "percentage points per year"
+              }
+            }
+          ]
+        },
+        "text": "The retained World Bank WDI EG.ELC.FOSL.ZS series for Norway, annual 1990-2024, has a deterministic baseline characterization containing 28 coverage, period, level, adjacent-difference, linear time-index slope and variability result records. These descriptors apply only to the finite retained sequence and do not explain, predict or establish persistence."
+      }
+    ],
+    "input_references": [
+      "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37"
+    ],
+    "lineage": {
+      "lineage_fingerprint": "sha256:39b28d70fcb041b6baf7af5dc257250efba094706a271c042e298bd2e24cf964",
+      "previous_package_id": "pkg-candidate-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+      "version_lineage": [
+        "pkg-candidate-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+        "pkg-object-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1"
+      ]
+    },
+    "package_id": "pkg-object-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+    "package_kind": "KnowledgeObjectPackage",
+    "package_version": "1.0",
+    "promotion": {
+      "from_candidate_package_id": "pkg-candidate-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+      "maturity_state": "bounded Energy & Mining portfolio pilot accepted",
+      "promotion_justification": "Pre-registered candidate passed deterministic calculation, applicability, lineage, nonredundancy and package validation gates.",
+      "validation_history": [
+        "manifest_validation_pass",
+        "calculation_validation_pass",
+        "package_validation_pass"
+      ]
+    },
+    "provenance_envelope": {
+      "calculation_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+      "computation_recipe": "baseline_characterization_portfolio_v1@1.0",
+      "creator": "evidence_portfolio_production",
+      "evaluation_refs": [
+        "validation-evidence-portfolio-energy-mining-norway-baseline-20260817"
+      ],
+      "evidence_refs": [
+        "ev-eppilot-eg-elc-fosl-zs-nor-1990-2024"
+      ],
+      "generation_date": "2026-08-17",
+      "input_file_sha256": "sha256:15d997d4533774c96997c4375bd44230960032bc56c4ade1b41cd292cb062dc1",
+      "lineage": [
+        "retained_https_fixture",
+        "normalized_observations",
+        "preregistered_calculation",
+        "validated_result_records",
+        "knowledge_object_package"
+      ],
+      "normalized_evidence_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+      "package_identity": "pkg-object-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+      "reproducibility_state": "reproducible_offline",
+      "selection_manifest_fingerprint": "sha256:6fc3c6a0d2df98336c24783b7201d890d7fca622311afb804fff63750669cf3d",
+      "source_systems": [
+        "World Bank WDI retained Campaign 40 HTTPS fixture"
+      ],
+      "validation_tool": "evidence_portfolio_production"
+    },
+    "scope": {
+      "domain": "WDI Energy & Mining baseline characterization",
+      "evidence_family": "external_wdi_annual_scalar_energy_mining_baseline_characterization",
+      "intended_use": "deterministic descriptive baseline knowledge only",
+      "method_scope": "baseline_characterization_portfolio_v1@1.0",
+      "source_scope": {
+        "campaign_id": "evidence-portfolio-energy-mining-norway-baseline-20260817",
+        "dataset": "World Development Indicators",
+        "denominator_basis": "total_electricity_production_for_indicator_year",
+        "entity_id": "NOR",
+        "entity_name": "Norway",
+        "frequency": "annual",
+        "indicator_code": "EG.ELC.FOSL.ZS",
+        "indicator_name": "Electricity production from oil, gas and coal sources (% of total)",
+        "observational_population": "retained observed annual Norway values for the indicator within the requested 1990-2024 window",
+        "period_end": 2024,
+        "period_start": 1990,
+        "provider": "World Bank",
+        "scope_type": "bounded_baseline_characterization",
+        "source_id": "2",
+        "unit": "% of total"
+      }
+    },
+    "status": "accepted-for-controlled-production",
+    "validation_state": {
+      "blockers": [],
+      "human_review_required": false,
+      "validation_result": "pass",
+      "validator_version": "evidence-portfolio-pilot-v1",
+      "warnings": []
+    }
+  }
+]

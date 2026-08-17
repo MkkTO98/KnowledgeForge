@@ -1,0 +1,110 @@
+{
+  "candidate_authority_binding": "The renewed independent reviewer must bind its verdict to the separately supplied exact current-candidate record manifest and aggregate fingerprint computed after this packet is written.",
+  "canonical_first_plan": {
+    "expected_canonical_delta": 2,
+    "expected_canonical_post_count": 566,
+    "expected_canonical_post_fingerprint": "sha256:45bd0c1b6b1d8ff9edb0500fdbad771cc1d2c2864a0b5089d94b8760343ea663",
+    "expected_postgresql_delta": {
+      "lineage_edges": 22,
+      "packages": 2,
+      "statement_types": 2
+    },
+    "expected_postgresql_post_state": {
+      "lineage_edges": 5725,
+      "logical_projection_fingerprint": "sha256:8533fd0bcb9b2f34adf831ec0826728d666a6a2c0bce74759ec5186ffd4f7b32",
+      "packages": 566,
+      "statement_types": 566
+    },
+    "order": [
+      "acquire accepted canonical writer lock",
+      "reauthenticate live authorities and preservation populations",
+      "append exactly two reviewed packages to live canonical repository",
+      "authenticate live canonical post-state",
+      "transactionally rebuild production PostgreSQL from canonical post-state",
+      "verify exact canonical/PostgreSQL correspondence"
+    ]
+  },
+  "fingerprint_semantics": {
+    "sha256:45bd0c1b6b1d8ff9edb0500fdbad771cc1d2c2864a0b5089d94b8760343ea663": "canonical Knowledge Repository fingerprint after the exact two-package append",
+    "sha256:8533fd0bcb9b2f34adf831ec0826728d666a6a2c0bce74759ec5186ffd4f7b32": "PostgreSQL logical projection fingerprint over the 566-package canonical post-state"
+  },
+  "generated_evidence": {
+    "governed_replay_byte_identical": true,
+    "non_governed_telemetry_differences": [
+      "canary_execution_results.json:/reruns/0/elapsed_wall_seconds",
+      "production_execution_results.json:/reruns/0/elapsed_wall_seconds",
+      "production_execution_results.json:/reruns/1/elapsed_wall_seconds"
+    ],
+    "regenerated_after_telemetry_correction": [
+      "canary accounting, admission, authorization, execution, gate, packages and views",
+      "production accounting, admission, execution, gate, packages and views",
+      "the corresponding replay artifacts"
+    ]
+  },
+  "historical_disclosures": {
+    "grouped_rehearsal_denial": "The first monolithic disposable rehearsal command was denied and not executed; this recovery used separately authorized transparent operations.",
+    "initial_postgresql_pre_rebuild_fingerprint": "sha256:4094b76806c0bd150e6bdc346d514e7c52b9c4c99dc0ab3fd0365548af4fec82",
+    "post_rebuild_postgresql_fingerprint": "sha256:32d493aa45b53e8ddf73b0fe1e1f445cbf70f09d0c44dd941461550b2123ac04",
+    "postgresql_reconciliation": "The authorized prior rebuild reconciled four pre-existing canonical packages: 560 to 564 packages, 560 to 564 statement types, and 5659 to 5703 lineage edges.",
+    "wrapper_failure": "The prior temporary inline wrapper referenced nonexistent manifest_source_identity; governed code uses read_manifest_source_identity. The corrected external wrapper calls the implemented function.",
+    "telemetry_defect": "Host-dependent elapsed_wall_seconds previously affected acceptance. RED-GREEN correction retained the field only as non-authoritative execution telemetry."
+  },
+  "live_pre_promotion_authority": {
+    "canonical": {
+      "norway_energy_packages": 0,
+      "object_count": 564,
+      "repository_fingerprint": "sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67"
+    },
+    "postgresql": {
+      "lineage_edges": 5703,
+      "logical_projection_fingerprint": "sha256:32d493aa45b53e8ddf73b0fe1e1f445cbf70f09d0c44dd941461550b2123ac04",
+      "norway_energy_packages": 0,
+      "packages": 564,
+      "statement_types": 564
+    }
+  },
+  "package_bytes": {
+    "array_sha256": "sha256:6e358065dd4ce620dea15b5f8fb8ce47b7456feb207086dd92775f03e72ab96a",
+    "fossil_package_sha256": "sha256:5b20831dde09b44007ceaa39609e1238dee1b99ddc4443f15e2f1357bfd3a9ce",
+    "renewable_package_sha256": "sha256:bad3a749e688cd887447e5db4a46054e90d54bff31073231875b857299e6fa9f"
+  },
+  "preservation": {
+    "excluded_visible_paths": 484,
+    "ignored_artifacts": 334,
+    "retained_inputs": 16,
+    "unchanged": true
+  },
+  "rehearsal": {
+    "receipt_sha256": "sha256:b8510c654217eccd7a2d7ac43e354c5c2ae4bd6eeb1500b0c001cc13308fdb6a",
+    "result": "pass",
+    "stepwise": true,
+    "wrapper_sha256": "sha256:2de652e1485462822290276f9397be21e18efb87d0ff98b1fd6b7ad2124517c1"
+  },
+  "schema": "knowledgeforge_norway_energy_renewed_pre_promotion_review_packet_v2",
+  "task_id": "T-20260817-norway-energy-evidence-portfolio-v1",
+  "telemetry_authority": {
+    "affects_admission": false,
+    "affects_authorization": false,
+    "affects_governed_fingerprints": false,
+    "affects_limits": false,
+    "affects_package_bytes": false,
+    "affects_persistence_eligibility": false,
+    "treatment": "observable non-authoritative telemetry only"
+  },
+  "verification": {
+    "architecture_reality_audit": "0 blocks, 0 warnings",
+    "candidate_security_and_filesystem_checks": "38 paths checked; 0 findings",
+    "coherence": "0 blocks, 2 pre-existing warnings",
+    "context_health": "0 blocks, 2 pre-existing warnings",
+    "focused_admission_production_repository": "130 passed",
+    "full_repository_discovery": "596 passed",
+    "git_diff_check": "pass",
+    "norway_energy": "9 passed",
+    "python_compilation": "pass"
+  },
+  "wrapper": {
+    "path": "/tmp/knowledgeforge-norway-energy-recovery-promotion.py",
+    "source_identity_function": "read_manifest_source_identity",
+    "temporary_task_local_only": true
+  }
+}

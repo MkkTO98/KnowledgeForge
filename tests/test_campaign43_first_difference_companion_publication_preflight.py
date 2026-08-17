@@ -30,8 +30,8 @@ class Campaign43CompanionPublicationPreflightTests(unittest.TestCase):
         self.assertEqual(gate["registry_fingerprint"], mod.EXPECTED_REGISTRY_FP)
         self.assertEqual(gate["specification_fingerprint"], mod.EXPECTED_SPEC_FP)
         self.assertEqual(gate["calculation_result_fingerprint"], mod.EXPECTED_CALC_FP)
-        self.assertEqual(gate["canonical_baseline"]["object_file_count"], mod.POST_SECOND_EVIDENCE_PORTFOLIO_COUNT)
-        self.assertEqual(gate["canonical_baseline"]["computed_repository_fingerprint"], mod.POST_SECOND_EVIDENCE_PORTFOLIO_FP)
+        self.assertEqual(gate["canonical_baseline"]["object_file_count"], mod.POST_NORWAY_ENERGY_PORTFOLIO_COUNT)
+        self.assertEqual(gate["canonical_baseline"]["computed_repository_fingerprint"], mod.POST_NORWAY_ENERGY_PORTFOLIO_FP)
         self.assertEqual(gate["canonical_baseline"]["first_difference_pearson_relationship_count"], mod.EXPECTED_POST_PUBLICATION_FD_COUNT)
 
     def test_constructs_exactly_six_valid_one_to_one_packages_without_publication(self):
@@ -85,10 +85,10 @@ class Campaign43CompanionPublicationPreflightTests(unittest.TestCase):
         self.assertTrue(dry["safe_dry_run_performed_in_temporary_repository_copy"])
         self.assertFalse(dry["canonical_repository_mutated"])
         self.assertEqual(dry["collisions_with_existing_canonical_packages"], [])
-        self.assertEqual(dry["expected_post_publication_package_count"], mod.POST_SECOND_EVIDENCE_PORTFOLIO_COUNT)
+        self.assertEqual(dry["expected_post_publication_package_count"], mod.POST_NORWAY_ENERGY_PORTFOLIO_COUNT)
         self.assertEqual(dry["expected_post_publication_first_difference_relationship_count"], 14)
         self.assertEqual(dry["expected_post_publication_raw_pearson_relationship_count"], 21)
-        self.assertEqual(dry["expected_postgresql_projected_package_count"], mod.POST_SECOND_EVIDENCE_PORTFOLIO_COUNT)
+        self.assertEqual(dry["expected_postgresql_projected_package_count"], mod.POST_NORWAY_ENERGY_PORTFOLIO_COUNT)
         self.assertTrue(dry["pre_existing_package_immutability_after_dry_run"]["valid"])
 
     def test_no_campaign42_duplication_and_raw_sources_remain_canonical(self):

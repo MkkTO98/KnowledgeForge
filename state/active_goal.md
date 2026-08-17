@@ -1,19 +1,15 @@
 # Active Goal
 
-## Current Objective
+## Current goal
 
-No task is active. The existing deterministic-candidate-funnel task completed bounded remediation and renewed closeout; its exact 17-path candidate remains unstaged and unpublished.
+No KnowledgeForge task is active. `T-20260817-norway-energy-evidence-portfolio-v1` is complete and reclosed.
 
-## Completed Boundary
+## Status
 
-- Historical `knowledgeforge.evidence_portfolio.conformance.v1@1.0` remains unchanged.
-- Published baseline `c4e3e2a…` prospectively satisfies the funnel task's admission-boundary dependency without retroactively validating premature execution.
-- RED-GREEN remediation removed elapsed time from governed evidence, made output identities root-relative, and added structured fail-closed malformed-container validation.
-- Isolated focused, integration, full-suite, governance, security, canonical, PostgreSQL, and preservation checks passed.
-- Independent review returned PASS with no task-owned blockers; final exact-byte confirmation binds the closing authority.
+Closed. The bounded Norway Energy & Mining Evidence Portfolio admitted exactly two reviewed packages through canonical-first promotion and a verified PostgreSQL rebuild.
 
-## Authority Boundary
+## Terminal boundary
 
-The corrected candidate contains the original eight authenticated funnel paths plus nine repository-required shared lifecycle surfaces. Every other visible and ignored identity remained frozen by the prospective snapshot. Unavailable historical cache bytes remain unauthenticated.
+Canonical state is 566 packages at `sha256:45bd0c1b6b1d8ff9edb0500fdbad771cc1d2c2864a0b5089d94b8760343ea663`. PostgreSQL exactly corresponds at 566 packages, 566 statement types and 5,725 lineage edges with logical fingerprint `sha256:8533fd0bcb9b2f34adf831ec0826728d666a6a2c0bce74759ec5186ffd4f7b32`.
 
-Keep the index empty. Publication, production portfolio execution, candidate admission, canonical-repository/PostgreSQL mutation, or successor activation requires separate authority.
+The exact reviewed 58-path candidate is authorized for one authenticated Git commit and normal push when the external final-byte review and live publication gates pass. Git publication does not authorize further task mutation, successor activation, release, deployment, pull request, Evidence Portfolio admission, or canonical/PostgreSQL mutation.

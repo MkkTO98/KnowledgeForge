@@ -1,0 +1,68 @@
+{
+  "canonical_delta": {
+    "added_paths": [
+      "knowledge_repository/evolution/pkg-object-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1.json",
+      "knowledge_repository/evolution/pkg-object-eppilot-energy-mining-eg-elc-rnwx-zs-nor-1990-2024-baseline-v1.json",
+      "knowledge_repository/objects/pkg-object-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1.json",
+      "knowledge_repository/objects/pkg-object-eppilot-energy-mining-eg-elc-rnwx-zs-nor-1990-2024-baseline-v1.json"
+    ],
+    "changed_paths": [
+      "knowledge_repository/indexes/by_evidence_family.json",
+      "knowledge_repository/indexes/by_knowledge_identity.json",
+      "knowledge_repository/indexes/by_lifecycle_state.json",
+      "knowledge_repository/indexes/by_package_id.json",
+      "knowledge_repository/indexes/by_package_manifest_fingerprint.json",
+      "knowledge_repository/indexes/by_statement_type.json",
+      "knowledge_repository/manifest.json"
+    ],
+    "deleted_paths": [],
+    "post_object_count": 566,
+    "post_repository_fingerprint": "sha256:45bd0c1b6b1d8ff9edb0500fdbad771cc1d2c2864a0b5089d94b8760343ea663",
+    "pre_object_count": 564,
+    "pre_repository_fingerprint": "sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67"
+  },
+  "order": [
+    "pre-mutation candidate, package, wrapper, preservation, canonical and PostgreSQL authentication",
+    "independent pre-promotion PASS",
+    "canonical writer lock and exact two-package append",
+    "canonical post-state authentication",
+    "transactional PostgreSQL rebuild from canonical post-state",
+    "PostgreSQL exact-correspondence verification"
+  ],
+  "packages": [
+    {
+      "object_file_sha256": "sha256:5b20831dde09b44007ceaa39609e1238dee1b99ddc4443f15e2f1357bfd3a9ce",
+      "package_id": "pkg-object-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1"
+    },
+    {
+      "object_file_sha256": "sha256:bad3a749e688cd887447e5db4a46054e90d54bff31073231875b857299e6fa9f",
+      "package_id": "pkg-object-eppilot-energy-mining-eg-elc-rnwx-zs-nor-1990-2024-baseline-v1"
+    }
+  ],
+  "postgresql_delta": {
+    "lineage_edges": 22,
+    "packages": 2,
+    "statement_types": 2
+  },
+  "postgresql_post_state": {
+    "extra_package_ids": [],
+    "lineage_edges": 5725,
+    "logical_projection_fingerprint": "sha256:8533fd0bcb9b2f34adf831ec0826728d666a6a2c0bce74759ec5186ffd4f7b32",
+    "missing_package_ids": [],
+    "norway_energy_packages": 2,
+    "package_fingerprint_failures": 0,
+    "packages": 566,
+    "payload_fidelity_failures": 0,
+    "statement_types": 566,
+    "valid": true
+  },
+  "preservation": {
+    "excluded_visible_paths": 484,
+    "ignored_artifacts": 334,
+    "retained_inputs": 16,
+    "unchanged": true,
+    "unavailable_historical_bytes_reauthenticated": false
+  },
+  "schema": "knowledgeforge_norway_energy_post_promotion_receipt_v1",
+  "task_id": "T-20260817-norway-energy-evidence-portfolio-v1"
+}

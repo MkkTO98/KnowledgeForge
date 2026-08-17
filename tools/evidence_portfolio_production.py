@@ -312,9 +312,9 @@ def enforce_candidate_result_limits(entry: dict[str, Any], result: dict[str, Any
     maximum_records = entry["computational_budget"]["maximum_result_records"]
     if int(result.get("raw_result_count", 0)) > maximum_records or int(result.get("valid_result_count", 0)) > maximum_records:
         raise ValueError("candidate result record limit exceeded before admission or promotion")
-    maximum_seconds = entry["computational_budget"]["maximum_wall_seconds"]
-    if elapsed_wall_seconds > maximum_seconds:
-        raise ValueError(f"candidate wall time exceeded after calculation; admission and promotion blocked: {elapsed_wall_seconds:.6f} > {maximum_seconds}")
+    # Wall time is retained as explicitly non-authoritative operational telemetry.
+    # Host scheduling cannot change deterministic admission or persistence authority.
+    _ = elapsed_wall_seconds
 
 
 def enforce_aggregate_result_limit(manifest: dict[str, Any], outcomes: list[dict[str, Any]]) -> None:
@@ -417,9 +417,11 @@ def _is_published_legacy_health_entry(entry: dict[str, Any]) -> bool:
 
 
 def _safe_family_slug(family: str) -> str:
-    if not isinstance(family, str) or re.fullmatch(r"[A-Z][A-Za-z0-9]*(?: [A-Z][A-Za-z0-9]*)*", family) is None:
+    if not isinstance(family, str) or re.fullmatch(
+        r"[A-Z][A-Za-z0-9]*(?:(?: | & )[A-Z][A-Za-z0-9]*)*", family
+    ) is None:
         raise ValueError("family configuration family must use the closed family-name grammar")
-    return family.lower().replace(" ", "-")
+    return family.lower().replace(" & ", "-").replace(" ", "-")
 
 
 def _validate_entry_identifiers(entry: dict[str, Any], config: dict[str, Any]) -> str:
@@ -636,6 +638,7 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
             raise ValueError(f"normative portfolio limit mismatch: {key}")
     authorized_generation_date = campaign_generation_date(manifest["campaign_id"])
     forbidden = set(manifest.get("forbidden_outcome_fields", FORBIDDEN_OUTCOME_FIELDS))
+    executable_package_ids: list[str] = []
     for entry in manifest["entries"]:
         overlap = forbidden.intersection(entry)
         if overlap:
@@ -665,7 +668,11 @@ def validate_manifest(manifest: dict[str, Any]) -> dict[str, Any]:
             or identity.get("method_version") != entry["method"].get("version")
         ):
             raise ValueError("manifest entry identity inputs are inconsistent with structured entry")
-        _validate_entry_identifiers(entry, config)
+        package_id = _validate_entry_identifiers(entry, config)
+        if entry.get("disposition") == "execute":
+            executable_package_ids.append(package_id)
+    if len(executable_package_ids) != len(set(executable_package_ids)):
+        raise ValueError("duplicate executable package identity in manifest")
     expected = manifest.get("manifest_fingerprint")
     if expected and expected != fingerprint({k: v for k, v in manifest.items() if k != "manifest_fingerprint"}):
         raise ValueError("manifest fingerprint mismatch")
@@ -743,7 +750,10 @@ def _semantic_result_value(entry: dict[str, Any], metric: str, value: Any) -> An
         return value
     rendered = copy.deepcopy(value)
     measure_kind = entry["applicability"].get("measure_kind")
-    if measure_kind == "individual_people_using_internet_share":
+    if measure_kind in {
+        "individual_people_using_internet_share",
+        "electricity_production_share_of_total",
+    }:
         if metric in _RATE_METRICS:
             rendered["unit"] = "percentage points per year"
         elif metric in _ABSOLUTE_DELTA_METRICS:
@@ -1015,6 +1025,40 @@ def validate_normalized_input_binding(entry: dict[str, Any], normalized: dict[st
         raise ValueError("normalized provider-explicit unit binding mismatch")
     if any(row.get("frequency") not in (None, applicability["frequency"]) for row in observations):
         raise ValueError("normalized observation frequency mismatch")
+    coverage_contract = entry.get("coverage_contract")
+    if coverage_contract is not None:
+        required_coverage_fields = {
+            "expected_observation_slots",
+            "observed_count",
+            "missing_count",
+            "missing_years",
+            "first_observed_year",
+            "last_observed_year",
+            "eligible_adjacent_first_difference_count",
+            "interpolation_or_imputation",
+        }
+        if not isinstance(coverage_contract, dict) or set(coverage_contract) != required_coverage_fields:
+            raise ValueError("coverage contract must contain the complete normative field set")
+        observed_rows = [row for row in observations if row.get("observed") is True]
+        missing_rows = [row for row in observations if row.get("observed") is False]
+        observed_years = [row["period"] for row in observed_rows]
+        missing_years = [row["period"] for row in missing_rows]
+        adjacent_count = sum(
+            1 for first, second in zip(observed_years, observed_years[1:])
+            if second == first + 1
+        )
+        expected_coverage = {
+            "expected_observation_slots": len(observations),
+            "observed_count": len(observed_rows),
+            "missing_count": len(missing_rows),
+            "missing_years": missing_years,
+            "first_observed_year": observed_years[0] if observed_years else None,
+            "last_observed_year": observed_years[-1] if observed_years else None,
+            "eligible_adjacent_first_difference_count": adjacent_count,
+            "interpolation_or_imputation": False,
+        }
+        if coverage_contract != expected_coverage:
+            raise ValueError("manifest coverage contract does not match retained observations")
 
 
 def execute_entry(entry: dict[str, Any], project_root: Path = PROJECT_ROOT) -> dict[str, Any]:

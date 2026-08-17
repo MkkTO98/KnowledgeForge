@@ -428,8 +428,14 @@ class ProductionBoundaryLimitTests(unittest.TestCase):
     def test_per_entry_result_excess_fails(self):
         with self.assertRaisesRegex(ValueError, "candidate result"): epp.enforce_candidate_result_limits(manifest_entry(), {"raw_result_count": 29, "valid_result_count": 29}, 0.1)
 
-    def test_wall_time_excess_blocks_admission_without_cancellation_claim(self):
-        with self.assertRaisesRegex(ValueError, "wall time exceeded after calculation"): epp.enforce_candidate_result_limits(manifest_entry(), {"raw_result_count": 28, "valid_result_count": 28}, 5.01)
+    def test_wall_time_excess_is_observable_but_cannot_block_admission(self):
+        self.assertIsNone(
+            epp.enforce_candidate_result_limits(
+                manifest_entry(),
+                {"raw_result_count": 28, "valid_result_count": 28},
+                5.01,
+            )
+        )
 
     def test_stop_on_canary_failure_must_be_literal_true(self):
         manifest = boundary_manifest(); manifest["computational_budget"]["stop_on_canary_failure"] = 1; manifest["manifest_fingerprint"] = epp.fingerprint({k: v for k, v in manifest.items() if k != "manifest_fingerprint"})

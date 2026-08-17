@@ -1,28 +1,18 @@
 # Project State
 
-## Current Phase
+## Current status
 
-The published admission-boundary baseline is unchanged. Deterministic-candidate-funnel remediation and renewed closeout are complete; the exact 17-path candidate remains unpublished and unstaged. No task is active.
+KnowledgeForge has no active task. `T-20260817-norway-energy-evidence-portfolio-v1` is complete and reclosed; the published deterministic funnel remains closed.
 
-## Completed Task
+## Norway Energy closeout
 
-`T-20260808-deterministic-candidate-funnel-compact-escalation-pilot.md`
+- The authorized publication parent is `48232b6c4f1a2382db8e5e72335efa41ced00a19`; authenticated Git history and local, fetched, and server-advertised refs determine live publication status.
+- Exactly two Norway Energy packages were appended through the accepted canonical writer boundary after isolated rehearsal and independent exact-byte review.
+- Canonical authority: 566 packages, fingerprint `sha256:45bd0c1b6b1d8ff9edb0500fdbad771cc1d2c2864a0b5089d94b8760343ea663`.
+- PostgreSQL authority: 566 packages, 566 statement-type rows, 5,725 lineage edges, logical fingerprint `sha256:8533fd0bcb9b2f34adf831ec0826728d666a6a2c0bce74759ec5186ffd4f7b32`, exact canonical correspondence.
+- The earlier pre-existing 560-to-564 PostgreSQL reconciliation is separately disclosed from the task's exact 564-to-566 delta.
+- The 484 excluded visible paths and 16 retained inputs remain protected. All 335 currently discovered ignored artifacts are prospectively frozen; unavailable historical bytes, including the eight reviewer-induced cache changes and later-discovered Norway test cache, remain unauthenticated.
 
-The task historically executed before its admission-boundary dependency was published. Commit `c4e3e2a…` satisfies the dependency prospectively. Bounded RED-GREEN remediation removed elapsed observations from governed evidence, made output identities portable across equivalent roots, and made malformed-container validation structured and fail-closed.
+## Terminal boundary
 
-## Working-Tree Boundary
-
-- Corrected candidate: 17 paths (original eight plus nine required shared lifecycle surfaces).
-- Every other visible path: 484 identities preserved from the authenticated prospective snapshot.
-- Ignored population: 334 identities preserved, including two explicitly rebaselined caches.
-- Unavailable historical cache bytes cannot be reauthenticated.
-- Canonical repository: 564 objects; fingerprint `sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67`.
-- PostgreSQL logical fingerprint: `sha256:f5bf12b6cf8f0dfc11046e5611c43c618a57cc24348b12340da0d5be862a45b3`.
-
-## Verification State
-
-Final isolated results: focused `31`; admission-owner integration `149`; ordinary repository discovery `587`; compilation, `git diff --check`, security, deterministic replay, governance, canonical/PostgreSQL authentication, and preservation PASS. Coherence/context health have zero blocks and two pre-existing warnings; architecture audit has zero blocks/warnings. Independent review returned PASS with no substantiated task-owned blocker.
-
-## Terminal Boundary
-
-No publication, staging, production execution, candidate persistence, canonical/PostgreSQL mutation, duplicate task, or successor activation occurred or is authorized.
+The exact reviewed 58-path candidate may transition through one authenticated commit and normal push from the authorized parent. Publication does not authorize further task mutation, successor activation, release, deployment, pull request, Evidence Portfolio admission, or canonical/PostgreSQL mutation.

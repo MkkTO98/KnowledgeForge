@@ -1,0 +1,55 @@
+{
+  "canonical_post_state": {
+    "manifest_file_sha256": "sha256:08f08187243a708dceab0f69a20230582d1ae10fb3754e77f4b45ed0f48044c0",
+    "object_count": 566,
+    "repository_fingerprint": "sha256:45bd0c1b6b1d8ff9edb0500fdbad771cc1d2c2864a0b5089d94b8760343ea663"
+  },
+  "canonical_pre_state": {
+    "object_count": 564,
+    "repository_fingerprint": "sha256:777140d9d96c9b2e901604720b10be9645ba286f196d844f01503e4365bfac67"
+  },
+  "database": "knowledgeforge_norway_energy_rehearsal_20260817",
+  "database_created_by_this_continuation": true,
+  "fingerprint_semantics": {
+    "sha256:45bd0c1b6b1d8ff9edb0500fdbad771cc1d2c2864a0b5089d94b8760343ea663": "canonical Knowledge Repository fingerprint after the exact two-package append",
+    "sha256:8533fd0bcb9b2f34adf831ec0826728d666a6a2c0bce74759ec5186ffd4f7b32": "PostgreSQL logical projection fingerprint over the 566-package canonical post-state"
+  },
+  "live_authorities_mutated": false,
+  "package_bytes": {
+    "array_sha256": "sha256:6e358065dd4ce620dea15b5f8fb8ce47b7456feb207086dd92775f03e72ab96a",
+    "pkg-object-eppilot-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1": "sha256:5b20831dde09b44007ceaa39609e1238dee1b99ddc4443f15e2f1357bfd3a9ce",
+    "pkg-object-eppilot-energy-mining-eg-elc-rnwx-zs-nor-1990-2024-baseline-v1": "sha256:bad3a749e688cd887447e5db4a46054e90d54bff31073231875b857299e6fa9f"
+  },
+  "postgresql_post_state": {
+    "extra_package_ids": [],
+    "lineage_edges": 5725,
+    "logical_projection_fingerprint": "sha256:8533fd0bcb9b2f34adf831ec0826728d666a6a2c0bce74759ec5186ffd4f7b32",
+    "missing_package_ids": [],
+    "package_fingerprint_failures": 0,
+    "packages": 566,
+    "payload_fidelity_failures": 0,
+    "statement_types": 566
+  },
+  "postgresql_pre_state": {
+    "lineage_edges": 5703,
+    "logical_projection_fingerprint": "sha256:32d493aa45b53e8ddf73b0fe1e1f445cbf70f09d0c44dd941461550b2123ac04",
+    "packages": 564,
+    "statement_types": 564
+  },
+  "rehearsal_order": [
+    "authenticate_disposable_canonical_564",
+    "authenticate_disposable_postgresql_564",
+    "append_exact_two_packages_to_disposable_canonical",
+    "authenticate_disposable_canonical_566",
+    "rebuild_disposable_postgresql_from_disposable_canonical",
+    "authenticate_disposable_postgresql_566"
+  ],
+  "repository_root": "/tmp/knowledgeforge-norway-energy-rehearsal-20260817/knowledge_repository",
+  "schema": "knowledgeforge_norway_energy_disposable_rehearsal_receipt_v1",
+  "task_id": "T-20260817-norway-energy-evidence-portfolio-v1",
+  "wrapper": {
+    "path": "/tmp/knowledgeforge-norway-energy-recovery-promotion.py",
+    "sha256": "sha256:2de652e1485462822290276f9397be21e18efb87d0ff98b1fd6b7ad2124517c1",
+    "source_identity_function": "read_manifest_source_identity"
+  }
+}

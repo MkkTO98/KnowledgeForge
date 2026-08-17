@@ -1,0 +1,376 @@
+{
+  "bundle_definition": "bounded campaign grouping only; not a new canonical object type",
+  "campaign_id": "evidence-portfolio-energy-mining-norway-baseline-20260817",
+  "candidate_order": [
+    "candidate-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+    "candidate-energy-mining-eg-elc-rnwx-zs-nor-1990-2024-baseline-v1"
+  ],
+  "canonical_ontology_change": false,
+  "computational_budget": {
+    "maximum_executed_candidates": 2,
+    "maximum_promoted_objects": 2,
+    "maximum_raw_result_records": 56,
+    "stop_on_canary_failure": true
+  },
+  "derived_expected_accounting": {
+    "canonical_packages": 2,
+    "executed_candidates": 2,
+    "explanation": "The published baseline-characterization profile emits 28 metric records per executable series. Missing observations change coverage and eligible-adjacency values, not the metric-record population.",
+    "manifest_candidates": 2,
+    "operational_views": 56,
+    "raw_result_records": 56,
+    "valid_result_records": 56
+  },
+  "entries": [
+    {
+      "applicability": {
+        "denominator_basis": "total_electricity_production_for_indicator_year",
+        "frequency": "annual",
+        "measure_kind": "electricity_production_share_of_total",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "% of total"
+      },
+      "bundle_id": "bundle-energy-mining-norway-annual-1990-2024-v1",
+      "campaign_id": "evidence-portfolio-energy-mining-norway-baseline-20260817",
+      "canary": true,
+      "candidate_id": "candidate-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+      "computational_budget": {
+        "maximum_result_records": 28,
+        "maximum_wall_seconds": 5
+      },
+      "coverage_contract": {
+        "eligible_adjacent_first_difference_count": 33,
+        "expected_observation_slots": 35,
+        "first_observed_year": 1990,
+        "interpolation_or_imputation": false,
+        "last_observed_year": 2023,
+        "missing_count": 1,
+        "missing_years": [
+          2024
+        ],
+        "observed_count": 34
+      },
+      "dependencies": [
+        "retained_campaign40_fixture",
+        "wdi_annual_scalar_statistical_summary_v2@2.0"
+      ],
+      "disposition": "execute",
+      "exclusion_and_stopping_rules": [
+        "stop_on_input_hash_mismatch",
+        "stop_on_manifest_fingerprint_mismatch",
+        "exclude_nonconsecutive_differences",
+        "exclude_interpolation_and_imputation",
+        "exclude_growth_rates",
+        "exclude_relationship_claims",
+        "exclude_exhaustive_composition_claims"
+      ],
+      "expected_output_class": "baseline_characterization",
+      "expected_result_profile": {
+        "inapplicability_policy": "No profile metric is inapplicable for these retained inputs; missingness is encoded in the coverage/missingness metrics, and no synthetic per-year record is created.",
+        "per_year_result_records": false,
+        "required_metric_records": 28
+      },
+      "family_configuration": {
+        "applicability_limitations": [
+          "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+          "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+          "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+          "Observed annual values: 34 of 35 requested slots; explicit missing years: 2024; eligible consecutive first differences: 33."
+        ],
+        "domain": "WDI Energy & Mining baseline characterization",
+        "evidence_family": "external_wdi_annual_scalar_energy_mining_baseline_characterization",
+        "evolution_change_reason": "first bounded Norway Energy & Mining Evidence Portfolio with explicit missingness",
+        "family": "Energy & Mining",
+        "family_slug": "energy-mining",
+        "generation_date": "2026-08-17",
+        "governance_review_state": "bounded Energy & Mining portfolio promotion contract passed",
+        "package_limitations": [
+          "No cross-series comparison, coefficient or relationship is calculated.",
+          "The fossil and non-hydroelectric renewable shares are not exhaustive components of total electricity production and must not be summed or treated as a complete composition.",
+          "The denominator is total electricity production for the same indicator-year; percentage levels are not generation quantities.",
+          "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity, transition, persistence or forecastability.",
+          "First differences summarize consecutive retained annual values only; no difference is calculated across a missing calendar year.",
+          "No interpolation or imputation is performed.",
+          "WDI reacquisition may change; retained local bytes are the replay anchor.",
+          "Canonical decimal precision is not measurement precision."
+        ],
+        "promotion_maturity_state": "bounded Energy & Mining portfolio pilot accepted",
+        "result_limitations": [
+          "finite retained ordered annual sequence",
+          "descriptive only",
+          "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+          "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+          "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production"
+        ],
+        "uncertainty_dimensions": [
+          "mutable_source_reacquisition_limit",
+          "provider_measurement_and_revision_process",
+          "tail_missingness",
+          "bounded_single_territory_window"
+        ]
+      },
+      "identity_inputs": {
+        "indicator_code": "EG.ELC.FOSL.ZS",
+        "method_id": "baseline_characterization_portfolio_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990,
+        "territory_id": "NOR"
+      },
+      "indicator": {
+        "code": "EG.ELC.FOSL.ZS",
+        "definition": "The share of electricity production from oil, gas and coal sources of total electricity production. Sources of electricity refer to the inputs used to generate electricity. Oil refers to crude oil and petroleum products. Gas refers to natural gas but excludes natural gas liquids. Coal refers to all coal and brown coal, both primary (including hard coal and lignite-brown coal) and derived fuels (including patent fuel, coke oven coke, gas coke, coke oven gas, and blast furnace gas). Peat is also included in this category.",
+        "family": "Energy & Mining",
+        "name": "Electricity production from oil, gas and coal sources (% of total)"
+      },
+      "input": {
+        "admission_basis": "retained Campaign 40 HTTPS fixture selected before outcome calculation",
+        "normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.FOSL.ZS__NOR__1990-2024/normalized_observations.json",
+        "sha256": "sha256:15d997d4533774c96997c4375bd44230960032bc56c4ade1b41cd292cb062dc1"
+      },
+      "method": {
+        "id": "baseline_characterization_portfolio_v1",
+        "parameters": {
+          "decimal_precision": 50,
+          "difference_rule": "only consecutive observed annual periods; never bridge a calendar gap",
+          "minimum_coverage_share": "0.85",
+          "minimum_observed_count": 30,
+          "quartile_rule": "median of lower and upper halves excluding the overall median for odd N",
+          "rounding": "ROUND_HALF_EVEN",
+          "slope_rule": "ordinary least-squares slope against integer calendar year; descriptor only",
+          "summary_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+          "summary_method": "wdi_annual_scalar_statistical_summary_v2@2.0"
+        },
+        "version": "1.0"
+      },
+      "promotion_conditions": [
+        "all_28_required_metric_records_valid",
+        "missingness_and_adjacency_contract_pass",
+        "no_identity_collision",
+        "no_redundancy",
+        "knowledge_object_validation_pass"
+      ],
+      "territory": {
+        "id": "NOR",
+        "name": "Norway",
+        "observational_population": "retained observed annual Norway values for the indicator within the requested 1990-2024 window"
+      },
+      "transformation": [
+        "level",
+        "adjacent_first_difference",
+        "linear_time_index_slope"
+      ],
+      "validation_requirements": [
+        "input_hash",
+        "coverage",
+        "missing_year_identity",
+        "calendar_adjacency",
+        "stable_identity",
+        "exact_lineage",
+        "applicability",
+        "schema",
+        "nonredundancy",
+        "input_immutability"
+      ]
+    },
+    {
+      "applicability": {
+        "denominator_basis": "total_electricity_production_for_indicator_year",
+        "frequency": "annual",
+        "measure_kind": "electricity_production_share_of_total",
+        "observation_grain": "territory_indicator_year",
+        "period_end": 2024,
+        "period_start": 1990,
+        "population_basis": "finite retained sequence; not a random sample",
+        "unit": "% of total"
+      },
+      "bundle_id": "bundle-energy-mining-norway-annual-1990-2024-v1",
+      "campaign_id": "evidence-portfolio-energy-mining-norway-baseline-20260817",
+      "canary": false,
+      "candidate_id": "candidate-energy-mining-eg-elc-rnwx-zs-nor-1990-2024-baseline-v1",
+      "computational_budget": {
+        "maximum_result_records": 28,
+        "maximum_wall_seconds": 5
+      },
+      "coverage_contract": {
+        "eligible_adjacent_first_difference_count": 31,
+        "expected_observation_slots": 35,
+        "first_observed_year": 1990,
+        "interpolation_or_imputation": false,
+        "last_observed_year": 2021,
+        "missing_count": 3,
+        "missing_years": [
+          2022,
+          2023,
+          2024
+        ],
+        "observed_count": 32
+      },
+      "dependencies": [
+        "retained_campaign40_fixture",
+        "wdi_annual_scalar_statistical_summary_v2@2.0"
+      ],
+      "disposition": "execute",
+      "exclusion_and_stopping_rules": [
+        "stop_on_input_hash_mismatch",
+        "stop_on_manifest_fingerprint_mismatch",
+        "exclude_nonconsecutive_differences",
+        "exclude_interpolation_and_imputation",
+        "exclude_growth_rates",
+        "exclude_relationship_claims",
+        "exclude_exhaustive_composition_claims"
+      ],
+      "expected_output_class": "baseline_characterization",
+      "expected_result_profile": {
+        "inapplicability_policy": "No profile metric is inapplicable for these retained inputs; missingness is encoded in the coverage/missingness metrics, and no synthetic per-year record is created.",
+        "per_year_result_records": false,
+        "required_metric_records": 28
+      },
+      "family_configuration": {
+        "applicability_limitations": [
+          "The indicator measures a percentage share of total electricity production, not an electricity quantity, capacity, consumption, reliability, price, emissions or welfare measure.",
+          "Shared denominator conventions do not make the two portfolio series exhaustive, complementary or relational.",
+          "Structural breaks, technology transitions and policy changes are not identified or explained by these descriptors.",
+          "Observed annual values: 32 of 35 requested slots; explicit missing years: 2022, 2023, 2024; eligible consecutive first differences: 31."
+        ],
+        "domain": "WDI Energy & Mining baseline characterization",
+        "evidence_family": "external_wdi_annual_scalar_energy_mining_baseline_characterization",
+        "evolution_change_reason": "first bounded Norway Energy & Mining Evidence Portfolio with explicit missingness",
+        "family": "Energy & Mining",
+        "family_slug": "energy-mining",
+        "generation_date": "2026-08-17",
+        "governance_review_state": "bounded Energy & Mining portfolio promotion contract passed",
+        "package_limitations": [
+          "No cross-series comparison, coefficient or relationship is calculated.",
+          "The fossil and non-hydroelectric renewable shares are not exhaustive components of total electricity production and must not be summed or treated as a complete composition.",
+          "The denominator is total electricity production for the same indicator-year; percentage levels are not generation quantities.",
+          "Slope sign is a finite-window time-index descriptor, not evidence of structural trend, stationarity, transition, persistence or forecastability.",
+          "First differences summarize consecutive retained annual values only; no difference is calculated across a missing calendar year.",
+          "No interpolation or imputation is performed.",
+          "WDI reacquisition may change; retained local bytes are the replay anchor.",
+          "Canonical decimal precision is not measurement precision."
+        ],
+        "promotion_maturity_state": "bounded Energy & Mining portfolio pilot accepted",
+        "result_limitations": [
+          "finite retained ordered annual sequence",
+          "descriptive only",
+          "no causal predictive significance policy stationarity structural-trend permanence or cross-series relationship claim",
+          "missing periods are retained as missing and excluded from level calculations; first differences use consecutive observed calendar years only",
+          "level-distribution statistics are unweighted summaries across retained annual observations and are not pooled-period estimates of electricity production"
+        ],
+        "uncertainty_dimensions": [
+          "mutable_source_reacquisition_limit",
+          "provider_measurement_and_revision_process",
+          "tail_missingness",
+          "bounded_single_territory_window"
+        ]
+      },
+      "identity_inputs": {
+        "indicator_code": "EG.ELC.RNWX.ZS",
+        "method_id": "baseline_characterization_portfolio_v1",
+        "method_version": "1.0",
+        "period_end": 2024,
+        "period_start": 1990,
+        "territory_id": "NOR"
+      },
+      "indicator": {
+        "code": "EG.ELC.RNWX.ZS",
+        "definition": "The share of electricity production from renewable sources of total electricity production. Electricity production from renewable sources, excluding hydroelectric, includes geothermal, solar, tides, wind, biomass, and biofuels.",
+        "family": "Energy & Mining",
+        "name": "Electricity production from renewable sources, excluding hydroelectric (% of total)"
+      },
+      "input": {
+        "admission_basis": "retained Campaign 40 HTTPS fixture selected before outcome calculation",
+        "normalized_fingerprint": "sha256:435e2b74e25ae91423e017a076cafdf052075f83700ba96196751b940fcd5ac3",
+        "path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.RNWX.ZS__NOR__1990-2024/normalized_observations.json",
+        "sha256": "sha256:ece1e92685f44dafb40e0aef7740fe32d48104d74be2e72eb61c2eca1180ffdd"
+      },
+      "method": {
+        "id": "baseline_characterization_portfolio_v1",
+        "parameters": {
+          "decimal_precision": 50,
+          "difference_rule": "only consecutive observed annual periods; never bridge a calendar gap",
+          "minimum_coverage_share": "0.85",
+          "minimum_observed_count": 30,
+          "quartile_rule": "median of lower and upper halves excluding the overall median for odd N",
+          "rounding": "ROUND_HALF_EVEN",
+          "slope_rule": "ordinary least-squares slope against integer calendar year; descriptor only",
+          "summary_contract_fingerprint": "sha256:80e6b07fd98faf37401103776b6ef82f4ab981c5ea890b381b036058c460e8a0",
+          "summary_method": "wdi_annual_scalar_statistical_summary_v2@2.0"
+        },
+        "version": "1.0"
+      },
+      "promotion_conditions": [
+        "all_28_required_metric_records_valid",
+        "missingness_and_adjacency_contract_pass",
+        "no_identity_collision",
+        "no_redundancy",
+        "knowledge_object_validation_pass"
+      ],
+      "territory": {
+        "id": "NOR",
+        "name": "Norway",
+        "observational_population": "retained observed annual Norway values for the indicator within the requested 1990-2024 window"
+      },
+      "transformation": [
+        "level",
+        "adjacent_first_difference",
+        "linear_time_index_slope"
+      ],
+      "validation_requirements": [
+        "input_hash",
+        "coverage",
+        "missing_year_identity",
+        "calendar_adjacency",
+        "stable_identity",
+        "exact_lineage",
+        "applicability",
+        "schema",
+        "nonredundancy",
+        "input_immutability"
+      ]
+    }
+  ],
+  "evidence_card_equivalent_definition": "one operational result-record view; canonical authority remains the KnowledgeObjectPackage",
+  "forbidden_outcome_fields": [
+    "calculated_value",
+    "interesting",
+    "attractive",
+    "coefficient",
+    "significance",
+    "result_rank"
+  ],
+  "governing_question": "What objective baseline evidence can the retained Norway fossil-generation-share and non-hydro-renewable-generation-share series support about coverage, missingness, finite-window levels, variation, and adjacent annual changes, without treating the two series as an exhaustive composition or making causal, predictive, policy, or cross-series relationship claims?",
+  "manifest_fingerprint": "sha256:6fc3c6a0d2df98336c24783b7201d890d7fca622311afb804fff63750669cf3d",
+  "manifest_id": "manifest-evidence-portfolio-energy-mining-norway-baseline-v1",
+  "manifest_version": "1.0",
+  "portfolio_kind": "bounded_baseline_characterization_execution_manifest",
+  "promotion_conditions": [
+    "canary_gate_pass",
+    "all_required_records_valid",
+    "canonical_package_validator_pass",
+    "independent_exact_byte_review_pass",
+    "no_duplicate_promotion"
+  ],
+  "selection_rubric_fingerprint": "sha256:e12ec01ae39ce1bb3566e67d95440e5e935950f938bfd9b0d5419a88571f359f",
+  "stopping_rules": [
+    "no candidate substitution after outcomes",
+    "stop_on_canary_material_failure",
+    "do_not_exceed_budget",
+    "stop_before_persistence_on_admission_or_review_failure"
+  ],
+  "validation_requirements": [
+    "manifest_schema",
+    "outcome_blind_fields",
+    "input_hashes",
+    "coverage_and_missingness",
+    "calendar_adjacency",
+    "stable_identities",
+    "complete_accounting",
+    "deterministic_rerun"
+  ]
+}

@@ -1,0 +1,87 @@
+{
+  "accounting": {
+    "dependency_clusters": 1,
+    "distinct_source_series": 1,
+    "distinct_transformations": 3,
+    "evidence_bundles": 1,
+    "executed_candidates": 1,
+    "execution_failures": 0,
+    "manifest_candidates": 1,
+    "null_candidates": 0,
+    "operational_views": 28,
+    "promoted_canonical_objects": 1,
+    "raw_calculation_results": 28,
+    "redundant_candidates": 0,
+    "redundant_result_records": 0,
+    "rejected_candidates": 0,
+    "valid_candidates": 1,
+    "valid_result_records": 28
+  },
+  "blockers": [],
+  "campaign_id": "evidence-portfolio-energy-mining-norway-baseline-20260817",
+  "candidate_population": [
+    {
+      "canary": true,
+      "candidate_id": "candidate-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+      "disposition": "execute",
+      "input_normalized_fingerprint": "sha256:4377f5a763df26f17ca22f1fa1e68b89858e73c8cad1257ed2c2f2bcad4d3c37",
+      "input_path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.FOSL.ZS__NOR__1990-2024/normalized_observations.json",
+      "input_sha256": "sha256:15d997d4533774c96997c4375bd44230960032bc56c4ade1b41cd292cb062dc1"
+    },
+    {
+      "canary": false,
+      "candidate_id": "candidate-energy-mining-eg-elc-rnwx-zs-nor-1990-2024-baseline-v1",
+      "disposition": "execute",
+      "input_normalized_fingerprint": "sha256:435e2b74e25ae91423e017a076cafdf052075f83700ba96196751b940fcd5ac3",
+      "input_path": "artifacts/evidence-fixtures/campaign40-spec-driven-pearson-production-1990-2024-https/EG.ELC.RNWX.ZS__NOR__1990-2024/normalized_observations.json",
+      "input_sha256": "sha256:ece1e92685f44dafb40e0aef7740fe32d48104d74be2e72eb61c2eca1180ffdd"
+    }
+  ],
+  "candidate_population_fingerprint": "sha256:c474cb740e185218e79f81a00928c2dc3077d0f5039381806ca21bfc7355987c",
+  "execution_manifest_byte_fingerprint": "sha256:e945f1490227cec96d3c89149f51c9721bc51540935cd502f62607d21f6a24ef",
+  "execution_mode": "canary",
+  "gate_fingerprint": "sha256:f6c67e914fa22646baf569f7aaf22cb6d9f112f5349f13f2cefb014eb4f61c81",
+  "manifest_fingerprint": "sha256:6fc3c6a0d2df98336c24783b7201d890d7fca622311afb804fff63750669cf3d",
+  "manifest_id": "manifest-evidence-portfolio-energy-mining-norway-baseline-v1",
+  "passed": true,
+  "production_limits": {
+    "entries": [
+      {
+        "candidate_id": "candidate-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+        "limits": {
+          "maximum_result_records": 28,
+          "maximum_wall_seconds": 5
+        }
+      },
+      {
+        "candidate_id": "candidate-energy-mining-eg-elc-rnwx-zs-nor-1990-2024-baseline-v1",
+        "limits": {
+          "maximum_result_records": 28,
+          "maximum_wall_seconds": 5
+        }
+      }
+    ],
+    "portfolio": {
+      "maximum_executed_candidates": 2,
+      "maximum_promoted_objects": 2,
+      "maximum_raw_result_records": 56,
+      "stop_on_canary_failure": true
+    }
+  },
+  "publication": {
+    "admitted_object_count": 1,
+    "disposition": "isolated_canary_admitted",
+    "object_count": 1,
+    "repository_fingerprint": "sha256:738000f62c6eccb3741c2de1e26386d22f4088a57031598d166c2a8087fe3d0b"
+  },
+  "reruns": [
+    {
+      "candidate_id": "candidate-energy-mining-eg-elc-fosl-zs-nor-1990-2024-baseline-v1",
+      "first_fingerprint": "sha256:8be105ee1b441eeb9d9c1969a894c950619701f6403ffbd04fcccbd2f2cc5bdb",
+      "matched": true,
+      "second_fingerprint": "sha256:8be105ee1b441eeb9d9c1969a894c950619701f6403ffbd04fcccbd2f2cc5bdb"
+    }
+  ],
+  "schema_name": "knowledgeforge.evidence_portfolio.production_authorization.v1",
+  "schema_version": "1.0"
+}
